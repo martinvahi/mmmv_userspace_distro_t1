@@ -93,7 +93,11 @@ if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -
         # fi
     else
         SB_CONSOLE_OUTPUT_IS_ALLOWED="t"
-        source "$MMMV_FP_COMMON_BASHRC_MAIN"
+        if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
+            if [ ! -d "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
+                source "$MMMV_FP_COMMON_BASHRC_MAIN"
+            fi
+        fi
     fi
     #----------------------------------------------------------------------
     if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "t" ]; then
@@ -107,7 +111,7 @@ if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -
                     echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
                     echo ""
                     echo "but its domain is: {\"\", \"t\", \"f\"}."
-                    echo "GUID=='50815cc2-0319-475d-ab53-436371a017e7'"
+                    echo "GUID=='2e1a98d4-c11f-49cb-ae30-73b1e0c028e7'"
                     echo ""
                 fi
             fi
