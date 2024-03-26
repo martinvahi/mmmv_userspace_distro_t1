@@ -5,7 +5,7 @@
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
 #S_FP_ORIG="`pwd`" 
 #S_TIMESTAMP="`date +%Y`_`date +%m`_`date +%d`_T_`date +%H`h_`date +%M`min_`date +%S`s"
@@ -34,7 +34,7 @@ func_display_doc() {
     echo ""
     echo -e "    /some/path/prefix/my_keyfile_for_host_Foo_user_Bar.txt.pub >> \e[33m~/.ssh/authorized_keys\e[39m"
     echo ""
-    echo "GUID=='91eb079b-6cb4-41f4-92d4-c042d08196e7'"
+    echo "GUID=='9defcc28-e264-4c56-b52d-83c1619038e7'"
     echo ""
     #--------------------
 } # func_display_doc
@@ -43,6 +43,6 @@ func_display_doc
 #--------------------------------------------------------------------------
 #cd "$S_FP_ORIG"
 exit 0 
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="088a2039-135b-4335-82d4-c042d08196e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="537b04f3-9347-4c74-a72d-83c1619038e7"
 #==========================================================================

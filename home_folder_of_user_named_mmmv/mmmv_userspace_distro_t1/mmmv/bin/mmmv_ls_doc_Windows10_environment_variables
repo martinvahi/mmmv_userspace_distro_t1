@@ -5,7 +5,7 @@
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 echo ""
 echo "At cmd.exe that was started as an Administrator"
 echo ""
@@ -13,6 +13,6 @@ echo "    rundll32.exe sysdm.cpl,EditEnvironmentVariables"
 echo ""
 echo "and that opens a special dialog window."
 echo ""
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="0e1ff816-bce0-4b9c-a442-30b020d0b6e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="8d4a5e50-788a-4428-a120-51d1619038e7"
 #==========================================================================

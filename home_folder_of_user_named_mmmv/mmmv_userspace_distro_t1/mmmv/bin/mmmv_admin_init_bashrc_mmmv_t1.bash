@@ -4,7 +4,7 @@
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 S_FP_ORIG="`pwd`"
 S_TIMESTAMP="`date +%Y`_`date +%m`_`date +%d`_T_`date +%H`h_`date +%M`min_`date +%S`s"
@@ -28,7 +28,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "    S_FP_ORIG=\"\`pwd\`\""
         echo ""
         echo "Aborting script."
-        echo "GUID=='7aa66320-0ab8-4049-b518-73f1d031a7e7'"
+        echo "GUID=='18c96215-5529-4e0a-af16-b381619038e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -55,7 +55,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         fi
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='b88e2838-97dc-460a-a518-73f1d031a7e7'"
+        echo "GUID=='317bd385-e3bd-4cab-9646-b381619038e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -68,7 +68,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "is not a folder. It is expected to be a folder that "
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='136dbe31-4f78-44c9-9f18-73f1d031a7e7'"
+        echo "GUID=='15ca6b31-0b2d-4a83-a256-b381619038e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -86,7 +86,7 @@ func_mmmv_exc_exit_with_an_error_t1(){
     if [ "$S_GUID_CANDIDATE" != "" ]; then 
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
     fi
-    echo "GUID=='15585df1-beb4-4465-8818-73f1d031a7e7'"
+    echo "GUID=='62372d9b-4207-4825-a236-b381619038e7'"
     echo ""
     cd "$S_FP_ORIG"
     exit 1 # exit with an error
@@ -102,7 +102,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='79fcc05d-cf6b-4bfb-9518-73f1d031a7e7'"
+        echo "GUID=='514cc129-27c8-4237-8586-b381619038e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -126,7 +126,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='c9af8c1c-bfb6-422a-b418-73f1d031a7e7'"
+        echo "GUID=='293debe3-85b3-4a9e-8116-b381619038e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -141,7 +141,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo "Aborting script."
-        echo "GUID=='37cade36-c0f3-4a24-9318-73f1d031a7e7'"
+        echo "GUID=='3289cb75-a22e-4c21-a336-b381619038e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -172,7 +172,7 @@ func_mmmv_assert_error_code_zero_t2(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='3d88a415-3628-4eba-a118-73f1d031a7e7'"
+        echo "GUID=='e2a14259-7d79-415f-8936-b381619038e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -186,7 +186,7 @@ func_mmmv_assert_error_code_zero_t2(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo "Aborting script."
-        echo "GUID=='ed610939-c82b-43c6-9218-73f1d031a7e7'"
+        echo "GUID=='55c63935-77e4-4404-b256-b381619038e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -205,7 +205,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
         echo ""
         echo "The code that calls this function is flawed."
         echo "This function requires 2 parameters: S_FP, S_GUID"
-        echo "GUID=='26763d3f-f694-4e4f-b318-73f1d031a7e7'"
+        echo "GUID=='22eba2e5-4ced-4ff2-a536-b381619038e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -222,7 +222,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo "points to a broken symlink, but a file or "
             echo "a symlinkt to a file is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='ad6d0557-72b2-4772-9318-73f1d031a7e7'"
+            echo "GUID=='38785d23-13ed-4776-b526-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -235,7 +235,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "does not exist."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='c680a844-a229-4739-8418-73f1d031a7e7'"
+            echo "GUID=='43543bd5-3533-4979-b455-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -254,7 +254,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "exists, but a file or a symlink to a file is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='d4f5eb22-ae58-49a4-a518-73f1d031a7e7'"
+            echo "GUID=='8cd574f1-b6e5-433a-a745-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -292,7 +292,7 @@ func_mmmv_assert_folder_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='49ee094e-d921-4e97-a518-73f1d031a7e7'"
+        echo "GUID=='43a90124-dc26-428f-a145-b381619038e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -300,7 +300,7 @@ func_mmmv_assert_folder_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo "This code is flawed."
-            echo "GUID=='3df005b3-ca70-476b-8618-73f1d031a7e7'"
+            echo "GUID=='4fdaba05-691c-4821-8935-b381619038e7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
@@ -324,7 +324,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='3a71ef32-2368-45e7-8318-73f1d031a7e7'"
+                echo "GUID=='d13c1966-5251-42ab-a1a5-b381619038e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -347,7 +347,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "a folder or a symlink to a folder is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='a4e3e432-9708-4943-b418-73f1d031a7e7'"
+            echo "GUID=='2e4a9d25-30bf-4b44-8e35-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -364,7 +364,7 @@ func_mmmv_assert_folder_exists_t1() {
             echo ""
             echo "does not exist."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='145250f4-bab8-4bdd-a518-73f1d031a7e7'"
+            echo "GUID=='572dc225-51f2-4ae3-8f45-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -388,7 +388,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "a folder or a symlink to a folder is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='595a59cd-c73c-4dd5-9118-73f1d031a7e7'"
+            echo "GUID=='45440b95-bfb9-41d8-8045-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -403,7 +403,7 @@ func_mmmv_assert_folder_exists_t1() {
                     echo ""
                     echo "is a symlink to a folder, but a folder is expected."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='fff06429-024a-441c-a118-73f1d031a7e7'"
+                    echo "GUID=='d172dba0-1926-4164-8f35-b381619038e7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -431,10 +431,10 @@ func_angervaks_optionally_update_GUIDs_in_bashrc(){
         func_mmmv_wait_and_sync_t1 # just in case, just for reliability
         S_FP_UPGUID_BASH="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/mmmv_devel_tools/2015_01_22_mmmv_devel_tools_without_JumpGUID_and_IDE_integration_v_02_with_UpGUID_bugfix/src/mmmv_devel_tools/GUID_trace/src/UpGUID/src/upguid"
         func_mmmv_assert_file_exists_t1 "$S_FP_UPGUID_BASH" \
-            "e99cb210-a5e8-4aa9-9218-73f1d031a7e7"
+            "52e26530-ea7c-4340-a2b6-b381619038e7"
         $S_FP_UPGUID_BASH -f $S_FP_BASHRC
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "dd01cd40-35d6-4071-b418-73f1d031a7e7"
+            "ba808ef2-65fe-4609-b556-b381619038e7"
         func_mmmv_wait_and_sync_t1
     fi
     #--------
@@ -453,7 +453,7 @@ func_angervaks_grep_for_inclusion_line_t1() {
             echo "    $S_FP_BASHRC"
             echo ""
             echo "is a broken symlink. Aborting script."
-            echo "GUID=='d2429924-6cad-478a-8518-73f1d031a7e7'"
+            echo "GUID=='b922302f-46ba-44d2-8e55-b381619038e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -462,17 +462,17 @@ func_angervaks_grep_for_inclusion_line_t1() {
             # Create an empty text file.
             echo "#!/usr/bin/env bash" >> "$S_FP_BASHRC" # The ">>" is used in stead of the ">" for safety.
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "967b6c64-6d8b-481f-9818-73f1d031a7e7"
+                "381ae455-87a6-4127-9b56-b381619038e7"
             func_mmmv_wait_and_sync_t1
             echo "#===========================================================================" >> "$S_FP_BASHRC"
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "8e702712-5491-4efb-b318-73f1d031a7e7"
+                "b1feeb6e-ce43-46ec-9e56-b381619038e7"
             func_mmmv_wait_and_sync_t1
         fi
     else
         # To make sure that it is not a folder or a symlink to a folder.
         func_mmmv_assert_file_exists_t1 "$S_FP_BASHRC" \
-            "77923720-323a-43ea-9318-73f1d031a7e7"
+            "47857a3e-2d89-42cc-99d6-b381619038e7"
     fi
     #--------
     S_TMP_0="`grep -E \"source[ ]+\\\"$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash\\\"\" ~/.bashrc `"
@@ -495,16 +495,16 @@ func_angervaks_grep_for_inclusion_line_t1() {
 # at a right path in relation to the correct value of the MMMV_USERSPACE_DISTRO_T1_HOME.
 S_TMP_0="`cd $S_FP_DIR/../../ ; pwd`"
 func_mmmv_assert_folder_exists_t1 \
-    "$S_TMP_0/mmmv/bin" "f9c0aa14-7a16-494e-a218-73f1d031a7e7"
+    "$S_TMP_0/mmmv/bin" "22240c13-f9ae-4135-a436-b381619038e7"
 #--------------------
 func_mmmv_assert_folder_exists_t1 \
-    "$S_TMP_0" "b1c35b1d-76a1-49ff-b218-73f1d031a7e7"
+    "$S_TMP_0" "417f6bb2-af84-4931-a326-b381619038e7"
 export MMMV_USERSPACE_DISTRO_T1_HOME="$S_TMP_0"
 #--------------------------------------------------------------------------
 S_FP_TEMPLATE="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/templates/_bashrc_suffix_template_t1.bash"
 # The 
 func_mmmv_assert_file_exists_t1 "$S_FP_TEMPLATE" \
-    "65d0d215-77b5-4e6b-8518-73f1d031a7e7"
+    "bc113c03-0796-4228-be46-b381619038e7"
 # is meant to give a warning also when the template is not needed.
 
 #--------------------------------------------------------------------------
@@ -533,32 +533,32 @@ if [ "$SB_MODIFY_THE_BASHRC" == "t" ]; then
         echo "    $S_TMP_1"
         echo ""
         echo "already exists. Aborting script."
-        echo "GUID=='2a3ca075-2631-430e-b118-73f1d031a7e7'"
+        echo "GUID=='4ed81171-3907-4691-8055-b381619038e7'"
         echo ""
         #----
         cd "$S_FP_ORIG"
         exit 1 # exit with error
     fi
     func_mmmv_assert_file_exists_t1 "$S_FP_BASHRC" \
-        "20477d5f-d5d5-447b-a318-73f1d031a7e7"
+        "5299597c-0c29-4803-b426-b381619038e7"
     #--------
     cp ~/.bashrc $S_TMP_1
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "223b615d-7ce7-4cb9-8518-73f1d031a7e7"
+        "13f550a3-d4ca-4ac9-aa26-b381619038e7"
     func_mmmv_wait_and_sync_t1
     func_mmmv_assert_file_exists_t1 "$S_TMP_1" \
-        "4b68cbaf-37dc-4d26-a518-73f1d031a7e7"
+        "25724a02-fb3b-4b53-8646-b381619038e7"
     #--------
     cat $S_FP_TEMPLATE >> $S_FP_BASHRC
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "a1b4ea98-6105-4a80-8518-73f1d031a7e7"
+        "18dec6e3-b0e4-4515-9f35-b381619038e7"
     func_mmmv_wait_and_sync_t1
     func_angervaks_grep_for_inclusion_line_t1
     if [ "$S_TMP_0" == "" ]; then
         echo ""
         echo "The adding of the mmmv inclusion line "
         echo "to the ~/.bashrc failed. Aborting script."
-        echo "GUID=='d37c2306-bd35-4867-9418-73f1d031a7e7'"
+        echo "GUID=='a4c34bc6-eb0e-4737-8435-b381619038e7'"
         echo ""
         #----
         cd "$S_FP_ORIG"
@@ -574,7 +574,7 @@ if [ "$SB_MODIFY_THE_BASHRC" == "t" ]; then
 else
     if [ "$SB_MODIFY_THE_BASHRC" != "f" ]; then
         func_mmmv_exc_exit_with_an_error_t1 \
-            "655c3f28-410c-48fd-9518-73f1d031a7e7"
+            "12731589-8b78-4323-8915-b381619038e7"
     fi
     echo ""
     echo "The "
@@ -583,7 +583,7 @@ else
     echo ""
     echo -e "seems to have been \e[33malready initialized\e[39m by the current script."
     echo -e "Not adding anything to the\e[33m $S_FP_BASHRC \e[39m."
-    echo "GUID=='6042fa5b-32de-4eb9-a108-73f1d031a7e7'"
+    echo "GUID=='a38652c4-4ec8-4d50-bb55-b381619038e7'"
     echo ""
 fi
 
@@ -593,11 +593,11 @@ func_mmmv_cd_S_FP_ORIG_and_exit_t1(){
     func_mmmv_exc_verify_S_FP_ORIG_t1
     cd "$S_FP_ORIG"
     func_mmmv_assert_error_code_zero_t2 "$?" \
-        "72b00cb1-0586-4fd5-8418-73f1d031a7e7"
+        "639821c4-aec8-471e-ae35-b381619038e7"
     exit 0
 } # func_mmmv_cd_S_FP_ORIG_and_exit_t1
 
 func_mmmv_cd_S_FP_ORIG_and_exit_t1
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="02583820-dbec-498d-a118-73f1d031a7e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="2d4712a2-f310-4e73-8e35-b381619038e7"
 #==========================================================================

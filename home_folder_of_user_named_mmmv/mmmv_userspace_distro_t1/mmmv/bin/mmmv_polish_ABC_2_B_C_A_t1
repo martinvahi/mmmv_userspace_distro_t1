@@ -4,6 +4,7 @@
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
+#==========================================================================
 
 s_general_idea=<<DESCRIPTION
 The general idea: 
@@ -49,7 +50,7 @@ if i_argv_len<1
    s_err<<"The "+s_2+"\e[31m requires at least 1 argument\e[39m.\n"
    s_err<<s_general_idea
    puts(s_err)
-   raise(Exception.new("GUID=='2fa2d092-5fea-48d6-bf07-1173713017e7'\n"))
+   raise(Exception.new("GUID=='15efb09b-57a9-4137-b390-5022619038e7'\n"))
    #---------------------------------------------------------
 end # if
 
@@ -69,6 +70,6 @@ end # loop
 s_0<<s_argv_0
 s_0<<s_lc_space
 printf(s_0)
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="48e14e2b-d258-4686-8307-1173713017e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="c1cf0c1e-d2b9-4b6c-8590-5022619038e7"
 #==========================================================================

@@ -5,13 +5,13 @@
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 
 if [ "$PYTHONUSERBASE" == "" ]; then
     echo ""
     echo "The Python related environment varioable PYTHONUSERBASE "
     echo "has not been set."
-    echo "GUID='b747b14e-638e-4f11-833d-42417130a7e7'"
+    echo "GUID='46e49d11-c7ae-45aa-9d42-03e1619038e7'"
     echo ""
     exit 1
 else
@@ -19,6 +19,6 @@ else
     nice -n 5 pip install --no-cache-dir  $1  --target=$PYTHONUSERBASE --upgrade 
 fi 
 
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="29990816-90bf-486f-913d-42417130a7e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="31ca43c4-99e1-4734-8712-03e1619038e7"
 #==========================================================================

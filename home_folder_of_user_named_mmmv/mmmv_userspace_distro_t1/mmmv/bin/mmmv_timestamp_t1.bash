@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #==========================================================================
 # Initial author of this file: Martin.Vahi@softf1.com
-# Script version: "a627d040-b609-478d-a330-b2d280d026e7"
+# Script version: "1e7c5b55-4073-4743-b266-9232619038e7"
 #
 # Tested on ("uname -a")
 # Linux hoidla01 4.19.0-10-amd64 #1 SMP Debian 4.19.132-1 (2020-07-24) x86_64 GNU/Linux
@@ -47,7 +47,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='1ed86336-e62a-42e2-8330-b2d280d026e7'"
+        echo "GUID=='68ff7640-10a2-49b6-a466-9232619038e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -62,6 +62,6 @@ printf "$S_TIMESTAMP"
 #--------------------------------------------------------------------------
 cd "$S_FP_ORIG"
 exit 0
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="1b252e1e-f7ea-4f74-8630-b2d280d026e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="3162e015-66fa-41c5-b266-9232619038e7"
 #==========================================================================

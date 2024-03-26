@@ -1,0 +1,123 @@
+===========================================================================
+===  Q  ===
+===========================================================================
+
+x
+
+::::::::::::::::START::OF::THE::GENERAL::TEXT::::::::::::::::::::::::::::::
+
+The Q is a 
+It's main purpose is to facilitate the 
+
+WARNING: 
+
+    THERE IS NO EFFORT TO MAKE NEWER VERSIONS OF THE
+    Q TO BE BACKWARDS COMPATIBLE WITH OLDER 
+    VERSIONS OF THE Q . THERE IS 
+    NO EFFORT TO MAKE IT POSSIBLE TO USE MULTIPLE VERSIONS 
+    OF THE Q SIMULTANEOUSLY.
+
+If the Q is used, then it declares its version
+at an environment variable named "Q_VERSION",
+without the quotation marks.
+
+
+---------------------------------------------------------------------------
+                              Table of Contents
+---------------------------------------------------------------------------
+
+The "Section_..." at the start of the section name is meant to be 
+used for navigating this file with the Vim word search function.
+
+Section_01: Basic Setup
+Section_02: Basic Usage
+Section_03: x
+Section_04: x Related Setup
+Section_05: x Related Workflow Ideas 
+Section_06: The Setup of Optional Components: x
+Section_07: The Setup of Optional Components: x
+Section_08: x
+Section_09: License
+
+
+---------------------------------------------------------------------------
+                           Section_01: Basic Setup
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+                         Section_02: Basic Usage
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+                  Section_03: x
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+                       Section_04: x Related Setup
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+          Section_05: x Related Workflow Ideas 
+---------------------------------------------------------------------------
+
+x
+
+::::::::::next::idea:::::::::::::::
+
+x
+
+::::::::::next::idea:::::::::::::::
+
+x
+
+
+---------------------------------------------------------------------------
+        Section_06: The Setup of Optional Components: x
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+  Section_07: The Setup of Optional Components: x
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+  Section_08: x
+---------------------------------------------------------------------------
+
+x
+
+
+---------------------------------------------------------------------------
+                     Section_09: License
+---------------------------------------------------------------------------
+
+All of the components of the Q have some
+license that is compatible with the BSD license. The parts that
+I, INCOMPLETE , have written, are usually under the
+BSD license, but some are also placed to "public domain"(0BSD).
+
+
+===========================================================================
+Initial author of this file: INCOMPLETE
+This file is in public domain.
+The following line is a spdx.org license label line:
+SPDX-License-Identifier: 0BSD
+S_VERSION_OF_THIS_FILE="9735e131-6e1d-42c0-8811-920200a038e7"
+===========================================================================

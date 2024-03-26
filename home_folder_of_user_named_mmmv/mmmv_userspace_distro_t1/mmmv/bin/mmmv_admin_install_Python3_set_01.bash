@@ -5,7 +5,7 @@
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 S_FP_ORIG="`pwd`"
 #--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         echo -e "\e[31mThe code that calls this function is flawed.\e[39m"
         echo "This function requires 2 parameters: S_FP, S_GUID_CANDIDATE"
         echo "and has an optional 3. parameter: SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        echo "GUID=='d531c215-3a7e-4567-b5fd-91017130a7e7'"
+        echo "GUID=='71c6d85b-a968-4a3f-b44a-737030a138e7'"
         echo ""
         #--------
         SB_VERIFICATION_FAILED="t"
@@ -44,7 +44,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo "Valid values are: \"t\", \"f\", \"\" ."
                     echo "\"\" defaults to \"t\"."
-                    echo "GUID=='16c20fb1-4444-4729-8bfd-91017130a7e7'"
+                    echo "GUID=='b710cd36-170f-43ab-854a-737030a138e7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -65,7 +65,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo -e "points to a\e[31m broken symlink\e[39m, but a file or"
                     echo "a symlink to a file is expected."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='5cd75c43-7eab-4252-82fd-91017130a7e7'"
+                    echo "GUID=='1350f9fb-67af-41a3-a14a-737030a138e7'"
                     echo ""
                 fi
                 #--------
@@ -79,7 +79,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "\e[31mdoes not exist\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='3ba592b2-6a13-4119-83fd-91017130a7e7'"
+                    echo "GUID=='42233353-87ea-4a0f-924a-737030a138e7'"
                     echo ""
                 fi
                 #--------
@@ -99,7 +99,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "exists, but a\e[31m file or a symlink to a file is expected\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='62041de3-0245-4c55-a5fd-91017130a7e7'"
+                    echo "GUID=='f130647f-c144-44db-954a-737030a138e7'"
                     echo ""
                 fi
                 #--------
@@ -112,7 +112,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='0c314c4f-83b4-458a-95fd-91017130a7e7'"
+            echo "GUID=='f907e73e-35f7-4b5f-a34a-737030a138e7'"
             echo ""
         fi
     fi
@@ -133,7 +133,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='c1863a21-5f33-4275-a6fd-91017130a7e7'"
+        echo "GUID=='55d24712-1ec7-4c48-854a-737030a138e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -148,7 +148,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='3ee79c3b-c25b-445d-91fd-91017130a7e7'"
+        echo "GUID=='4ce1885d-52ec-4aab-854a-737030a138e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -168,7 +168,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='208b2a4c-5382-4ad7-85fd-91017130a7e7'"
+        echo "GUID=='53489b33-47fc-4c20-bf4a-737030a138e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -182,7 +182,7 @@ S_CMD_NICE="nice -n 5 "
 S_FP_PIP3_BASH="$S_FP_DIR/mmmv_pip3_install"
 func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
     "$S_FP_PIP3_BASH" \
-    "7a6a103d-0938-4acb-a4fd-91017130a7e7"
+    "3bdb835d-3b3d-4571-a24a-737030a138e7"
 
 #--------------------------------------------------------------------------
 # The autopep8 
@@ -193,7 +193,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
 # https://peps.python.org/pep-0008/
 $S_CMD_NICE $S_FP_PIP3_BASH autopep8 
 func_mmmv_assert_error_code_zero_t1 "$?" \
-    "95119657-6494-4f1a-bdfd-91017130a7e7"
+    "c48d3a5c-6acf-405c-934a-737030a138e7"
 
 # The trafilatura 
 #     https://github.com/adbar/trafilatura
@@ -212,15 +212,21 @@ func_mmmv_assert_error_code_zero_t1 "$?" \
 # a standard package collection.
 $S_CMD_NICE $S_FP_PIP3_BASH trafilatura
 func_mmmv_assert_error_code_zero_t1 "$?" \
-    "859f2a45-da78-4da0-b4fd-91017130a7e7"
+    "2c40ad1b-f5c1-467c-b24a-737030a138e7"
 
 #--------------------------------------------------------------------------
 # https://www.antlr.org/
 # https://github.com/antlr/
 $S_CMD_NICE $S_FP_PIP3_BASH antlr4-tools
 func_mmmv_assert_error_code_zero_t1 "$?" \
-    "380e0034-9902-4f68-b3fd-91017130a7e7"
+    "62990842-7137-4883-814a-737030a138e7"
 
 #--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="5cbb9593-5d4e-4b1f-9efd-91017130a7e7"
+# https://www.jefftk.com/icdiff
+$S_CMD_NICE $S_FP_PIP3_BASH icdiff
+func_mmmv_assert_error_code_zero_t1 "$?" \
+    "edcb2640-dafe-4b20-b24a-737030a138e7"
+
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="7190f037-3e48-44fd-b54a-737030a138e7"
 #==========================================================================

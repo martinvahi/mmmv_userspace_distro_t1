@@ -5,7 +5,7 @@
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 
 echo ""
 echo "Command line structure as of 2022_11:"
@@ -17,6 +17,6 @@ echo ""
 echo "A more permanent way that may leak the token with the ~/.git folder:"
 echo -e "\e[34m    git remote add origin \e[33mhttps://<GitHub token>@github.com/<GitHub username>/<repository name>.git +<branch name>:<branch name>\e[39m"
 echo ""
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="04d25654-b4ad-4bb5-84c4-016290f0b6e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="0e535334-88a4-49bd-94fd-31c1619038e7"
 #==========================================================================

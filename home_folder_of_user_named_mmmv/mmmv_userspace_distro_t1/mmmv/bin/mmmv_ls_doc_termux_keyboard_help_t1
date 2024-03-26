@@ -5,7 +5,7 @@
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#==========================================================================
 
 echo ""
 echo "Upstream documentation:"
@@ -29,6 +29,6 @@ echo "        Up arrow (or ‘P’) → Previous session"
 echo "        Right arrow → Open drawer"
 echo "        Left arrow → Close drawer"
 echo ""
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="e1202d2f-4702-407d-b39a-31c1419186e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="b4c0748f-b990-461f-be5f-63d1619038e7"
 #==========================================================================

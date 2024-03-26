@@ -4,6 +4,7 @@
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
+#==========================================================================
 
 s_general_idea=<<DESCRIPTION
 The general idea: A B +  -->  A+B
@@ -44,7 +45,7 @@ if i_0!=3
    s_err<<"The "+s_2+"\e[31m requires exactly 3 arguments\e[39m.\n"
    s_err<<s_general_idea
    puts(s_err)
-   raise(Exception.new("GUID=='52a3dd1c-a1eb-4c99-a29d-8102713017e7'\n"))
+   raise(Exception.new("GUID=='5f1a67d8-7ef9-4dee-8430-2012619038e7'\n"))
    #---------------------------------------------------------
 end # if
 
@@ -58,6 +59,6 @@ s_0<<(""+ARGV[0].to_s)
 s_0<<(""+ARGV[2].to_s)
 s_0<<(""+ARGV[1].to_s)
 printf(s_0)
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="c8149852-ca96-4e4d-a49d-8102713017e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="90b74951-d97c-4ebf-a530-2012619038e7"
 #==========================================================================

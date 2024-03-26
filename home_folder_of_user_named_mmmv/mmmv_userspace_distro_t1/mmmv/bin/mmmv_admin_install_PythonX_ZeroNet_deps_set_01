@@ -4,13 +4,13 @@
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-#--------------------------------------------------------------------------
+#=========================================================================
 
 if [ "$PYTHONUSERBASE" == "" ]; then
     echo ""
     echo "The Python related environment varioable PYTHONUSERBASE "
     echo "has not been set."
-    echo "GUID='19abae55-edb1-4568-9459-f2217130a7e7'"
+    echo "GUID='541d5c23-8afd-4e1d-8107-3291619038e7'"
     echo ""
     exit 1
 fi
@@ -62,6 +62,6 @@ func_angervaks_run_on_list_t1(){
 
 func_angervaks_run_on_list_t1 "nice -n 5 pip install --no-cache-dir "
 
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="3ae1d915-f8a7-4d2b-b259-f2217130a7e7"
+#=========================================================================
+# S_VERSION_OF_THIS_FILE="ebd4495e-1a28-4f73-92f6-3291619038e7"
 #=========================================================================
