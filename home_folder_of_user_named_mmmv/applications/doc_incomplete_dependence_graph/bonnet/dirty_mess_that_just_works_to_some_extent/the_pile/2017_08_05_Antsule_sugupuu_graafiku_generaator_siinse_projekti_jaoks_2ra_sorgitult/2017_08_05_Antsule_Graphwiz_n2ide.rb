@@ -87,10 +87,10 @@ class Graafikugeneraator_2_tulbaline_tabel
       # Sobi-tyybikontroll, v2ltimaks korraliku kontrolli saamiseks
       # teegi lisamist siinse koodi s8ltuvuseks ja v2ltimaks lisakoodi.
       if s_parent.class!=String
-         raise(Exception.new("GUID=='539a051d-094e-41ad-8562-2201900148e7'"))
+         raise(Exception.new("GUID=='44bad739-8699-4973-8353-7010f00148e7'"))
       end # if
       if s_child.class!=String
-         raise(Exception.new("GUID=='25df6fe5-5334-4c9c-b362-2201900148e7'"))
+         raise(Exception.new("GUID=='11c93f64-0811-42ec-aa53-7010f00148e7'"))
       end # if
       #--------------------
       s_p=s_parent.downcase
@@ -108,7 +108,7 @@ class Graafikugeneraator_2_tulbaline_tabel
          "s_parent=="+s_parent.to_s+"\n"+
          "s_child=="+s_child.to_s+"\n"+
          "\n"+
-         "GUID=='c393285a-2e30-4353-9362-2201900148e7'\n\n"))
+         "GUID=='2bc1e793-b21c-445e-9c53-7010f00148e7'\n\n"))
       end # if
       if s_p==s_c
          raise(Exception.new("\n\nA child is not allowed to be its own parent.\n"+
@@ -116,7 +116,7 @@ class Graafikugeneraator_2_tulbaline_tabel
          "s_parent=="+s_parent.to_s+"\n"+
          "s_child=="+s_child.to_s+"\n"+
          "\n"+
-         "GUID=='a898dc5e-727a-4cb1-9362-2201900148e7'\n\n"))
+         "GUID=='d39d021c-0484-464c-8353-7010f00148e7'\n\n"))
       end # if
       #--------------------
       if !@ht_all_persons_downcased_2_camelcase.has_key? s_p
@@ -206,7 +206,7 @@ class Graafikugeneraator
          rescue Exception =>err
             raise(Exception.new("\n"+err.to_s+"\n\ns_file_path=="+
             s_file_path+
-            "\n GUID='535e3bc9-888a-44ae-a462-2201900148e7'\n\n"))
+            "\n GUID='4b469414-4199-46ce-8353-7010f00148e7'\n\n"))
          end #
       end # synchronize
       return s_out
@@ -220,7 +220,7 @@ class Graafikugeneraator
             file.write(s_a_string)
             file.close
          rescue Exception =>err
-            raise "No comments. GUID='11e7bf67-bdfe-4394-8562-2201900148e7' \n"+
+            raise "No comments. GUID='96be7c25-5444-435a-9553-7010f00148e7' \n"+
             "s_a_string=="+s_a_string+"\n"+err.to_s+"\n\n"
          end #
       end # synchronize
@@ -232,7 +232,7 @@ class Graafikugeneraator
       i_0=s_in.to_i(10)
       if i_0<0
          raise(Exception.new("s_in=="+s_in+"\n"+
-         "GUID=='1d6ec992-e54e-436e-a262-2201900148e7'"))
+         "GUID=='5cd6fcf3-cdcf-4d8a-b153-7010f00148e7'"))
       end # if
       #--------
       s_out=s_in
@@ -257,7 +257,7 @@ class Graafikugeneraator
    #     }
    def s_generate_graphviz_dot_file(ob_data)
       if ob_data.class!=Graafikugeneraator_2_tulbaline_tabel
-         raise(Exception.new("GUID=='18dc3e61-3c2f-430d-9462-2201900148e7'"))
+         raise(Exception.new("GUID=='ef4e2530-453c-4794-b153-7010f00148e7'"))
       end # if
       #----------------------------
       ar_column_parents=Array.new
@@ -280,7 +280,7 @@ class Graafikugeneraator
       if ar_column_parents.size!=ar_column_children.size
          # The 2 columns represent graph vertices that are
          # connected by an edge from the parent to the child.
-         raise(Exception.new("GUID=='04c54937-9db2-4a1e-9362-2201900148e7'"))
+         raise(Exception.new("GUID=='336ef881-4e8e-4dd5-8153-7010f00148e7'"))
       end # if
       #----------------------------
       func_0=lambda do |s_in|
@@ -311,13 +311,13 @@ class Graafikugeneraator
          raise(Exception.new("\n\n"+
          "The ob_data is of class "+cl_ob_data.to_s+" , but \n"+
          "it is required to be of class "+cl_required.to_s+"\n"+
-         "GUID=='3957102b-0948-48ee-a362-2201900148e7'\n\n"))
+         "GUID=='6b286792-6217-45a7-a153-7010f00148e7'\n\n"))
       end # if
       #-------
       # puts @fp_tmp_dot
       # puts @fp_jpeg
       s_cmd_jpeg="dot -Tjpeg "+@fp_tmp_dot+" > "+@fp_jpeg+" ;" # xview ./pilt.jpeg
-      s_cmd_svg="dot -Tsvg "+@fp_tmp_dot+" > "+@fp_svg+" ;" # xview ./pilt.svg
+      # s_cmd_svg="dot -Tsvg "+@fp_tmp_dot+" > "+@fp_svg+" ;" # xview ./pilt.svg
       #-------
       if (@fp_jpeg.reverse)[0..4]=="gepj."
          File.delete @fp_jpeg if File.exist? @fp_jpeg
@@ -341,14 +341,15 @@ class Graafikugeneraator
          printf("failed\n")
       end # if
       #-------
-      printf "\nGenerating the SVG .. "
-      x=eval("`"+s_cmd_svg+"`")
-      if File.exist? @fp_svg
-         printf(s_lc_check)
-         puts "The path of the generated SVG is:\n"+@fp_svg+"\n"
-      else
-         printf("failed\n")
-      end # if
+      # # The variable s_cmd_svg must also be uncommented, if this block is uncommented.
+      # printf "\nGenerating the SVG .. "
+      # x=eval("`"+s_cmd_svg+"`")
+      # if File.exist? @fp_svg
+      #    printf(s_lc_check)
+      #    puts "The path of the generated SVG is:\n"+@fp_svg+"\n"
+      # else
+      #    printf("failed\n")
+      # end # if
       #-------
       puts "\n\n"
       #-------------
@@ -390,5 +391,5 @@ ob_jpeg_generator=Graafikugeneraator.new
 ob_jpeg_generator.run(ob_data)
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="20758c22-49c7-4875-8362-2201900148e7"
+# S_VERSION_OF_THIS_FILE="9e519d50-53ce-460f-8153-7010f00148e7"
 #==========================================================================

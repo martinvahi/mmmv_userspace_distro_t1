@@ -16,7 +16,7 @@ end
 #==========================================================================
 def declare_graph()
 
-    directed_edge_from_left_to_right("AutoGen","Guile");
+    #directed_edge_from_left_to_right("AutoGen","Guile");
     directed_edge_from_left_to_right("GNU_Wget","lib_openssl");
     directed_edge_from_left_to_right("Ruby","lib_openssl");
     directed_edge_from_left_to_right("JAVA_gnuplot_GUI","Java");
@@ -26,5 +26,5 @@ def declare_graph()
 end # declare_graph
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="cc6ca326-0aac-45d1-b2d5-2371900148e7"
+# S_VERSION_OF_THIS_FILE="d642d938-bcbc-4f43-952d-a063e00148e7"
 #==========================================================================
