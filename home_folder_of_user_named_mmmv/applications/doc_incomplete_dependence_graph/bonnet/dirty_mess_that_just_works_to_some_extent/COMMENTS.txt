@@ -1,0 +1,8 @@
+
+Everything in here is nasty, derived from a quick and dirty hack that 
+was written long time ago not even for reuse, but literally as a demo 
+for a comment at a private email. But it works, so as long as one does 
+not need to read hardly any of it, the software is not in any online 
+system and the data set is small enough to cope with the inefficiencies... 
+
+

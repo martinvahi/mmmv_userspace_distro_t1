@@ -1,0 +1,14 @@
+
+The 
+
+    ./bin
+
+should NOT be put on the PATH, because the only purpose of the 
+
+    ./
+
+is to document _some_ of the dependencies between the 
+packaged software at the 
+
+    ./../
+
