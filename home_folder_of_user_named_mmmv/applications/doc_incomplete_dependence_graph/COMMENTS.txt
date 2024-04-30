@@ -1,14 +1,37 @@
+===========================================================================
+=================  doc_incomplete_dependence_graph  =======================
+===========================================================================
 
-The 
+The dependence graph is a non-connected directed graph. The notation at the
+
+    ./graph.jpeg
+
+is inspired by the use of arrows in UML:
+
+    program_that_depends ----> program_that_is_being_depended_on
+
+---------------------------------------------------------------------------
+                         The Hard Truth
+---------------------------------------------------------------------------
+
+I(Martin.Vahi@softf1.com) do not know, what exactly the 3rd party 
+software at the ./../ depends on. The software at the ./../ might load 
+some libraries on runtime or depend on some command-line tools. The 
+dependence graph at the doc_incomplete_dependence_graph shows only some 
+of the dependencies that I(Martin.Vahi@softf1.com) am aware of. The 
+lack of a complete dependence graph is also the reason, why there is no 
+build-script that builds a package and all of its dependencies. The 
 
     ./bin
 
 should NOT be put on the PATH, because the only purpose of the 
+doc_incomplete_dependence_graph is to document _some_ of the 
+dependencies between the packaged software at the 
+mmmv_userspace_distro_t1 package collection.
 
-    ./
+Thank You for reading this COMMENTS.txt file.
 
-is to document _some_ of the dependencies between the 
-packaged software at the 
-
-    ./../
+===========================================================================
+S_VERSION_OF_THIS_FILE="72675f28-a508-4510-a5f3-e12230e148e7"
+===========================================================================
 
