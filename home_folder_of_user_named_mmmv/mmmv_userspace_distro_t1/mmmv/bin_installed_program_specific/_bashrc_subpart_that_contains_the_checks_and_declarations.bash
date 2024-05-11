@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='1f5302cd-0e46-4cf6-9452-13e01181a7e7'"
+    echo "GUID=='031aab55-1fe1-4a09-820b-618341b058e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -35,11 +35,11 @@ fi
 MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific"
 #--------------------------------------------------------------------------
 # func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-#     "$MMMV_PARASAIL_HOME" "36dc6835-fe8f-4d40-8252-13e01181a7e7"
+#     "$MMMV_PARASAIL_HOME" "1ac1871a-203e-4ba4-820b-618341b058e7"
 # if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
 #     S_FP_CANDIDATE="$MMMV_PARASAIL_HOME/bin/pslc.csh"
 #     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-#         "$S_FP_CANDIDATE" "2222dde1-1a4e-4d23-a452-13e01181a7e7"
+#         "$S_FP_CANDIDATE" "a1d69421-60bc-4df5-810b-618341b058e7"
 #     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
 #         #Foo
 #     fi
@@ -97,14 +97,14 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "" ]; then
         export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "par_text_formatter" "2df6051a-4051-4b17-a252-13e01181a7e7"
+            "par_text_formatter" "d5d3b640-632e-4443-b50b-618341b058e7"
     fi
 fi
 #--------------------------------------------------------------------------
 if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "t" ]; then
     if [ "$SB_UUID_EXISTS_ON_PATH" == "t" ]; then
         #------------------------------------
-        S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/par_text_formatter_dependent_bashrc_subparts/clipboard_text_formatter_bashrc_subpart.bash"
+        S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/par_text_formatter_dependent_bashrc_subparts/etc/clipboard_text_formatter_bashrc_subpart.bash"
         func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_TMP_0"
         #------------------------------------
     fi
@@ -130,12 +130,27 @@ if [ "$SB_QUTEBROWSER_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/qutebrowser_specific/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$S_TMP_0" \
-        "6020e423-5058-476b-8252-13e01181a7e7" \
+        "5c437323-bae6-4741-820b-618341b058e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_0:$Z_PATH"
     fi
 fi
 #--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="d33f7c1c-5f71-422a-9152-13e01181a7e7"
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/par2_error_correction_file_utility_dependent_bashrc_subparts"
+if [ "$SB_PAR2_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$SB_SED_OR_GSED_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_FIND_EXISTS_ON_PATH" == "t" ]; then
+                if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
+                    if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
+                        export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+                    fi
+                fi
+            fi
+        fi
+    fi
+fi
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="ad4e35bd-9141-42c4-920b-618341b058e7"
 #==========================================================================

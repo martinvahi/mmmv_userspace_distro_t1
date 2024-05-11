@@ -36,7 +36,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='13f86441-88e5-4b67-9157-6082207067e7'"
+    echo "GUID=='6c7e1853-a651-475f-a15c-d0a341b058e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -147,7 +147,7 @@ alias mmmv_clipboard_text_2_citation_uk_74_t1=" S_FP_TMP_RAMPARTITION_OR_HDD=\"/
 # declared in this function.
 func_mmmv_userspace_distro_t1_declare_clipboard_text_2_X_extra_aliases_set_01(){
     #------------------------------------
-    local S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/par_text_formatter_dependent_bashrc_subparts/extras_set_01.bash"
+    local S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/par_text_formatter_dependent_bashrc_subparts/etc/extras_set_01.bash"
     func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_TMP_0"
     #------------------------------------
 } # func_mmmv_userspace_distro_t1_declare_clipboard_text_2_X_extra_aliases_set_01
@@ -211,5 +211,5 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "t" ]; then
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="6c18ee4a-1553-4478-9d57-6082207067e7"
+# S_VERSION_OF_THIS_FILE="40a3455c-b45a-4d01-b35c-d0a341b058e7"
 #========================================================================== 
