@@ -601,7 +601,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='47e9141b-f9da-4798-92d5-c180a030a7e7'"
+:                throw "The vimscript needs to be improved. GUID=='562260ba-dc6f-4562-8785-8243e03068e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -1225,8 +1225,8 @@
 :"-------------------------------------------------------------------------
 :fun!  MV_Renessaator_generate_block_template_cmd(s_renessaator_shell_cmd)
 :    let s_renessaator_shell_cmd=a:s_renessaator_shell_cmd
-:       let vimscript_command_string="r! ".s_renessaator_shell_cmd." --the_displaying_of_a_block_template -f ".@%
-:    exec vimscript_command_string
+:       let s_vimscript_command="r! ".s_renessaator_shell_cmd." --the_displaying_of_a_block_template -f ".@%
+:    exec s_vimscript_command
 :    let line_number=line(".")
 :       let xx=line_number-2
 :    call MV_go2line_t1(xx)
@@ -2038,7 +2038,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='f26fcc16-1564-4815-a2d5-c180a030a7e7'"
+:        throw "The vimscript is flawed. GUID=='57e286b4-a17f-41e8-8a15-8243e03068e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2115,6 +2115,12 @@
 :    call MV_cursor_t1(i_orig_line,i_orig_column)
 :endfun "MV_TRLRuby2PHP_ht_has_key_t1
 :"-------------------------------------------------------------------------
+:fun! MV_reformat_a_to_b_with_par_text_formatter_t1(i_max_line_width)
+:"   'a,'b! par_text_formatter 42
+:    let s_vimscript_command="'a,'b! par_text_formatter ".a:i_max_line_width
+:    exec s_vimscript_command
+:endfun "MV_reformat_a_to_b_with_par_text_formatter_t1
+:"-------------------------------------------------------------------------
 :fun! MV_sbb_file_exists_t1(s_fp_file_candidate)
 :       "---------------
 :"    The core of the code of this function originates from
@@ -2187,10 +2193,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='50202375-f3bd-41a5-b4d5-c180a030a7e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='3d142ad2-e222-405c-b814-8243e03068e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='72652235-e675-4dfe-a5d5-c180a030a7e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='a411a281-3617-4102-83d4-8243e03068e7'"
 :                en
 :            en
 :           "---------------
@@ -2272,6 +2278,17 @@
 :command -nargs=0 RenesbSirel call MV_Renessaator_generate_block_template_cmd_for_sirel("renessaator")
 :command -nargs=0 RenesbRaudrohi call MV_Renessaator_generate_block_template_cmd_for_raudrohi("renessaator")
 :command -nargs=0 RenesbInspektoJS call MV_Renessaator_generate_block_template_cmd_for_inspekto_js("renessaator")
+:command -nargs=0 RF32 call MV_reformat_a_to_b_with_par_text_formatter_t1("32")
+:command -nargs=0 RF42 call MV_reformat_a_to_b_with_par_text_formatter_t1("42")
+:command -nargs=0 RF52 call MV_reformat_a_to_b_with_par_text_formatter_t1("52")
+:command -nargs=0 RF62 call MV_reformat_a_to_b_with_par_text_formatter_t1("62")
+:command -nargs=0 RF72 call MV_reformat_a_to_b_with_par_text_formatter_t1("72")
+:command -nargs=0 RF34 call MV_reformat_a_to_b_with_par_text_formatter_t1("34")
+:command -nargs=0 RF44 call MV_reformat_a_to_b_with_par_text_formatter_t1("44")
+:command -nargs=0 RF54 call MV_reformat_a_to_b_with_par_text_formatter_t1("54")
+:command -nargs=0 RF64 call MV_reformat_a_to_b_with_par_text_formatter_t1("64")
+:command -nargs=0 RF74 call MV_reformat_a_to_b_with_par_text_formatter_t1("74")
+:command -nargs=0 RF80 call MV_reformat_a_to_b_with_par_text_formatter_t1("80")
 :command -nargs=0 SHRl call MV_shift_all_in_range_to_the_left_t1()
 :command -nargs=0 SHRr call MV_shift_all_in_range_to_the_right_t1()
 :command -nargs=0 SLcy call MV_substitute_in_line_cursorselected_with_yanked_t1()
@@ -2306,5 +2323,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"-------------------------------------------------------------------------
-:" S_VERSION_OF_THIS_FILE="91966d18-a336-480d-83d5-c180a030a7e7"
+:" S_VERSION_OF_THIS_FILE="c806d7d9-9699-4cfa-b415-8243e03068e7"
 :"=========================================================================
