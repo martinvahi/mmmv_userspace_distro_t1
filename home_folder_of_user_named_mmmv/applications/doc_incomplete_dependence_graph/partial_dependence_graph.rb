@@ -22,10 +22,11 @@ def declare_graph()
     directed_edge_from_left_to_right("JAVA_gnuplot_GUI","Java");
     directed_edge_from_left_to_right("Maven","Java");
     directed_edge_from_left_to_right("REDUCE_Computer_Algebra_System","ccache");
+    directed_edge_from_left_to_right("ncdu","ncurses");
     #----------------------------------------------------------------------
     directed_edge_from_left_to_right("doc_incomplete_dependence_graph","Ruby");
 end # declare_graph
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="379ffcf4-555d-448e-b235-e1e1c03068e7"
+# S_VERSION_OF_THIS_FILE="529ea372-3753-4112-b7fe-a110802168e7"
 #==========================================================================
