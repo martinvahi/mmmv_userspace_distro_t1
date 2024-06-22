@@ -1,0 +1,21 @@
+===========================================================================
+                                 WARNING
+===========================================================================
+
+The upstream source code at this folder HAS _NOT_ BEEN AUDITED by
+me(Martin.Vahi@softf1.com), nor do I exactly know, what its build-time
+or run-time dependencies are. It is all on a best effort bases. A
+partial dependence graph MIGHT be available at the
+
+    ./doc_incomplete_dependence_graph
+
+Some of the software that the 
+
+    ./declare_applications.bash
+    ./declare_applications_bash_devel_version.bash
+
+refer to resides at a project named mmmv_userspace_distro_t1_pkg01
+
+===========================================================================
+S_VERSION_OF_THIS_FILE="42efb711-7591-4f9e-aa1d-c0a0706168e7"
+===========================================================================
