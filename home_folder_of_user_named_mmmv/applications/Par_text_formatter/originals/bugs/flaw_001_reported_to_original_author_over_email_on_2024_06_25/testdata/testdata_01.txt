@@ -1,0 +1,7 @@
+
+Line 1: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 2: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 3: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 4: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+
+

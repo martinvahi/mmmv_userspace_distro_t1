@@ -1,0 +1,1 @@
+Line 1: This text file consists of test data that will trigger a bug in par text formatter .

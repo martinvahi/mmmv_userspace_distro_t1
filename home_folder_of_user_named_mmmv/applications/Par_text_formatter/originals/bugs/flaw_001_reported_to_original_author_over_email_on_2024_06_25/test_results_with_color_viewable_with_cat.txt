@@ -1,0 +1,101 @@
+
+-----citation--of--the--testdata_01.txt---start-----[34m
+
+Line 1: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 2: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 3: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 4: This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+
+
+[39m-----citation--of--the--testdata_01.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 100[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+
+Line 1 Line 2 : This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+Line 3 Line 4 : This text file consists of test data that will trigger_a_bug_in_par_text_formatter .
+
+
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_02.txt---start-----[34m
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh iiiii jjjjj hhhhh .
+[39m-----citation--of--the--testdata_02.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 30[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+aaaaa bbbb cccc dddd eeee ffff
+gggg hhhh iiiii jjjjj hhhhh .
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_03.txt---start-----[34m
+
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh iiiii jjjjj hhhhh .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh iiiii jjjjj hhhhh .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh iiiii jjjjj hhhhh .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh iiiii jjjjj hhhhh .
+[39m-----citation--of--the--testdata_03.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 30[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+
+aaaaa bbbb cccc dddd eeee ffff
+gggg hhhh iiiii jjjjj hhhhh .
+aaaaa bbbb cccc dddd eeee ffff
+gggg hhhh iiiii jjjjj hhhhh .
+aaaaa bbbb cccc dddd eeee ffff
+gggg hhhh iiiii jjjjj hhhhh .
+aaaaa bbbb cccc dddd eeee ffff
+gggg hhhh iiiii jjjjj hhhhh .
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_04.txt---start-----[34m
+
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+[39m-----citation--of--the--testdata_04.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 45[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+
+par error:
+<width> (45) <= <prefix> (62) + <suffix> (0)
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_05.txt---start-----[34m
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+[39m-----citation--of--the--testdata_05.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 45[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+aaaaa bbbb cccc dddd eeee ffff gggg hhhh
+_iiiii_jjjjj_hhhhh_ .
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_06.txt---start-----[34m
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+aaaaa bbbb  cccc dddd eeee ffff gggg hhhh _iiiii_jjjjj_hhhhh_ .
+[39m-----citation--of--the--testdata_06.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 45[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+par error:
+<width> (45) <= <prefix> (62) + <suffix> (0)
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_07.txt---start-----[34m
+Line 1: This text file consists of test data that will trigger a bug in par text formatter .
+[39m-----citation--of--the--testdata_07.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 45[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+Line 1: This text file consists of test data
+that will trigger a bug in par text formatter
+.
+----par_text_formatter--output--citation--end-------
+
+-----citation--of--the--testdata_08.txt---start-----[34m
+Line 1: This text file consists of test data that will trigger a bug in par text formatter .
+Line 2: This text file consists of test data that will trigger a bug in par text formatter .
+[39m-----citation--of--the--testdata_08.txt---end-----
+Below is the output of the Bash command "[33mpar_text_formatter 45[39m", without the quotation marks:
+----par_text_formatter--output--citation--start-----
+par error:
+<width> (45) <= <prefix> (0) + <suffix> (86)
+----par_text_formatter--output--citation--end-------
