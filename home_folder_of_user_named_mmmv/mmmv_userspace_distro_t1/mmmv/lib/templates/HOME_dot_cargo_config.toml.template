@@ -1,0 +1,23 @@
+
+#==========================================================================
+# Initial author of this file: Martin.Vahi@softf1.com
+# This file is in public domain.
+#
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+
+# The path of this file is expected to be 
+#     $HOME/.cargo/config.toml
+#==========================================================================
+
+[build]
+
+#jobs = 1 # number of parallel build jobs 
+         # to limit RAM usage on  
+         # Raspberry Pi like computers.
+         # The default equals the
+         # number of CPU cores.
+
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="4da16116-cd54-4136-b113-c182103168e7"
+#==========================================================================
