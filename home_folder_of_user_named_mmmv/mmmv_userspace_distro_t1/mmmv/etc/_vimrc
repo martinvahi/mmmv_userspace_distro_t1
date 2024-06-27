@@ -601,7 +601,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='f751b31b-2c36-496c-8211-9083009168e7'"
+:                throw "The vimscript needs to be improved. GUID=='20943232-583e-4a3c-95e1-e2a330b168e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -2038,7 +2038,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='54e27b65-1684-4251-b511-9083009168e7'"
+:        throw "The vimscript is flawed. GUID=='29092f5a-1c08-44b4-a2e1-e2a330b168e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2125,13 +2125,14 @@
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_t1
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_t1(i_max_line_width)
-:"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! par_text_formatter ".a:i_max_line_width." | sed -e 's/^/> /g' "
-:"   works with both, the GNU sed and the BSD sed.
+:"   The sed commands at the next 2 lines
+:"    let s_vimscript_command="'a,'b! par_text_formatter ".a:i_max_line_width." | sed -e 's/^/> /g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^> //g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/> /g' "
+:"   work with both, the GNU sed and the BSD sed.
 :"   If the par_text_formatter or the sed is not on PATH, then
 :"   Vim displays the error message from the failing Bash command,
 :"   which includes a statement that the command
-:"   could not be found from PATH. 
+:"   could not be found from PATH.
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_t1
 :"-------------------------------------------------------------------------
@@ -2207,10 +2208,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='33adca6f-0619-4087-9211-9083009168e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='a84ce023-9bfa-4903-93e1-e2a330b168e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='39d5c3a1-1f04-477c-8211-9083009168e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='587b9151-05bf-47e1-afd1-e2a330b168e7'"
 :                en
 :            en
 :           "---------------
@@ -2353,5 +2354,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="3f6f3d28-3daf-41e7-9311-9083009168e7"
+:" S_VERSION_OF_THIS_FILE="466b1c3f-efe1-4e04-b1e1-e2a330b168e7"
 :"=========================================================================
