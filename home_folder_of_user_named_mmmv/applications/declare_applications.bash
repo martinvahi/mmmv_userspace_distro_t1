@@ -121,6 +121,10 @@ if [ "$SB_APPLICATION_DECLARATION_SCRIPT_CUSTOMISED" == "t" ]; then
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
         "$S_TMP_0" "7deee23b-7c02-43cf-944d-4250706168e7" 
     #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/GNU_grep/v_3_11"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "762f9574-e0fb-4126-ae1b-a31080b078e7" 
+    #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Fossil/v_2_19"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
         "$S_TMP_0" "02f84428-37bc-45f5-a24d-4250706168e7" 
