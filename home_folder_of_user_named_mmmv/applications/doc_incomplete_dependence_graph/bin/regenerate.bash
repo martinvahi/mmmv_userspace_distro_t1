@@ -3812,8 +3812,8 @@ func_display_help_message(){
 
 #--------------------------------------------------------------------------
 
-S_CMD_GNU_AWK="awk"
-S_CMD_GNU_MAKE="make"
+# S_CMD_GNU_AWK="awk"
+# S_CMD_GNU_MAKE="make"
 S_CMD_GNU_SED="sed"
 func_check_for_some_dependencies(){
     #----------------------------------------------------------------------
@@ -3855,8 +3855,8 @@ func_check_for_some_dependencies(){
     # The test for the availability of grep is 
     # expected to be somewhere above this line.
     if [ "`uname -a | grep -i 'BSD' `" != '' ]; then 
-        S_CMD_GNU_AWK="gawk"
-        S_CMD_GNU_MAKE="gmake"
+        # S_CMD_GNU_AWK="gawk"
+        # S_CMD_GNU_MAKE="gmake"
         S_CMD_GNU_SED="gsed" 
     fi 
     #func_mmmv_assert_exists_on_path_t1 "$S_CMD_GNU_AWK"
