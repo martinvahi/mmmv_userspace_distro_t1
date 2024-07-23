@@ -599,7 +599,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='17c8ada1-f2b7-4cd7-9111-d1f2206178e7'"
+:                throw "The vimscript needs to be improved. GUID=='fc4d233d-61c8-4533-b110-9173517178e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -2037,7 +2037,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='13268c62-0643-4331-9211-d1f2206178e7'"
+:        throw "The vimscript is flawed. GUID=='87dbd9da-1876-4de8-b500-9173517178e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2136,99 +2136,113 @@
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ruby(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*#//g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/#/g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[\\#]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1\\#/g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][\\#]\\)/\\1\\# /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
-:"   Bash testline
-:"       echo " #### ahaa " | sed -e 's/^[[:blank:]]*#//g' | sed -e 's/^/f#x/g'
+:"   Bash testlines
+:"       echo "  # ### ahaa " | sed -e 's/^\([[:blank:]]*\)[\#]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1\#/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][\#]\)/\1x\#y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ruby
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Windows_and_DOS_BAT(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*[Rr][Ee][Mm][[:blank:]]//g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/REM /g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[Rr][Ee][Mm][[:blank:]]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1REM /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo " REM  ahaa " | sed -e 's/^[[:blank:]]*[Rr][Ee][Mm][[:blank:]]//g' | sed -e 's/^/_REM_ X/g'
+:"       echo "REM  ahaa " | sed -e 's/^\([[:blank:]]*\)[Rr][Ee][Mm][[:blank:]]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1_REM_ X/g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Windows_and_DOS_BAT
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Fortran(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*[!]//g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/!/g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[\\!]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1\\!/g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][\\!]\\)/\\1\\! /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo " ! ! ahaa " | sed -e 's/^[[:blank:]]*[!]//g' | sed -e 's/^/f!x/g'
+:"       echo '  ! !!! ahaa ' | sed -e 's/^\([[:blank:]]*\)[\!]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1\!/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][\!]\)/\1x\!y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Fortran
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_C_and_Cpp(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*\\/\\///g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/\\/\\//g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[\\/][\\/]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1\\/\\//g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][\\/][\\/]\\)/\\1\\/\\/ /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo " //// ahaa " | sed -e 's/^[[:blank:]]*\/\///g' | sed -e 's/^/f\/\/x/g'
+:"       echo '  //// ahaa ' | sed -e 's/^\([[:blank:]]*\)[\/][\/]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1\/\//g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][\/][\/]\)/\1x\/\/y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_C_and_Cpp
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Vimscript_t1(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*[:][[:blank:]]*[\"]//g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/:\"/g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[:][[:blank:]]*[\"]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1:\"/g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][:][\"]\\)/\\1:\" /g' | sed -e 's/^\\([[:blank:]]\\+\\)[:][\"]/:\"\\1/g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo ' :""ahaa ' | sed -e 's/^[[:blank:]]*[:][[:blank:]]*[\"]//g' | sed -e 's/^/f:\"x /g'
+:"       echo ' :""  ahaa ' | sed -e 's/^\([[:blank:]]*\)[:][[:blank:]]*["]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1:"/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][:]["]\)/\1x:"y /g' | sed -e 's/^\([[:blank:]]\+\)[:]["]/:"\1/g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Vimscript_t1
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Lisp(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*[;][;]//g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/;;/g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[;][;]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1;;/g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][;][;]\\)/\\1;; /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo " ;;;; ahaa " | sed -e 's/^[[:blank:]]*[;][;]//g' | sed -e 's/^/f;;x/g'
+:"       echo '  ;;;; ahaa ' | sed -e 's/^\([[:blank:]]*\)[;][;]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1;;/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][;][;]\)/\1x;;y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Lisp
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ada(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e \"s/^[[:blank:]]*[-][-]//g\" | par_text_formatter ".a:i_max_line_width." | sed -e \"s/^/--/g\" "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[-][-]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1--/g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][-][-]\\)/\\1-- /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo " ---- -- ahaa " | sed -e "s/^[[:blank:]]*[-][-]//g" | sed -e "s/^/x--y/g"
+:"       echo '  --- ---- ahaa ' | sed -e 's/^\([[:blank:]]*\)[-][-]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1--/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][-][-]\)/\1x--y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ada
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_LaTeX(i_max_line_width)
 :"   The sed command at the next line
-:    let s_vimscript_command="'a,'b! sed -e 's/^[[:blank:]]*[%]//g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^/%/g' "
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)[\\%]/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1\\%/g' | sed -e 's/^\\([[:blank:]]*\\)\\([[:blank:]][\\%]\\)/\\1\\% /g' "
 :"   has been tested to work with both, the GNU sed and the BSD sed.  If
 :"   the par_text_formatter or the sed is not on PATH, then Vim displays
 :"   the error message from the failing Bash command, which includes a
 :"   statement that the command could not be found from PATH.
 :"   Bash testline
-:"       echo " %%%% ahaa " | sed -e 's/^[[:blank:]]*[%]//g' | sed -e 's/^/f%x/g'
+:"       echo '  %%%% %% ahaa ' | sed -e 's/^\([[:blank:]]*\)[\%]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1\%/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][\%]\)/\1x\%y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_LaTeX
+:"-------------------------------------------------------------------------
+:fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1(i_max_line_width)
+:"   The GNU sed, gsed, command at the next line
+:    let s_vimscript_command="'a,'b! gsed -e 's/^\\([[:blank:]]*\\)echo[[:blank:]]\\+\\([-]e[[:blank:]]\\+\\)\\?[\"][[:blank:]]*/\\1/g' | gsed -e 's/[[:blank:]]*[\"][[:blank:]]*\$//g' | par_text_formatter ".a:i_max_line_width." | gsed -e 's/[[:blank:]]\\+\$//g' | gsed -e 's/^\\([[:blank:]]*\\)/\\1echo -e \"/g' | gsed -e 's/\\([[:alnum:]]\\|[\"\\%\\#\\&.,;`]\\)[[:blank:]]*\$/\\1\"/g' | gsed -e \"s/['][[:blank:]]*/'\\\"/g\" "
+:"   has been tested to work on both, the BSD and Linux. If the
+:"   par_text_formatter or the gsed is not on PATH, then Vim displays
+:"   the error message from the failing Bash command, which includes a
+:"   statement that the command could not be found from PATH. On Linux
+:"   the gsed command might be created by placing a symlink named "gsed"
+:"   to PATH and the symlink would reference the "sed".
+:"   Bash testline
+:"       echo ' echo -e " Foo Bar " ' | gsed -e 's/^\([[:blank:]]*\)echo[[:blank:]]\+\([-]e[[:blank:]]\+\)\?["][[:blank:]]*/\1/g' | gsed -e 's/[[:blank:]]*["][[:blank:]]*$//g' | gsed -e 's/^\([[:blank:]]*\)/\1echo -e "/g' | gsed -e 's/\([[:alnum:]]\)[[:blank:]]*$/\1"/g'
+:    exec s_vimscript_command
+:endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1
 :"-------------------------------------------------------------------------
 :fun! MV_escape_a_to_b_doublequoted_Bash_string_t1()
 :"   is a reverse of the MV_unescape_a_to_b_doublequoted_Bash_string_t1()
@@ -2334,10 +2348,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='cefe521a-908a-4d90-a311-d1f2206178e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='42c42752-39ee-49d6-a300-9173517178e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='bd54e633-5c14-40dd-b311-d1f2206178e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='782241a2-82dc-414a-b300-9173517178e7'"
 :                en
 :            en
 :           "---------------
@@ -2550,6 +2564,19 @@
 :command -nargs=0 RFCLaTeX74 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_LaTeX("74")
 :command -nargs=0 RFCLaTeX80 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_LaTeX("80")
 :"-------------------------------------------------------------------------
+:" The prefix 'RFC' has been derived from the phrase: 'ReFormat Comment'.
+:command -nargs=0 RFCBash1Echo32 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("32")
+:command -nargs=0 RFCBash1Echo42 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("42")
+:command -nargs=0 RFCBash1Echo52 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("52")
+:command -nargs=0 RFCBash1Echo62 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("62")
+:command -nargs=0 RFCBash1Echo72 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("72")
+:command -nargs=0 RFCBash1Echo34 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("34")
+:command -nargs=0 RFCBash1Echo44 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("44")
+:command -nargs=0 RFCBash1Echo54 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("54")
+:command -nargs=0 RFCBash1Echo64 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("64")
+:command -nargs=0 RFCBash1Echo74 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("74")
+:command -nargs=0 RFCBash1Echo80 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Bash_echo_t1("80")
+:"-------------------------------------------------------------------------
 :command -nargs=0 ESCBSDQ   call   MV_escape_a_to_b_doublequoted_Bash_string_t1()
 :command -nargs=0 UNESCBSDQ call MV_unescape_a_to_b_doublequoted_Bash_string_t1()
 :command -nargs=0 ESCBSSQ   call   MV_escape_a_to_b_singlequoted_Bash_string_t1()
@@ -2589,5 +2616,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="2216a738-a6fe-437c-8411-d1f2206178e7"
+:" S_VERSION_OF_THIS_FILE="496f2149-1f68-46cb-b100-9173517178e7"
 :"=========================================================================
