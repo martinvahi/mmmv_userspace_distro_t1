@@ -7,11 +7,11 @@
 #==========================================================================
 
 s_general_idea=<<DESCRIPTION
-The general idea: A B +  -->  A+B
+The general idea: A B +  -->  A + B
 
     mmmv_polish_ABC_2_ACB_exec_t1 A B \+
     # gives
-    A+B
+    A + B
     # and executes it on console.
 
 DESCRIPTION
@@ -46,7 +46,7 @@ if i_0!=3
    s_err<<"The "+s_2+"\e[31m requires exactly 3 arguments\e[39m.\n"
    s_err<<s_general_idea
    puts(s_err)
-   raise(Exception.new("GUID=='390dea53-3555-4b7b-8c18-c2f1619038e7'\n"))
+   raise(Exception.new("GUID=='4487dd55-b628-44dd-9d30-734220e178e7'\n"))
    #---------------------------------------------------------
 end # if
 
@@ -55,24 +55,56 @@ end # if
 # https://github.com/martinvahi/mmmv_notes/blob/main/mmmv_notes/phenomenon_scrutinization/string_concatenation/COMMENTS.txt
 # https://sourceforge.net/p/mmmv-notes/code/ci/master/tree/mmmv_notes/phenomenon_scrutinization/string_concatenation/COMMENTS.txt
 #----------------------------------------
+s_emptystring="".freeze
 s_cmd=" "
-s_cmd<<(ARGV[0].to_s)
-s_cmd<<(ARGV[2].to_s)
-s_cmd<<(ARGV[1].to_s)
+s_cmd<<(s_emptystring+ARGV[0].to_s)
+s_cmd<<(s_emptystring+ARGV[2].to_s)
+s_cmd<<(s_emptystring+ARGV[1].to_s)
 s_cmd<<" "
-
+#----------------------------------------
+# Bash single quotes escaping:
+#     https://stackoverflow.com/questions/1250079/how-to-escape-single-quotes-within-single-quoted-strings
+#     archival copy: https://archive.ph/eJU1w
+#
+# The test Bash code line 
+#
+#    echo '[`whoami `'"'"'$HOME]'
+#
+# returns to console:
+#     #----citation--start---
+#     [`whoami `'$HOME]
+#     #----citation--end-----
+#
+#----------------------------------------
 s_cmd_1="bash -c ' "+
-s_cmd.gsub(/[\\]/,'\\\\\\\\').gsub(/[']/,"\\\\'")+
+s_cmd.gsub(/[']/,"'\"'\"'")+
 " ' "
+puts s_cmd
 #printf(s_cmd)
 #puts(s_cmd)
+#----------------------------------------
+# Citation from Ruby 3.1.2 stdlib core documentation:
+#
+#     "system returns true if the command gives
+#     zero exit status, false for non zero exit
+#     status. Returns nil if command execution
+#     fails. An error status is available in $?."
+#
+#----------------------------------------
+i_exit_code=1 # error occurred
+x=system(s_cmd_1) 
 #system(s_cmd) # executes sh, not bash
-system(s_cmd_1)
+if x!=nil
+    ob_process_status=$?
+    x1=ob_process_status.exitstatus
+    i_exit_code=x1 if x1!=nil
+end # if
+exit i_exit_code
 #--------------------------------------------------------------------------
 # A Bash testline:
 #
-#     ./mmmv_polish_ABC_2_ACB_exec_t1 " ls " " whoami " " ./ ;"
+#     ./mmmv_polish_ABC_2_ACB_exec_t1 " ls " " whoami ; echo '\"\n\"'; echo \"\$HOME\" "  " ./ ; " 
 #
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="55afeaa4-c52d-41d1-9a28-c2f1619038e7"
+# S_VERSION_OF_THIS_FILE="e18e8c1a-d4f2-4c76-a220-734220e178e7"
 #==========================================================================
