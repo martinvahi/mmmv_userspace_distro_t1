@@ -18,7 +18,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='741660f3-dae6-437e-9c69-41e1c01077e7'"
+    echo "GUID=='4fa548d1-9032-489c-8517-7002600178e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -31,7 +31,7 @@ else
     if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" != "f" ]; then
         echo ""
         echo "The Java build system called Maven is missing from the PATH."
-        echo "GUID=='ca954117-e8b3-4cfc-b369-41e1c01077e7'"
+        echo "GUID=='9f9cb42d-893b-4313-8217-7002600178e7'"
         echo ""
     fi
 fi
@@ -43,7 +43,7 @@ if [ "$SB_MAVEN_EXISTS_ON_PATH" == "t" ]; then
     #----------------------------------------------------------------------
     if [ "$M2" != "" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$M2" "37c8ec3d-73fb-4959-9369-41e1c01077e7" \
+            "$M2" "9bcc9d30-cd05-4d85-b217-7002600178e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
     #----------------------------------------------------------------------
@@ -51,11 +51,11 @@ if [ "$SB_MAVEN_EXISTS_ON_PATH" == "t" ]; then
         if [ -e "$S_FP_HOME_DOT_M2" ]; then
             # Just to check that it is a folder and not a file.
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_HOME_DOT_M2" "edfcca26-c6ba-4b21-a169-41e1c01077e7" \
+                "$S_FP_HOME_DOT_M2" "7b33c852-98ea-49dd-a417-7002600178e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         else # we try to copy it to create a seed version of it
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_MMMV_DOT_M2" "f073b319-c969-4e75-9169-41e1c01077e7" \
+                "$S_FP_MMMV_DOT_M2" "253d5834-e4dd-45b4-8417-7002600178e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" != "f" ]; then
@@ -73,11 +73,11 @@ if [ "$SB_MAVEN_EXISTS_ON_PATH" == "t" ]; then
                     if [ "$S_TMP_0" != 0 ]; then
                         echo -e \e[31m"The cp exited with an error code of $S_TMP_0 \e[39m"
                     fi
-                    echo "GUID=='2286f392-eed1-4c6a-b469-41e1c01077e7'"
+                    echo "GUID=='56e276b4-9514-482c-a517-7002600178e7'"
                     echo ""
                 fi
                 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                    "$S_FP_HOME_DOT_M2" "4fea034e-e766-4ff3-b369-41e1c01077e7" \
+                    "$S_FP_HOME_DOT_M2" "ca755d1c-50e7-4924-8317-7002600178e7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             fi
         fi
@@ -98,7 +98,7 @@ else # Maven not on PATH
             echo "    M2 != \"\" ==$M2"
             echo ""
             echo "is defined, but the Maven itself is not available on the PATH."
-            echo "GUID=='38f84684-2754-4495-a569-41e1c01077e7'"
+            echo "GUID=='a479f1ca-0dc4-47db-a117-7002600178e7'"
             echo ""
         fi
     fi
@@ -135,6 +135,6 @@ fi
 #       </proxies>
 #     </settings>
 #     -----untested--citation--end-----------------------------------------
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="03415348-8ad3-4c7e-8569-41e1c01077e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="264f2b25-0c2a-4bcf-8317-7002600178e7"
 #==========================================================================

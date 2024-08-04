@@ -1,0 +1,24 @@
+
+There is NO endorsement by the original authors for redistributing
+those course materials here, but the materials have been available over
+a decade at the home page of the professor that runs the course, 
+
+    Ain Isotamm
+
+and I(Martin.Vahi@softf1.com) am pretty sure that with proper academic
+referencing he as an academic does not mind having a few 3. party
+"backups" of his and his colleagues' work. You'll probably need a
+separate license from him for any commercial use of his works.  The
+works are in Estonian, but may be one day auto-translators become good
+enough that it's not a problem for people, who do not speak Estonian.
+
+File origins:
+
+    ./tts.pdf
+    https://kodu.ut.ee/~isotamm/RAAMATUD/tts.pdf
+    Download date: 2024_07_31
+
+    ./maketts.zip
+    https://kodu.ut.ee/~isotamm/zip/maketts.zip
+    Download date: 2024_07_31
+

@@ -296,7 +296,7 @@ probabilistically close to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "110ae431-509b-43a5-b227-f092512167e7"
+All quoted GUIDs like "2bebc744-4f2a-41a4-a1b2-b052904088e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -519,7 +519,7 @@ Detailed description of the Renessaator resides at
 
 The "Renesb" generates a programming language specific Renessaator
 block template. The programming language name is derived
-from the extention of the file that is open in Vim.
+from the extension of the file that is open in Vim.
 
 There's also a Martin.Vahi@softf1.com(me) fork of 
 the Paul Lutus Ruby code formatter. Unfortunately as of 
@@ -620,5 +620,5 @@ me, the Martin.Vahi@softf1.com, as an author is satisfied.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="f421f13b-4b15-4886-b427-f092512167e7"
+# S_VERSION_OF_THIS_FILE="45491eb4-2df3-466c-94b2-b052904088e7"
 ===========================================================================

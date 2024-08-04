@@ -18,7 +18,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='278c3ab0-840f-42b9-931e-83d1514127e7'"
+    echo "GUID=='226920b4-c8c1-493f-85aa-42f1600178e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -115,7 +115,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
                 echo "    viewnior, xloadimage, xview, feh, mirage, geeqie, sxiv, "
                 echo "    gpicview, nomacs, eom, mcomix, eog, ristretto, gwenview "
                 echo ""
-                echo "GUID=='9c5e4e27-dae0-488c-b11e-83d1514127e7'"
+                echo "GUID=='9ff8ee4c-b520-4ebc-95aa-42f1600178e7'"
                 echo ""
                 # TODO: add some Java image viewer as the very last fallback option.
             fi
@@ -123,7 +123,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" != "f" ]; then
                 echo ""
                 echo "The code of this Bash script is flawed."
-                echo "GUID=='dee06231-868a-4d1a-a31e-83d1514127e7'"
+                echo "GUID=='45e94913-1537-4ccd-92aa-42f1600178e7'"
                 echo ""
             fi
         fi
@@ -131,6 +131,6 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
 fi
 #--------------------------------------------------------------------------
 func_mmmv_wait_and_sync_t1 # Just to be sure.
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="c1962502-a4f5-454f-8c1e-83d1514127e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="5a6494d5-e7e6-4592-94aa-42f1600178e7"
 #==========================================================================
