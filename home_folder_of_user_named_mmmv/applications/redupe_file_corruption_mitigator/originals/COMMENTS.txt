@@ -1,0 +1,35 @@
+
+The contents of the 
+
+    ./unmodified_upstream_src/2024_08_12_newest_redupe_upstream_version_from_GitHub.tar.gz
+    
+has been obtained by executing 
+
+    git clone --recursive https://github.com/rescrv/redupe.git
+
+and then removing the .git folder and after that renaming the folder
+"redupe" to "2024_08_12_newest_redupe_upstream_version_from_GitHub". As of
+2024_08_12 the last checkin to that repository was made on
+2018_02_18. As of 2024_08_12 the original, upstream author's, 
+Robert Escriva's, home page is:
+
+    https://rescrv.net/
+
+The contents of the 
+
+    ./2024_08_12_redupe.tar.gz
+
+has been created by unpacking the 
+
+    ./unmodified_upstream_src/2024_08_12_newest_redupe_upstream_version_from_GitHub.tar.gz
+
+and executing:
+
+    autoreconf --install
+    autoconf
+
+at the unpacked folder.
+
+
+
+
