@@ -1,3 +1,17 @@
+===========================================================================
+==================  Fonts in mmmv_userspace_distro_t1  ====================
+===========================================================================
+
+All of the fonts at the
+
+    ./the_fonts
+
+have a kind of license that allows an unmodified copy of those fonts to
+be used in closed source software.
+
+---------------------------------------------------------------------------
+                  Fonts Setup in mmmv_userspace_distro_t1  
+---------------------------------------------------------------------------
 
 The 
 
@@ -36,3 +50,17 @@ which MIGHT be defined by an alias
 
     mmmv_admin_refresh_fonts_cache_t1 # should work on both, Linux and BSD.
 
+
+---------------------------------------------------------------------------
+                          Font Origin
+---------------------------------------------------------------------------
+
+    ./the_fonts/kreativesquare.zip
+    https://www.kreativekorp.com/software/fonts/ksquare/
+    https://github.com/kreativekorp/open-relay
+    Download date: 2024_08_16
+
+
+===========================================================================
+S_VERSION_OF_THIS_FILE="b3949402-bbf7-4c54-b917-1071710188e7"
+===========================================================================
