@@ -2,18 +2,6 @@
 =====================  mmmv_userspace_distro_t1  ==========================
 ===========================================================================
 
-This is a crippled copy, which means that a lot of 
-the components described in this text have been deleted.
-A full version of the 2023_10_20_mmmv_userspace_distro_t1_beta_01
-has a size of about 8GiB and it MIGHT be downloadable from
-
-    https://1fichier.com/dir/FibRTTCP
-
-where the anti-bot password, FooBar224, must be 
-typed in instead of copy-pasting it.
-
-::::::::::::::::START::OF::THE::GENERAL::TEXT::::::::::::::::::::::::::::::
-
 The mmmv_userspace_distro_t1 is a collection of manually installed
 components and scripts. It's main purpose is to facilitate the 
 configuration of POSIX compliant operating system instances, for example 
@@ -296,7 +284,7 @@ probabilistically close to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "2bebc744-4f2a-41a4-a1b2-b052904088e7"
+All quoted GUIDs like "2a4f8a91-38ca-42be-85ec-30b2311098e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -620,5 +608,5 @@ me, the Martin.Vahi@softf1.com, as an author is satisfied.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="45491eb4-2df3-466c-94b2-b052904088e7"
+# S_VERSION_OF_THIS_FILE="dd581e49-4176-4be1-a5ec-30b2311098e7"
 ===========================================================================
