@@ -49,7 +49,7 @@ if i_argv_len<1
    s_err<<"The "+s_2+"\e[31m requires at least 1 argument\e[39m.\n"
    s_err<<s_general_idea
    puts(s_err)
-   raise(Exception.new("GUID=='2d5b2744-0c45-46f0-a591-520330e178e7'\n"))
+   raise(Exception.new("GUID=='1b499f13-50da-433a-94ee-f10300a188e7'\n"))
    #---------------------------------------------------------
 end # if
 
@@ -85,7 +85,7 @@ s_cmd<<s_lc_space
 s_cmd_1="bash -c ' "+
 s_cmd.gsub(/[']/,"'\"'\"'")+
 " ' "
-puts s_cmd
+#puts s_cmd
 #printf(s_cmd)
 #puts(s_cmd)
 #----------------------------------------
@@ -110,5 +110,5 @@ exit i_exit_code
 # Test line:
 #     ./mmmv_polish_ABC_2_B_C_A_exec_t1 "whoami ; " "date ;" "pwd; " " date ;"
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="725bd217-9ad3-443d-8591-520330e178e7"
+# S_VERSION_OF_THIS_FILE="3af5d215-13a0-43fb-a4ee-f10300a188e7"
 #==========================================================================

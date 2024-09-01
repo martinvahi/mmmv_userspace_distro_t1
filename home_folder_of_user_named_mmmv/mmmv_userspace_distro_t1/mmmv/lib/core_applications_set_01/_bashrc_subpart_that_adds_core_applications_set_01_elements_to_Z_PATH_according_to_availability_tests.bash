@@ -27,14 +27,14 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='b5627931-df70-422a-a5a5-2253904088e7'"
+    echo "GUID=='aab68238-3e2b-45cd-a3d9-1050804088e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
 #--------------------------------------------------------------------------
 MMMV_USERSPACE_DISTRO_T1_CORE_APPLICATIONS_SET_01="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/core_applications_set_01"
 #--------------------------------------------------------------------------
-# TODO: complete the application that the following dead code references.
+# POOLELI: all olev kasutusele v8tta p2rast kui mmmv_HTMLfile_2_list_of_a_tag_URLs_file_extensions_set_01_t1 valmis on.
 # S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_CORE_APPLICATIONS_SET_01/mmmv_HTMLfile_2_list_of_a_tag_URLs_file_extensions_set_01_t1"
 # if [ -e "$S_TMP_0" ]; then
 #     if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
@@ -52,5 +52,5 @@ MMMV_USERSPACE_DISTRO_T1_CORE_APPLICATIONS_SET_01="$MMMV_USERSPACE_DISTRO_T1_HOM
 #     fi
 # fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="1f8429b3-b50d-4343-85a5-2253904088e7"
+# S_VERSION_OF_THIS_FILE="259fa011-5669-40da-b2d9-1050804088e7"
 #==========================================================================

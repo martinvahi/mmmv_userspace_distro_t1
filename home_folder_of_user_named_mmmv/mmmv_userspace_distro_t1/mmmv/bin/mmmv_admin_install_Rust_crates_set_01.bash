@@ -41,7 +41,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "    S_FP_ORIG=\"\`pwd\`\""
         echo ""
         echo "Aborting script."
-        echo "GUID=='7f97801c-14e4-4ea6-938d-b0d271b178e7'"
+        echo "GUID=='4987a0d2-b680-4f87-9537-030020a188e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -68,7 +68,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         fi
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='30c4aac4-6a5d-4259-977d-b0d271b178e7'"
+        echo "GUID=='ff192525-73c2-4341-8342-030020a188e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -81,7 +81,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "is not a folder. It is expected to be a folder that "
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='519bf8d4-0c7d-436a-917d-b0d271b178e7'"
+        echo "GUID=='745e30fd-767c-4456-8e11-030020a188e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -99,7 +99,7 @@ func_mmmv_exc_exit_with_an_error_t1(){
     if [ "$S_GUID_CANDIDATE" != "" ]; then 
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
     fi
-    echo "GUID=='44555a14-0186-4ba1-b27d-b0d271b178e7'"
+    echo "GUID=='f2551fe7-8071-4451-b8e2-030020a188e7'"
     echo ""
     cd "$S_FP_ORIG"
     exit 1 # exit with an error
@@ -119,7 +119,7 @@ func_mmmv_exc_exit_with_an_error_t2(){
             echo "$S_OPTIONAL_ERR_MSG"
         fi
         echo "Aborting script."
-        echo "GUID=='8ca9fd29-2d89-4add-a37d-b0d271b178e7'"
+        echo "GUID=='364303c2-4258-4b8e-afc2-030020a188e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -131,7 +131,7 @@ func_mmmv_exc_exit_with_an_error_t2(){
         fi
         echo "Aborting script."
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-        echo "GUID=='5684e941-903d-465e-827d-b0d271b178e7'"
+        echo "GUID=='3932a298-a5d2-437f-9ed2-030020a188e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -148,7 +148,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='56e9451d-f8ef-4cc1-957d-b0d271b178e7'"
+        echo "GUID=='25125405-5bd8-4420-bb45-030020a188e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -168,7 +168,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo "Aborting script."
-        echo "GUID=='85b98c71-e6c6-4ce0-b37d-b0d271b178e7'"
+        echo "GUID=='f37af649-1169-41f1-b092-030020a188e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         cd "$S_FP_ORIG"
@@ -186,7 +186,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
         echo ""
         echo "The code that calls this function is flawed."
         echo "This function requires 2 parameters: S_FP, S_GUID"
-        echo "GUID=='2e169679-d462-4e01-827d-b0d271b178e7'"
+        echo "GUID=='448ce654-4408-4242-9e24-030020a188e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -203,7 +203,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo "points to a broken symlink, but a file or "
             echo "a symlink to a file is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='11b08e21-e3a2-460b-9b7d-b0d271b178e7'"
+            echo "GUID=='21c8e012-c790-41ae-a782-030020a188e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -216,7 +216,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "does not exist."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='3ae27d4a-8f35-42ae-837d-b0d271b178e7'"
+            echo "GUID=='3a5985ac-4ff0-4ce5-b803-030020a188e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -235,7 +235,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "exists, but a file or a symlink to a file is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='75963452-668a-4324-a17d-b0d271b178e7'"
+            echo "GUID=='e3e4f12a-e273-4272-9453-030020a188e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -254,7 +254,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
         echo ""
         echo "The code that calls this function is flawed."
         echo "This function requires 2 parameters: S_FP, S_GUID"
-        echo "GUID=='8ed54b26-909a-4fd1-947d-b0d271b178e7'"
+        echo "GUID=='84657dcb-8ff5-4308-a7f4-030020a188e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -271,7 +271,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
             echo "points to a broken symlink, but a folder "
             echo "or a symlink to a folder is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='fe940343-f55b-4517-a17d-b0d271b178e7'"
+            echo "GUID=='3184d2a5-96e2-4543-96d2-030020a188e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -284,7 +284,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "does not exist."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='d623b451-c66f-4e4e-937d-b0d271b178e7'"
+            echo "GUID=='c41e3276-5910-4e47-98d5-030020a188e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -303,7 +303,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "exists, but a folder is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='508ef1b1-4b2f-4969-817d-b0d271b178e7'"
+            echo "GUID=='c2462511-e749-437d-ad12-030020a188e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -385,15 +385,34 @@ func_initialise_if_needed_and_possible_MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILAT
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#::::::::::::::::::::::::::::build::tools::::::::::::::::::::::::::::::::::
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# Used in projects like 
+#
+#     https://github.com/tinysearch/tinysearch
+#
+func_install_Rust_crate "wasm-pack" \
+    "91f11ce3-6b0f-42b9-a9a4-030020a188e7"
+# but for some reason as of 2024_08_26 the documentation of the 
+func_install_Rust_crate "tinysearch" \
+    "73f5dd91-fb16-43fc-abd2-030020a188e7"
+# says that those 2 should be installed separately.
+# Unfortunately the generated JavaScript based search engine
+# for a static site does not work with all web browsers that
+# run JavaScript.
+
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #::::::::::::::::::::::::filesystem::utilities:::::::::::::::::::::::::::::
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 func_install_Rust_crate "exa" \
-    "638540b4-bafe-41f1-b77d-b0d271b178e7"
+    "7d433e1c-e654-4562-ab62-030020a188e7"
 
 func_install_Rust_crate "mcfly" \
-    "6e57a040-f939-41fa-837d-b0d271b178e7"
+    "039ac6af-0f45-43d7-8153-030020a188e7"
     # The 
     #     https://github.com/cantino/mcfly
     # is a neural network based Bash history 
@@ -412,29 +431,29 @@ func_install_Rust_crate "mcfly" \
 # of its dependencies seem to have changed so that
 # its code does not comply with the interface of the dependency.
 # func_install_Rust_crate "gitui" \
-#     "81b3091d-110b-4eb2-b47d-b0d271b178e7"
+#     "bb1ce6a8-3b9e-4af6-8773-030020a188e7"
 
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #:::::::::::::::::::::text::search::and::processing::::::::::::::::::::::::
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 func_install_Rust_crate "ripgrep" \
-    "84eba8c1-8325-408b-a37d-b0d271b178e7"
+    "23c06e5d-0bb5-45d1-9dd5-030020a188e7"
     # installs the command line utility "rg".
 
 func_install_Rust_crate "hgrep" \
-    "5e393e4d-11c5-4e12-b47d-b0d271b178e7"
+    "f5fc5bb7-5e35-4541-8764-030020a188e7"
     # installs a fancy grep alternative.
 
 func_install_Rust_crate "huniq" \
-    "635dde2f-1271-4474-927d-b0d271b178e7"
+    "89424e66-7b3b-4f24-a7ff-030020a188e7"
     # installs a Rust based replacement for a 
     # Bash command snippet " sort | uniq ", 
     # which removes duplicate text lines.
     # As of 2024_01: https://github.com/koraa/huniq
 
 func_install_Rust_crate "bat" \
-    "cff41517-b033-412f-a47d-b0d271b178e7"
+    "221ce5a2-d750-4476-8133-030020a188e7"
     # allows to view Markdown files by executing:
     #
     #     bat Foo.md
@@ -453,7 +472,7 @@ func_install_Rust_crate "bat" \
 # https://pngquant.org
 # https://github.com/kornelski/pngquant
 func_install_Rust_crate "pngquant" \
-    "5a968e84-fbbc-4d8c-8e7d-b0d271b178e7"
+    "b141ae00-1b9e-4230-9c86-030020a188e7"
 
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #::::::::::::::::::::::database::engine::interfaces::::::::::::::::::::::::
@@ -467,7 +486,7 @@ func_install_Rust_crate "pngquant" \
 
 # Wikipedia surfing tui-application.
 func_install_Rust_crate "wiki-tui" \
-    "d368db8b-fe7e-4943-af7d-b0d271b178e7"
+    "7d585883-48fa-4ad0-a0d1-030020a188e7"
 
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #::::::::::::::::::::::script_data_section:::end:::::::::::::::::::::::::::
@@ -475,5 +494,5 @@ func_install_Rust_crate "wiki-tui" \
 cd "$S_FP_ORIG"
 exit 0 # no errors occurred
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="19021b91-09ca-49ee-8f7d-b0d271b178e7"
+# S_VERSION_OF_THIS_FILE="a53b670f-daad-41c3-ab75-030020a188e7"
 #==========================================================================

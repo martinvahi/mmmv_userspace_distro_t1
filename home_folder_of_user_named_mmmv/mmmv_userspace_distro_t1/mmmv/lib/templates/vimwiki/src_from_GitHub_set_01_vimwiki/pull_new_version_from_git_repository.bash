@@ -8,17 +8,24 @@
 #==========================================================================
 S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 S_FP_ORIG="`pwd`"
-S_VERSION_OF_THIS_SCRIPT="fe6ed443-1c9f-47a4-8033-7011401095e7" # a GUID
+S_VERSION_OF_THIS_SCRIPT="839aa374-842d-4b2d-9226-0361c01117e7" # a GUID
+#--------------------------------------------------------------------------
+export GIT_SSL_NO_VERIFY=false
+#export GIT_SSL_NO_VERIFY=true # to cope with local outdated 
+#                              # root certificates. That can be 
+#                              # the case with old Linux/BSD distributions.
 #--------------------------------------------------------------------------
 # For copy-pasting to the ~/.bashrc
 #
-#     alias mmmv_cre_git_clone="cp $PATH_TO_THE<$S_FP_DIR>/pull_new_version_from_git_repository.bash ./ ; mkdir -p ./the_repository_clones ;"
+#     alias mmmv_cre_git_clone="cp $PATH_TO_THE<$S_FP_DIR>/pull_new_version_from_git_repository.bash ./ ; mkdir -p ./the_repository_clones ; sync; wait; sync; chmod -f -R 0700 ./the_repository_clones ; chmod 0700 ./pull_new_version_from_git_repository.bash ; sync; wait; sync; "
 #
 #--------------------------------------------------------------------------
+
 func_wait_and_sync(){
     wait # for background processes started by this Bash script to exit/finish
     sync # network drives, USB-sticks, etc.
 } # func_wait_and_sync
+#--------------------------------------------------------------------------
 
 fun_exc_exit_with_an_error_t1(){
     local S_GUID_CANDIDATE="$1" # first function argument
@@ -26,7 +33,7 @@ fun_exc_exit_with_an_error_t1(){
         echo ""
         echo "The code of this script is flawed."
         echo "Aborting script."
-        echo "GUID=='12338f53-fe72-41d0-8753-7011401095e7'"
+        echo "GUID=='10ecfc51-a214-4d09-9936-0361c01117e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -40,6 +47,7 @@ fun_exc_exit_with_an_error_t1(){
         exit 1 # exit with an error
     fi
 } # fun_exc_exit_with_an_error_t1 
+#--------------------------------------------------------------------------
 
 fun_assert_exists_on_path_t1 () {
     local S_NAME_OF_THE_EXECUTABLE="$1" # first function argument
@@ -50,7 +58,7 @@ fun_assert_exists_on_path_t1 () {
     if [ "$S_TMP_1" == "" ] ; then
         echo ""
         echo "This bash script requires the \"$S_NAME_OF_THE_EXECUTABLE\" to be on the PATH."
-        echo "GUID=='5e9620c4-4b3b-4da0-b753-7011401095e7'"
+        echo "GUID=='63ef5f24-4ffb-44dd-b926-0361c01117e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -64,7 +72,6 @@ fun_assert_exists_on_path_t1 "date"
 fun_assert_exists_on_path_t1 "git"
 fun_assert_exists_on_path_t1 "tar"
 fun_assert_exists_on_path_t1 "basename"
-
 #--------------------------------------------------------------------------
 
 func_mmmv_assert_error_code_zero_t1(){
@@ -78,14 +85,13 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo "Aborting script."
-        echo "GUID=='c56a4459-c6c6-41df-9ec3-7011401095e7'"
+        echo "GUID=='2d2779e2-6dce-4b07-8b25-0361c01117e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1
     fi
 } # func_mmmv_assert_error_code_zero_t1
-
 #--------------------------------------------------------------------------
 
 func_mmmv_assert_file_exists_t1() {
@@ -115,7 +121,7 @@ func_mmmv_assert_file_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='2b404244-774b-4a8a-b033-7011401095e7'"
+        echo "GUID=='ad415625-58f0-4333-a145-0361c01117e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -123,7 +129,7 @@ func_mmmv_assert_file_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo "This code is flawed."
-            echo "GUID=='a4dd0a1c-b018-43f9-bf73-7011401095e7'"
+            echo "GUID=='5b120785-60a8-4ebc-9d25-0361c01117e7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
@@ -147,7 +153,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='2131dca2-3ae2-43e9-9113-7011401095e7'"
+                echo "GUID=='34e3b05b-6a1e-4c40-8d35-0361c01117e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -170,7 +176,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "a file or a symlink to a file is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='2368d011-55c8-49a1-9913-7011401095e7'"
+            echo "GUID=='2fe93673-ff50-42cc-ab35-0361c01117e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -187,7 +193,7 @@ func_mmmv_assert_file_exists_t1() {
             echo ""
             echo "does not exist."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='557710c4-2bed-4792-9d13-7011401095e7'"
+            echo "GUID=='f53fa14c-53f0-46e3-9735-0361c01117e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -211,7 +217,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "a file or a symlink to a file is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='8db9f88d-b92f-43f0-b213-7011401095e7'"
+            echo "GUID=='a1e3db24-0cdc-4310-8845-0361c01117e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -226,7 +232,7 @@ func_mmmv_assert_file_exists_t1() {
                     echo ""
                     echo "is a symlink to a file, but a file is expected."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='15f657c1-9e47-4236-8423-7011401095e7'"
+                    echo "GUID=='f3df3306-c977-4bf3-a335-0361c01117e7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -236,7 +242,6 @@ func_mmmv_assert_file_exists_t1() {
         fi
     fi
 } # func_mmmv_assert_file_exists_t1
-
 #--------------------------------------------------------------------------
 
 func_mmmv_assert_folder_exists_t1() {
@@ -249,7 +254,7 @@ func_mmmv_assert_folder_exists_t1() {
                                         # backwards compatible with 
                                         # an earlier version of this 
                                         # function.
-    #------------------------------
+    #----------------------------------------
     local SB_LACK_OF_PARAMETERS="f"
     if [ "$S_FP" == "" ]; then
         SB_LACK_OF_PARAMETERS="t"
@@ -266,7 +271,7 @@ func_mmmv_assert_folder_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='62d11e14-f628-46bb-9443-7011401095e7'"
+        echo "GUID=='22f0cdb2-8183-4687-9424-0361c01117e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -274,13 +279,13 @@ func_mmmv_assert_folder_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo "This code is flawed."
-            echo "GUID=='148bdcc4-9004-4609-8d43-7011401095e7'"
+            echo "GUID=='2e8d5a83-ec08-4a7e-ba34-0361c01117e7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
         fi
     fi
-    #------------------------------
+    #----------------------------------------
     if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "" ]; then
         # The default value of the 
         SB_OPTIONAL_BAN_SYMLINKS="f"
@@ -298,7 +303,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='2c80b652-8849-4e0d-8213-7011401095e7'"
+                echo "GUID=='3f7306c5-7dcf-41c0-8824-0361c01117e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -306,7 +311,7 @@ func_mmmv_assert_folder_exists_t1() {
             fi
         fi
     fi
-    #------------------------------
+    #----------------------------------------
     if [ ! -e "$S_FP" ]; then
         if [ -h "$S_FP" ]; then
             echo ""
@@ -321,7 +326,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "a folder or a symlink to a folder is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='3dfeea13-fe75-4455-a823-7011401095e7'"
+            echo "GUID=='1718cfa5-3aee-4b84-8b44-0361c01117e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -338,7 +343,7 @@ func_mmmv_assert_folder_exists_t1() {
             echo ""
             echo "does not exist."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='346a7c92-9124-4156-ae52-7011401095e7'"
+            echo "GUID=='18f8c963-8d18-4a72-8824-0361c01117e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -362,7 +367,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "a folder or a symlink to a folder is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='b21cbbc3-a313-40b8-b532-7011401095e7'"
+            echo "GUID=='4301c2e1-31a0-4f72-8e14-0361c01117e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -377,7 +382,7 @@ func_mmmv_assert_folder_exists_t1() {
                     echo ""
                     echo "is a symlink to a folder, but a folder is expected."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='14abec93-1929-4896-be52-7011401095e7'"
+                    echo "GUID=='6750f53c-5acb-431d-8114-0361c01117e7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -386,8 +391,8 @@ func_mmmv_assert_folder_exists_t1() {
             fi
         fi
     fi
+    #----------------------------------------
 } # func_mmmv_assert_folder_exists_t1
-
 #--------------------------------------------------------------------------
 S_TMP_0="`uname -a | grep -E [Ll]inux`"
 if [ "$S_TMP_0" == "" ]; then
@@ -409,17 +414,16 @@ if [ "$S_TMP_0" == "" ]; then
         echo "  within a virtual machine or, if virtual machines are not"
         echo "  an option, as some new operating system user that does not have "
         echo "  any access to the vital data/files."
-        echo "  GUID=='636fefc1-8405-4d51-8042-7011401095e7'"
+        echo "  GUID=='4c89b822-c229-4b02-b943-0361c01117e7'"
         echo ""
         echo "  Aborting script without doing anything."
         echo ""
-        echo "GUID=='4498a652-5ad7-4a17-a022-7011401095e7'"
+        echo "GUID=='d930cd54-5a46-4641-b553-0361c01117e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
     fi
 fi
-
 #--------------------------------------------------------------------------
 S_TIMESTAMP="`date +%Y`_`date +%m`_`date +%d`_T_`date +%H`h_`date +%M`min_`date +%S`s"
 S_FP_ARCHIVE="$S_FP_DIR/archives/$S_TIMESTAMP"
@@ -428,13 +432,13 @@ S_FN_THE_REPOSITORY_CLONES="`basename \"$S_FP_THE_REPOSITORY_CLONES\"`"
 S_TMP_0=".tar"
 S_FP_THE_REPOSITORY_CLONES_TAR="$S_FP_THE_REPOSITORY_CLONES$S_TMP_0"
 S_FN_THE_REPOSITORY_CLONES_TAR="`basename \"$S_FP_THE_REPOSITORY_CLONES_TAR\"`"
-
 #--------------------------------------------------------------------------
 S_ARGV_0="$1"
 SB_SKIP_ARCHIVING="f"
 SB_RUN_GIT_GARBAGE_COLLECTOR_ON_LOCAL_GIT_REPOSITORY="f"
 SB_RUN_UPDATE="f"
 SB_INVALID_COMMAND_LINE_ARGUMENTS="t"
+#-------------------------------------------------------------------------
 
 fun_display_help_without_exiting(){
     echo ""
@@ -442,21 +446,22 @@ fun_display_help_without_exiting(){
     echo "                           | GC | PRP | HELP | VERSION | INIT | "
     echo "                           | CREATE_TAR )?"
     echo ""
-    echo "     SKIP_ARCHIVING    :== 'skip_archiving'       | 'ska' "
-    echo "     SKIP_ARCHIVING_GC :== 'skip_archiving_gc'    | 'ska_gc' | 'skagc'"
-    echo "                    GC :== 'run_garbage_collector'| 'run_gc' |    'gc'"
-    echo "                   PRP :== 'print_upstream_repository_path' | 'prp' "
-    echo "                  HELP :== 'help'    | '-help'    | '-h' | '-?' "
-    echo "               VERSION :== 'version' | '-version' | '-v' "
-    echo "                  INIT :== 'init' "
-    echo "            CREATE_TAR :== 'create_tar' | 'tar'  "
+    echo -e "     SKIP_ARCHIVING    :== 'skip_archiving'       | '\e[33mska\e[39m' "
+    echo -e "     SKIP_ARCHIVING_GC :== 'skip_archiving_gc'    | 'ska_gc' | '\e[33mskagc\e[39m'"
+    echo -e "                    GC :== 'run_garbage_collector'| 'run_gc' |    '\e[33mgc\e[39m' "
+    echo -e "                   PRP :== 'print_upstream_repository_path' | '\e[33mprp\e[39m' "
+    echo -e "                  HELP :== 'help'    | '-help'    | '-h' | '\e[33mh\e[39m' | '-?' "
+    echo -e "               VERSION :== 'version' | '-version' | '-v' | '\e[33mv\e[39m' "
+    echo -e "                  INIT :== '\e[33minit\e[39m' "
+    echo -e "            CREATE_TAR :== 'create_tar' | '\e[33mtar\e[39m' "
     echo ""
 } # fun_display_help_without_exiting
-
+#-------------------------------------------------------------------------
 
 fun_if_needed_display_help_and_exit_with_error_code_0(){
+    #----------------------------------------
     local S_ERROR_CODE_IF
-    #--------
+    #----------------------------------------
     local SB_DISPLAY_HELP_AND_EXIT="f" # "f" for "false", "t" for "true"
     local AR_0=("help" "-help" "--help" \
                 "\"help\"" "'help'" \
@@ -473,41 +478,45 @@ fun_if_needed_display_help_and_exit_with_error_code_0(){
                 "-apua" "\"-apua\"" "'-apua'" \
                 "--apua" "\"--apua\"" "'--apua'" \
                 )
+    # This for-loop will mis-handle arrays of strings, 
+    # where a string contains any spaces.
     for S_ITER in ${AR_0[@]}; do
         if [ "$S_ARGV_0" == "$S_ITER" ]; then 
             SB_DISPLAY_HELP_AND_EXIT="t"
             SB_INVALID_COMMAND_LINE_ARGUMENTS="f"
         fi
     done
-    #--------
+    #----------------------------------------
     if [ "$SB_DISPLAY_HELP_AND_EXIT" == "t" ]; then 
         fun_display_help_without_exiting
         cd "$S_FP_ORIG"
         exit 0 # exit without any errors
     else
         if [ "$SB_DISPLAY_HELP_AND_EXIT" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "47c83ec3-0a56-4168-8443-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "5ea7da85-c41f-4889-9e35-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_if_needed_display_help_and_exit_with_error_code_0
 fun_if_needed_display_help_and_exit_with_error_code_0
-
-
 #-------------------------------------------------------------------------
+
 fun_if_needed_display_version_and_exit_with_an_error_code_0(){
-    #--------
+    #----------------------------------------
     local SB_DISPLAY_VERSION_AND_EXIT="f" # "f" for "false", "t" for "true"
     local AR_0=("versioon" "-versioon" "--versioon" \
                 "-v" "v" \
                 "version" "-version"  "--version" \
                 "versio" "-versio" "--versio")
+    # This for-loop will mis-handle arrays of strings, 
+    # where a string contains any spaces.
     for S_ITER in ${AR_0[@]}; do
         if [ "$S_ARGV_0" == "$S_ITER" ]; then 
             SB_DISPLAY_VERSION_AND_EXIT="t"
             SB_INVALID_COMMAND_LINE_ARGUMENTS="f"
         fi
     done
-    #--------
+    #----------------------------------------
     if [ "$SB_DISPLAY_VERSION_AND_EXIT" == "t" ]; then 
         echo ""
         echo "    S_VERSION_OF_THIS_SCRIPT == \"$S_VERSION_OF_THIS_SCRIPT\""
@@ -516,12 +525,12 @@ fun_if_needed_display_version_and_exit_with_an_error_code_0(){
         exit 0 # exit without any errors
     else
         if [ "$SB_DISPLAY_VERSION_AND_EXIT" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "a850a495-16fe-4851-9a53-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "4e344481-27cc-4913-b615-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_if_needed_display_version_and_exit_with_an_error_code_0
 fun_if_needed_display_version_and_exit_with_an_error_code_0
-
 #-------------------------------------------------------------------------
 # This is one way, how to simplify the storing of the 
 # 
@@ -530,40 +539,41 @@ fun_if_needed_display_version_and_exit_with_an_error_code_0
 # to a git repository that contains the parent folder of this script.
 # This partially avoids the necessity to declare Git repository submodules.
 fun_conditionally_unpack_the_repository_clones_tar(){
-    #--------------------
+    #----------------------------------------
     func_mmmv_assert_file_exists_t1 "$S_FP_THE_REPOSITORY_CLONES_TAR" \
-        "2ef81da5-d330-4268-8a53-7011401095e7" "t"
+        "da539502-7824-4df6-8845-0361c01117e7" "t"
     if [ ! -e "$S_FP_THE_REPOSITORY_CLONES" ]; then
         printf "Starting to unpack the $S_FN_THE_REPOSITORY_CLONES_TAR .."
         nice -n 10 tar -xf "$S_FP_THE_REPOSITORY_CLONES_TAR" 
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "5c7b6055-919e-4350-8c33-7011401095e7"
+            "2bcee9ff-f6f0-4523-9eb5-0361c01117e7"
         echo " unpacking complete."
         func_wait_and_sync
         func_mmmv_assert_folder_exists_t1 "$S_FP_THE_REPOSITORY_CLONES" \
-            "32893ed4-df6a-4eb4-b433-7011401095e7" "t"
+            "18a45791-5ab7-40cf-a635-0361c01117e7" "t"
     fi
-    #--------------------
+    #----------------------------------------
 } # fun_conditionally_unpack_the_repository_clones_tar
-
 #-------------------------------------------------------------------------
 
 fun_create_a_tar_file_if_requested(){
-    #--------------------
+    #----------------------------------------
     local SB_CREATE_TAR="f"
     local AR_0=("-tar" "tar" "create_tar")
+    # This for-loop will mis-handle arrays of strings, 
+    # where a string contains any spaces.
     for S_ITER in ${AR_0[@]}; do
         if [ "$S_ARGV_0" == "$S_ITER" ]; then 
             SB_CREATE_TAR="t"
             SB_INVALID_COMMAND_LINE_ARGUMENTS="f"
         fi
     done
-    #--------------------
+    #----------------------------------------
     if [ "$SB_CREATE_TAR" == "t" ]; then 
         #--------
         func_mmmv_assert_folder_exists_t1 \
             "$S_FP_THE_REPOSITORY_CLONES" \
-            "24a2d864-7126-4bc6-a953-7011401095e7" "t"
+            "fdcd76c6-6c17-4a8b-8a45-0361c01117e7" "t"
         #--------
         local S_TMP_0=".renamed_at_$S_TIMESTAMP"
         local S_FP_TAR_OLD="$S_FP_THE_REPOSITORY_CLONES_TAR$S_TMP_0"
@@ -572,12 +582,12 @@ fun_create_a_tar_file_if_requested(){
             SB_RENAMING_REQUIRED="t"
             mv "$S_FP_THE_REPOSITORY_CLONES_TAR" "$S_FP_TAR_OLD"
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "052d9b78-0c2c-4e18-9f13-7011401095e7"
+                "b27d2f88-d5ca-4a6f-a345-0361c01117e7"
             func_wait_and_sync
         fi
         if [ -e "$S_FP_THE_REPOSITORY_CLONES_TAR" ]; then 
             echo ""
-            echo "Renameing of the "
+            echo -e "\e[31mRenameing\e[39m of the "
             echo ""
             echo "    $S_FP_THE_REPOSITORY_CLONES_TAR"
             echo ""
@@ -585,8 +595,8 @@ fun_create_a_tar_file_if_requested(){
             echo ""
             echo "    $S_FP_TAR_OLD"
             echo ""
-            echo "failed. No new tar file created."
-            echo "GUID=='31a42384-8c91-4ff1-8422-7011401095e7'"
+            echo -e "\e[31mfailed\e[39m. No new tar file created."
+            echo "GUID=='474e25a4-eed1-4bf5-ae33-0361c01117e7'"
             echo ""
             cd "$S_FP_ORIG"
             exit 1 # exit with an error
@@ -594,60 +604,66 @@ fun_create_a_tar_file_if_requested(){
         #--------
         cd "$S_FP_DIR"
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "2315b232-5a08-43b7-8543-7011401095e7"
+            "03f04dfa-c0a5-48fb-9025-0361c01117e7"
         if [ "$SB_RENAMING_REQUIRED" == "t" ]; then
             printf "Starting to recreate the $S_FN_THE_REPOSITORY_CLONES_TAR .."
         else
             if [ "$SB_RENAMING_REQUIRED" == "f" ]; then
                 printf "Starting to create the $S_FN_THE_REPOSITORY_CLONES_TAR .."
             else
-                fun_exc_exit_with_an_error_t1 "88b32903-411e-447e-8b43-7011401095e7"
+                fun_exc_exit_with_an_error_t1 "5e905e55-8d18-4a2e-8914-0361c01117e7"
             fi
         fi
         nice -n 10 tar -cf "./$S_FN_THE_REPOSITORY_CLONES_TAR" "./$S_FN_THE_REPOSITORY_CLONES" 2> /dev/null
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "a1f5731d-36ce-4ef3-b323-7011401095e7"
+            "3b0df532-9697-4751-bb14-0361c01117e7"
         func_wait_and_sync
         echo " tar-file creation complete."
         #--------
     else
         if [ "$SB_CREATE_TAR" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "4367b24b-8e78-4424-a323-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "4b9d4972-2ea5-47c1-9014-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_create_a_tar_file_if_requested
 fun_create_a_tar_file_if_requested
-
 #-------------------------------------------------------------------------
+
 fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_with_an_error_code_0(){
+    #----------------------------------------
     local SB_OPTIONAL_RUN_INIT_REGARDLESS_OF_S_ARGV_VALUE_AND_DO_NOT_EXIT="$1" # domain {"t", "f", ""} 
                                                                                # default: "f"
-    #--------------------
+    #----------------------------------------
     local SB_RUN_INIT="f"
     local SB_OK_TO_EXIT_WITH_ERR_CODE_0="t" # domain {"t", "f"}
-    local AR_0=("init" "-init" "-i" "i" "initialize" "-initialize" "--untar" "-untar" "untar" "-ut" "ut")
+    local AR_0=("init" "-init" "-i" "i" \
+                "initialize" "-initialize" \
+                "--untar" "-untar" "untar" "-ut" "ut")
+    # This for-loop will mis-handle arrays of strings, 
+    # where a string contains any spaces.
     for S_ITER in ${AR_0[@]}; do
         if [ "$S_ARGV_0" == "$S_ITER" ]; then 
             SB_RUN_INIT="t"
             SB_INVALID_COMMAND_LINE_ARGUMENTS="f"
         fi
     done
-    #--------------------
+    #----------------------------------------
     if [ "$SB_OPTIONAL_RUN_INIT_REGARDLESS_OF_S_ARGV_VALUE_AND_DO_NOT_EXIT" == "" ]; then 
         SB_OPTIONAL_RUN_INIT_REGARDLESS_OF_S_ARGV_VALUE_AND_DO_NOT_EXIT="f" # the default value
     else
         if [ "$SB_OPTIONAL_RUN_INIT_REGARDLESS_OF_S_ARGV_VALUE_AND_DO_NOT_EXIT" != "t" ]; then 
             if [ "$SB_OPTIONAL_RUN_INIT_REGARDLESS_OF_S_ARGV_VALUE_AND_DO_NOT_EXIT" != "f" ]; then 
-                fun_exc_exit_with_an_error_t1 "75cd547f-1d0e-4742-a413-7011401095e7"
+                fun_exc_exit_with_an_error_t1 "3aa08c62-357b-48fa-a134-0361c01117e7"
             fi
         fi
     fi
-    #--------------------
+    #----------------------------------------
     if [ "$SB_OPTIONAL_RUN_INIT_REGARDLESS_OF_S_ARGV_VALUE_AND_DO_NOT_EXIT" == "t" ]; then 
         SB_RUN_INIT="t"
         SB_OK_TO_EXIT_WITH_ERR_CODE_0="f"
     fi
-    #--------------------
+    #----------------------------------------
     if [ "$SB_RUN_INIT" == "t" ]; then 
         if [ ! -e "$S_FP_THE_REPOSITORY_CLONES" ]; then 
             if [ -h "$S_FP_THE_REPOSITORY_CLONES" ]; then  # a broken symlink
@@ -656,9 +672,9 @@ fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_w
                 echo ""
                 echo "    $S_FP_THE_REPOSITORY_CLONES"
                 echo ""
-                echo "is a broken symlink. It is expected to be"
+                echo -e "\e[31mis a broken symlink\e[39m. It is expected to be"
                 echo "either missing or a folder."
-                echo "GUID=='43c6f545-bd5a-4c17-b142-7011401095e7'"
+                echo "GUID=='15c5d723-6444-4846-a833-0361c01117e7'"
                 echo ""
                 cd "$S_FP_ORIG"
                 exit 1 # exit with an error
@@ -670,13 +686,13 @@ fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_w
                 func_wait_and_sync
                 func_mmmv_assert_folder_exists_t1 \
                     "$S_FP_THE_REPOSITORY_CLONES" \
-                    "4b31f115-59b1-41c5-a213-7011401095e7" "t"
+                    "223c6b50-0194-4016-a844-0361c01117e7" "t"
             fi
         else
             # The 
             func_mmmv_assert_folder_exists_t1 \
                 "$S_FP_THE_REPOSITORY_CLONES" \
-                "29666255-543a-4268-8d32-7011401095e7" "t"
+                "45c1cee6-9345-40c9-8d34-0361c01117e7" "t"
             # is for testing that it is not a symlink and not a file.
             if [ "$SB_OK_TO_EXIT_WITH_ERR_CODE_0" == "t" ]; then 
                 echo ""
@@ -684,8 +700,8 @@ fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_w
                 echo ""
                 echo "    $S_FP_THE_REPOSITORY_CLONES"
                 echo ""
-                echo "already exists. Nothing to initialize."
-                echo "GUID=='f84c0ca3-9de1-4b0f-8a22-7011401095e7'"
+                echo -e "\e[33malready exists\e[39m. Nothing to initialize."
+                echo "GUID=='2830fba1-1695-455f-8c13-0361c01117e7'"
                 echo ""
                 cd "$S_FP_ORIG"
                 exit 0 # exit without any errors
@@ -693,31 +709,33 @@ fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_w
         fi
     else
         if [ "$SB_RUN_INIT" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "24c945b0-7f6d-44a6-b332-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "25e2fd1a-aa0f-4763-8344-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_with_an_error_code_0
 fun_if_needed_create_the_folder_4_downloading_repositories_and_optionally_exit_with_an_error_code_0
-
 #-------------------------------------------------------------------------
 AR_REPO_FOLDER_NAMES=()
 
 fun_assemble_array_of_repository_clone_folder_names () {
+    #----------------------------------------
     if [ -e "$S_FP_THE_REPOSITORY_CLONES_TAR" ]; then
         fun_conditionally_unpack_the_repository_clones_tar
     fi
-    #--------------------
+    #----------------------------------------
     func_mmmv_assert_folder_exists_t1 \
         "$S_FP_THE_REPOSITORY_CLONES" \
-        "1260a4e4-d9d8-478a-bf22-7011401095e7" "t"
-    #--------------------
+        "53735194-a1db-4414-9914-0361c01117e7" "t"
+    #----------------------------------------
     cd "$S_FP_THE_REPOSITORY_CLONES"
     local S_TMP_0="`ruby -e \"ar=Array.new; Dir.glob('*').each{|x| if File.directory? x then ar<<x end}; puts(ar.to_s.gsub('[','(').gsub(']',')').gsub(',',' '))\"`"
     cd "$S_FP_DIR"
     local S_TMP_1="AR_REPO_FOLDER_NAMES=$S_TMP_0"
     eval ${S_TMP_1}
+    #----------------------------------------
 } # fun_assemble_array_of_repository_clone_folder_names 
-
+#--------------------------------------------------------------------------
 
 # The goal here is to be as greedy at downloading the different
 # vertices of the repository version tree as possible.
@@ -727,20 +745,22 @@ fun_assemble_array_of_repository_clone_folder_names () {
 # contain manually created copies of the clones 
 # that this script is used for maintaining.
 fun_update () {
-    #--------
+    #----------------------------------------
     local S_FP_PWD_AT_FUNC_START="`pwd`"
     fun_assemble_array_of_repository_clone_folder_names 
-    #--------
+    #----------------------------------------
     if [ "$SB_SKIP_ARCHIVING" == "f" ]; then 
         mkdir -p "$S_FP_ARCHIVE"
     else
         if [ "$SB_SKIP_ARCHIVING" != "t" ]; then 
-            fun_exc_exit_with_an_error_t1 "1946ac94-f8ff-4f74-b052-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "4b0fadd5-45ee-4558-b423-0361c01117e7"
         fi
     fi
-    #--------
-    for s_iter in ${AR_REPO_FOLDER_NAMES[@]}; do
-         S_FOLDER_NAME_OF_THE_LOCAL_COPY="$s_iter"
+    #----------------------------------------
+    #for s_iter in ${AR_REPO_FOLDER_NAMES[@]}; do
+    for ((i = 0; i < ${#AR_REPO_FOLDER_NAMES[@]}; i++)) do
+         #S_FOLDER_NAME_OF_THE_LOCAL_COPY="$s_iter"
+         S_FOLDER_NAME_OF_THE_LOCAL_COPY="${AR_REPO_FOLDER_NAMES[$i]}"
          echo ""
          #----
          if [ "$SB_SKIP_ARCHIVING" != "t" ]; then 
@@ -754,13 +774,13 @@ fun_update () {
          echo "Checking out a newer version of $S_FOLDER_NAME_OF_THE_LOCAL_COPY"
          #--------
          # Downloads the newest version of the software to that folder.
-         nice -n 10 git checkout --force # overwrites local changes, like the "svn co"
-         nice -n 10 git pull --all --recurse-submodules --force # gets the submodules
+         nice -n10 git checkout --force # overwrites local changes, like the "svn co"
+         nice -n10 git pull --all --recurse-submodules --force # gets the submodules
          #----
          # http://stackoverflow.com/questions/1030169/easy-way-pull-latest-of-all-submodules
-         nice -n 10 git submodule update --init --recursive --force 
-         nice -n 10 git submodule update --init --recursive --force --remote
-         nice -n 10 git pull --all --recurse-submodules --force # just in case
+         nice -n10 git submodule update --init --recursive --force 
+         nice -n10 git submodule update --init --recursive --force --remote
+         nice -n10 git pull --all --recurse-submodules --force # just in case
          if [ "$SB_RUN_GIT_GARBAGE_COLLECTOR_ON_LOCAL_GIT_REPOSITORY" == "t" ]; then 
              echo ""
              echo "Running the git garbage collector on the local repository..."
@@ -776,20 +796,22 @@ fun_update () {
              #                     and increases the risk of corruption 
              #                     if another process is writing to 
              #                     the repository concurrently; 
-             nice -n 15 git gc --aggressive --prune=all 
-             nice -n 10 git pull --all --recurse-submodules --force # to be sure
+             nice -n15 git gc --aggressive --prune=all 
+             nice -n10 git pull --all --recurse-submodules --force # to be sure
          fi
          func_wait_and_sync
          #--------
          cd "$S_FP_DIR"
     done
+    #----------------------------------------
     cd "$S_FP_PWD_AT_FUNC_START"
     echo ""
+    #----------------------------------------
 } # fun_update 
-
+#--------------------------------------------------------------------------
 
 fun_run_update_if_needed(){
-    #--------
+    #----------------------------------------
     if [ "$S_ARGV_0" == "" ]; then  # the default action
         SB_RUN_UPDATE="t"
     fi
@@ -801,7 +823,7 @@ fun_run_update_if_needed(){
         SB_SKIP_ARCHIVING="t"
         SB_RUN_UPDATE="t"
     fi
-    #--------
+    #----------------------------------------
     if [ "$S_ARGV_0" == "skip_archiving_gc" ]; then 
         SB_SKIP_ARCHIVING="t"
         SB_RUN_GIT_GARBAGE_COLLECTOR_ON_LOCAL_GIT_REPOSITORY="t"
@@ -817,7 +839,7 @@ fun_run_update_if_needed(){
         SB_RUN_GIT_GARBAGE_COLLECTOR_ON_LOCAL_GIT_REPOSITORY="t"
         SB_RUN_UPDATE="t"
     fi
-    #--------
+    #----------------------------------------
     if [ "$SB_RUN_UPDATE" == "t" ]; then 
         SB_INVALID_COMMAND_LINE_ARGUMENTS="f"
         fun_update 
@@ -825,32 +847,35 @@ fun_run_update_if_needed(){
         exit 0 # exit without any errors
     else
         if [ "$SB_RUN_UPDATE" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "4185055c-9ee6-439d-a522-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "5e46b7fe-589b-40b4-b233-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_run_update_if_needed
 fun_run_update_if_needed
-
 #--------------------------------------------------------------------------
+
 fun_run_garbage_collector() {
-    #--------
+    #----------------------------------------
     local S_FP_PWD_AT_FUNC_START="`pwd`"
     local S_TMP_0="not_set"
     fun_assemble_array_of_repository_clone_folder_names 
-    #--------
+    #----------------------------------------
     echo ""
-    for s_iter in ${AR_REPO_FOLDER_NAMES[@]}; do
-         S_FOLDER_NAME_OF_THE_LOCAL_COPY="$s_iter"
+    #for s_iter in ${AR_REPO_FOLDER_NAMES[@]}; do
+    for ((i = 0; i < ${#AR_REPO_FOLDER_NAMES[@]}; i++)) do
+         #S_FOLDER_NAME_OF_THE_LOCAL_COPY="$s_iter"
+         S_FOLDER_NAME_OF_THE_LOCAL_COPY="${AR_REPO_FOLDER_NAMES[$i]}"
          #----
          cd "$S_FP_THE_REPOSITORY_CLONES/$S_FOLDER_NAME_OF_THE_LOCAL_COPY"
          echo "Running the garbage collector on $S_FOLDER_NAME_OF_THE_LOCAL_COPY"
-         nice -n 15 git gc --aggressive --prune=all 
+         nice -n15 git gc --aggressive --prune=all 
          S_TMP_0="$?" 
          if [ "$S_TMP_0" != "0" ]; then 
              echo ""
-             echo "Git exited with the error code of $S_TMP_0."
+             echo -e "Git\e[31m exited with the error code of $S_TMP_0 \e[39m."
              echo "Aborting script."
-             echo "GUID=='310f3d92-e606-4167-a622-7011401095e7'"
+             echo "GUID=='486b48e1-269b-4923-8343-0361c01117e7'"
              echo ""
              sync & # in the background, because 
                     # it might have been that the
@@ -864,67 +889,73 @@ fun_run_garbage_collector() {
          func_wait_and_sync
          cd "$S_FP_DIR"
     done
-    #--------
+    #----------------------------------------
     cd "$S_FP_PWD_AT_FUNC_START"
+    #----------------------------------------
 } # fun_run_garbage_collector
+#--------------------------------------------------------------------------
 
 fun_run_garbage_collector_if_needed(){
-    #--------
+    #----------------------------------------
     local SB_RUN_GARBAGE_COLLECTOR="f" # "f" for "false", "t" for "true"
     local AR_0=("run_garbage_collector" "run_gc" "gc")
+    # This for-loop will mis-handle arrays of strings, 
+    # where a string contains any spaces.
     for S_ITER in ${AR_0[@]}; do
         if [ "$S_ARGV_0" == "$S_ITER" ]; then 
             SB_RUN_GARBAGE_COLLECTOR="t"
             SB_INVALID_COMMAND_LINE_ARGUMENTS="f"
         fi
     done
-    #--------
+    #----------------------------------------
     if [ "$SB_RUN_GARBAGE_COLLECTOR" == "t" ]; then 
         fun_run_garbage_collector
         cd "$S_FP_ORIG"
         exit 0 # exit without any errors
     else
         if [ "$SB_RUN_GARBAGE_COLLECTOR" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "2a000f63-b418-4661-bc42-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "93ee6cf4-3286-4f28-8d33-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_run_garbage_collector_if_needed
 fun_run_garbage_collector_if_needed
-
 #--------------------------------------------------------------------------
+
 func_mmmv_assert_file_path_is_not_in_use_t1(){ 
+    #----------------------------------------
     local S_FP_CANDIDATE=$1   # first function argument
     local S_GUID_CANDIDATE=$2 # second function argument
-    #----------------------------------------------------------------------
+    #----------------------------------------
     if [ "$S_GUID_CANDIDATE" == "" ]; then 
         echo ""
-        echo "The code of this script is flawed."
+        echo -e "\e[31mThe code of this script is flawed\e[39m."
         echo "Aborting script."
-        echo "GUID=='474ccac2-e024-4cd8-9612-7011401095e7'"
+        echo "GUID=='47a59a72-9d7b-45d5-9713-0361c01117e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
     fi
     if [ "$S_FP_CANDIDATE" == "" ]; then 
         echo ""
-        echo "The code of this script is flawed."
+        echo -e "\e[31mThe code of this script is flawed\e[39m."
         echo "Aborting script."
-        echo "GUID=='40d4a725-eb8e-4207-9c12-7011401095e7'"
+        echo "GUID=='5128b812-3698-423c-9f23-0361c01117e7'"
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
     fi
-    #--------------------------------------------
+    #----------------------------------------
     if [ -e "$S_FP_CANDIDATE" ]; then 
         echo ""
         echo "The path "
         echo ""
         echo "    $S_FP_CANDIDATE"
         echo ""
-        echo "is already in use."
+        echo -e "is\e[31m already in use\e[39m."
         echo "Aborting script."
-        echo "GUID=='8240b3ce-f3e2-4571-8272-7011401095e7'"
+        echo "GUID=='5d784614-8a36-4ed0-9143-0361c01117e7'"
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         cd "$S_FP_ORIG"
@@ -936,23 +967,25 @@ func_mmmv_assert_file_path_is_not_in_use_t1(){
             echo ""
             echo "    $S_FP_CANDIDATE"
             echo ""
-            echo "is already in use. It references a broken symlink."
+            echo -e "is\e[31m already in use\e[39m. It references a broken symlink."
             echo "Aborting script."
-            echo "GUID=='53bc33a4-6f54-4dac-aa11-7011401095e7'"
+            echo "GUID=='ac4d75eb-446c-4af4-aa32-0361c01117e7'"
             echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             echo ""
             cd "$S_FP_ORIG"
             exit 1 # exit with an error
         fi
     fi
+    #----------------------------------------
 } # func_mmmv_assert_file_path_is_not_in_use_t1
-
+#--------------------------------------------------------------------------
 FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT=""
 # It does not create the file or folder, it just
 # generates a full file path. It does not check, whether
 # the parent folder of the new file or folder is 
 # writable. 
 func_mmmv_generate_temporary_file_or_folder_path_t1() {
+    #----------------------------------------
     local S_FP_TMP_FOLDER_CANDIDATE="$PWD/_tmp"
     if [ ! -e "$S_FP_TMP_FOLDER_CANDIDATE" ]; then 
         S_FP_TMP_FOLDER_CANDIDATE="$PWD/tmp"
@@ -970,7 +1003,7 @@ func_mmmv_generate_temporary_file_or_folder_path_t1() {
                         echo "    /tmp"
                         echo ""
                         echo "does not exist. Aborting script."
-                        echo "GUID=='2f23be85-19ef-4915-a441-7011401095e7'"
+                        echo "GUID=='d33bff16-de7c-4382-b222-0361c01117e7'"
                         echo ""
                         cd "$S_FP_ORIG"
                         exit 1 # exit with an error
@@ -979,7 +1012,7 @@ func_mmmv_generate_temporary_file_or_folder_path_t1() {
             fi
         fi
     fi
-    #--------------------------------
+    #----------------------------------------
     local S_FN="$S_TIMESTAMP"
     S_FN+="_"
     S_FN+="$RANDOM"
@@ -999,62 +1032,69 @@ func_mmmv_generate_temporary_file_or_folder_path_t1() {
     S_FN+="$RANDOM"
     S_FN+="_"
     S_FN+="$RANDOM"
-    #--------------------------------
+    #----------------------------------------
     local S_FP_OUT="$S_FP_TMP_FOLDER_CANDIDATE/$S_FN"
     FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT="$S_FP_OUT"
+    #----------------------------------------
 } # func_mmmv_generate_temporary_file_or_folder_path_t1
 
+#--------------------------------------------------------------------------
 FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FOLDER_T1_ANSWER=""
 # Returns the full path of the folder. 
 func_mmmv_create_empty_temporary_folder_t1() {
     func_mmmv_generate_temporary_file_or_folder_path_t1
     local S_FP_CANDIDATE="$FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT"
     func_mmmv_assert_file_path_is_not_in_use_t1 "$S_FP_CANDIDATE" \
-        "d5e56682-fcb3-4d8b-8f22-7011401095e7"
+        "9525510c-62be-49b6-b123-0361c01117e7"
     mkdir -p "$S_FP_CANDIDATE"
     func_wait_and_sync
     func_mmmv_assert_folder_exists_t1 \
         "$S_FP_CANDIDATE" \
-        "629863ab-e0c9-4c3f-8e42-7011401095e7" "t"
+        "031b98ee-639d-48be-9d13-0361c01117e7" "t"
     FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FOLDER_T1_ANSWER="$S_FP_CANDIDATE"
 } # func_mmmv_create_empty_temporary_folder_t1
 
+#--------------------------------------------------------------------------
 FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T1_ANSWER=""
 # Returns the full path of the file.
 func_mmmv_create_empty_temporary_file_t1() {
-    #--------------------------------------------------------------- 
+    #----------------------------------------
     local S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME="$1" # file extension, like ".txt"
-    #--------------------------------------------------------------- 
+    #----------------------------------------
     func_mmmv_generate_temporary_file_or_folder_path_t1
     local S_FP_CANDIDATE="$FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT"
     if [ "$S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME" != "" ]; then 
         S_FP_CANDIDATE+="$S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME"
     fi
     func_mmmv_assert_file_path_is_not_in_use_t1 "$S_FP_CANDIDATE" \
-        "5e617fb3-08f1-4dc5-9352-7011401095e7"
+        "4d635e24-1f2f-424e-b533-0361c01117e7"
     printf "%b" "" > $S_FP_CANDIDATE # the echo "" would add a linebreak
     wait
     func_wait_and_sync
     func_mmmv_assert_file_exists_t1 \
         "$S_FP_CANDIDATE" \
-        "5989b5c5-99b5-4058-a052-7011401095e7" "t"
+        "8948a2a9-39ab-47a7-8e23-0361c01117e7" "t"
     FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T1_ANSWER="$S_FP_CANDIDATE"
+    #----------------------------------------
 } # func_mmmv_create_empty_temporary_file_t1
 
 #--------------------------------------------------------------------------
+
 fun_print_upstream_repository_path() {
-    #--------
+    #----------------------------------------
     local S_FP_PWD_AT_FUNC_START="`pwd`"
     fun_assemble_array_of_repository_clone_folder_names 
-    #--------
+    #----------------------------------------
     func_mmmv_create_empty_temporary_file_t1 ".txt"
     local S_FP_TMP_ALL_REPO_PATHS="$FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T1_ANSWER"
-    #--------
-    for s_iter in ${AR_REPO_FOLDER_NAMES[@]}; do
-        S_FOLDER_NAME_OF_THE_LOCAL_COPY="$s_iter"
+    #----------------------------------------
+    #for s_iter in ${AR_REPO_FOLDER_NAMES[@]}; do
+    for ((i = 0; i < ${#AR_REPO_FOLDER_NAMES[@]}; i++)) do
+         #S_FOLDER_NAME_OF_THE_LOCAL_COPY="$s_iter"
+         S_FOLDER_NAME_OF_THE_LOCAL_COPY="${AR_REPO_FOLDER_NAMES[$i]}"
         #----
         cd "$S_FP_THE_REPOSITORY_CLONES/$S_FOLDER_NAME_OF_THE_LOCAL_COPY"
-        nice -n 2 git config remote.origin.url >> $S_FP_TMP_ALL_REPO_PATHS
+        nice -n2 git config remote.origin.url >> $S_FP_TMP_ALL_REPO_PATHS
                           # Prints the repository path to console. 
                           # As a single local repository can have multiple 
                           # push targets, the number of printed lines
@@ -1062,10 +1102,10 @@ fun_print_upstream_repository_path() {
         cd "$S_FP_DIR"
         #----
     done
-    #--------
+    #----------------------------------------
     # Sort the list with Ruby.
     # Tested with Ruby version 2.5.1p57
-    nice -n 5 ruby -e "s=IO.read('$S_FP_TMP_ALL_REPO_PATHS'); \
+    nice -n5 ruby -e "s=IO.read('$S_FP_TMP_ALL_REPO_PATHS'); \
         ar=Array.new;\
         s.each_line{|s_line| ar<<s_line};\
         ar0=ar.sort;\
@@ -1073,32 +1113,38 @@ fun_print_upstream_repository_path() {
         s_0=\"\";\
         i_len.times{|ix| s_0<<ar0[ix]};\
         puts s_0"
-    #---------------------------------
+    #----------------------------------------
     rm -f $S_FP_TMP_ALL_REPO_PATHS
     func_wait_and_sync
     if [ -e "$S_FP_TMP_ALL_REPO_PATHS" ]; then 
         echo ""
-        echo "File deletion failed. File path:"
+        echo -e "\e[31mFile deletion failed\e[39m. File path:"
         echo ""
         echo "    $S_FP_TMP_ALL_REPO_PATHS"
         echo ""
         echo "Aborting script."
-        echo "GUID=='8229ec63-c229-4195-85b1-7011401095e7'"
+        echo "GUID=='1d3ee9a5-2a9e-416d-8f32-0361c01117e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
     fi
-    #---------------------------------
+    #----------------------------------------
     cd "$S_FP_PWD_AT_FUNC_START"
+    #----------------------------------------
 } # fun_print_upstream_repository_path
 
+#--------------------------------------------------------------------------
+
 fun_print_upstream_repository_path_if_needed(){
-    #--------
+    #----------------------------------------
     local SB_PRINT_UPSTREAM_REPOSITORY_PATH="f" # "f" for "false", "t" for "true"
     local AR_0=("print_upstream_repository_path" "prp") # "rp" skipped due to 
                                                         # close similarity to the "rm",
                                                         # which might get accidentally 
                                                         # entered due to a typo
+    #----------------------------------------
+    # This for-loop will mis-handle arrays of strings, 
+    # where a string contains any spaces.
     for S_ITER in ${AR_0[@]}; do
         if [ "$S_ARGV_0" == "$S_ITER" ]; then 
             SB_PRINT_UPSTREAM_REPOSITORY_PATH="t"
@@ -1112,33 +1158,32 @@ fun_print_upstream_repository_path_if_needed(){
         exit 0 # exit without any errors
     else
         if [ "$SB_PRINT_UPSTREAM_REPOSITORY_PATH" != "f" ]; then 
-            fun_exc_exit_with_an_error_t1 "18856ab5-3de7-40c7-9052-7011401095e7"
+            fun_exc_exit_with_an_error_t1 "351b3725-3308-466e-bf23-0361c01117e7"
         fi
     fi
+    #----------------------------------------
 } # fun_print_upstream_repository_path_if_needed
 fun_print_upstream_repository_path_if_needed
-
 #--------------------------------------------------------------------------
-
 if [ "$SB_INVALID_COMMAND_LINE_ARGUMENTS" == "t" ]; then 
     echo ""
-    echo "Wrong command line argument(s)."
+    echo -e "\e[31mWrong command line argument\e[39m(s)."
     echo "Supported command line arguments "
-    echo "can be displayed by using \"help\" as "
+    echo -e "can be displayed by using \"\e[33mhelp\e[39m\" as"
     echo "the single commandline argument."
     echo "Aborting script."
-    echo "GUID=='5552b362-9640-43d0-bed1-7011401095e7'"
+    echo "GUID=='447f62b4-6243-44f6-8112-0361c01117e7'"
     echo ""
     cd "$S_FP_ORIG"
     exit 1 # exit with an error
 else
     if [ "$SB_INVALID_COMMAND_LINE_ARGUMENTS" != "f" ]; then 
-        fun_exc_exit_with_an_error_t1 "4e07b884-db33-4b6c-b821-7011401095e7"
+        fun_exc_exit_with_an_error_t1 "655e95e6-ee4c-43de-a353-0361c01117e7"
     fi
 fi
-
 #--------------------------------------------------------------------------
 cd "$S_FP_ORIG"
 exit 0 # exit without any errors
+#--------------------------------------------------------------------------
+# S_VERSION_OF_THIS_FILE="f8d2ed65-68c7-4502-9612-0361c01117e7"
 #==========================================================================
-

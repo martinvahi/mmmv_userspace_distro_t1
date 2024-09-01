@@ -45,7 +45,7 @@ if i_0!=3
    s_err<<"The "+s_2+"\e[31m requires exactly 3 arguments\e[39m.\n"
    s_err<<s_general_idea
    puts(s_err)
-   raise(Exception.new("GUID=='29889923-28f4-4774-916f-40a330e178e7'\n"))
+   raise(Exception.new("GUID=='5de3763b-973c-4fc1-92d6-e00300a188e7'\n"))
    #---------------------------------------------------------
 end # if
 
@@ -77,7 +77,7 @@ s_cmd<<" "
 s_cmd_1="bash -c ' "+
 s_cmd.gsub(/[']/,"'\"'\"'")+
 " ' "
-puts s_cmd
+#puts s_cmd
 #printf(s_cmd)
 #puts(s_cmd)
 #----------------------------------------
@@ -104,5 +104,5 @@ exit i_exit_code
 #     ./mmmv_polish_ABC_2_A_C_B_exec_t1 "whoami" "date" ";"
 #
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="1216c21b-da15-4c1b-b56f-40a330e178e7"
+# S_VERSION_OF_THIS_FILE="b33e7e58-e175-4e07-b1d6-e00300a188e7"
 #==========================================================================

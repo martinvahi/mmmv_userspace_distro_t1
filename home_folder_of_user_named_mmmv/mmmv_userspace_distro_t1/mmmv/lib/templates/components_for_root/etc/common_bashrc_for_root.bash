@@ -74,7 +74,7 @@ S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     #MMMV_CFLAGS_TEMPLATE=" -mtune=native  -ftree-vectorize -O3 "
 
 # No backwards compatibility support, smaller binaries, current CPU only:
-    MMMV_CFLAGS_TEMPLATE=" -march=native   -ftree-vectorize -O3 "
+    MMMV_CFLAGS_TEMPLATE=" -march=native -mtune=native -ftree-vectorize -O3 "
 
 if [ "$CFLAGS" == "" ]; then
     export CFLAGS=" $MMMV_CFLAGS_TEMPLATE "
