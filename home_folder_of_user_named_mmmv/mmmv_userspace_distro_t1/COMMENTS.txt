@@ -40,6 +40,7 @@ Section_10: Project Templates
 Section_11: Bundled Development Tools
 Section_12: The BSD License
 Section_13: A BSD License Related note
+Section_14: Inspiring or Similar Projects Hall of Fame
 
 
 ---------------------------------------------------------------------------
@@ -284,7 +285,7 @@ probabilistically close to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "2a4f8a91-38ca-42be-85ec-30b2311098e7"
+All quoted GUIDs like "511b8237-a699-4f99-8171-70d0604198e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -603,10 +604,27 @@ which in turn contains the BSD license text at its Section_09
 and with that the BSD license requirement about listing 
 me, the Martin.Vahi@softf1.com, as an author is satisfied.
 
+
+---------------------------------------------------------------------------
+Section_14: Inspiring or Similar Projects Hall of Fame
+---------------------------------------------------------------------------
+
+The list of projects that are a source of inspiration for the
+mmmv_userspace_distro_t1 is clearly longer than this list here, but as
+shoddy compromise, this list here is better than nothing.
+
+    TURNKEY Linux:
+        https://www.turnkeylinux.org/
+        https://github.com/turnkeylinux-apps/core
+
+    Virtual Machines and Appliances Files 
+    by SourceForge user mrplastik
+        https://sourceforge.net/projects/virtualappliances/files/
+
 #--------------------------------------------------------------------------
 # Initial author of this file: Martin.Vahi@softf1.com
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="dd581e49-4176-4be1-a5ec-30b2311098e7"
+# S_VERSION_OF_THIS_FILE="776ebd2f-fa76-4cb0-8271-70d0604198e7"
 ===========================================================================
