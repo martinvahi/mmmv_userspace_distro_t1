@@ -27,30 +27,33 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='aab68238-3e2b-45cd-a3d9-1050804088e7'"
+    echo "GUID=='1572ba82-c355-494c-b438-5341109198e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
 #--------------------------------------------------------------------------
 MMMV_USERSPACE_DISTRO_T1_CORE_APPLICATIONS_SET_01="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/core_applications_set_01"
 #--------------------------------------------------------------------------
-# POOLELI: all olev kasutusele v8tta p2rast kui mmmv_HTMLfile_2_list_of_a_tag_URLs_file_extensions_set_01_t1 valmis on.
-# S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_CORE_APPLICATIONS_SET_01/mmmv_HTMLfile_2_list_of_a_tag_URLs_file_extensions_set_01_t1"
-# if [ -e "$S_TMP_0" ]; then
-#     if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
-#         if [ "$SB_SED_OR_GSED_EXISTS_ON_PATH" == "t" ]; then
-#             if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
-#                 if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
-#                     if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
-#                         if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
-#                             export Z_PATH="$S_TMP_0/bin:$Z_PATH"
-#                         fi
-#                     fi
-#                 fi
-#             fi
-#         fi
-#     fi
-# fi
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_CORE_APPLICATIONS_SET_01/experiments/experiment_mmmv_search_engine_t1/bin"
+if [ -e "$S_TMP_0" ]; then
+    if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_SED_OR_GSED_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+                if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
+                    if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
+                        if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
+                            if [ "$SB_WC_EXISTS_ON_PATH" == "t" ]; then
+                                if [ "$SB_UNIQ_EXISTS_ON_PATH" == "t" ]; then
+                                    export Z_PATH="$S_TMP_0:$Z_PATH"
+                                fi
+                            fi
+                        fi
+                    fi
+                fi
+            fi
+        fi
+    fi
+fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="259fa011-5669-40da-b2d9-1050804088e7"
+# S_VERSION_OF_THIS_FILE="91918502-cb7b-4292-b928-5341109198e7"
 #==========================================================================
