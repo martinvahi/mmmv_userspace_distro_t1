@@ -1,0 +1,42 @@
+===========================================================================
+======================  mmmv_search_engine_t1 =============================
+===========================================================================
+
+The mmmv_search_engine_t1 is a set of command line tools for creating
+and using a search index of a local set of documents. Online use of
+the mmmv_search_engine_t1 is meant to take place by using the RSS/Atom
+model: blog publishers self publish the search index files of their blogs
+and a separate sub-part of the mmmv_search_engine_t1 project is used for
+making aggregate searches over many blogs or used for downloading the
+search indices.
+
+
+---------------------------------------------------------------------------
+                       Usage Instructions
+---------------------------------------------------------------------------
+
+Usage instructions of individual command line programs in 
+
+    ./bin
+
+can be displayed by executing
+
+    ./bin/<name of the program> help
+
+
+---------------------------------------------------------------------------
+            Current EXPERIMENTAL STATE of the project
+---------------------------------------------------------------------------
+
+The set of tools in this project is too incomplete to make this project
+usable in production. From search engine perspective there is a lack
+of essential functionality, but the tools that are there, tend to be
+complete enough to be used as fragments of the search engine. Which
+fragments the final version of the search engine will consists of, is
+subject to studying and experimentation. Not all command line tools in
+this experiment will be part of the final version of the search engine.
+
+
+===========================================================================
+S_VERSION_OF_THIS_FILE="5b471a54-d47d-4dcd-b81e-43f2718198e7"
+===========================================================================
