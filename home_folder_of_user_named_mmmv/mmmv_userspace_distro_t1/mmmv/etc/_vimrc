@@ -35,11 +35,20 @@
 :" This code can be used as ~/.vimrc, i.e. it's a vimscript source.
 :"-------------------------------------------------------------------------
 :syntax enable
+:"--------------------------------------
+:colorscheme torte
+:"       In the case of Vim version 8.1 the different color schemes
+:"       are listed at: <Vim home>/share/vim/vim81/colors/
+:"       Some dark color schemes, where comments are 
+:"       easily visible: darkblue, industry, murphy, torte.
+:"
+:"       https://unix.stackexchange.com/questions/88879/better-colors-so-comments-arent-dark-blue-in-vim
+:"       archival copy: https://archive.ph/a5yt2
+:"--------------------------------------
 :set redrawtime=7000
-:"       redrawing deadline in milliseconds
-:"       after which the syntax highlighting is switched off.
-:"       The default seems to be 2000ms=2s, which
-:"       can be insufficient on some Android tablet computers.
+:"       redrawing deadline in milliseconds after which the syntax
+:"       highlighting is switched off.  The default seems to be 2000ms=2s,
+:"       which can be insufficient on some Android tablet computers.
 :"       https://stackoverflow.com/questions/64943643/make-vim-ignore-syntax-highlight-only-for-long-lines
 :"-------------------------------------------------------------------------
 :set incsearch
@@ -599,7 +608,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='dfd3ba5a-595e-4112-a56c-f152709088e7'"
+:                throw "The vimscript needs to be improved. GUID=='35d54510-f633-4f2d-8132-90132021a8e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -2037,7 +2046,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='56d7fab3-71a2-40f9-bb5c-f152709088e7'"
+:        throw "The vimscript is flawed. GUID=='d4d46039-accd-4db5-9232-90132021a8e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2373,10 +2382,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='291a3d61-69ab-44ab-a54c-f152709088e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='df064a10-7f41-4770-b532-90132021a8e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='81d1ff2b-cfb5-470d-841b-f152709088e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='ad135e21-84f5-48d4-9532-90132021a8e7'"
 :                en
 :            en
 :           "---------------
@@ -2777,5 +2786,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="04c612d9-2e3b-4c6b-b91c-f152709088e7"
+:" S_VERSION_OF_THIS_FILE="62d9fe63-4d4d-4467-8232-90132021a8e7"
 :"=========================================================================
