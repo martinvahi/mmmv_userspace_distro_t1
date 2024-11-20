@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Power toys - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Performance/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Themes/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h3 id="1-pin-a-frequently-visited-directory">1. Pin a frequently visited directory</h3>
+<p>If you need to repeat a directory repeatedly, you can pin it during a session using the shortcut <kbd>,</kbd>. When you have a pinned directory, pressing the bookmark key (<kbd>b</kbd> or <kbd>\^/</kbd>) will list <code>,</code> as the first key:</p>
+<pre><code>bookmark keys: , w t m i d v n
+</code></pre>
+<p>Press <kbd>,</kbd> after the bookmark key to visit the pinned directory.</p>
+<p>You can pin one directory at a time.</p>
+<h3 id="2-filter-filtered-entries">2. Filter filtered entries</h3>
+<p>Filtering is the <code>nnn</code> way to search files in a directory. Did you know it's possible to apply a new filter on already filtered results?</p>
+<ul>
+<li>Go to a directory</li>
+<li>Press filter key (<kbd>/</kbd>) and type a filter</li>
+<li>Press <kbd>Esc</kbd> or <kbd>Up</kbd> or <kbd>Down</kbd> (the filter will disappear from the status bar)</li>
+<li>Press filter key again</li>
+<li>Type a new filter to find matches in the earlier filtered results</li>
+</ul>
+<h3 id="3-mount-and-modify-archives">3. Mount and modify archives</h3>
+<p><code>nnn</code> provides you an option to mount archives when you press <kbd>Enter</kbd> on an archive. Press <kbd>m</kbd> to mount the archive and <code>nnn</code> will mount the archive and take you to the mountpoint of the mounted archive.</p>
+<p>Add some files in the mounted archive, go back to the <code>nnn</code> config directory (<code>${XDG_CONFIG_HOME:-$HOME/.config}/nnn</code>) and hover on the archive mount point. Press <kbd>u</kbd> to unmount the archive and generate a package with the new files. The original package is saved with the extension <code>.orig</code>.</p>
+<h3 id="4-hovered-file-path-in-nnn">4. Hovered file path in <code>$nnn</code></h3>
+<p><code>nnn</code> exports the hovered file path as <code>$nnn</code> when you press the command prompt or spawn shell shortcuts. You can use the variable to run a command on the hovered file:</p>
+<pre><code class="language-sh">ls -l &quot;$nnn&quot;
+</code></pre>
+<h3 id="5-preview-and-edit-files">5. Preview and edit files</h3>
+<p>You can easily edit and view the changes to Markdown, man pages etc. in <code>nnn</code>. For this you need to use a CLI file opener. You can use plugin <a href="https://github.com/jarun/nnn/blob/master/plugins/nuke"><code>nuke</code></a>, a customizable example opener to specify your preferred apps. To set nuke as the default opener:</p>
+<pre><code class="language-sh">export NNN_OPENER=/absolute/path/to/nuke
+</code></pre>
+<p>and start <code>nnn</code> as <code>nnn -c</code>.</p>
+<p>The option <code>-c</code> indicates to <code>nnn</code> that the opener is a CLI-only opener (note that <code>nuke</code> can open files in GUI apps as well; please read the documentation in the file).</p>
+<p>Now when you press <kbd>Enter</kbd> on a Markdown file <code>nuke</code> will try to open it in <code>glow</code> or a man page in <code>man</code>.</p>
+<p>To edit the file in <code>$VISUAL</code> (or <code>$EDITOR</code>, or <code>vi</code>), hover on the file and press <kbd>e</kbd>.</p>
+<h3 id="6-redirect-selection-to-a-command">6. Redirect selection to a command</h3>
+<p><code>nnn</code> allows users to select a file at a time, a range of files or all files in a directory together. Once you are done selecting, you can run a command on all the files by using the selection file as input:</p>
+<pre><code class="language-sh">xargs -0 ls -l &lt; &quot;${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection&quot;
+</code></pre>
+<p>If you are using this frequently, have a shortcut in your rc file:</p>
+<pre><code class="language-sh">export sel=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection
+</code></pre>
+<p>and simplify the command as:</p>
+<pre><code class="language-sh">xargs -0 ls -l &lt; $sel
+</code></pre>
+<p>Many plugins work this way!</p>
+<h3 id="7-prompt-shortcuts">7. Prompt shortcuts</h3>
+<p>Even if you compile <code>nnn</code> without libreadline, the native input prompts support several readline-like keys - <kbd>\^A</kbd>, <kbd>\^B</kbd>, <kbd>\^D</kbd>, <kbd>\^E</kbd>, <kbd>\^F</kbd>, <kbd>\^K</kbd>, <kbd>\^U</kbd>, <kbd>\^W</kbd>.</p>
+<h3 id="8-run-custom-commands-with-hotkeys">8. Run custom commands with hotkeys</h3>
+<p><code>nnn</code> allows you to run custom commands like plugins. For example, to open a log file in <code>lnav</code>, add a plugin-ish key:command pair in your <code>NNN_PLUG</code> environment variable:</p>
+<pre><code class="language-sh">export NNN_PLUG='l:-_lnav $nnn*'
+</code></pre>
+<p>Press <kbd>;</kbd> (select plugin shortcut) followed by <kbd>l</kbd> to open a log file in <code>lnav</code>.</p>
+<p>You can control several aspects while running commands and plugins (e.g., skip dir refresh after running a plugin, skip user confirmation after running a command) and even run GUI apps as a plugin. Visit <a href="https://github.com/jarun/nnn/tree/master/plugins">plugins</a> for more details.</p>
+<p>Note: <code>lnav</code> was taken as an example, you can easily open log files in <code>lnav</code> by editing the customizable sample opener <a href="https://github.com/jarun/nnn/blob/master/plugins/nuke"><code>nuke</code></a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

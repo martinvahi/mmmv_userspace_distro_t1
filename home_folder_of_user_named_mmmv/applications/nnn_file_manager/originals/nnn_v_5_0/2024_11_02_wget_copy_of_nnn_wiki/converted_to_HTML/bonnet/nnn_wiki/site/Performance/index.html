@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Performance - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Live-previews/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Power-toys/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#optimization-techniques" class="nav-link">Optimization techniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#comparison" class="nav-link">Comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#nnn-vs-ls" class="nav-link">nnn vs. ls</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#c-vs-other-languages" class="nav-link">C vs. other languages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p align="center"><a href="https://i.imgur.com/yaQyXZs.jpg"><img src="https://i.imgur.com/yaQyXZs.jpg" /></p>
+
+<p align="center"><i>Rick uses a 400TB for multiverse data, and nnn to manage it ;)</i></p>
+
+<h2 id="optimization-techniques">Optimization techniques</h2>
+<h4 id="significant-factors">Significant factors</h4>
+<ul>
+<li>quicksort with pre-filters to sort by filename, time, size etc.</li>
+<li>0 fragmentation - no byte loss while storing file name of directory entries</li>
+<li>no copying of filename strings while sorting/filtering</li>
+<li>entries not matching a filter are moved to the lowest slots to ignore later</li>
+<li>selection handling through optimized bulk memory manipulation</li>
+<li>increased number of open file descriptors</li>
+<li>fast redraw only affected lines to avoid complete refresh</li>
+<li>all the large buffers are aligned</li>
+<li>frequently used structures optimized to facilitate SSE quad-instruction support</li>
+<li>read-ahead request (to kernels supporting the feature)</li>
+<li>fast routines to calculate and render file size</li>
+<li>shifts instead of div and mul (modern compilers do this already)</li>
+<li>optimized memory usage everywhere, buffer re-use</li>
+<li>no floating point arithmetic</li>
+<li>static routines</li>
+<li>controlled binary size</li>
+<li><code>O3</code> level compiler optimization</li>
+<li>0-warning statically-analyzed code (forced <code>-Wall -Wextra -Werror</code> in CI)</li>
+<li>statically generated hash-table for guaranteed <code>O(1)</code> extension icon lookups</li>
+</ul>
+<h4 id="rejected-options">Rejected options</h4>
+<ul>
+<li>replace quicksort with a more aggressive algorithm (favor space over time complexity)</li>
+<li>the difference is not usually perceptible by human beings</li>
+<li>the random load option is also removed to emphasize this</li>
+<li>non-standard calls like <code>statx()</code>/<code>getdents()</code>/<code>getdents64()</code></li>
+<li>platform-specific, <code>nnn</code> is POSIX-compliant</li>
+<li>man page <em>Description</em> begins with <em>"These  are not the interfaces you are interested in."</em></li>
+<li>optimize handling 10K+ entries in a dir</li>
+<li>not a mass use case</li>
+<li>performance with 10K files is good enough today</li>
+<li>SSD/NVMe are the future</li>
+<li>use lazy/background/threaded load</li>
+<li>du, sort and <em>type-to-nav</em> program options require a <code>stat()</code> on all entries for correctness</li>
+</ul>
+<h4 id="selection">Selection</h4>
+<p>Supporting multi-directory selection is technically challenging; <code>nnn</code> uses many optimizations to make it unnoticeable in most cases, but select-all (including filtered) or inversion while already having lots of files selected may take some time.</p>
+<p>When tested on <a href="https://www.gsmarena.com/motorola_photon_q_4g_lte_xt897-4885.php">Motorola Photon Q</a> (ARM CPU with 13.54 bogomips) and a directory with 10K files, even the most complicated cases we came up with finished within 10 seconds. If the earlier selection was small or continuous, both select all (full as well as on filter) and invert were instant.</p>
+<h2 id="comparison">Comparison</h2>
+<h4 id="gnu-libc-ncursesw-vanilla">GNU libc + ncursesw vanilla</h4>
+<p>Stripped binary (or script) size &amp; memory usage of <code>nnn</code> and some other popular FMs (which existed before <code>nnn</code>) while viewing a directory with 13.5K files (0 directories), sorted by size/du:</p>
+<pre>
+<b> BINSZ</b>    VIRT  <b>  RES</b>    SHR S  %MEM   COMMAND
+<b>  650K</b>  139720  <b>91220</b>   8460 S   1.1   ranger
+<b>    1M</b>   50496  <b>15328</b>   4076 S   0.2   vifm
+<b>    1M</b>   72152  <b>12468</b>   7336 S   0.2   mc
+<b>  110K</b>   15740  <b> 4348</b>   2460 S   0.1   nnn -t d
+</pre>
+
+<h4 id="gnu-libc-ncursesw-upx-custom">GNU libc + ncursesw + upx custom</h4>
+<p>Results with aggressive make options, static binary and upx compression:</p>
+<pre>
+$ make O_NORL=1 O_NOMOUSE=1 O_NOLC=1 O_NOBATCH=1 O_NOSSN=1 O_NOFIFO=1 O_QSORT=1 O_NOUG=1 static strip
+$ upx nnn-static
+$ top
+<b> BINSZ</b>    VIRT  <b>  RES</b>    SHR S  %MEM   COMMAND
+<b>  582K</b>    3136  <b> 3056</b>      4 S   0.0   nnn-static -cdDEnQrux -t d ~/images // 11K files
+<b>  582K</b>    2428  <b> 2240</b>      4 S   0.0   nnn-static -cdDEnQrux -t d /usr/bin // 1.5K files
+</pre>
+
+<h4 id="musl-libc-netbsd-curses-vanilla">musl libc + netbsd-curses vanilla</h4>
+<p>Results with 1950 files:</p>
+<pre>
+$ musl-gcc -O3 -DNORL -I../netbsd-curses/libcurses -o nnn-shared src/nnn.c -Wl,-Bsymbolic-functions -L/opt/netbsd-curses -lcurses -lterminfo
+$ strip nnn-shared
+$ musl-gcc -O3 -DNORL -I../netbsd-curses/libcurses -o nnn-static src/nnn.c -Wl,-Bsymbolic-functions -L/opt/netbsd-curses -lcurses -lterminfo -static
+$ strip nnn-static
+<b> BINSZ</b>    VIRT  <b>  RES</b>    SHR S  %MEM   COMMAND
+<b>  102K</b>    1952  <b> 1580</b>    868 S   0.0   nnn-shared -dn
+<b>  354K</b>    1164  <b>  824</b>    348 S   0.0   nnn-static -dn
+</pre>
+
+<h2 id="nnn-vs-ls">nnn vs. ls</h2>
+<p>The stripped binary size of <code>ls</code> is 130.7K.</p>
+<p><code>nnn</code> takes less than 50% time to list a directory with 2083 files:</p>
+<pre><code>$ time nnn /usr/bin
+0.00user 0.01system 0:00.02elapsed 42%CPU (0avgtext+0avgdata 3540maxresident)k
+1608inputs+0outputs (3major+325minor)pagefaults 0swaps
+
+$ export LS_COLORS='ex=00:su=00:sg=00:ca=00:'
+$ time ls -l /usr/bin
+0.01user 0.01system 0:00.05elapsed 47%CPU (0avgtext+0avgdata 3800maxresident)k
+784inputs+0outputs (0major+303minor)pagefaults 0swaps
+</code></pre>
+<p><code>nnn</code> roughly makes one-third the system calls made by <code>ls</code> (all readings taken at cold boot).</p>
+<pre><code>$ time strace -c nnn -d /usr/bin | wc -l
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 92.56    0.014030           7      1989           newfstatat
+  4.95    0.000751         188         4           getdents
+  1.19    0.000180           3        57         1 stat
+  0.53    0.000081          81         1           inotify_add_watch
+  0.15    0.000023           2        15           close
+  0.11    0.000017           2        10           brk
+  0.10    0.000015           1        14           openat
+  0.08    0.000012           2         6           write
+  0.07    0.000010           0        23         3 ioctl
+  0.05    0.000007           0        15           fstat
+  0.05    0.000007           7         1         1 unlink
+  0.04    0.000006           1         8           read
+  0.04    0.000006           0        14           mmap
+  0.04    0.000006           6         1           inotify_rm_watch
+  0.03    0.000005           5         1           sysinfo
+  0.01    0.000002           2         1           lseek
+  0.00    0.000000           0         2           lstat
+  0.00    0.000000           0        10           mprotect
+  0.00    0.000000           0         1           munmap
+  0.00    0.000000           0         9           rt_sigaction
+  0.00    0.000000           0         9         7 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           inotify_init1
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.015158                  2194        12 total
+0.01user 0.05system 0:00.08elapsed 84%CPU (0avgtext+0avgdata 3524maxresident)k
+4576inputs+0outputs (10major+545minor)pagefaults 0swaps
+0
+
+$ export LS_COLORS='ex=00:su=00:sg=00:ca=00:'
+$ time strace -c ls -l /usr/bin | wc -l
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 42.88    0.011274           6      1989           lstat
+ 27.69    0.007281           4      1989      1989 lgetxattr
+ 20.74    0.005454           4      1548      1548 getxattr
+  5.82    0.001529           3       442           readlink
+  1.35    0.000355          89         4           getdents
+  0.38    0.000100           3        31           write
+  0.24    0.000064           2        33         5 openat
+  0.18    0.000048           1        34           close
+  0.17    0.000046           3        17           lseek
+  0.16    0.000042           1        40           mmap
+  0.16    0.000041           4        11           munmap
+  0.11    0.000030           1        30           fstat
+  0.04    0.000011           2         5           brk
+  0.04    0.000011          11         1           mremap
+  0.03    0.000007           0        17           read
+  0.00    0.000000           0        20           mprotect
+  0.00    0.000000           0         2           rt_sigaction
+  0.00    0.000000           0         1           rt_sigprocmask
+  0.00    0.000000           0         2         2 ioctl
+  0.00    0.000000           0        12        12 access
+  0.00    0.000000           0         4           socket
+  0.00    0.000000           0         4         4 connect
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         2         2 statfs
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           futex
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           set_robust_list
+  0.00    0.000000           0         1           prlimit64
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.026293                  6244      3562 total
+0.02user 0.12system 0:00.13elapsed 106%CPU (0avgtext+0avgdata 3728maxresident)k
+3752inputs+0outputs (7major+526minor)pagefaults 0swaps
+1989
+</code></pre>
+<h2 id="c-vs-other-languages">C vs. other languages</h2>
+<ul>
+<li>Python3 vs. C gcc <a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/python3-gcc.html">benchmarks</a></li>
+<li>Go vs. C gcc <a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/go-gcc.html">benchmarks</a></li>
+<li>Bash script vs. C gcc</li>
+</ul>
+<pre><code>/* compare.c */
+
+int main(void)
+{
+  for (int i = 0; i &lt; 1000000; i++)
+    printf(&quot;hello\n&quot;);
+
+  return 0;
+}
+
+$ time -p ./compare
+real 1.89
+user 0.20 &lt;&lt;
+sys 1.25
+---------------------------------
+# compare.sh
+#!/bin/bash
+
+for (( i = 0; i &lt; 1000000; i++ ))
+do
+  echo hello
+done
+
+exit 0
+
+$ time -p ./compare.sh
+real 5.88
+user 4.66 &lt;&lt;
+sys 1.21
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

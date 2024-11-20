@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>The nnn magic! - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Advanced-use-cases/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Concepts/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#the-nnn-magic" class="nav-link">The nnn magic!</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#add-bookmarks" class="nav-link">Add bookmarks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configure-cd-on-quit" class="nav-link">Configure cd on quit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sync-subshell-pwd" class="nav-link">Sync subshell $PWD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#hot-plugged-drives" class="nav-link">Hot-plugged drives</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#image-video-pdf" class="nav-link">Image, video, pdf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#detached-text" class="nav-link">Detached text</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#run-commands" class="nav-link">Run commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#launch-applications" class="nav-link">Launch applications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#open-as-root" class="nav-link">Open as root</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#file-picker" class="nav-link">File picker</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#remote-mounts" class="nav-link">Remote mounts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#synced-quick-notes" class="nav-link">Synced quick notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#drag-and-drop" class="nav-link">Drag and drop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#duplicate-file" class="nav-link">Duplicate file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#create-batch-links" class="nav-link">Create batch links</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#disable-bold-fonts" class="nav-link">Disable bold fonts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="the-nnn-magic">The <code>nnn</code> magic!</h1>
+<p><code>nnn</code> unfolds on use. Some exquisite stuff you can do:</p>
+<ul>
+<li>[x] Instantly load, sort, filter thousands of files</li>
+<li>[x] Filter and type to navigate with automatic matching dir entry</li>
+<li>[x] List input stream and pick entries to stdout or file as list</li>
+<li>[x] Write a plugin in any language and <em>talk</em> to <code>nnn</code></li>
+<li>[x] <code>find</code>/<code>fd</code>/<code>grep</code>/<code>ripgrep</code>/<code>fzf</code> from <code>nnn</code> and list in <code>nnn</code></li>
+<li>[x] Never lose context - start where you quit</li>
+<li>[x] Mount any cloud storage service in a few keypresses</li>
+<li>[x] Select files from anywhere (not just a single dir)</li>
+<li>[x] Unlimited bookmarks, plugins, cmds with custom hotkeys</li>
+<li>[x] Edit and preview markdown, man page, HTML</li>
+<li>[x] Open a file and auto-advance to the next</li>
+<li>[x] Filter filtered entries, export list of visible files</li>
+<li>[x] Configure the middle mouse click to do anything</li>
+<li>[x] Multi-location (or subtree) fuzzy search and visit a file</li>
+<li>[x] Load four dirs with custom settings at once</li>
+<li>[x] Notifications on <code>cp</code>, <code>mv</code>, <code>rm</code> completion</li>
+<li>[x] Auto-sync selection to system clipboard</li>
+<li>[x] Access selection from another instance of <code>nnn</code></li>
+<li>[x] Open text files detached in another pane/tab/window</li>
+<li>[x] Mount and modify archives</li>
+<li>[x] Create files/dirs/duplicates with parents (like <code>mkdir -p</code>)</li>
+<li>[x] Toggle hidden with <kbd>.</kbd>, visit <code>$HOME</code> with <kbd>~</kbd>, last dir with <kbd>-</kbd></li>
+<li>[x] Mark a frequently visited dir at runtime</li>
+<li>[x] Sort by modification, access and inode change time</li>
+<li>[x] Compile out/in features with make variables</li>
+<li>[x] Watch matrix text fly or read fortune messages</li>
+<li>[x] Configure in 5 minutes!</li>
+</ul>
+<h2 id="add-bookmarks">Add bookmarks</h2>
+<p>There are 2 ways (can be used together) to manage bookmarks.</p>
+<h4 id="environment-variable-nnn_bms">Environment variable <code>NNN_BMS</code></h4>
+<p>Set environment variable <code>NNN_BMS</code> as a string of <code>key_char:location</code> pairs separated by semicolons (<code>;</code>):</p>
+<pre><code class="language-sh">export NNN_BMS=&quot;d:$HOME/Documents;u:/home/user/Cam Uploads;D:$HOME/Downloads/&quot;
+</code></pre>
+<p>The bookmarks are listed in the help and config screen (key <kbd>?</kbd>).</p>
+<p>The select bookmark key <kbd>b</kbd> lists all the bookmark keys set in <code>NNN_BMS</code> in the bookmarks prompt.</p>
+<h4 id="symlinked-bookmarks">Symlinked bookmarks</h4>
+<p>A symlinked bookmark to the current directory can be created with the <kbd>B</kbd> key (or manually under <code>~/.config/nnn/bookmarks</code>).</p>
+<p>Pressing <kbd>Enter</kbd> at the bookmarks prompt takes to this directory. If <code>NNN_BMS</code> is not set, the select bookmark key directly opens it.</p>
+<p>Press <kbd>-</kbd> to return to the original directory right after entering a symlinked bookmark.</p>
+<h4 id="mark-directory">Mark directory</h4>
+<p>To jump back and forth a specific directory during a session, you can <strong><em>mark</em></strong> the directory (key <kbd>,</kbd>). Visit it anytime using the Bookmark key followed by <kbd>,</kbd>. If a directory is marked, the Bookmark key lists <code>,</code> as well.</p>
+<h2 id="configure-cd-on-quit">Configure cd on quit</h2>
+<p>Pick the appropriate file for your shell from <a href="https://github.com/jarun/nnn/tree/master/misc/quitcd"><code>misc/quitcd</code></a> and add the contents to your shell's rc file. You'll need to spawn a new shell for the change to take effect. You should start <code>nnn</code> as <code>n</code> (or your preferred function name/alias).</p>
+<p>By default, when <kbd>^G</kbd> is pressed, <code>nnn</code> writes the last working directory to</p>
+<pre><code>${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd
+</code></pre>
+<p>To <em>cd on quit</em> <strong>always</strong>, export the environment variable <code>NNN_TMPFILE</code> set to your preferred file path.</p>
+<p>The extra key <kbd>^G</kbd> to <em>cd on quit</em> is to avoid writing to a file every time <code>nnn</code> quits and allows on-demand <em>cd on quit</em>.</p>
+<h2 id="sync-subshell-pwd">Sync subshell <code>$PWD</code></h2>
+<p>To configure <code>nnn</code> to cd to the <code>$PWD</code> of the exited <code>bash</code> subshell, add the following in <code>.bashrc</code>:</p>
+<pre><code class="language-bash">nnn_cd()                                                                                                   
+{
+    if ! [ -z &quot;$NNN_PIPE&quot; ]; then
+        printf &quot;%s\0&quot; &quot;0c${PWD}&quot; &gt; &quot;${NNN_PIPE}&quot; !&amp;
+    fi  
+}
+
+trap nnn_cd EXIT
+</code></pre>
+<p>Add a plugin with the following contents:</p>
+<pre><code class="language-sh">#!/usr/bin/env bash
+
+# Description: Start an interactive bash shell.
+
+export nnn=&quot;$1&quot;
+
+bash -i
+</code></pre>
+<p>You can also use the <em>run cmd as plugin</em> method:</p>
+<p><code>s:!bash -i*</code></p>
+<h2 id="hot-plugged-drives">Hot-plugged drives</h2>
+<p>Mount status external storage devices can be toggled in a REPL using the plugin <a href="https://github.com/jarun/nnn/blob/master/plugins/nmount"><code>nmount</code></a>.</p>
+<p>For auto-mounting external storage drives use udev rules or udisks wrappers.</p>
+<h2 id="image-video-pdf">Image, video, pdf</h2>
+<p><img alt="" src="https://i.imgur.com/14iPDIq.png" /></p>
+<p>In addition to <a href="https://github.com/jarun/nnn/wiki/Live-previews">Live Previews</a>, there is an independent plugin <code>imgview</code> to browse images/thumbnails of image, video or audio files in the terminal. Among other viewer utilities, it supports <code>sxiv</code> (opens its own window) which is particularly useful to browse images in a directory, set the wallpaper or copy image path to clipboard (<a href="https://wiki.archlinux.org/index.php/Sxiv#Assigning_keyboard_shortcuts">instructions</a>).</p>
+<h4 id="browse-rename-images">Browse, rename images</h4>
+<p>While the user can preview the hovered image in <code>preview-tabbed</code> and rename it, the following procedure is an alternative approach. It requires the <code>imgview</code> plugin (with <code>sxiv</code>) and <code>dmenu</code> (<code>zenity</code> can replace <code>dmenu</code>).</p>
+<p>Save <code>sxiv</code> key-handler <code>~/.config/sxiv/exec/key-handler</code> with the following content:</p>
+<pre><code class="language-sh">#!/usr/bin/env sh
+
+# ^X-^R: prompt for new image name (needs `dmenu`) and `mv`
+# ^X-^C: copy the image path to X clipboard (needs `xclip`)
+
+# Example zenity prompt:
+#   name=&quot;$(zenity --entry --display=:0.0 --text &quot;rename $file to&quot;)&quot; 2&gt; /dev/null
+
+while read -r file
+do
+    case &quot;$1&quot; in
+        &quot;C-r&quot;)
+                name=&quot;$(dmenu -p &quot;rename $file to: &quot;)&quot; 2&gt; /dev/null
+                if [ -n &quot;$name&quot; ]; then
+                    mv &quot;$file&quot; &quot;$name&quot;
+                fi
+                ;;
+        &quot;C-c&quot;)
+                printf &quot;%s&quot; &quot;$file&quot; | xclip -selection clipboard ;;
+        *)
+                printf &quot;Sorry, I don't understand&quot;
+                exit 1
+                ;;
+    esac
+done
+</code></pre>
+<p>Now hover on an image or directory and open it with the <code>imgsxiv</code> plugin. Browse images and press <code>^X</code> followed by <code>^R</code> to rename an image.</p>
+<p>For file operations visit <a href="https://github.com/muennich/sxiv/issues/228#issuecomment-260261751">sxiv issue #228</a>.</p>
+<h4 id="read-pdf-as-text">Read pdf as text</h4>
+<p>The plugin <code>pdfview</code> can convert and render PDF files as text in the terminal.</p>
+<p>It has 2 methods to convert PDF to text. Please go through the script for the details.</p>
+<h2 id="detached-text">Detached text</h2>
+<ol>
+<li>
+<p>Set up a script (say <code>ewrap</code>) to open the editor in a new <code>tmux</code> split-pane or a new <code>xfce4-terminal</code> tab/window (you may want to change the terminal and the editor in the sample snippet below):
+    ```sh
+    #!/usr/bin/env sh</p>
+<p>if [ -n "$TMUX" ] ; then
+    # tmux session running
+    tmux split-window -h "vim \"$<em>\""
+else
+    # Remove option --tab for new window
+    xfce4-terminal --tab -e "vim \"$</em>\""
+fi
+<code>``
+2. Make</code>ewrap<code>executable and drop it somewhere in your</code>$PATH`.</p>
+</li>
+<li>
+<p>Set <code>$VISUAL</code> (or <code>$EDITOR</code> if you don't have <code>$VISUAL</code>) to <code>ewrap</code>:
+    <code>sh
+    export VISUAL=ewrap</code></p>
+</li>
+<li>Start <code>nnn</code> with the program option <code>-e</code>.</li>
+</ol>
+<p>Notes:</p>
+<ol>
+<li><strong>IMPORTANT:</strong> Use the program option <code>-E</code> with detached text editing enabled. <code>nnn</code> internal operations which need to wait for the editor (like batch rename, copy/move as) wouldn't work as usual because the control returns to <code>nnn</code> after the terminal emulator is spawned. To avoid this, set <code>$VISUAL</code> as above and <code>$EDITOR</code> to a CLI editor (like <code>vim</code>). The program option forces <code>$EDITOR</code> to be used for internal operations (overriding <code>$VISUAL</code> which takes precedence otherwise).</li>
+<li>If you are already using <code>nuke</code> as opener modify it to use <code>ewrap</code> for text files. You can also enhance <code>ewrap</code> (re-use code from <code>nuke</code>) to handle text files by file type and use the right program (e.g. w3m for html, man for man pages). That way you don't have to change the opener.</li>
+<li>If you are using a tiling window manager, the new terminal window with the editor would open beside your current window. In case of traditional window managers, the new window will be placed as per the window manager's placement configuration e.g. smart or centered on XFCE4.</li>
+</ol>
+<p>Another options is to combine and use <code>nnn</code> with a multiplexer like <code>dvtm</code>:</p>
+<p><img alt="" src="https://i.imgur.com/gLCuaqX.png" /></p>
+<h2 id="run-commands">Run commands</h2>
+<p>There are several ways to run commands from <code>nnn</code>:</p>
+<ol>
+<li>Launch a shell within the current directory. This is your regular shell.</li>
+<li>Use the prompt key to show the <a href="https://github.com/jarun/nnn/wiki/Concepts#native-command-prompt">native command prompt</a> and enter your command. The commands are invoked using the <code>$SHELL</code> so you can use commands, aliases (in <code>~/.zshenv</code> for zsh), environment variables, pipes, redirections.</li>
+<li>You can also assign keys to arbitrary non-background cli commands (non-shell-interpreted) you use frequently and invoke like plugins. (<a href="https://github.com/jarun/nnn/tree/master/plugins#running-commands-as-plugin">instructions</a>).</li>
+</ol>
+<h4 id="shell-depth-indicator">Shell depth indicator</h4>
+<p>If you use <code>!</code> to spawn a shell in the current directory and your shell is bash or zsh, it could be nice to add: </p>
+<pre><code class="language-sh">[ -n &quot;$NNNLVL&quot; ] &amp;&amp; PS1=&quot;N$NNNLVL $PS1&quot;
+</code></pre>
+<p>To your shell's rc. This will have your prompt indicate that you are within a shell that will return you to <code>nnn</code> when you are done.</p>
+<p>This together with <a href="#configure-cd-on-quit">cd on quit</a> becomes a powerful combination. In addition, the quitcd scripts check <code>$NNNLVL</code> to guard against nesting.</p>
+<h2 id="launch-applications">Launch applications</h2>
+<p>GUI applications can be launched using a drop-down menu using plugin <a href="https://github.com/jarun/nnn/blob/master/plugins/launch"><code>launch</code></a>. <code>nnn</code> picks it up from the plugin location. If <code>launch</code> is not found, <code>nnn</code> shows a regular prompt for the application executable name.</p>
+<p>To configure <code>launch</code> as an independent app launcher add a keybind to open launch in a terminal e.g.,</p>
+<pre><code>xfce4-terminal -e "${XDG_CONFIG_HOME:-$HOME/.config}/nnn/plugins/launch
+</code></pre>
+<p>GUI applications can also be launched from the prompt. Use <code>&amp;</code> to launch in background so <code>nnn</code> isn't blocked.</p>
+<p>Note:</p>
+<ul>
+<li>You can also launch an instance of your favorite terminal in the current directory (<em><strong>open terminal here...</strong></em>) this way.</li>
+</ul>
+<h2 id="open-as-root">Open as root</h2>
+<p>If you are a sudoer, open a new instance of <code>nnn</code> from the built-in prompt with <code>sudo nnn</code>.</p>
+<p>You can also have a short and sweet (but powerful) alias (which also works at the <code>nnn</code> prompt):</p>
+<pre><code class="language-sh">alias N='sudo -E nnn -dH'
+</code></pre>
+<h2 id="file-picker">File picker</h2>
+<p>To use <code>nnn</code> as a file picker and redirect the output to other programs, use option <code>-p</code>. The option takes an output file as argument (use <code>-</code> to print the list to stdout).</p>
+<p>Ways to pick files:</p>
+<ul>
+<li>to pick a single file and quit, hover on it and press <kbd>Enter</kbd></li>
+<li>to pick selection and quit, select file(s) and press <kbd>Enter</kbd> or <kbd>q</kbd></li>
+</ul>
+<p>Notes:</p>
+<ol>
+<li>pressing <kbd>Enter</kbd> on a directory enters it; when trying to pick a directory, e.g. to pipe to <code>cd</code>, use single file selection</li>
+<li>to discard selection and quit, press <kbd>^G</kbd></li>
+</ol>
+<p>Example picker mode use cases:</p>
+<pre><code class="language-sh">// list some files
+ls -l $(nnn -p -)
+-rw-rw-r-- 1 vaio vaio 14722 Jul 10 07:24 /home/vaio/GitHub/nnn/CHANGELOG
+-rw-rw-r-- 1 vaio vaio  1472 Jul  7 21:49 /home/vaio/GitHub/nnn/LICENSE
+-rw-rw-r-- 1 vaio vaio  1697 Jul 10 07:24 /home/vaio/GitHub/nnn/Makefile
+</code></pre>
+<pre><code class="language-sh">// Attach some files and send a mail
+neomutt -a $(nnn -p -) ...
+</code></pre>
+<pre><code class="language-sh">// append some files to MOC playlist
+mocp -a $(nnn -p -)
+</code></pre>
+<h2 id="remote-mounts">Remote mounts</h2>
+<p><code>nnn</code> integrates with <code>sshfs</code> and <code>rclone</code> to support remote mounts. The mount points (for remotes as well as archives) are created within:</p>
+<pre><code>${XDG_CONFIG_HOME:-$HOME/.config}/nnn/mounts
+</code></pre>
+<p>Upon successful unmount, the mount points are removed.</p>
+<p>The key to mount a remote folder is <kbd>c</kbd> (for <em>c</em>onnect).</p>
+<p>Note: The <code>mounts</code> directory can be a symbolic link too. The target directory should have permissions to mount.</p>
+<h4 id="sshfs">sshfs</h4>
+<p>Example primary setup: <a href="https://gist.github.com/jarun/660fd1d5e79e1a4038de8ba5f2e1a513">connect to SSH sever from desktop</a>.</p>
+<p>To connect to and mount remote shares using <code>sshfs</code>, <code>nnn</code> requires the ssh configuration file <code>~/.ssh/config</code> to have the host entries. sshfs reads this file.</p>
+<p>Example host entry for a Termux environment on Android device:</p>
+<pre><code>Host *
+    ServerAliveInterval 300
+    ServerAliveCountMax 2
+
+Host phone
+    HostName 192.168.43.1
+    User u0_a117
+    Port 8022
+    Compression no
+    # Ciphers chacha20-poly1305@openssh.com
+    # ProxyJump jumphost
+</code></pre>
+<p>Once you try to connect using <code>sshfs</code>, <code>nnn</code> will prompt for the name of the host (<code>phone</code> in the example above). Type the exact name (as it appears in this file) optionally followed by the path in the remote host you want to mount.</p>
+<p>Examples:</p>
+<pre><code>phone         &lt;----- Mount your remote user's $HOME folder in `phone`
+phone:/tmp    &lt;----- Mount the remote `tmp` folder in `phone`
+</code></pre>
+<p>Host <code>phone</code> will be mounted at <code>${XDG_CONFIG_HOME:-$HOME/.config}/nnn/mounts/phone</code>.</p>
+<p>If you need to pass options to the <code>sshfs</code> command, you can do so:</p>
+<pre><code class="language-sh">export NNN_SSHFS='sshfs -o reconnect,idmap=user,cache_timeout=3600'
+</code></pre>
+<p>Options must be preceded by <code>sshfs</code> and comma-separated without any space between them.</p>
+<h4 id="rclone">rclone</h4>
+<p>The remote needs to be <a href="https://rclone.org/docs/">configured and authenticated</a> beforehand (one-time activity). The name used to configure is all <code>nnn</code> needs to connect and mount (as well as unmount) the remote service locally.</p>
+<p>If you need to pass options, use the dedicated environment variable for <code>rclone</code>:</p>
+<pre><code class="language-sh">export NNN_RCLONE='rclone mount --read-only --no-checksum'
+</code></pre>
+<p>A maximum of 5 flags can be passed.</p>
+<p>Tip: To list all the remotes in the rclone config file: <code>rclone listremotes</code></p>
+<h4 id="unmount-remotes">Unmount remotes</h4>
+<p>The unmount option (which also unmounts mounted archives BTW) works in 2 ways:</p>
+<ol>
+<li>hover on the mount point, press <kbd>u</kbd> (for <em>u</em>nmount). This works for both remotes and archives.</li>
+<li>if the current entry is not a mount point, <code>nnn</code> prompts for the remote host name</li>
+</ol>
+<p>Notes:</p>
+<ol>
+<li><code>nnn</code> opens the mount point in a smart context after successful mounts.</li>
+<li>More information on <a href="https://wiki.archlinux.org/index.php/SSHFS">sshfs</a>.</li>
+</ol>
+<h2 id="synced-quick-notes">Synced quick notes</h2>
+<p>Open your note file OR directory (if your editor supports opening a dir like <code>vim</code>) in your favourite editor like a plugin (see plugin docs for more info):</p>
+<pre><code class="language-sh">export NNN_PLUG=n:-!vim /home/vaio/Dropbox/Public/Docs/Notes/note*
+</code></pre>
+<p>To keep the file synced across systems you may want to specify a file synced by a cloud storage service or stored in a network share.</p>
+<h2 id="drag-and-drop">Drag and drop</h2>
+<p>Use the plugin <code>dragdrop</code>.</p>
+<h2 id="duplicate-file">Duplicate file</h2>
+<p>To duplicate the current entry:</p>
+<ul>
+<li>press <kbd>^R</kbd></li>
+<li>keep the name unchanged in the prompt and press <kbd>Enter</kbd></li>
+<li>in the next prompt ("copy name"), provide the preferred name (and optionally the path to the duplicate file) for the duplicate and press <kbd>Enter</kbd></li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>To cancel the rename or duplicate operations, press <kdb>Enter</kbd> in both prompts without changing the file name.</li>
+</ul>
+<h2 id="create-batch-links">Create batch links</h2>
+<p>To create symbolic or hard links in batch:</p>
+<ul>
+<li>select the file(s) you want to link</li>
+<li>go to the target directory</li>
+<li>press <kbd>n</kbd></li>
+<li>press <code>s</code> for symbolic link or <code>h</code> for hard link</li>
+<li>enter the link prefix (or <code>@</code> for no prefix)</li>
+</ul>
+<p>The reasons only prefix is allowed (and not full name):</p>
+<ul>
+<li>avoid prompting for link names one by one for a selection</li>
+<li>having the same prefix groups the newly created links together</li>
+</ul>
+<h2 id="disable-bold-fonts">Disable bold fonts</h2>
+<p>Most modern terminal emulators have the option to disable bold fonts.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,16 @@
+
+wget seed URL:
+
+    https://github.com/jarun/nnn/wiki
+    
+Some wget parameters:
+
+    --wait=1 --reject-regex 'http(s)?:[/]+.+(((lwn|osdn|sourceforge|sf)[.]net)|((bittube)[.]tv)|((lwn|osdn|sourceforge|sf)[.]net)|((nicovideo)[.]jp)|((gitgud)[.]io)|((npmjs|1fichier|cygwin|gitlab|facebook|youtube|twitter|tiktok|instagram|sciencedirect|elsevier|springer|google|googletagmanager|gmail|lijit|bing|yahoo|duckduckgo|awesomeopensource|odysee|bitchute|dailymotion|schooltube|utreon|semanticscholar|merriam-webster|thefreedictionary|urbandictionary|oed|stackexchange|microsoft|fosshub|gitee|chiselapp|githuman)[.]com)|((openhab|openhub|archive|arxiv|wikipedia|ieee|acm|gnu|fsf|sepiasearch|joinpeertube|creativecommons|bitbucket|apache|eclipse|opencores|librecores|debian|framagit|dotsrc|icculus|coin-or|sourceware|rubygems)[.]org)|(gap-system[.]org)|(uwaterloo[.]ca))([/].*)?' --accept-regex 'http(s)?:[/]+((((www|fonts)[.]gstatic[.]com)|(fonts[.]googleapis[.]com)|(cdn[.]jsdelivr[.]net)|(code[.]jquery[.]com))|(ajax[.]googleapis.com[/]ajax[/]libs)|(github[.]githubassets[.]com)|((avatars|(user[-]images))[.]githubusercontent[.]com)|(github[-]cloud[.]s3[.]amazonaws[.]com)|(www[.]github[.]com[/]jarun[/]nnn[/]wiki))([/].*)?' 
+
+Some test URLs:
+https://github.com/jarun/nnn/wiki/Basic-use-cases#launch-applications
+https://avatars.githubusercontent.com
+https://github-cloud.s3.amazonaws.com
+https://user-images.githubusercontent.com/
+https://github.githubassets.com
+https://avatars.githubusercontent.com

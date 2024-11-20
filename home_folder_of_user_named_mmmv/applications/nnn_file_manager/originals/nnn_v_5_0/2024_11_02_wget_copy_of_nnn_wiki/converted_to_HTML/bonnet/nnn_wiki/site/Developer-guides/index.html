@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Developer guides - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Concepts/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../From-noice-to-nnn/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#release-checklist" class="nav-link">Release checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#verify-sources" class="nav-link">Verify sources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#make-options" class="nav-link">make options</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#static-compilation" class="nav-link">Static compilation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#optimization-tips" class="nav-link">Optimization tips</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#compile-for-macos" class="nav-link">Compile for MacOS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#compile-for-pi" class="nav-link">Compile for Pi</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cygwin-instructions" class="nav-link">Cygwin instructions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#compile-with-musl-libc" class="nav-link">Compile with musl libc</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cross-compile-for-android" class="nav-link">Cross-compile for Android</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#debugging-nnn" class="nav-link">Debugging nnn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="release-checklist">Release checklist</h2>
+<ol>
+<li>Run tests with generated <code>outdir</code> files</li>
+<li>Update program options and help in Wiki, if required</li>
+<li>Update auto-completion scripts, if required</li>
+<li>Update <code>VERSION</code> in source</li>
+<li>Update the <code>app_version</code> section within <code>misc/haiku/nnn.rdef</code>.</li>
+<li>Also, change the <code>variety</code> from <code>B_APPV_DEVELOPMENT</code> to <code>B_APPV_FINAL</code>.</li>
+<li>Update date in man page</li>
+<li>Review list of auto-generated packages</li>
+<li>Update <code>CHANGELOG</code></li>
+<li>Create signed tag and push to GitHub</li>
+<li>Run <code>make O_NOUG=1 upload-local</code> (requires <code>libgpm-dev</code>, <code>upx</code>, <code>jq</code>) to upload source package signature and static binary</li>
+<li>Create a GitHub release and populate the release notes from <code>CHANGELOG</code></li>
+<li>Revert the <code>variety</code> back to <code>B_APPV_DEVELOPMENT</code> in <code>/misc/haiku/nnn.rdef</code></li>
+<li>Notify downstream package maintainers</li>
+</ol>
+<h2 id="verify-sources">Verify sources</h2>
+<p>The sources tarball is signed with PGP key, which you can verify as following:</p>
+<pre><code>$ gpg --verify nnn-&lt;VERSION&gt;.tar.gz.sig nnn-&lt;VERSION&gt;.tar.gz
+gpg: Signature made ...
+gpg:                using RSA key BBAD0B2F3093A7C3377A8F6BA75979F35C080412
+gpg: Good signature from &quot;Arun Prakash Jana &lt;...&gt;&quot;
+Primary key fingerprint: BBAD 0B2F 3093 A7C3 377A  8F6B A759 79F3 5C08 0412
+</code></pre>
+<h2 id="make-options">make options</h2>
+<p><code>nnn</code> provides several make variables to customize the features to include or exclude. This also helps in reducing the binary size further.</p>
+<h4 id="compile-with-pcre">Compile with PCRE</h4>
+<p>POSIX regex is the default. To enable PCRE, install the PCRE development library and set <code>O_PCRE</code>.</p>
+<p>On Ubuntu 18.04:</p>
+<pre><code>sudo apt install libpcre3-dev
+make O_PCRE=1
+</code></pre>
+<p>On macOS:</p>
+<pre><code>brew install pcre  # if you're using Homebrew
+sudo port install pcre  # if you're using MacPorts
+make O_PCRE=1
+</code></pre>
+<h4 id="compile-out-readline">Compile out readline</h4>
+<pre><code>make O_NORL=1
+</code></pre>
+<h4 id="compile-out-mouse-support">Compile out mouse support</h4>
+<pre><code>make O_NOMOUSE=1
+</code></pre>
+<h4 id="compile-out-built-in-feature-limited-batch-renamer">Compile out built-in feature-limited batch renamer</h4>
+<pre><code>make O_NOBATCH=1
+</code></pre>
+<p>Use it if you have plugin <code>.nmv</code> (bash script).</p>
+<h4 id="compile-out-fifo">Compile out FIFO</h4>
+<pre><code>make O_NOFIFO=1
+</code></pre>
+<h4 id="compile-out-session-support">Compile out session support</h4>
+<pre><code>make O_NOSSN=1
+</code></pre>
+<h4 id="compile-out-user-group-details-in-status-bar">Compile out user, group details in status bar</h4>
+<pre><code>make O_NOUG=1
+</code></pre>
+<p>Storing and decoding user and group info adds significantly to resident memory usage.</p>
+<h4 id="compile-in-icons-in-terminal">Compile-in icons-in-terminal</h4>
+<pre><code>make O_ICONS=1
+</code></pre>
+<p>More details <a href="https://github.com/jarun/nnn/wiki/Advanced-use-cases#file-icons">here</a>. This variable is not compatible with <code>O_NERD=1</code>, <code>O_EMOJI=1</code> and <code>O_NOLC=1</code>.</p>
+<h4 id="compile-in-icons-nerdfont">Compile-in icons-nerdfont</h4>
+<pre><code>make O_NERD=1
+</code></pre>
+<p>More details <a href="https://github.com/jarun/nnn/wiki/Advanced-use-cases#file-icons">here</a>. This variable is not compatible with <code>O_ICONS=1</code>, <code>O_EMOJI=1</code> and <code>O_NOLC=1</code>.</p>
+<h4 id="compile-in-emojis">Compile-in emojis</h4>
+<pre><code>make O_EMOJI=1
+</code></pre>
+<p>More details <a href="https://github.com/jarun/nnn/wiki/Advanced-use-cases#file-icons">here</a>. This variable is not compatible with <code>O_ICONS=1</code>, <code>O_NERD=1</code> and <code>O_NOLC=1</code>.</p>
+<h4 id="compile-out-locale">Compile out locale</h4>
+<pre><code>make O_NOLC=1
+</code></pre>
+<p>Unsupported characters in file names will be replaced by <code>?</code>. Operations on files work seamlessly.</p>
+<h4 id="compile-out-x11-integration">Compile out X11 integration</h4>
+<pre><code>make O_NOX11=1
+</code></pre>
+<p>Disable notifications on <code>cp</code>, <code>mv</code>, <code>rm</code> completion, selection sync to system clipboard and xterm title advertisement on directory change.</p>
+<h4 id="compile-in-alexey-tourbins-qsort">Compile-in Alexey Tourbin's QSORT</h4>
+<pre><code>make O_QSORT=1
+</code></pre>
+<h4 id="compile-in-8-contexts">Compile-in 8 contexts</h4>
+<pre><code>make O_CTX8=1
+</code></pre>
+<p>Warning: Saved sessions may no longer be usable when the number of contexts is switched.</p>
+<h4 id="matching-filters-only">Matching filters only</h4>
+<pre><code>make O_MATCHFLTR=1
+</code></pre>
+<p>Discard filter key when there's no match.</p>
+<h4 id="load-directories-unsorted">Load directories unsorted</h4>
+<pre><code>make O_NOSORT=1
+</code></pre>
+<p>This option is useful in <em>type-to-nav</em> mode. Loads dirs faster on initial entry. Any filter sorts the listing. Usable with xterm 256 colors only.</p>
+<h2 id="static-compilation">Static compilation</h2>
+<p>Install the GPM development library and set the Makefile variable <code>O_STATIC</code>.</p>
+<p>On Ubuntu 16.04/18.04:</p>
+<pre><code>sudo apt install libgpm-dev
+make O_STATIC=1 strip
+</code></pre>
+<p>On macOS: It's not possible to compile with <code>-static</code> on macOS at the moment. So please ignore this option if you're on macOS.</p>
+<blockquote>
+<p>This option will not work on Mac OS X unless all libraries (including libgcc.a) have also been compiled with -static. Since neither a static version of libSystem.dylib nor crt0.o are provided, this option is not useful to most people.</p>
+</blockquote>
+<p>Verify the binary.</p>
+<pre><code>file nnn
+nnn: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, for GNU/Linux 2.6.32, BuildID[sha1]=1be54d27687f83cf42393dd59dba2723798956de, stripped
+</code></pre>
+<h2 id="optimization-tips">Optimization tips</h2>
+<p>Careful use of make variables, static compilation and <a href="https://upx.github.io/">upx</a> compression can do wonders!</p>
+<pre><code>$ make CFLAGS+=-march=native O_NORL=1 O_NOMOUSE=1 O_NOLC=1 O_NOBATCH=1 O_NOSSN=1 O_NOFIFO=1 O_QSORT=1 O_NOUG=1 static
+$ upx nnn-static
+$ ls -l nnn-static
+-rwxrwxr-x 1 user user 593808 Nov  2 00:45 nnn-static
+
+# top output (/usr/bin has 1544 files)
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                             
+  31953 user      20   0    2428   2244      4 S   0.0   0.0   0:00.02 ./nnn-static -cdDEnQrux /usr/bin
+</code></pre>
+<h2 id="compile-for-macos">Compile for MacOS</h2>
+<p>On macos the default system ncurses library is too old and can cause issues (see https://github.com/jarun/nnn/issues/1703).</p>
+<p>Install a more up to date version from homebrew and link against it via adding the library path to <code>$LDLIBS</code></p>
+<pre><code>$ LDLIBS="-L/opt/homebrew/opt/ncurses/lib/" make
+</code></pre>
+<h2 id="compile-for-pi">Compile for Pi</h2>
+<p>The <code>nnn</code> version available as a stable Raspbian package is very out of date (v2.2), which means that the only way to get a recent version of <code>nnn</code> is to compile from source.</p>
+<p>As an example, to compile <code>nnn</code> v3.5 for a Raspberry Pi running Raspbian Buster, get <code>nnn-v3.5.tar.gz</code> from the <a href="https://github.com/jarun/nnn/releases/tag/v3.5">release assets</a>, put the tarball file on the Pi, and then do the following:</p>
+<h4 id="install-the-required-dependencies">Install the required dependencies</h4>
+<pre><code>sudo apt install pkg-config libncursesw5-dev libreadline-dev
+</code></pre>
+<h4 id="extract-the-tarball-ready-for-compilation">Extract the tarball ready for compilation</h4>
+<pre><code>tar -zxvf nnn-v3.5.tar.gz
+cd nnn-3.5
+</code></pre>
+<h4 id="compile-and-install-to-default-directory-usrlocalbin">Compile and install to default directory (/usr/local/bin)</h4>
+<pre><code>sudo make strip install
+</code></pre>
+<p>The above was tested on a Raspberry Pi Zero W running Buster and worked with no problems.</p>
+<h2 id="cygwin-instructions">Cygwin instructions</h2>
+<h4 id="copy-to-windows-clipboard-from-cygwin">Copy to Windows clipboard from Cygwin</h4>
+<p>Install plugins and use the program option <code>-x</code>.</p>
+<h4 id="external-editor-on-cygwin">External editor on Cygwin</h4>
+<p>See <a href="https://github.com/jarun/nnn/issues/1200">jarun/nnn#1200</a>.</p>
+<h2 id="compile-with-musl-libc">Compile with musl libc</h2>
+<p>In this example we will compile <code>nnn</code> on Ubuntu 20.04 with</p>
+<ul>
+<li><a href="https://github.com/sabotage-linux/netbsd-curses">netbsd-curses</a></li>
+<li><a href="https://github.com/void-linux/musl-fts">musl-fts</a></li>
+<li><a href="https://www.musl-libc.org/">musl libc</a></li>
+<li><a href="https://www.pcre.org/">pcre</a> (optional)</li>
+</ul>
+<p>Discussion <a href="https://github.com/sabotage-linux/netbsd-curses/issues/46">thread</a>. 
+See this <a href="https://github.com/jarun/nnn/issues/1081#issuecomment-868181380">patch</a> to save some more on <code>terminfo</code>.</p>
+<p><a href="https://github.com/jarun/nnn/blob/master/misc/musl/musl-static-ubuntu.sh">Compilation script</a> for Ubuntu closely following this procedure.</p>
+<h4 id="install-musl">Install musl</h4>
+<pre><code>sudo apt install musl musl-dev musl-tools
+</code></pre>
+<h4 id="get-netbsd-curses-and-compile-the-shared-and-static-libraries">Get netbsd-curses and compile the shared and static libraries</h4>
+<pre><code>git clone https://github.com/sabotage-linux/netbsd-curses
+cd netbsd-curses
+git checkout v0.3.2
+make CC=musl-gcc CFLAGS="-O3 -Wall -fPIC" -j$(($(nproc)+1)) all
+sudo mkdir /opt/nnn-libs
+sudo cp libcurses/libcurses.so libterminfo/libterminfo.so /opt/nnn-libs/
+make clean
+make CC=musl-gcc CFLAGS=-O3 LDFLAGS=-static all-static
+sudo cp libcurses/libcurses.a libterminfo/libterminfo.a /opt/nnn-libs/
+</code></pre>
+<h4 id="get-musl-fts-and-compile-the-shared-and-static-binaries">Get musl-fts and compile the shared and static binaries</h4>
+<pre><code>git clone https://github.com/void-linux/musl-fts --depth=1
+cd musl-fts
+./bootstrap.sh
+./configure
+make CC=musl-gcc CFLAGS=-O3 LDFLAGS=-static -j$(($(nproc)+1))
+sudo cp .libs/libfts.a /opt/nnn-libs/
+make clean
+make CC=musl-gcc CFLAGS=-O3 -j$(($(nproc)+1))
+sudo cp .libs/libfts.so.0.0.0 /opt/nnn-libs/libfts.so
+</code></pre>
+<h4 id="get-pcre-and-compile-the-shared-and-static-binaries">Get pcre and compile the shared and static binaries</h4>
+<pre><code>wget https://downloads.sourceforge.net/pcre/pcre-8.45.tar.bz2
+./configure --enable-unicode-properties --enable-pcre16 --enable-pcre32
+make CFLAGS=-O3 CC=musl-gcc LDFLAGS=-static
+sudo cp .libs/libpcre.a /opt/nnn-libs
+make CFLAGS=-O3 CC=musl-gcc
+sudo cp .libs/libpcre.so.1.2.13 /opt/nnn-libs
+</code></pre>
+<h4 id="compile-nnn">Compile <code>nnn</code></h4>
+<pre><code># shared
+musl-gcc -O3 -DNORL -DNOMOUSE -std=c11 -Wall -Wextra -Wshadow -I/path_to/netbsd-curses/libcurses -I/path_to/musl-fts -o nnn src/nnn.c -Wl,-Bsymbolic-functions -lpthread -L/opt/nnn-libs -lcurses -lterminfo -lfts
+
+# shared custom
+musl-gcc -O3 -DNORL -DNOLC -DNOMOUSE -DNOBATCH -DNOFIFO -DTOURBIN_QSORT -DNOSSN -DNOUG -DNOX11 -std=c11 -Wall -Wextra -Wshadow -I/path_to/netbsd-curses/libcurses -I/path_to/musl-fts -o nnn src/nnn.c -Wl,-Bsymbolic-functions -lpthread -L/opt/nnn-libs -lcurses -lterminfo -lfts
+
+# Note 1: For static compilation append `-static` to the above commands
+# Note 2: To enable pcre, add `-I./pcre-8.45` and `-lpcre`
+
+# strip the binary
+strip nnn
+</code></pre>
+<h4 id="run">Run</h4>
+<pre><code># For shared lib
+export LD_LIBRARY_PATH=/opt/nnn-libs:$LD_LIBRARY_PATH
+
+# ./nnn
+</code></pre>
+<h2 id="cross-compile-for-android">Cross-compile for Android</h2>
+<p>This section applies to Linux as host, Android on arm64 target and an xterm-256color terminal.</p>
+<p>We are going to link statically against libreadline and libncursesw so we won't need to install them separately on the phone.</p>
+<p>For anything else, please adjust accordingly. </p>
+<h4 id="preparation">Preparation</h4>
+<ul>
+<li>Download <a href="https://www.gnu.org/software/ncurses/ncurses.html">ncurses</a></li>
+<li>Download <a href="https://tiswww.case.edu/php/chet/readline/rltop.html">readline</a></li>
+<li>Extract ncurses and readline</li>
+<li>Setup Android's <a href="https://developer.android.com/ndk/guides/other_build_systems">NDK</a> and make sure you <code>export</code> all the necessary variables for GNU Autoconf.</li>
+<li><code>export ANDROID_ENV</code> to be the location where we install our cross-compiled dependencies</li>
+</ul>
+<h4 id="cross-compile-ncurses">Cross-compile ncurses</h4>
+<ul>
+<li><code>cd</code> into ncurses' directory</li>
+<li>
+<p>configure</p>
+<p>./configure --enable-widec --enable-termcap --with-fallbacks=xterm-256color --disable-stripping --host=aarch64-linux-android --prefix=$ANDROID_ENV</p>
+</li>
+<li>
+<p>make and install</p>
+<p>make &amp;&amp; make install</p>
+</li>
+</ul>
+<h4 id="cross-compile-readline">Cross-compile readline</h4>
+<ul>
+<li><code>cd</code> into readline's directory</li>
+<li>
+<p>configure</p>
+<p>./configure --enable-multibyte --with-curses --disable-shared --host=aarch64-linux-android --prefix=$ANDROID_ENV
+- make and install</p>
+<p>make &amp;&amp; make install</p>
+</li>
+</ul>
+<h4 id="cross-compile-nnn">Cross-compile nnn</h4>
+<ul>
+<li><code>cd</code> into nnn's directory</li>
+<li><code>export CFLAGS="$CFLAGS -I$ANDROID_ENV/include/ncursesw -I$ANDROID_ENV/include"</code></li>
+<li><code>export LDFLAGS="$LDFLAGS -L$ANDROID_ENV/lib"</code></li>
+<li>run <code>make</code></li>
+</ul>
+<h4 id="validate">Validate</h4>
+<p><code>file nnn</code> should yield something like: </p>
+<pre><code>nnn: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, not stripped
+</code></pre>
+<h4 id="get-nnn-ing">Get nnn-ing</h4>
+<p>Move the binary to your phone and run with your favourite terminal emulator!</p>
+<h2 id="debugging-nnn">Debugging nnn</h2>
+<p>To debug <code>nnn</code> compile the program in debug mode:</p>
+<pre><code>make O_DEBUG=1
+</code></pre>
+<p>The run the generated binary:</p>
+<pre><code>./nnn
+</code></pre>
+<p>In debug mode <code>nnn</code> generates additional debug information which is logged in the file <code>nnndbg</code> located (by priority) at:</p>
+<pre><code>/tmp/nnndbg or,
+the directory in which nnn is run
+</code></pre>
+<p>To log extra information, use the <code>DPRINTF_*</code> functions.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

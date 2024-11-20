@@ -1,0 +1,9 @@
+site_name: 2024_11_02 nnn file Manager GitHub wiki
+docs_dir: /home/ruusu/Projektid/pakendamine/nnn_file_manager/originals/2024_11_02_wget_copy_of_nnn_wiki/wiiii/nnn_wiki_src_from_GitHub/ppapaaa/nnn.wiki
+
+# It is IMPERATIVE to leave this property to the end without anything after it.
+# This is because the build file will delete everything after this line and
+# replace it with newly generated data. 
+#nav:
+#- ['Home.md', 'index']
+

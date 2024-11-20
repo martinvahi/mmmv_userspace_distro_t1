@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Advanced use cases - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Basic-use-cases/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#file-icons" class="nav-link">File icons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#custom-keybinds" class="nav-link">Custom keybinds</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cli-only-opener" class="nav-link">CLI-only opener</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#desktop-integration" class="nav-link">Desktop integration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#launch-nnn-with-a-keyboard-shortcut" class="nav-link">Launch nnn with a keyboard shortcut</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cp-mv-progress" class="nav-link">cp mv progress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#control-active-dir" class="nav-link">Control active dir</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#termux-tips" class="nav-link">Termux tips</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#pager-as-opener" class="nav-link">Pager as opener</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#working-with-lftp" class="nav-link">Working with lftp</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="file-icons">File icons</h2>
+<p><code>nnn</code> supports multiple ways to show icons. They are turned off by default and are not provided in the default distribution to avoid shipping third party resources. Currently supported icon sets are:</p>
+<ul>
+<li>Unicode Emojis</li>
+<li><a href="https://www.nerdfonts.com/">Nerdfont</a> Icons</li>
+<li><a href="https://github.com/sebastiencs/icons-in-terminal">Icons-in-terminal</a></li>
+</ul>
+<p>Icons can be customized in <a href="https://github.com/jarun/nnn/blob/master/src/icons.h">icons.h</a>.</p>
+<p>You will need to recompile <code>nnn</code> rather than use the default release. Or you can grab one of the icon-enabled static binaries auto-generated at each release. Arch Linux users can check out the AUR packages <a href="https://aur.archlinux.org/packages/nnn-icons/">nnn-icons</a> and <a href="https://aur.archlinux.org/packages/nnn-nerd/">nnn-nerd</a>.</p>
+<p>Note that your <code>$TERM</code> must support 256 colors for the icons to show. The 8-color option <code>-C</code> also disables icons.</p>
+<h3 id="to-enable-unicode-emoji-icons">To enable Unicode Emoji icons</h3>
+<ul>
+<li>Use a font and terminal that supports unicode emojies.</li>
+<li>Clone the <code>nnn</code> repo</li>
+<li>Compile <code>nnn</code> with <code>make O_EMOJI=1</code></li>
+</ul>
+<h3 id="to-enable-nerdfont-icons">To enable Nerdfont icons</h3>
+<ul>
+<li><a href="https://www.nerdfonts.com/">Download and install</a> a patched Nerdfont (<code>v3.0.0</code> or later).</li>
+<li>Apply that font as your terminal emulator's font. This will vary from emulator to emulator, but usually involves editing a config file or changing a setting within a GUI menu system.</li>
+<li>Clone the <code>nnn</code> repo</li>
+<li>Compile <code>nnn</code> with <code>make O_NERD=1</code></li>
+</ul>
+<h3 id="to-enable-icons-in-terminal-icons">To enable icons-in-terminal icons</h3>
+<ul>
+<li><a href="https://github.com/sebastiencs/icons-in-terminal#installation">Install</a> icons-in-terminal</li>
+<li>Clone the <code>nnn</code> repo</li>
+<li>Compile <code>nnn</code> with <code>make O_ICONS=1</code></li>
+</ul>
+<h3 id="move-the-newly-compiled-nnn-to-where-your-programs-normally-go">Move the newly compiled nnn to where your programs normally go</h3>
+<p>Once compiled, you'll notice an <code>nnn</code> executable is now in your root. Copy this file to wherever such programs are normally stored. A good way to check is to do a <code>which nnn</code> on where the packaged release was installed. Simply replacing that file should be enough.</p>
+<h2 id="custom-keybinds">Custom keybinds</h2>
+<p>The keybinds are defined in the <code>bindings</code> structure in <code>nnn.h</code>. Users can modify these to set their preferred shortcuts. After modifying, <code>nnn</code> needs to be compiled (<a href="https://github.com/jarun/nnn/wiki/Usage#from-source">instructions</a>).</p>
+<p>While it's easy to compile because of few library dependencies, customizing shortcuts can be tricky because of the number of features. To make the process simpler, <code>nnn</code> has an option to detect key collisions. After changing the keys, compile <code>nnn</code> and run:</p>
+<pre><code>nnn -K
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>There's one alternative keybind with the CONTROL (<code>^</code>) modifier for many operations. Those are for users who prefer to run <code>nnn</code> in the <em>type-to-nav</em> mode.</li>
+</ul>
+<h3 id="colemak-keybinds">Colemak keybinds</h3>
+<p>To use colemak based keybinds, build <code>nnn</code> with <code>O_COLEMAK=1</code>. There are also other variant of colemak patches which are not maintained by the <code>nnn</code> devs:</p>
+<ul>
+<li><a href="https://codeberg.org/tiosgz/nnn/src/branch/colemak-single">tiosgz-colemak</a></li>
+<li><a href="https://github.com/jarun/nnn/blob/afe84862ffa47a8be58b704980f1d161af086d0e/patches/colemak-dh/mainline.diff">colemak-dh</a></li>
+</ul>
+<h2 id="cli-only-opener">CLI-only opener</h2>
+<p>If you have a custom opener (like <a href="https://github.com/jarun/nnn/blob/master/plugins/nuke"><code>nuke</code></a>) that invokes only CLI utilities, you can indicate the same to <code>nnn</code>:</p>
+<pre><code>export NNN_OPENER=/absolute/path/to/nuke
+# Otherwise, if nuke is in $PATH
+# export NNN_OPENER=nuke
+nnn -c
+</code></pre>
+<h2 id="desktop-integration">Desktop integration</h2>
+<p>To make <code>nnn</code> available in a XDG compatible desktop environment like GNOME, KDE, XFCE, etc. a <a href="https://github.com/jarun/nnn/tree/master/misc/desktop/nnn.desktop"><code>nnn.desktop</code></a> file is provided. To install it, run:</p>
+<pre><code class="language-sh">make install-desktop
+</code></pre>
+<p>Or copy <a href="https://github.com/jarun/nnn/tree/master/misc/desktop/nnn.desktop"><code>nnn.desktop</code></a> to <code>~/.local/share/applications/</code>.</p>
+<p>This will show a <code>nnn</code> entry in your desktop's application menu, search, in graphical applications' <em>Open with</em> menu, etc.</p>
+<p>Note that when started from a display manager (GDM, ...) the desktop environment might start <code>nnn</code> in a terminal without calling any login shell. So if <code>NNN_*</code> variables are exported in e.g. <code>.bashrc</code>, <code>.zshrc</code>, <code>.bash_profile</code>, and not in <code>.profile</code> or <code>.xprofile</code> it might never be sourced, and thus never be available to <code>nnn</code>.</p>
+<h3 id="keep-your-variable-exports-in-bashrc">Keep your variable exports in <code>.bashrc</code></h3>
+<p>If you want to keep your variable exports in <code>.bashrc</code> and your display manager never sources it, you can change the <code>Exec=</code> line in <code>nnn.desktop</code> like so:</p>
+<pre><code class="language-desktop">Exec=bash -lc &quot;nnn %f&quot;
+</code></pre>
+<h3 id="use-a-wrapper-script-to-export-variables">Use a wrapper script to export variables</h3>
+<p>Or you can also call <code>nnn</code> in a wrapper script with necessary exports, example:</p>
+<pre><code class="language-sh">#!/bin/sh
+
+# If you use pywal, you need to restore the scheme here
+# (cat ~/.cache/wal/sequences &amp;)
+
+export NNN_BMS=&quot;D:$HOME/Downloads;v:$HOME/Videos&quot;
+export NNN_COLORS=&quot;5236&quot;
+alias nsel=&quot;cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | tr '\0' '\n'&quot;
+
+# To use a CLI opener, specify the `-c` option to `nnn`
+# export NNN_OPENER=&quot;${XDG_CONFIG_HOME:-$HOME/.config}/nnn/plugins/nuke&quot;
+
+# Unmask ^Q (if required, see `stty -a`) to Quit nnn
+stty start undef
+stty stop undef
+
+# Start nnn with your preferred options
+nnn &quot;$@&quot;
+</code></pre>
+<p>Call it, e.g., <code>nwrap</code>, make it executable with <code>chmod +x nwrap</code> and drop it in your <code>PATH</code>.</p>
+<h3 id="deeper-gnome-integration">Deeper GNOME integration</h3>
+<p>You can edit <code>nnn.desktop</code> to integrate more deeply with some GNOME features:</p>
+<pre><code class="language-desktop">[Desktop Entry]
+Name=NNN for gnome
+GenericName=NNN
+Comment=Supercute cli
+Keywords=shell;prompt;command;commandline;cmd;nnn;
+Exec=gnome-terminal --class &quot;NNN&quot; -- bash -ilc &quot;nnn %f&quot;
+Icon=org.gnome.Terminal
+Type=Application
+Categories=GNOME;GTK;System;TerminalEmulator;
+StartupNotify=true
+X-GNOME-SingleWindow=false
+OnlyShowIn=GNOME;Unity;
+StartupWMClass=NNN
+</code></pre>
+<p><code>--class "NNN"</code> is used to group all <code>nnn</code> instances together and <code>StartupWMClass=NNN</code> to tell launcher which windows should be associated with this icon.</p>
+<h3 id="browser-integration">Browser Integration</h3>
+<p>To use <code>nnn</code> as the file picker dialog for your browser follow the instructions for your browser of choice.</p>
+<h4 id="chromium">Chromium</h4>
+<p>Create a script <code>kdialog</code> in your <code>PATH</code> along the lines of:</p>
+<pre><code class="language-sh">#!/bin/sh
+while :; do case $1 in
+    --getsavefilename) file=&quot;$2&quot; break ;;
+    --version) printf &quot;&quot;; exit ;;
+    --*) shift ;;
+    *) break ;;
+esac done
+
+file=&quot;${file##/*/}&quot;
+
+st -c picker sh -c &quot;nnn -J -p - '$file' | awk '{ print system(\&quot;[ -d '\''\&quot;\$0\&quot;'\'' ]\&quot;) ? \$0 : \$0\&quot;/$file\&quot; }' &gt; /proc/$$/fd/1&quot;
+</code></pre>
+<p>This example sets the class for <code>st</code> to <code>picker</code> and <code>nnn</code> uses a named session <code>picker</code>. This allows you to for example have the picker window float by default in your window manager and <code>nnn</code> remembers where your previous "Save as..." target was. The <code>-J</code> option makes sure that the saved session saves the cursor position on the selected file/directory. Replace with your preferred terminal and <code>nnn</code> options if applicable.</p>
+<p>Then create a browser wrapper that launches your browser with <code>XDG_CURRENT_DESKTOP=KDE</code>:</p>
+<pre><code class="language-sh">#!/bin/sh
+XDG_CURRENT_DESKTOP=KDE &lt;browser binary&gt; &quot;$@&quot;
+</code></pre>
+<p>This will cause chromium to look for <code>kdialog</code> to open files, make sure the <code>kdialog</code> script comes in your <code>PATH</code> before the <code>kdialog</code> package binary if you have this installed.</p>
+<p>Chromium will now open <code>nnn</code> in picker mode for "Save as/Upload file" operations, allowing you to:
+* Select a directory(<kbd>Space</kbd>) and quit(<kbd>q</kbd>) to save the file with its given name in the target directory.
+* Create a new file(<kbd>n</kbd>) and select it(<kbd>Enter</kbd>) to save the file with a different name.</p>
+<p>To restore <code>xdg-open</code> functionality inside chromium, you will need a <code>xdg-open</code> wrapper that restores <code>XDG_CURRENT_DESKTOP</code> to the correct value for your environment:</p>
+<pre><code class="language-sh">#!/bin/sh
+XDG_CURRENT_DESKTOP='' /usr/bin/xdg-open &quot;$@&quot;
+</code></pre>
+<h4 id="firefox">Firefox</h4>
+<p>Install <a href="https://github.com/GermainZ/xdg-desktop-portal-termfilechooser">xdg-desktop-portal-termfilechooser</a> and create its config file in <code>$XDG_CONFIG_HOME/xdg-desktop-portal-termfilechooser/config</code>:</p>
+<pre><code class="language-ini">[filechooser]
+cmd=/home/&lt;user&gt;/.local/bin/ffnnn
+</code></pre>
+<p>Create the specified wrapper script <code>ffnnn</code> (name and location does not matter) in your <code>PATH</code> along the lines of:</p>
+<pre><code class="language-sh">#!/bin/sh
+save=&quot;$3&quot;
+suggest=&quot;$4&quot;
+out=&quot;$5&quot;
+file=&quot;${suggest##/*/}&quot;
+
+if [ &quot;$save&quot; = 1 ]; then
+    touch &quot;$suggest&quot;
+fi
+
+st -c picker sh -c &quot;nnn -p - '$suggest' | awk '{ print system(\&quot;[ -d '\''\&quot;\$0\&quot;'\'' ]\&quot;) ? \$0 : \$0\&quot;/$file\&quot; }' &gt; '$out'&quot;
+
+if [ &quot;$save&quot; = 1 ]; then
+    if [ ! -s &quot;$out&quot; ] || [ ! -s &quot;$suggest&quot; ]; then
+        rm &quot;$suggest&quot; 
+    fi
+fi
+</code></pre>
+<p>Then make sure <code>widget.use-xdg-desktop-portal.file-picker == 1</code> in <code>about:config</code> and firefox  should use <code>nnn</code> as file picker dialog.</p>
+<h2 id="launch-nnn-with-a-keyboard-shortcut">Launch <code>nnn</code> with a keyboard shortcut</h2>
+<h3 id="on-a-desktop-environment-kde-gnome-xfce">On a Desktop Environment (KDE, GNOME, XFCE)</h3>
+<h4 id="xdg-application-method">XDG application method</h4>
+<p>If your DE supports setting keybindings to applications, just install <code>nnn.desktop</code>, as explained <a href="#desktop-integration">above</a>. Then set a keybind from you DE's settings.</p>
+<h4 id="wrapper-script-method">Wrapper script method</h4>
+<p>You might want to create a wrapper script to launch <code>nnn</code> in a terminal, example with <code>xfce4-terminal</code>:</p>
+<pre><code class="language-sh">#!/bin/sh
+
+xfce4-terminal -e &quot;nnn \&quot;$*\&quot;&quot;
+</code></pre>
+<p>Name it, e.g. , <code>nnnfm</code>, make it executable, and drop it in your <code>PATH</code>.</p>
+<p>You can now <strong><em>set a keybind to launch</em></strong> <code>nnnfm</code> from your DE settings.</p>
+<h5 id="set-as-default-file-manager-in-xfce">Set as default file manager in XFCE</h5>
+<p>Now go to the preferred applications menu from Settings (or run <code>exo-preferred-applications -c</code>) and select <code>nnnfm</code> as your default file manager.</p>
+<h3 id="on-a-bare-x-window-manager-i3wm-bspwm-awesomewm">On a bare X window manager (<code>i3wm</code>, <code>bspwm</code>, <code>awesomewm</code> ...)</h3>
+<p>On the keyboard shortcuts section of your WM config file, you need to add a shortcut to launch <code>nnn</code> in a terminal. Here's is an example for <code>sxhkd</code>, you need to change <code>xfce4-terminal</code> to the terminal you want to use:</p>
+<pre><code>## File Manager
+super + n
+       xfce4-terminal -e &quot;nwrap $*&quot;
+</code></pre>
+<h2 id="cp-mv-progress">cp mv progress</h2>
+<p>This section is Linux-specific. BSD and macOS users can press <kbd>^T</kbd> to check the progress.</p>
+<p><a href="https://github.com/jarun/advcpmv">advcpmv</a> is used to show cp and mv progress on Linux.</p>
+<p>To enable the feature, copy the avdcpmv-patched binaries in your PATH. Note that it's important to rename the binaries as <code>cpg</code> and <code>mvg</code>.</p>
+<pre><code>sudo cp src/cp /usr/local/bin/cpg
+sudo cp src/mv /usr/local/bin/mvg
+</code></pre>
+<p>Use the program option <code>-r</code> to show the progress of the operations.</p>
+<h2 id="control-active-dir">Control active dir</h2>
+<p>You can control <code>nnn</code>'s active directory from a plugin. Find the instructions <a href="https://github.com/jarun/nnn/tree/master/plugins#send-data-to-nnn">here</a>.</p>
+<h2 id="termux-tips">Termux tips</h2>
+<h4 id="general">General</h4>
+<p>It may be a good idea to let the default opener (<code>xdg-open</code>) handle non-text files. Set <code>$VISUAL</code>/<code>$EDITOR</code> to your preferred CLI editor and use the program option <code>-e</code>. The program option <code>-R</code> disables rollover at edges (useful on smaller form factors). Also see the mouse click options for simplified navigation and and usability with touch.</p>
+<h4 id="enable-file-icons">Enable file icons</h4>
+<ul>
+<li>Follow the <a href="https://github.com/jarun/nnn/wiki/Advanced-use-cases#file-icons">instructions for desktop</a></li>
+<li>Copy the file <code>~/.local/share/icons-in-terminal/icons-in-terminal.ttf</code> to Termux environment <code>~/.termux/font.ttf</code></li>
+<li>Run <code>termux-reload-settings</code> (or use the <a href="https://play.google.com/store/apps/details?id=com.termux.styling">Termux:Styling</a> app which is a GUI for that functionality)</li>
+</ul>
+<h4 id="copy-to-clipboard">Copy to clipboard</h4>
+<ul>
+<li>Install the <a href="https://play.google.com/store/apps/details?id=com.termux.api">Termux:API</a> app from Google Play</li>
+<li>On Android 7 you have to "protect" Termux:API by going into the settings / protected apps menu otherwise calls to the API like termux-battery-status will hang forever</li>
+<li>
+<p>Install the <code>termux-api</code> package</p>
+<p>pkg in termux-api
+- Edit (for Termux) and save the <a href="https://github.com/jarun/nnn/blob/master/misc/clipboard-copier/copier">copier script</a>.
+- Make the script executable:</p>
+<p>chmod +x /path/to/copier
+- export <code>NNN_COPIER</code>:</p>
+<p>export NNN_COPIER="/path/to/copier"</p>
+</li>
+</ul>
+<h4 id="access-internal-and-external-storage">Access internal and external storage</h4>
+<p>Official <a href="https://wiki.termux.com/wiki/Internal_and_external_storage">instructions</a>.</p>
+<h2 id="pager-as-opener">Pager as opener</h2>
+<p><strong>Disclaimer: This is severe abuse of your pager, but it makes your life richer.</strong></p>
+<p>It would be convenient to have your pager choose how to view non-text files.</p>
+<p>You could make your own customized pager handler or you could start by downloading: </p>
+<p><code>$ curl -OL https://github.com/0xACE/lesspipe/raw/personal/lesspipe.sh</code></p>
+<p>or <code>git clone https://github.com/0xACE/lesspipe</code> and then make sure you switch to the <code>personal</code> branch where some updates has been made.</p>
+<p>and then have the file on some path, say:</p>
+<p><code>~/git/lesspipe/lesspipe.sh</code></p>
+<p>And then add:</p>
+<pre><code>export PAGER=less
+[ -r "$HOME/git/lesspipe/lesspipe.sh" ] &amp;&amp; export LESSOPEN="| $HOME/git/lesspipe/lesspipe.sh %s"
+export LESS='-Ri '
+</code></pre>
+<p>To your <code>~/.bashrc</code> or your shell rc.</p>
+<p>This will now allow you to view files in <code>nnn</code> by hitting the <code>Open in PAGER</code> key <code>p</code>. This will then open your file piped through <code>lesspipe.sh</code> which has piped the file to other interpreters.</p>
+<p>Note that you might want to install the following packages:</p>
+<pre><code>antiword - support for word file
+cabextract - support for cab files
+cdrkit (cdrtools) - support for iso files
+fastjar - support for jar files
+html2text (python-html2text, python2-html2text) - support for html files
+mediainfo - support for some metadata for media files
+viu - support for some image file
+imagemagick - support for some image file
+p7zip - support for 7za files
+perl 
+rpmextract - support for rpm files
+unrar - support for rar files
+unrtf - support for rtf file
+unzip - support for zip files
+source-highlight - support syntax highlighting
+</code></pre>
+<p>In the future that <code>lesspipe.sh</code> link might change to using <code>atool</code> rather than these separate archive handlers.</p>
+<h2 id="working-with-lftp">Working with lftp</h2>
+<p>Broadly speaking, any terminal utility can be integrated with <code>nnn</code> easily. For remote file transfers, <code>lftp</code> is the preferred tool. Let's discuss how the workflow can be simplified with <code>nnn</code>'s capabilities and <code>lftp</code> combined together.</p>
+<h4 id="automation-using-an-lftp-script">Automation using an lftp script</h4>
+<p>Use the <code>open with</code> key and type <code>lftp -f</code> to connect and transfer files to/from a remote system using a lftp script file. Note that you need to press <kbd>c</kbd> at the <code>press 'c' for cli mode</code> prompt.</p>
+<p>Sample file:</p>
+<pre><code># lftp script_file to transfer files to/from a server
+# server has sshd service running and support scp
+
+# open connection
+open -u user,password -p port sftp://server_ip_address
+
+# list files on server
+ls
+
+# create a directory
+mkdir uploads
+
+# upload some files to the directory uploads
+put -O uploads file1 file2
+
+# download some files to the current directory
+pget -O downloads file3 file4
+</code></pre>
+<h4 id="connect-to-server-and-and-copy-selection-manually">Connect to server and and copy selection manually</h4>
+<p>We will use a generic lftp setup example using lftp aliases which you can follow to connect to a SSH server and transfer your <code>nnn</code> selection to it.</p>
+<ol>
+<li>
+<p>Create an alias for this server in <code>~/.lftprc</code>:</p>
+<p>alias mob open -u username,password sftp://server_ip_address:port</p>
+</li>
+<li>
+<p>Create aliases in <code>~/.lftprc</code> to transfer files:</p>
+<p># get nnn selection and write the <code>put</code> command in a file
+   alias lst "!cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | xargs -0 -I fname echo "put" \'fname\' &gt; files.lftp"</p>
+<p># upload the files to the directory uploads
+   alias mv "source files.lftp; !rm files.lftp"</p>
+</li>
+<li>
+<p>Use the <code>command prompt</code> key and type <code>lftp</code> to connect to this server.</p>
+</li>
+<li>
+<p>Use the aliases to get the selection list and transfer the files. Sample operation:</p>
+<p>lftp :~&gt; mob
+   lftp :~&gt; lst
+   lftp :~&gt; mv
+   lftp :~&gt; bye</p>
+</li>
+</ol>
+<h4 id="more-help-at-lftp-prompt">More help at lftp prompt</h4>
+<p>list of supported commands:</p>
+<pre><code>lftp :~&gt; ?
+</code></pre>
+<p>help on a particular command:</p>
+<pre><code>lftp :~&gt; help put
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Concepts - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Basic-use-cases/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Developer-guides/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#contexts" class="nav-link">Contexts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#sessions" class="nav-link">Sessions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#filters" class="nav-link">Filters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#type-to-nav" class="nav-link">Type-to-nav</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#selection" class="nav-link">Selection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#find-and-list" class="nav-link">Find and list</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#prompts" class="nav-link">Prompts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#design" class="nav-link">Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p align="center"><a href="https://asciinema.org/a/329162?loop=1&autoplay=1&size=medium"><img src="https://asciinema.org/a/329162.svg" alt="Asciicast" width="734"/></a></p>
+<p align="center"><i>Project dir in preview</i></p>
+
+<h2 id="contexts">Contexts</h2>
+<p>Open multiple locations with 4 contexts. The status is shown in the top left corner:</p>
+<ul>
+<li>the current context is in reverse video</li>
+<li>other active contexts are underlined</li>
+<li>rest are inactive</li>
+</ul>
+<p>Create and cycle contexts using <kbd>Tab</kbd> or <kbd>Shift+Tab</kbd>. A new context copies the state of the previous context.</p>
+<p>Use <strong>context-specific colors</strong> (see configuration <code>NNN_COLORS</code>) to identify each context easily.</p>
+<h3 id="dual-pane">Dual pane</h3>
+<p align="center"><img src="https://i.imgur.com/MPWpmos.png" /></p>
+
+<p>The <code>nnn</code> way is to work with multiple contexts using <kbd>Tab</kbd> or <kbd>Shift+Tab</kbd>.</p>
+<p>Other solutions:
+- terminal  multiplexers (tmux, GNU Screen, <a href="https://github.com/martanne/dvtm">dvtm</a>, <a href="http://slouken.libsdl.org/projects/splitvt/">SplitVT</a>)
+- terminal emulators with split support (Terminator, Tilix)</p>
+<p>For example, to open 2 instances in <code>dvtm</code>, run:</p>
+<pre><code class="language-sh">dvtm n n
+</code></pre>
+<p>You can also have an alias:</p>
+<pre><code class="language-sh">alias 2=&quot;dvtm n n&quot;
+</code></pre>
+<p>or a Bash function (with <kbd>^\</kbd> as dvtm modifier) to handle arguments:</p>
+<pre><code class="language-sh">2 ()
+{
+    dvtm -m '^\' &quot;nnn -nr $@&quot; &quot;nnn -nr $@&quot;
+}
+</code></pre>
+<h2 id="sessions">Sessions</h2>
+<p>Sessions are a way to save and restore states of work. A session stores the settings and contexts. Sessions can be loaded at runtime or with a <a href="https://github.com/jarun/nnn/wiki/Usage#program-options">program option</a>.</p>
+<p>Notes:</p>
+<ol>
+<li>When a session is loaded at runtime, the last working state is saved automatically to a dedicated -- "auto session" -- session file. Session option <em>restore</em> would restore the "auto session".</li>
+<li>The persistent session option is global. If it is used, the last active session will be updated with the final state at program quit.</li>
+<li>The "auto session" is used in persistent session mode if no session is active.</li>
+<li>Listing input stream and opening a bookmark by key have higher priority to session options (<code>-s</code>/<code>-S</code>).</li>
+</ol>
+<p>All the session files are located by session name in the directory</p>
+<pre><code>${XDG_CONFIG_HOME:-$HOME/.config}/nnn/sessions
+</code></pre>
+<p>"@" is the "auto session" file.</p>
+<h2 id="filters">Filters</h2>
+<p>Filters are strings (or regex patterns) to find matching entries in the current directory instantly (<em>search-as-you-type</em>). Matches are case-insensitive by default. The last filter in each context is persisted at runtime or in saved sessions.</p>
+<p>When there's a unique match and it's a directory, <code>nnn</code> auto-enters the directory. Program option <code>-A</code> disables this.</p>
+<h4 id="special-keys-at-filter-prompt">Special keys at filter prompt</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Key</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><kbd>^char</kbd></td>
+<td>Usual keybind functionality</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>Esc</kbd></td>
+<td>Exit filter prompt but skip dir refresh</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>Alt+Esc</kbd></td>
+<td>Unfilter, quit context</td>
+</tr>
+</tbody>
+</table>
+<p>Special keys at <strong><em>empty filter prompt</em></strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Key</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><kbd>?</kbd></td>
+<td>Show help and config screen</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>/</kbd></td>
+<td>Toggle between string and regex</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>:</kbd></td>
+<td>Toggle case-sensitivity</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>^L</kbd></td>
+<td>Clear filter (<em>if prompt is non-empty</em>)<br>OR apply last filter</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>Bksp</kbd></td>
+<td>Stay at filter prompt and refresh dir</td>
+</tr>
+<tr>
+<td style="text-align: center;"><kbd>Del</kbd></td>
+<td>Stay at filter prompt and refresh dir</td>
+</tr>
+</tbody>
+</table>
+<h4 id="common-regex-use-cases">Common regex use cases</h4>
+<ul>
+<li>to list all matches starting with the filter expression, start with a <code>^</code> (caret)</li>
+<li>type <code>\.mkv</code> to list all MKV files</li>
+<li>use <code>.*</code> to match any character (<em>sort of</em> fuzzy search)</li>
+<li>exclude filenames having <code>nnn</code> (<a href="https://github.com/jarun/nnn/wiki/Developer-guides#compile-with-pcre">with PCRE</a>): <code>^(?!nnn)</code></li>
+</ul>
+<h4 id="limitation">Limitation</h4>
+<p>Use regex for case-sensitive filtering with wide chars as the function <a href="https://manpages.ubuntu.com/manpages/bionic/en/man3/strcasestr.3.html"><code>strcasestr</code></a> (used for string filters) does not work with multibyte locales (<a href="https://www.gnu.org/software/libunistring/manual/libunistring.html#char-_002a-strings">ref1</a>, <a href="https://www.gnu.org/software/gnulib/manual/html_node/c_002dstrcasestr.html">ref2</a>).</p>
+<h2 id="type-to-nav">Type-to-nav</h2>
+<p>In this mode directories are opened in filter mode, allowing continuous navigation.</p>
+<p>To start in <em>type-to-nav</em> mode, use the program option <code>-n</code> or press <kbd>^N</kbd>.</p>
+<p>Additional special keys at <strong><em>empty filter prompt</em></strong> in <strong><em>type-to-nav</em></strong> mode:</p>
+<table>
+<tr><th>Listing 1</th><th>Listing 2</th></tr>
+<tr><td>
+
+| Key | Function |
+|:---:| --- |
+| <kbd>'</kbd> | Go to first file/match |
+| <kbd>+</kbd> | Toggle file selection |
+| <kbd>,</kbd> | Mark CWD |
+| <kbd>-</kbd> | Go to last visited dir |
+| <kbd>.</kbd> | Show hidden files |
+| <kbd>;</kbd> | Run a plugin by its key |
+
+</td><td>
+
+| Key | Function |
+|:---:| --- |
+| <kbd>=</kbd> | Launch a GUI application |
+| <kbd>></kbd> | Export file list |
+| <kbd>@</kbd> | Visit start dir |
+| <kbd>]</kbd> | Show command prompt |
+| <kbd>`</kbd> | Visit / |
+| <kbd>~</kbd> | Go HOME |
+
+</td></tr> </table>
+
+<h2 id="selection">Selection</h2>
+<p><code>nnn</code> allows file selection across directories and contexts!</p>
+<p>There are 3 groups of <a href="https://github.com/jarun/nnn/wiki/Usage#keyboard-mouse">keybinds</a> to add files to selection:</p>
+<ol>
+<li>hovered file selection toggle<ul>
+<li>deselects if <code>+</code> is visible before the entry, else adds to selection</li>
+</ul>
+</li>
+<li>add a range of files to selection<ul>
+<li>repeat the range key on the same entry twice to clear selection completely</li>
+</ul>
+</li>
+<li>add all files in the current directory to selection</li>
+</ol>
+<p>A selection can be edited, copied, moved, removed, archived or linked. Example workflow to copy or move some files:</p>
+<ul>
+<li>add files from source dirs (you can select files from multiple dirs in <code>nnn</code>) to selection</li>
+<li>navigate to a target directory</li>
+<li>use <kbd>^P</kbd> (cp) or <kbd>^V</kbd> (mv) to copy or move the selected files</li>
+</ul>
+<p>Absolute paths of the selected files are copied to <code>.selection</code> file in the config directory. The selection file is shared between multiple program instances. Selection from multiple instances are not merged. The last instance writing to the file overwrites earlier contents. If you have 2 instances of <code>nnn</code> <em>open</em> in 2 panes of a terminal multiplexer, you can select in one pane and use the selection in the other pane. The selection gets cleared in the <code>nnn</code> instance where the selection was made on mv/rm (but not on cp).</p>
+<p><code>nnn</code> clears the selection after a successful operation with the selection. Plugins are allowed to define the behaviour individually.</p>
+<h4 id="editing-selection">Editing selection</h4>
+<p>To edit the selection use the <em>edit selection</em> key. Editing doesn't end the selection mode. You can add more files to the selection and edit the list again. If no file is selected in the current session, this option attempts to list the selection file.</p>
+<h4 id="file-paths-in-selection-to-system-clipboard">File paths in selection to system clipboard</h4>
+<p>Use the program option <code>-x</code> to copy selection to the system clipboard. You must have plugins installed.</p>
+<h4 id="grab-file-paths-in-selection-manually">Grab file paths in selection manually</h4>
+<p>Many plugins use this method. The file paths are <code>NUL</code>-terminated, so additional processing is required to make them usable.</p>
+<p>To run <code>ls -l</code> on the file paths in selection:</p>
+<pre><code class="language-sh">xargs -0 ls -l &lt; &quot;${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection&quot;
+</code></pre>
+<p>An special variable may be handy:</p>
+<pre><code class="language-sh">export sel=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection
+</code></pre>
+<p>so you can easily handle files together (<strong>even at the <code>nnn</code> command prompt!</strong>):</p>
+<pre><code class="language-sh">xargs -0 ls -l &lt; $sel
+</code></pre>
+<h2 id="find-and-list">Find and list</h2>
+<p>There are two ways to search and list:</p>
+<ul>
+<li>feed a list of file paths as input</li>
+<li>search using a plugin (e.g. <code>finder</code>) and list the results</li>
+</ul>
+<p>File paths must be NUL-separated ('\0'). Paths can be relative to the current directory or absolute. Invalid paths in the input are ignored. Input processing limit is 16,384 paths or 64 MiB (max_paths x max_path_len) of data.</p>
+<p>To list the input stream, start <code>nnn</code> by writing to its standard input. E.g., to list files in current directory larger than 1M:</p>
+<pre><code class="language-sh">find -maxdepth 1 -size +1M -print0 | nnn
+# fd -d 2 -S +1M -0 | nnn
+</code></pre>
+<p>or redirect a list from a file:</p>
+<pre><code class="language-sh">nnn &lt; files.txt
+</code></pre>
+<p>Handy bash/zsh shell function to list files by mime-type in current directory:</p>
+<pre><code class="language-sh"># to show video files, run: list video
+
+list ()                                                                                                    
+{
+    find . -maxdepth 1 | file -if- | grep &quot;$1&quot; | awk -F: '{printf &quot;%s\0&quot;, $1}' | nnn
+    # fd -d 1 | file -if- | grep &quot;$1&quot; | awk -F: '{printf &quot;%s\0&quot;, $1}' | nnn
+}
+</code></pre>
+<p>A temporary directory will be created containing symlinks to the given paths. Any action performed on these symlinks will be performed <em>only</em> on their targets, after which they might become invalid.</p>
+<p><kbd>Right</kbd> or <kbd>l</kbd> on a symlink inside the listing dir takes to the target file. Press <kbd>-</kbd> to return to the listing dir. Press <kbd>Enter</kbd> to open the symlink.</p>
+<p>Listing input stream can be scripted. It can be extended to pick (option <code>-p</code>) selected entries from the listed results.</p>
+<h2 id="prompts">Prompts</h2>
+<p>The prompts (except the filter prompt) support readline-like command-line shortcuts. <kbd>Enter</kbd> or <kbd>^D</kbd> at the empty prompt (except the filter prompt) exits the prompt.</p>
+<p>Key <kbd>^L</kbd> clears and <kbd>Esc</kbd> exits all prompts.</p>
+<h4 id="native-command-prompt">Native command prompt</h4>
+<p>The handy REPL command prompt (shows on <kbd>]</kbd>) understands environment variables (like <code>$PWD</code>). Refer to your shell's documentation (e.g. <code>BASH_ENV</code> for bash, <code>~/.zshenv</code> for zsh) to use aliases and functions. To fuzzy-select commands from your shell history at the command prompt and issue them after editing (like <a href="http://manpages.ubuntu.com/manpages/bionic/man1/fc.1posix.html">fc</a>), copy the plugin <code>fzhist</code> (as <code>h</code> maybe?) in your <code>$PATH</code>.</p>
+<p>The native command prompt remembers the last 16 commands executed in the current session. To access and use the shell's history add a shell function similar to:</p>
+<pre><code class="language-sh">h ()
+{
+    fzf &lt;~/shell-specific_history_file | tr -d '\n' | xsel -bi 
+}
+</code></pre>
+<p>Paste the selected command at the prompt using <kbd>Ctrl-Shift-V</kbd>, optionally edit and run.</p>
+<p>All binary questions are confirmed by <kbd>y</kbd> or <kbd>Y</kbd>.</p>
+<h4 id="special-variables">Special variables</h4>
+<p>The following special variables can be accessed from the command prompt or a spawned shell:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Variable</th>
+<th>Substitution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>$nnn</code></td>
+<td>Hovered file <em>name</em> in current context</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>$dN</code></td>
+<td>Path open in context N [N=1/2/3/4]</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>$fN</code></td>
+<td>File path hovered in context N [N=1/2/3/4]</td>
+</tr>
+</tbody>
+</table>
+<p>E.g. to copy the hovered file in context 1 to the directory open in context 3, run <code>cp "$f1" "$d3"</code>.</p>
+<p>Selection can be accessed from the native command prompt:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Variable</th>
+<th>Substitution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>%j</code></td>
+<td>repeat cmd with all <code>%j</code> substituted by each selected file path</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>%J</code></td>
+<td>run the command only once with <code>%J</code> as the <em>last characters</em> substituted by all selected file paths</td>
+</tr>
+</tbody>
+</table>
+<p>E.g.</p>
+<p>Look up a string in each file in selection:</p>
+<pre><code class="language-sh">printf &quot;Searching for string in %s\n&quot; &quot;%j&quot;; grep &quot;string&quot; &quot;%j&quot;
+</code></pre>
+<p>Archive all files in selection:</p>
+<pre><code class="language-sh">tar uvf archive.tar %J
+</code></pre>
+<p>Notes:</p>
+<ol>
+<li>You can only use either <code>%j</code> or <code>%J</code> inside a single command. If both are encountered the prompt will close. No command will be executed.</li>
+<li>When using <code>%J</code> <code>nnn</code> will automatically escape special characters. Any <code>%J</code> not at the end of the command will be left unsubstituted.</li>
+</ol>
+<h4 id="copy-command-from-spawned-shell-to-native-command-prompt">Copy command from spawned shell to native command prompt</h4>
+<p>The prompt (non-readline <code>nnn</code>-internal one) can remember the last executed command. Sometimes it may be desirable copy a command from shell history to the prompt. Keybinds can be configured to copy a command from bash/zsh prompt to the system clipboard. You can use these at the subshell prompt and paste the command at the prompt with <kbd>Ctrl-Shift-V</kbd>.</p>
+<pre><code class="language-bash"># bash: add in ~/.bashrc
+# copy current line to clipboard with ^]
+
+if [[ -n $DISPLAY ]]; then
+    copy_line_to_x_clipboard () {
+        printf %s &quot;$READLINE_LINE&quot; | xsel -ib
+    }
+    bind -x '&quot;\C-]&quot;: copy_line_to_x_clipboard'
+fi
+</code></pre>
+<pre><code class="language-zsh"># zsh: add in ~/.zshrc
+# copy current line to clipboard with ^U
+
+if [[ -n $DISPLAY ]]; then                                                                                    
+    x-kill-whole-line () {                                                                                    
+      zle kill-whole-line                                                                                     
+      print -rn -- &quot;$CUTBUFFER&quot; | xsel -ib                                                                    
+    }                                                                                                         
+    zle -N x-kill-whole-line                                                                                  
+    bindkey '\C-u' x-kill-whole-line                                                                          
+fi 
+</code></pre>
+<h2 id="design">Design</h2>
+<p><code>nnn</code> (the core C utility) is, generally speaking, <em>feature-restricted</em>. It includes features which you <em>really</em> need so it can remain light enough to finish your workflow accurately before your train of thought is lost.</p>
+<p><code>nnn</code> supports <a href="https://github.com/jarun/nnn/tree/master/plugins">plugins</a> to extend its capabilities.</p>
+<p>Here's a list of the design principles driving the core <code>nnn</code> program:</p>
+<ol>
+<li><code>nnn</code> complements X, doesn't substitute it</li>
+<li>Brings the best of CLI to a GUI user</li>
+<li>Doesn't expect the user to abandon GUI (the GUI is well-established for a reason)</li>
+<li>Zero-config comfort-zone for GUI users <em>out of the box</em></li>
+<li>Quick and distraction-free workflows</li>
+<li>Clean and clutter-free single-window view focused on content</li>
+<li>Easily switch context/tabs with (Sh)TAB</li>
+<li>Only directories in color, no icons</li>
+<li>To search/group by extension, use filter or sort by extension option</li>
+<li>Support external or plugin-based previewers by writing the the hovered file path to a custom FIFO.</li>
+<li>One utility instead of multiple utilities for related tasks e.g.</li>
+<li>file management, batch rename, disk usage analysis, launching apps etc.</li>
+<li>No configuration file and few environment variables</li>
+<li>Stay portable - very limited library dependencies</li>
+<li>support compiling out features</li>
+<li>Use a standard desktop opener to handle file associations</li>
+<li>Analyze disk usage within the same filesystem, do not follow symbolic links</li>
+<li>Case-insensitive alphabetic content listing instead of all uppercase first</li>
+<li>Directories first in all modes (even in disk usage analyzer mode)</li>
+<li>No navigation restriction with relative paths (let permissions handle it)</li>
+<li>Directory updates are disabled in the following modes:<ul>
+<li>disk usage: re-scans are issued on every change in dir</li>
+<li>filter mode: content refresh is very disruptive in the workflow</li>
+</ul>
+</li>
+<li>Limited (4) number of contexts; for more, please refer to make option <a href="https://github.com/jarun/nnn/wiki/Developer-guides#compile-in-8-contexts"><code>O_CTX8</code></a><ul>
+<li>file paths copy-paste should work seamlessly between contexts and instances of <code>nnn</code></li>
+</ul>
+</li>
+<li>Scan each directory on visit (even in disk usage analyzer mode) rather than storing all the information from the first scan. This keeps the information up to date. To compensate, use fast re-scan with highly optimized algorithms.</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

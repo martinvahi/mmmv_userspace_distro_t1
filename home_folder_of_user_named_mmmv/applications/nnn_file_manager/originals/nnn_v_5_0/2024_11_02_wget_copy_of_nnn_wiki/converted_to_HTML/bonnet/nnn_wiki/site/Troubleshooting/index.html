@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Troubleshooting - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Live-previews/" class="nav-link">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Themes/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Usage/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#wrong-file-opener" class="nav-link">Wrong file opener</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#broken-file-names" class="nav-link">Broken file names</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#tmux-configuration" class="nav-link">Tmux configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#broken-control-key" class="nav-link">Broken control key</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#help-not-showing" class="nav-link">Help not showing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#default-batch-rename-limits" class="nav-link">Default batch rename limits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#misaligned-size-column" class="nav-link">Misaligned size column</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#cant-list-within-list" class="nav-link">Can't list within list</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#bsd-terminal-issue" class="nav-link">BSD terminal issue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#amethyst-wm" class="nav-link">Amethyst WM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#running-inside-docker-containers" class="nav-link">Running inside docker containers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#icons-not-working-properly" class="nav-link">Icons not working properly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#wrongbad-sorting-order-1652" class="nav-link">Wrong/Bad sorting order (#1652)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="wrong-file-opener">Wrong file opener</h2>
+<p>If your text files are opening in the browser, check out the program option <code>-e</code>.</p>
+<p>Use the following command to set default applications for mimetypes when using <code>xdg-open</code> as opener:</p>
+<pre><code>xdg-mime default application mimetype(s)
+e.g.
+xdg-mime default sxiv.desktop image/jpeg image/png
+</code></pre>
+<p>If your system uses <code>mimeopen</code>, you may have to install <code>perl-file-mimeinfo</code>.</p>
+<p>More on <a href="https://wiki.archlinux.org/title/default_applications">default applications and openers</a>.</p>
+<h2 id="broken-file-names">Broken file names</h2>
+<p>If unicode characters are not showing correctly, please check the following:</p>
+<ul>
+<li>Ensure locale support is not <a href="https://github.com/jarun/nnn/wiki/Developer-guides#compile-out-locale">compiled out</a></li>
+<li>Check locale settings (see https://github.com/jarun/nnn/issues/1145)</li>
+<li>Confirm the DE isn't blocking it (see https://github.com/jarun/nnn/issues/1139)</li>
+</ul>
+<h2 id="tmux-configuration">Tmux configuration</h2>
+<h4 id="keyboard">Keyboard</h4>
+<p><code>nnn</code> may not handle keypresses correctly when used with tmux (see issue #104 for more details). Set <code>TERM=xterm-256color</code> to address it.</p>
+<p>By default tmux advertises 8-color support. To show icons in tmux add the following to tmux configuration file:</p>
+<pre><code>set -g default-terminal "screen-256color"
+</code></pre>
+<p>If <a href="https://github.com/jarun/nnn/wiki/Developer-guides#compile-with-musl-libc">compiled with <code>netbsd-curses</code></a> set it to:</p>
+<pre><code>set -g default-terminal "xterm-256color"
+</code></pre>
+<p>If the <kbd>Esc</kbd> key isn't working as expected, add the following in <code>.tmux.conf</code>:</p>
+<pre><code>set -g escape-time 0
+</code></pre>
+<p>To start <code>nnn</code> within tmux use a shell function:</p>
+<pre><code class="language-sh">n ()
+{
+    if [ -n &quot;$TMUX&quot; ]; then
+        nnn -a $@
+    else
+        tmux -u new-session nnn -a $@
+    fi
+}
+</code></pre>
+<h4 id="new-windowpane-using-cwd">New window/pane using cwd</h4>
+<p><code>nnn</code> does not set the terminal's cwd while navigating. So the following may not work:</p>
+<pre><code>tmux new-window -c "#{pane_current_path}"
+</code></pre>
+<p>One possible workaround is to extract the path from the cwd command that <code>nnn</code> uses:</p>
+<pre><code>lsof -c nnn | grep cwd
+</code></pre>
+<p>To get the path on the last executed cwd command:</p>
+<pre><code>lsof -w -c nnn | grep cwd | tail -n 1 | awk '{print $9}'
+</code></pre>
+<p>A script example<code>tmux_split_curdir.sh</code>:</p>
+<pre><code class="language-sh">#!/usr/bin/env sh
+
+cwd=
+cc=$(tmux display -p '#{pane_current_command}')
+if [ $cc == &quot;nnn&quot; ] ; then
+   cwd=$(lsof -w -c nnn | grep cwd | tail -n 1 | awk '{print $9}')
+else
+   cwd=$(tmux display -p '#{pane_current_path}')
+fi
+
+tmux split-window -c &quot;$cwd&quot;
+</code></pre>
+<p>Adding this script to your <code>tmux</code> path allows it to be run with <code>run-shell</code>:</p>
+<pre><code>bind -n KEYS run-shell "tmux_split_curdir.sh"
+</code></pre>
+<h2 id="broken-control-key">Broken control key</h2>
+<p>If a Ctrl-key combination is not working, check if it's masked due to terminal line settings:</p>
+<pre><code>stty -a
+</code></pre>
+<p>If that's the case, clear (<code>undef</code>) the setting. E.g.:</p>
+<pre><code>stty start undef
+stty stop undef
+stty lwrap undef
+stty lnext undef
+</code></pre>
+<p>You can do this when starting <code>nnn</code>. See the <a href="https://github.com/jarun/nnn/tree/master/misc/quitcd">quitcd scripts</a>.</p>
+<h2 id="help-not-showing">Help not showing</h2>
+<p>If your PAGER is <code>less</code>, remove the option <code>-F</code> (automatically exit if the entire file can be displayed on the first screen). There are other screens which use <code>less</code> as well.</p>
+<p>Note that the <code>less</code> command takes its default parameters from the <code>$LESS</code> environment variable, so you may need to remove <code>-F</code> from your shell
+initialization.</p>
+<h2 id="default-batch-rename-limits">Default batch rename limits</h2>
+<p><strong>TL;DR:</strong> If you need a full-featured batch-renamer, install plugins. <code>nnn</code> auto-detects and invokes the internal plugin <code>.nmv</code> (a bash script) which is feature-complete.</p>
+<p>The in-built batch-renamer implemented in <code>nnn</code> is a very simplified one. It's single-pass - reads the name/path of files iteratively (from a list of source files) and renames/moves them (as specified in the corresponding line number in a list of renamed/destination files). It doesn't handle deletions or perform any pre-parsing to account for rename loops, swaps, replaces, etc.</p>
+<p>Note that the instance of the editor must wait for the editing to complete and the changes to be saved (e.g. use <code>-w</code> with VSCode).</p>
+<h2 id="misaligned-size-column">Misaligned size column</h2>
+<p>We have seen this issue with WSL and Putty where sometimes repeated space characters are not printed correctly.</p>
+<p>To fix this:</p>
+<pre><code>export TERM=rxvt-unicode
+// OR
+export TERM=rxvt-unicode-256color
+</code></pre>
+<p>Detailed <a href="https://stackoverflow.com/questions/46507473/ncurses-in-urxvt-does-not-print-repeating-characters">explanation</a>.</p>
+<h2 id="cant-list-within-list">Can't list within list</h2>
+<p>List view is a temporary view of symlinks. To avoid remembering the temporary paths to all listed views the current path is removed when the next list is loaded. This is also inline with the fact that <code>find</code> doesn't look within symlinks to directories. If you need to search the entries within a loaded list, visit the original directory and run the refined search.</p>
+<h2 id="bsd-terminal-issue">BSD terminal issue</h2>
+<p><strong>TL;DR:</strong> On releases previous to v2.7, use the keybind <kbd>K</kbd> to toggle selection if you are having issues with <kbd>^Y</kbd>.</p>
+<p>On OpenBSD &amp; FreeBSD (and probably on macOS as well) <code>stty</code> maps <kbd>^Y</kbd> to <code>DSUSP</code> by default. This means that typing <kbd>^Y</kbd> will suspend <code>nnn</code> as if you typed <kbd>^Z</kbd> (you can bring <code>nnn</code> back to the foreground by issuing <code>fg</code>) instead of entering multi-selection mode. You can check this with <code>stty -a</code>. If it includes the text <code>dsusp = ^Y</code>, issuing <code>stty dsusp undef</code> will disable this <code>DSUSP</code> and let <code>nnn</code> receive the <kbd>^Y</kbd> instead.</p>
+<h2 id="amethyst-wm">Amethyst WM</h2>
+<p>There's a known issue with Amethyst window manager on macOS - redraws do not work correctly and the screen breaks. See <a href="https://github.com/jarun/nnn/issues/521">issue #521</a> for more details.</p>
+<h2 id="running-inside-docker-containers">Running inside docker containers</h2>
+<p>When run inside docker container nnn exits instantly. The solution is to create the container with the flag <code>--init</code>.</p>
+<h2 id="icons-not-working-properly">Icons not working properly</h2>
+<p>Ensure that the primary font of your terminal is set to a suitable one (e.g when using <code>O_NERD</code>, primary font should be a nerd font).
+Also ensure that your system's locale is set up properly.</p>
+<p>When using <a href="https://st.suckless.org/">ST</a> some icons may appear truncated. A patch fixing this issue is available in a reddit thread <a href="https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st/">here</a>.</p>
+<h2 id="wrongbad-sorting-order-1652">Wrong/Bad sorting order (<a href="https://github.com/jarun/nnn/issues/1652">#1652</a>)</h2>
+<p><code>nnn</code> respects the environmental <code>LC_COLLATE</code> value - the effect of this depends on your <code>libc</code>. Try setting it to something standard/well-supported such as "C" or "C.UTF8" and see if that fixes the issue or not.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Live previews - 2024_11_02 nnn file Manager GitHub wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">2024_11_02 nnn file Manager GitHub wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Advanced-use-cases/" class="nav-link">Advanced use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Basic-use-cases/" class="nav-link">The nnn magic!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Concepts/" class="nav-link">Concepts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Developer-guides/" class="nav-link">Developer guides</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../From-noice-to-nnn/" class="nav-link">Why fork?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Live previews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Performance/" class="nav-link">Performance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Power-toys/" class="nav-link">Power toys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Themes/" class="nav-link">Nord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Footer/" class="nav-link"> Footer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../_Sidebar/" class="nav-link"> Sidebar</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Home/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Performance/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#live-previews" class="nav-link">Live previews</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#previewer-plugins" class="nav-link">Previewer plugins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#custom-script-configuration-example" class="nav-link">Custom script configuration example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p align="center"><a href="https://user-images.githubusercontent.com/1482942/83264997-6c35c280-a1b0-11ea-9f5f-5517f153c4f7.gif"><img src="https://user-images.githubusercontent.com/1482942/83264997-6c35c280-a1b0-11ea-9f5f-5517f153c4f7.gif" alt="Video preview" width="734"/></a></p>
+<p align="center"><i>Video preview with nnn</i></p>
+
+<h1 id="live-previews">Live previews</h1>
+<p>A live preview is a window that renders or shows information on the hovered entry. As the cursor moves, the live preview window will automatically update.</p>
+<p>There are two ways to enable live previews in <code>nnn</code>:
+1. using a previewer plugin,
+2. using a custom wrapper/previewer script.</p>
+<p>Both use the path in <code>NNN_FIFO</code> to get hover updates.</p>
+<h2 id="previewer-plugins">Previewer plugins</h2>
+<h3 id="set-up-nnn_fifo">Set up <code>NNN_FIFO</code></h3>
+<p>Depends on how many simultaneous <code>nnn</code> instances you need:</p>
+<ol>
+<li>Single instance: export a global FIFO path in, e.g., <code>.profile</code>:</li>
+</ol>
+<p><code>sh
+   export NNN_FIFO=/tmp/nnn.fifo</code>
+2. Multiple instances: use the option <code>-a</code> to create a new FIFO path for each instance.</p>
+<h3 id="plugin-usage">Plugin usage</h3>
+<p>Follow the instructions in the <a href="https://github.com/jarun/nnn/tree/master/plugins">plugin documentation</a> for installation and general plugin configuration.</p>
+<p>There are 2 previewer plugins for <code>nnn</code>, using various mechanisms to display the preview window:</p>
+<ul>
+<li><a href="https://github.com/jarun/nnn/blob/master/plugins/preview-tabbed">preview-tabbed</a>: the preview window is a <a href="https://tools.suckless.org/tabbed">tabbed</a> X window, files are viewed using Xembed capable programs (<a href="https://mpv.io">mpv</a> for audio/video, <a href="https://github.com/muennich/sxiv">sxiv</a> for images, <a href="https://pwmt.org/projects/zathura">zathura</a> for PDF, xterm/urxvt/st + <a href="https://github.com/jarun/nnn/blob/master/plugins/nuke">nuke</a> plugin text preview for other files)</li>
+<li><a href="https://github.com/jarun/nnn/blob/master/plugins/preview-tui">preview-tui</a>: the preview window is either a tmux pane, a new terminal window or a <a href="https://sw.kovidgoyal.net/kitty/">kitty</a> pane (needs kitty's <code>allow_remote_control</code> option turned on), and files are previewed using tools like tree, less, file, mediainfo, kitty's icat, <a href="https://github.com/seebye/ueberzug">ueberzug</a> etc. On WSL it will use <a href="https://github.com/QL-Win/QuickLook">QuickLook</a> to preview files. It can also use ranger's scope.sh or pistol. Feel free to submit a pull-request for any previewer you feel is missing.</li>
+</ul>
+<p>To run a previewer (or any plugin in general) when you start <code>nnn</code>, use the option <code>-P</code></p>
+<p>Notes:</p>
+<ol>
+<li><code>nnn</code> does not watch the hovered file and update the path if it's modified while under preview. Press <kbd>Esc</kbd> or click on the entry to update the preview without changing the hovered entry.</li>
+<li>To close the <code>preview-tui</code> preview windows run the plugin again or press <kbd>^C</kbd> on the preview window.</li>
+</ol>
+<h2 id="custom-script-configuration-example">Custom script configuration example</h2>
+<p>There are two aspects to creating a live preview:
+1. A preview command
+2. A setup command</p>
+<h3 id="preview-command-example">Preview command example</h3>
+<pre><code class="language-sh">#!/usr/bin/env sh
+# #############################################################################
+# File: preview_cmd.sh
+# Description: Minimal example to preview files and directories
+#              No external dependencies
+#              Can be easily extended
+#              Automatically exits when the NNN_FIFO closes
+#              Prints a `tree` if directory or `head` if it's a file
+#
+# Shell: POSIX compliant
+# Author: Todd Yamakawa
+#
+# ToDo:
+#   1. Add support for more types of files
+#         e.g. binary files, we shouldn't try to `head` those
+# #############################################################################
+
+# Check FIFO
+NNN_FIFO=${NNN_FIFO:-$1}
+if [ ! -r &quot;$NNN_FIFO&quot; ]; then
+    echo &quot;Unable to open \$NNN_FIFO='$NNN_FIFO'&quot; | less
+    exit 2
+fi
+
+# Read selection from $NNN_FIFO
+while read -r selection; do
+    clear
+    lines=$(($(tput lines)-1))
+    cols=$(tput cols)
+
+    # Print directory tree
+    if [ -d &quot;$selection&quot; ]; then
+        cd &quot;$selection&quot; || continue
+        tree | head -n $lines | cut -c 1-&quot;$cols&quot;
+        continue
+    fi
+
+    # Print file head
+    if [ -f &quot;$selection&quot; ]; then
+        head -n $lines &quot;$selection&quot; | cut -c 1-&quot;$cols&quot;
+        continue
+    fi
+
+    # Something went wrong
+    echo &quot;Unknown type: '$selection'&quot;
+done &lt; &quot;$NNN_FIFO&quot;
+</code></pre>
+<h3 id="setup-command-example">Setup command example</h3>
+<p>To create your own setup command, you need the following steps:
+1. Create a <code>NNN_FIFO</code>
+1. Run your preview command in the background
+1. Run <code>nnn</code>
+1. Delete your <code>NNN_FIFO</code></p>
+<p>Here is am example <code>bash</code>/<code>zsh</code> function. To use this example, you will need to set the preview command.
+For the preview window:
+- It uses <code>tmux</code> split if you're currently running in a <code>tmux</code> environment
+  - <code>tmux 3.0</code> is required for setting environment variables in a new pane
+- Otherwise it uses an <code>xterm</code> window</p>
+<pre><code class="language-shell">nnn-preview ()
+{
+    # Block nesting of nnn in subshells
+    if [ -n &quot;$NNNLVL&quot; ] &amp;&amp; [ &quot;${NNNLVL:-0}&quot; -ge 1 ]; then
+        echo &quot;nnn is already running&quot;
+        return
+    fi
+
+    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # If NNN_TMPFILE is set to a custom path, it must be exported for nnn to see.
+    # To cd on quit only on ^G, remove the &quot;export&quot; and set NNN_TMPFILE *exactly* as this:
+    #     NNN_TMPFILE=&quot;${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd&quot;
+    export NNN_TMPFILE=&quot;${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd&quot;
+
+    # This will create a fifo where all nnn selections will be written to
+    NNN_FIFO=&quot;$(mktemp --suffix=-nnn -u)&quot;
+    export NNN_FIFO
+    (umask 077; mkfifo &quot;$NNN_FIFO&quot;)
+
+    # Preview command
+    preview_cmd=&quot;/path/to/preview_cmd.sh&quot;
+
+    # Use `tmux` split as preview
+    if [ -e &quot;${TMUX%%,*}&quot; ]; then
+        tmux split-window -e &quot;NNN_FIFO=$NNN_FIFO&quot; -dh &quot;$preview_cmd&quot;
+
+    # Use `xterm` as a preview window
+    elif (which xterm &amp;&gt; /dev/null); then
+        xterm -e &quot;$preview_cmd&quot; &amp;
+
+    # Unable to find a program to use as a preview window
+    else
+        echo &quot;unable to open preview, please install tmux or xterm&quot;
+    fi
+
+    nnn &quot;$@&quot;
+
+    rm -f &quot;$NNN_FIFO&quot;
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
