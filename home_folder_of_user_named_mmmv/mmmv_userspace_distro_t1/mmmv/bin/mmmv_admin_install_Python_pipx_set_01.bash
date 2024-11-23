@@ -24,7 +24,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         echo -e "\e[31mThe code that calls this function is flawed.\e[39m"
         echo "This function requires 2 parameters: S_FP, S_GUID_CANDIDATE"
         echo "and has an optional 3. parameter: SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        echo "GUID=='71c6d85b-a968-4a3f-b44a-737030a138e7'"
+        echo "GUID=='cd381452-6f0a-4f55-81e2-f1204061b8e7'"
         echo ""
         #--------
         SB_VERIFICATION_FAILED="t"
@@ -44,7 +44,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo "Valid values are: \"t\", \"f\", \"\" ."
                     echo "\"\" defaults to \"t\"."
-                    echo "GUID=='b710cd36-170f-43ab-854a-737030a138e7'"
+                    echo "GUID=='744ee945-4777-479d-b5e2-f1204061b8e7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -65,7 +65,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo -e "points to a\e[31m broken symlink\e[39m, but a file or"
                     echo "a symlink to a file is expected."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='1350f9fb-67af-41a3-a14a-737030a138e7'"
+                    echo "GUID=='b55ba52b-3c97-470b-a4e2-f1204061b8e7'"
                     echo ""
                 fi
                 #--------
@@ -79,7 +79,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "\e[31mdoes not exist\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='42233353-87ea-4a0f-924a-737030a138e7'"
+                    echo "GUID=='222cca21-0a30-46b3-94e2-f1204061b8e7'"
                     echo ""
                 fi
                 #--------
@@ -99,7 +99,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "exists, but a\e[31m file or a symlink to a file is expected\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='f130647f-c144-44db-954a-737030a138e7'"
+                    echo "GUID=='93ca7c1d-2e84-4d87-81e2-f1204061b8e7'"
                     echo ""
                 fi
                 #--------
@@ -112,7 +112,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='f907e73e-35f7-4b5f-a34a-737030a138e7'"
+            echo "GUID=='14f1ee36-2c9c-4597-b5e2-f1204061b8e7'"
             echo ""
         fi
     fi
@@ -133,7 +133,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='55d24712-1ec7-4c48-854a-737030a138e7'"
+        echo "GUID=='1b830151-de34-4020-83e2-f1204061b8e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -148,7 +148,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='4ce1885d-52ec-4aab-854a-737030a138e7'"
+        echo "GUID=='3a415cd5-b87a-4b1a-94e2-f1204061b8e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -168,21 +168,33 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='53489b33-47fc-4c20-bf4a-737030a138e7'"
+        echo "GUID=='4707e416-2d31-4729-92e2-f1204061b8e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
     fi
 } # func_mmmv_exit_if_not_on_path_t2
 
-func_mmmv_exit_if_not_on_path_t2 "pip3"
+#func_mmmv_exit_if_not_on_path_t2 "pip3"
+func_mmmv_exit_if_not_on_path_t2 "pipx"
 
 #--------------------------------------------------------------------------
-S_CMD_NICE="nice -n 5 "
-S_FP_PIP3_BASH="$S_FP_DIR/mmmv_pip3_install"
-func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-    "$S_FP_PIP3_BASH" \
-    "3bdb835d-3b3d-4571-a24a-737030a138e7"
+
+func_install(){
+    #----------------------------------------------------------------------
+    local S_PACKETNAME="$1"
+    #----------------------------------------------------------------------
+    # local S_FP_PIP3_BASH="$S_FP_DIR/mmmv_pip3_install"
+    # func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
+    #     "$S_FP_PIP3_BASH" \
+    #     "059f2d0b-dd97-453d-9be2-f1204061b8e7"
+    #----------------------------------------------------------------------
+    local S_CMD_NICE="nice -n 15 "
+    S_CMD_NICE pipx install "$S_PACKETNAME"
+    func_mmmv_assert_error_code_zero_t1 "$?" \
+        "21d3ddd0-149e-4e16-85e2-f1204061b8e7"
+    #----------------------------------------------------------------------
+} # func_install
 
 #--------------------------------------------------------------------------
 # The autopep8 
@@ -191,9 +203,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
 # formats the code so that it conforms to the 
 # Python Style Guide "PEP 8"
 # https://peps.python.org/pep-0008/
-$S_CMD_NICE $S_FP_PIP3_BASH autopep8 
-func_mmmv_assert_error_code_zero_t1 "$?" \
-    "c48d3a5c-6acf-405c-934a-737030a138e7"
+func_install autopep8 
 
 # The trafilatura 
 #     https://github.com/adbar/trafilatura
@@ -210,23 +220,25 @@ func_mmmv_assert_error_code_zero_t1 "$?" \
 #     https://jqlang.github.io/jq/manual/#Basicfilters
 # is a C program that can probably be obtained from
 # a standard package collection.
-$S_CMD_NICE $S_FP_PIP3_BASH trafilatura
-func_mmmv_assert_error_code_zero_t1 "$?" \
-    "2c40ad1b-f5c1-467c-b24a-737030a138e7"
+func_install trafilatura
 
 #--------------------------------------------------------------------------
 # https://www.antlr.org/
 # https://github.com/antlr/
-$S_CMD_NICE $S_FP_PIP3_BASH antlr4-tools
-func_mmmv_assert_error_code_zero_t1 "$?" \
-    "62990842-7137-4883-814a-737030a138e7"
+func_install tools
 
 #--------------------------------------------------------------------------
 # https://www.jefftk.com/icdiff
-$S_CMD_NICE $S_FP_PIP3_BASH icdiff
-func_mmmv_assert_error_code_zero_t1 "$?" \
-    "edcb2640-dafe-4b20-b24a-737030a138e7"
+func_install icdiff
 
+#--------------------------------------------------------------------------
+# uv is a Python package manager that is implemented in Rust.
+# https://github.com/astral-sh/uv
+func_install uv
+# The following command may come handy:
+#
+#     uv self update
+#
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="7190f037-3e48-44fd-b54a-737030a138e7"
+# S_VERSION_OF_THIS_FILE="5a925dc1-0d38-4f69-91e2-f1204061b8e7"
 #==========================================================================

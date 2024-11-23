@@ -29,6 +29,12 @@ export DISPLAY=":0"
 # is needed to overcome the "Invalid MIT-MAGIC-COOKIE-1 keyError"
 # https://unix.stackexchange.com/questions/199891/invalid-mit-magic-cookie-1-key-when-trying-to-run-program-remotely
 # archival copy: https://archive.vn/mdVro
+# If the ":0" is a wrong value, then may be some modification of 
+# the following Linux specific line that uses the GNU sed might work.
+#export DISPLAY="`loginctl show-session -p Display -p Active \`loginctl list-sessions | grep \\\`whoami\\\` | grep c3 | gawk '{print \$1}'\` | grep Display | sed -e 's/^[^:]\\+=//g'`"
+# Origin of the above idea:
+#     https://unix.stackexchange.com/questions/203844/how-to-find-out-the-current-active-xserver-display-number
+#     archival copy: https://archive.ph/0Bpdr
 #--------------------------------------------------------------------------
 export MMMV_SB_DEBUG="t"  #  domain: {"",  "t", "f"} 
                           # default: "" -> "t"
@@ -111,7 +117,7 @@ if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -
                     echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
                     echo ""
                     echo "but its domain is: {\"\", \"t\", \"f\"}."
-                    echo "GUID=='2e1a98d4-c11f-49cb-ae30-73b1e0c028e7'"
+                    echo "GUID=='2e395971-cdb8-4561-a5da-61e2d031a8e7'"
                     echo ""
                 fi
             fi
