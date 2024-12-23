@@ -24,41 +24,41 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE . \e[39m"
-    echo "GUID=='5dae7825-82be-4859-91d0-13226071b8e7'"
+    echo "GUID=='169ee349-4017-44ed-bfe8-2163c051c8e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
 #==========================================================================
 func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
     "$SB_OPERATINGSYSTEM_LINUX" "SB_OPERATINGSYSTEM_LINUX" \
-    "4c4e57d4-988f-4380-92d0-13226071b8e7"
+    "47f7ab55-fba6-4362-95e8-2163c051c8e7"
 #------------------------------------------
 func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
     "$SB_OPERATINGSYSTEM_LINUX_WSL" "SB_OPERATINGSYSTEM_LINUX_WSL" \
-    "d0732414-73d4-4c33-a1d0-13226071b8e7"
+    "24e6dc38-da1e-4e86-b5e8-2163c051c8e7"
 #------------------------------------------
 func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
     "$SB_OPERATINGSYSTEM_LINUX_ANDROID" "SB_OPERATINGSYSTEM_LINUX_ANDROID" \
-    "c0c28911-2e5c-421b-83c0-13226071b8e7"
+    "5bde1564-f694-4db0-81e8-2163c051c8e7"
 #------------------------------------------
 func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
     "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" "SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" \
-    "d6418c4c-0f22-4a55-a3c0-13226071b8e7"
+    "cfd6af31-1abb-4c22-94e8-2163c051c8e7"
 #------------------------------------------
 func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
     "$SB_OPERATINGSYSTEM_BSD" "SB_OPERATINGSYSTEM_BSD" \
-    "8f412626-2c26-4b6b-94c0-13226071b8e7"
+    "15c40944-7e81-4bc1-a5e8-2163c051c8e7"
 #------------------------------------------
 func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
     "$SB_OPERATINGSYSTEM_BSD_FREEBSD" "SB_OPERATINGSYSTEM_BSD_FREEBSD" \
-    "a8404849-4b8b-438f-a2c0-13226071b8e7"
+    "d38c015f-0cf4-47e2-92d8-2163c051c8e7"
 #--------------------------------------------------------------------------
 if [ "$SB_OPERATINGSYSTEM_LINUX" == "f" ]; then
     if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "t" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash file is flawed.\e[39m"
-            echo "GUID=='2a38c223-3834-4d9b-83d0-13226071b8e7'"
+            echo "GUID=='71256bbb-8936-4340-b1e8-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -66,7 +66,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "f" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash file is flawed.\e[39m"
-            echo "GUID=='2e592933-e6fa-44fa-b2c0-13226071b8e7'"
+            echo "GUID=='2e9fcb92-5a1a-4f58-95e8-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -74,7 +74,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "f" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash file is flawed.\e[39m"
-            echo "GUID=='85473113-fbc6-4539-85c0-13226071b8e7'"
+            echo "GUID=='1ec68f29-6be2-4683-b1e8-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -85,7 +85,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash file is flawed.\e[39m"
-            echo "GUID=='364927e4-5193-4ab9-81c0-13226071b8e7'"
+            echo "GUID=='c6a04d4a-5d27-487e-83e8-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -96,7 +96,7 @@ if [ "$SB_OPERATINGSYSTEM_BSD_FREEBSD" == "t" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash file is flawed.\e[39m"
-            echo "GUID=='5bc7cd1b-b116-47fd-a2c0-13226071b8e7'"
+            echo "GUID=='490c8627-a582-4516-a4d8-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -162,7 +162,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
     else
         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
             # The formatted version of the 
-            alias mmmv_admin_create_symlink_to_cupspdf_t1="S_FP_LINK=\"\$HOME/CUPS_PDF\" ; S_FP_CUPSPDF_OUTPUT_DIR_0=\"/var/spool/cups-pdf/ANONYMOUS\" ; S_FP_CUPSPDF_OUTPUT_DIR_X=\"\$S_FP_CUPSPDF_OUTPUT_DIR_0\" ; S_FP_CUPSPDF_OUTPUT_DIR_1=\"/var/spool/cups-pdf/\`whoami\`\" ; if [ -e \"\$S_FP_CUPSPDF_OUTPUT_DIR_1\" ]; then S_FP_CUPSPDF_OUTPUT_DIR_X=\"\$S_FP_CUPSPDF_OUTPUT_DIR_1\" ; fi ; if [ -e \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" ]; then if [ -d \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" ]; then if [ -e \"\$S_FP_LINK\" ]; then echo \"\" ; echo \"Something with the path of \" ; echo \"    \$S_FP_LINK\" ; echo -e \"\e[31malready exists.\e[39m Doing nothing.\" ; echo \"GUID=='a2597f13-88eb-4194-a2c0-13226071b8e7'\" ; echo \"\" ; else if [ -h \"\$S_FP_LINK\" ]; then echo \"\" ; echo \"A broken symlink with the path of \" ; echo \"    \$S_FP_LINK\" ; echo -e \"\e[31malready exists.\e[39m Doing nothing.\" ; echo \"GUID=='2c833514-4442-46ba-b2b0-13226071b8e7'\" ; echo \"\" ; else ln -s \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" \"\$S_FP_LINK\" ; sync; wait; sync ;  if [ ! -e \"\$S_FP_LINK\" ]; then echo \"\" ; echo -e \"\e[31mFailed to create symlink \e[39m\" ; echo \"    \$S_FP_LINK\" ; echo \"    -->\" ; echo \"    \$S_FP_CUPSPDF_OUTPUT_DIR_X\" ; echo \"GUID=='d206411e-fccc-4e25-92b0-13226071b8e7'\" ; echo \"\" ; fi ; fi ; fi ; else echo \"\" ; echo \"The \" ; echo \"    \$S_FP_CUPSPDF_OUTPUT_DIR_X\" ; if [ -h \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" ]; then echo \"is a symlink to a file, but a folder is expected.\" ; else echo \"is a file, but a folder is expected.\" ; fi ; echo \"GUID=='ad72c763-87ac-438a-a3b0-13226071b8e7'\" ; echo \"\" ; fi ; else echo \"\" ; echo -e \"\e[31mFolder is missing. \e[39m\" ; echo \"    \$S_FP_CUPSPDF_OUTPUT_DIR_X\" ; echo \"It MIGHT be that the cups-pdf has not been installed.\" ; echo \"GUID=='2b6f9b37-ca10-44e3-81b0-13226071b8e7'\" ; echo \"\" ; fi ;"
+            alias mmmv_admin_create_symlink_to_cupspdf_t1="S_FP_LINK=\"\$HOME/CUPS_PDF\" ; S_FP_CUPSPDF_OUTPUT_DIR_0=\"/var/spool/cups-pdf/ANONYMOUS\" ; S_FP_CUPSPDF_OUTPUT_DIR_X=\"\$S_FP_CUPSPDF_OUTPUT_DIR_0\" ; S_FP_CUPSPDF_OUTPUT_DIR_1=\"/var/spool/cups-pdf/\`whoami\`\" ; if [ -e \"\$S_FP_CUPSPDF_OUTPUT_DIR_1\" ]; then S_FP_CUPSPDF_OUTPUT_DIR_X=\"\$S_FP_CUPSPDF_OUTPUT_DIR_1\" ; fi ; if [ -e \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" ]; then if [ -d \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" ]; then if [ -e \"\$S_FP_LINK\" ]; then echo \"\" ; echo \"Something with the path of \" ; echo \"    \$S_FP_LINK\" ; echo -e \"\e[31malready exists.\e[39m Doing nothing.\" ; echo \"GUID=='630f0d55-89f6-457b-b3d8-2163c051c8e7'\" ; echo \"\" ; else if [ -h \"\$S_FP_LINK\" ]; then echo \"\" ; echo \"A broken symlink with the path of \" ; echo \"    \$S_FP_LINK\" ; echo -e \"\e[31malready exists.\e[39m Doing nothing.\" ; echo \"GUID=='87dfc629-fafe-44b4-a5d8-2163c051c8e7'\" ; echo \"\" ; else ln -s \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" \"\$S_FP_LINK\" ; sync; wait; sync ;  if [ ! -e \"\$S_FP_LINK\" ]; then echo \"\" ; echo -e \"\e[31mFailed to create symlink \e[39m\" ; echo \"    \$S_FP_LINK\" ; echo \"    -->\" ; echo \"    \$S_FP_CUPSPDF_OUTPUT_DIR_X\" ; echo \"GUID=='27fbede4-a211-4080-84d8-2163c051c8e7'\" ; echo \"\" ; fi ; fi ; fi ; else echo \"\" ; echo \"The \" ; echo \"    \$S_FP_CUPSPDF_OUTPUT_DIR_X\" ; if [ -h \"\$S_FP_CUPSPDF_OUTPUT_DIR_X\" ]; then echo \"is a symlink to a file, but a folder is expected.\" ; else echo \"is a file, but a folder is expected.\" ; fi ; echo \"GUID=='0a9c5374-bd1e-40cd-92d8-2163c051c8e7'\" ; echo \"\" ; fi ; else echo \"\" ; echo -e \"\e[31mFolder is missing. \e[39m\" ; echo \"    \$S_FP_CUPSPDF_OUTPUT_DIR_X\" ; echo \"It MIGHT be that the cups-pdf has not been installed.\" ; echo \"GUID=='0a15f312-ff67-41c2-82d8-2163c051c8e7'\" ; echo \"\" ; fi ;"
             # except the GUIDs, is:
             #     S_FP_LINK="$HOME/CUPS_PDF" ;
             #     S_FP_CUPSPDF_OUTPUT_DIR_0="/var/spool/cups-pdf/ANONYMOUS" ;
@@ -178,7 +178,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
             #                 echo "Something with the path of " ;
             #                 echo "    $S_FP_LINK" ;
             #                 echo -e "\e[31malready exists.\e[39m Doing nothing." ;
-            #                 echo "GUID=='d7535911-79b2-4d64-85a0-13226071b8e7'" ;
+            #                 echo "GUID=='04320944-5966-431f-83d8-2163c051c8e7'" ;
             #                 echo "" ;
             #             else
             #                 if [ -h "$S_FP_LINK" ]; then
@@ -186,7 +186,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
             #                     echo "A broken symlink with the path of " ;
             #                     echo "    $S_FP_LINK" ;
             #                     echo -e "\e[31malready exists.\e[39m Doing nothing." ;
-            #                     echo "GUID=='fee47b58-b062-4d58-b1a0-13226071b8e7'" ;
+            #                     echo "GUID=='814bdd17-4d6b-4873-82c8-2163c051c8e7'" ;
             #                     echo "" ;
             #                 else
             #                     ln -s "$S_FP_CUPSPDF_OUTPUT_DIR_X" "$S_FP_LINK" ;
@@ -197,7 +197,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
             #                         echo "    $S_FP_LINK" ;
             #                         echo "    -->" ;
             #                         echo "    $S_FP_CUPSPDF_OUTPUT_DIR_X" ;
-            #                         echo "GUID=='2dbf3236-0991-49f2-82a0-13226071b8e7'" ;
+            #                         echo "GUID=='27e57951-7b13-47bd-82c8-2163c051c8e7'" ;
             #                         echo "" ;
             #                     fi ;
             #                 fi ;
@@ -211,7 +211,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
             #             else 
             #                 echo "is a file, but a folder is expected." ;
             #             fi ;
-            #             echo "GUID=='dd4f82d2-ed3a-4534-b4a0-13226071b8e7'" ;
+            #             echo "GUID=='b4ba9a2a-1970-4a46-91b8-2163c051c8e7'" ;
             #             echo "" ;
             #         fi ;
             #     else 
@@ -219,7 +219,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
             #         echo -e "\e[31mFolder is missing. \e[39m" ;
             #         echo "    $S_FP_CUPSPDF_OUTPUT_DIR_X" ;
             #         echo "It MIGHT be that the cups-pdf has not been installed." ;
-            #         echo "GUID=='8d3ce349-3991-4eb3-95a0-13226071b8e7'" ;
+            #         echo "GUID=='dd2f4143-d9e5-4828-85b8-2163c051c8e7'" ;
             #         echo "" ;
             #     fi ;
         fi
@@ -236,7 +236,7 @@ else
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash file is flawed.\e[39m"
-            echo "GUID=='115d322b-5389-498f-8f90-13226071b8e7'"
+            echo "GUID=='bfe8e116-2d4d-42f2-b5b8-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -274,7 +274,7 @@ func_mmmv_declare_template_creation_alias_t1(){
         else
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$S_FP_DESTINATION_FOLDER_OPTIONAL" \
-                "39dd7851-90e5-4a3c-a3b0-13226071b8e7" \
+                "5b729b5d-008e-4348-b4d8-2163c051c8e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         fi
     fi
@@ -283,7 +283,7 @@ func_mmmv_declare_template_creation_alias_t1(){
         #------------------------------------------------------------------
         local S_ERR_MSG_SUBPART_01=""
         if [ "$S_GUID_CANDIDATE_OPTIONAL" == "" ]; then
-            S_GUID_CANDIDATE_OPTIONAL="1d38d491-b9c4-4b0d-a4b0-13226071b8e7"
+            S_GUID_CANDIDATE_OPTIONAL="161b0c49-c12c-4bc8-81d8-2163c051c8e7"
         else
             #S_ERR_MSG_SUBPART_01="echo \"S_GUID_CANDIDATE=='$S_GUID_CANDIDATE_OPTIONAL'\" ; "
             S_ERR_MSG_SUBPART_01="S_GUID_CANDIDATE=='$S_GUID_CANDIDATE_OPTIONAL'"
@@ -300,7 +300,7 @@ func_mmmv_declare_template_creation_alias_t1(){
                         echo "A mmmv_userspace_distro_t1 related "
                         echo -e "\e[31msubpart of the ~/.bashrc is flawed\e[39m."
                         echo "    SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL==\"$SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL\""
-                        echo "GUID=='ffb53743-7fb7-4b28-9290-13226071b8e7'"
+                        echo "GUID=='5108c1d2-f89d-4040-b2b8-2163c051c8e7'"
                         echo ""
                     fi
                 fi
@@ -341,7 +341,7 @@ func_mmmv_declare_template_creation_alias_t1(){
             #                    echo \"\"; \
             #                    echo \"    $S_FP_NEW \"; \
             #                    echo \"\"; \
-            #                    echo \"GUID=='43c6be88-18be-4478-a390-13226071b8e7'\"; \
+            #                    echo \"GUID=='411941d7-a990-4ea6-a2a8-2163c051c8e7'\"; \
             #                    if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
             #                        echo \"$S_ERR_MSG_SUBPART_01\"; \
             #                    fi;\
@@ -358,7 +358,7 @@ func_mmmv_declare_template_creation_alias_t1(){
             #                echo \"    $S_FP_NEW\"; \
             #                echo \"\"; \
             #                echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; \
-            #                echo \"GUID=='5757d423-a126-486d-b890-13226071b8e7'\"; \
+            #                echo \"GUID=='5adbb0c3-f709-442b-83a8-2163c051c8e7'\"; \
             #                if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
             #                    echo \"$S_ERR_MSG_SUBPART_01\"; \
             #                fi;\
@@ -377,7 +377,7 @@ func_mmmv_declare_template_creation_alias_t1(){
             #            fi; \
             #            echo -e \"\\e[31mbut a file is expected.\\e[39m\"; \
             #            echo \"Not copying anything.\"; \
-            #            echo \"GUID=='461c685f-ea57-4b24-a480-13226071b8e7'\"; \
+            #            echo \"GUID=='33868b69-647c-4ff5-b5a8-2163c051c8e7'\"; \
             #            if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
             #                echo \"$S_ERR_MSG_SUBPART_01\"; \
             #            fi;\
@@ -396,7 +396,7 @@ func_mmmv_declare_template_creation_alias_t1(){
             #        fi; \
             #        echo -e \"\\e[31mbut a file is expected.\\e[39m\"; \
             #        echo \"Not copying anything.\"; \
-            #        echo \"GUID=='37de78d1-c0c4-4dac-b180-13226071b8e7'\"; \
+            #        echo \"GUID=='a96c9d39-87d4-4a54-b1a8-2163c051c8e7'\"; \
             #        if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
             #            echo \"$S_ERR_MSG_SUBPART_01\"; \
             #        fi;\
@@ -405,10 +405,10 @@ func_mmmv_declare_template_creation_alias_t1(){
             #    "
             # #------------------------------
             # is meant to be processed with Vim macros for assembling the 
-            alias $S_ALIAS_NAME=" SB_USE_UPGUID_ON_COPIED_FILE=\"$SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL\"; if [ -e \"$S_FP_TEMPLATE\" ]; then if [ ! -d \"$S_FP_TEMPLATE\" ]; then if [ ! -e \"$S_FP_NEW\" ]; then cp $S_FP_TEMPLATE $S_FP_NEW ; if [ \"\$?\" == \"0\" ]; then sync; wait; sync; echo \"\"; echo \"Created a new file with the path of \"; echo \"\"; echo -e \"\\e[32m    $S_FP_NEW \\e[39m\"; echo \"\"; if [ \"\$SB_USE_UPGUID_ON_COPIED_FILE\" == \"t\" ]; then if [ \"\`which upguid 2> /dev/null \`\" != \"\" ]; then upguid -f  $S_FP_NEW; sync; wait; sync; chmod 0700 $S_FP_NEW; sync; wait; sync; else echo -e \"Could not find \\e[31mupguid\\e[39m from the PATH.\"; echo \"\"; fi fi else echo -e \"\\e[31mFailed to create file \\e[39m \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; echo \"GUID=='4965b535-e8dc-4d83-a180-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; if [ -d \"$S_FP_NEW\" ]; then echo \"A folder with the path of \"; else echo \"A file with the path of \"; fi; echo \"\"; echo \"    $S_FP_NEW\"; echo \"\"; echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; echo \"GUID=='1a507573-ba9e-44e5-9180-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder,\\e[39m\"; else echo -e \"\\e[31mis a folder,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='e54daf4b-2349-4c50-9570-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a broken symlink,\\e[39m\"; else echo -e \"\\e[31mis missing,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='3c740659-9f61-48d4-8470-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; "
+            alias $S_ALIAS_NAME=" SB_USE_UPGUID_ON_COPIED_FILE=\"$SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL\"; if [ -e \"$S_FP_TEMPLATE\" ]; then if [ ! -d \"$S_FP_TEMPLATE\" ]; then if [ ! -e \"$S_FP_NEW\" ]; then cp $S_FP_TEMPLATE $S_FP_NEW ; if [ \"\$?\" == \"0\" ]; then sync; wait; sync; echo \"\"; echo \"Created a new file with the path of \"; echo \"\"; echo -e \"\\e[32m    $S_FP_NEW \\e[39m\"; echo \"\"; if [ \"\$SB_USE_UPGUID_ON_COPIED_FILE\" == \"t\" ]; then if [ \"\`which upguid 2> /dev/null \`\" != \"\" ]; then upguid -f  $S_FP_NEW; sync; wait; sync; chmod 0700 $S_FP_NEW; sync; wait; sync; else echo -e \"Could not find \\e[31mupguid\\e[39m from the PATH.\"; echo \"\"; fi fi else echo -e \"\\e[31mFailed to create file \\e[39m \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; echo \"GUID=='66704e59-6c58-4184-85a8-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; if [ -d \"$S_FP_NEW\" ]; then echo \"A folder with the path of \"; else echo \"A file with the path of \"; fi; echo \"\"; echo \"    $S_FP_NEW\"; echo \"\"; echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; echo \"GUID=='6a1e6ee1-8075-4b99-a4a8-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder,\\e[39m\"; else echo -e \"\\e[31mis a folder,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='3b58c215-9954-4f14-b498-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a broken symlink,\\e[39m\"; else echo -e \"\\e[31mis missing,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='4fbf0350-8978-4d4e-a598-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; "
             #--------------------
             # The following versions are older versions that have been tested to work.
-            # alias $S_ALIAS_NAME=" SB_USE_UPGUID_ON_COPIED_FILE=\"$SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL\"; if [ -e \"$S_FP_TEMPLATE\" ]; then if [ ! -d \"$S_FP_TEMPLATE\" ]; then if [ ! -e \"$S_FP_NEW\" ]; then cp $S_FP_TEMPLATE $S_FP_NEW ; if [ \"\$?\" == \"0\" ]; then sync; wait; sync; echo \"\"; echo \"Created a new file with the path of \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; if [ \"\$SB_USE_UPGUID_ON_COPIED_FILE\" == \"t\" ]; then if [ \"\`which upguid 2> /dev/null \`\" != \"\" ]; then upguid -f  $S_FP_NEW; sync; wait; sync; chmod 0700 $S_FP_NEW; sync; wait; sync; else echo -e \"Could not find \\e[31mupguid\\e[39m from the PATH.\"; echo \"\"; fi fi else echo -e \"\\e[31mFailed to create file \\e[39m \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; echo \"GUID=='96b9775a-60db-4f43-b470-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; if [ -d \"$S_FP_NEW\" ]; then echo \"A folder with the path of \"; else echo \"A file with the path of \"; fi; echo \"\"; echo \"    $S_FP_NEW\"; echo \"\"; echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; echo \"GUID=='c5a97637-4904-4a13-b170-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder,\\e[39m\"; else echo -e \"\\e[31mis a folder,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='74740e39-4041-4533-a560-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a broken symlink,\\e[39m\"; else echo -e \"\\e[31mis missing,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='8e010054-d43e-45c9-8260-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; "
+            # alias $S_ALIAS_NAME=" SB_USE_UPGUID_ON_COPIED_FILE=\"$SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL\"; if [ -e \"$S_FP_TEMPLATE\" ]; then if [ ! -d \"$S_FP_TEMPLATE\" ]; then if [ ! -e \"$S_FP_NEW\" ]; then cp $S_FP_TEMPLATE $S_FP_NEW ; if [ \"\$?\" == \"0\" ]; then sync; wait; sync; echo \"\"; echo \"Created a new file with the path of \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; if [ \"\$SB_USE_UPGUID_ON_COPIED_FILE\" == \"t\" ]; then if [ \"\`which upguid 2> /dev/null \`\" != \"\" ]; then upguid -f  $S_FP_NEW; sync; wait; sync; chmod 0700 $S_FP_NEW; sync; wait; sync; else echo -e \"Could not find \\e[31mupguid\\e[39m from the PATH.\"; echo \"\"; fi fi else echo -e \"\\e[31mFailed to create file \\e[39m \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; echo \"GUID=='f462204d-b14c-46a0-9198-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; if [ -d \"$S_FP_NEW\" ]; then echo \"A folder with the path of \"; else echo \"A file with the path of \"; fi; echo \"\"; echo \"    $S_FP_NEW\"; echo \"\"; echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; echo \"GUID=='9f5a6411-0f20-44f2-8498-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder,\\e[39m\"; else echo -e \"\\e[31mis a folder,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='2cfd47e4-4989-4713-9598-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a broken symlink,\\e[39m\"; else echo -e \"\\e[31mis missing,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='37d51d2d-b5e8-4535-b588-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; "
             #--------------------
         fi
         #------------------------------------------------------------------
@@ -442,7 +442,7 @@ func_mmmv_declare_template_creation_alias_tar_gz_t1(){
     #--------------------
     local S_ERR_MSG_SUBPART_01=""
     if [ "$S_GUID_CANDIDATE_OPTIONAL" == "" ]; then
-        S_GUID_CANDIDATE_OPTIONAL="b65c262b-8fa7-41d4-a2b0-13226071b8e7"
+        S_GUID_CANDIDATE_OPTIONAL="ea7c2451-30a5-448e-83d8-2163c051c8e7"
     else
         #S_ERR_MSG_SUBPART_01="echo \"S_GUID_CANDIDATE=='$S_GUID_CANDIDATE_OPTIONAL'\" ; "
         S_ERR_MSG_SUBPART_01="S_GUID_CANDIDATE=='$S_GUID_CANDIDATE_OPTIONAL'"
@@ -486,7 +486,7 @@ func_mmmv_declare_template_creation_alias_tar_gz_t1(){
         #                    echo \"\"; \
         #                    echo \"    $S_FP_NEW \"; \
         #                    echo \"\"; \
-        #                    echo \"GUID=='30f0759b-a498-4812-b160-13226071b8e7'\"; \
+        #                    echo \"GUID=='1be09c94-be15-4614-9288-2163c051c8e7'\"; \
         #                    if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
         #                        echo \"$S_ERR_MSG_SUBPART_01\"; \
         #                    fi;\
@@ -503,7 +503,7 @@ func_mmmv_declare_template_creation_alias_tar_gz_t1(){
         #                echo \"    $S_FP_NEW\"; \
         #                echo \"\"; \
         #                echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; \
-        #                echo \"GUID=='206031a1-269b-4bbc-9c60-13226071b8e7'\"; \
+        #                echo \"GUID=='5b774d82-b762-4d0e-b588-2163c051c8e7'\"; \
         #                if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
         #                    echo \"$S_ERR_MSG_SUBPART_01\"; \
         #                fi;\
@@ -522,7 +522,7 @@ func_mmmv_declare_template_creation_alias_tar_gz_t1(){
         #            fi; \
         #            echo -e \"\\e[31mbut a file is expected.\\e[39m\"; \
         #            echo \"Not copying anything.\"; \
-        #            echo \"GUID=='04ca7856-a505-476d-8150-13226071b8e7'\"; \
+        #            echo \"GUID=='a92bf53f-56e0-4483-8388-2163c051c8e7'\"; \
         #            if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
         #                echo \"$S_ERR_MSG_SUBPART_01\"; \
         #            fi;\
@@ -541,7 +541,7 @@ func_mmmv_declare_template_creation_alias_tar_gz_t1(){
         #        fi; \
         #        echo -e \"\\e[31mbut a file is expected.\\e[39m\"; \
         #        echo \"Not copying anything.\"; \
-        #        echo \"GUID=='e8fd7312-c9ad-4869-b350-13226071b8e7'\"; \
+        #        echo \"GUID=='45dd252f-e13e-4134-8388-2163c051c8e7'\"; \
         #        if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then \
         #            echo \"$S_ERR_MSG_SUBPART_01\"; \
         #        fi;\
@@ -550,7 +550,7 @@ func_mmmv_declare_template_creation_alias_tar_gz_t1(){
         #    "
         # #------------------------------
         # is meant to be processed with Vim macros for assembling the 
-        alias $S_ALIAS_NAME="if [ -e \"$S_FP_TEMPLATE\" ]; then if [ ! -d \"$S_FP_TEMPLATE\" ]; then if [ ! -e \"$S_FP_NEW\" ]; then nice -n 10 tar -xzf $S_FP_TEMPLATE ./ ; if [ \"\$?\" == \"0\" ]; then sync; wait; echo \"\"; if [ -d \"$S_FP_NEW\" ]; then if [ -h \"$S_FP_NEW\" ]; then echo \"Created a new symlink to a folder with the path of \"; else echo \"Created a new folder with the path of \"; fi; else if [ -h \"$S_FP_NEW\" ]; then echo \"Created a new symlink to a file with the path of \"; else echo \"Created a new file with the path of \"; fi; fi; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; else echo -e \"\\e[31mFailed to create \\e[39m \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; echo \"GUID=='5dac3efd-d346-48b8-a150-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; if [ -d \"$S_FP_NEW\" ]; then echo \"A folder with the path of \"; else echo \"A file with the path of \"; fi; echo \"\"; echo \"    $S_FP_NEW\"; echo \"\"; echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; echo \"GUID=='3e99c164-7bab-44ad-9250-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder,\\e[39m\"; else echo -e \"\\e[31mis a folder,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='52be2732-3438-49a6-8440-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a broken symlink,\\e[39m\"; else echo -e \"\\e[31mis missing,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='ddaab558-8e90-4b64-9540-13226071b8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; "
+        alias $S_ALIAS_NAME="if [ -e \"$S_FP_TEMPLATE\" ]; then if [ ! -d \"$S_FP_TEMPLATE\" ]; then if [ ! -e \"$S_FP_NEW\" ]; then nice -n 10 tar -xzf $S_FP_TEMPLATE ./ ; if [ \"\$?\" == \"0\" ]; then sync; wait; echo \"\"; if [ -d \"$S_FP_NEW\" ]; then if [ -h \"$S_FP_NEW\" ]; then echo \"Created a new symlink to a folder with the path of \"; else echo \"Created a new folder with the path of \"; fi; else if [ -h \"$S_FP_NEW\" ]; then echo \"Created a new symlink to a file with the path of \"; else echo \"Created a new file with the path of \"; fi; fi; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; else echo -e \"\\e[31mFailed to create \\e[39m \"; echo \"\"; echo \"    $S_FP_NEW \"; echo \"\"; echo \"GUID=='11cb8d47-1b5a-438c-8388-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; if [ -d \"$S_FP_NEW\" ]; then echo \"A folder with the path of \"; else echo \"A file with the path of \"; fi; echo \"\"; echo \"    $S_FP_NEW\"; echo \"\"; echo -e \"\\e[31malready exists\\e[39m. Not overwriting.\"; echo \"GUID=='1c8ca63d-99dd-4cd6-a378-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder,\\e[39m\"; else echo -e \"\\e[31mis a folder,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='84a1d5a5-ba1f-454a-9378-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; else echo \"\"; echo \"The template \"; echo \"\"; echo \"    $S_FP_TEMPLATE\"; echo \"\"; if [ -h \"$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a broken symlink,\\e[39m\"; else echo -e \"\\e[31mis missing,\\e[39m\"; fi; echo -e \"\\e[31mbut a file is expected.\\e[39m\"; echo \"Not copying anything.\"; echo \"GUID=='34e8fa26-aa06-4130-8178-2163c051c8e7'\"; if [ \"$S_ERR_MSG_SUBPART_01\" != \"\" ]; then echo \"$S_ERR_MSG_SUBPART_01\"; fi; echo \"\"; fi; "
         #--------------------
     fi
     #----------------------------------------------------------------------
@@ -567,7 +567,7 @@ S_TMP_FP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_github_repos_2_clonescr
 # is only on the Z_PATH, not yet on PATH.
 
 func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-    "$S_TMP_FP_0" "ee74c826-be34-41f7-b4b0-13226071b8e7" \
+    "$S_TMP_FP_0" "151df273-7b1b-49b2-82d8-2163c051c8e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
     if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then
@@ -581,52 +581,52 @@ fi
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_bashrc_minimalistic_template_01" \
     "_bashrc_minimalistic_template_01" \
-    "4a7115f2-2206-4782-a2b0-13226071b8e7"
+    "65da70f9-bc2b-4ace-93d8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_disassembly_and_reassembly_script_t1" \
     "disassembly_and_reassembly_t1.bash" \
-    "58cdc36c-1516-43d4-a1a0-13226071b8e7"
+    "d1efaa23-9618-4a14-a1c8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_download_files_with_wget_template_01" \
     "download_files_with_wget_template_01.bash" \
-    "18ead824-56f0-4c79-8ba0-13226071b8e7"
+    "9609c640-1582-45c4-a5c8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_Fossil_wiki_page_HTML_expimp_template_01" \
     "download_and_upload_Fossil_wiki_HTML.bash" \
-    "d95d9471-5f1b-429c-a5a0-13226071b8e7"
+    "58b2ba10-1cc0-4614-93c8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_fossil_clone" \
     "mmmv_Fossil_operator_t1.bash" \
-    "544a6145-ff25-4a25-b3a0-13226071b8e7"
+    "25dfb992-3d3d-4cd3-87b8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_ruby_console_application_t2" \
     "ruby_console_application_template_t2.rb" \
-    "89f3f3c5-7831-4a24-a190-13226071b8e7"
+    "7316462b-9937-4582-a1b8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_SQL_dump_script" \
     "create_backup_from_MySQL_db.bash" \
-    "c9dc3e41-582e-42d5-a590-13226071b8e7"
+    "d7da8138-f337-44ae-b2b8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_SSH_config_template" \
     "_ssh_config_template.txt" \
-    "7c4e7016-a351-4be2-9390-13226071b8e7"
+    "e19deb33-39f6-4634-b2a8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_SSH_tunnel_creation_script_template_t1" \
     "ssh_tunnel_t1.bash" \
-    "b3b0db1d-0777-413a-9390-13226071b8e7"
+    "e0224c5b-693a-47be-a3a8-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t2 \
     "mmmv_cre_WARC_Tools" \
     "2016_12_xx_WARC_tools.tar.xz" \
-    "57099c2a-682a-4ecf-9380-13226071b8e7"
+    "b420f37c-5bda-4520-b3a8-2163c051c8e7"
 
 #------------
 if [ "$SB_TAR_EXISTS_ON_PATH" == "t" ]; then
@@ -638,10 +638,10 @@ if [ "$SB_TAR_EXISTS_ON_PATH" == "t" ]; then
             if [ "$SB_RSYNC_EXISTS_ON_PATH" != "f" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo -e "\e[31mThe ~/.bashrc or some subpart of it is flawed.\e[39m"
-                    echo "GUID=='4fca8504-2c9b-42bd-a340-13226071b8e7'"
+                    echo "GUID=='315abf0d-6881-40dc-8578-2163c051c8e7'"
                 fi
             fi
-            alias mmmv_cre_rsync_based_backups_creator="echo \"\" ; echo \"The \\\"rsync\\\" is not on PATH.\" ; echo \"GUID=='4ed1bcf4-133b-4456-a440-13226071b8e7'\" ; echo \"\" ; $S_TMP_0"
+            alias mmmv_cre_rsync_based_backups_creator="echo \"\" ; echo \"The \\\"rsync\\\" is not on PATH.\" ; echo \"GUID=='d13fdf11-e235-4772-b478-2163c051c8e7'\" ; echo \"\" ; $S_TMP_0"
         fi
   fi
 fi
@@ -653,43 +653,43 @@ if [ "$SB_TAR_EXISTS_ON_PATH" == "t" ]; then
             "mmmv_cre_bash_boilerplate_t6_copy" \
             "2024_07_13_mmmv_bash_boilerplate_t6.tar.gz" \
             "2024_07_13_mmmv_bash_boilerplate_t6" \
-            "f28b0d62-9db8-4e16-b180-13226071b8e7"
+            "846cb91f-01ee-48fe-a3a8-2163c051c8e7"
         #----
         func_mmmv_declare_template_creation_alias_tar_gz_t1 \
             "mmmv_cre_image_length_limiter_t1" \
             "image_edge_length_limiter_t1.tar.gz" \
             "image_edge_length_limiter_t1" \
-            "9b818c59-936c-463a-b380-13226071b8e7"
+            "53a9a43c-08a9-43c9-94a8-2163c051c8e7"
         #----
         func_mmmv_declare_template_creation_alias_tar_gz_t1 \
             "mmmv_cre_installed_programs_checklist_t1" \
             "2021_02_xx_mmmv_installed_programs_checklist_t1_template.tar.gz" \
             "installed_programs_checklist_t1_template" \
-            "729291b5-8232-4532-b180-13226071b8e7"
+            "13df2786-9953-41cc-82a8-2163c051c8e7"
         #----
         func_mmmv_declare_template_creation_alias_tar_gz_t1 \
             "mmmv_cre_ruby_boilerplate_t6" \
             "2024_01_27_mmmv_ruby_boilerplate_t6.tar.gz" \
             "2024_01_27_mmmv_ruby_boilerplate_t6" \
-            "5243535d-9369-4249-b280-13226071b8e7"
+            "d5b57853-2e19-4943-a498-2163c051c8e7"
         #----
         func_mmmv_declare_template_creation_alias_tar_gz_t1 \
             "mmmv_cre_ZeroNet_Rev3703_from_mmmv_repackaging" \
             "2018_11_08_ZeroNet_Rev3703_mmmv_repackaging_t2.tar.gz" \
             "2018_11_08_ZeroNet_Rev3703_mmmv_repackaging_t2" \
-            "34624453-27f7-4399-8270-13226071b8e7"
+            "52a35953-e467-40db-b498-2163c051c8e7"
         #----
         func_mmmv_declare_template_creation_alias_tar_gz_t1 \
             "mmmv_cre_vimwiki_project_wiki_t1" \
             "project_wiki_t1.tar.gz" \
             "project_wiki" \
-            "bfd5c012-a59c-4c0d-9470-13226071b8e7"
+            "2bf1994f-63d0-4e02-b298-2163c051c8e7"
         #----
         func_mmmv_declare_template_creation_alias_tar_gz_t1 \
             "mmmv_cre_data_collection_t1" \
             "2024_11_23_data_collection_template_01.tar.gz" \
             "data_collection" \
-            "06226a32-79eb-4208-9570-13226071b8e7"
+            "9a254c2f-3c01-425a-8498-2163c051c8e7"
         #----
     fi
 fi
@@ -698,49 +698,49 @@ func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_COMMENTS_txt_t1" \
     "COMMENTS_txt_template_t1.txt" \
     "COMMENTS.txt" \
-    "1bdb87d2-4aae-4fc8-8470-13226071b8e7"
+    "d17f4c84-fb7e-4794-b498-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_COMMENTS_txt_t2" \
     "COMMENTS_txt_template_t2.txt" \
     "COMMENTS.txt" \
-    "1341b524-0bb4-49d2-9160-13226071b8e7"
+    "1e56a8f1-e826-4e0c-9298-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_CVS_clonescript_t1" \
     "CVS_clonescript_template_01.bash" \
     "CVS_clonescript.bash" \
-    "ee93be51-41b6-4476-9260-13226071b8e7"
+    "489ca05a-d84a-40fa-9588-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_x_txt_git_pack_Bash_script_t1" \
     "mmmv_git_pack_template_t1.bash" \
     "x.txt" \
-    "0cdb2b33-5a3a-41ab-9360-13226071b8e7"
+    "25543392-54d8-4877-8f88-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_Rakefile_template_t1" \
     "2022_10_06_Rakefile_template_t1.rb" \
     "Rakefile" \
-    "1d05c04f-df30-48bd-9160-13226071b8e7" 
+    "f0c3382c-5591-4d0c-b388-2163c051c8e7" 
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_bash_switch_to_next_keyboard_layout_t1" \
     "mmmv_ui_switch_to_next_keyboard_layout_t1_template.bash" \
     "mmmv_ui_switch_to_next_keyboard_layout_t1.bash" \
-    "8cdd6c10-61f6-4ef9-b450-13226071b8e7"
+    "c69af920-3a6a-4930-9288-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_bash_download_t1" \
     "2023_12_20_download_template_t1.bash" \
     "download.bash" \
-    "bf516a2e-4fb3-4255-8150-13226071b8e7"
+    "9b402739-777a-432c-b188-2163c051c8e7"
 
 func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_git_runscript_that_uses_SSH_key_based_authentication" \
     "2024_03_02_run_git_with_SSH_URL_by_authenticating_with_an_SSH_key_t1_template.bash" \
     "run_git_by_authenticating_with_an_SSH_key.bash" \
-    "2d67b037-9933-4cb6-9550-13226071b8e7"
+    "53ee8573-c889-40dd-a278-2163c051c8e7"
 
 #------------
 SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL="t"
@@ -748,7 +748,7 @@ func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_admin_cre_HOME_dot_cargo_config_toml" \
     "HOME_dot_cargo_config.toml.template" \
     "config.toml" \
-    "0a993f49-b56d-4155-a450-13226071b8e7" \
+    "15d5c8d2-33fd-4700-a378-2163c051c8e7" \
     "$SB_USE_UPGUID_ON_COPIED_FILE_OPTIONAL" \
     "$HOME/.cargo"
 
@@ -764,7 +764,7 @@ func_mmmv_declare_template_creation_alias_t1 \
     "mmmv_cre_bash_try_to_compile_X_template_t5b" \
     "try_to_compile_X_template_t5b.bash" \
     "try_to_compile_X.bash" \
-    "13934a52-fe2f-4180-8540-13226071b8e7" 
+    "2f857c2c-2f35-4568-9278-2163c051c8e7" 
 
 #--------------------------------------------------------------------------
 if [ "$MMMV_BASHRC_CONST_NONFIRST_SESSION_IN_TERMINAL" != "t" ]; then
@@ -824,22 +824,22 @@ if [ "$SB_USERNAME_IS_mmmv" == "t" ]; then
     func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
         "mmmv_go_common_bashrc_subparts_userspace_distro_specific" \
         "$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/subparts/mmmv_userspace_distro_t1_specific" \
-        "92354b2f-d8a9-42bc-b140-13226071b8e7"
+        "666a3749-7134-4933-8178-2163c051c8e7"
 
     func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
         "mmmv_go_common_bashrc_subparts_general" \
         "$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/subparts/general" \
-        "51bfff91-e973-4cb4-b340-13226071b8e7"
+        "dd50e630-973b-45ff-8478-2163c051c8e7"
 else
     func_mmmv_verify_sb_t_f_but_do_not_exit_t1 \
         "$SB_USERNAME_IS_mmmv" \
-        "2a24db34-1f5a-4ad5-b530-13226071b8e7"
+        "58c137d5-9ced-4394-9168-2163c051c8e7"
 fi
 #--------------------------------------------------------------------------
 func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
     "mmmv_go_mmmv_userspace_distro_t1_mmmv" \
     "$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv" \
-    "1f32b69e-84d0-4199-9130-13226071b8e7"
+    "437b252a-be01-4300-a568-2163c051c8e7"
 #--------------------------------------------------------------------------
 if [ "$SB_FFMPEG_EXISTS_ON_PATH" == "t" ]; then
     alias mmmv_ffmpeg_t1="nice -n 20 ffmpeg -i "
@@ -983,7 +983,7 @@ if [ "$SB_EXA_EXISTS_ON_PATH" == "" ]; then
         # are declared at a lower part of this file.
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "exa" "0c762145-7d8d-4828-8530-13226071b8e7"
+            "exa" "43b5680d-cdb6-4c82-be68-2163c051c8e7"
     fi
 fi
 func_mmmv_userspace_distro_t1_lambda_01_declare_alias_sorted_ls1X(){
@@ -1000,7 +1000,7 @@ func_mmmv_userspace_distro_t1_lambda_01_declare_alias_sorted_ls1X(){
             echo -e "\e[31mThe ~/.bashrc or some subpart of it is flawed. \e[39m"
             echo "The function that outputs this message "
             echo "is in a role of a lambda-function."
-            echo "GUID=='2bd75430-2658-4a1e-a530-13226071b8e7'"
+            echo "GUID=='47378211-7ec5-4e3a-8468-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -1052,7 +1052,7 @@ if [ "$SB_MCFLY_EXISTS_ON_PATH" == "" ]; then
         SB_MCFLY_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mcfly" "4f8832e5-65de-4e56-9220-13226071b8e7"
+            "mcfly" "32ab7db3-3a23-4af5-a368-2163c051c8e7"
     fi
 fi
 if [ "$SB_MCFLY_EXISTS_ON_PATH" == "t" ]; then
@@ -1077,7 +1077,7 @@ if [ "$SB_GITUI_EXISTS_ON_PATH" == "" ]; then
         SB_GITUI_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gitui" "ea8c7f33-d534-474c-9c20-13226071b8e7"
+            "gitui" "2d91b42f-828e-4551-9158-2163c051c8e7"
     fi
 fi
 #----------------------------------------
@@ -1087,7 +1087,7 @@ if [ "$SB_RG_EXISTS_ON_PATH" == "" ]; then
         SB_RG_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rg/ripgrep" "648a5724-e90d-4ca9-a520-13226071b8e7"
+            "rg/ripgrep" "a8687629-7fad-4f8d-8358-2163c051c8e7"
     fi
 fi
 if [ "$SB_RG_EXISTS_ON_PATH" == "t" ]; then
@@ -1126,7 +1126,7 @@ if [ "$SB_WIKITUI_EXISTS_ON_PATH" == "" ]; then
         SB_WIKITUI_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "wiki-tui" "225752b9-88fa-4fca-9520-13226071b8e7"
+            "wiki-tui" "e9621b22-3e12-4ace-9248-2163c051c8e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -1169,6 +1169,16 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
                         fi
                     fi
                 fi
+            fi
+        fi
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_SED_OR_GSED_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
+                alias mmmv_cre_HTML_ls_t1="printf '<!DOCTYPE HTML>\\n<html>\\n<head>\\n<title>ls</title>\\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\\n</head>\\n<body id=\"the_document_body\">\\n<h1>ls</h1>\\n<ul>\\n    <li>\\n        <a href=\"./../\">..</a>\\n    </li>\\n' > ./index.html ; sync ; wait ; ls -1 | sort | grep -i -v 'index.html' | $S_CMD_GNU_SED -e 's/\\(^.\\+\$\\)/    <li><a href=\".\\/\\1\">\\1<\\/a><\\/li>/g' >> ./index.html ; sync ; wait ; printf '</ul>\\n</body>\\n</html>\\n' >> ./index.html ; sync ; wait ;"
             fi
         fi
     fi
@@ -1255,7 +1265,7 @@ func_mmmv_userspace_distro_t1_display_man_page_with_emacs_t1(){
             echo -e "\e[31mThe ~/.bashrc or some subpart of it is flawed.\e[39m"
             echo "This function should never be called if "
             echo "the Emacs is missing from PATH."
-            echo "GUID=='3e371ad1-59a2-4497-9230-13226071b8e7'"
+            echo "GUID=='8bb54526-2372-45b1-a168-2163c051c8e7'"
             echo ""
         fi
     fi
@@ -1272,11 +1282,11 @@ S_FP_1b="$HOME/m_local/etc/_bashrc_optional_extra_00.bash"
 S_FP_2a="$S_FP_0/_bashrc_optional_extra_00_bash_subpart_01.rb.template"
 S_FP_2b="$HOME/m_local/etc/_bashrc_optional_extra_00_bash_subpart_01.rb"
 func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-    "$S_FP_1a" "5dddec4d-d680-488e-a510-13226071b8e7" \
+    "$S_FP_1a" "51f072f1-3b50-4310-9348-2163c051c8e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-        "$S_FP_2a" "86d1ec4a-9bf1-4126-a510-13226071b8e7" \
+        "$S_FP_2a" "337598b7-1e8b-4bae-a348-2163c051c8e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_admin_cre_bashrc_optional_extra_00="if [ -e \"$S_FP_1b\" ]; then echo \"$S_FP_1b already exists\" ; else if [ -e \"$S_FP_2b\" ]; then echo \"$S_FP_2b already exists\" ; else cp $S_FP_1a $S_FP_1b ; cp $S_FP_2a $S_FP_2b ; sync ; wait ; fi fi "
@@ -1292,18 +1302,18 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "t" ]; then
     SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING="f"
     func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
         "mmmv_go_sdcard" "$S_TMP_0" \
-        "23509f32-d2e9-4593-a710-13226071b8e7" \
+        "d205ff4f-1e72-4a80-b538-2163c051c8e7" \
         "$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         S_TMP_0="/sdcard/Download"
         func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
             "mmmv_go_Download" "$S_TMP_0" \
-            "11c49932-95c2-4649-9310-13226071b8e7" \
+            "32660f5f-a193-4194-b538-2163c051c8e7" \
             "$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING"
         S_TMP_0="/sdcard/download"
         func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
             "mmmv_go_download" "$S_TMP_0" \
-            "4293a345-ba4e-457f-8500-13226071b8e7" \
+            "279aa2c2-21c1-409b-8d38-2163c051c8e7" \
             "$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING"
     fi
     #--------------------
@@ -1359,7 +1369,7 @@ if [ ! -e "$FP_MMMV" ]; then
     mkdir -p $FP_MMMV
     func_mmmv_wait_and_sync_t1
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$FP_MMMV" "a5f2b346-7a0e-41e9-9100-13226071b8e7" \
+        "$FP_MMMV" "2f2d8f21-16cf-4c12-9138-2163c051c8e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 fi
 #--------------------------------------------------------------------------
@@ -1367,7 +1377,7 @@ if [ ! -e "$FP_MMMV_BASHRC" ]; then
     mkdir -p $FP_MMMV_BASHRC 
     func_mmmv_wait_and_sync_t1
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$FP_MMMV_BASHRC" "cf527a27-257a-4bcc-a100-13226071b8e7" \
+        "$FP_MMMV_BASHRC" "2385de51-f6c4-4be8-8328-2163c051c8e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 fi
 #--------------------------------------------------------------------------
@@ -1383,7 +1393,7 @@ if [ -e "$FP_MMMV" ]; then
         fi
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
             "$FP_MMMV_USERSPECIFIC_SUBPART_OF_VIMRC" \
-            "a3139526-7007-4306-a300-13226071b8e7" \
+            "35447f33-c5fa-43bd-9228-2163c051c8e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         #------------------------------------------------------------------
         if [ -e "$FP_MMMV_BASHRC" ]; then
@@ -1395,7 +1405,7 @@ if [ -e "$FP_MMMV" ]; then
                 fi
                 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                     "$FP_MMMV_BASHRC_DYNAMIC_SYMLINKS_ON_PATH" \
-                    "135f09e4-841f-4c57-9d5f-13226071b8e7" \
+                    "f4a6721e-d6de-42b9-b128-2163c051c8e7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
                 if [ -e "$FP_MMMV_BASHRC_DYNAMIC_SYMLINKS_ON_PATH" ]; then
                     if [ -d "$FP_MMMV_BASHRC_DYNAMIC_SYMLINKS_ON_PATH" ]; then
@@ -1411,6 +1421,338 @@ fi
 #--------------------------------------------------------------------------
 if [ "$SB_MMMV_BASHRC_DYNAMIC_SYMLINKS_ON_PATH_EXISTS" == "t" ]; then
     Z_PATH="$FP_MMMV_BASHRC_DYNAMIC_SYMLINKS_ON_PATH:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
+    if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
+        if [ "$SB_XDGMIME_EXISTS_ON_PATH" == "t" ]; then
+            #------------------------------------------------------------------
+            S_FP_0="/usr/share/applications/"
+            # Line for testing the default HTML browser setting:
+            #     xdg-open ./index.html
+            #------------------------------------------------------------------
+            if [ "$SB_FALKON_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="org.kde.falkon.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_HTML_browser_Falkon="xdg-mime default $S_FP_1 text/html"
+                        alias mmmv_admin_set_default_PDF_viewer_Falkon="xdg-mime default $S_FP_1 application/pdf"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_FIREFOX_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="firefox.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_HTML_browser_Firefox="xdg-mime default $S_FP_1 text/html"
+                        alias mmmv_admin_set_default_PDF_viewer_Firefox="xdg-mime default $S_FP_1 application/pdf"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_CHROMIUM_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="chromium.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_HTML_browser_Chromium="xdg-mime default $S_FP_1 text/html"
+                        alias mmmv_admin_set_default_PDF_viewer_Chromium="xdg-mime default $S_FP_1 application/pdf"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_DILLO_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="dillo.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_HTML_browser_Dillo="xdg-mime default $S_FP_1 text/html"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_MIDORI_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="midori.desktop" # TODO: check, if that's the most common .desktop file name for Midori
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_HTML_browser_Midori="xdg-mime default $S_FP_1 text/html"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_NETSURF_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="netsurf-gtk.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_HTML_browser_NetSurf="xdg-mime default $S_FP_1 text/html"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_EVINCE_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="org.gnome.Evince.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_PDF_viewer_Evnice="xdg-mime default $S_FP_1 application/pdf"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_XPDF_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="xpdf.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_PDF_viewer_Xpdf="xdg-mime default $S_FP_1 application/pdf"
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_EOG_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="org.gnome.eog.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_eog="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_FEH_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="feh.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_feh="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_GEEQIE_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="geeqie.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_Geeqie="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_GTHUMB_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="org.gnome.gThumb.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_gThumb="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_GWENVIEW_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="org.kde.gwenview.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_Gwenview="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_RISTRETTO_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="org.xfce.ristretto.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_ristretto="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+            if [ "$SB_VIEWNIOR_EXISTS_ON_PATH" == "t" ]; then
+                S_FP_1="viewnior.desktop"
+                S_FP_2="$S_FP_0$S_FP_1"
+                if [ -e "$S_FP_2" ]; then
+                    if [ ! -d "$S_FP_2" ]; then
+                        alias mmmv_admin_set_default_photo_viewer_Viewnior="xdg-mime default $S_FP_1 image/jpeg ; xdg-mime default $S_FP_1 image/pjpeg ; xdg-mime default $S_FP_1 image/bmp ; xdg-mime default $S_FP_1 image/gif ; xdg-mime default $S_FP_1 image/png "
+                    fi
+                fi
+            fi
+            #------------------------------------------------------------------
+        fi
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_SYSTEMDRUN_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$S_FP_NICE" != "" ]; then
+        #------------------------------------------------------------------
+        # The "systemd-run" requires root privileges, which it can get
+        # be asking for root user password.
+        #------------------------------------------------------------------
+        if [ "$SB_FALKON_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$S_FP_FALKON" != "" ]; then # just in case
+                #----------------------------------------------------------
+                S_TMP_0="systemd-run --scope -p MemoryLimit=1024M -p CPUQuota=60% $S_CMD_NICE_WEBBROWSER $S_FP_FALKON "
+                alias mmmv_run_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_60percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_60percent="$S_TMP_0"
+                alias mmmv_webbrowser_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_60percent="$S_TMP_0"
+                #----------------------------------------------------------
+                S_TMP_0="systemd-run --scope -p MemoryLimit=1024M -p CPUQuota=100% $S_CMD_NICE_WEBBROWSER $S_FP_FALKON "
+                alias mmmv_run_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_webbrowser_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_100percent="$S_TMP_0"
+                #----------------------------------------------------------
+                # For Raspberry_Pi 3, which has 4 CPU-cores, 1GiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=400M -p CPUQuota=100% $S_CMD_NICE_WEBBROWSER $S_FP_FALKON "
+                alias mmmv_run_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_400MiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_400MiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_webbrowser_Falkon_with_Linux_kernel_based_limits_enforcement_RAM_400MiB_CPU_100percent="$S_TMP_0"
+                #----------------------------------------------------------
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo "A mmmv_userspace_distro_t1 related "
+                    echo -e "\e[31msubpart of the ~/.bashrc is probably flawed\e[39m."
+                    echo "At this point the S_FP_FALKON should not "
+                    echo "have the value of an empty string."
+                    echo "GUID=='1307e736-0d43-4bba-a268-2163c051c8e7'"
+                    echo ""
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+        if [ "$SB_CHROMIUM_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$S_FP_CHROMIUM" != "" ]; then # just in case
+                #----------------------------------------------------------
+                S_TMP_0="systemd-run --scope -p MemoryLimit=1024M -p CPUQuota=100% $S_CMD_NICE_WEBBROWSER $S_FP_CHROMIUM "
+                alias mmmv_run_Chromium_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Chromium_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_webbrowser_Chromium_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_100percent="$S_TMP_0"
+                #----------------------------------------------------------
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo "A mmmv_userspace_distro_t1 related "
+                    echo -e "\e[31msubpart of the ~/.bashrc is probably flawed\e[39m."
+                    echo "At this point the S_FP_CHROMIUM should not "
+                    echo "have the value of an empty string."
+                    echo "GUID=='7db79a1f-45c7-4386-9258-2163c051c8e7'"
+                    echo ""
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+        if [ "$SB_REKONQ_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$S_FP_REKONQ" != "" ]; then # just in case
+                #----------------------------------------------------------
+                S_TMP_0="systemd-run --scope -p MemoryLimit=1024M -p CPUQuota=60% $S_CMD_NICE_WEBBROWSER $S_FP_REKONQ "
+                alias mmmv_run_Rekonq_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_60percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Rekonq_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_60percent="$S_TMP_0"
+                alias mmmv_webbrowser_Rekonq_with_Linux_kernel_based_limits_enforcement_RAM_1GiB_CPU_60percent="$S_TMP_0"
+                #----------------------------------------------------------
+                # For Raspberry_Pi 3, which has 4 CPU-cores, 1GiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=400M -p CPUQuota=100% $S_CMD_NICE_WEBBROWSER $S_FP_REKONQ "
+                alias mmmv_run_Rekonq_with_Linux_kernel_based_limits_enforcement_RAM_400MiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Rekonq_with_Linux_kernel_based_limits_enforcement_RAM_400MiB_CPU_100percent="$S_TMP_0"
+                alias mmmv_webbrowser_Rekonq_with_Linux_kernel_based_limits_enforcement_RAM_400MiB_CPU_100percent="$S_TMP_0"
+                #----------------------------------------------------------
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo "A mmmv_userspace_distro_t1 related "
+                    echo -e "\e[31msubpart of the ~/.bashrc is probably flawed\e[39m."
+                    echo "At this point the S_FP_REKONQ should not "
+                    echo "have the value of an empty string."
+                    echo "GUID=='1fd546c4-3a7d-4542-9558-2163c051c8e7'"
+                    echo ""
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+        if [ "$SB_NETSURF_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$S_FP_NETSURF" != "" ]; then # just in case
+                #----------------------------------------------------------
+                # For Raspberry_Pi 1 Zero W that has 1 CPU-core, 256MiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=100M -p CPUQuota=50% $S_CMD_NICE_WEBBROWSER $S_FP_NETSURF "
+                alias mmmv_run_NetSurf_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_NetSurf_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_webbrowser_NetSurf_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                #----------------------------------------------------------
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo "A mmmv_userspace_distro_t1 related "
+                    echo -e "\e[31msubpart of the ~/.bashrc is probably flawed\e[39m."
+                    echo "At this point the S_FP_NETSURF should not "
+                    echo "have the value of an empty string."
+                    echo "GUID=='9e75f857-868b-461a-9158-2163c051c8e7'"
+                    echo ""
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+        if [ "$SB_DILLO_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$S_FP_DILLO" != "" ]; then # just in case
+                #----------------------------------------------------------
+                # For Raspberry_Pi 1 Zero W that has 1 CPU-core, 256MiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=100M -p CPUQuota=50% $S_CMD_NICE_WEBBROWSER $S_FP_DILLO "
+                alias mmmv_run_Dillo_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Dillo_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_webbrowser_Dillo_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                #----------------------------------------------------------
+                # For Raspberry_Pi 1 Zero W that has 1 CPU-core, 256MiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=60M  -p CPUQuota=50% $S_CMD_NICE_WEBBROWSER $S_FP_DILLO "
+                alias mmmv_run_Dillo_with_Linux_kernel_based_limits_enforcement_RAM_60MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_Dillo_with_Linux_kernel_based_limits_enforcement_RAM_60MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_webbrowser_Dillo_with_Linux_kernel_based_limits_enforcement_RAM_60MiB_CPU_50percent="$S_TMP_0"
+                #----------------------------------------------------------
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo "A mmmv_userspace_distro_t1 related "
+                    echo -e "\e[31msubpart of the ~/.bashrc is probably flawed\e[39m."
+                    echo "At this point the S_FP_DILLO should not "
+                    echo "have the value of an empty string."
+                    echo "GUID=='7e641d12-42ab-4e8b-9548-2163c051c8e7'"
+                    echo ""
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+        if [ "$SB_DILLOPLUS_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$S_FP_DILLOPLUS" != "" ]; then # just in case
+                #----------------------------------------------------------
+                # For Raspberry_Pi 1 Zero W that has 1 CPU-core, 256MiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=100M -p CPUQuota=50% $S_CMD_NICE_WEBBROWSER $S_FP_DILLOPLUS "
+                alias mmmv_run_DilloPlus_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_DilloPlus_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_webbrowser_DilloPlus_with_Linux_kernel_based_limits_enforcement_RAM_100MiB_CPU_50percent="$S_TMP_0"
+                #----------------------------------------------------------
+                # For Raspberry_Pi 1 Zero W that has 1 CPU-core, 256MiB GPU-shared RAM.
+                S_TMP_0="systemd-run --scope -p MemoryLimit=60M  -p CPUQuota=50% $S_CMD_NICE_WEBBROWSER $S_FP_DILLOPLUS "
+                alias mmmv_run_DilloPlus_with_Linux_kernel_based_limits_enforcement_RAM_60MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_run_webbrowser_DilloPlus_with_Linux_kernel_based_limits_enforcement_RAM_60MiB_CPU_50percent="$S_TMP_0"
+                alias mmmv_webbrowser_DilloPlus_with_Linux_kernel_based_limits_enforcement_RAM_60MiB_CPU_50percent="$S_TMP_0"
+                #----------------------------------------------------------
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo "A mmmv_userspace_distro_t1 related "
+                    echo -e "\e[31msubpart of the ~/.bashrc is probably flawed\e[39m."
+                    echo "At this point the S_FP_DILLOPLUS should not "
+                    echo "have the value of an empty string."
+                    echo "GUID=='c2dacfbe-da5e-4293-9648-2163c051c8e7'"
+                    echo ""
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+    fi
 fi
 #--------------------------------------------------------------------------
 
@@ -1432,7 +1774,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                 echo "    $S_FP_CENTRAL "
                 echo ""
                 echo "is a broken symlink."
-                echo "GUID=='8595383b-507b-465a-b230-13226071b8e7'"
+                echo "GUID=='11b92da8-da17-40fa-a348-2163c051c8e7'"
                 echo ""
             fi
         else
@@ -1446,7 +1788,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                     echo ""
                     echo "is a symlink to a folder, but "
                     echo "it must be a file or a symlink to a file."
-                    echo "GUID=='4180d811-3298-411a-9420-13226071b8e7'"
+                    echo "GUID=='ec6a704a-82a2-4d14-8538-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1461,7 +1803,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                 echo "    $S_FP_CENTRAL "
                 echo ""
                 echo "is missing."
-                echo "GUID=='3c90e6c3-0eae-4d16-9b20-13226071b8e7'"
+                echo "GUID=='04195059-7788-418d-b138-2163c051c8e7'"
                 echo ""
             fi
         else
@@ -1474,7 +1816,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                     echo "    $S_FP_CENTRAL "
                     echo ""
                     echo "is a folder, but it must be a file or a symlink to a file."
-                    echo "GUID=='4d58db97-eb36-4a77-9420-13226071b8e7'"
+                    echo "GUID=='ce1d3e52-6d64-48f9-a438-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1498,7 +1840,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                         echo ""
                         echo "is a symlink to a folder, but "
                         echo "it must be a file or a symlink to a file."
-                        echo "GUID=='e6657454-e440-4829-8320-13226071b8e7'"
+                        echo "GUID=='150ee2d5-8fad-4d7e-b828-2163c051c8e7'"
                         echo ""
                     fi
                 fi
@@ -1515,7 +1857,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                         echo ""
                         echo "is a folder, but it must be "
                         echo "a file or a symlink to a file."
-                        echo "GUID=='bf6bc44d-ab55-4cea-9410-13226071b8e7'"
+                        echo "GUID=='f7a5635f-b1b6-4059-8228-2163c051c8e7'"
                         echo ""
                     fi
                 fi
@@ -1538,7 +1880,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                     echo ""
                     echo "    $S_FP_CENTRAL "
                     echo ""
-                    echo "GUID=='ca7c675f-c885-4e6b-b310-13226071b8e7'"
+                    echo "GUID=='991be753-2d36-4c07-9528-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1551,7 +1893,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_file_if_local_rc_missing_
                     echo "    $S_FP_LOCAL "
                     echo ""
                     echo "is missing."
-                    echo "GUID=='2f63ea33-edfb-4107-9210-13226071b8e7'"
+                    echo "GUID=='8e303948-23fe-4b04-a128-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1579,7 +1921,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                 echo "    $S_FP_CENTRAL "
                 echo ""
                 echo "is a broken symlink."
-                echo "GUID=='b6eef85a-7ae6-4fa3-9310-13226071b8e7'"
+                echo "GUID=='5e544a3e-9373-4cf7-9318-2163c051c8e7'"
                 echo ""
             fi
         else
@@ -1593,7 +1935,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                     echo ""
                     echo "is a symlink to a file, but "
                     echo "it must be a folder or a symlink to a folder."
-                    echo "GUID=='50f96252-d035-47ea-8300-13226071b8e7'"
+                    echo "GUID=='78dbb974-1e78-4f5c-8618-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1608,7 +1950,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                 echo "    $S_FP_CENTRAL "
                 echo ""
                 echo "is missing."
-                echo "GUID=='4f9bc53e-7824-4d5d-9400-13226071b8e7'"
+                echo "GUID=='02c5b133-9a8e-45fa-8118-2163c051c8e7'"
                 echo ""
             fi
         else
@@ -1621,7 +1963,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                     echo "    $S_FP_CENTRAL "
                     echo ""
                     echo "is a file, but it must be a folder or a symlink to a folder."
-                    echo "GUID=='ee27c248-3a8a-4406-b400-13226071b8e7'"
+                    echo "GUID=='1a944d4e-ea75-411b-9208-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1645,7 +1987,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                         echo ""
                         echo "is a symlink to a file, but "
                         echo "it must be a folder or a symlink to a folder."
-                        echo "GUID=='133f5123-0431-4af5-833f-13226071b8e7'"
+                        echo "GUID=='132555b1-c4d8-45ed-9308-2163c051c8e7'"
                         echo ""
                     fi
                 fi
@@ -1662,7 +2004,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                         echo ""
                         echo "is a file, but it must be "
                         echo "a folder or a symlink to a folder."
-                        echo "GUID=='f1904c42-88e8-492f-9c5f-13226071b8e7'"
+                        echo "GUID=='331a0341-4827-42c8-8508-2163c051c8e7'"
                         echo ""
                     fi
                 fi
@@ -1685,7 +2027,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                     echo ""
                     echo "    $S_FP_CENTRAL "
                     echo ""
-                    echo "GUID=='2273fbe5-1608-47db-9a1f-13226071b8e7'"
+                    echo "GUID=='7e522245-49f8-41cc-8508-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1698,7 +2040,7 @@ func_mmmv_userspace_distro_t1_create_link_2_central_rc_folder_if_local_rc_missin
                     echo "    $S_FP_LOCAL "
                     echo ""
                     echo "is missing."
-                    echo "GUID=='3e563025-5a11-438b-904f-13226071b8e7'"
+                    echo "GUID=='02e8df0f-6b39-451c-9408-2163c051c8e7'"
                     echo ""
                 fi
             fi
@@ -1735,7 +2077,7 @@ if [ -e "$S_FP_FONTS_HOME" ]; then
     else
         # Outputs an error message.
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$S_FP_FONTS_HOME" "14836614-0fc6-4858-901f-13226071b8e7" \
+            "$S_FP_FONTS_HOME" "4578ea05-c858-45fa-a718-2163c051c8e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 fi
@@ -1758,11 +2100,11 @@ if [ "$SB_S_FP_FONTS_HOME_EXISTS_BEFORE_SYMLINK_CREATION_ATTEMPT" == "f" ]; then
         else
             # Outputs an error message.
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_FONTS_HOME" "11048195-0f0d-462b-8e2f-13226071b8e7" \
+                "$S_FP_FONTS_HOME" "f1e05d5e-1c0b-4a5f-a218-2163c051c8e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         fi
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="42fd43f2-acb0-4b01-863f-13226071b8e7"
+# S_VERSION_OF_THIS_FILE="9016b53b-7ed0-49b5-8518-2163c051c8e7"
 #==========================================================================
