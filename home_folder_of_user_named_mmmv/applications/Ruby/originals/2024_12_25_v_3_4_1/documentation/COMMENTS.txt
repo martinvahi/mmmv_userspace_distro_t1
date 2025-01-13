@@ -1,0 +1,7 @@
+
+File origins:
+
+    ./ruby_3_4_1_complete_rdocs.tgz
+    https://ruby-doc.org/downloads/ruby_3_4_1_complete_rdocs.tgz
+    Download date: 2025_01_13
+
