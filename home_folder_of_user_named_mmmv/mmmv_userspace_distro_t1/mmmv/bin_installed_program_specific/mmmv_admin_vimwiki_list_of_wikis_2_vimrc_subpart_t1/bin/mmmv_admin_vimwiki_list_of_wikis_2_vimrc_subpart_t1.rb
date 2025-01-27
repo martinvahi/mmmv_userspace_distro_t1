@@ -63,7 +63,32 @@
 # some of the code in this file checks that there is nothing at
 # the stderr and quits the moment it finds something at the stderr.
 #--------------------KRL_based_boilerplate_start---------------------------
-
+# Ruby language version related normalization:
+#--------------------------------------------------------------------------
+# Most Ruby versions prior to Ruby version 3.2.0
+# had that method. This code makes old code that
+# worked with those older Ruby versions
+# work with the Ruby version 3.2.0 .
+if !defined? File.exists?
+   def File.exists? x
+      b=File.exist? x
+      return b
+   end # File.exists?
+end # if
+# Ruby 2.4.0 introduced a change, where
+# classes Fixnum and Bignum were deprecated
+# their use triggered a warning text to stderr
+# and their common parent class, Integer,
+# was expected to be used instead of them.
+# Ruby version 2.7.2 removed the warning from the stderr.
+# Ruby version 3.2.0 missed the classes, Fixnum and Bignum.
+# The following 2 if-clauses keep the old code working.
+if !defined? Fixnum
+   Fixnum=Integer
+end # if
+if !defined? Bignum
+   Bignum=Integer
+end # if
 #=====================kibuvits_krl171bt4_GUID_generator_rb_start=====================
 # The start of the file inclusion can be found
 # by looking for the string "kibuvits_krl171bt4_GUID_generator_rb_end".
@@ -1771,7 +1796,7 @@ def kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(a_binding,
    # throw before doing any calculations with the faulty
    # values and throw at some other, more distant, place.
    # That explains the existence of this, extra, typechecking loop.
-   s_suffix="\nGUID='02a4ae53-857d-47c8-927d-6170204017e7'"
+   s_suffix="\nGUID='96014495-7bd2-4efe-ab07-9210b03119e7'"
    if s_optional_error_message_suffix!=nil
       s_suffix=(s_suffix+$kibuvits_krl171bt4_lc_linebreak)+s_optional_error_message_suffix
    end # if
@@ -1780,7 +1805,7 @@ def kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(a_binding,
       kibuvits_krl171bt4_typecheck(a_binding,ar_allowed_classes,x_value,s_suffix)
    end # loop
    #---------------------
-   s_suffix="\nGUID='3d610f3d-6198-4543-a56d-6170204017e7'"
+   s_suffix="\nGUID='49e7c939-a0b7-4519-83f6-9210b03119e7'"
    if s_optional_error_message_suffix!=nil
       s_suffix=(s_suffix+$kibuvits_krl171bt4_lc_linebreak)+s_optional_error_message_suffix
    end # if
@@ -1819,7 +1844,7 @@ def kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(a_binding,
       end # if
       msg=$kibuvits_krl171bt4_lc_doublelinebreak+s_varname_1+x_upper_bound_0.to_s+
       " < " + s_varname_2 + x_elem.to_s+
-      "\nGUID='e76c0142-6e44-48e6-854d-6170204017e7'"
+      "\nGUID='36bb9953-ff15-41e6-b5d6-9210b03119e7'"
       if s_optional_error_message_suffix.class==String
          msg=msg+"\n"+s_optional_error_message_suffix
       end # if
@@ -2046,7 +2071,7 @@ def kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(a_binding,
    if KIBUVITS_krl171bt4_b_DEBUG
       if ar_exp_classes.size==0
          msg="ar_exp_classes.size==0\n"+
-         "GUID='3e00266c-1e9d-4e2a-933d-6170204017e7'"
+         "GUID='9413485b-d02d-41d2-b5b6-9210b03119e7'"
          kibuvits_krl171bt4_throw(msg)
       end # if
       bn_1=nil
@@ -2147,10 +2172,10 @@ end # kibuvits_krl171bt4_assert_does_not_contain_common_special_characters_t1
 
 #def kibuvits_krl171bt4_s_file_permissions_t1(s_fp)
 #   if KIBUVITS_krl171bt4_b_DEBUG
-#      s_suffix="\nGUID='be5b031a-c7d0-49ff-831d-6170204017e7'"
+#      s_suffix="\nGUID='4945654a-27e4-4565-b3a6-9210b03119e7'"
 #      bn=binding()
 #      kibuvits_krl171bt4_typecheck(bn,String,s_fp,s_suffix)
-#      s_suffix="\nGUID='b6d55dac-202b-464b-960d-6170204017e7'"
+#      s_suffix="\nGUID='3a043184-e9c4-416c-bd86-9210b03119e7'"
 #      kibuvits_krl171bt4_assert_string_min_length(bn,s_fp,1,s_suffix)
 #   end # if
 #
@@ -2726,7 +2751,7 @@ class Kibuvits_krl171bt4_ProgFTE_v1
          msg="\nEither The ProgFTE string candidate does not conform to "+
          "the ProgFTE_v1 specification or the code is faulty. \n"+
          "Reading of a token /[\d]+[|]/ failed.\n"+
-         "GUID='61f4a155-2c48-4667-b2ec-6170204017e7'\n"+
+         "GUID='20d5b862-9eca-47b7-ab76-9210b03119e7'\n"+
          "ixs_low=="+ixs_low.to_s+
          "\ns_in=="+s_in+"\n"
          kibuvits_krl171bt4_progfte_throw(msg)
@@ -2766,7 +2791,7 @@ class Kibuvits_krl171bt4_ProgFTE_v1
       if md==nil
          msg="\nThe ProgFTE string candidate does not conform to "+
          "the ProgFTE_v1 specification.\n"+
-         "GUID='44159a64-de57-4b83-b2dc-6170204017e7'\n"+
+         "GUID='347a6ff7-9a45-4669-a356-9210b03119e7'\n"+
          "s_progfte_v1_candidate=="+s_progfte_v1_candidate+"\n"
          kibuvits_krl171bt4_progfte_throw(msg)
       end # if
@@ -2790,7 +2815,7 @@ class Kibuvits_krl171bt4_ProgFTE_v1
          "very first key-value pair is reserved for encoding related\n"+
          "metadata and its key must be an empty string, but "+
          "extraction of the metadata from the very first key-value pair failed.\n"+
-         "GUID='a9c03149-7bf8-4332-95bc-6170204017e7'\n"+
+         "GUID='24b5cb81-66ce-4157-a336-9210b03119e7'\n"+
          "ixs_low=="+ixs_low.to_s+
          "\ns_progfte_v1_candidate=="+s_progfte_v1_candidate+"\n"
          kibuvits_krl171bt4_progfte_throw(msg)
@@ -2869,7 +2894,7 @@ class Kibuvits_krl171bt4_ProgFTE
          else
             msg="\nThis implementation does not yet support the ProgFTE_v"+
             i_specification_version.to_s
-            "\n GUID='14869d12-4d8f-4619-91ac-6170204017e7'\n"
+            "\n GUID='73da9f4d-58d2-4936-bf16-9210b03119e7'\n"
             kibuvits_krl171bt4_progfte_throw(msg)
          end # if
       end # if
@@ -2887,7 +2912,7 @@ class Kibuvits_krl171bt4_ProgFTE
          bn=binding()
          kibuvits_krl171bt4_typecheck bn, String, s_in
          kibuvits_krl171bt4_assert_string_min_length(bn,s_in,3,
-         " GUID='a751b627-5d45-45b7-b18c-6170204017e7'\n")
+         " GUID='10957112-fe72-464f-a5f5-9210b03119e7'\n")
       end # if
       ht_out=nil
       begin
@@ -2900,13 +2925,13 @@ class Kibuvits_krl171bt4_ProgFTE
                   msg="\nStrings that conform to version 0 of the "+
                   "ProgFTE format specification \n"+
                   "start with a digit, not a character.\n"
-                  "GUID='5396620a-5c18-4530-947c-6170204017e7'\n"+
+                  "GUID='8371bd37-a62b-4ede-92d5-9210b03119e7'\n"+
                   "s_in=="+s_in+"\n"
                   kibuvits_krl171bt4_progfte_throw(msg)
                else
                   msg="\nThis implementation does not yet "+
                   "support the ProgFTE_v"+md[0][1..-1]+
-                  "\n GUID='ebae6d5d-7e76-447f-a55c-6170204017e7'\n"+
+                  "\n GUID='45b2b0ee-0a19-4efc-b1c5-9210b03119e7'\n"+
                   "s_in=="+s_in+"\n"
                   kibuvits_krl171bt4_progfte_throw(msg)
                end # if
@@ -2918,7 +2943,7 @@ class Kibuvits_krl171bt4_ProgFTE
                "ProgFTE specification, where \nthe format version "+
                "is greater than 0, but the ProgFTE string "+
                "candidate does not \nconform to ProgFTE_v0 either.\n "+
-               "GUID='49fdb7f4-c316-48c3-b34c-6170204017e7'\n"+
+               "GUID='d7e45d25-112f-45c8-a1a5-9210b03119e7'\n"+
                "s_in=="+s_in+"\n"
                kibuvits_krl171bt4_progfte_throw(msg)
             end # if
@@ -2926,7 +2951,7 @@ class Kibuvits_krl171bt4_ProgFTE
          end # if
       rescue Exception => e
          msg="\nProgFTE string candidate deserialization failed. \n"+
-         "GUID='e428b020-48e6-43a9-b22c-6170204017e7'\n"+e.to_s+"\n"
+         "GUID='b3c8d884-3808-4b0a-ac95-9210b03119e7'\n"+e.to_s+"\n"
          kibuvits_krl171bt4_progfte_throw(msg)
       end # try-catch
       return ht_out
@@ -3056,7 +3081,7 @@ class Kibuvits_krl171bt4_msgc
          kibuvits_krl171bt4_typecheck bn, [TrueClass, FalseClass], b_failure
          kibuvits_krl171bt4_typecheck bn, String, s_default_language
          kibuvits_krl171bt4_assert_string_min_length(bn,s_default_language,2,
-         "\nGUID='67eee536-faf4-49c5-841c-6170204017e7'")
+         "\nGUID='26cda034-9a32-40f9-9575-9210b03119e7'")
       end # if
       @s_instance_id="msgc_"+Kibuvits_krl171bt4_wholenumberID_generator.generate.to_s+"_"+
       Kibuvits_krl171bt4_GUID_generator.generate_GUID
@@ -3077,7 +3102,7 @@ class Kibuvits_krl171bt4_msgc
          if md_candidate==nil
             kibuvits_krl171bt4_throw("\nThe s_location_marker_GUID(=="+
             s_location_marker_GUID+")\nis not a GUID."+
-            "\nCurrent exception location GUID=='4cb1ee50-92dc-4b32-91fb-6170204017e7'\n\n");
+            "\nCurrent exception location GUID=='694f3010-e652-48f1-9165-9210b03119e7'\n\n");
          end # if
       end # if
    end #initialize
@@ -3288,7 +3313,7 @@ class Kibuvits_krl171bt4_msgc
                      "instance of the "+self.class.to_s+" failed, because the class "+
                      x_data_class +" is defined, but it does not have a method named "+
                      "ob_deserialize.\n"+
-                     "GUID='a44d2438-c0f3-4613-a3eb-6170204017e7'\n\n")
+                     "GUID='bac1e356-24c0-425e-8255-9210b03119e7'\n\n")
                   end # if
                end # if
             end # if
@@ -3299,7 +3324,7 @@ class Kibuvits_krl171bt4_msgc
                x_data_class +" as the class of the field \"x_data\", but "+
                "the current application instance does not have a class with that "+
                "name defined.\n"+
-               "GUID='997a9814-820e-4443-a3db-6170204017e7'\n\n")
+               "GUID='9f113d44-7558-441c-8345-9210b03119e7'\n\n")
             end # if
          end # if
       end # if
@@ -4039,7 +4064,7 @@ class Kibuvits_krl171bt4_ix
          return ht_out
       end # if
       kibuvits_krl171bt4_throw("There's a flaw. \n"+
-      "GUID='79154f2e-fb8f-469b-a4cb-6170204017e7'\n\n")
+      "GUID='d7c77834-8065-456f-a135-9210b03119e7'\n\n")
    end # x_filter_t1
 
    def Kibuvits_krl171bt4_ix.x_filter_t1(ar_or_ht_in,func_returns_true_if_element_is_part_of_output)
@@ -4261,7 +4286,7 @@ class Kibuvits_krl171bt4_ix
          # The x_out has been inited to "".
          if 0<i_ar_out_len
             raise Exception.new("This function is flawed."+
-            "\n GUID='174cbb52-4b80-4cb5-89cb-6170204017e7'\n\n")
+            "\n GUID='40d92972-f2c5-41bb-a125-9210b03119e7'\n\n")
          end # if
       end # if
       return x_out
@@ -5160,7 +5185,7 @@ class Kibuvits_krl171bt4_str
       end # if
       if cl!=Regexp
          kibuvits_krl171bt4_throw("rgx_needle.class=="+cl.to_s+
-         "\n GUID='144eb929-9ebe-4ca4-b1bb-6170204017e7'\n\n")
+         "\n GUID='b810621f-fbb3-419e-9125-9210b03119e7'\n\n")
       end # if
       #-------
       func_paintroller=s_or_ar_of_substitution_strings_or_a_function_ie_stripes
@@ -5177,11 +5202,11 @@ class Kibuvits_krl171bt4_str
             if KIBUVITS_krl171bt4_b_DEBUG
                if i_n<0
                   kibuvits_krl171bt4_throw("i_n == "+i_n.to_s+" < 0 "+
-                  "\n GUID='4a57f112-64da-4369-94ab-6170204017e7'\n\n")
+                  "\n GUID='55a68d37-ff13-44ac-a215-9210b03119e7'\n\n")
                end # if
                if i_sz<1
                   kibuvits_krl171bt4_throw("ar_stripes.size == "+i_sz.to_s+" < 1 "+
-                  "\n GUID='5091892f-fa2f-4033-b19b-6170204017e7'\n\n")
+                  "\n GUID='1a68bf01-fcb8-47b4-b205-9210b03119e7'\n\n")
                end # if
             end # if
             i_ix=i_n%i_sz
@@ -5190,7 +5215,7 @@ class Kibuvits_krl171bt4_str
                if x_out.class!=String # to avoid the string instantiation
                   bn=binding()
                   msg="i_n=="+i_n.to_s+" i_sz=="+i_sz.to_s+" i_ix=="+i_ix.to_s+
-                  "\n GUID='35bdb81c-15a2-4ed4-818b-6170204017e7'\n\n"
+                  "\n GUID='2d601a91-2fe9-4c0f-9ef4-9210b03119e7'\n\n"
                   kibuvits_krl171bt4_typecheck bn, String, x_out, msg
                end # if
             end # if
@@ -5201,14 +5226,14 @@ class Kibuvits_krl171bt4_str
       if KIBUVITS_krl171bt4_b_DEBUG
          if cl!=Proc
             kibuvits_krl171bt4_throw("func_paintroller.class=="+cl.to_s+
-            "\n GUID='3f7b0b2d-882a-41d3-b58b-6170204017e7'\n\n")
+            "\n GUID='1ccec524-d575-4275-99f4-9210b03119e7'\n\n")
          end # if
          if !func_paintroller.lambda?
             # There are 2 different types of Proc instances:
             # plain Ruby blocks and the ones that are created with the
             # lambda keyword.
             kibuvits_krl171bt4_throw("func_paintroller.lambda? != true"+
-            "\n GUID='c6905e28-ee47-4584-947b-6170204017e7'\n\n")
+            "\n GUID='4d676756-8c64-41d5-a5e4-9210b03119e7'\n\n")
          end # if
       end # if
       #-------
@@ -5391,7 +5416,7 @@ class Kibuvits_krl171bt4_str
          exc=Exception.new("\nThe separator string had a "+
          "value of \"\", but empty strings are not "+
          "allowed to be used as separator strings.\n"+
-         "GUID='37c5bca2-b37f-4890-916b-6170204017e7'\n\n")
+         "GUID='69b3bd13-9d26-4082-a5d4-9210b03119e7'\n\n")
          if @b_kibuvits_krl171bt4_bootfile_run
             kibuvits_krl171bt4_throw(exc)
          else
@@ -5401,7 +5426,7 @@ class Kibuvits_krl171bt4_str
       s_hay=s_haystack
       if s_hay.length==0
          exc=Exception.new("s_haystack.length==0 \n"+
-         "GUID='aa77ef25-3a87-496b-955b-6170204017e7'\n\n")
+         "GUID='81cf2c2f-75de-4fc6-85c4-9210b03119e7'\n\n")
          if @b_kibuvits_krl171bt4_bootfile_run
             kibuvits_krl171bt4_throw(exc)
          else
@@ -5414,7 +5439,7 @@ class Kibuvits_krl171bt4_str
       # s_separator may not equal with the ''.
       if s_separator.length==0
          exc=Exception.new("s_separator.length==0\n"+
-         "GUID='b7304891-5372-428b-934b-6170204017e7'\n\n")
+         "GUID='f38c625f-5316-46fd-81b4-9210b03119e7'\n\n")
          if @b_kibuvits_krl171bt4_bootfile_run
             kibuvits_krl171bt4_throw(exc)
          else
@@ -5432,7 +5457,7 @@ class Kibuvits_krl171bt4_str
             exc=Exception.new("Expected number of separators is "+n.to_s+
             ", but the s_haystack contained only "+(i+1).to_s+
             "separator strings.\n"+
-            "GUID='145e105b-e46a-4a4e-a24b-6170204017e7'\n\n")
+            "GUID='483a6215-2fbe-44d4-a2b4-9210b03119e7'\n\n")
             if @b_kibuvits_krl171bt4_bootfile_run
                kibuvits_krl171bt4_throw(exc)
             else
@@ -5479,7 +5504,7 @@ class Kibuvits_krl171bt4_str
          kibuvits_krl171bt4_typecheck bn, String, s_in
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
          msgcs.assert_lack_of_failures(
-         "GUID='d164863d-bb5c-4d6d-813b-6170204017e7'")
+         "GUID='265b3503-e6f9-4be9-aba4-9210b03119e7'")
       end # if
       s_left=$kibuvits_krl171bt4_lc_emptystring
       s_right=$kibuvits_krl171bt4_lc_emptystring
@@ -5490,7 +5515,7 @@ class Kibuvits_krl171bt4_str
          s_message_id="data_fault_t1"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "71fa292a-fedb-4f14-917d-6170204017e7")
+         "1cadd272-58d0-4f76-b1f6-9210b03119e7")
          return s_left,s_right
       end # if
       i_len_s_in=s_in.length # s_in=="10|heder_data|therestofblabla"
@@ -5505,7 +5530,7 @@ class Kibuvits_krl171bt4_str
          s_message_id="data_fault_t2"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "a216243d-756e-4104-a15d-6170204017e7")
+         "f8e7f24c-1d33-4383-b1e6-9210b03119e7")
          return s_left,s_right
       end # if
       # Due to the regular expression, rgx, 2<=i_len_s_0
@@ -5520,11 +5545,11 @@ class Kibuvits_krl171bt4_str
          s_default_msg="\nFlawed header, i.e. the header is considered\n"+
          "to be missing, because the header data block is \n"+
          "not followed by a \"pillar character\" (\"|\"). \n"+
-         "\n GUID='9b4ce057-b08f-480e-822b-6170204017e7'\n\n"
+         "\n GUID='43a48e4d-d9fe-4f1a-b384-9210b03119e7'\n\n"
          s_message_id="data_fault_t3"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "2224b627-3f59-4e56-a34d-6170204017e7")
+         "ab9bdb56-95a3-4eca-92c6-9210b03119e7")
          return s_left,s_right
       end # if
       # In Ruby "x"[1..(-1)]==""
@@ -5556,7 +5581,7 @@ class Kibuvits_krl171bt4_str
             kibuvits_krl171bt4_throw("s_or_rgx_needle.class==String is OK, but \n"+
             "s_or_rgx_needle.length==0 is not acceptable, because \n"+
             "every string contains an infinite number of emptystrings.\n"+
-            "GUID='2a0f5810-6e38-4646-a31b-6170204017e7'\n\n")
+            "GUID='c31a6b37-4461-456d-8564-9210b03119e7'\n\n")
          end # if
          # This if-branch is probably redundant, because
          # the onel-liner at the else part does a pretty
@@ -5698,7 +5723,7 @@ class Kibuvits_krl171bt4_str
          kibuvits_krl171bt4_typecheck bn, String, s_separator
          if cl_0==Array
             kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,String,
-            s_or_ar_of_s,"GUID=='249ec635-1c1a-4908-b41b-6170204017e7'")
+            s_or_ar_of_s,"GUID=='f5a0fc56-e717-4c3b-a354-9210b03119e7'")
          end # if
       end # if
       ar_out=nil
@@ -5711,7 +5736,7 @@ class Kibuvits_krl171bt4_str
          else
             kibuvits_krl171bt4_throw("s_or_ar_of_s.class=="+cl_0.to_s+
             ",\nbut it is expected to be either String or Array.\n"+
-            "GUID='33f97b26-8f95-4ade-b20b-6170204017e7'\n\n")
+            "GUID='d7dde21c-37e6-46dc-a244-9210b03119e7'\n\n")
          end # if
       end # if
       return ar_out
@@ -5849,7 +5874,7 @@ class Kibuvits_krl171bt4_str
       if Kibuvits_krl171bt4_str.index_is_outside_of_the_string(a_string,i_ix)
          kibuvits_krl171bt4_throw "index_of_the_character=="+i_ix.to_s+" is outside of "+
          "string a_string==\""+a_string+"\".\n"+
-         "GUID='452c9555-00d6-446d-93fa-6170204017e7'\n\n"
+         "GUID='449029b2-3dd3-4ca7-a334-9210b03119e7'\n\n"
       end # if
       s_char=a_string[i_ix..i_ix]
       i_count=0
@@ -6128,11 +6153,11 @@ class Kibuvits_krl171bt4_str
          if ar_or_s_prefix.class==Array
             kibuvits_krl171bt4_typecheck_ar_content(bn,String,
             ar_or_s_prefix,
-            "\nGUID='12231123-2625-4e88-97ea-6170204017e7'\n\n")
+            "\nGUID='453036b2-e059-4e6e-8434-9210b03119e7'\n\n")
          end # if
          kibuvits_krl171bt4_typecheck_ar_content(bn,Regexp,
          ar_speedoptimization_prefixes_as_regexps,
-         "\nGUID='64dba131-8b55-49a6-85da-6170204017e7'\n\n")
+         "\nGUID='14bfc63c-4e28-4b8c-a224-9210b03119e7'\n\n")
       end # if
       ar_rgx=ar_speedoptimization_prefixes_as_regexps
       if ar_rgx.size==0
@@ -6508,7 +6533,7 @@ class Kibuvits_krl171bt4_str
          kibuvits_krl171bt4_assert_string_min_length(bn,s_start,1)
          kibuvits_krl171bt4_assert_string_min_length(bn,s_end,1)
          msgcs.assert_lack_of_failures(
-         "GUID='165b6be1-59b4-4472-87ca-6170204017e7'")
+         "GUID='d7e3653a-c366-4c4a-b314-9210b03119e7'")
       end # if
       s_out=""
       i_start=s_haystack.index(s_start)
@@ -6570,10 +6595,10 @@ class Kibuvits_krl171bt4_str
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_positive_whole_number
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          1, i_minimum_amount_of_digits,
-         "GUID='8159bd10-930f-46be-a1ca-6170204017e7'")
+         "GUID='18d8455b-1f21-4bd0-a204-9210b03119e7'")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_positive_whole_number,
-         "GUID='11491056-17b1-4d72-b4ba-6170204017e7'")
+         "GUID='a609e152-aead-47b3-91f3-9210b03119e7'")
       end # if
       s_0=i_positive_whole_number.to_s
       i_0=i_minimum_amount_of_digits-s_0.length
@@ -6690,7 +6715,7 @@ def kibuvits_krl171bt4_str2file(s_a_string, s_fp)
          file.write(s_a_string)
          file.close
       rescue Exception =>err
-         raise "No comments. GUID='e4c3463e-09aa-484a-84aa-6170204017e7' \n"+
+         raise "No comments. GUID='2fa6ef23-2950-4a0a-83f3-9210b03119e7' \n"+
          "s_a_string=="+s_a_string+"\n"+err.to_s+"\n\n"
       end #
    end # synchronize
@@ -6749,7 +6774,7 @@ def kibuvits_krl171bt4_file2str(s_file_path)
       rescue Exception =>err
          raise(Exception.new("\n"+err.to_s+"\n\ns_file_path=="+
          s_file_path+
-         "\n GUID='2c605bd1-474f-435d-bd9a-6170204017e7'\n\n"))
+         "\n GUID='4d5b1632-79c9-410b-81e3-9210b03119e7'\n\n"))
       end #
    end # synchronize
    return s_out
@@ -6774,7 +6799,7 @@ def kibuvits_krl171bt4_ar_i_2_file_t1(ar_i,s_file_path)
       rescue Exception =>err
          raise(Exception.new("\n"+err.to_s+"\n\ns_file_path=="+
          s_file_path+
-         "\n GUID='ed957327-79c2-47b5-918a-6170204017e7'\n\n"))
+         "\n GUID='247ebd14-e296-4e84-b9d3-9210b03119e7'\n\n"))
       end #
    end # synchronize
 end # kibuvits_krl171bt4_ar_i_2_file_t1
@@ -6796,7 +6821,7 @@ def kibuvits_krl171bt4_file_2_ar_i_t1(s_file_path)
       rescue Exception =>err
          raise(Exception.new("\n"+err.to_s+"\n\ns_file_path=="+
          s_file_path+
-         "\n GUID='cfa1555d-1757-4189-a47a-6170204017e7'\n\n"))
+         "\n GUID='9c1e9321-ae40-4a23-b6c3-9210b03119e7'\n\n"))
       end #
    end # synchronize
    return ar_out
@@ -6817,11 +6842,11 @@ def kibuvits_krl171bt4_s_armour_t1(ar_i)
          kibuvits_krl171bt4_typecheck bn1, Fixnum, x_i
          if x_i<0
             kibuvits_krl171bt4_throw("x_i == "+x_i.to_s+" < 0 "+
-            "\n GUID='3daf9b36-e90b-40be-a51a-6170204017e7'\n\n")
+            "\n GUID='f310371c-d48a-4149-b1c3-9210b03119e7'\n\n")
          end # if
          if 255<x_i
             kibuvits_krl171bt4_throw(" 255 < x_i == "+x_i.to_s+
-            "\n GUID='833a5a5f-7cd4-4bad-b31a-6170204017e7'\n\n")
+            "\n GUID='541f3c75-f07a-41f1-adb3-9210b03119e7'\n\n")
          end # if
       end # loop
    end # if
@@ -6881,11 +6906,11 @@ def kibuvits_krl171bt4_ar_i_dearmour_t1(s_armoured)
          i_x=ar_unicode[ix]-i_zero
          if i_x<0
             kibuvits_krl171bt4_throw("i_x == "+i_x.to_s+" < 0 "+
-            "\n GUID='7f679746-83b5-4ee1-b30a-6170204017e7'\n\n")
+            "\n GUID='4510da41-f16f-4d99-92a3-9210b03119e7'\n\n")
          end # if
          if 255<i_x
             kibuvits_krl171bt4_throw(" 255 < i_x == "+i_x.to_s+
-            "\n GUID='c7ce2448-401f-4850-84f9-6170204017e7'\n\n")
+            "\n GUID='f5fe2379-7fe2-4c39-a393-9210b03119e7'\n\n")
          end # if
          ar_out<<i_x
       end # loop
@@ -7046,7 +7071,7 @@ class Kibuvits_krl171bt4_io
                ar_data[0]=ob_addrinfo.ip_address
             else
                kibuvits_krl171bt4_throw("ob_addrinfo.to_s=="+ob_addrinfo.to_s+
-               "\n GUID='4bc8c1b3-fd93-4cef-84e9-6170204017e7'\n\n")
+               "\n GUID='672f1336-3c58-43fe-b583-9210b03119e7'\n\n")
             end # if
          end # if
       end # loop
@@ -7058,7 +7083,7 @@ class Kibuvits_krl171bt4_io
          end # if
       end # loop
       kibuvits_krl171bt4_throw("ar_addrinfo.to_s=="+ar_addrinfo.to_s+
-      "\n GUID='9e928638-2b70-40c5-93e9-6170204017e7'\n\n")
+      "\n GUID='4df1c444-f8c7-4c9b-8183-9210b03119e7'\n\n")
    end # s_one_of_the_public_IP_addresses_or_a_loopback_if_unconnected
 
    def Kibuvits_krl171bt4_io.s_one_of_the_public_IP_addresses_or_a_loopback_if_unconnected
@@ -7079,7 +7104,7 @@ class Kibuvits_krl171bt4_io
             if s_ip_address==$kibuvits_krl171bt4_lc_s_localhost
                kibuvits_krl171bt4_throw("s_ip_addresss == \"localhost\", \n"+
                "but it should be an IP-address.\n"+
-               "GUID='48a8fb1a-51e3-4945-b1d9-6170204017e7'\n\n")
+               "GUID='2c222494-2e12-4b92-8573-9210b03119e7'\n\n")
             end # if
             s_0="::1" # IPv6 version of the loop-back interface
          end # if
@@ -7762,7 +7787,7 @@ class Kibuvits_krl171bt4_shell
       s_fp="/usr/bin/env"
       if !File.exist? s_fp
          kibuvits_krl171bt4_throw("The file "+ s_fp+" does not exist."+
-         "\nGUID='86463e55-63d4-45da-b4c9-6170204017e7'")
+         "\nGUID='a1d92ea8-368a-40e8-8563-9210b03119e7'")
       end # if
       s_fp_stdout=Kibuvits_krl171bt4_os_codelets.instance.generate_tmp_file_absolute_path
       s_fp_stderr=Kibuvits_krl171bt4_os_codelets.instance.generate_tmp_file_absolute_path
@@ -7804,7 +7829,7 @@ class Kibuvits_krl171bt4_shell
          i_min_length=2 # May be it should be 1?
          # The i_min_length can be changed to 1, after problems emerge.
          kibuvits_krl171bt4_assert_string_min_length(bn,s_program_name,i_min_length,
-         "GUID='383f42d4-d873-4525-b4b9-6170204017e7'")
+         "GUID='5473f23f-6e68-454a-b153-9210b03119e7'")
          kibuvits_krl171bt4_typecheck bn, [TrueClass,FalseClass], b_throw_if_not_found
       end # if
       if !defined? @ht_s_exc_system_specific_path_by_caching_t1_cache
@@ -7827,7 +7852,7 @@ class Kibuvits_krl171bt4_shell
          if b_throw_if_not_found
             kibuvits_krl171bt4_throw("Program \""+ s_program_name+
             "\" could not be found on the PATH."+
-            "\nGUID='9f27a234-669a-4ce9-a4b9-6170204017e7'")
+            "\nGUID='b008123c-6ef4-4004-a343-9210b03119e7'")
          end # if
       end # if
       return s_fp
@@ -7872,7 +7897,7 @@ class Kibuvits_krl171bt4_shell
          kibuvits_krl171bt4_typecheck bn, Hash, ht_stdstreams
          kibuvits_krl171bt4_assert_ht_has_keys(bn,ht_stdstreams,
          [$kibuvits_krl171bt4_lc_s_stderr,$kibuvits_krl171bt4_lc_s_stdout],
-         "\nGUID='b3ccf8ca-34c1-4fc7-85a9-6170204017e7'")
+         "\nGUID='00218225-b49d-4720-8343-9210b03119e7'")
       end # if
       s_err=ht_stdstreams[$kibuvits_krl171bt4_lc_s_stderr]
       if s_err.class!=String
@@ -7880,7 +7905,7 @@ class Kibuvits_krl171bt4_shell
          # there is a flaw somewhere, if s_err is a number or
          # some custom instance, etc.
          kibuvits_krl171bt4_throw("The ht_stdstreams does not seem to have the "+
-         "right content. \nGUID='374698ba-e80c-494c-8599-6170204017e7'")
+         "right content. \nGUID='a9cc0f1b-7528-45ec-a233-9210b03119e7'")
       end # if
       return false if s_err.length==0
       return true
@@ -7900,7 +7925,7 @@ class Kibuvits_krl171bt4_shell
          kibuvits_krl171bt4_typecheck bn, [NilClass,String], s_optional_error_message_suffix
          kibuvits_krl171bt4_assert_ht_has_keys(bn,ht_stdstreams,
          [$kibuvits_krl171bt4_lc_s_stderr,$kibuvits_krl171bt4_lc_s_stdout],
-         "\nGUID='8ba33263-c476-436e-8489-6170204017e7'")
+         "\nGUID='e34bacc7-b138-4b74-81c2-9210b03119e7'")
       end # if
       return if !b_stderr_has_content_t1(ht_stdstreams)
       s_msg=ht_stdstreams[$kibuvits_krl171bt4_lc_s_stderr]+$kibuvits_krl171bt4_lc_linebreak
@@ -8428,7 +8453,7 @@ class Kibuvits_krl171bt4_rake
          if KIBUVITS_krl171bt4_b_DEBUG
             kibuvits_krl171bt4_throw("s_language=="+s_language+
             " not supported by this function."+
-            "\nGUID='d94b4248-a2e1-44d0-a489-6170204017e7'")
+            "\nGUID='5930f721-cc3f-472c-85b2-9210b03119e7'")
          else
             s_lang=$kibuvits_krl171bt4_lc_English
          end # if
@@ -8536,7 +8561,7 @@ class Kibuvits_krl171bt4_keyboard
       "without the whole stdin stuff (the stdin is global by nature, "+
       "with all the classicla glory of globals) then threads can not "+
       "capture keyboard events independent of eachother."+
-      "\nGUID=='e2aa313d-c9a8-45d3-8479-6170204017e7')\n\n"))
+      "\nGUID=='906c462c-bce2-497d-a4a2-9210b03119e7')\n\n"))
 =end
    end # initialize
 
@@ -8806,7 +8831,7 @@ class Kibuvits_krl171bt4_IDstamp_registry_t1
       end # if
       if !ht_wild.has_key? s_id_name
          kibuvits_krl171bt4_throw("\n\nht_wild is missing the key \""+s_id_name+
-         "\nGUID='2e050f04-3477-4740-8f69-6170204017e7'\n\n")
+         "\nGUID='5288dd43-b85e-43f6-a282-9210b03119e7'\n\n")
       end # if
       s_id_wild=ht_wild[s_id_name] # Hash[<nonexisting_key>] does not throw, but returns nil
       cl=s_id_wild.class
@@ -8822,7 +8847,7 @@ class Kibuvits_krl171bt4_IDstamp_registry_t1
          ", but it is not paired with a string.\n"+
          "s_id_wild.class=="+cl.to_s+
          "\ns_id_wild=="+s_id_wild.to_s+
-         "\nGUID='9ba385ad-a58b-402d-9359-6170204017e7'\n\n")
+         "\nGUID='4a37205a-75ab-4722-9172-9210b03119e7'\n\n")
       end # if
       kibuvits_krl171bt4_assert_ok_to_be_a_varname_t1(bn,s_id_wild) if KIBUVITS_krl171bt4_b_DEBUG
       reset(s_id_name) if !@ht_registry.has_key? s_id_name
@@ -9039,7 +9064,7 @@ class Kibuvits_krl171bt4_i18n_msgs_t1
          if (0<=x_var)
             kibuvits_krl171bt4_throw("x_var == "+x_var.to_s+
             "\nis expected to be negative."+
-            "\nGUID=='92ad160f-6068-4516-b159-6170204017e7'")
+            "\nGUID=='4f391731-ea08-46a1-bd62-9210b03119e7'")
          end # if
       end # if
       s_0=$kibuvits_krl171bt4_lc_emptystring+
@@ -10606,7 +10631,7 @@ class Kibuvits_krl171bt4_arraycursor_t1
          kibuvits_krl171bt4_throw("\n\nThe "+s_0+" instance has not been associated with "+
          "an array.\n"+s_0+" instances can be "+
          "associeated with an array by using metod reset(ar)."+
-         "\nGUID='6c493e59-c994-48c2-a149-6170204017e7'\n\n")
+         "\nGUID='5487b717-9879-4f7c-8c42-9210b03119e7'\n\n")
       end # if
       if @i_ar_core_expected_lenght!=i_ar_len
          @b_inited=false # Should the exception be caught by some sloppy developer.
@@ -10614,14 +10639,14 @@ class Kibuvits_krl171bt4_arraycursor_t1
          "has been declared by using the method reset(ar)\n"+
          "has been changed from "+@i_ar_core_expected_lenght.to_s+
          " to "+i_ar_len.to_s+".\n"+
-         "\nGUID='bb1dc7b8-79a5-4fd6-8539-6170204017e7'\n\n")
+         "\nGUID='44280d34-8058-4d70-a432-9210b03119e7'\n\n")
       end # if
       if KIBUVITS_krl171bt4_b_DEBUG
          if 0<i_ar_len
             if @ixs_low==@ixs_high
                kibuvits_krl171bt4_throw("\n\n@ixs_low == "+@ixs_low.to_s+
                " == @ixs_high == "+@ixs_high.to_s+
-               "\nGUID='dd1c8a12-19cd-46c6-a129-6170204017e7'\n\n")
+               "\nGUID='202e95a4-cb4f-415b-8412-9210b03119e7'\n\n")
             end # if
          end # if
       end # if KIBUVITS_krl171bt4_b_DEBUG
@@ -10633,7 +10658,7 @@ class Kibuvits_krl171bt4_arraycursor_t1
       if KIBUVITS_krl171bt4_b_DEBUG
          if i_ar_len==0
             kibuvits_krl171bt4_throw("\n\ni_ar_len == 0, which is contradictory here.\n"+
-            "\nGUID='39498669-e84c-43de-a529-6170204017e7'\n\n")
+            "\nGUID='43764529-165b-4c8b-8402-9210b03119e7'\n\n")
          end # if
       end # if KIBUVITS_krl171bt4_b_DEBUG
       return if i_ar_len==1
@@ -10650,7 +10675,7 @@ class Kibuvits_krl171bt4_arraycursor_t1
       if KIBUVITS_krl171bt4_b_DEBUG
          if i_ar_len==0
             kibuvits_krl171bt4_throw("\n\ni_ar_len == 0, which is contradictory here.\n"+
-            "\nGUID='1faa2aa5-6973-47da-8519-6170204017e7'\n\n")
+            "\nGUID='293a8771-4a99-4532-92f1-9210b03119e7'\n\n")
          end # if
       end # if KIBUVITS_krl171bt4_b_DEBUG
       return if i_ar_len==1
@@ -11042,7 +11067,7 @@ class Kibuvits_krl171bt4_spider_t1
             # Backtracking mechanisms need the trajectory max length to
             # be at least 1.
             kibuvits_krl171bt4_throw("\n\n@i_trajectory_maximum_recording_length==0\n"+
-            "GUID='b93c021d-f483-46cf-8209-6170204017e7'\n\n")
+            "GUID='40746c27-6548-4e96-83d1-9210b03119e7'\n\n")
          end # if
       end # if
    end # update_cahe_and_trajectory
@@ -12010,7 +12035,7 @@ class Kibuvits_krl171bt4_fs
          ar_fp.each do |s_fp|
             if !File.exists? s_fp
                kibuvits_krl171bt4_throw("The file or folder \n"+s_fp+
-               "\ndoes not exist. GUID='9307a923-7d79-407b-8509-6170204017e7'\n")
+               "\ndoes not exist. GUID='a5b43827-e81c-427e-81c1-9210b03119e7'\n")
             end # if
             if (File.writable? s_fp)&&(File.readable? s_fp)&&(File.executable? s_fp)
                if File.directory? s_fp
@@ -12035,7 +12060,7 @@ class Kibuvits_krl171bt4_fs
             s_1="The folder " if File.directory? s_fp
             kibuvits_krl171bt4_throw(s_1+",\n"+s_fp+
             "\nexists, but its access rights could not be changed to 7 for \n"+
-            "the owner of the current process. GUID='a4d73f2a-74fb-4664-81f8-6170204017e7'")
+            "the owner of the current process. GUID='21eee3e7-3654-4286-81b1-9210b03119e7'")
          end # loop
       end # synchronize
    end # chmod_recursive_secure_7
@@ -12064,7 +12089,7 @@ class Kibuvits_krl171bt4_fs
             kibuvits_krl171bt4_throw("There exists some sort of a flaw, because the "+s_1+"\n"+s_fp+
             "\ncould not be deleted despite the fact that recursive chmod-ding \n"+
             "takes, or at least should take, place before the recursive deletion.\n"+
-            "GUID='88766b3c-504c-4c2f-b2e8-6170204017e7'\n")
+            "GUID='b53b7c58-ddae-463d-a291-9210b03119e7'\n")
          end # if
       end # loop
    end # impl_rm_fr_part_1
@@ -12109,7 +12134,7 @@ class Kibuvits_krl171bt4_fs
             # and the Pathname.new("/").to_s=="/"
             if !File.writable? s_parent_path
                kibuvits_krl171bt4_throw("Folder \n"+s_parent_path+
-               "\nis not writable. GUID='1a17e428-564b-41ab-a5d8-6170204017e7'\n")
+               "\nis not writable. GUID='7f0ea82d-4771-4c99-8281-9210b03119e7'\n")
             end # if
             s_fp=s_file_or_folder_path
             chmod_recursive_secure_7(s_fp) # throws, if the chmod-ding fails
@@ -12225,7 +12250,7 @@ class Kibuvits_krl171bt4_fs
             s_default_msg="\n\""+x_candidate.to_s+
             "\",\n is not considered to be suitable for a "+
             "file or folder base name. \n"+
-            "GUID='a2c4a34b-9362-4e08-81c8-6170204017e7'\n\n"
+            "GUID='4120c722-9ee2-4646-b171-9210b03119e7'\n\n"
             #s_message_id="throw_1"
             #b_failure=false
             #msgcs.cre(s_default_msg,s_message_id,b_failure)
@@ -12243,7 +12268,7 @@ class Kibuvits_krl171bt4_fs
          #    s_default_msg="\n\""+x_candidate.to_s+
          #    "\",\n is not considered to be suitable for a "+
          #    "file or folder base name. \n"+
-         #    "GUID='2d74af14-5b89-401c-91b8-6170204017e7'\n\n"
+         #    "GUID='59de08c4-6551-4c22-a461-9210b03119e7'\n\n"
          #s_message_id="throw_1"
          #b_failure=false
          #msgcs.cre(s_default_msg,s_message_id,b_failure)
@@ -12486,7 +12511,7 @@ class Kibuvits_krl171bt4_fs
                   "and the number of its parameters == "+i_ar_params_len.to_s+", but \n"+
                   "it is required to have exactly 1 parameter that is "+
                   "of type String and depicts a full path of a file or a folder.\n"+
-                  "GUID='d27f3e11-2fcb-4b16-b4b8-6170204017e7'\n")
+                  "GUID='3507c013-51a8-4dc3-b241-9210b03119e7'\n")
                end # if
                ar_paramdesc=ar_params[0]
                if ar_paramdesc[0]!=:req
@@ -12494,7 +12519,7 @@ class Kibuvits_krl171bt4_fs
                   "is referenced by the \n"+
                   "ar_or_s_path_prefixes_of_ignorable_folders_and_files_or_a_function \n"+
                   "is expected to be parameter that does not have a default value.\n"+
-                  "GUID='a463327d-45b9-43e7-9fa8-6170204017e7'\n")
+                  "GUID='19aee642-04c9-478b-a431-9210b03119e7'\n")
                end # if
             else
                kibuvits_krl171bt4_throw("The code of this function is faulty. \n"+
@@ -12502,7 +12527,7 @@ class Kibuvits_krl171bt4_fs
                "should have thrown before the control flow reaches this line.\n"+
                "ar_or_s_path_prefixes_of_ignorable_folders_and_files_or_a_function.class == "+
                cl_0.to_s+$kibuvits_krl171bt4_lc_linebreak+
-               "GUID='20e73a1c-a5f1-49c5-b598-6170204017e7'\n")
+               "GUID='325c3843-7dc6-4338-a321-9210b03119e7'\n")
             end # if
          end # if
       end # if
@@ -12585,7 +12610,7 @@ class Kibuvits_krl171bt4_fs
             if s_globstring.gsub(rgx_2,$kibuvits_krl171bt4_lc_emptystring).length==0
                kibuvits_krl171bt4_throw("There's a flaw.\n"+
                "s_globstring consists of only spaces or tabs or line breaks.\n"+
-               "GUID='eb1c2531-f3d3-4322-b188-6170204017e7'\n")
+               "GUID='47a0162c-e671-4738-a201-9210b03119e7'\n")
             end # if
             s_1=s_0.gsub(rgx_1,$kibuvits_krl171bt4_lc_emptystring)
             i_len_1=s_1.length
@@ -12593,7 +12618,7 @@ class Kibuvits_krl171bt4_fs
                kibuvits_krl171bt4_throw("There's a flaw.\n"+
                " s_globstring==\""+s_globstring+"\", but if it \n"+
                "is fed to the Dir.glob(...), then it globs the root folder. \n"+
-               "GUID='51e5e2d9-8ad4-4a11-8288-6170204017e7'\n")
+               "GUID='1fe33914-e332-410f-83f0-9210b03119e7'\n")
             end # if
          end # loop
       end # if
@@ -12751,7 +12776,7 @@ class Kibuvits_krl171bt4_fs
       if cl==Array
          kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,Proc,
          regex_or_ar_of_regex_or_func_that_returns_true_on_paths_that_will_be_part_of_output,
-         "GUID='c7770844-967c-49d9-a578-6170204017e7'")
+         "GUID='5e0710f3-8dd6-476f-a3e0-9210b03119e7'")
       else
          if cl==Proc
             x_0=regex_or_ar_of_regex_or_func_that_returns_true_on_paths_that_will_be_part_of_output.call(
@@ -12762,7 +12787,7 @@ class Kibuvits_krl171bt4_fs
       end # if
       s_output_message_language=$kibuvits_krl171bt4_lc_English
       b_throw=true
-      s_optional_error_message_suffix="GUID='46ea9866-0f8b-4d0e-b568-6170204017e7'"
+      s_optional_error_message_suffix="GUID='4070db23-e39e-491b-b2c0-9210b03119e7'"
       ht_test_failures=verify_access(ar_or_s_fp_directory,"readable,is_directory")
       exit_if_any_of_the_filesystem_tests_failed(ht_test_failures,
       s_output_message_language,b_throw,s_optional_error_message_suffix)
@@ -12782,7 +12807,7 @@ class Kibuvits_krl171bt4_fs
          kibuvits_krl171bt4_typecheck bn, [Array,Regexp],ar_or_rgx_file_path_regexes
          kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,Regexp,
          ar_or_s_fp_directory,
-         "GUID='91976b1c-0f0f-451e-8158-6170204017e7'\n")
+         "GUID='46194230-a4b4-404b-81b0-9210b03119e7'\n")
          if ar_or_s_fp_directory.class==Array
             ar_fp_root_folder_candidates=ar_or_s_fp_directory
             ht_failures=verify_access(ar_fp_root_folder_candidates,"is_directory,readable")
@@ -12791,7 +12816,7 @@ class Kibuvits_krl171bt4_fs
             b_throw=true,
             exit_if_any_of_the_filesystem_tests_failed(
             ht_failures,s_output_message_language,b_throw,
-            "GUID='e469d14c-71ff-49f2-b158-6170204017e7'\n")
+            "GUID='4ba10544-1e9b-4108-a290-9210b03119e7'\n")
          end # if
       end # if
       ar_fp_root_folders=Kibuvits_krl171bt4_ix.normalize2array(ar_or_s_fp_directory)
@@ -12803,7 +12828,7 @@ class Kibuvits_krl171bt4_fs
 
       Kibuvits_krl171bt4_ix.x_filter_t1(ar_or_ht_in,func_returns_true_if_element_is_part_of_output)
       raise(Exception.new("Pooleli, "+
-      "GUID='d55fb253-e60a-456b-8148-6170204017e7'\n"))
+      "GUID='8ac01a3c-6659-4192-9180-9210b03119e7'\n"))
    end # ar_glob_recursively_t2
 
    def Kibuvits_krl171bt4_fs.ar_glob_recursively_t2(ar_or_s_fp_directory,ar_or_rgx_file_path_regexes)
@@ -13393,7 +13418,7 @@ class Kibuvits_krl171bt4_file_intelligence
       cmd="diff --brief "+s_fp_1+$kibuvits_krl171bt4_lc_space+s_fp_2
       ht_stdstreams=kibuvits_krl171bt4_sh(cmd)
       Kibuvits_krl171bt4_shell.throw_if_stderr_has_content_t1(ht_stdstreams,
-      "GUID='3a3a241a-9dad-433d-a138-6170204017e7'\n")
+      "GUID='7231de4d-f2f2-44d8-b460-9210b03119e7'\n")
       s_stdout=ht_stdstreams[$kibuvits_krl171bt4_lc_s_stdout]
       return false if 0<s_stdout.length
       return true
@@ -13506,7 +13531,7 @@ class Kibuvits_krl171bt4_file_intelligence
          if msgcs.class==Kibuvits_krl171bt4_msgc_stack
             if msgcs.b_failure
                kibuvits_krl171bt4_throw("msgcs.b_failure==true\n"+
-               "GUID='b3dacf12-6862-4611-9128-6170204017e7'\n")
+               "GUID='4fb561b4-d3af-41ec-9450-9210b03119e7'\n")
             end # if
          end # if
       end # if
@@ -13526,12 +13551,12 @@ class Kibuvits_krl171bt4_file_intelligence
          "\nbut the file or folder name is not allowed to end with a slash\n"
          if b_throw_on_failure
             kibuvits_krl171bt4_throw(msg+
-            "GUID='e3e0005a-4d2f-49bd-b328-6170204017e7'\n")
+            "GUID='58d99132-0b85-41bf-b440-9210b03119e7'\n")
          else
             s_default_msg=msg
             s_message_id="e_0"
             b_failure=true
-            s_location_marker_GUID="f1038e48-fc63-451b-832d-6170204017e7"
+            s_location_marker_GUID="27b19b17-692a-433c-a2b6-9210b03119e7"
             msgcs.cre(s_default_msg,s_message_id,
             b_failure,s_location_marker_GUID)
             return $kibuvits_krl171bt4_lc_emptystring
@@ -13541,7 +13566,7 @@ class Kibuvits_krl171bt4_file_intelligence
       Kibuvits_krl171bt4_fs.verify_access(s_fp_file_or_folder,"readable",msgcs)
       if msgcs.b_failure
          kibuvits_krl171bt4_throw(msgcs.to_s+$kibuvits_krl171bt4_lc_linebreak+
-         "GUID='b6babc1e-e388-4139-9418-6170204017e7'\n")
+         "GUID='0c6b6c57-dfcc-421b-9220-9210b03119e7'\n")
       end # if
       s_fp_dest_parent_folder=nil
       if s_fp_backup_destination_folder==$kibuvits_krl171bt4_lc_dot
@@ -13554,12 +13579,12 @@ class Kibuvits_krl171bt4_file_intelligence
             # part of the s_fp=... line throws.
             if b_throw_on_failure
                kibuvits_krl171bt4_throw(e.to_s+$kibuvits_krl171bt4_lc_linebreak+
-               "GUID='74162c35-19eb-4079-9208-6170204017e7'\n")
+               "GUID='2d005725-397b-4373-b120-9210b03119e7'\n")
             else
                s_default_msg=e.to_s
                s_message_id="e_1"
                b_failure=true
-               s_location_marker_GUID="1616dcd8-3fca-4a2c-921d-6170204017e7"
+               s_location_marker_GUID="f38d7553-60dc-4ca9-8496-9210b03119e7"
                msgcs.cre(s_default_msg,s_message_id,
                b_failure,s_location_marker_GUID)
                return $kibuvits_krl171bt4_lc_emptystring
@@ -13569,7 +13594,7 @@ class Kibuvits_krl171bt4_file_intelligence
          if msgcs.b_failure
             if b_throw_on_failure
                kibuvits_krl171bt4_throw(msgcs.to_s+$kibuvits_krl171bt4_lc_linebreak+
-               "GUID='de55ff08-800f-4779-b2f7-6170204017e7'\n")
+               "GUID='34de6026-b214-4a91-b510-9210b03119e7'\n")
             else
                return $kibuvits_krl171bt4_lc_emptystring
             end # if
@@ -13581,7 +13606,7 @@ class Kibuvits_krl171bt4_file_intelligence
          if msgcs.b_failure
             if b_throw_on_failure
                kibuvits_krl171bt4_throw(msgcs.to_s+$kibuvits_krl171bt4_lc_linebreak+
-               "GUID='b0f45942-7934-45d4-92f7-6170204017e7'\n")
+               "GUID='041be429-6557-493e-8200-9210b03119e7'\n")
             else
                return $kibuvits_krl171bt4_lc_emptystring
             end # if
@@ -13596,7 +13621,7 @@ class Kibuvits_krl171bt4_file_intelligence
       if msgcs.b_failure
          if b_throw_on_failure
             kibuvits_krl171bt4_throw(msgcs.to_s+$kibuvits_krl171bt4_lc_linebreak+
-            "GUID='03001826-c9b2-4bde-a2e7-6170204017e7'\n")
+            "GUID='24c7cf45-a63b-46b8-a11f-9210b03119e7'\n")
          else
             return $kibuvits_krl171bt4_lc_emptystring
          end # if
@@ -13609,12 +13634,12 @@ class Kibuvits_krl171bt4_file_intelligence
       if 0<s_stderr.length
          if b_throw_on_failure
             Kibuvits_krl171bt4_shell.throw_if_stderr_has_content_t1(ht_stdstreams,
-            "GUID='9da79c58-d684-4e0f-81d7-6170204017e7'\n")
+            "GUID='32f26a65-aaad-48c5-aa1e-9210b03119e7'\n")
          else
             s_default_msg=s_stderr
             s_message_id="e_2"
             b_failure=true
-            s_location_marker_GUID="3bf64939-d297-4e4d-b4fc-6170204017e7"
+            s_location_marker_GUID="013626ef-42bc-4868-b286-9210b03119e7"
             msgcs.cre(s_default_msg,s_message_id,
             b_failure,s_location_marker_GUID)
             return $kibuvits_krl171bt4_lc_emptystring
@@ -13645,7 +13670,7 @@ class Kibuvits_krl171bt4_file_intelligence
       cmd=@s_lc_s_get_MIME_type_const_1+s_fp_normalized
       ht_stdstreams=kibuvits_krl171bt4_sh(cmd)
       Kibuvits_krl171bt4_shell.throw_if_stderr_has_content_t1(ht_stdstreams,
-      "GUID='d3e5b9f5-1c2f-45ec-98c7-6170204017e7'\n")
+      "GUID='c7e55375-5b19-4c7e-955e-9210b03119e7'\n")
       s_stdout=ht_stdstreams[$kibuvits_krl171bt4_lc_s_stdout]
       #----------------
       # Command
@@ -13678,7 +13703,7 @@ class Kibuvits_krl171bt4_file_intelligence
          b_throw=true
          Kibuvits_krl171bt4_fs.exit_if_any_of_the_filesystem_tests_failed(ht_test_failures,
          s_output_message_language,b_throw,
-         "GUID='a17ff713-b81e-4c3c-a3c7-6170204017e7'")
+         "GUID='1a901674-93d6-4faf-b41d-9210b03119e7'")
       end # if
       s_ostype=Kibuvits_krl171bt4_os_codelets.get_os_type
       s_out=nil
@@ -13687,7 +13712,7 @@ class Kibuvits_krl171bt4_file_intelligence
       else
          kibuvits_krl171bt4_throw("Operating system type \n\""+
          s_ostype+"\" is not yet supported by this function.\n"+
-         "GUID='018ca31c-2cdb-405e-a5b7-6170204017e7'")
+         "GUID='30078293-a067-47b6-993c-9210b03119e7'")
       end # if
       return s_out
    end # s_get_MIME_type
@@ -13716,7 +13741,7 @@ class Kibuvits_krl171bt4_file_intelligence
             kibuvits_krl171bt4_throw("s_mimetype == "+s_mimetype+
             "\nis not a MIME type, because it does not contain the \n"+
             "slash character (\"/\").\n"+
-            "GUID='26427a75-ab5c-41ce-92a7-6170204017e7'\n\n")
+            "GUID='12a74d25-5114-49e6-9f4b-9210b03119e7'\n\n")
          end # if
          #--------
       end # if
@@ -13941,7 +13966,7 @@ class Kibuvits_krl171bt4_eval_bridge
    def initialize
       @s_scriptfile_extension="_is_meant_to_be_set_in_sibling_classes"
       @s_bridge_name="<bridge name not set. GUID=="+
-      "'df4d801e-bbe3-4215-9597-6170204017e7'>"
+      "'444dd881-733b-4444-b21a-9210b03119e7'>"
    end #initialize
 
    # It's a hook for modifying the s_script prior to writing
@@ -14297,14 +14322,14 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
          else
             kibuvits_krl171bt4_throw("ht_dependency_relations[\""+s_key+"\"].class=="+
             s_clname+", which is not supported in this role."+
-            "\nGUID=='4ad23224-5489-438b-8487-6170204017e7'")
+            "\nGUID=='a3705b9b-3e16-4128-bb2a-9210b03119e7'")
          end # case x_value.class
       end # loop
       if ht_dependency_relations.has_key? s_dependent_object_name
          kibuvits_krl171bt4_throw("ht_dependency_relations.has_key?("+
          "s_dependent_object_name)==true, "+
          "s_dependent_object_name=="+s_dependent_object_name+
-         "\nGUID=='2a5ab72a-000d-4b88-9177-6170204017e7'")
+         "\nGUID=='a5659a57-281e-43b1-a9a9-9210b03119e7'")
       end # if
    end # verify_ht_dependency_relations_format
 
@@ -14321,7 +14346,7 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
       if !ob.respond_to? sym_avail
          kibuvits_krl171bt4_throw("Object with the name "+s_ob_name+
          " exist, but it does not have a public method called "+sym_avail.to_s+
-         "\nGUID='59dd834d-fb6b-4090-8277-6170204017e7'.")
+         "\nGUID='4b926893-d1ab-4a82-8e58-9210b03119e7'.")
       end # if
       if ht_cycle_detection_opmem.has_key? s_ob_name
          # This if-clause here has to be before the
@@ -14351,7 +14376,7 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
          i_n_of_keys=ar_ht_row_keys.length
          if i_n_of_keys!=1
             kibuvits_krl171bt4_throw("i_n_of_keys=="+i_n_of_keys.to_s+
-            "\nGUID='3d72045f-1da8-4f9c-b467-6170204017e7'.")
+            "\nGUID='719bca0d-8f0f-4e31-9417-9210b03119e7'.")
          end # if
       end # if
       s_ix0_ob_name=ar_ht_row_keys[0]
@@ -14368,7 +14393,7 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
       else
          if cl_x_substs!=Array
             kibuvits_krl171bt4_throw("cl_x_substs=="+cl_x_substs.to_s+
-            "\nGUID='c3ce0b4c-e967-433a-a457-6170204017e7'.")
+            "\nGUID='18b9854e-4fff-4eac-8126-9210b03119e7'.")
          end # if
       end # if
       ar_subst=x_substs
@@ -14501,7 +14526,7 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
          if ht_objects.size==0
             kibuvits_krl171bt4_throw("ht_objects.size==0, but the ht_objects \n"+
             "must contain at least the dependent object."+
-            ".\nGUID='8e169d24-8dc4-4041-b247-6170204017e7'.")
+            ".\nGUID='40ca42e5-dd7a-4e59-9d16-9210b03119e7'.")
          end # if
          sym_avail=s_or_sym_method
          sym_avail=s_or_sym_method.to_sym if s_or_sym_method.class==String
@@ -14510,14 +14535,14 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
             if !ob.respond_to? sym_avail
                kibuvits_krl171bt4_throw("Object with the name "+s_ob_name+
                "  does not have a public method called "+sym_avail.to_s+
-               "\nGUID='3fd73c59-54d7-496f-b347-6170204017e7'.")
+               "\nGUID='2aa70a01-f3b7-4634-9455-9210b03119e7'.")
             else
                i_par_len=ob.method(sym_avail).parameters.length
                if i_par_len!=2
                   kibuvits_krl171bt4_throw("Object with the name "+s_ob_name+
                   "  does have a public method called "+sym_avail.to_s+
                   ",\nbut the number of parameters of that method equals "+i_par_len.to_s+
-                  ".\nGUID='02b7dc10-5614-4f61-a137-6170204017e7'.")
+                  ".\nGUID='11b7e6b3-40ce-48c4-8c34-9210b03119e7'.")
                end # if
             end # if
          end # loop
@@ -14530,13 +14555,13 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
             kibuvits_krl171bt4_throw("Object with the name "+s_ob_name+
             "  does have a public method called "+sym_avail.to_s+
             ",\nbut the number of parameters of that method equals "+i_par_len.to_s+
-            ".\nGUID='e77ee545-75e5-490a-b527-6170204017e7'.")
+            ".\nGUID='c3ff77d5-7041-4d72-b353-9210b03119e7'.")
          end # if
       end # if KIBUVITS_krl171bt4_b_DEBUG
       ht_out=Hash.new
       if fd_threshold<0
          kibuvits_krl171bt4_throw("fd_threshold=="+fd_threshold.to_s+" < 0"+
-         "\nGUID='5eba5dc5-dfd7-4ac9-a217-6170204017e7'.")
+         "\nGUID='da10c394-3bb7-4c2f-a372-9210b03119e7'.")
       end # if
       if ht_dependency_relations.keys.size==0 # dependencies do not exist
          fd_out=fd_threshold
@@ -14575,7 +14600,7 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
             if KIBUVITS_krl171bt4_b_DEBUG
                if s_1!=s_key
                   kibuvits_krl171bt4_throw("s_1=="+s_1.to_s+",  s_key=="+s_key.to_s+
-                  "\nGUID='29006625-03ae-418f-a217-6170204017e7'.")
+                  "\nGUID='3809fb35-9d2a-46d7-8e30-9210b03119e7'.")
                end # if
             end # if
             ht_out[s_1]=ht_out_row[s_1]
@@ -14598,7 +14623,7 @@ class Kibuvits_krl171bt4_dependencymetrics_t1
       end # loop
       if fd_out<0
          kibuvits_krl171bt4_throw("fd_out=="+fd_out.to_s+" < 0 "+
-         "\nGUID='59bb6233-7ac3-4516-b407-6170204017e7'.")
+         "\nGUID='1f7edca2-b476-4296-9f1f-9210b03119e7'.")
       end # if
       ht_cycle_detection_opmem.delete(s_dependent_object_name)
       return fd_out, ht_out
@@ -14772,7 +14797,7 @@ class Kibuvits_krl171bt4_coords
       end # if
       kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
       1,[i_initial_width,i_initial_height,i_new_edge_length],
-      "\nGUID=='a758e92b-4c76-40b5-83f6-6170204017e7'\n")
+      "\nGUID=='d241f7d1-49d9-438d-903e-9210b03119e7'\n")
 
       i_width_out=i_initial_width
       i_height_out=i_initial_height
@@ -15461,14 +15486,14 @@ class Kibuvits_krl171bt4_comments_detector
       state=ht_opmem[@lc_state]
       if state==@lc_state_in_singleliner
          kibuvits_krl171bt4_throw "state_in_singleliner, "+
-         'GUID=="04c19763-f47c-4b39-a2ec-6170204017e7" '
+         'GUID=="5668b91c-53b8-4f4e-b166-9210b03119e7" '
       end # if
       if state==@lc_state_in_string
          ht_opmem[@lc_state]=@lc_state_in_search
          ht_container=(ht_opmem[@lc_ar_ht])[0]
          s="\nIn analyze_line the line ended in the "+
          "state @lc_state_in_string \n"+
-         'GUID=="07188b54-cd30-46b5-93cc-6170204017e7", '+
+         'GUID=="ec2cf911-58e3-4fad-a446-9210b03119e7", '+
          'line_number=='+(ht_opmem[@lc_line_number]).to_s+
          ",\nstring start token =="+
          ((ht_container[@lc_ht_tag])[@lc_start_tag]).to_s+
@@ -16796,12 +16821,12 @@ class Kibuvits_krl171bt4_apparch_specific
       #--------
       s_lang_name=Kibuvits_krl171bt4_file_intelligence.file_language_by_file_extension(
       s_fp_src,msgcs)
-      msgcs.assert_lack_of_failures("GUID='32cd32c1-5206-4a5a-87e6-6170204017e7'")
+      msgcs.assert_lack_of_failures("GUID='2ec11524-e196-4e2d-922d-9210b03119e7'")
       ar_s_singleliner_prefixes=Kibuvits_krl171bt4_comments_detector.ar_get_singleliner_comment_start_tags(
       s_lang_name,msgcs)
-      msgcs.assert_lack_of_failures("GUID='b03e3539-9a8d-44e3-85e6-6170204017e7'")
+      msgcs.assert_lack_of_failures("GUID='d46acddc-7bd1-448c-955c-9210b03119e7'")
       kibuvits_krl171bt4_assert_array_min_length(bn,ar_s_singleliner_prefixes,1,
-      "GUID='57b08d11-c9dc-43a9-92d6-6170204017e7'")
+      "GUID='16718c94-5b09-4bd7-b03c-9210b03119e7'")
       s_singleliner_prefix=ar_s_singleliner_prefixes[0]+$kibuvits_krl171bt4_lc_space
       #--------
       s_sl_prefix=s_singleliner_prefix+$kibuvits_krl171bt4_lc_space
@@ -17583,22 +17608,22 @@ class Kibuvits_krl171bt4_cg_php_t1
          #----
          s_varname=s_php_array_variable_name.sub(/^[$]/,$kibuvits_krl171bt4_lc_emptystring)
          kibuvits_krl171bt4_assert_ok_to_be_a_varname_t1(bn,s_varname,
-         "GUID='107afbd2-4023-43f1-93c6-6170204017e7'\n")
+         "GUID='d3960571-0180-431e-8c4b-9210b03119e7'\n")
          #----
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn, 1, i_row_length,
-         "GUID='0266ea8c-e2fb-48a9-b3b6-6170204017e7'\n")
+         "GUID='6fb2d4d5-fa7f-43c3-851a-9210b03119e7'\n")
          ar_cl=[Fixnum,Float,String]
          if ar_or_ht_of_numbers_or_strings.class==Array
             kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,
             ar_cl,ar_or_ht_of_numbers_or_strings,
-            "GUID='ca8d1162-007f-490c-85a6-6170204017e7'\n")
+            "GUID='50c38b03-331d-4807-b729-9210b03119e7'\n")
          else # ar_or_ht_of_numbers_or_strings.class==Hash
             ar_keys=ar_or_ht_of_numbers_or_strings.keys
             ar_values=ar_or_ht_of_numbers_or_strings.values
             kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,
-            ar_cl,ar_keys, "GUID='2bfe5b44-9554-4cdd-91a6-6170204017e7'\n")
+            ar_cl,ar_keys, "GUID='f264c21a-d844-4370-8018-9210b03119e7'\n")
             kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,
-            ar_cl,ar_values, "GUID='7051692a-8861-4362-a496-6170204017e7'\n")
+            ar_cl,ar_values, "GUID='b49ba54f-bf6b-410c-8a57-9210b03119e7'\n")
          end # if
       end # if
       #----------
@@ -17653,7 +17678,7 @@ class Kibuvits_krl171bt4_cg_php_t1
          kibuvits_krl171bt4_typecheck bn, ar_types, x_ruby_variable
          kibuvits_krl171bt4_typecheck bn, Fixnum, i_row_length
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn, 1, i_row_length,
-         "GUID='24fad0ef-95d3-4ded-9486-6170204017e7'\n")
+         "GUID='638cea84-7532-4b78-8d36-9210b03119e7'\n")
       end # if
       s_variable_name=kibuvits_krl171bt4_s_varvalue2varname(a_binding,x_ruby_variable)
       s_out=nil
@@ -17679,7 +17704,7 @@ class Kibuvits_krl171bt4_cg_php_t1
       else
          kibuvits_krl171bt4_throw("s_cl == "+s_cl+
          ", which is not yet supported by this method."+
-         "\n GUID='b0aeef32-5f44-4d3e-b376-6170204017e7'\n\n")
+         "\n GUID='f27ce96e-07b4-4caa-a526-9210b03119e7'\n\n")
       end # case s_cl
       return s_out
    end # s_var(a_binding,x_ruby_variable)
@@ -17784,7 +17809,7 @@ class Kibuvits_krl171bt4_cg_html_t1
          kibuvits_krl171bt4_typecheck bn, String, s_cell_tag_attributes
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          1, i_number_of_columns,
-         "\n GUID='d7a25f34-b0bf-4e16-9376-6170204017e7'\n\n")
+         "\n GUID='1c0e1645-a33e-47cd-be15-9210b03119e7'\n\n")
       end # if
       i_len=ar_cell_content_html.size
       ar_cells_0=nil
@@ -17919,9 +17944,9 @@ class Kibuvits_krl171bt4_numerics_set_0
       if KIBUVITS_krl171bt4_b_DEBUG
          bn=binding()
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
-         0, ixs_low,"\n GUID='1a04f93c-2156-46dd-b366-6170204017e7'\n\n")
+         0, ixs_low,"\n GUID='6b2fcf11-8617-4365-a824-9210b03119e7'\n\n")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
-         ixs_low, ixs_high,"\n GUID='0de12b2a-75f5-40a5-b256-6170204017e7'\n\n")
+         ixs_low, ixs_high,"\n GUID='3a5af0f4-df2c-4215-83f3-9210b03119e7'\n\n")
          kibuvits_krl171bt4_typecheck bn, Fixnum, ixs_low
          kibuvits_krl171bt4_typecheck bn, Fixnum, ixs_high
       end # if
@@ -17958,7 +17983,7 @@ class Kibuvits_krl171bt4_numerics_set_0
          # but may be in the future that might not be that crazy.
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_n
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,0,i_n,
-         "\n GUID='9a09091d-482e-4866-a446-6170204017e7'\n\n")
+         "\n GUID='4a27e0d5-8a19-4dd5-9532-9210b03119e7'\n\n")
       end # if
       i_out=1 # factorial(0)==1
       return i_out if i_n==0
@@ -18000,9 +18025,9 @@ def kibuvits_krl171bt4_combinatorical_variation(i_superset_size,i_subset_size)
       kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_superset_size
       kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_subset_size
       kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,0,i_subset_size,
-      "\n GUID='306ef15e-62ca-4fa5-8336-6170204017e7'\n\n")
+      "\n GUID='fff19e70-4603-4495-9831-9210b03119e7'\n\n")
       kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,i_subset_size,i_superset_size,
-      "\n GUID='cf671dc4-0408-4b43-9426-6170204017e7'\n\n")
+      "\n GUID='571d23d1-5227-45e3-8910-9210b03119e7'\n\n")
    end # if
    i_0=kibuvits_krl171bt4_factorial(i_superset_size)
    i_1=kibuvits_krl171bt4_factorial(i_superset_size-i_subset_size)
@@ -18017,9 +18042,9 @@ def kibuvits_krl171bt4_combination(i_superset_size,i_subset_size)
       kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_superset_size
       kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_subset_size
       kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,0,i_subset_size,
-      "\n GUID='4bce6a45-a6ea-49c1-8326-6170204017e7'\n\n")
+      "\n GUID='236efe0d-2684-45b5-ab50-9210b03119e7'\n\n")
       kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,i_subset_size,i_superset_size,
-      "\n GUID='fe2e8b54-f7e8-4e70-9416-6170204017e7'\n\n")
+      "\n GUID='ef1610b9-6ed9-4207-a85f-9210b03119e7'\n\n")
    end # if
    i_var=kibuvits_krl171bt4_combinatorical_variation(
    i_superset_size,i_subset_size)
@@ -18163,13 +18188,13 @@ class Kibuvits_krl171bt4_rng
          kibuvits_krl171bt4_typecheck bn, [Fixnum], i_n_of_calls_between_the_renewal_of_ob_random
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_n_of_calls_between_the_renewal_of_i_rand_ps
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
-         0, i_max,"\n GUID='102c3199-68a1-49d9-a406-6170204017e7'\n\n")
+         0, i_max,"\n GUID='52071f03-f5e4-435d-a25e-9210b03119e7'\n\n")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_n_of_calls_between_the_renewal_of_ob_random,
-         "\n GUID='7406ee36-8fc2-4b6e-84f5-6170204017e7'\n\n")
+         "\n GUID='c8427c5f-6a1b-4379-a5cd-9210b03119e7'\n\n")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_n_of_calls_between_the_renewal_of_i_rand_ps,
-         "\n GUID='5d7f2a74-e324-435a-a3f5-6170204017e7'\n\n")
+         "\n GUID='1ae27ac5-945d-4dfc-803c-9210b03119e7'\n\n")
       end # if
       #----------------------
       if i_n_of_calls_between_the_renewal_of_ob_random<=@i_rand_impl_1_callcount_ob_random
@@ -18211,7 +18236,7 @@ class Kibuvits_krl171bt4_rng
          bn=binding()
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_max
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
-         0, i_max,"\n GUID='4efa9a30-f329-4be2-83e5-6170204017e7'\n\n")
+         0, i_max,"\n GUID='f23b5471-a205-4503-8d1c-9210b03119e7'\n\n")
       end # if
       ob_random=@i_rand_impl_1_ob_random
       i_0=ob_random.rand(100)
@@ -18234,7 +18259,7 @@ class Kibuvits_krl171bt4_rng
          bn=binding()
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_max
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
-         0, i_max,"\n GUID='7d840e35-9680-4b3c-91d5-6170204017e7'\n\n")
+         0, i_max,"\n GUID='b474a985-8fd9-4c34-9d1b-9210b03119e7'\n\n")
       end # if
       i_out=@i_random_fast_t1_ob_random.rand(i_max+1)
       return i_out
@@ -18351,7 +18376,7 @@ class Kibuvits_krl171bt4_security_core
             if ar_of_ar_speedhack.size!=i_number_of_columns
                msg="ar_of_ar_speedhack.size=="+ar_of_ar_speedhack.size.to_s+
                " != i_number_of_columns=="+i_number_of_columns.to_s
-               "GUID='226678b3-7424-4f0b-bec5-6170204017e7'"
+               "GUID='23e92222-262b-4e6f-b41a-9210b03119e7'"
                kibuvits_krl171bt4_throw(msg)
             end # if
          end # if
@@ -20054,11 +20079,11 @@ class Kibuvits_krl171bt4_security_core
          if cl==Array
             i_ar_lenght=i_lenght_or_output_array.size
             kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
-            0, i_ar_lenght,"\n GUID='f17e5845-218d-4fae-a4c5-6170204017e7'\n\n")
+            0, i_ar_lenght,"\n GUID='d4ec6f5c-b092-4472-ae58-9210b03119e7'\n\n")
          else
             kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
             0, i_lenght_or_output_array,
-            "\n GUID='0494b33b-fed3-4466-81b5-6170204017e7'\n\n")
+            "\n GUID='15d8bf92-c889-4b09-a536-9210b03119e7'\n\n")
          end # if
       end # if
       #----------
@@ -20144,17 +20169,17 @@ class Kibuvits_krl171bt4_security_core
          if i_ar_params_len!=1
             kibuvits_krl171bt4_throw("i_ar_params_len == "+
             i_ar_params_len.to_s+" != 1\n"+
-            "GUID='e91d0638-7388-4d32-a4a5-6170204017e7'\n")
+            "GUID='e4c3cea5-ea93-420b-8626-9210b03119e7'\n")
          end # if
          ar_paramdesc=ar_params[0]
          if ar_paramdesc[0]!=:req
             kibuvits_krl171bt4_throw("ar_paramdesc[0]=="+ar_paramdesc[0].to_s+
-            "GUID='4e4122e3-3ced-41b2-8d95-6170204017e7'\n")
+            "GUID='32514293-3415-4bcd-9245-9210b03119e7'\n")
          end # if
          #-----------
          i_alphabet_max_index=i_alphabet_length-1
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,1,i_alphabet_max_index,
-         "GUID='24bf0205-bb65-4fbf-9395-6170204017e7'\n")
+         "GUID='3ef96e93-fea3-4a26-a844-9210b03119e7'\n")
          #-----------
          i_0=20
          i_0=i_alphabet_length if i_alphabet_length<i_0
@@ -20169,7 +20194,7 @@ class Kibuvits_krl171bt4_security_core
                if i_ar_keyvalue_pair_len!=2
                   kibuvits_krl171bt4_throw("i_ar_keyvalue_pair_len == "+
                   i_ar_keyvalue_pair_len.to_s+" != 2 \n"+
-                  "GUID='283bf643-a54d-488a-ad85-6170204017e7'\n")
+                  "GUID='43af1e23-5f0d-4b38-b053-9210b03119e7'\n")
                end # if
                i_key=ar_keyvalue_pair[0]
                i_value=ar_keyvalue_pair[1]
@@ -20223,7 +20248,7 @@ class Kibuvits_krl171bt4_security_core
       bn=binding()
       kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_year if KIBUVITS_krl171bt4_b_DEBUG
       kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,2014,i_year,
-      "GUID='3ce9bf51-d3aa-4058-b575-6170204017e7'\n")
+      "GUID='329a62bb-7b6c-47c3-8922-9210b03119e7'\n")
       #------------------
       # According to
       # http://www.theguardian.com/world/2014/feb/12/utah-lawmaker-nsa-data-centre-water-supply
@@ -20304,11 +20329,11 @@ class Kibuvits_krl171bt4_security_core
       if KIBUVITS_krl171bt4_b_DEBUG
          bn=binding()
          kibuvits_krl171bt4_typecheck(bn, [Fixnum,Bignum], i_cleartext_or_chiphertext,
-         "GUID='ee19f5a9-fa6d-4948-a565-6170204017e7'")
+         "GUID='d33441ed-0bc0-4b44-a952-9210b03119e7'")
          kibuvits_krl171bt4_typecheck(bn, [Fixnum,Bignum], i_key,
-         "GUID='d207d638-f2e7-480a-9255-6170204017e7'")
+         "GUID='37e5c254-a21a-4e07-a551-9210b03119e7'")
          kibuvits_krl171bt4_typecheck(bn, [Fixnum,Bignum], i_m,
-         "GUID='87e32f10-a94a-4f47-a155-6170204017e7'")
+         "GUID='428b32f1-6415-456d-9110-9210b03119e7'")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,2,m)
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,0,aa)
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,0,bb)
@@ -20605,7 +20630,7 @@ class Kibuvits_krl171bt4_hash_plaice_t1
             bn=binding()
             kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
             (i_delta+1),i_len_alphabet, "There's a flaw in the code.\n"+
-            "GUID='bb44a819-e929-41c5-a245-6170204017e7'\n\n")
+            "GUID='4ff9df15-3a13-4b5a-a32f-9210b03119e7'\n\n")
          end # if
          while ix_ar_opmem<i_opmem_length
             i_char=(i_char+i_delta)%i_len_alphabet
@@ -20657,7 +20682,7 @@ class Kibuvits_krl171bt4_hash_plaice_t1
                # be assembled at every call to the typecheck.
                kibuvits_krl171bt4_typecheck(bn, Fixnum, i_char,
                "\n ix_ar_x_in_cursor=="+ix_ar_x_in_cursor.to_s+
-               "\nGUID='89be582f-600b-4260-9135-6170204017e7'")
+               "\nGUID='4c438b42-12c6-4263-b75e-9210b03119e7'")
             end # if
             #---------
             ar_opmem_raw[ix]=i_char
@@ -20685,7 +20710,7 @@ class Kibuvits_krl171bt4_hash_plaice_t1
       if KIBUVITS_krl171bt4_b_DEBUG
          bn=binding()
          kibuvits_krl171bt4_assert_arrayix(bn,ar_substboxes,i_substitution_box_index,
-         "GUID='2c472470-78f0-4ecd-a125-6170204017e7'\n")
+         "GUID='28c6c233-e163-4147-a42d-9210b03119e7'\n")
       end # if
       ht_substbox=ar_substboxes[i_substitution_box_index]
       #-----------
@@ -21009,10 +21034,10 @@ class Kibuvits_krl171bt4_hash_plaice_t1
          kibuvits_krl171bt4_typecheck bn, Fixnum, i_minimum_n_of_rounds
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,1,
          i_headerless_hash_length,
-         "GUID='2d774ec1-6fe4-4a43-85d4-6170204017e7'\n")
+         "GUID='a324a364-73e6-43ff-bfdd-9210b03119e7'\n")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,1,
          i_minimum_n_of_rounds,
-         "GUID='101e7253-1eb6-47ce-a2c4-6170204017e7'\n")
+         "GUID='957edb20-9857-4921-b33c-9210b03119e7'\n")
       end # if
       #---------------
       # The next step is essential for making sure
@@ -21087,7 +21112,7 @@ class Kibuvits_krl171bt4_hash_plaice_t1
             "alphabet that this hash function uses.\n"+
             "The character is missing ONLY because the \n"+
             "hash algorithm implementation is flawed.\n"+
-            "GUID='234550c5-5ad8-4e88-b5b4-6170204017e7'\n\n")
+            "GUID='f1167ca7-cc1f-4534-955b-9210b03119e7'\n\n")
             # That situation can actually happen in real life.
             # Hopefully the exception text allows somewhat
             # gradual degradation by trying to give the end
@@ -21397,10 +21422,10 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum],i_estimated_standard_deviation_of_lengths_of_nonnormalized_cleartexts
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_estimated_median_of_lengths_of_nonnormalized_cleartexts,
-         "\n GUID='f3a40236-2bfb-4f15-a2b4-6170204017e7'\n\n")
+         "\n GUID='1f944ff2-80af-402e-a01a-9210b03119e7'\n\n")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_estimated_standard_deviation_of_lengths_of_nonnormalized_cleartexts,
-         "\n GUID='dbedff24-6545-43c6-94a4-6170204017e7'\n\n")
+         "\n GUID='2641fbb1-6b3b-4f7a-bd59-9210b03119e7'\n\n")
       end # if
       #---------
       i_normalized_cleartext_len_min=i_estimated_median_of_lengths_of_nonnormalized_cleartexts+
@@ -21505,7 +21530,7 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
       if KIBUVITS_krl171bt4_b_DEBUG
          bn=binding()
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
-         #msgcs.assert_lack_of_failures("GUID='7dbfb818-3a19-46e1-a594-6170204017e7'")
+         #msgcs.assert_lack_of_failures("GUID='c17945b5-1c4f-4bf2-9159-9210b03119e7'")
       end # if
       msgc=msgcs.last
       msgc.x_data=ht
@@ -21516,7 +21541,7 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
          bn=binding()
          kibuvits_krl171bt4_typecheck bn, Hash, ht
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
-         msgcs.assert_lack_of_failures("GUID='6e81ed2e-28e2-44b8-a284-6170204017e7'")
+         msgcs.assert_lack_of_failures("GUID='a2e48273-0688-4206-8e58-9210b03119e7'")
       end # if
       s_cleartext=ht[@s_lc_s_charstream_2]
       s_hash_orig=ht[$kibuvits_krl171bt4_lc_s_checksum_hash]
@@ -21529,7 +21554,7 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
          s_message_id=@@s_failure_id_checksum_failure_t1
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "1a03a395-2d89-49b9-94bc-6170204017e7")
+         "84b45d14-e1e7-4f1f-8226-9210b03119e7")
          s_normalize_t1_extract_cleartext_add_x_data_2_msgc(ht,msgcs)
       end # if
       return s_cleartext
@@ -21545,7 +21570,7 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
          kibuvits_krl171bt4_typecheck bn, String, s_in
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
          msgcs.assert_lack_of_failures(
-         "GUID='a7e11093-05a4-4051-b174-6170204017e7'")
+         "GUID='43f28d34-7855-4b7c-9e47-9210b03119e7'")
       end # if
       #-------
       ix_0=s_in.index($kibuvits_krl171bt4_lc_pillar)        # "xx|abc|yyy".index("|") == 2
@@ -21556,7 +21581,7 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
       #-------
       ht=Kibuvits_krl171bt4_ProgFTE.to_ht(s_progfte)
       kibuvits_krl171bt4_assert_ht_has_keys(bn,ht,@ar_of_key_candidates,
-      "GUID='194930d3-78b1-466d-a374-6170204017e7'")
+      "GUID='62bb96d1-c908-48c5-be36-9210b03119e7'")
       s_format_version=ht[$kibuvits_krl171bt4_lc_s_format_version]
       if s_format_version!=@@s_format_version_t1
          s_default_msg="The s_format_version == "+s_format_version+
@@ -21564,7 +21589,7 @@ class Kibuvits_krl171bt4_cleartext_length_normalization
          s_message_id="text_length_denormalization_failure_t1"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "b9a9dd12-6332-41d1-b49c-6170204017e7")
+         "b57ebb20-8632-46df-8406-9210b03119e7")
          s_normalize_t1_extract_cleartext_add_x_data_2_msgc(ht,msgcs)
       end # if
       s_out=s_verify_cleartext_integrity(ht,msgcs)
@@ -21704,7 +21729,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          kibuvits_krl171bt4_typecheck bn, Fixnum, i_max_number_of_bytes_per_character
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          1, [i_key_length,i_max_number_of_bytes_per_character],
-         "\n GUID='2cb571c8-457b-48c6-a464-6170204017e7'")
+         "\n GUID='4406c6e4-a74b-4b20-9525-9210b03119e7'")
       end # if
       ht_key=Hash.new
       ht_key[@s_lc_i_n_of_datasalt_digits]=@@i_n_of_datasalt_digits
@@ -21757,15 +21782,15 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
    def exc_verify_t1(bn,ht_key)
       kibuvits_krl171bt4_typecheck bn, Hash, ht_key
       kibuvits_krl171bt4_assert_ht_has_keys(bn,ht_key, [@s_lc_s_key_id,$kibuvits_krl171bt4_lc_ar,$kibuvits_krl171bt4_lc_i_m],
-      "\n GUID='2f4ca62e-763d-4ecc-a354-6170204017e7'")
+      "\n GUID='3fff2ef5-2f75-4338-aa24-9210b03119e7'")
       ar=ht_key[$kibuvits_krl171bt4_lc_ar]
       kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,
       [Fixnum,Bignum], ar,
-      "\n GUID='1e315a2e-2214-4f0a-9144-6170204017e7'")
+      "\n GUID='4514ea79-5712-4554-8a83-9210b03119e7'")
       s_key_type=ht_key[@s_lc_s_key_type]
       if s_key_type!=@s_key_type_t1
          kibuvits_krl171bt4_throw("s_key_type == "+s_key_type+" != "+@s_key_type_t1+
-         "\n GUID='5a044cc5-54dd-40a4-8c44-6170204017e7'")
+         "\n GUID='2007fcb2-5006-4158-bc22-9210b03119e7'")
       end # if
    end # exc_verify_t1
 
@@ -21892,12 +21917,12 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          # The 2 digits are related to the encoding of
          # the 1 packet in the quartet.
          kibuvits_krl171bt4_throw("i_saltfree_data_max == "+i_saltfree_data_max.to_s+" < 100 "+
-         "\n GUID='1bc93234-05b3-4302-8434-6170204017e7'")
+         "\n GUID='743192ef-f877-499d-8b2b-9210b03119e7'")
       end # if
       ar_key=ht_key[$kibuvits_krl171bt4_lc_ar]
       i_ar_key_len=ar_key.size
       if i_ar_key_len==0
-         kibuvits_krl171bt4_throw("GUID='2a97b125-ee06-4a17-9b24-6170204017e7'")
+         kibuvits_krl171bt4_throw("GUID='539494b3-3f65-4e03-a42a-9210b03119e7'")
       end # if
       i_ar_key_ix_max=i_ar_key_len-1
       func_encrypt_0=lambda do |i_cleartext|
@@ -21975,7 +22000,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          when 3
             i_location_masked=(s_0+(Kibuvits_krl171bt4_rng.i_random_fast_t1(2)+7).to_s).to_i
          else
-            kibuvits_krl171bt4_throw("GUID='7076155e-56e5-477e-a214-6170204017e7'")
+            kibuvits_krl171bt4_throw("GUID='15340cb2-1039-49a5-9918-9210b03119e7'")
          end # case i_location
          #-------
          s_packet_location=((i*4).to_s+$kibuvits_krl171bt4_lc_equalssign)
@@ -22035,7 +22060,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          exc_verify_t1(bn,ht_key)
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
          msgcs.assert_lack_of_failures(
-         "GUID='377e502c-376f-4ae4-9514-6170204017e7'")
+         "GUID='114a0a23-c47b-4e41-9647-9210b03119e7'")
       end # if
       #--------------
       s_cleartext=$kibuvits_krl171bt4_lc_equalssign
@@ -22044,7 +22069,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
       i_ar_s_packets_len=ar_s_packets.size
       if i_ar_s_packets_len%4!=0
          kibuvits_krl171bt4_throw("Packets are required to form quartets."+
-         "\n GUID='5a52a8b1-e10e-47f6-9404-6170204017e7'")
+         "\n GUID='ed71dbf3-5fbc-463d-b235-9210b03119e7'")
       end # if
       s_packet=nil
       s_packet_0=nil
@@ -22074,7 +22099,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          ar_0=s_packet_0.split($kibuvits_krl171bt4_lc_equalssign)
          if ar_0.size!=2
             kibuvits_krl171bt4_throw("ar_0.size=="+ar_0.size.to_s+
-            "\n GUID='7b31c827-5e98-44b6-93f3-6170204017e7'")
+            "\n GUID='05e7ba2d-e156-41bf-b5f4-9210b03119e7'")
          end # if
          s_packet=ar_0[1]
          i_00=func_decrypt_0.call(s_packet)
@@ -22173,10 +22198,10 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          kibuvits_krl171bt4_typecheck bn, [Fixnum,Bignum], i_estimated_standard_deviation_of_lengths_of_nonnormalized_cleartexts
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_estimated_median_of_lengths_of_nonnormalized_cleartexts,
-         "\n GUID='8efc8d52-28b4-4c6b-a1e3-6170204017e7'\n\n")
+         "\n GUID='1c325097-808b-4757-9042-9210b03119e7'\n\n")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, i_estimated_standard_deviation_of_lengths_of_nonnormalized_cleartexts,
-         "\n GUID='75bdd94c-8ec1-4f9e-93d3-6170204017e7'\n\n")
+         "\n GUID='362e4714-dda0-4df1-9451-9210b03119e7'\n\n")
       end # if
       #-----
       s_key_type=ht_key[@s_lc_s_key_type]
@@ -22187,7 +22212,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          # is missing a proper key type verification.
          kibuvits_krl171bt4_throw("ht_key[\"s_key_type\"] == "+s_key_type+
          " != "+@s_key_type_t1+
-         "\n GUID='36f13e8d-3b32-49d1-b2d3-6170204017e7'")
+         "\n GUID='f5dc6b12-a229-4477-a920-9210b03119e7'")
       end # if
       #-----
       ar_s=[s_prefix_of_the_output_string]
@@ -22231,7 +22256,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          exc_verify_t1(bn,ht_key)
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
          msgcs.assert_lack_of_failures(
-         "GUID='d968ce17-d42d-4690-93c3-6170204017e7'")
+         "GUID='41a4aeb8-3468-4286-ab1e-9210b03119e7'")
       end # if
       #--------------
       s_out=$kibuvits_krl171bt4_lc_emptystring
@@ -22247,7 +22272,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          s_message_id="cryptocodec_mismatch_t1"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "9231f615-e054-4993-858c-6170204017e7")
+         "4b32bf12-158e-4f0f-94e5-9210b03119e7")
          return s_out
       end # if
       #-----
@@ -22262,7 +22287,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          # there's no point of verifying the key type.
          kibuvits_krl171bt4_throw("ht_key[\"s_key_type\"] == "+s_key_type+
          " != "+@s_key_type_t1+
-         "\n GUID='17a0d3e4-fc14-4aaa-a2b3-6170204017e7'")
+         "\n GUID='1ddd44c5-ccd3-41e0-ae2d-9210b03119e7'")
       end # if
       #-----
       # The key ID verification has to be _after_ the
@@ -22280,7 +22305,7 @@ class Kibuvits_krl171bt4_cryptcodec_txor_t1
          s_message_id="decrytion_key_mismatch_t1"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "8fe7de2f-ce14-488d-b56c-6170204017e7")
+         "3b28da1f-7a90-4577-a5d5-9210b03119e7")
          return s_out
       end # if
       ht.clear
@@ -22377,7 +22402,7 @@ class Kibuvits_krl171bt4_data_transfer
    def exc_rsync_t1(s_fp_destination_folder,s_fp_origin)
       if !File.exists? s_fp_origin
          kibuvits_krl171bt4_throw("\nFile or folder \n"+s_fp_origin+
-         "\ndoes not exist. GUID='b502f83a-59f0-49bc-a5a3-6170204017e7'\n")
+         "\ndoes not exist. GUID='b3e1e09e-dbc2-41aa-a91b-9210b03119e7'\n")
       end # if
       s_output_message_language=$kibuvits_krl171bt4_lc_English
       b_throw=true;
@@ -22403,7 +22428,7 @@ class Kibuvits_krl171bt4_data_transfer
       if s_orig==s_fp_dest
          kibuvits_krl171bt4_throw("\n s_orig == s_fp_dest = \""+s_fp_dest +
          "\"\n but the rsync does not throw on that."+
-         "\n GUID='4b97f05b-4aa5-42b4-a2a3-6170204017e7'\n")
+         "\n GUID='bb6a95be-90a4-4cf9-bf1a-9210b03119e7'\n")
       end # if
       #----------
       cmd="nice -n2 rsync -avz --delete "+s_orig+
@@ -22415,13 +22440,13 @@ class Kibuvits_krl171bt4_data_transfer
          if s_stdout.match(" speedup is ")==nil
             kibuvits_krl171bt4_throw("\ncmd=\""+cmd+
             "\"\n s_stdout=\""+s_stdout+"\""+
-            "\n GUID='cad28b15-b0ab-4a82-b183-6170204017e7'\n")
+            "\n GUID='338b96a3-0c9b-4c46-8b48-9210b03119e7'\n")
          end # if
       end # if
       if 0<s_stderr.length
          kibuvits_krl171bt4_throw("\ncmd=\""+cmd+
          "\"\n s_stderr=\""+s_stderr+"\""+
-         "\n GUID='581ffb13-b227-4c62-b583-6170204017e7'\n")
+         "\n GUID='4a5bb211-feaf-4b81-a147-9210b03119e7'\n")
       end # if
    end # exc_rsync_t1
 
@@ -22537,12 +22562,12 @@ class Kibuvits_krl171bt4_ImageMagick
          s_stdout=ht_stdstreams[$kibuvits_krl171bt4_lc_s_stdout]
          if s_stdout.length==0
             kibuvits_krl171bt4_throw("\nThe ImageMagick command line tool, \"identify\", "+
-            "is not at the PATH.\nGUID=='841a9a22-1262-49da-8273-6170204017e7'\n")
+            "is not at the PATH.\nGUID=='545ba247-7043-43cb-9435-9210b03119e7'\n")
          end # if
       end # if
       s_language=$kibuvits_krl171bt4_lc_English
       kibuvits_krl171bt4_assert_string_min_length(bn,s_image_file_full_path,3,
-      "\nGUID=='49323c04-23cd-445d-b263-6170204017e7'\n")
+      "\nGUID=='148917a2-5081-4c8d-ae14-9210b03119e7'\n")
 
       s_spec="is_file,readable"
       ht_failures=Kibuvits_krl171bt4_fs.verify_access(s_image_file_full_path,s_spec)
@@ -22551,7 +22576,7 @@ class Kibuvits_krl171bt4_ImageMagick
       s_message_id="file_access"
       if ht_failures.length!=0
          s_err_msg=Kibuvits_krl171bt4_fs.access_verification_results_to_string(
-         ht_failures,s_language)+"\nGUID=='955f672a-77ad-4727-b353-6170204017e7'\n"
+         ht_failures,s_language)+"\nGUID=='11174c41-173b-4093-bb43-9210b03119e7'\n"
          kibuvits_krl171bt4_throw(s_err_msg)
       end # if
 
@@ -22571,7 +22596,7 @@ class Kibuvits_krl171bt4_ImageMagick
 
       if 0<s_stderr.length
          s_err_msg="\ns_stderr=="+s_stderr+
-         "\nGUID=='d2ffb731-7d6a-4bdf-9153-6170204017e7'\n"
+         "\nGUID=='a4963204-18f5-4329-ab21-9210b03119e7'\n"
          kibuvits_krl171bt4_throw(s_err_msg)
       end # if
 
@@ -22580,7 +22605,7 @@ class Kibuvits_krl171bt4_ImageMagick
       rgx_size=/[\s][\d]+x[\d]+[\s]/
       md=s_stdout.match(rgx_size)
       if md==nil
-         s_err_msg="\nmd==nil\nGUID=='5a64a93b-ed96-45b3-a143-6170204017e7'\n"
+         s_err_msg="\nmd==nil\nGUID=='8352dd68-6759-42cf-b540-9210b03119e7'\n"
          kibuvits_krl171bt4_throw(s_err_msg)
       end # if
 
@@ -22591,7 +22616,7 @@ class Kibuvits_krl171bt4_ImageMagick
       ixs_low=1
       if ixs_high<=ixs_low
          s_err_msg="ixs_high == "+ixs_high.to_s+" <= ixs_low == "+ixs_low.to_s+
-         "\nGUID=='3249c132-1a09-4818-9233-6170204017e7'\n"
+         "\nGUID=='1a80c964-00f8-4fda-a72e-9210b03119e7'\n"
          kibuvits_krl171bt4_throw(s_err_msg)
       end # if
       s_width=s_size_haystack[ixs_low,(ixs_high-1)]
@@ -22601,7 +22626,7 @@ class Kibuvits_krl171bt4_ImageMagick
       ixs_high=s_size_haystack.length-1 # -1 due to the ending space
       if ixs_high<=ixs_low
          s_err_msg="ixs_high == "+ixs_high.to_s+" <= ixs_low == "+ixs_low.to_s+
-         "\nGUID=='8736b33e-8031-4ec2-b323-6170204017e7'\n"
+         "\nGUID=='24fdbae5-f326-40da-9d4d-9210b03119e7'\n"
          kibuvits_krl171bt4_throw(s_err_msg)
       end # if
       s_height=s_size_haystack[ixs_low,(ixs_high-1)]
@@ -22787,7 +22812,7 @@ class Kibuvits_krl171bt4_REDUCE
          kibuvits_krl171bt4_typecheck bn, String, s_reduce_source
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
          msgcs.assert_lack_of_failures(
-         "GUID=='286db222-a1b3-4fc4-a523-6170204017e7'")
+         "GUID=='56374be3-5777-4cf3-8a1c-9210b03119e7'")
       end # if
       if !b_REDUCE_available()
          s_default_msg="REDUCE Computer Algebra System "+
@@ -22795,7 +22820,7 @@ class Kibuvits_krl171bt4_REDUCE
          s_message_id="REDUCE_missing_from_PATH_t1"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "8633f414-8383-466e-935c-6170204017e7")
+         "50760552-c067-468d-83b5-9210b03119e7")
          return $kibuvits_krl171bt4_lc_emptystring
       end # if
       s_fp_source=Kibuvits_krl171bt4_os_codelets.generate_tmp_file_absolute_path()
@@ -22835,21 +22860,21 @@ class Kibuvits_krl171bt4_REDUCE
                s_default_msg<<"stdout:\n"
                s_default_msg<<s_stdout+$kibuvits_krl171bt4_lc_doublelinebreak
             end # if
-            s_default_msg<<"\n\nGUID=='25ad9811-8716-4f3b-8513-6170204017e7'"
+            s_default_msg<<"\n\nGUID=='31b69072-01a4-449b-ac3a-9210b03119e7'"
             s_message_id="REDUCE_run_failed_t1"
             b_failure=true
             msgcs.cre(s_default_msg,s_message_id,b_failure,
-            "59e6a862-db6e-44cc-b53c-6170204017e7")
+            "13a0e99e-687f-4bf5-b4a5-9210b03119e7")
             msgc=msgcs.last
             msgc.x_data=ht_stdstreams
          end # if
       rescue Exception => e
          s_default_msg="Something went wrong.\n\n"+e.to_s+
-         "\n\nGUID=='9417f611-4918-4f4b-8403-6170204017e7'"
+         "\n\nGUID=='50978842-3bd2-41d2-9959-9210b03119e7'"
          s_message_id="REDUCE_run_failed_t2"
          b_failure=true
          msgcs.cre(s_default_msg,s_message_id,b_failure,
-         "8b61b751-481b-4a34-952c-6170204017e7")
+         "fb596f23-c4ef-4208-b485-9210b03119e7")
       end # rescue
       File.delete s_fp_source if File.exists? s_fp_source
       if File.exists? s_fp_reduce_output
@@ -22954,16 +22979,16 @@ class Kibuvits_krl171bt4_REDUCE
          kibuvits_krl171bt4_typecheck bn, [String,Array], s_or_ar_variables_to_be_expressed
          kibuvits_krl171bt4_typecheck bn, Kibuvits_krl171bt4_msgc_stack, msgcs
          msgcs.assert_lack_of_failures(
-         "GUID=='31110028-f9b8-4b6a-81f2-6170204017e7'")
+         "GUID=='501426a5-4d46-4c0f-9e17-9210b03119e7'")
          if s_or_ar_equations_in_reduce_format.class==Array
             kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,String,
             s_or_ar_equations_in_reduce_format,
-            "GUID=='4271f263-2ecf-4be4-82e2-6170204017e7'")
+            "GUID=='3b483d13-2dde-4902-8936-9210b03119e7'")
          end # if
          if s_or_ar_variables_to_be_expressed.class==Array
             kibuvits_krl171bt4_assert_ar_elements_typecheck_if_is_array(bn,String,
             s_or_ar_variables_to_be_expressed,
-            "GUID=='8d24dd59-1444-4a0b-93e2-6170204017e7'")
+            "GUID=='356f52b9-a8d4-47b0-8155-9210b03119e7'")
          end # if
       end # if
       s_reduce_source=ht_solve_system_of_equations_t1_assemble_REDUCE_source(
@@ -23109,7 +23134,7 @@ class Application_main
       ar_s<<"LIST_OF_FULL_PATHS_TO_VIMWIKI_FOLDERS :== FF <full path to the textfile>\n"
       ar_s<<"                            FF :== '\e[33m--origin\e[39m' | '-origin' \n"
       ar_s<<$kibuvits_krl171bt4_lc_linebreak
-      ar_s<<"GUID=='f9e3d458-9ff6-4e3c-81d2-6170204017e7'\n"
+      ar_s<<"GUID=='819c79a2-b34b-4328-8214-9210b03119e7'\n"
       ar_s<<$kibuvits_krl171bt4_lc_linebreak
       #----------------------------------------
       @s_help=kibuvits_krl171bt4_s_concat_array_of_strings(ar_s)
@@ -23124,13 +23149,13 @@ class Application_main
       ht_args=Kibuvits_krl171bt4_argv_parser.run(@ht_grammar,ARGV,@msgcs)
       #--------------------
       @msgcs.assert_lack_of_failures(
-      "GUID=='31b62110-45f8-4a16-9ac2-6170204017e7'")
+      "GUID=='10eca4a3-6847-4b9d-a413-9210b03119e7'")
       #--------------------
       Kibuvits_krl171bt4_argv_parser.normalize_parsing_result(
       @ht_normalization_specification, ht_args, @msgcs)
       #--------------------
       @msgcs.assert_lack_of_failures(
-      "GUID=='128c2ada-e123-434b-92c2-6170204017e7'")
+      "GUID=='407b62e4-c556-4955-bb42-9210b03119e7'")
       #----------------------------------------
       return ht_args
    end # run_read_command_line_args
@@ -23179,9 +23204,9 @@ class Application_main
          kibuvits_krl171bt4_typecheck bn, String, s_fp_destination
          kibuvits_krl171bt4_typecheck bn, String, s_fp_origin
          kibuvits_krl171bt4_assert_string_min_length(bn,s_fp_destination,2,
-         "GUID='58c8452c-b98c-4b64-93b2-6170204017e7'\n")
+         "GUID='0233e517-ad05-48f1-8741-9210b03119e7'\n")
          kibuvits_krl171bt4_assert_string_min_length(bn,s_fp_origin,2,
-         "GUID='21e79115-0aa2-48c8-a1a2-6170204017e7'\n")
+         "GUID='d3ca7f42-575d-4d5c-8350-9210b03119e7'\n")
       end # if
       #--------------------
       ht_filesystemtest_failures=Kibuvits_krl171bt4_fs.verify_access(
@@ -23202,7 +23227,7 @@ class Application_main
          s_msg<<$kibuvits_krl171bt4_lc_linebreak
          s_msg<<("    "+s_fp_destination+$kibuvits_krl171bt4_lc_linebreak)
          s_msg<<$kibuvits_krl171bt4_lc_linebreak
-         s_msg<<"GUID=='27b0da26-2d29-4da9-b392-6170204017e7'\n"
+         s_msg<<"GUID=='f1d41c82-0200-43e9-be5f-9210b03119e7'\n"
          puts s_msg
       end # if
       #--------------------
@@ -23246,9 +23271,9 @@ class Application_main
          kibuvits_krl171bt4_typecheck bn, [TrueClass,FalseClass], b_run_in_debug_mode
          kibuvits_krl171bt4_typecheck_ar_content(bn,String,
          ar_fp_vimwiki_folder_path_candidates,
-         "GUID=='f761021e-2b06-4965-a592-6170204017e7'")
+         "GUID=='6b13c358-355d-443c-95af-9210b03119e7'")
          kibuvits_krl171bt4_assert_string_min_length(bn,s_fp_origin,2,
-         "GUID=='3950d42d-e018-4088-b482-6170204017e7'\n")
+         "GUID=='c4084c03-ba4e-4e9e-a92e-9210b03119e7'\n")
       end # if
       #----------------------------------------
       # In Bash the "/////tmp/Foo/////Bar" is
@@ -23271,7 +23296,7 @@ class Application_main
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
             s_msg<<"\e[33mdoes not match vimwiki folder name regex\e[39m\n"
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
-            s_msg<<"GUID=='842abd2b-6817-416e-8172-6170204017e7'\n"
+            s_msg<<"GUID=='3b5171e5-0a54-4e67-b05d-9210b03119e7'\n"
             puts s_msg
          end # if
          return b_can_refer_2_a_vimwiki_page
@@ -23297,7 +23322,7 @@ class Application_main
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
             s_msg<<("    "+s_fp_origin+$kibuvits_krl171bt4_lc_linebreak)
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
-            s_msg<<"GUID=='50a98962-9121-4a2a-be72-6170204017e7'\n"
+            s_msg<<"GUID=='b676e79c-59a1-45a4-92cc-9210b03119e7'\n"
             puts s_msg
             return b_assertion_failed
          end # if
@@ -23317,7 +23342,7 @@ class Application_main
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
             s_msg<<("    "+s_fp_origin+$kibuvits_krl171bt4_lc_linebreak)
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
-            s_msg<<"GUID=='b33f6032-3419-4387-a362-6170204017e7'\n"
+            s_msg<<"GUID=='55599183-037f-4275-b14b-9210b03119e7'\n"
             puts s_msg
             return b_assertion_failed
          end # if
@@ -23350,7 +23375,7 @@ class Application_main
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
             s_msg<<("    "+s_fp_origin+$kibuvits_krl171bt4_lc_linebreak)
             s_msg<<$kibuvits_krl171bt4_lc_linebreak
-            s_msg<<"GUID=='0a41ed33-b73b-4146-9552-6170204017e7'\n"
+            s_msg<<"GUID=='497e1981-5c51-4c28-8a1a-9210b03119e7'\n"
             puts s_msg
             next
          end # if
@@ -23375,7 +23400,7 @@ class Application_main
          bn=binding()
          kibuvits_krl171bt4_typecheck bn, Array, ar_fp_vimwiki_folders
          kibuvits_krl171bt4_typecheck_ar_content(bn,String,ar_fp_vimwiki_folders,
-         "GUID=='4848a063-751c-4745-8542-6170204017e7'")
+         "GUID=='43f22162-ee1d-4a46-b059-9210b03119e7'")
       end # if
       #----------------------------------------
       # Format example:
@@ -23408,7 +23433,7 @@ class Application_main
                "The code of this console application is flawed.\n"+
                "File paths should not have the length of 0\n"+
                "at this code region.\n"+
-               "GUID='d9c54827-ce25-45ed-b132-6170204017e7'")
+               "GUID='e33c0059-325f-4f37-ad18-9210b03119e7'")
             end # if
             #--------
             ar_s<<s_blank_pathline_start
@@ -23445,7 +23470,7 @@ class Application_main
             Kibuvits_krl171bt4_str.verify_s_is_within_domain(s_mode_candidate,
             ["t","f"],@msgcs)
             @msgcs.assert_lack_of_failures(
-            "GUID=='a6575931-a262-413c-a332-6170204017e7'")
+            "GUID=='fb4f74fa-d608-42f5-8e58-9210b03119e7'")
             b_run_in_debug_mode=true if s_mode_candidate=="t"
          else
             kibuvits_krl171bt4_throw("\n"+
@@ -23453,7 +23478,7 @@ class Application_main
             "The command line arguments parser should have \n"+
             "checked the number of values given to the \"--sb_run_in_testing_mode\" \n"+
             "before the control flow reaches this line.\n"+
-            "GUID='7eeb7f18-4804-440f-b222-6170204017e7'")
+            "GUID='111eee09-6255-4acf-9457-9210b03119e7'")
          end # if
       end # if
       #----------------------------------------
@@ -23474,12 +23499,12 @@ class Application_main
          i_blank_start_and_end_lengths_rough_min=20
          kibuvits_krl171bt4_assert_string_min_length(bn,s_vimrc_subpart_old,
          i_blank_start_and_end_lengths_rough_min,
-         "GUID='282458a5-50cb-4a17-9412-6170204017e7'\n")
+         "GUID='10f45513-f657-4847-8d46-9210b03119e7'\n")
          kibuvits_krl171bt4_assert_string_min_length(bn,s_blank_content,
          i_blank_start_and_end_lengths_rough_min,
-         "GUID='501cf515-59bd-45e1-9112-6170204017e7'\n")
+         "GUID='33211248-e26a-4313-ab35-9210b03119e7'\n")
          kibuvits_krl171bt4_assert_string_min_length(bn,s_fp_destination,2,
-         "GUID='5a60b4e9-c8c7-426f-9302-6170204017e7'\n")
+         "GUID='34e3b1a5-7312-4a6f-8e44-9210b03119e7'\n")
       end # if
       #----------------------------------------
       # 0 --- before blank
@@ -23518,7 +23543,7 @@ class Application_main
                   s_fp_destination+"\n"+
                   "is allowed to have only one blank with a blank start tag of \n"+
                   @s_blank_marker_start+"\n"+
-                  "GUID='fab22048-1e24-4d1a-84f1-6170204017e7'\n")
+                  "GUID='d568c9ff-19bc-48fb-a813-9210b03119e7'\n")
                end # if
                #--------
             else
@@ -23531,7 +23556,7 @@ class Application_main
                      s_fp_destination+"\n"+
                      "is allowed to have only one blank with a blank start tag of \n"+
                      @s_blank_marker_start+"\n"+
-                     "GUID='b27e670f-c2a2-4197-99e1-6170204017e7'\n")
+                     "GUID='454ada01-dc71-4f22-a312-9210b03119e7'\n")
                   end # if
                   if s_line.match(@rgx_blank_marker_end)!=nil
                      kibuvits_krl171bt4_throw(
@@ -23540,12 +23565,12 @@ class Application_main
                      s_fp_destination+"\n"+
                      "is allowed to have only one blank with a blank end tag of \n"+
                      @s_blank_marker_end+"\n"+
-                     "GUID='fcf4ce2b-5fd6-48fe-91e1-6170204017e7'\n")
+                     "GUID='d3ce4b9b-0d5d-4949-8531-9210b03119e7'\n")
                   end # if
                else
                   kibuvits_krl171bt4_throw(
                   "\nThe code of this console application is flawed.\n"+
-                  "GUID='ff60fd20-419c-447e-94d1-6170204017e7'\n")
+                  "GUID='1505cf84-9a3c-472c-8f11-9210b03119e7'\n")
                end # if
             end # if
          end # if
@@ -23558,7 +23583,7 @@ class Application_main
          @s_blank_marker_start+"\n"+
          "and the expected blank end tag is \n"+
          @s_blank_marker_end+"\n"+
-         "GUID='53167c84-48b4-42d8-9ac1-6170204017e7'\n")
+         "GUID='51fd1301-86e5-4a7a-8a10-9210b03119e7'\n")
       end # if
       #----------------------------------------
       s_lines_before_blank=kibuvits_krl171bt4_s_concat_array_of_strings_watershed(
@@ -23586,7 +23611,7 @@ class Application_main
          s_msg="\n"
          s_msg<<"The \e[31mconsole argument \"--origin\" is missing\e[39m, but\n"
          s_msg<<"it is a compulsory argument.\n"
-         s_msg<<"GUID=='20b6bb74-5a32-4b86-92c1-6170204017e7'\n"
+         s_msg<<"GUID=='10949413-29c7-416a-853d-9210b03119e7'\n"
          s_msg<<$kibuvits_krl171bt4_lc_linebreak
          kibuvits_krl171bt4_throw(s_msg)
       else
@@ -23602,7 +23627,7 @@ class Application_main
             "The command line arguments parser should have \n"+
             "checked the number of values given to the \"--origin\" \n"+
             "before the control flow reaches this line.\n"+
-            "GUID='43735919-4854-4850-b3b1-6170204017e7'")
+            "GUID='60bc2345-7c17-4483-864c-9210b03119e7'")
          end # if
       end # if
       #----------------------------------------
@@ -23611,7 +23636,7 @@ class Application_main
          "The code of \e[31mthis console application is flawed\e[39m.\n"+
          "Command line argument parser should have caught the error \n"+
          "before the control flow reaches this line. \n"+
-         "GUID='17100c4d-56a1-4e1d-b2a1-6170204017e7'")
+         "GUID='a18da38b-cef4-42b6-be1b-9210b03119e7'")
       end # if
       #----------------------------------------
       return s_fp_origin
@@ -23641,7 +23666,7 @@ class Application_main
             "The command line arguments parser should have \n"+
             "checked the number of values given to the \"--vimrc_subpart\" \n"+
             "before the control flow reaches this line.\n"+
-            "GUID='1dea0620-5f1e-4272-a491-6170204017e7'")
+            "GUID='71803ecf-fac8-410b-999a-9210b03119e7'")
          end # if
       end # if
       #----------------------------------------
@@ -23670,7 +23695,7 @@ class Application_main
          s_msg<<("    "+s_fp_origin+$kibuvits_krl171bt4_lc_linebreak)
          s_msg<<$kibuvits_krl171bt4_lc_linebreak
          s_msg<<"\e[33mdid not contain any vimwiki folder paths\e[39m.\n"
-         s_msg<<"GUID=='ff296131-70e0-40b4-9291-6170204017e7'\n"
+         s_msg<<"GUID=='6d479aa4-13fc-484e-8bfa-9210b03119e7'\n"
          s_msg<<$kibuvits_krl171bt4_lc_linebreak
          puts s_msg
          return  # not an error case
@@ -23698,6 +23723,6 @@ class Application_main
 end # class Application_main
 
 Application_main.new.run
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="edc6b93d-6ab3-4013-a50c-6170204017e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="d72f8342-5703-42b2-a165-9210b03119e7"
 #==========================================================================
