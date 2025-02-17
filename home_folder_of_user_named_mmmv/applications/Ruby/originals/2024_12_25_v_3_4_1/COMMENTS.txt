@@ -4,6 +4,14 @@ Home page:
     https://github.com/ruby
     https://www.ruby-lang.org/en/
 
+In the case of Debian or Debian derived Linux distributions
+some of the dependencies from Debian style standard package
+collection are:
+
+    libyaml-dev
+    build-essential 
+    ruby-dev
+
 The 
 
     ./ruby-3_4_1.tar.gz
