@@ -1,0 +1,88 @@
+===========================================================================
+==========  REDUCE Computer Algebra System Usage ABC  =====================
+===========================================================================
+
+Related home pages as of 2023_08:
+
+    http://www.reduce-algebra.com/
+    https://sourceforge.net/projects/reduce-algebra/
+
+---------------------------------------------------------------------------
+                             The ABC
+---------------------------------------------------------------------------
+
+     a:=4;     % Single line comments start with a percentage sign
+     quit;     % exits the program.
+
+     foo:=42;  % Assignment of value to a variable.
+     foo:=42$  % Semicolon displays the value on console, 
+               % dollar sign doesn't.
+
+           % REDUCE document source code supports 
+           % only a limited set of characters, id est 
+           % Unicode is NOT supported. 
+
+    operator Milkyway$
+    let Milkyway => Andromeda;  % Plain text replacement, where 
+                                % text "Milkyway" is replaced with 
+                                % text "Andromeda". 
+
+    operator pluto$
+    let pluto(~x) => x^2 $    % Function definition. Formal parameters
+                              % are marked with a tilde, "~".
+
+    pluto(42);   % is a function call
+
+    plot(sin(x),x=(-4 .. 4));  % where the sin(x) is a formula
+
+
+    on rounded;   % instead of formulae, numeric values are displayed.
+    off rounded;  % formulae are shown in stead of numeric values.
+
+    off nat$  % formulae are displayed in a machine-readable format.
+    on nat$   % formulae are displayed in a human-readable format.
+
+    % Matrices
+    a:=mat((42,69),(1984,22));
+    a(2,1):=2010;
+    cc:=rank(a); 
+    b:=tp(a);              % matrix transformation
+    thisisaninverseofamatrix:=1/a; % where a is a matrix
+    determinantbarfromouterspace:=det(a);
+
+
+    % Formulae
+    let variablethatholdsaformula= sin(x);
+    df(variablethatholdsaformula,x);        % differentiates
+    int(variablethatholdsaformula,x);       % integrates
+    variablethatholdsaformula;              % shows a simplified form of the formula
+
+    % Systems of equations:
+    % solve({comma-separated list of equations},{comma-separated list of variables that are sought});
+    solve({x1^2+x2=44,x3*x1+7=99},{x1,x2,x3});
+    solve({x1^2+x2=44,x3*x1+7=99},{x1,x2});
+    solve({x1^2+x2=44,x3*x1+7=99},{x1});
+
+    % Input-output:
+    out "name_of_the_file.txt";
+    off nat$ % optional here
+    % here we do something
+    shut "name_of_the_file.txt"; % writes the console output to file
+    on nat$  % is optional here
+
+    % REDUCE is a Lisp program that ships with its own
+    % Lisp interpreter. As with many interpreted programs, 
+    % command line arguments are specific to the interpreted program,
+    % not interpreter specific. Non-interactive
+    % use of REDUCE was originally not intended, so
+    % as of 2023_08 non-interactive use functionality 
+    % is missing from the upstream REDUCE.
+
+ 
+===========================================================================
+Initial author of this file: Martin.Vahi@softf1.com
+This file is in public domain.
+The following line is a spdx.org license label line:
+SPDX-License-Identifier: 0BSD
+S_VERSION_OF_THIS_FILE="11304255-ab80-4872-b833-a1f130b129e7"
+===========================================================================
