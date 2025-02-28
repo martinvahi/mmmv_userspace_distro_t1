@@ -1,6 +1,14 @@
 # mmmv_userspace_distro_t1
 
-Setup and usage details are at 
+mmmv_userspace_distro_t1 is a set of code templates, Linux/BSD
+specific Bash scripts, Bash aliases, Ruby scripts and relatively small
+utility programs implemented in various programming languages. The
+mmmv_userspace_distro_t1 can be seen as a reusable part of a development
+environment setup. The mmmv_userspace_distro_t1 emerged from a repeated
+creation of various virtual appliances, the creation of various memory
+card images for Raspberry_Pi-s and repeated installation of Linux and
+BSD operating systems to various computers. Installation and usage
+details of the mmmv_userspace_distro_t1 are at
 
     ./home_folder_of_user_named_mmmv/COMMENTS.txt
 
