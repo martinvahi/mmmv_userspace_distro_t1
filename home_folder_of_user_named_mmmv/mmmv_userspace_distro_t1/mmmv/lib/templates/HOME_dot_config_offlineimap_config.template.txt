@@ -1,0 +1,21 @@
+
+[general]
+accounts = ThisIsAFunAccount
+maxsyncaccounts = 1
+
+[Account ThisIsAFunAccount]
+localrepository = NameOfTheLocalFoooRepositoryyy
+remoterepository = NameOfTheBarRepositoryyyForDescribingTheServerAccessParameters
+
+[Repository NameOfTheLocalFoooRepositoryyy]
+type = Maildir
+localfolders = /home/ruusu/m_local/var/Sup_epostikataloog/postikataloog
+
+[Repository NameOfTheBarRepositoryyyForDescribingTheServerAccessParameters]
+type = IMAP
+remotehost = imap.zone.eu
+remoteuser = martin.vahi@softf1.com
+remotepass = THISISTHEEMAILPASSWORDATEMAILSERVER
+ssl = true
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+

@@ -22,7 +22,7 @@
 #         echo "    $S_FP_0"
 #         echo ""
 #         echo "is a symlink, but for safety reasons a file is expected."
-#         echo "GUID=='a37c8f53-7c3d-4bf2-b11c-90d120f078e7'"
+#         echo "GUID=='43fab735-3b34-4d76-a938-531321c129e7'"
 #         echo ""
 #     else
 #         if [ -d "$S_FP_0" ]; then
@@ -32,7 +32,7 @@
 #                 echo "    $S_FP_0"
 #                 echo ""
 #                 echo "is a folder, but a file is expected."
-#                 echo "GUID=='372342f1-ef60-42fb-8c4c-90d120f078e7'"
+#                 echo "GUID=='f3583cf6-e673-450f-8128-531321c129e7'"
 #                 echo ""
 #         else
 #             source "$S_FP_0"
@@ -49,7 +49,7 @@
 #     else
 #         echo "is missing."
 #     fi
-#     echo "GUID=='31de0dc3-9138-4741-a52c-90d120f078e7'"
+#     echo "GUID=='3b837033-7d0b-41a1-a117-531321c129e7'"
 #     echo ""
 # fi
 # #--------------------------------------------------------------------------
@@ -70,11 +70,41 @@ S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #     https://bugs.ruby-lang.org/issues/13509
 #     (archival copy: https://archive.is/llUWb ) 
 
-# Includes binary code for both, the current and for the older CPUs:
-    #MMMV_CFLAGS_TEMPLATE=" -mtune=native  -ftree-vectorize -O3 "
+MMMV_CFLAGS_COMMON=" -ftree-vectorize -O3 "
 
-# No backwards compatibility support, smaller binaries, current CPU only:
-    MMMV_CFLAGS_TEMPLATE=" -march=native -mtune=native -ftree-vectorize -O3 "
+# The "mainstream" approach:
+#
+#     # Includes binary code for both, the current and for the older CPUs:
+#         #MMMV_CFLAGS_TEMPLATE=" -mtune=native $MMMV_CFLAGS_COMMON "
+#     # No backwards compatibility support, smaller binaries, current CPU only:
+          MMMV_CFLAGS_TEMPLATE=" -march=native -mtune=native $MMMV_CFLAGS_COMMON "
+#
+# The ARM specific approach:
+#
+#     # According to the
+#     #     https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/
+#     #     archival copy: https://archive.ph/njYdE
+#     # The CPU type of the Raspberry_Pi_4 and Raspberry_Pi_400 is:
+#     #     "Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GHz"
+#     # A citation from
+#     #     https://stackoverflow.com/questions/42718572/gcc-mtune-vs-march-vs-mcpu
+#     #     archival copy: https://archive.ph/DW1sy
+#     #     ----------citation----start-------------
+#     #     -mcpu unfortunately has different
+#     #     semantics for different targets. It's
+#     #     deprecated for x86 (being a synonym for
+#     #     -mtune) but not for ARM, where it's a
+#     #     sum of -march and -mtune.
+#     #
+#     #     So to answer your question - on
+#     #     ARM, always use -mcpu for best
+#     #     performance, unless you care for
+#     #     backwards compatibility.
+#     #     ----------citation----end---------------
+#     MMMV_CFLAGS_TEMPLATE=" -march=native -mtune=native -mcpu=cortex-a72 $MMMV_CFLAGS_COMMON "
+#     #
+#     #
+#     #
 
 if [ "$CFLAGS" == "" ]; then
     export CFLAGS=" $MMMV_CFLAGS_TEMPLATE "
@@ -102,7 +132,7 @@ fi
 if [ "`whoami`" != "root" ]; then
     echo ""
     echo "This script is meant to be executed only by the root user."
-    echo "GUID=='24b02e21-fe96-4886-bf4b-90d120f078e7'"
+    echo "GUID=='dd5f110f-9351-4b23-ac27-531321c129e7'"
     echo ""
 fi
 #--------------------------------------------------------------------------
@@ -155,7 +185,7 @@ else
         echo -e "\e[31mThe operating system is neither Linux, nor BSD. \e[39m"
         echo "The mmmv aliases are probably not tested "
         echo "with the current operating system."
-        echo "GUID=='45eb2572-6d4e-4155-a04b-90d120f078e7'"
+        echo "GUID=='5d1ed3f2-731c-4d87-a027-531321c129e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
@@ -169,7 +199,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         echo ""
         echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
         echo "but it is expected to be a GUID."
-        echo "GUID=='528f2e9a-8b7b-4015-9b3b-90d120f078e7'"
+        echo "GUID=='596e2c62-cd2c-4fd1-9557-531321c129e7'"
         echo ""
     fi 
     #--------------------
@@ -179,7 +209,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='43e35f36-19e1-4d24-b81b-90d120f078e7'"
+        echo "GUID=='402fef25-c437-439d-8757-531321c129e7'"
     else
         echo -e "\e[31mThe value of the S_CONSOLE_PROGRAM_NAME is an empty string\e[39m,"
         echo "but it is expected to be a console program name, which "
@@ -187,7 +217,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='1178d708-9b90-4fdc-a65b-90d120f078e7'"
+        echo "GUID=='43ec6de2-6ae7-46b7-9537-531321c129e7'"
     fi 
     echo ""
     #--------------------
@@ -213,7 +243,7 @@ if [ -e "$S_FP_0" ]; then
         else
             echo "is a folder, but a file is expected."
         fi
-        echo "GUID=='52e902b1-8f78-4c59-b65b-90d120f078e7'"
+        echo "GUID=='20e65cc4-60a2-4957-b237-531321c129e7'"
         echo ""
     else
         if [ -h "$S_FP_0" ]; then 
@@ -223,7 +253,7 @@ if [ -e "$S_FP_0" ]; then
             echo "    $S_FP_0"
             echo ""
             echo "is a symlink to a file, but for safety reasons a file is expected."
-            echo "GUID=='10193fc3-25e4-42b4-804b-90d120f078e7'"
+            echo "GUID=='480180a4-5ef7-4459-b616-531321c129e7'"
             echo ""
         else
             # The value of the SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED is 
@@ -238,7 +268,7 @@ if [ -e "$S_FP_0" ]; then
                 echo "    SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED==\"$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED\""
                 echo ""
                 echo "but it is expected to be \"t\"."
-                echo "GUID=='515bed9a-5406-407a-a84b-90d120f078e7'"
+                echo "GUID=='9e4c71ee-0c14-4885-9a26-531321c129e7'"
                 echo ""
             fi
         fi
@@ -254,7 +284,7 @@ else
     else
         echo "is missing."
     fi
-    echo "GUID=='0158785b-ae4b-41f8-8c5b-90d120f078e7'"
+    echo "GUID=='1d7bd851-56c5-432f-bc26-531321c129e7'"
     echo ""
 fi
 
@@ -265,13 +295,13 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
     SB_VERIFICATION_FAILED="t"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG" \
-        "19a99cb1-3c86-43a7-a04c-90d120f078e7"
+        "43a6b5ec-0001-4487-9e28-531321c129e7"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_admin_root_overwrite_root_bashrc_subcomponents_t1="\
         if [ \"/root/mmmv_userspace_distro_t1_components_for_root\" != \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_DEST\" ]; then \
             echo '' ; \
             echo 'This script is flawed.' ; \
-            echo \"GUID=='5e2d5c91-c008-4a8f-933b-90d120f078e7'\" ; \
+            echo \"GUID=='c335e7bb-3d60-4719-bb26-531321c129e7'\" ; \
             echo '' ; \
         fi ; \
         if [ -e \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG\" ]; then \
@@ -294,7 +324,7 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
             echo '    $MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG ' ; \
             echo '' ; \
             echo 'does not exist.' ; \
-            echo \"GUID=='d3a2f7ad-988c-4c05-845b-90d120f078e7'\" ; \
+            echo \"GUID=='21a3c5f2-54fe-409e-8856-531321c129e7'\" ; \
             echo '' ; \
         fi "
     fi
@@ -331,59 +361,240 @@ fi
 #     ---citation--end-------
 #
 #--------------------
-SB_IPTABLES_EXISTS_ON_PATH="f"
-if [ "`which apt 2> /dev/null`" != "" ]; then
-    SB_IPTABLES_EXISTS_ON_PATH="t"
-    alias mmmv_admin_firewall_iptables_ls="iptables -L -v " # lists the rules
-    alias mmmv_admin_firewall_iptables_create_chain_of_filters="iptables --new-chain " # <chain name>
-else
-    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        "iptables" "e22548b7-827b-40cb-811c-90d120f078e7"
-fi
-#--------------------
-SB_UFW_EXISTS_ON_PATH="f"
-if [ "$SB_IPTABLES_EXISTS_ON_PATH" == "t" ]; then
-    # https://launchpad.net/ufw
-    # ufw is an iptables wrapper.
-    # There MIGHT be some further documentation aobut the UFW at
-    # $MMMV_USERSPACE_DISTRO_T1_HOME/attic/documentation/third_party_documentation/Linux_and_BSD_administration/Linux_firewalls/UFW
-    if [ "`which ufw 2> /dev/null`" != "" ]; then
-        SB_UFW_EXISTS_ON_PATH="t"
-        alias mmmv_admin_firewall_ufw_ls_status="ufw status "
-        alias mmmv_admin_firewall_ufw_start_filtering="ufw enable "
-        alias mmmv_admin_firewall_ufw_stop_filtering="ufw disable "
-        #--------
-        # Equivalent to:
-        #     ufw allow 22
-        alias mmmv_admin_firewall_ufw_allow_ssh="ufw allow ssh "
-        alias mmmv_admin_firewall_ufw_block_ssh="ufw delete allow ssh "
-        #--------
-        # Equivalent to:
-        #     ufw allow 80
-        alias mmmv_admin_firewall_ufw_allow_http="ufw allow http "
-        alias mmmv_admin_firewall_ufw_block_http="ufw delete allow http "
-        #--------
-        # Equivalent to:
-        #     ufw allow 443
-        alias mmmv_admin_firewall_ufw_allow_https="ufw allow https "
-        alias mmmv_admin_firewall_ufw_block_https="ufw delete allow https "
-        #--------
+if [ "$SB_IPTABLES_EXISTS_ON_PATH" == "" ]; then
+    SB_IPTABLES_EXISTS_ON_PATH="f"
+    if [ "`which iptables 2> /dev/null`" != "" ]; then
+        SB_IPTABLES_EXISTS_ON_PATH="t"
+        alias mmmv_admin_firewall_iptables_ls="iptables -L -v " # lists the rules
+        alias mmmv_admin_firewall_iptables_create_chain_of_filters="iptables --new-chain " # <chain name>
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "ufw" "5502c1a1-5c25-448a-8b3b-90d120f078e7"
+            "iptables" "eaf4ba11-16ba-474f-8938-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_FIND_EXISTS_ON_PATH" == "" ]; then
+    SB_FIND_EXISTS_ON_PATH="f"
+    if [ "`which find 2> /dev/null`" != "" ]; then
+        SB_FIND_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "find" "03ee126b-8446-43e2-b237-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_UFW_EXISTS_ON_PATH" == "" ]; then
+    if [ "$SB_IPTABLES_EXISTS_ON_PATH" == "t" ]; then
+        #------------------------------------------------------------------
+        SB_UFW_EXISTS_ON_PATH="f"
+        # https://launchpad.net/ufw
+        # ufw is an iptables wrapper.
+        # There MIGHT be some further documentation aobut the UFW at
+        # $MMMV_USERSPACE_DISTRO_T1_HOME/attic/documentation/third_party_documentation/Linux_and_BSD_administration/Linux_firewalls/UFW
+        if [ "`which ufv 2> /dev/null`" != "" ]; then
+            SB_UFW_EXISTS_ON_PATH="t"
+            alias mmmv_admin_firewall_ufw_ls_status="ufw status "
+            alias mmmv_admin_firewall_ufw_start_filtering="ufw enable "
+            alias mmmv_admin_firewall_ufw_stop_filtering="ufw disable "
+            #--------
+            # Equivalent to:
+            #     ufw allow 22
+            alias mmmv_admin_firewall_ufw_allow_ssh="ufw allow ssh "
+            alias mmmv_admin_firewall_ufw_block_ssh="ufw delete allow ssh "
+            #--------
+            # Equivalent to:
+            #     ufw allow 80
+            alias mmmv_admin_firewall_ufw_allow_http="ufw allow http "
+            alias mmmv_admin_firewall_ufw_block_http="ufw delete allow http "
+            #--------
+            # Equivalent to:
+            #     ufw allow 443
+            alias mmmv_admin_firewall_ufw_allow_https="ufw allow https "
+            alias mmmv_admin_firewall_ufw_block_https="ufw delete allow https "
+            #--------
+            if [ "$SB_UFW_EXISTS_ON_PATH" == "" ]; then
+                SB_UFW_EXISTS_ON_PATH="f"
+                if [ "`which gufw 2> /dev/null`" != "" ]; then
+                    SB_UFW_EXISTS_ON_PATH="t"
+                else
+                    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+                        "gufw" "046614a9-2cd6-413e-9417-531321c129e7"
+                fi
+            fi
+            #--------
+        else
+            func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+                "ufv" "55d4ebca-a305-45f7-beb7-531321c129e7"
+        fi
+        #------------------------------------------------------------------
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_APT_EXISTS_ON_PATH" == "" ]; then
+    SB_APT_EXISTS_ON_PATH="f"
+    if [ "`which apt 2> /dev/null`" != "" ]; then
+        SB_APT_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "apt" "20666485-f56a-45d5-a727-531321c129e7"
+    fi
+fi
+#----------------
+if [ "$SB_GREP_EXISTS_ON_PATH" == "" ]; then
+    SB_GREP_EXISTS_ON_PATH="f"
+    if [ "`which grep 2> /dev/null`" != "" ]; then
+        SB_GREP_EXISTS_ON_PATH="t"
+        alias grep='grep --color=auto '
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "grep" "852aa275-1ed6-4433-8427-531321c129e7"
     fi
 fi
 #--------------------
-# SB_GUFW_EXISTS_ON_PATH="f"
-# if [ "$SB_UFW_EXISTS_ON_PATH" == "t" ]; then
-#     # gufw is an ufw wrapping GUI.
-#     if [ "`which gufw 2> /dev/null`" != "" ]; then
-#         SB_GUFW_EXISTS_ON_PATH="t"
-#     # else
-#     #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-#     #         "gufw" "57316ac2-2784-45ff-952b-90d120f078e7"
-#     fi
-# fi
+if [ "$SB_SED_EXISTS_ON_PATH" == "" ]; then
+    SB_SED_EXISTS_ON_PATH="f"
+    if [ "`which sed 2> /dev/null`" != "" ]; then
+        SB_SED_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "sed" "91e48b45-0e0b-4b0b-8e37-531321c129e7"
+    fi
+fi
+#--------------------
+if [ "$SB_GAWK_EXISTS_ON_PATH" == "" ]; then
+    SB_GAWK_EXISTS_ON_PATH="f"
+    if [ "`which gawk 2> /dev/null`" != "" ]; then
+        SB_GAWK_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "gawk" "55271113-16f5-431e-98c7-531321c129e7"
+    fi
+fi
+#--------------------
+if [ "$SB_XARGS_EXISTS_ON_PATH" == "" ]; then
+    SB_XARGS_EXISTS_ON_PATH="f"
+    if [ "`which xargs 2> /dev/null`" != "" ]; then
+        SB_XARGS_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "xargs" "3e3309c2-9b07-40df-b336-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_APTGET_EXISTS_ON_PATH" == "" ]; then
+    SB_APTGET_EXISTS_ON_PATH="f"
+    if [ "`which apt-get 2> /dev/null`" != "" ]; then
+        SB_APTGET_EXISTS_ON_PATH="t"
+        alias mmmv_admin_install="  apt-get install "
+        alias mmmv_admin_uninstall="apt-get remove "
+        #------------------------------------------------------------------
+        if [ "$SB_APT_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_SED_EXISTS_ON_PATH" == "t" ]; then
+                if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+                    #--------
+                    alias mmmv_admin_uninstall_dbg_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \"[-]dbg/\" | sed -e 's/\\/.\\+//g' | xargs echo\` ; sync; wait; sync; "
+                    #--------
+                    alias mmmv_admin_uninstall_profiling_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \"[-]prof[/]\" | sed -e 's/\\/.\\+//g' | xargs echo \` ; sync; wait; sync; "
+                    #--------
+                    alias mmmv_ls_packages_installed_t1="nice -n 10 apt installed 2>/dev/null ; sync ;" 
+                    # sync is to stay consistent with the other 
+                    #--------
+                    if [ "$SB_GAWK_EXISTS_ON_PATH" == "t" ]; then
+                        #--------------------
+                        alias mmmv_admin_uninstall_i386_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \" i386 \" | sed -e 's/\\/.\\+//g' | gawk '{s0=\$1; s1=\":i386\"; s2=s0\"\"s1; print s2}' | xargs echo \` ; sync; wait; sync; "
+                        #--------------------
+                        # Testline:
+                        #S_TIMESTAMP="`date +%Y`_`date +%m`_`date +%d`_T_`date +%H`h_`date +%M`min_`date +%S`s" ; S_SUFFIX_PACKAGES="_installed_packages_temporary.txt"; S_FP_INSTALLED_PACKAGES="/tmp/$S_TIMESTAMP$S_SUFFIX_PACKAGES"; S_SUFFIX_I386="_i386_package_names_temporary.txt" ; S_FP_I386_PACKAGE_NAMES="/tmp/$S_TIMESTAMP$S_SUFFIX_I386" ; apt installed 2>/dev/null > $S_FP_INSTALLED_PACKAGES ; chmod 0700 $S_FP_INSTALLED_PACKAGES ; sync ; wait ; sync ; cat $S_FP_INSTALLED_PACKAGES | grep -E " i386 " | sed -e 's/\/.\+//g' | gawk '{s0=$1; s1=":i386"; s2=s0""s1; print s2}' | xargs echo > $S_FP_I386_PACKAGE_NAMES ; sync; wait; sync; cat $S_FP_INSTALLED_PACKAGES | grep -E "[-](prof|dbg)[/]" | sed -e 's/\/.\+//g' | xargs echo  >> $S_FP_I386_PACKAGE_NAMES ; sync ; wait ; sync ; cat $S_FP_I386_PACKAGE_NAMES | sed -e 's/$/ /g' | tr -d "\n" ; wait ; rm -f $S_FP_I386_PACKAGE_NAMES ; rm -f $S_FP_INSTALLED_PACKAGES ;
+                        #--------------------
+                        alias mmmv_admin_uninstall_unused_types_of_packages_dbg_i386_prof="apt-get remove \`S_TIMESTAMP=\"\\\`date +%Y\\\`_\\\`date +%m\\\`_\\\`date +%d\\\`_T_\\\`date +%H\\\`h_\\\`date +%M\\\`min_\\\`date +%S\\\`s\" ; S_SUFFIX_PACKAGES=\"_installed_packages_temporary.txt\" ; S_FP_INSTALLED_PACKAGES=\"/tmp/\$S_TIMESTAMP\$S_SUFFIX_PACKAGES\" ; S_SUFFIX_I386=\"_i386_package_names_temporary.txt\" ; S_FP_I386_PACKAGE_NAMES=\"/tmp/\$S_TIMESTAMP\$S_SUFFIX_I386\" ; apt installed 2>/dev/null > \$S_FP_INSTALLED_PACKAGES ; chmod 0700 \$S_FP_INSTALLED_PACKAGES ; sync ; wait ; sync ; cat \$S_FP_INSTALLED_PACKAGES | grep -E \" i386 \" | sed -e 's/\\/.\\+//g' | gawk '{s0=\$1; s1=\":i386\"; s2=s0\"\"s1; print s2}' | xargs echo > \$S_FP_I386_PACKAGE_NAMES ; chmod 0700 \$S_FP_I386_PACKAGE_NAMES ; sync ; wait ; sync ; cat \$S_FP_INSTALLED_PACKAGES | grep -E \"[-](prof|dbg)[/]\" | sed -e 's/\\/.\\+//g' | xargs echo  >> \$S_FP_I386_PACKAGE_NAMES ; sync ; wait ; sync ; cat \$S_FP_I386_PACKAGE_NAMES | sed -e 's/\$/ /g' | tr -d \"\\n\" ; wait ; rm -f \$S_FP_I386_PACKAGE_NAMES ; rm -f \$S_FP_INSTALLED_PACKAGES ;\`"
+                        #--------------------
+                    fi
+                    #--------
+                fi
+            fi
+        fi
+        #------------------------------------------------------------------
+        # The
+        alias mmmv_admin_install_c_cpp_valgrind_t1="apt-get install valgrind valgrind-mpi "
+        # is useful, because the deinstallation of dbg packages also uninstalls
+        #     libc6-dbg
+        #     valgrind-dbg
+        # and everything that depend on them, including the valgrind.
+        #------------------------------------------------------------------
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "apt-get" "921e86b7-c565-438d-a756-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_APTITUDE_EXISTS_ON_PATH" == "" ]; then
+    SB_APTITUDE_EXISTS_ON_PATH="f"
+    if [ "`which aptitude 2> /dev/null`" != "" ]; then
+        SB_APTITUDE_EXISTS_ON_PATH="t"
+        alias mmmv_aptitude_search="nice -n 2 aptitude search "
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "aptitude" "44260b34-287b-43f7-b756-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_SERVICE_EXISTS_ON_PATH" == "" ]; then
+    SB_SERVICE_EXISTS_ON_PATH="f"
+    if [ "`which service 2> /dev/null`" != "" ]; then
+        SB_SERVICE_EXISTS_ON_PATH="t"
+        alias mmmv_ls_daemons_Linux_service_t1="nice -n 4 service --status-all  "
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "service" "4e54c9d3-6bb6-48da-9d36-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_SYSTEMCTL_EXISTS_ON_PATH" == "" ]; then
+    SB_SYSTEMCTL_EXISTS_ON_PATH="f"
+    if [ "`which systemctl 2> /dev/null`" != "" ]; then
+    #----------------
+        SB_SYSTEMCTL_EXISTS_ON_PATH="t"
+        alias mmmv_ls_daemons_Linux_systemctl_t2="nice -n 4 systemctl list-units --type=service "
+        #----------------
+        # https://unix.stackexchange.com/questions/529471/debian-10-adjust-sleep-settings-via-command-line
+        alias mmmv_admin_sleep_disable_t1="sudo systemctl mask   sleep.target suspend.target hibernate.target hybrid-sleep.target"
+        alias mmmv_admin_sleep_enable_t1=" sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+        #----------------
+        # else
+        #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+        #         "systemctl" "c2c502ea-08a8-4532-afd6-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_DU_EXISTS_ON_PATH" == "" ]; then
+    SB_DU_EXISTS_ON_PATH="f"
+    if [ "`which du 2> /dev/null`" != "" ]; then
+        SB_DU_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "du" "3a330d33-9938-40c9-a946-531321c129e7"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
+    if [ "$SB_DU_EXISTS_ON_PATH" == "t" ]; then
+        alias mmmv_lssize_recursive_t1_Linux="nice -n 5 du  --human-readable --summarize ./ "
+    fi
+fi
+if [ "$SB_OPERATINGSYSTEM_BSD" == "t" ]; then
+    alias mmmv_ls_BKMG="nice -n 2 ls -lh "
+    if [ "$SB_DU_EXISTS_ON_PATH" == "t" ]; then
+        alias mmmv_lssize_recursive_t1_BSD="nice -n 5 du -sh ./ "
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$EDITOR" == "" ]; then
+    #S_TMP_0="`which mcedit 2> /dev/null`" # a more primitive choice
+    S_TMP_0="`which vim 2> /dev/null`"
+    if [ "$S_TMP_0" != "" ]; then
+        export EDITOR="$S_TMP_0"
+    fi
+fi
 #--------------------------------------------------------------------------
 # Value examples for the
 #
@@ -526,83 +737,6 @@ if [ -e "$S_TMP_0" ]; then
     alias mmmv_admin_set_mmcblk1_scheduler_none="echo \"none\" > $S_TMP_0 "
 fi
 #--------------------------------------------------------------------------
-SB_APT_EXISTS_ON_PATH="f"
-if [ "`which apt 2> /dev/null`" != "" ]; then
-    SB_APT_EXISTS_ON_PATH="t"
-fi
-#----------------
-SB_GREP_EXISTS_ON_PATH="f"
-if [ "`which grep 2> /dev/null`" != "" ]; then
-    SB_GREP_EXISTS_ON_PATH="t"
-    alias grep='grep --color=auto '
-#else
-#    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-#        "grep" "a83f4741-45a2-4a6d-8d2b-90d120f078e7"
-fi
-#--------------------
-SB_SED_EXISTS_ON_PATH="f"
-if [ "`which sed 2> /dev/null`" != "" ]; then
-    SB_SED_EXISTS_ON_PATH="t"
-#else
-#    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-#        "sed" "50e6f7c5-ae73-4b1d-8d1b-90d120f078e7"
-fi
-#--------------------
-SB_GAWK_EXISTS_ON_PATH="f"
-if [ "`which gawk 2> /dev/null`" != "" ]; then
-    SB_GAWK_EXISTS_ON_PATH="t"
-    # awk is NOT compatible with gawk, but
-    # it tends to be the case that the awk 
-    # is available on various BSDs and the gawk
-    # is available on Linux. Sed seems to be
-    # available on both, Linux and the varous BSDs.
-#else
-#    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-#        "gawk" "e1a0d909-8dc4-4399-8c5b-90d120f078e7"
-fi
-#--------------------
-SB_XARGS_EXISTS_ON_PATH="f"
-if [ "`which xargs 2> /dev/null`" != "" ]; then
-    SB_XARGS_EXISTS_ON_PATH="t"
-#else
-#    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-#        "xargs" "f1ed4dd1-b482-4b28-994b-90d120f078e7"
-fi
-#--------------------------------------------------------------------------
-SB_APTGET_EXISTS_ON_PATH="f"
-if [ "`which apt-get 2> /dev/null`" != "" ]; then
-    SB_APTGET_EXISTS_ON_PATH="t"
-    alias mmmv_admin_install="  apt-get install "
-    alias mmmv_admin_uninstall="apt-get remove "
-    #--------
-    if [ "$SB_APT_EXISTS_ON_PATH" == "t" ]; then
-        if [ "$SB_SED_EXISTS_ON_PATH" == "t" ]; then
-            if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
-                #--------
-                alias mmmv_admin_uninstall_dbg_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \"[-]dbg/\" | sed -e 's/\\/.\\+//g' | xargs echo\` ; sync; wait; sync; "
-                #--------
-                alias mmmv_admin_uninstall_profiling_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \"[-]prof[/]\" | sed -e 's/\\/.\\+//g' | xargs echo \` ; sync; wait; sync; "
-                #--------
-                alias mmmv_ls_packages_installed_t1="nice -n 10 apt installed 2>/dev/null ; sync ;" 
-                # sync is to stay consistent with the other 
-                #--------
-                if [ "$SB_GAWK_EXISTS_ON_PATH" == "t" ]; then
-                    #--------------------
-                    alias mmmv_admin_uninstall_i386_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \" i386 \" | sed -e 's/\\/.\\+//g' | gawk '{s0=\$1; s1=\":i386\"; s2=s0\"\"s1; print s2}' | xargs echo \` ; sync; wait; sync; "
-                    #--------------------
-                    # Testline:
-                    #S_TIMESTAMP="`date +%Y`_`date +%m`_`date +%d`_T_`date +%H`h_`date +%M`min_`date +%S`s" ; S_SUFFIX_PACKAGES="_installed_packages_temporary.txt"; S_FP_INSTALLED_PACKAGES="/tmp/$S_TIMESTAMP$S_SUFFIX_PACKAGES"; S_SUFFIX_I386="_i386_package_names_temporary.txt" ; S_FP_I386_PACKAGE_NAMES="/tmp/$S_TIMESTAMP$S_SUFFIX_I386" ; apt installed 2>/dev/null > $S_FP_INSTALLED_PACKAGES ; chmod 0700 $S_FP_INSTALLED_PACKAGES ; sync ; wait ; sync ; cat $S_FP_INSTALLED_PACKAGES | grep -E " i386 " | sed -e 's/\/.\+//g' | gawk '{s0=$1; s1=":i386"; s2=s0""s1; print s2}' | xargs echo > $S_FP_I386_PACKAGE_NAMES ; sync; wait; sync; cat $S_FP_INSTALLED_PACKAGES | grep -E "[-](prof|dbg)[/]" | sed -e 's/\/.\+//g' | xargs echo  >> $S_FP_I386_PACKAGE_NAMES ; sync ; wait ; sync ; cat $S_FP_I386_PACKAGE_NAMES | sed -e 's/$/ /g' | tr -d "\n" ; wait ; rm -f $S_FP_I386_PACKAGE_NAMES ; rm -f $S_FP_INSTALLED_PACKAGES ;
-                    #--------------------
-                    alias mmmv_admin_uninstall_unused_types_of_packages_dbg_i386_prof="apt-get remove \`S_TIMESTAMP=\"\\\`date +%Y\\\`_\\\`date +%m\\\`_\\\`date +%d\\\`_T_\\\`date +%H\\\`h_\\\`date +%M\\\`min_\\\`date +%S\\\`s\" ; S_SUFFIX_PACKAGES=\"_installed_packages_temporary.txt\" ; S_FP_INSTALLED_PACKAGES=\"/tmp/\$S_TIMESTAMP\$S_SUFFIX_PACKAGES\" ; S_SUFFIX_I386=\"_i386_package_names_temporary.txt\" ; S_FP_I386_PACKAGE_NAMES=\"/tmp/\$S_TIMESTAMP\$S_SUFFIX_I386\" ; apt installed 2>/dev/null > \$S_FP_INSTALLED_PACKAGES ; chmod 0700 \$S_FP_INSTALLED_PACKAGES ; sync ; wait ; sync ; cat \$S_FP_INSTALLED_PACKAGES | grep -E \" i386 \" | sed -e 's/\\/.\\+//g' | gawk '{s0=\$1; s1=\":i386\"; s2=s0\"\"s1; print s2}' | xargs echo > \$S_FP_I386_PACKAGE_NAMES ; chmod 0700 \$S_FP_I386_PACKAGE_NAMES ; sync ; wait ; sync ; cat \$S_FP_INSTALLED_PACKAGES | grep -E \"[-](prof|dbg)[/]\" | sed -e 's/\\/.\\+//g' | xargs echo  >> \$S_FP_I386_PACKAGE_NAMES ; sync ; wait ; sync ; cat \$S_FP_I386_PACKAGE_NAMES | sed -e 's/\$/ /g' | tr -d \"\\n\" ; wait ; rm -f \$S_FP_I386_PACKAGE_NAMES ; rm -f \$S_FP_INSTALLED_PACKAGES ;\`"
-                    #--------------------
-                fi
-                #--------
-            fi
-        fi
-    fi
-    #--------
-fi
-#--------------------------------------------------------------------------
 alias mmmv_admin_mount_noatime_nodiratime_t1="mount -o noatime,nodiratime "
 #--------
 S_TMP_0="mount -t ext4 -o "
@@ -612,55 +746,6 @@ S_TMP_2=",ro"
 alias mmmv_admin_mount_ext4_readonly_t1="$S_TMP_0 $S_TMP_1$S_TMP_2 " # at least one space at the end is necessary
 #--------
 alias mmmv_admin_mount_exFAT_case_insensitive_t1="mount -t exfat -o rw,noatime,iocharset=utf8,errors=remount-ro "
-#--------------------------------------------------------------------------
-SB_APTITUDE_EXISTS_ON_PATH="f"
-if [ "`which aptitude 2> /dev/null`" != "" ]; then
-    SB_APTITUDE_EXISTS_ON_PATH="t"
-    alias mmmv_aptitude_search="nice -n 2 aptitude search "
-fi
-#--------------------------------------------------------------------------
-SB_SERVICE_EXISTS_ON_PATH="f"
-if [ "`which service 2> /dev/null`" != "" ]; then
-    SB_SERVICE_EXISTS_ON_PATH="t"
-    alias mmmv_ls_daemons_Linux_service_t1="nice -n 4 service --status-all  "
-fi
-#--------------------------------------------------------------------------
-SB_SYSTEMCTL_EXISTS_ON_PATH="f"
-if [ "`which systemctl 2> /dev/null`" != "" ]; then
-    #----------------
-    SB_SYSTEMCTL_EXISTS_ON_PATH="t"
-    alias mmmv_ls_daemons_Linux_systemctl_t2="nice -n 4 systemctl list-units --type=service "
-    #----------------
-    # https://unix.stackexchange.com/questions/529471/debian-10-adjust-sleep-settings-via-command-line
-    alias mmmv_admin_sleep_disable_t1="sudo systemctl mask   sleep.target suspend.target hibernate.target hybrid-sleep.target"
-    alias mmmv_admin_sleep_enable_t1=" sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-    #----------------
-fi
-
-#--------------------------------------------------------------------------
-SB_DU_EXISTS_ON_PATH="f"
-if [ "`which du 2> /dev/null`" != "" ]; then
-    SB_DU_EXISTS_ON_PATH="t"
-fi
-if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
-    if [ "$SB_DU_EXISTS_ON_PATH" == "t" ]; then
-        alias mmmv_lssize_recursive_t1_Linux="nice -n 5 du  --human-readable --summarize ./ "
-    fi
-fi
-if [ "$SB_OPERATINGSYSTEM_BSD" == "t" ]; then
-    alias mmmv_ls_BKMG="nice -n 2 ls -lh "
-    if [ "$SB_DU_EXISTS_ON_PATH" == "t" ]; then
-        alias mmmv_lssize_recursive_t1_BSD="nice -n 5 du -sh ./ "
-    fi
-fi
-#--------------------------------------------------------------------------
-if [ "$EDITOR" == "" ]; then
-    #S_TMP_0="`which mcedit 2> /dev/null`" # a more primitive choice
-    S_TMP_0="`which vim 2> /dev/null`"
-    if [ "$S_TMP_0" != "" ]; then
-        export EDITOR="$S_TMP_0"
-    fi
-fi
 #--------------------------------------------------------------------------
 # export MMMV_SP_MAGNET_01_MOUNTFOLDER="/home/librarian_01/salvestusseadmed/magnet_01_indeksid"
 # export MMMV_CMD_MAGNET_01_UNMOUNTING="umount $MMMV_SP_MAGNET_01_MOUNTFOLDER ; "
@@ -673,5 +758,5 @@ fi
 # alias mmmv_admin_unmount_magnet_01="$MMMV_CMD_MAGNET_01_UNMOUNTING "
 # 
 #========================================================================== 
-# S_VERSION_OF_THIS_FILE="7553ad24-7e07-458f-91ab-90d120f078e7"
+# S_VERSION_OF_THIS_FILE="50adb2d5-cfca-4c77-9b16-531321c129e7"
 #========================================================================== 

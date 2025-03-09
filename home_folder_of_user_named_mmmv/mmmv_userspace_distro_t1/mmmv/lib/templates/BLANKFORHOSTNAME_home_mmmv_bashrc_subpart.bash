@@ -26,7 +26,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE . \e[39m"
-    echo "GUID=='f156c434-df42-4674-84b9-31b1900167e7'"
+    echo "GUID=='b040511e-254c-41cf-8eb4-f081301039e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -39,13 +39,13 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
     # S_FP_BASHFILE="/some/custom/foo.bash"
     # SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # domain: {"","t","f"}
     # func_mmmv_include_bashfile_if_possible_t2 "$S_FP_BASHFILE" \
-    #     "25ccf49d-bd6f-4de0-92b9-31b1900167e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
+    #     "3aab41d1-4231-400b-8534-f081301039e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
     #----------------------------------------------------------------------
 #    S_TMP_PRINTERNAME="Martini_OKI_ML5520_maatriksprinter"
-#    alias mmmv_print_OKI_ML5520_maatriksprinter="lp -d Martini_OKI_ML5520_maatriksprinter " # name of the file comes here
+#    alias mmmv_print_OKI_ML5520_maatriksprinter="lp -d $S_TMP_PRINTERNAME " # name of the file comes here
     #----------------------------------------------------------------------
     MMMV_USERSPACE_DISTRO_T1_HOSTNAME_SPECIFIC_INITIALISATIONS_TIMESTAMP="$S_TIMESTAMP"
 fi
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="442f0891-8e79-4255-82b9-31b1900167e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="0204121e-c30e-4323-8334-f081301039e7"
 #==========================================================================

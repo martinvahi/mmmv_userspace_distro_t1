@@ -18,7 +18,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='2ff8a0c3-ef64-4cc4-8d51-50329031a8e7'"
+    echo "GUID=='485b1d90-9e7e-4cda-b11b-c020a08019e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -53,13 +53,39 @@ fi
 # A citation from some real-life "site.py":
 #
 #    ----citation----start----------------------------------------
-#    Enable per user site-packages directory set it to False to disable the
-#    feature or True to force the feature
+#    Enable per user site-packages directory set it to False to 
+#    disable the feature or True to force the feature
 #    ENABLE_USER_SITE = None
 #    ----citation----end------------------------------------------
 # 
 #--------------------------------------------------------------------------
-
+if [ "$SB_PYTHON_EXISTS_ON_PATH" == "" ]; then
+    SB_PYTHON_EXISTS_ON_PATH="f"
+    if [ "`which python 2> /dev/null`" != "" ]; then
+        SB_PYTHON_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "python" "14f41a1b-b028-4cd2-941b-c020a08019e7"
+    fi
+fi
+# There is a bit of a mess that Python version 3.x is NOT backwards
+# compatible with Python version 2.7 and on some Linux distributions the
+# command line program "python" is the Python 2.7 and "python3" is the
+# Python 3.x, and on some other Linux distributions the "python" is the
+# Python 3.x. The availability of "python2" could solve that issue,
+# but the availability of the "python2" is not consistently guaranteed either,
+# unless it is put on PATH as a symlink.
+#--------------------
+if [ "$SB_PYTHON3_EXISTS_ON_PATH" == "" ]; then
+    SB_PYTHON3_EXISTS_ON_PATH="f"
+    if [ "`which python3 2> /dev/null`" != "" ]; then
+        SB_PYTHON3_EXISTS_ON_PATH="t"
+    else
+        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
+            "python3" "21db9ab3-e9ab-42bb-a51b-c020a08019e7"
+    fi
+fi
+#--------------------------------------------------------------------------
 PYTHONUSERBASE="$HOME/.mmmv/mmmv_python_pip_storage"
 if [ ! -e "$PYTHONUSERBASE" ]; then
     mkdir -p $PYTHONUSERBASE 
@@ -70,14 +96,14 @@ if [ ! -e "$PYTHONUSERBASE" ]; then
             echo "The PYTHONUSERBASE (== "
             echo "$PYTHONUSERBASE"
             echo ") is missing and its creation also failed."
-            echo "GUID=='4a1319c4-5031-43ba-9611-50329031a8e7'"
+            echo "GUID=='e8f11115-feac-4344-921b-c020a08019e7'"
             echo ""
         fi
     fi
 fi
 SB_VERIFICATION_FAILED="t" # a variable for the output of the
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-    "$PYTHONUSERBASE" "f56aa392-a5d3-4309-99e1-50329031a8e7" \
+    "$PYTHONUSERBASE" "0692f61b-4357-4cf3-811b-c020a08019e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
     PYTHONPATH="$PYTHONUSERBASE:$PYTHONPATH"
@@ -87,7 +113,7 @@ if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         func_mmmv_wait_and_sync_t1
     fi
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$S_FP_0" "4c695832-ab4d-4481-9951-50329031a8e7" \
+        "$S_FP_0" "221e5031-2ff4-47bb-811b-c020a08019e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_FP_0:$Z_PATH"
@@ -121,7 +147,7 @@ if [ ! -e "$PIPX_HOME" ]; then
             echo "The PIPX_HOME (== "
             echo "$PIPX_HOME"
             echo ") is missing and its creation also failed."
-            echo "GUID=='13cf69d4-9abf-492c-8221-50329031a8e7'"
+            echo "GUID=='553f10bf-1320-4a83-911b-c020a08019e7'"
             echo ""
         fi
         if [ ! -e "$PIPX_BIN_DIR" ]; then
@@ -129,7 +155,7 @@ if [ ! -e "$PIPX_HOME" ]; then
             echo "The PIPX_BIN_DIR (== "
             echo "$PIPX_BIN_DIR"
             echo ") is missing and its creation also failed."
-            echo "GUID=='408f65b1-280f-4b0a-b451-50329031a8e7'"
+            echo "GUID=='b8ece242-a6f0-40e6-a21b-c020a08019e7'"
             echo ""
         fi
     fi
@@ -137,11 +163,11 @@ fi
 #---------------------------------------
 SB_VERIFICATION_FAILED="t" # a variable for the output of the
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-    "$PIPX_HOME" "3becb2b5-5f2a-414b-8831-50329031a8e7" \
+    "$PIPX_HOME" "4ce1e553-47cb-49b8-9c1b-c020a08019e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$PIPX_BIN_DIR" "31007674-5da7-446d-b251-50329031a8e7" \
+        "$PIPX_BIN_DIR" "9537054f-4062-4e2b-a41b-c020a08019e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$PIPX_BIN_DIR:$Z_PATH"
@@ -156,5 +182,5 @@ fi
 export PIPX_HOME
 export PIPX_BIN_DIR
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="2bdcd141-792b-4361-9921-50329031a8e7"
+# S_VERSION_OF_THIS_FILE="8533574c-f2ab-4182-af1b-c020a08019e7"
 #==========================================================================

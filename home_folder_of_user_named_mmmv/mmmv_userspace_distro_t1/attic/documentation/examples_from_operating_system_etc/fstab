@@ -1,22 +1,122 @@
-proc            /proc           proc    defaults          0       0
-/dev/mmcblk0p1  /boot           vfat    defaults          0       2
-/dev/mmcblk0p2  /               ext4    defaults,noatime  0       1
 
-tmpfs     /opt/partitions/10MiB_RAM_disk   tmpfs   nodev,size=10M 0 0
-
-# The 'blkid' can be used for printing the universally unique 
-# identifier for a device. This may be used with UUID= as 
-# a more robust way to name devices. That works even if 
-# disks are added and removed. Please see fstab(5).
+#--------------------------------------------------------------------------
+# In the case of desktop computers the different storage
+# devices(HDD,SSD,etc.) should be distributed among different power cords
+# to increase the probability that they draw their power from different
+# sub-parts of the power supply, which in turn increases the probability
+# that the storage devices will not run out of power at a moment, when
+# all storage devices are at their peak power consumption at the same
+# time. In the case of magnetic disks, HDD, the maximum power consumption
+# tends to be during write operations. If there's not enough power, for
+# example, when the power supply is halve-worn-out (old electrolytic
+# capacitors, etc.), then the storage devices will (probably) reset
+# themselves due to the brownout detection, and there can be data
+# corruption during the write operation.
 #
-# <file system> <mount point>   <type>  <options>            <dump>  <pass>
-#tmpfs           /tmp            tmpfs   nodev,nosuid,size=50M 0       0
-
-# An example, how to auto-mount an USB storage
-# device during boot. The USB storage device must
-# be connected to the computer prior to power-up. Alternatively 
-# the 2015 edition of the Raspbian operating system offers 
+#--------------------------------------------------------------------------
+# According to 
+#
+#     https://serverfault.com/questions/174181/how-do-you-validate-fstab-without-rebooting
+#
+# the way to check the validity of the /etc/fstab on Linux, NOT BSD, is
+#
+#     mount -fav   # "-f" mount argument stands for "fake" on Linux, but "force" on BSD
+#     or
+#     findmnt --verify --verbose
+#
+#--------------------------------------------------------------------------
+# The "blkid" can be used for printing the universally unique identifier
+# for a device. This may be used with UUID= as a more robust way to
+# name devices. More detailed information about the /etc/fstab MIGHT be 
+# available from a /etc/fstab man page that MIGHT be viewed with a command:
+#
+#     man fstab
+#
+# but all in all the /etc/fstab upstream specification is a bit of
+# a sloppy hack, where some mount parameter value combinations seem
+# to duplicate each other and as of 2025_01 the /etc/fstab upstream
+# documentation does not cover all the nuances of those duplicationg
+# value combinations. On Linux the "lsblk" lists the devices. On Linux
+# mounted devices might be viewed by executing "df", without quotation
+# marks. Bash lines that might come handy:
+#
+#     S_FP_0="/opt/storage_devices/RAM_20MiB_01"
+#     mkdir -p $S_FP_0
+#     sync; wait ; 
+#     mount -t tmpfs -o size=20m RAM_20MiB_01 $S_FP_0
+#     sync; wait ; 
+#     chmod -f 1777 $S_FP_0
+#     # A related /etc/fstab line, if all "#" characters are removed:  
+#     #     tmpfs   /opt/storage_devices/RAM_20MiB_01   tmpfs   nodev,size=20M   0 0 
+#
+#--------------------------------------------------------------------------
+# Summary of the format of /etc/fstab lines on Linux: 
+#     <parameter_1>  <parameter_2>  <parameter_3>  <parameter_4>  <parameter_5>  <parameter_6>
+# where the 
+#
+#     <parameter_1> is UUID=the_UUID_without_quotation marks or 
+#                   full path to device file without quotation
+#                   marks or "tmpfs" without quotation
+#                   marks. On Linux the value of the UUID
+#                   can be obtained by using a program named
+#                   "blkid".
+#                   
+#     <parameter_2> is a full path to an existing folder, 
+#                   without quotation marks, to where 
+#                   the file system will be mounted or
+#                   in the case of swap partition "none" or "swap", 
+#                   without quotation marks.
+#
+#     <parameter_3> is file system type like 
+#                   "ext4", "nilfs", "swap", "tmpfs", etc.,
+#                   without quotation marks.
+#
+#     <parameter_4> is a comma-separated tab-spaceless 
+#                   list of of file system mount options, 
+#                   which is a mixture of filesystem type
+#                   specific mount options and filesystem
+#                   type independent mount options.
+#
+#     <parameter_5> is 1 for dump on failure, 0 otherwise.
+#
+#     <parameter_6> is fsck pass order, which is: 
+#                   1 for the partition that is mounted to "/" (the root partition);
+#                   2 for other filesystems that must be mountable during boot and
+#                     where the fsck must pass during boot;
+#                   0 for filesystems that are not required to be mountable during boot; 
+# 
+#--------------------------------------------------------------------------
+# Examples of /etc/fstab lines from different computers:
+#
+# /dev/mapper/ubuntu-swap_1                  none   swap    sw         0  0
+# UUID=e7fa3e3b-08ef-478a-b721-1947f292d5e6  none   swap    sw         0  0
+# UUID=09aea421-be3f-4e35-a7dc-abe235b1eef4  swap   swap    default    0  0
+# 
+# UUID=278efe25-a5f8-4968-9c74-d8f13d5892f6  /      ext4  noatime,nodiratime,user_xattr,barrier,journal_checksum,commit=2,errors=remount-ro  0  1
+# 
+# UUID=8008c45a-a773-4183-8a74-f49d8341b56a  /boot  ext4  noatime,nodiratime,barrier,journal_checksum,sync   0  2
+# 
+# /dev/mmcblk0p1                             /boot  vfat  defaults    0  2
+# 
+# UUID=82ebdce2-db23-4b6f-84fc-9de52566b449  /home  ext4  noatime,nodiratime,user_xattr,barrier,data=journal,journal_checksum,commit=2,errors=remount-ro  0 2
+# 
+# UUID=517790f7-6626-4f24-b955-c89212d77dbc  /home  nilfs2  noatime  1  2
+# 
+# UUID=16d13870-7147-4cdf-9ed2-1ab0892839ba  /tmp   ext4  noatime,nodiratime,user_xattr,commit=4   0  2
+# 
+# UUID=e5252651-577e-477a-9273-8c63cc71ef3a /opt/andmekettad/magnet_2koma793_TiB_02_651koma9GiB  xfs  errors=remount-ro  0  1
+#
+# /dev/sr0     /media/cdrom0   udf,iso9660   user,noauto    0  0
+#
+# proc         /proc           proc          defaults       0  0
+#
+# # Example of a RAM file system:
+# tmpfs        /opt/andmekettad/RAM_1MiB_01  tmpfs   nodev,size=1M   0  0 
+# 
+#--------------------------------------------------------------------------
+# On 2015 era Linux distribution named "Raspbian operating system" 
+# USB storage device auto-mounting support requires the installation
+# of the "usbmount" package:
 #     apt-get install usbmount
-#
-#UUID=4165b262-2e70-460d-aa8e-81b46dcc24f8 /opt/the_mounting_point ext4  errors=remount-ro 0   1
+#--------------------------------------------------------------------------
 

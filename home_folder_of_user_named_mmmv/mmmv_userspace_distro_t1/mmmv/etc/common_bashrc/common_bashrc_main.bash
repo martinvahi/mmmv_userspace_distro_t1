@@ -26,9 +26,9 @@
 #
 #--------------------------------------------------------------------------
 # The 
-export MMMV_USERSPACE_DISTRO_T1_VERSION="51c01a51-a382-4e64-a3f8-33b0e051c8e7"
+export MMMV_USERSPACE_DISTRO_T1_VERSION="24c14bd6-2ae3-4e86-b104-11b1509039e7"
 # does NOT duplicate the 
-# S_VERSION_OF_THIS_FILE="527b91b2-337e-4dae-a2f8-33b0e051c8e7" 
+# S_VERSION_OF_THIS_FILE="c5c0745a-2cac-4e7d-9304-11b1509039e7" 
 # because S_VERSION_OF_THIS_FILE is a "mmmv-standard" way to 
 # indicate source file versions and the S_VERSION_OF_THIS_FILE 
 # is meant to be available for string processing scripts.
@@ -85,7 +85,7 @@ else
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='06e84d36-7fb1-4b9d-9509-33b0e051c8e7'"
+            echo "GUID=='04dce5f9-cc35-439a-8704-11b1509039e7'"
             echo ""
         fi
     fi
@@ -108,7 +108,7 @@ if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='1d880cb5-98f9-491e-a3f8-33b0e051c8e7'"
+            echo "GUID=='fdeb2056-033c-44ea-8404-11b1509039e7'"
             echo ""
         fi
     fi
@@ -127,7 +127,26 @@ if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='3e970318-77db-405f-b3f8-33b0e051c8e7'"
+            echo "GUID=='1fb39d70-4b69-492d-8104-11b1509039e7'"
+            echo ""
+        fi
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE" == "" ]; then
+    MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE="t" # the default
+fi
+if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+    if [ "$MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE" != "t" ]; then
+        if [ "$MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE" != "f" ]; then
+            echo ""
+            echo -e "\e[31mThe ~/.bashrc or some subpart of it is flawed. \e[39m"
+            echo ""
+            echo "    MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE==\"$MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE\""
+            echo ""
+            echo "but the valid values are: \"\", \"t\", \"f\"."
+            echo "default: \"\" -> \"t\""
+            echo "GUID=='51cf3d9e-72bc-4bad-a204-11b1509039e7'"
             echo ""
         fi
     fi
@@ -183,7 +202,7 @@ else
             echo -e "\e[31mThe operating system is neither Linux, nor BSD. \e[39m"
             echo "The mmmv aliases are probably not tested "
             echo "with the current operating system."
-            echo "GUID=='d9a06154-67a0-44b8-b4f8-33b0e051c8e7'"
+            echo "GUID=='38fa8639-caa7-47d0-b2f3-11b1509039e7'"
             echo ""
         fi
     fi
@@ -215,7 +234,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi 
-                    echo "GUID=='498cf941-ab40-4fd3-84e8-33b0e051c8e7'"
+                    echo "GUID=='51df9e44-51f4-4ae6-acf3-11b1509039e7'"
                     echo ""
                     SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # the default value
                 fi
@@ -238,7 +257,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='2a55c8d3-9b1d-4a4f-bde8-33b0e051c8e7'"
+            echo "GUID=='e591fc5e-a8ae-4c2d-b4f3-11b1509039e7'"
             echo ""
         fi 
     fi
@@ -257,7 +276,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi 
-                    echo "GUID=='922f9d54-16b2-4005-b2e8-33b0e051c8e7'"
+                    echo "GUID=='ca5651ff-3a43-419d-92b3-11b1509039e7'"
                     echo ""
                 fi
             fi
@@ -282,7 +301,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi 
-                echo "GUID=='808a6a44-62da-4111-83e8-33b0e051c8e7'"
+                echo "GUID=='6c86903b-0153-4b49-85a3-11b1509039e7'"
                 echo ""
             fi 
         fi
@@ -307,7 +326,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi 
-                echo "GUID=='56a295ad-f5b1-46f1-81d8-33b0e051c8e7'"
+                echo "GUID=='97ce5e4d-dc1f-4127-83a3-11b1509039e7'"
                 echo ""
             fi 
         fi
@@ -319,7 +338,7 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1(){
     #--------
     MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1="mode_ok_to_load"
         func_mmmv_include_bashfile_if_possible_t2 "$S_FP_DECLARATION_BASH" \
-            "495d6b61-9b39-428b-a1f8-33b0e051c8e7"
+            "e64a2e39-93ad-44f5-8404-11b1509039e7"
     MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1="mode_loading_complete"
 } # func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1
 #--------------------------------------------------------------------------
@@ -333,7 +352,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
             echo ""
             echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
             echo "but it is expected to be a GUID."
-            echo "GUID=='51d56915-d6e2-44a3-a1d8-33b0e051c8e7'"
+            echo "GUID=='9d36cc3a-e71b-43f4-85a3-11b1509039e7'"
             echo ""
         fi 
     fi 
@@ -350,7 +369,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi
-                echo "GUID=='4506cb94-ecf1-46ca-8dd8-33b0e051c8e7'"
+                echo "GUID=='f8180c3d-7f3b-41e2-b1a3-11b1509039e7'"
                 echo "" 
             fi
         fi
@@ -363,7 +382,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
-            echo "GUID=='3a668a54-c387-443d-82c8-33b0e051c8e7'"
+            echo "GUID=='245e4bad-46db-4e38-8293-11b1509039e7'"
             echo "" 
         fi
     fi 
@@ -382,7 +401,7 @@ else
         echo "or there is something else very wrong, because the "
         echo -e "command \"\e[31mnice\e[39m\"\e[31m is missing from PATH\e[39m."
         echo ""
-        echo "GUID=='dd1f4454-ceef-4f60-a5c8-33b0e051c8e7'"
+        echo "GUID=='34047a23-571d-4fbe-a893-11b1509039e7'"
         echo ""
     fi
 fi
@@ -427,7 +446,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
             #     func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
             #         "$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING" \
             #         "SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING" \
-            #         "318663af-5871-4111-b2f8-33b0e051c8e7"
+            #         "826e70f6-5f52-4399-b8f3-11b1509039e7"
             # 
             # can not be used here, because its error message 
             # claims that the domain is only {"t","f"}, but
@@ -440,7 +459,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                             echo ""
                             echo -e "\e[31mSB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING==\"$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING\"\e[39m"
                             echo "but its domain is: {\"\",\"t\",\"f\"}"
-                            echo "GUID=='1f840838-07fe-46f7-95c8-33b0e051c8e7'"
+                            echo "GUID=='a6e23a12-854f-4a5c-b293-11b1509039e7'"
                             echo ""
                         fi
                         SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING="t"
@@ -460,7 +479,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                 echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
                 echo "but it is expected to be a GUID."
                 echo "Leaving at least one alias undefined."
-                echo "GUID=='ec164e34-8912-45d1-93c8-33b0e051c8e7'"
+                echo "GUID=='1d773c46-ece1-4c78-9593-11b1509039e7'"
                 echo ""
             fi
             SB_VERIFICATION_FAILED_LOCAL="t"
@@ -474,7 +493,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                 echo -e "\e[31mThe value of the S_ALIAS_NAME is an empty string\e[39m,"
                 echo "but it is expected to be an alias name."
                 echo "Leaving at least one alias undefined."
-                echo "GUID=='779b465d-7c77-4cb2-b4b8-33b0e051c8e7'"
+                echo "GUID=='fdb002a6-3ddf-458d-8493-11b1509039e7'"
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 echo ""
             fi
@@ -489,7 +508,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                 echo -e "\e[31mThe value of the S_FP_FOLDER_PATH_CANDIDATE is an empty string\e[39m,"
                 echo "but it is expected to be a full path to a folder."
                 echo "Leaving at least one alias undefined."
-                echo "GUID=='8ca8fc5a-9a48-42fc-93b8-33b0e051c8e7'"
+                echo "GUID=='483b2954-65a6-4090-8283-11b1509039e7'"
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 echo ""
             fi
@@ -504,12 +523,12 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
             #--------------------------------------------------------------
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$S_FP_FOLDER_PATH_CANDIDATE" \
-                "5ef441a4-4d58-461c-86e8-33b0e051c8e7" \
+                "1360dbbe-0620-45a9-95f3-11b1509039e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo "Leaving at least one alias undefined."
-                    echo "GUID=='29c7735c-7dd0-419e-b4b8-33b0e051c8e7'"
+                    echo "GUID=='722d8d38-bd46-4bff-a483-11b1509039e7'"
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi
@@ -556,7 +575,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                     echo "current user or the pwd-value in it differs from the"
                     echo "path given to this Bash function."
                     echo "Leaving at least one alias undefined."
-                    echo "GUID=='f3e76fb4-435a-4945-afb8-33b0e051c8e7'"
+                    echo "GUID=='320dedc3-5e23-4e12-9483-11b1509039e7'"
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi
@@ -571,11 +590,11 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
     fi #-------------------------------------------------------------------
     func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
         "$SB_OK2ATTEMPT" "SB_OK2ATTEMPT" \
-        "99cfe637-d530-4ba2-92e8-33b0e051c8e7"
+        "53a98b19-2040-4898-83f3-11b1509039e7"
     #----------------------------------------------------------------------
     func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
         "$SB_VERIFICATION_FAILED_LOCAL" "SB_VERIFICATION_FAILED_LOCAL" \
-        "3b8adb15-7b40-482e-b5e8-33b0e051c8e7"
+        "f90dc74d-f1e4-4385-93f3-11b1509039e7"
     if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
         SB_VERIFICATION_FAILED_LOCAL="t"
     fi
@@ -587,21 +606,21 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
 #func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
 #    "mmmv_nonsense_01" \
 #    "/root" \
-#    "62073245-fb8d-4178-b3d8-33b0e051c8e7"
+#    "4747b442-6265-48e1-a1b3-11b1509039e7"
 #
 #func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
 #    "mmmv_nonsense_02" \
 #    "/tmp/olematu" \
-#    "81716ffe-d25e-4943-85d8-33b0e051c8e7"
+#    "ac009c38-c154-4e39-81a3-11b1509039e7"
 #
 #func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
 #    "mmmv_nonsense_03" \
 #    "$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash" \
-#    "d8981e3f-0045-4d0d-91d8-33b0e051c8e7"
+#    "38eede2e-117b-42f8-a2a3-11b1509039e7"
 #
 #--------------------------------------------------------------------------
-S_FP_0="$S_FP_DIR/subparts/general/_bashrc_subpart_func_core_t3b"
-func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "56be5985-e561-4f12-82d8-33b0e051c8e7"
+S_FP_0="$S_FP_DIR/subparts/general/_bashrc_subpart_func_core_t3c"
+func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "ac3e5b37-abab-4ef3-93a3-11b1509039e7"
 func_mmmv_report_missing_from_path_and_do_NOT_exit_t1 "grep"
 #--------------------------------------------------------------------------
 S_WHOAMI="`whoami`"
@@ -683,16 +702,28 @@ func_add_rust_applications_2_PATH(){
     #     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     #
     S_FP_0="$HOME/.cargo" # the folder for the Rust package system
+    S_FP_1="$S_FP_0/env"  # Rust related $HOME/.bashrc subpart
     if [ -e "$S_FP_0" ]; then
         if [ -d "$S_FP_0" ]; then
+            #----------------------------------------
             func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
                 "$S_FP_0" \
-                "b7f3804c-c4e4-4521-91c8-33b0e051c8e7" 
+                "0399c550-f2a4-4baf-81a3-11b1509039e7"
+            #----------------------------------------
+            func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
+                "$S_FP_1" "d73f8518-cb5b-431f-a593-11b1509039e7" \
+                "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
+            if [ -e "$S_FP_1" ]; then
+                if [ ! -d "$S_FP_1" ]; then
+                    source "$S_FP_1"
+                fi
+            fi
+            #----------------------------------------
         fi
     else
         if [ -h "$S_FP_0" ]; then # broken symlink
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_0" "70d2a616-6bd5-4e21-95c8-33b0e051c8e7" \
+                "$S_FP_0" "b020bc52-c5dd-425c-a493-11b1509039e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         fi
     fi
@@ -722,7 +753,7 @@ MMMV_USERSPACE_DISTRO_T1_HOME_USERDECLARED="$MMMV_USERSPACE_DISTRO_T1_HOME"
 # for that reason the path is derived:
 S_TMP_0="`cd $S_FP_DIR/../../../ ; pwd`"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-    "$S_TMP_0" "9439ea32-e41f-4d73-a5c8-33b0e051c8e7" \
+    "$S_TMP_0" "a209ce56-8207-4089-b593-11b1509039e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
     if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
@@ -733,7 +764,7 @@ if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
         echo ""
         echo "    MMMV_USERSPACE_DISTRO_T1_HOME:=$MMMV_USERSPACE_DISTRO_T1_HOME"
         echo ""
-        echo "GUID=='dbfa8421-dfc5-4ede-94a8-33b0e051c8e7'"
+        echo "GUID=='1103b14d-cf0c-47b3-b583-11b1509039e7'"
         echo ""
     fi
 else
@@ -744,14 +775,14 @@ else
             echo ""
             echo "     SB_VERIFICATION_FAILED==\"$SB_VERIFICATION_FAILED\" "
             echo ""
-            echo "GUID=='a0249058-c267-41d3-93a8-33b0e051c8e7'"
+            echo "GUID=='11cf62bc-1dfe-4b61-9b73-11b1509039e7'"
             echo ""
         fi
     fi
     export MMMV_USERSPACE_DISTRO_T1_HOME="$S_TMP_0"
     S_TMP_1="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$S_TMP_1" "0b563f31-5386-489f-8ac8-33b0e051c8e7" \
+        "$S_TMP_1" "17906c75-5e43-47bd-ae93-11b1509039e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_1:$Z_PATH"
@@ -771,12 +802,12 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_HOME_USERDECLARED" != "" ]; then
             echo "    $MMMV_USERSPACE_DISTRO_T1_HOME"
             echo ""
             echo -e "\e[31mdiffer\e[39m. Using the derived version."
-            echo "GUID=='030ebac3-66df-494e-84a8-33b0e051c8e7'"
+            echo "GUID=='134b82c5-11a4-40b4-b473-11b1509039e7'"
             echo ""
         fi
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_HOME_USERDECLARED" \
-            "33613554-2736-4722-94b8-33b0e051c8e7" \
+            "20cdf544-00e5-4428-b183-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 fi
@@ -784,13 +815,13 @@ fi
 export MMMV_USERSPACE_DISTRO_T1_LINUX_WSL="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/Linux_WSL"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
     "$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL" \
-    "0f624917-9198-45d5-a1b8-33b0e051c8e7" \
+    "47eea792-d937-4fa2-b483-11b1509039e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 #-------------------
 export MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/Linux_Android_Termux"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
     "$MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX" \
-    "18c5dc55-1c7a-4282-a2b8-33b0e051c8e7" \
+    "89392630-c924-4a50-a283-11b1509039e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 #--------------------------------------------------------------------------
 MMMV_USERSPACE_DISTRO_T1_USER_TMP="/tmp"
@@ -822,7 +853,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_USER_TMP" == "/tmp" ]; then
             echo "for creating a symlink "
             S_TMP_0="_tmp_"
             echo "    /home/$S_WHOAMI/tmp_  -->  /tmp/$S_WHOAMI$S_TMP_0 "
-            echo "GUID=='2fa73371-f314-49ad-93a8-33b0e051c8e7'"
+            echo "GUID=='51592829-7453-4af6-8573-11b1509039e7'"
             echo ""
         fi
     fi
@@ -831,7 +862,7 @@ fi
 if [ -e "/usr/sbin" ]; then
     # The 
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "/usr/sbin" "e89e7412-a235-4483-95b8-33b0e051c8e7" \
+        "/usr/sbin" "707eac21-fbad-4970-8183-11b1509039e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     # is for displaying an error message, if the "/usr/sbin" is not a folder.
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
@@ -843,7 +874,7 @@ if [ -e "/usr/sbin" ]; then
                 echo -e "\e[31m The function \e[39m"
                 echo -e "\e[31m func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1(...) \e[39m"
                 echo -e "\e[31m is flawed. \e[39m"
-                echo "GUID=='a746e134-ae6c-43dd-a198-33b0e051c8e7'"
+                echo "GUID=='0cf5d512-96aa-4ef9-b173-11b1509039e7'"
                 echo ""
             fi
         fi
@@ -864,7 +895,7 @@ if [ -e "$S_FP_0" ]; then
         Z_PATH="$S_FP_0:$Z_PATH"
     else
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "1118b613-315d-4de7-81a8-33b0e051c8e7" \
+            "$S_FP_0" "2a8dba4a-c52c-404f-a373-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 #else
@@ -909,7 +940,7 @@ if [ -e "$S_FP_0" ]; then
     else
         # The
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "99a6da21-e315-4650-82a8-33b0e051c8e7" \
+            "$S_FP_0" "0dd60f36-adcb-49cc-b573-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         # is here for outputting an error message.
     fi
@@ -920,6 +951,7 @@ export PATH="$Z_PATH"
 # To save operating system userspace distribution creators from studying
 # this huge ./common_bashrc_main.bash , the userspace distribution
 # specific parts are placed to a separate, dedicated, file:
+#---------------------------------------
 S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/appliance_instance_specific_Bash_code/appliance_instance_specific_main.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 # which optionally includes the 
@@ -927,10 +959,7 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 #     /home/mmmv/applications/declare_applications.bash
 #
 export PATH="$Z_PATH" # to take into account the optional /home/mmmv/applications/declare_applications.bash
-#-------------------
-S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_program_availability_checks_01.bash"
-func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
-#-------------------
+#---------------------------------------
 # The 
 S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_Ruby_related.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
@@ -938,9 +967,6 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 # Bash scripts have been included.
 #-------------------
 S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_Python_related.bash"
-func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
-#-------------------
-S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_alias_mmmv_image_viewer.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 #-------------------
 S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_dot_NET_related.bash"
@@ -952,24 +978,36 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_Go_related.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 #-------------------
+export PATH="$Z_PATH" # to take into account the possible Z_PATH changes.
+#-------------------
+S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_alias_mmmv_image_viewer.bash"
+func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
+#-------------------
 export MMMV_DEVEL_TOOLS_HOME="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/mmmv_devel_tools/2015_01_22_mmmv_devel_tools_without_JumpGUID_and_IDE_integration_v_02_with_UpGUID_bugfix"
 S_FP_0="$MMMV_DEVEL_TOOLS_HOME/src/api/mmmv_devel_tools_bashrc_extension.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 #-------------------
 export PATH="$Z_PATH" # to take into account the possible Z_PATH changes.
+#-------------------
 # The 
 S_FP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/_bashrc_subpart_that_contains_the_set_of_checks_and_declarations_01.bash"
 # might add more programs to the Z_PATH.
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
-#-------------------
 export PATH="$Z_PATH" # to take into account the possible Z_PATH changes.
+#--------------------------------------------------------------------------
+# The 
+S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_program_availability_checks_01.bash"
+# has to be included
+func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
+# after all of the more specialised inclusion files.
+export PATH="$Z_PATH" # to take into account the possible Z_PATH changes.
+#--------------------------------------------------------------------------
 S_FP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/core_applications_set_01/_bashrc_subpart_that_adds_core_applications_set_01_elements_to_Z_PATH_according_to_availability_tests.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
-#-------------------
 export PATH="$Z_PATH"
+#--------------------------------------------------------------------------
 S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_alias_declarations_01.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
-#--------------------------------------------------------------------------
 export PATH="$Z_PATH" # here just in case, for comfort
 #--------------------------------------------------------------------------
 # The newline trick 
@@ -978,14 +1016,11 @@ S_NEWLINE=$'\n'
 # https://stackoverflow.com/questions/17821277/how-to-separate-multiple-commands-passed-to-eval-in-bash
 # archival copy: https://archive.fo/7XI3a 
 #--------------------------------------------------------------------------
-export MMMV_MANPATH_0="$MANPATH"
-alias mmmv_ui_set_MANPATH_0="export MANPATH=\"$MMMV_MANPATH_0\""
-#----------------------------------------
-export MMMV_LD_LIBRARY_PATH_0="export LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH\""
-export CPLUS_INCLUDE_PATH_0="export CPLUS_INCLUDE_PATH=\"$CPLUS_INCLUDE_PATH\""
-export C_INCLUDE_PATH_0="export C_INCLUDE_PATH=\"$C_INCLUDE_PATH\""
-#----------------------------------------
-alias mmmv_ui_reset_PATH_MANPATH_LD_LIBRARY_PATH_CPLUS_INCLUDE_PATH_C_INCLUDE_PATH="export PATH=\"$MMMV_PATH_0\" ; export MANPATH=\"$MMMV_MANPATH_0\" ; export LD_LIBRARY_PATH=\"$MMMV_LD_LIBRARY_PATH_0\" ; export CPLUS_INCLUDE_PATH=\"$CPLUS_INCLUDE_PATH_0\" ; export C_INCLUDE_PATH=\"$C_INCLUDE_PATH_0\" ; "
+# https://superuser.com/questions/365847/where-should-the-xdg-config-home-variable-be-defined
+# archival copy: https://archive.ph/m7cFg
+if [ "$XDG_CONFIG_HOME" == "" ]; then
+    export XDG_CONFIG_HOME="$HOME/.config"
+fi
 #--------------------------------------------------------------------------
 # Please choose the editor of Your choice: 
     #S_TEXTFILE_EDITOR_COMMANDLINE_PROGRAM_NAME="mcedit" # for novice
@@ -1003,7 +1038,7 @@ if [ "$S_TMP_0" == "" ]; then
             echo "and its initialization to \"$S_TEXTFILE_EDITOR_COMMANDLINE_PROGRAM_NAME\" "
             echo "failed because the \"$S_TEXTFILE_EDITOR_COMMANDLINE_PROGRAM_NAME\""
             echo "is missing from PATH."
-            echo "GUID=='2d8cb2c3-233f-4b54-8498-33b0e051c8e7'"
+            echo "GUID=='ae09425a-5a49-4810-a463-11b1509039e7'"
             echo ""
         fi
     fi
@@ -1053,7 +1088,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "t" ]; then
         export MMMV_USERSPACE_DISTRO_T1_LINUX_WSL_BIN="$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL/bin"
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL_BIN" \
-            "b4d01843-ef9c-48c7-83a8-33b0e051c8e7" \
+            "198f733c-5007-4cd6-b373-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             Z_PATH="$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL_BIN:$Z_PATH"
@@ -1065,7 +1100,7 @@ fi
 export MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/Linux_general_only"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
     "$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY" \
-    "e3a88b28-e462-4bec-a2a8-33b0e051c8e7" \
+    "75e3aca0-fe81-4149-9373-11b1509039e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
     if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
@@ -1074,7 +1109,7 @@ if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
             export MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY_BIN="$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY/bin"
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY_BIN" \
-                "ddbf3a39-f0c0-4428-8298-33b0e051c8e7" \
+                "265f2c73-8ddd-4c2a-9263-11b1509039e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 Z_PATH="$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY_BIN:$Z_PATH"
@@ -1087,7 +1122,7 @@ fi
 if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_polish_ABC_2_B_C_A_exec_t1" # is written in Ruby
     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-        "$S_TMP_0" "68421520-d441-440a-8598-33b0e051c8e7" \
+        "$S_TMP_0" "c5a8f159-061a-41b3-a363-11b1509039e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         # The space at the next line beofero the "; S_ERROR_CODE=..." is important.
@@ -1119,7 +1154,7 @@ if [ -e "$S_FP_0" ]; then
         # The 
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
             "$S_FP_0" \
-            "bee96e1f-4a06-4ce5-8178-33b0e051c8e7" \
+            "45c843b3-8a9b-4675-8163-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         # is here to conditionally display an error message.
     fi
@@ -1134,7 +1169,7 @@ else
             # The 
             func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
                 "$S_FP_0" \
-                "5209aca2-52ad-404e-8a78-33b0e051c8e7" \
+                "ce655a1b-017b-4626-8563-11b1509039e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             # is here to conditionally display an error message.
         fi
@@ -1149,7 +1184,7 @@ else
                 echo ""
                 echo "You might find it useful for storing "
                 echo "host specific general ~/.bashrc subpart code."
-                echo "GUID=='4408f706-8ed9-4235-9488-33b0e051c8e7'"
+                echo "GUID=='08ee475b-3dcf-4527-a263-11b1509039e7'"
                 echo ""
             fi
         fi
@@ -1189,13 +1224,13 @@ func_mmmv_userspace_distro_t1_alias_admin_create_home_tmp_t1(){
                     func_mmmv_wait_and_sync_t1
                 fi
                 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                    "$S_FP_GLOBALTMP" "2dd7492c-37dc-43ed-8378-33b0e051c8e7" \
+                    "$S_FP_GLOBALTMP" "a80a4d37-2400-44e3-b463-11b1509039e7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             else
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo ""
                     echo -e "$S_FP_GLOBALTMP is a\e[31m broken symlink \e[39m."
-                    echo "GUID=='3f60cc58-5965-4029-8378-33b0e051c8e7'"
+                    echo "GUID=='3a445559-da80-4aed-b163-11b1509039e7'"
                     echo ""
                 fi
             fi
@@ -1224,7 +1259,7 @@ func_mmmv_userspace_distro_t1_alias_admin_create_home_tmp_t1(){
                                 echo "    $S_FP_USERTMP"
                                 echo "that would point to to "
                                 echo "    $S_FP_GLOBALTMP"
-                                echo "GUID=='20bb021a-f2d6-45c3-b378-33b0e051c8e7'"
+                                echo "GUID=='5d64a094-e3e1-4e8d-a863-11b1509039e7'"
                                 echo ""
                             fi
                         fi
@@ -1232,7 +1267,7 @@ func_mmmv_userspace_distro_t1_alias_admin_create_home_tmp_t1(){
                         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                             echo ""
                             echo -e "$S_FP_USERTMP is a\e[31m broken symlink \e[39m."
-                            echo "GUID=='8bd95727-3104-4ae2-9478-33b0e051c8e7'"
+                            echo "GUID=='924a6447-27ee-4a7a-a253-11b1509039e7'"
                             echo ""
                         fi
                     fi
@@ -1263,7 +1298,7 @@ if [ -e "$S_FP_0" ]; then
     else
         # The
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "8e7c612e-1673-4e9f-a578-33b0e051c8e7" \
+            "$S_FP_0" "8b33f94b-9360-466e-9253-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         # is here for outputting an error message.
     fi
@@ -1316,8 +1351,17 @@ export PATH="$Z_PATH" # To at least somewhat accurately check
                       # and other package collection based
                       # installed programs. There's another
                       # line like that later.
+#----------------------------------------
+export MMMV_MANPATH_0="$MANPATH"
+alias mmmv_ui_set_MANPATH_0="export MANPATH=\"$MMMV_MANPATH_0\""
+#----------------------------------------
+export MMMV_LD_LIBRARY_PATH_0="export LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH\""
+export CPLUS_INCLUDE_PATH_0="export CPLUS_INCLUDE_PATH=\"$CPLUS_INCLUDE_PATH\""
+export C_INCLUDE_PATH_0="export C_INCLUDE_PATH=\"$C_INCLUDE_PATH\""
+#----------------------------------------
 export MMMV_PATH_0="$PATH"
 alias mmmv_ui_set_PATH_0="export PATH=\"$MMMV_PATH_0\""
+alias mmmv_ui_reset_PATH_MANPATH_LD_LIBRARY_PATH_CPLUS_INCLUDE_PATH_C_INCLUDE_PATH="export PATH=\"$MMMV_PATH_0\" ; export MANPATH=\"$MMMV_MANPATH_0\" ; export LD_LIBRARY_PATH=\"$MMMV_LD_LIBRARY_PATH_0\" ; export CPLUS_INCLUDE_PATH=\"$CPLUS_INCLUDE_PATH_0\" ; export C_INCLUDE_PATH=\"$C_INCLUDE_PATH_0\" ; "
 #--------------------------------------------------------------------------
 if [ "$SB_SH_EXISTS_ON_PATH" == "t" ]; then
     if [ "$SB_CURL_EXISTS_ON_PATH" == "t" ]; then
@@ -1349,7 +1393,7 @@ if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
             echo "  # func_initialize_configuration_by_initializing_global_variables "
             echo -e "\e[39m"
             echo "Thank You for reading this text."
-            echo "GUID=='2d22cc1a-e2e3-4756-b578-33b0e051c8e7'"
+            echo "GUID=='10250b50-fa95-4e23-a553-11b1509039e7'"
             echo ""
         fi
     fi
@@ -1404,7 +1448,7 @@ if [ -e "$S_FP_0" ]; then
         else
             #--------------------------------------------------------------
             func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-                "$S_FP_0" "0e358f82-d366-413d-b478-33b0e051c8e7" \
+                "$S_FP_0" "1d5e2155-b632-4b53-9953-11b1509039e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             #--------------------------------------------------------------
         fi
@@ -1829,7 +1873,7 @@ if [ -e "$S_FP_0" ]; then
     else
         #--------------------------------------------------------------
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "2fd6abe5-6e72-4f2e-b568-33b0e051c8e7" \
+            "$S_FP_0" "30a192a5-f20b-4dcb-b553-11b1509039e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         #--------------------------------------------------------------
     fi
@@ -1849,7 +1893,7 @@ if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
                 # for Linux (WSL) and Android Linux.
                 #--------------------------------------------------------------
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "mmmv_cre_temporary_file_t1" "0190c519-0e5b-4d55-9268-33b0e051c8e7"
+                    "mmmv_cre_temporary_file_t1" "6c961b50-114b-479a-8353-11b1509039e7"
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_cre_temporary_file_t1_host_independent"
                     if [ -e "$S_TMP_0" ]; then
@@ -1885,7 +1929,7 @@ if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
                             echo "2023 mainstream Linux distributions the sync command is"
                             echo "needed in Bash scripts to make sure that a newly created"
                             echo "file is fully present at the file system for reading."
-                            echo "GUID=='22aad336-ebf2-4319-a368-33b0e051c8e7'"
+                            echo "GUID=='d53ed8d2-ab7c-4daf-9853-11b1509039e7'"
                             echo ""
                         fi
                     fi

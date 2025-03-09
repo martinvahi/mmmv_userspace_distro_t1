@@ -1,0 +1,43 @@
+#!/usr/bin/env bash 
+#==========================================================================
+# Initial author of this file: INCOMPLETE
+# This file is in public domain.
+#
+# Initial author of the template of this file: Martin.Vahi@softf1.com
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+#==========================================================================
+# The 
+# 
+#     ./wsl-open
+# 
+# has been created by executing 
+#
+    git clone --recursive https://github.com/4U6U57/wsl-open.git
+    sync ; wait ; 
+    cd ./wsl-open
+    if [ "$?" == "0" ]; then
+        rm -f -R ./.git
+        sync ; wait ; 
+        cd ../ 
+        #----date--update--start---
+        S_0="on `date | tr -d '\n' `" 
+        cat ./COMMENTS.txt | \
+            sed -e "s/[#][[:blank:]]on.*\$/# $S_0/g" > ./COMMENTS_new.txt 
+        S_2="$?" ; wait 
+        if [ "$S_2" == "0" ]; then 
+            rm ./COMMENTS.txt 
+            sync ; wait 
+            mv ./COMMENTS_new.txt ./COMMENTS.txt 
+            sync ; wait 
+            chmod 0700 ./COMMENTS.txt
+            chmod -f -R 0700 ./wsl-open
+        fi
+        #----date--update--end-----
+    fi
+
+# on Thu Jan 30 15:30:00 EET 2025
+
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="2258ea6d-c31f-4660-a13d-b3c140b129e7"
+#==========================================================================

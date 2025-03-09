@@ -1,0 +1,105 @@
+#!/usr/bin/env bash 
+#==========================================================================
+# Initial author of this file: INCOMPLETE
+# This file is in public domain.
+#
+# Initial author of the template of this file: Martin.Vahi@softf1.com
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+#==========================================================================
+# The 
+# 
+#     ./utfcpp
+# 
+# has been created by executing 
+#
+    #----------------------------------------------------------------------
+    S_GITHUB_USERNAME="nemtrif"
+    #----------------------------------------------------------------------
+    S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    S_FP_BASH="$S_FP_DIR/`basename ${BASH_SOURCE[0]}`"
+    #----------------------------------------------------------------------
+    func_clone_a_single_repository_from_GitHub(){
+        local S_GITHUB_USERNAME="$1"
+        local S_PROJECTNAME="$2"
+        #------------------------------------------------------------------
+        local SI_ERR="42"
+        local S_0="42"
+        #-----------------------------------------
+        if [ ! -e "$S_FP_DIR/$S_PROJECTNAME" ]; then
+            cd $S_FP_DIR
+            SI_ERR="$?"
+            if [ "$SI_ERR" == "0" ]; then
+                git clone --recursive https://github.com/$S_GITHUB_USERNAME/$S_PROJECTNAME.git
+                SI_ERR="$?"
+            fi
+            sync ; wait ; 
+            if [ "$SI_ERR" == "0" ]; then
+                cd $S_FP_DIR/$S_PROJECTNAME
+                SI_ERR="$?"
+            fi
+            if [ "$SI_ERR" == "0" ]; then
+                # The next line 
+                find . -name '*.git' | grep -E '[.]git$' | xargs rm -fr  
+                # handles also the .git folders of 
+                # git repository submodules. The grep is 
+                # just for some extra safety.
+                SI_ERR="$?"
+                sync ; wait ; 
+                cd ../ 
+                #-------date--update--start-------
+                if [ "$SI_ERR" == "0" ]; then 
+                    S_0="on `date | tr -d '\n' `" 
+                    SI_ERR="$?"
+                    if [ "$SI_ERR" == "0" ]; then 
+                        cat ./COMMENTS.txt | \
+                            sed -e "s/[#][[:blank:]]on.*\$/# $S_0/g" > ./COMMENTS_new.txt 
+                        SI_ERR="$?"
+                    fi
+                    if [ "$SI_ERR" == "0" ]; then 
+                        wait;
+                        rm ./COMMENTS.txt 
+                        sync ; wait 
+                        mv ./COMMENTS_new.txt ./COMMENTS.txt 
+                        sync ; wait 
+                        chmod 0700 ./COMMENTS.txt
+                        chmod -f -R 0700 ./$S_PROJECTNAME
+                    fi
+                fi
+                #-------date--update--end---------
+            fi
+        else
+            echo -e "Folder\e[33m ./$S_PROJECTNAME\e[39m already exists."
+        fi
+        #------------------------------------------------------------------
+    } # func_clone_a_single_repository_from_GitHub
+
+    func_extract_list_and_clone_them(){
+        #------------------------------------------------------------------
+        local SI_ERR="42"
+        local S_0="42"
+        #-----------------------------------------
+        S_0="`cat "$S_FP_BASH" |  \
+            grep -E '^[#] {5}[.][/]' |  \
+            sed -e 's/^[^\/]\+[\/]/func_clone_a_single_repository_from_GitHub \"'$S_GITHUB_USERNAME'\" \"/g' | \
+            sed -e 's/\$/\" ; /g' | \
+            tr -d '\n' `"
+        if [ "$SI_ERR" != "0" ]; then 
+            eval "$S_0"
+        else
+            echo ""
+            echo -e "\e[31mSomething went wrong\e[39m."
+            echo " SI_ERR=={$SI_ERR}"
+            echo "    S_0=={$S_0}"
+            echo "GUID=='5985ba23-33e0-487b-a13c-13d140b129e7'"
+            echo ""
+        fi
+        #------------------------------------------------------------------
+    } # func_extract_list_and_clone_them 
+    func_extract_list_and_clone_them 
+
+# on Mon Feb  3 21:02:10 EET 2025
+
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="2d4fdde4-1988-4c54-a43c-13d140b129e7"
+#==========================================================================
