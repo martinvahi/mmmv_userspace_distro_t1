@@ -37,7 +37,7 @@ Backwards compatibility of this project with its earlier versions
 
 Versions of the mmmv_userspace_distro_t1 are meant to be compatible only
 with their own era mmmv_userspace_distro_t1_pkg01 versions. There is an
-aim to make this project usable on both, Linux and BSD, but as of 2024
+aim to make this project usable on both, Linux and BSD, but as of 2025
 proper testing in the form of daily use is done only on Linux.
 
 
