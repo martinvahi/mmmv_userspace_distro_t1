@@ -608,7 +608,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='35d54510-f633-4f2d-8132-90132021a8e7'"
+:                throw "The vimscript needs to be improved. GUID=='43317818-f10f-4360-a85b-00b341e039e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -2046,7 +2046,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='d4d46039-accd-4db5-9232-90132021a8e7'"
+:        throw "The vimscript is flawed. GUID=='15e5f659-b526-407d-811b-00b341e039e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2310,6 +2310,42 @@
 :    'a,'b s/'"'"'/'/g
 :endfun "MV_unescape_a_to_b_singlequoted_Bash_string_t1
 :"-------------------------------------------------------------------------
+:fun! MV_sort_a_to_b_alphabetically_t1()
+:"   https://stackoverflow.com/questions/3861503/sort-rows-in-vi-editor
+:"   archival copy: https://archive.is/2DggW
+:    'a,'b sort
+:endfun "MV_sort_a_to_b_alphabetically_t1
+:"-------------------------------------------------------------------------
+:fun! MV_sort_a_to_b_alphabetically_reverse_t1()
+:"   https://stackoverflow.com/questions/3861503/sort-rows-in-vi-editor
+:"   archival copy: https://archive.is/2DggW
+:    'a,'b sort!
+:endfun "MV_sort_a_to_b_alphabetically_reverse_t1
+:"-------------------------------------------------------------------------
+:fun! MV_sort_a_to_b_alphabetically_case_insensitive_t1()
+:"   https://stackoverflow.com/questions/3861503/sort-rows-in-vi-editor
+:"   archival copy: https://archive.is/2DggW
+:    'a,'b sort i
+:endfun "MV_sort_a_to_b_alphabetically_case_insensitive_t1
+:"-------------------------------------------------------------------------
+:fun! MV_sort_a_to_b_alphabetically_case_insensitive_reverse_t1()
+:"   https://stackoverflow.com/questions/3861503/sort-rows-in-vi-editor
+:"   archival copy: https://archive.is/2DggW
+:    'a,'b sort! i
+:endfun "MV_sort_a_to_b_alphabetically_case_insensitive_reverse_t1
+:"-------------------------------------------------------------------------
+:fun! MV_sort_a_to_b_numerically_t1()
+:"   https://stackoverflow.com/questions/3861503/sort-rows-in-vi-editor
+:"   archival copy: https://archive.is/2DggW
+:    'a,'b sort -n
+:endfun "MV_sort_a_to_b_numerically_t1
+:"-------------------------------------------------------------------------
+:fun! MV_sort_a_to_b_numerically_reverse_t1()
+:"   https://stackoverflow.com/questions/3861503/sort-rows-in-vi-editor
+:"   archival copy: https://archive.is/2DggW
+:    'a,'b sort! -n
+:endfun "MV_sort_a_to_b_numerically_reverse_t1
+:"-------------------------------------------------------------------------
 :fun! MV_sbb_file_exists_t1(s_fp_file_candidate)
 :       "---------------
 :"    The core of the code of this function originates from
@@ -2382,10 +2418,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='df064a10-7f41-4770-b532-90132021a8e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='13decd06-43a7-43ca-8f1b-00b341e039e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='ad135e21-84f5-48d4-9532-90132021a8e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='1929b404-c6f2-43b7-803b-00b341e039e7'"
 :                en
 :            en
 :           "---------------
@@ -2752,6 +2788,13 @@
 :command -nargs=0 ESCBashStringSQ   call   MV_escape_a_to_b_singlequoted_Bash_string_t1()
 :command -nargs=0 UNESCBashStringSQ call MV_unescape_a_to_b_singlequoted_Bash_string_t1()
 :"-------------------------------------------------------------------------
+:command -nargs=0 SOR call MV_sort_a_to_b_alphabetically_t1()
+:command -nargs=0 SORrev call MV_sort_a_to_b_alphabetically_reverse_t1()
+:command -nargs=0 SORi call MV_sort_a_to_b_alphabetically_case_insensitive_t1()
+:command -nargs=0 SORirev call MV_sort_a_to_b_alphabetically_case_insensitive_reverse_t1()
+:command -nargs=0 SORn call MV_sort_a_to_b_numerically_t1()
+:command -nargs=0 SORnrev call MV_sort_a_to_b_numerically_reverse_t1()
+:"-------------------------------------------------------------------------
 :command -nargs=0 SHRl call MV_shift_all_in_range_to_the_left_t1()
 :command -nargs=0 SHRr call MV_shift_all_in_range_to_the_right_t1()
 :command -nargs=0 SLcy call MV_substitute_in_line_cursorselected_with_yanked_t1()
@@ -2786,5 +2829,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="62d9fe63-4d4d-4467-8232-90132021a8e7"
+:" S_VERSION_OF_THIS_FILE="d2d3b754-7d09-40fd-ba2b-00b341e039e7"
 :"=========================================================================
