@@ -1,0 +1,8 @@
+File origins:
+
+    ./m4-1.4.19.zip 
+    has been obtained by downloading, unpacking and repacking
+    https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.gz
+    Download date: 2025_03_12
+
+
