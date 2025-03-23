@@ -5,16 +5,17 @@ GNU libtool home page:
 
 The 
 
-    ./libtool-2.4.6.tar.gz
+    ./libtool-2.4.6.zip
 
-has been downloaded on 2022_01_06 form
+has been obtained by downloading 
 
+    (Download date: 2022_01_06) 
     https://ftpmirror.gnu.org/libtool/libtool-2.4.6.tar.gz
 
-Tested to build on ("uname -a")
+and repacking it. Tested to build on ("uname -a")
 
 ---verbatim--start-----
-Linux hoidla01 4.19.0-10-amd64 #1 SMP Debian 4.19.132-1 (2020-07-24) x86_64 GNU/Linux
+Linux ufodroom01 6.8.0-52-generic #53~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jan 15 19:18:46 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 ---verbatim--end-------
 
 with 
@@ -30,11 +31,14 @@ with GCC ("gcc -v")
 ---verbatim--start-----
 Using built-in specs.
 COLLECT_GCC=gcc
-COLLECT_LTO_WRAPPER=/home/mmmv/applications/Ada/v2019_05_17_GNAT_Community/bin/../libexec/gcc/x86_64-pc-linux-gnu/8.3.1/lto-wrapper
-OFFLOAD_TARGET_NAMES=nvptx-none
-Target: x86_64-pc-linux-gnu
-Configured with: ../src/configure --enable-languages=ada,c,c++ --enable-dual-exceptions --enable-offload-targets=nvptx-none --enable-_cxa_atexit --enable-threads=posix --with-bugurl=URL:mailto:report@adacore.com --disable-nls --without-libiconv-prefix --disable-libstdcxx-pch --disable-libada --enable-checking=release --disable-multilib --with-mpfr=/it/sbx/a2c2/x86_64-linux/mpfr_stable-c/install --with-gmp=/it/sbx/a2c2/x86_64-linux/gmp_stable-c/install --with-mpc=/it/sbx/a2c2/x86_64-linux/mpc_stable-c/install --with-build-time-tools=/it/sbx/a2c2/x86_64-linux/gcc-c/build/buildtools/bin --prefix=/it/sbx/a2c2/x86_64-linux/gcc-c/pkg --build=x86_64-pc-linux-gnu
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
 Thread model: posix
-gcc version 8.3.1 20190518 (for GNAT Community 2019 20190517) (GCC) 
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
 ---verbatim--end-------
+
 
