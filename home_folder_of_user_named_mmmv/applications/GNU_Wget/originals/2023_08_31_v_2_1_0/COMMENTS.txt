@@ -6,4 +6,11 @@ Relevant URLs:
     https://ftp.gnu.org/gnu/wget/wget2-2.1.0.tar.lz.sig
     Download date: 2023_10_22
 
+The 
+
+    ./wget2-2.1.0.zip
+
+has been obtained by unpacking and repacking the 
+
+    ./wget2-2.1.0.tar.lz
 

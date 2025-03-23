@@ -6,4 +6,11 @@ Relevant URLs:
     https://ftp.gnu.org/gnu/wget/wget-1.21.tar.lz.sig
     Download date: 2023_10_23
 
+The 
+
+    ./wget-1.21.zip
+
+has been obtained by unpacking and repacking the 
+
+    ./wget-1.21.tar.lz
 
