@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='1ef2d5c3-8008-4fa7-9326-a110c071b8e7'"
+    echo "GUID=='45cdf5c2-31cc-4e23-b576-81e1402139e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -42,7 +42,7 @@ func_first_use_warning(){
     echo ""
     echo "so that it matches Your setup. This message has been "
     echo "displayed from Bash code that resides near the following GUID:"
-    echo "GUID=='7781d920-4d41-4adc-8126-a110c071b8e7'"
+    echo "GUID=='50692a84-5be9-4da6-9576-81e1402139e7'"
     echo "Thank You."
     echo ""
     SB_APPLICATION_DECLARATION_SCRIPT_CUSTOMISED="f"
@@ -65,12 +65,12 @@ func_declare_OpenJ9_alias_t1(){
     fi
     #----------------------------------------
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$MMMV_OPENJ9_HOME" "669b6f14-9802-4798-b526-a110c071b8e7" \
+        "$MMMV_OPENJ9_HOME" "2cf7db53-ce7a-4fd9-a276-81e1402139e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         #----------------------------------------
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_OPENJ9_CONFIG" "18504348-a2c1-4fef-b326-a110c071b8e7" \
+            "$S_FP_OPENJ9_CONFIG" "5cd5c8a2-97af-4345-8976-81e1402139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             #alias mmmv_ui_add2PATH_Java_OpenJ9_2_envs_t1="export JAVA_HOME=\"$MMMV_OPENJ9_HOME\" ; export PATH=\"$MMMV_OPENJ9_HOME/bin:\$PATH\" ; export MANPATH=\"$MMMV_OPENJ9_HOME/man:\$MANPATH\" ; export LD_LIBRARY_PATH=\"$MMMV_OPENJ9_LD_LIBRARY_PATH:\$LD_LIBRARY_PATH\" ; source \"$S_FP_OPENJ9_CONFIG\" ; "
@@ -88,193 +88,323 @@ if [ "$SB_APPLICATION_DECLARATION_SCRIPT_CUSTOMISED" == "t" ]; then
     #----------------------------------------------------------------------
     export M2="$S_FP_APPLICATIONS/Maven/v_3_6_3" # ..../bin/mvn depends on sh
     if [ "$SB_SH_EXISTS_ON_PATH" == "t" ]; then # TODO: eliminate the if-clause by updating the function below
+        SB_MAVEN_EXISTS_ON_PATH="f"
         func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-            "$M2" "75b6312e-78e3-4d98-b426-a110c071b8e7" 
-        alias mmmv_admin_mvn_download_plugin_org_apache_maven_plugins="nice -n 5 mvn dependency:get -DrepoUrl=mvnrepository.com/artifact/org.apache.maven.plugins "
+            "$M2" "73c34030-2e50-478b-8376-81e1402139e7" 
+        if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+            SB_MAVEN_EXISTS_ON_PATH="t"
+            alias mmmv_admin_mvn_download_plugin_org_apache_maven_plugins="nice -n 5 mvn dependency:get -DrepoUrl=mvnrepository.com/artifact/org.apache.maven.plugins "
+        fi
     fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Ruby/v_x_x_x_in_use"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "4edc973e-1763-4961-b526-a110c071b8e7" 
+        "$S_TMP_0" "3efcda63-64e5-4090-8166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_RUBY_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     #S_TMP_0="$S_FP_APPLICATIONS/rhash/v_1_4_2"
     S_TMP_0="$S_FP_APPLICATIONS/rhash/v_1_4_4"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "b2c86331-877d-4b89-b226-a110c071b8e7" 
+        "$S_TMP_0" "010b6a1a-9626-4099-8166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_RHASH_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Par_text_formatter/v_1_53_0"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "f44fd738-407b-48fd-b426-a110c071b8e7" 
-    SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH="t"
-    export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
+        "$S_TMP_0" "8ecd4f2e-9b10-483b-8266-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH="t"
+        export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
+    fi
     #----------------------------------------------------------------------
     #S_TMP_0="$S_FP_APPLICATIONS/glimpse_search_engine/v_4_18_6"
     S_TMP_0="$S_FP_APPLICATIONS/glimpse_search_engine/v_4_18_6_modification_01"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "aba6d611-186e-4bfa-8326-a110c071b8e7" 
-    export MANPATH="$S_TMP_0/man:$MANPATH" # needed due to nonconventional path
-    SB_GLIMPSE_EXISTS_ON_PATH="t"
-    SB_GLIMPSEINDEX_EXISTS_ON_PATH="t"
-    SB_AGREP_EXISTS_ON_PATH="t"
+        "$S_TMP_0" "98f90d17-0dbf-4352-b566-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_GLIMPSE_EXISTS_ON_PATH="t"
+        SB_GLIMPSEINDEX_EXISTS_ON_PATH="t"
+        SB_AGREP_EXISTS_ON_PATH="t"
+        export MANPATH="$S_TMP_0/man:$MANPATH" # needed due to nonconventional path
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/libtool_GNU/v_2_4_6"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "6c6ec454-81c3-446e-8426-a110c071b8e7" 
+        "$S_TMP_0" "3f33fd27-29f8-405c-b566-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_LIBTOOL_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Fossil/v_2_19"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "dcdec81a-2211-424a-8316-a110c071b8e7" 
+        "$S_TMP_0" "2f122cf1-90b2-4942-8466-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_FOSSIL_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/GNU_grep/v_3_11"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "e351813c-138a-4f22-8516-a110c071b8e7" 
+        "$S_TMP_0" "baa2c24b-b0a8-471c-a266-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_GREP_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/GNU_sed/v_4_9"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "01e1713a-4fb2-4693-b116-a110c071b8e7" 
+        "$S_TMP_0" "edbd805a-4bef-4aa3-a266-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_SED_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/DilloPlus_web_browser/v2024_12_18_DilloPlus"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "ed371e3f-aa94-4012-8466-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_DILLOPLUS_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/MotionProject_security_camera_software/v_4_6_0_1"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "3820bd1b-24ba-49d8-a316-a110c071b8e7" 
+        "$S_TMP_0" "08da6233-134b-4bb9-8166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_MOTIONPROJECT_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/DoubleCommander_file_manager/v_1_1_22"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "1ed39962-f41a-4e94-9266-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_DOUBLECOMMANDER_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Inkscape/v_1_3"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "a40c854c-9bf4-4982-8416-a110c071b8e7" 
+        "$S_TMP_0" "15ebe9f3-a4a2-4c93-a266-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_INKSCAPE_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/NeoMutt_email_client/v2025_01_13"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "70aa4c2d-5435-4e50-9266-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_NEOMUTT_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/GNU_M4/v_1_4_19"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "2ced64e4-6adf-4bab-a566-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_M4_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     # S_TMP_0="$S_FP_APPLICATIONS/ParaSail/parasail_release_9_3/install"
     # func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-    #     "$S_TMP_0" "b836eb49-865a-403e-8516-a110c071b8e7" 
+    #     "$S_TMP_0" "aa6bcf41-2853-4851-8166-81e1402139e7" 
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/mmmv_hardwarethreadcount_t1"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "b080061b-97ba-4d89-a216-a110c071b8e7" 
+        "$S_TMP_0" "392dcc1d-b868-4adb-b166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+       SB_MMMV_HARDWARETHREADCOUNT_T1_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/CMake/v_3_25_1"
     #func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-    #    "$S_TMP_0" "e540fe31-ccd3-422a-b516-a110c071b8e7" 
-    if [ -e "$S_TMP_0" ]; then
-        if [ -d "$S_TMP_0" ]; then
-            alias mmmv_ui_add2PATH_CMake_v_3_25_1="export PATH=\"$S_TMP_0/bin:\$PATH\"; export MANPATH=\"$S_TMP_0/share/man:\$MANPATH\" "
-        else
-            SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE="$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
-            func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_TMP_0" "398b7e50-14f1-476e-8216-a110c071b8e7" \
-                "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        fi
-    fi
+    #    "$S_TMP_0" "2da4fe4f-0fc5-41b0-9166-81e1402139e7" 
+    # if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+    #     alias mmmv_ui_add2PATH_CMake_v_3_25_1="export PATH=\"$S_TMP_0/bin:\$PATH\"; export MANPATH=\"$S_TMP_0/share/man:\$MANPATH\" "
+    # fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/DRAKON/v2014_08_04_DRAKON"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "6f4d9e3a-7ae3-458b-9216-a110c071b8e7" 
+        "$S_TMP_0" "e7b3f614-0f88-45c0-8166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_DRAKON_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/KreativeKorp_Hexcellent_hex_editor/KreativeKorp_Hexcellent_v_1_0_1"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "68d16c49-1253-4314-a166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_KREATIVEKORPHEXCELLENT_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/KreativeKorp_PowerPaint/2024_12_20_downloaded_KreativeKorp_PowerPaint/src_and_bytecode_compiled_with_OpenJ9_JVM_Java8"
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "c12cd1c1-d6d2-4bcc-8166-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_KREATIVEKORPPOWERPAINT_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/JAVA_gnuplot_GUI/precompiled_with_OpenJ9_Java8"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "595648a3-fe08-449e-9516-a110c071b8e7" 
+        "$S_TMP_0" "19ebb337-c265-4a49-a456-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_JAVAGNUPLOTGUI_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/tiv/v2023_12_07"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "3d685bd1-481b-4801-b616-a110c071b8e7" 
+        "$S_TMP_0" "eed79f83-ddcb-472e-8356-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_TIV_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/neofetch/v2021_12_10"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "18e47053-0cff-49e9-bf16-a110c071b8e7" 
+        "$S_TMP_0" "f986a626-a32d-4dbe-b456-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_NEOFETCH_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/par2_file_corruption_mitigator/v2023_05_31"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "7afc6d19-f6d2-473f-9316-a110c071b8e7" 
-    SB_PAR2_EXISTS_ON_PATH="t"
+        "$S_TMP_0" "20118134-a65b-4c58-8556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_PAR2_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/redupe_file_corruption_mitigator/v2024_08_12_redupe"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "41d3b832-673d-4bb9-8216-a110c071b8e7" 
-    SB_REDUPE_EXISTS_ON_PATH="t"
-    if [ -e "$S_TMP_0" ]; then
-        if [ -d "$S_TMP_0" ]; then
-            export LD_LIBRARY_PATH="$S_TMP_0/lib:$LD_LIBRARY_PATH"
-            export CPLUS_INCLUDE_PATH="$S_TMP_0/include:$CPLUS_INCLUDE_PATH"
-            alias mmmv_redupe_50="nice -n 14 redupe -o 50 "
-        fi
+        "$S_TMP_0" "1752f405-c822-4d04-9556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_REDUPE_EXISTS_ON_PATH="t"
+        export LD_LIBRARY_PATH="$S_TMP_0/lib:$LD_LIBRARY_PATH"
+        export CPLUS_INCLUDE_PATH="$S_TMP_0/include:$CPLUS_INCLUDE_PATH"
+        alias mmmv_redupe_50="nice -n 14 redupe -o 50 "
     fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/sc-im_spreadsheet_program/v2024_07_20_sc-im"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "73f58756-1e00-4bd5-9316-a110c071b8e7" 
+        "$S_TMP_0" "1c9d303e-77df-446f-a556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_SCIMSPREADSHEETPROGRAM_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/static-web-server_net/v_2_24_1"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "553268b2-9e78-46e9-9616-a110c071b8e7" 
+        "$S_TMP_0" "5c24f921-5370-46ea-8956-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_STATICWEBSERVERNET_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/ncdu/v_1_19"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "45f9a7e2-d261-4332-a616-a110c071b8e7" 
+        "$S_TMP_0" "cb4ca716-6ec6-4922-8256-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_NCDU_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/REDUCE_Computer_Algebra_System/v_svn6547"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "a527cc5c-dbc0-43d6-8316-a110c071b8e7" 
+        "$S_TMP_0" "3c669a61-5448-4a5f-8256-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_REDUCE_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     #S_TMP_0="$S_FP_APPLICATIONS/Vim/v_8_1"
     S_TMP_0="$S_FP_APPLICATIONS/Vim/2024_06_22_cloned_v_9_1_512"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "1c00ec23-fe43-4a5e-8516-a110c071b8e7" 
+        "$S_TMP_0" "376f9e5d-1a0e-47ef-a556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_VIM_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/GNU_Wget/v_1_21"      # wget  from 2020_12_31
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "2bb97541-6f37-48f7-a316-a110c071b8e7"
-        #----------------------------------------
-        S_TMP_0="$S_FP_APPLICATIONS/GNU_Wget/v_2_1_0" # wget2 from 2023_08_31
-        func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-            "$S_TMP_0" "0ae12311-1e07-476f-9416-a110c071b8e7" 
+        "$S_TMP_0" "1af3e314-f30b-4bc9-9356-81e1402139e7"
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_WGET_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/GNU_Wget/v_2_1_0" # wget2 from 2023_08_31
+    func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
+        "$S_TMP_0" "134b9551-7611-4a56-b556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_WGET2_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Xdialog/v_2_3_1"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "471a3cf2-46e7-4fc9-a316-a110c071b8e7" 
+        "$S_TMP_0" "c81d4729-56bc-4f79-b456-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_XDIALOG_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/lrzsz_BBS_X_Y_Z_Modem_file_upload_software/v_0_12_20"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "46584da1-a7e6-4c18-b216-a110c071b8e7" 
+        "$S_TMP_0" "38fc9c62-87a6-462d-bc56-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_LRZSZBBSXYZMODEMFILEUPLOADSOFTWARE_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/Worker_file_manager/v_5_1_0"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "42af041e-c411-45c6-8516-a110c071b8e7" 
+        "$S_TMP_0" "1bf59535-ef5e-4302-9256-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_WORKERFILEMANAGER_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/nnn_file_manager/v_5_0"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "2694f07b-059c-4cc2-b316-a110c071b8e7" 
+        "$S_TMP_0" "57e8f884-6159-40ed-8356-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_NNNFILEMANAGER_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
-    S_TMP_0="$S_FP_APPLICATIONS/lib_openssl/v_3_1_4"
+    #S_TMP_0="$S_FP_APPLICATIONS/lib_openssl/v_3_1_4"
     #func_mmmv_add_lib_2_LD_LIBRARY_PATH_and_include_2_CPATH_t1 \
-    #    "$S_TMP_0" "f48ba024-5e51-47c8-b306-a110c071b8e7" 
+    #    "$S_TMP_0" "2623d645-af6b-4a5a-9456-81e1402139e7" 
+    #if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+    #    SB_LIBOPENSSL_EXISTS_ON_PATH="t"
+    #fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/lib_popt/v_1_19"
     func_mmmv_add_lib_2_LD_LIBRARY_PATH_and_include_2_CPATH_t1 \
-        "$S_TMP_0" "21851f5b-27dd-452d-b206-a110c071b8e7" 
+        "$S_TMP_0" "5ee86611-82d4-414a-9556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_LIBPOPT_EXISTS_ON_PATH="t"
+    fi
+    #----------------------------------------------------------------------
+    S_TMP_0="$S_FP_APPLICATIONS/lib_jemalloc/v_5_3_0"
+    func_mmmv_add_lib_2_LD_LIBRARY_PATH_and_include_2_CPATH_t1 \
+        "$S_TMP_0" "3d90d95d-0e60-4cea-9556-81e1402139e7" 
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_LIBJEMALLOC_EXISTS_ON_PATH="t"
+    fi
     #----------------------------------------------------------------------
     S_TMP_0="$S_FP_APPLICATIONS/FOX_Toolkit/v_1_7_84"
     func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-        "$S_TMP_0" "19fede30-2ed3-41dd-b406-a110c071b8e7"
-    if [ -e "$S_TMP_0" ]; then
-        if [ -d "$S_TMP_0" ]; then
-            export LD_LIBRARY_PATH="$S_TMP_0/lib:$LD_LIBRARY_PATH"
-            export CPLUS_INCLUDE_PATH="$S_TMP_0/include:$CPLUS_INCLUDE_PATH"
-        fi
+        "$S_TMP_0" "6c44cf3c-67ea-480d-a356-81e1402139e7"
+    if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
+        SB_FOXTOOLKIT_EXISTS_ON_PATH="t"
+        export LD_LIBRARY_PATH="$S_TMP_0/lib:$LD_LIBRARY_PATH"
+        export CPLUS_INCLUDE_PATH="$S_TMP_0/include:$CPLUS_INCLUDE_PATH"
     fi
     #----------------------------------------------------------------------
     MMMV_OPENJ9_HOME_JAVA17="$S_FP_APPLICATIONS/Java/jdk-17.0.1+12"
-    func_declare_OpenJ9_alias_t1 \
-        "$MMMV_OPENJ9_HOME_JAVA17" \
-        "mmmv_ui_add2PATH_Java_OpenJ9_Java17"
+    if [ -e "$MMMV_OPENJ9_HOME_JAVA17" ]; then
+        func_declare_OpenJ9_alias_t1 \
+            "$MMMV_OPENJ9_HOME_JAVA17" \
+            "mmmv_ui_add2PATH_Java_OpenJ9_Java17"
+    fi
     MMMV_OPENJ9_HOME_JAVA8="$S_FP_APPLICATIONS/Java/jdk8u312-b07"
-    func_declare_OpenJ9_alias_t1 \
-      "$MMMV_OPENJ9_HOME_JAVA8" \
-      "mmmv_ui_add2PATH_Java_OpenJ9_Java8"
+    if [ -e "$MMMV_OPENJ9_HOME_JAVA8" ]; then
+        func_declare_OpenJ9_alias_t1 \
+          "$MMMV_OPENJ9_HOME_JAVA8" \
+          "mmmv_ui_add2PATH_Java_OpenJ9_Java8"
+    fi
     #----------------------------------------------------------------------
-#--------------------------------------------------------------------------
 else
     if [ "$SB_APPLICATION_DECLARATION_SCRIPT_CUSTOMISED" != "f" ]; then
         echo ""
         echo -e "\e[31mThis script is flawed.\e[39m"
         echo "SB_APPLICATION_DECLARATION_SCRIPT_CUSTOMISED == \"$SB_APPLICATION_DECLARATION_SCRIPT_CUSTOMISED\""
-        echo "GUID=='e871505f-c1fa-4619-b426-a110c071b8e7'"
+        echo "GUID=='c6054dd6-c0c5-4340-8976-81e1402139e7'"
         echo ""
         # "exit 1" must not be here, because 
         # an exit clause would end the login session.
@@ -305,11 +435,11 @@ if [ -e "$S_FP_0" ]; then
                 #     echo "    $S_FP_1"
                 #     echo ""
                 #     echo -e "\e[31mis a folder\e[39m, but a file is expected."
-                #     echo "GUID=='e40fd85a-2991-4144-b426-a110c071b8e7'"
+                #     echo "GUID=='2fbf10c3-02e3-47e2-9d76-81e1402139e7'"
                 #     echo ""
                 # fi
                 func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-                    "$S_FP_1" "e1e7a81c-09f7-47b2-9506-a110c071b8e7" \
+                    "$S_FP_1" "490e0959-c09f-4ce0-b556-81e1402139e7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             fi
         else
@@ -322,21 +452,21 @@ if [ -e "$S_FP_0" ]; then
                 #     echo "    $S_FP_1"
                 #     echo ""
                 #     echo -e "\e[31mis a broken symlink\e[39m, but a file is expected."
-                #     echo "GUID=='3294fe2e-66a0-44c3-9426-a110c071b8e7'"
+                #     echo "GUID=='40b582e2-5efe-48c1-8266-81e1402139e7'"
                 #     echo ""
                 # fi
                 func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-                    "$S_FP_1" "e8ec9b3c-893f-4f8c-a506-a110c071b8e7" \
+                    "$S_FP_1" "1c724e7f-b1f8-4c41-b356-81e1402139e7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             fi
             #--------------------------------------------------------------
         fi
     else
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "272353f4-50ad-4e75-8106-a110c071b8e7" \
+            "$S_FP_0" "d615271a-46b1-4a4b-8356-81e1402139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="317d2683-5fb9-4884-9506-a110c071b8e7"
+# S_VERSION_OF_THIS_FILE="bbd0005c-827d-4352-8446-81e1402139e7"
 #==========================================================================
