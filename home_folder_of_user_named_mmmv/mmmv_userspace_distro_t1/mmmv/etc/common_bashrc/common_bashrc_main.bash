@@ -26,9 +26,9 @@
 #
 #--------------------------------------------------------------------------
 # The 
-export MMMV_USERSPACE_DISTRO_T1_VERSION="b3793325-7611-4e92-9443-a14011c039e7"
+export MMMV_USERSPACE_DISTRO_T1_VERSION="4c579411-e20b-4596-b3c0-8153202139e7"
 # does NOT duplicate the 
-# S_VERSION_OF_THIS_FILE="045b8f18-ea6d-4185-8433-a14011c039e7" 
+# S_VERSION_OF_THIS_FILE="1489c501-43c6-4d3c-95c0-8153202139e7" 
 # because S_VERSION_OF_THIS_FILE is a "mmmv-standard" way to 
 # indicate source file versions and the S_VERSION_OF_THIS_FILE 
 # is meant to be available for string processing scripts.
@@ -85,7 +85,7 @@ else
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='b1ea81fe-cac9-459f-9243-a14011c039e7'"
+            echo "GUID=='2ac8a750-9002-4deb-93c0-8153202139e7'"
             echo ""
         fi
     fi
@@ -108,7 +108,7 @@ if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='c51f7143-3472-439a-8433-a14011c039e7'"
+            echo "GUID=='83867e58-9e81-47fe-91c0-8153202139e7'"
             echo ""
         fi
     fi
@@ -127,7 +127,7 @@ if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='4565cdaf-b35c-401b-a433-a14011c039e7'"
+            echo "GUID=='76980a10-f7e3-484d-95c0-8153202139e7'"
             echo ""
         fi
     fi
@@ -146,7 +146,7 @@ if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo "but the valid values are: \"\", \"t\", \"f\"."
             echo "default: \"\" -> \"t\""
-            echo "GUID=='23c64daa-cade-45a5-8433-a14011c039e7'"
+            echo "GUID=='5c33b701-b9bf-4061-b1c0-8153202139e7'"
             echo ""
         fi
     fi
@@ -202,7 +202,7 @@ else
             echo -e "\e[31mThe operating system is neither Linux, nor BSD. \e[39m"
             echo "The mmmv aliases are probably not tested "
             echo "with the current operating system."
-            echo "GUID=='bd66d53d-ba41-4d6b-8433-a14011c039e7'"
+            echo "GUID=='379dcb42-686b-4c86-a5c0-8153202139e7'"
             echo ""
         fi
     fi
@@ -234,7 +234,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi 
-                    echo "GUID=='4fc7f811-ecfd-46c7-a523-a14011c039e7'"
+                    echo "GUID=='24952238-3968-4577-a5c0-8153202139e7'"
                     echo ""
                     SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # the default value
                 fi
@@ -257,7 +257,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='285aad31-5aa0-4e4e-b323-a14011c039e7'"
+            echo "GUID=='5f82284d-f823-4b1b-82b0-8153202139e7'"
             echo ""
         fi 
     fi
@@ -276,7 +276,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi 
-                    echo "GUID=='6cbfa25c-624d-44ab-92e2-a14011c039e7'"
+                    echo "GUID=='98e1445d-b325-4117-84b0-8153202139e7'"
                     echo ""
                 fi
             fi
@@ -301,7 +301,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi 
-                echo "GUID=='8314c93a-6b56-43f2-bce2-a14011c039e7'"
+                echo "GUID=='71eefe25-4d27-4f2b-91b0-8153202139e7'"
                 echo ""
             fi 
         fi
@@ -326,7 +326,7 @@ func_mmmv_include_bashfile_if_possible_t2(){
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi 
-                echo "GUID=='f507ee45-b716-494e-b4d2-a14011c039e7'"
+                echo "GUID=='5854ca5e-34d4-4877-92b0-8153202139e7'"
                 echo ""
             fi 
         fi
@@ -338,7 +338,7 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1(){
     #--------
     MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1="mode_ok_to_load"
         func_mmmv_include_bashfile_if_possible_t2 "$S_FP_DECLARATION_BASH" \
-            "beb2635f-ec14-44d4-8533-a14011c039e7"
+            "5398ba53-2686-4db6-b4c0-8153202139e7"
     MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1="mode_loading_complete"
 } # func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1
 #--------------------------------------------------------------------------
@@ -352,7 +352,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
             echo ""
             echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
             echo "but it is expected to be a GUID."
-            echo "GUID=='fac18573-4956-47a4-95d2-a14011c039e7'"
+            echo "GUID=='46b3462a-fb54-48c3-81b0-8153202139e7'"
             echo ""
         fi 
     fi 
@@ -369,7 +369,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi
-                echo "GUID=='556b9713-073d-44c4-a1d2-a14011c039e7'"
+                echo "GUID=='da27ae4f-d34b-4a84-81b0-8153202139e7'"
                 echo "" 
             fi
         fi
@@ -382,7 +382,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
-            echo "GUID=='9a4ac805-9f92-4a8e-83d2-a14011c039e7'"
+            echo "GUID=='5a7e5032-9081-4a08-83a0-8153202139e7'"
             echo "" 
         fi
     fi 
@@ -401,7 +401,7 @@ else
         echo "or there is something else very wrong, because the "
         echo -e "command \"\e[31mnice\e[39m\"\e[31m is missing from PATH\e[39m."
         echo ""
-        echo "GUID=='bb4684cf-3bc4-42fe-8cc2-a14011c039e7'"
+        echo "GUID=='fe3ab328-f314-4e7f-b4a0-8153202139e7'"
         echo ""
     fi
 fi
@@ -446,7 +446,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
             #     func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
             #         "$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING" \
             #         "SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING" \
-            #         "32764f3a-dbb3-40ae-b233-a14011c039e7"
+            #         "c17b8a2d-5747-47d7-84c0-8153202139e7"
             # 
             # can not be used here, because its error message 
             # claims that the domain is only {"t","f"}, but
@@ -459,7 +459,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                             echo ""
                             echo -e "\e[31mSB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING==\"$SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING\"\e[39m"
                             echo "but its domain is: {\"\",\"t\",\"f\"}"
-                            echo "GUID=='ef7fd32f-2079-4e88-94c2-a14011c039e7'"
+                            echo "GUID=='b9f2b718-b360-4b37-a3a0-8153202139e7'"
                             echo ""
                         fi
                         SB_OPTIONAL_DISPLAY_ERROR_MESSAGE_IF_FOLDER_MISSING="t"
@@ -479,7 +479,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                 echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
                 echo "but it is expected to be a GUID."
                 echo "Leaving at least one alias undefined."
-                echo "GUID=='cfef8517-39e3-4102-a2c2-a14011c039e7'"
+                echo "GUID=='90de8916-52b1-42c3-b2a0-8153202139e7'"
                 echo ""
             fi
             SB_VERIFICATION_FAILED_LOCAL="t"
@@ -493,7 +493,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                 echo -e "\e[31mThe value of the S_ALIAS_NAME is an empty string\e[39m,"
                 echo "but it is expected to be an alias name."
                 echo "Leaving at least one alias undefined."
-                echo "GUID=='4b1d5418-26c9-4bb7-93c2-a14011c039e7'"
+                echo "GUID=='d294102f-7ac8-4875-95a0-8153202139e7'"
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 echo ""
             fi
@@ -508,7 +508,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                 echo -e "\e[31mThe value of the S_FP_FOLDER_PATH_CANDIDATE is an empty string\e[39m,"
                 echo "but it is expected to be a full path to a folder."
                 echo "Leaving at least one alias undefined."
-                echo "GUID=='3a792c64-4a3f-4380-a3b2-a14011c039e7'"
+                echo "GUID=='4f0581e5-76ec-48d6-b290-8153202139e7'"
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 echo ""
             fi
@@ -523,12 +523,12 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
             #--------------------------------------------------------------
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$S_FP_FOLDER_PATH_CANDIDATE" \
-                "a40b8a95-ed41-4e23-bc33-a14011c039e7" \
+                "227fbb36-5f1e-4a94-a2c0-8153202139e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo "Leaving at least one alias undefined."
-                    echo "GUID=='5c14c994-884d-4d8d-a4b2-a14011c039e7'"
+                    echo "GUID=='cd336d5c-f1ac-4478-b590-8153202139e7'"
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi
@@ -575,7 +575,7 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
                     echo "current user or the pwd-value in it differs from the"
                     echo "path given to this Bash function."
                     echo "Leaving at least one alias undefined."
-                    echo "GUID=='b904cb5d-6bd4-4b2c-b5b2-a14011c039e7'"
+                    echo "GUID=='83831f4c-2311-4265-a190-8153202139e7'"
                     if [ "$S_GUID_CANDIDATE" != "" ]; then
                         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                     fi
@@ -590,11 +590,11 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
     fi #-------------------------------------------------------------------
     func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
         "$SB_OK2ATTEMPT" "SB_OK2ATTEMPT" \
-        "3861392b-bdad-4f87-8123-a14011c039e7"
+        "30e4c902-fde9-4d19-89c0-8153202139e7"
     #----------------------------------------------------------------------
     func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
         "$SB_VERIFICATION_FAILED_LOCAL" "SB_VERIFICATION_FAILED_LOCAL" \
-        "74948638-ca5a-4015-9223-a14011c039e7"
+        "c9e58c50-c9b0-4f6f-85b0-8153202139e7"
     if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
         SB_VERIFICATION_FAILED_LOCAL="t"
     fi
@@ -606,21 +606,21 @@ func_mmmv_userspace_distro_t1_declare_alias_cd_t1(){
 #func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
 #    "mmmv_nonsense_01" \
 #    "/root" \
-#    "e0458c18-250c-4b46-b1e2-a14011c039e7"
+#    "476c6318-86a1-4352-83b0-8153202139e7"
 #
 #func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
 #    "mmmv_nonsense_02" \
 #    "/tmp/olematu" \
-#    "c3d99846-75c2-48c3-b5e2-a14011c039e7"
+#    "f440c354-00e8-498e-85b0-8153202139e7"
 #
 #func_mmmv_userspace_distro_t1_declare_alias_cd_t1 \
 #    "mmmv_nonsense_03" \
 #    "$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash" \
-#    "e09bcb52-2421-495f-92d2-a14011c039e7"
+#    "15b2715a-57b2-4a15-95b0-8153202139e7"
 #
 #--------------------------------------------------------------------------
 S_FP_0="$S_FP_DIR/subparts/general/_bashrc_subpart_func_core_t3c"
-func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "542c2612-cd7c-459e-a5d2-a14011c039e7"
+func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "3f6f6e97-0ff4-4277-a4b0-8153202139e7"
 func_mmmv_report_missing_from_path_and_do_NOT_exit_t1 "grep"
 #--------------------------------------------------------------------------
 S_WHOAMI="`whoami`"
@@ -708,10 +708,10 @@ func_add_rust_applications_2_PATH(){
             #----------------------------------------
             func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
                 "$S_FP_0" \
-                "04995a17-5318-44bc-82d2-a14011c039e7"
+                "2ed44d5c-ef4b-419f-82a0-8153202139e7"
             #----------------------------------------
             func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-                "$S_FP_1" "56fd5c2b-1c4f-430f-81d2-a14011c039e7" \
+                "$S_FP_1" "eceea153-8d0d-4793-a1a0-8153202139e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ -e "$S_FP_1" ]; then
                 if [ ! -d "$S_FP_1" ]; then
@@ -723,7 +723,7 @@ func_add_rust_applications_2_PATH(){
     else
         if [ -h "$S_FP_0" ]; then # broken symlink
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_0" "3aade4b2-9554-4dcb-89c2-a14011c039e7" \
+                "$S_FP_0" "015fcf09-dee2-47b7-aca0-8153202139e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         fi
     fi
@@ -753,7 +753,7 @@ MMMV_USERSPACE_DISTRO_T1_HOME_USERDECLARED="$MMMV_USERSPACE_DISTRO_T1_HOME"
 # for that reason the path is derived:
 S_TMP_0="`cd $S_FP_DIR/../../../ ; pwd`"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-    "$S_TMP_0" "c32b76e7-f2a0-4492-87c2-a14011c039e7" \
+    "$S_TMP_0" "8dceff1c-ecf2-42d0-a4a0-8153202139e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
     if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
@@ -764,7 +764,7 @@ if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
         echo ""
         echo "    MMMV_USERSPACE_DISTRO_T1_HOME:=$MMMV_USERSPACE_DISTRO_T1_HOME"
         echo ""
-        echo "GUID=='8f98622f-8513-433c-a2b2-a14011c039e7'"
+        echo "GUID=='41085928-0181-4039-b190-8153202139e7'"
         echo ""
     fi
 else
@@ -775,14 +775,14 @@ else
             echo ""
             echo "     SB_VERIFICATION_FAILED==\"$SB_VERIFICATION_FAILED\" "
             echo ""
-            echo "GUID=='abb410f1-869f-4d1f-b4b2-a14011c039e7'"
+            echo "GUID=='da5f4244-3671-4621-8490-8153202139e7'"
             echo ""
         fi
     fi
     export MMMV_USERSPACE_DISTRO_T1_HOME="$S_TMP_0"
     S_TMP_1="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "$S_TMP_1" "4241942e-1b10-46e4-91c2-a14011c039e7" \
+        "$S_TMP_1" "9f591f31-eb98-484f-93a0-8153202139e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_1:$Z_PATH"
@@ -802,12 +802,12 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_HOME_USERDECLARED" != "" ]; then
             echo "    $MMMV_USERSPACE_DISTRO_T1_HOME"
             echo ""
             echo -e "\e[31mdiffer\e[39m. Using the derived version."
-            echo "GUID=='18c41f81-e7d7-42ab-93a2-a14011c039e7'"
+            echo "GUID=='9d53adea-cea6-4d7b-a490-8153202139e7'"
             echo ""
         fi
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_HOME_USERDECLARED" \
-            "8362e232-d7be-44fe-93c2-a14011c039e7" \
+            "68e10b19-6609-4fb2-b4a0-8153202139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 fi
@@ -815,13 +815,13 @@ fi
 export MMMV_USERSPACE_DISTRO_T1_LINUX_WSL="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/Linux_WSL"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
     "$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL" \
-    "84469f1a-c660-4169-94b2-a14011c039e7" \
+    "103e0964-3b75-4c90-a390-8153202139e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 #-------------------
 export MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/Linux_Android_Termux"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
     "$MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX" \
-    "b5e18510-b4ca-4a82-b2b2-a14011c039e7" \
+    "f2ecf744-0a1d-4132-b190-8153202139e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 #--------------------------------------------------------------------------
 MMMV_USERSPACE_DISTRO_T1_USER_TMP="/tmp"
@@ -853,7 +853,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_USER_TMP" == "/tmp" ]; then
             echo "for creating a symlink "
             S_TMP_0="_tmp_"
             echo "    /home/$S_WHOAMI/tmp_  -->  /tmp/$S_WHOAMI$S_TMP_0 "
-            echo "GUID=='26a1e357-c435-4f8a-83a2-a14011c039e7'"
+            echo "GUID=='3a8475e9-a505-4656-8180-8153202139e7'"
             echo ""
         fi
     fi
@@ -862,7 +862,7 @@ fi
 if [ -e "/usr/sbin" ]; then
     # The 
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-        "/usr/sbin" "383a2257-8719-407a-85b2-a14011c039e7" \
+        "/usr/sbin" "4f77a1f3-0153-4039-b490-8153202139e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     # is for displaying an error message, if the "/usr/sbin" is not a folder.
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
@@ -874,7 +874,7 @@ if [ -e "/usr/sbin" ]; then
                 echo -e "\e[31m The function \e[39m"
                 echo -e "\e[31m func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1(...) \e[39m"
                 echo -e "\e[31m is flawed. \e[39m"
-                echo "GUID=='3a0340e1-5da2-4ab4-82a2-a14011c039e7'"
+                echo "GUID=='3d8fca56-1b16-4ba3-b580-8153202139e7'"
                 echo ""
             fi
         fi
@@ -895,7 +895,7 @@ if [ -e "$S_FP_0" ]; then
         Z_PATH="$S_FP_0:$Z_PATH"
     else
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "58bef3b4-d989-4565-81b2-a14011c039e7" \
+            "$S_FP_0" "443dc42f-1f86-4adc-8390-8153202139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 #else
@@ -940,7 +940,7 @@ if [ -e "$S_FP_0" ]; then
     else
         # The
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "ea1fbb7d-00e8-4766-93a2-a14011c039e7" \
+            "$S_FP_0" "f2916139-017f-4bae-b490-8153202139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         # is here for outputting an error message.
     fi
@@ -980,9 +980,6 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 #-------------------
 export PATH="$Z_PATH" # to take into account the possible Z_PATH changes.
 #-------------------
-S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_alias_mmmv_image_viewer.bash"
-func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
-#-------------------
 export MMMV_DEVEL_TOOLS_HOME="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/mmmv_devel_tools/2015_01_22_mmmv_devel_tools_without_JumpGUID_and_IDE_integration_v_02_with_UpGUID_bugfix"
 S_FP_0="$MMMV_DEVEL_TOOLS_HOME/src/api/mmmv_devel_tools_bashrc_extension.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
@@ -997,6 +994,10 @@ func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 export PATH="$Z_PATH" # to take into account the possible Z_PATH changes.
 #-------------------
 S_FP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/core_applications_set_01/_bashrc_subpart_that_adds_core_applications_set_01_elements_to_Z_PATH_according_to_availability_tests.bash"
+func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
+export PATH="$Z_PATH"
+#-------------------
+S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/common_bashrc_alias_mmmv_image_viewer.bash"
 func_mmmv_userspace_distro_t1_specific_Bash_file_inclusion_t1 "$S_FP_0"
 export PATH="$Z_PATH"
 #-------------------
@@ -1038,7 +1039,7 @@ if [ "$S_TMP_0" == "" ]; then
             echo "and its initialization to \"$S_TEXTFILE_EDITOR_COMMANDLINE_PROGRAM_NAME\" "
             echo "failed because the \"$S_TEXTFILE_EDITOR_COMMANDLINE_PROGRAM_NAME\""
             echo "is missing from PATH."
-            echo "GUID=='39de8114-9c75-4149-82a2-a14011c039e7'"
+            echo "GUID=='3b1f75b9-515e-4bb0-a480-8153202139e7'"
             echo ""
         fi
     fi
@@ -1088,7 +1089,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "t" ]; then
         export MMMV_USERSPACE_DISTRO_T1_LINUX_WSL_BIN="$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL/bin"
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL_BIN" \
-            "151d1515-6b8e-4635-92a2-a14011c039e7" \
+            "a3258b19-a294-4a28-a380-8153202139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             Z_PATH="$MMMV_USERSPACE_DISTRO_T1_LINUX_WSL_BIN:$Z_PATH"
@@ -1100,7 +1101,7 @@ fi
 export MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/Linux_general_only"
 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
     "$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY" \
-    "718c6755-98d4-4904-a4a2-a14011c039e7" \
+    "336c4812-9592-4635-a180-8153202139e7" \
     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
     if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
@@ -1109,7 +1110,7 @@ if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
             export MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY_BIN="$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY/bin"
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY_BIN" \
-                "5a280412-0ede-4943-aaa2-a14011c039e7" \
+                "a629154f-286e-46fa-a280-8153202139e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 Z_PATH="$MMMV_USERSPACE_DISTRO_T1_LINUX_GENERAL_ONLY_BIN:$Z_PATH"
@@ -1122,7 +1123,7 @@ fi
 if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_polish_ABC_2_B_C_A_exec_t1" # is written in Ruby
     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-        "$S_TMP_0" "33af9983-154a-450c-b292-a14011c039e7" \
+        "$S_TMP_0" "d8ccda33-5350-4a1a-b280-8153202139e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         # The space at the next line beofero the "; S_ERROR_CODE=..." is important.
@@ -1154,7 +1155,7 @@ if [ -e "$S_FP_0" ]; then
         # The 
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
             "$S_FP_0" \
-            "43715353-66d8-4a22-8292-a14011c039e7" \
+            "2c47497c-3f03-40b4-8480-8153202139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         # is here to conditionally display an error message.
     fi
@@ -1169,7 +1170,7 @@ else
             # The 
             func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
                 "$S_FP_0" \
-                "33a68318-9edc-41a6-a292-a14011c039e7" \
+                "16982a38-db2d-450f-8480-8153202139e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             # is here to conditionally display an error message.
         fi
@@ -1184,7 +1185,7 @@ else
                 echo ""
                 echo "You might find it useful for storing "
                 echo "host specific general ~/.bashrc subpart code."
-                echo "GUID=='79488524-53bf-4e10-a392-a14011c039e7'"
+                echo "GUID=='11c04651-0f9c-4cd0-9280-8153202139e7'"
                 echo ""
             fi
         fi
@@ -1224,13 +1225,13 @@ func_mmmv_userspace_distro_t1_alias_admin_create_home_tmp_t1(){
                     func_mmmv_wait_and_sync_t1
                 fi
                 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                    "$S_FP_GLOBALTMP" "20650d05-61ad-458a-b992-a14011c039e7" \
+                    "$S_FP_GLOBALTMP" "3ca3b62b-a3bc-4206-9470-8153202139e7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             else
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo ""
                     echo -e "$S_FP_GLOBALTMP is a\e[31m broken symlink \e[39m."
-                    echo "GUID=='8622afa0-3496-4e19-8492-a14011c039e7'"
+                    echo "GUID=='407473a3-adcd-40d9-9280-8153202139e7'"
                     echo ""
                 fi
             fi
@@ -1259,7 +1260,7 @@ func_mmmv_userspace_distro_t1_alias_admin_create_home_tmp_t1(){
                                 echo "    $S_FP_USERTMP"
                                 echo "that would point to to "
                                 echo "    $S_FP_GLOBALTMP"
-                                echo "GUID=='ac1430cf-40de-408d-a392-a14011c039e7'"
+                                echo "GUID=='6f4bdf39-f981-4a98-a570-8153202139e7'"
                                 echo ""
                             fi
                         fi
@@ -1267,7 +1268,7 @@ func_mmmv_userspace_distro_t1_alias_admin_create_home_tmp_t1(){
                         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                             echo ""
                             echo -e "$S_FP_USERTMP is a\e[31m broken symlink \e[39m."
-                            echo "GUID=='21be0375-f162-4063-9482-a14011c039e7'"
+                            echo "GUID=='f668f24f-9a7b-4f1a-9270-8153202139e7'"
                             echo ""
                         fi
                     fi
@@ -1298,7 +1299,7 @@ if [ -e "$S_FP_0" ]; then
     else
         # The
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "43db3eb2-0b9f-4164-be82-a14011c039e7" \
+            "$S_FP_0" "3e563512-58ac-4e97-a170-8153202139e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         # is here for outputting an error message.
     fi
@@ -1393,491 +1394,13 @@ if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
             echo "  # func_initialize_configuration_by_initializing_global_variables "
             echo -e "\e[39m"
             echo "Thank You for reading this text."
-            echo "GUID=='44e36992-02dc-4b47-8282-a14011c039e7'"
+            echo "GUID=='4cd02301-83ec-491d-a570-8153202139e7'"
             echo ""
         fi
     fi
 fi
 #--------------------------------------------------------------------------
 func_mmmv_wait_and_sync_t1 # Just to be sure.
-#--------------------------------------------------------------------------
-S_FP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_polish_ABC_2_A_C_B_exec_t1"
-if [ -e "$S_FP_0" ]; then
-    if [ ! -d "$S_FP_0" ]; then
-        if [ "$SB_SED_OR_GSED_EXISTS_ON_PATH" == "t" ]; then
-            #--------------------------------------------------------------
-            if [ "$SB_REV_EXISTS_ON_PATH" == "t" ]; then
-                if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
-                    #------------------------------------------------------
-                    # Sample Bash line:
-                    #
-                    #     cat ./text_with_linebreaks.txt | rev | sed -e 's/^/ /g' | rev | tr --delete '\n\r' 
-                    #
-                    #     mmmv_polish_ABC_2_A_C_B_exec_t1 \
-                    #         " cat " \
-                    #         " | rev | sed -e 's/^/ /g' | rev | tr --delete '\n\r' " \
-                    #         ./text_with_linebreaks.txt
-                    #
-                    # The sed command at the above example makes
-                    # sure that a word at the end of one line is not
-                    # concatenated to the word at the start of the next
-                    # line. As the very last line in a textfile never has
-                    # an ending linebreak, the sed command also makes
-                    # sure that the very last non-space character at
-                    # the very last line of the textfile does not get deleted.
-                    #
-                    alias mmmv_textfilter_f2c_remove_linebreaks_t1="$S_FP_0 \" cat \" \" | rev | $S_CMD_GNU_SED -e 's/^/ /g' | rev | tr --delete '\n\r' \" " 
-                    #------------------------------------------------------
-                fi
-            fi
-            #--------------------------------------------------------------
-            if [ "$SB_TRAFILATURA_EXISTS_ON_PATH" == "t" ]; then
-                if [ "$SB_JQ_EXISTS_ON_PATH" == "t" ]; then
-                    if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then
-                        #--------------------------------------------------
-                        # The "python2 -m json.tool" is a JSON source formatter.
-                        # The trafilatura is a Python3 application.
-                        #alias mmmv_HTML_body_2_txt_from_URL_t1="nice -n 2 mmmv_polish_ABC_2_A_C_B_exec_t1  \" trafilatura --precision --no-comments --json --URL \" \" | python2 -m json.tool | jq '.[\\\"raw_text\\\"]' | $S_CMD_GNU_SED -e 's/^\\\"//g' | $S_CMD_GNU_SED -e 's/\\\"\\$//g' \" "
-                        alias mmmv_HTML_body_2_txt_from_URL_t1="nice -n 2 mmmv_polish_ABC_2_A_C_B_exec_t1  \" trafilatura --precision --no-comments --json --URL \" \" | jq '.[\\\"raw_text\\\"]' | $S_CMD_GNU_SED -e 's/^\\\"//g' | $S_CMD_GNU_SED -e 's/\\\"\\$//g' \" "
-                        alias mmmv_HTML_body_2_txt_from_file_t1="nice -n 2 mmmv_polish_ABC_2_A_C_B_exec_t1  \" trafilatura --precision --no-comments --json --input-file \" \" | jq '.[\\\"raw_text\\\"]' | $S_CMD_GNU_SED -e 's/^\\\"//g' | $S_CMD_GNU_SED -e 's/\\\"\\$//g' \" "
-                        #--------------------------------------------------
-                    fi
-                fi
-            fi
-            #--------------------------------------------------------------
-        else
-            #--------------------------------------------------------------
-            func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-                "$S_FP_0" "44976d43-e729-4c5e-9182-a14011c039e7" \
-                "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
-            #--------------------------------------------------------------
-        fi
-    fi
-fi
-#--------------------------------------------------------------------------
-S_FP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_polish_ABC_2_ACB_exec_t1"
-if [ -e "$S_FP_0" ]; then
-    if [ ! -d "$S_FP_0" ]; then
-        if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then # Halve-overkill here, but
-                                                      # it alleviates the situation
-                                                      # a bit at some corner cases.
-            #--------------------------------------------------------------
-            if [ "$SB_LOCALECTL_EXISTS_ON_PATH" == "t" ]; then
-                if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
-                    #------------------------------------------------------
-                    S_TMP_1=""
-                    if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
-                        # alias mmmv_ls_keyboard_layout_names_t1="localectl list-x11-keymap-layouts | sort | tr '\n\r' ' ' "
-                        S_TMP_1="` localectl list-x11-keymap-layouts | sort | tr '\n\r' ' ' `"
-                        alias mmmv_ls_keyboard_layout_names_t1="echo $S_TMP_1 "
-                    else
-                        #alias mmmv_ls_keyboard_layout_names_t2="localectl list-x11-keymap-layouts | tr '\n\r' ' ' "
-                        S_TMP_1="` localectl list-x11-keymap-layouts | tr '\n\r' ' ' `"
-                        alias mmmv_ls_keyboard_layout_names_t2="echo $S_TMP_1 "
-                    fi
-                    #------------------------------------------------------
-                    if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
-                        if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
-                            #------------------------------------------------------
-                            # Test-Bash-line:
-                            #
-                            #     S_KEYBOARD_LAYOUT='ru' ; printf "\n ` localectl list-x11-keymap-variants $S_KEYBOARD_LAYOUT | tr '\n\r' ' ' ` \n\n"
-                            #
-                            #alias mmmv_ui_display_keyboard_layout_variants_ru="S_KEYBOARD_LAYOUT='ru' ; printf \"\n \` localectl list-x11-keymap-variants \$S_KEYBOARD_LAYOUT | tr '\n\r' ' ' \` \n\n\" "
-                            S_TMP_2=" printf \"\\\\n \` localectl list-x11-keymap-variants \\\$S_KEYBOARD_LAYOUT | tr '\\\\n\\\\r' ' ' \` \\\\n\\\\n\" "
-                            # The following has been generated by using the list at 
-                            #
-                            #     https://unix.stackexchange.com/questions/43976/list-all-valid-kbd-layouts-variants-and-toggle-options-to-use-with-setxkbmap
-                            #     archival_copy: https://archive.is/FB1gh
-                            #
-                            if [ "`printf \"$S_TMP_1\" | grep \"us\" `" != "" ]; then
-                                #  us              English_USA
-                                alias mmmv_ls_keyboard_layout_variants_English_USA_X11_keyboard_name_us="S_KEYBOARD_LAYOUT='us' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ad\" `" != "" ]; then
-                                #  ad              Andorra
-                                alias mmmv_ls_keyboard_layout_variants_Andorra_X11_keyboard_name_ad="S_KEYBOARD_LAYOUT='ad' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"af\" `" != "" ]; then
-                                #  af              Afghanistan
-                                alias mmmv_ls_keyboard_layout_variants_Afghanistan_X11_keyboard_name_af="S_KEYBOARD_LAYOUT='af' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ara\" `" != "" ]; then
-                                #  ara             Arabic
-                                alias mmmv_ls_keyboard_layout_variants_Arabic_X11_keyboard_name_ara="S_KEYBOARD_LAYOUT='ara' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"al\" `" != "" ]; then
-                                #  al              Albania
-                                alias mmmv_ls_keyboard_layout_variants_Albania_X11_keyboard_name_al="S_KEYBOARD_LAYOUT='al' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"am\" `" != "" ]; then
-                                #  am              Armenia
-                                alias mmmv_ls_keyboard_layout_variants_Armenia_X11_keyboard_name_am="S_KEYBOARD_LAYOUT='am' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"az\" `" != "" ]; then
-                                #  az              Azerbaijan
-                                alias mmmv_ls_keyboard_layout_variants_Azerbaijan_X11_keyboard_name_az="S_KEYBOARD_LAYOUT='az' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"by\" `" != "" ]; then
-                                #  by              Belarus
-                                alias mmmv_ls_keyboard_layout_variants_Belarus_X11_keyboard_name_by="S_KEYBOARD_LAYOUT='by' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"be\" `" != "" ]; then
-                                #  be              Belgium
-                                alias mmmv_ls_keyboard_layout_variants_Belgium_X11_keyboard_name_be="S_KEYBOARD_LAYOUT='be' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"bd\" `" != "" ]; then
-                                #  bd              Bangladesh
-                                alias mmmv_ls_keyboard_layout_variants_Bangladesh_X11_keyboard_name_bd="S_KEYBOARD_LAYOUT='bd' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"in\" `" != "" ]; then
-                                #  in              India
-                                alias mmmv_ls_keyboard_layout_variants_India_X11_keyboard_name_in="S_KEYBOARD_LAYOUT='in' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ba\" `" != "" ]; then
-                                #  ba              Bosnia_and_Herzegovina
-                                alias mmmv_ls_keyboard_layout_variants_Bosnia_and_Herzegovina_X11_keyboard_name_ba="S_KEYBOARD_LAYOUT='ba' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"br\" `" != "" ]; then
-                                #  br              Brazil
-                                alias mmmv_ls_keyboard_layout_variants_Brazil_X11_keyboard_name_br="S_KEYBOARD_LAYOUT='br' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"bg\" `" != "" ]; then
-                                #  bg              Bulgaria
-                                alias mmmv_ls_keyboard_layout_variants_Bulgaria_X11_keyboard_name_bg="S_KEYBOARD_LAYOUT='bg' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ma\" `" != "" ]; then
-                                #  ma              Morocco
-                                alias mmmv_ls_keyboard_layout_variants_Morocco_X11_keyboard_name_ma="S_KEYBOARD_LAYOUT='ma' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"mm\" `" != "" ]; then
-                                #  mm              Myanmar
-                                alias mmmv_ls_keyboard_layout_variants_Myanmar_X11_keyboard_name_mm="S_KEYBOARD_LAYOUT='mm' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ca\" `" != "" ]; then
-                                #  ca              Canada
-                                alias mmmv_ls_keyboard_layout_variants_Canada_X11_keyboard_name_ca="S_KEYBOARD_LAYOUT='ca' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"cd\" `" != "" ]; then
-                                #  cd              Congo
-                                alias mmmv_ls_keyboard_layout_variants_Congo_X11_keyboard_name_cd="S_KEYBOARD_LAYOUT='cd' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"cn\" `" != "" ]; then
-                                #  cn              China
-                                alias mmmv_ls_keyboard_layout_variants_China_X11_keyboard_name_cn="S_KEYBOARD_LAYOUT='cn' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"hr\" `" != "" ]; then
-                                #  hr              Croatia
-                                alias mmmv_ls_keyboard_layout_variants_Croatia_X11_keyboard_name_hr="S_KEYBOARD_LAYOUT='hr' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"cz\" `" != "" ]; then
-                                #  cz              Czechia
-                                alias mmmv_ls_keyboard_layout_variants_Czechia_X11_keyboard_name_cz="S_KEYBOARD_LAYOUT='cz' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"dk\" `" != "" ]; then
-                                #  dk              Denmark
-                                alias mmmv_ls_keyboard_layout_variants_Denmark_X11_keyboard_name_dk="S_KEYBOARD_LAYOUT='dk' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"nl\" `" != "" ]; then
-                                #  nl              Netherlands
-                                alias mmmv_ls_keyboard_layout_variants_Netherlands_X11_keyboard_name_nl="S_KEYBOARD_LAYOUT='nl' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"bt\" `" != "" ]; then
-                                #  bt              Bhutan
-                                alias mmmv_ls_keyboard_layout_variants_Bhutan_X11_keyboard_name_bt="S_KEYBOARD_LAYOUT='bt' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ee\" `" != "" ]; then
-                                #  ee              Estonia
-                                alias mmmv_ls_keyboard_layout_variants_Estonia_X11_keyboard_name_ee="S_KEYBOARD_LAYOUT='ee' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ir\" `" != "" ]; then
-                                #  ir              Iran
-                                alias mmmv_ls_keyboard_layout_variants_Iran_X11_keyboard_name_ir="S_KEYBOARD_LAYOUT='ir' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"iq\" `" != "" ]; then
-                                #  iq              Iraq
-                                alias mmmv_ls_keyboard_layout_variants_Iraq_X11_keyboard_name_iq="S_KEYBOARD_LAYOUT='iq' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"fo\" `" != "" ]; then
-                                #  fo              Faroe_Islands
-                                alias mmmv_ls_keyboard_layout_variants_Faroe_Islands_X11_keyboard_name_fo="S_KEYBOARD_LAYOUT='fo' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"fi\" `" != "" ]; then
-                                #  fi              Finland
-                                alias mmmv_ls_keyboard_layout_variants_Finland_X11_keyboard_name_fi="S_KEYBOARD_LAYOUT='fi' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"fr\" `" != "" ]; then
-                                #  fr              France
-                                alias mmmv_ls_keyboard_layout_variants_France_X11_keyboard_name_fr="S_KEYBOARD_LAYOUT='fr' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"gh\" `" != "" ]; then
-                                #  gh              Ghana
-                                alias mmmv_ls_keyboard_layout_variants_Ghana_X11_keyboard_name_gh="S_KEYBOARD_LAYOUT='gh' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"gn\" `" != "" ]; then
-                                #  gn              Guinea
-                                alias mmmv_ls_keyboard_layout_variants_Guinea_X11_keyboard_name_gn="S_KEYBOARD_LAYOUT='gn' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ge\" `" != "" ]; then
-                                #  ge              Georgia
-                                alias mmmv_ls_keyboard_layout_variants_Georgia_X11_keyboard_name_ge="S_KEYBOARD_LAYOUT='ge' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"de\" `" != "" ]; then
-                                #  de              Germany
-                                alias mmmv_ls_keyboard_layout_variants_Germany_X11_keyboard_name_de="S_KEYBOARD_LAYOUT='de' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"gr\" `" != "" ]; then
-                                #  gr              Greece
-                                alias mmmv_ls_keyboard_layout_variants_Greece_X11_keyboard_name_gr="S_KEYBOARD_LAYOUT='gr' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"hu\" `" != "" ]; then
-                                #  hu              Hungary
-                                alias mmmv_ls_keyboard_layout_variants_Hungary_X11_keyboard_name_hu="S_KEYBOARD_LAYOUT='hu' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"is\" `" != "" ]; then
-                                #  is              Iceland
-                                alias mmmv_ls_keyboard_layout_variants_Iceland_X11_keyboard_name_is="S_KEYBOARD_LAYOUT='is' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"il\" `" != "" ]; then
-                                #  il              Israel
-                                alias mmmv_ls_keyboard_layout_variants_Israel_X11_keyboard_name_il="S_KEYBOARD_LAYOUT='il' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"it\" `" != "" ]; then
-                                #  it              Italy
-                                alias mmmv_ls_keyboard_layout_variants_Italy_X11_keyboard_name_it="S_KEYBOARD_LAYOUT='it' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"jp\" `" != "" ]; then
-                                #  jp              Japan
-                                alias mmmv_ls_keyboard_layout_variants_Japan_X11_keyboard_name_jp="S_KEYBOARD_LAYOUT='jp' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"kg\" `" != "" ]; then
-                                #  kg              Kyrgyzstan
-                                alias mmmv_ls_keyboard_layout_variants_Kyrgyzstan_X11_keyboard_name_kg="S_KEYBOARD_LAYOUT='kg' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"kh\" `" != "" ]; then
-                                #  kh              Cambodia
-                                alias mmmv_ls_keyboard_layout_variants_Cambodia_X11_keyboard_name_kh="S_KEYBOARD_LAYOUT='kh' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"kz\" `" != "" ]; then
-                                #  kz              Kazakhstan
-                                alias mmmv_ls_keyboard_layout_variants_Kazakhstan_X11_keyboard_name_kz="S_KEYBOARD_LAYOUT='kz' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"la\" `" != "" ]; then
-                                #  la              Laos
-                                alias mmmv_ls_keyboard_layout_variants_Laos_X11_keyboard_name_la="S_KEYBOARD_LAYOUT='la' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"latam\" `" != "" ]; then
-                                #  latam           Latin_American
-                                alias mmmv_ls_keyboard_layout_variants_Latin_American_X11_keyboard_name_latam="S_KEYBOARD_LAYOUT='latam' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"lt\" `" != "" ]; then
-                                #  lt              Lithuania
-                                alias mmmv_ls_keyboard_layout_variants_Lithuania_X11_keyboard_name_lt="S_KEYBOARD_LAYOUT='lt' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"lv\" `" != "" ]; then
-                                #  lv              Latvia
-                                alias mmmv_ls_keyboard_layout_variants_Latvia_X11_keyboard_name_lv="S_KEYBOARD_LAYOUT='lv' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"mao\" `" != "" ]; then
-                                #  mao             Maori
-                                alias mmmv_ls_keyboard_layout_variants_Maori_X11_keyboard_name_mao="S_KEYBOARD_LAYOUT='mao' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"me\" `" != "" ]; then
-                                #  me              Montenegro
-                                alias mmmv_ls_keyboard_layout_variants_Montenegro_X11_keyboard_name_me="S_KEYBOARD_LAYOUT='me' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"mk\" `" != "" ]; then
-                                #  mk              Macedonia
-                                alias mmmv_ls_keyboard_layout_variants_Macedonia_X11_keyboard_name_mk="S_KEYBOARD_LAYOUT='mk' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"mt\" `" != "" ]; then
-                                #  mt              Malta
-                                alias mmmv_ls_keyboard_layout_variants_Malta_X11_keyboard_name_mt="S_KEYBOARD_LAYOUT='mt' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"mn\" `" != "" ]; then
-                                #  mn              Mongolia
-                                alias mmmv_ls_keyboard_layout_variants_Mongolia_X11_keyboard_name_mn="S_KEYBOARD_LAYOUT='mn' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"no\" `" != "" ]; then
-                                #  no              Norway
-                                alias mmmv_ls_keyboard_layout_variants_Norway_X11_keyboard_name_no="S_KEYBOARD_LAYOUT='no' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"pl\" `" != "" ]; then
-                                #  pl              Poland
-                                alias mmmv_ls_keyboard_layout_variants_Poland_X11_keyboard_name_pl="S_KEYBOARD_LAYOUT='pl' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"pt\" `" != "" ]; then
-                                #  pt              Portugal
-                                alias mmmv_ls_keyboard_layout_variants_Portugal_X11_keyboard_name_pt="S_KEYBOARD_LAYOUT='pt' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ro\" `" != "" ]; then
-                                #  ro              Romania
-                                alias mmmv_ls_keyboard_layout_variants_Romania_X11_keyboard_name_ro="S_KEYBOARD_LAYOUT='ro' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ru\" `" != "" ]; then
-                                #  ru              Russia
-                                alias mmmv_ls_keyboard_layout_variants_Russia_X11_keyboard_name_ru="S_KEYBOARD_LAYOUT='ru' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"rs\" `" != "" ]; then
-                                #  rs              Serbia
-                                alias mmmv_ls_keyboard_layout_variants_Serbia_X11_keyboard_name_rs="S_KEYBOARD_LAYOUT='rs' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"si\" `" != "" ]; then
-                                #  si              Slovenia
-                                alias mmmv_ls_keyboard_layout_variants_Slovenia_X11_keyboard_name_si="S_KEYBOARD_LAYOUT='si' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"sk\" `" != "" ]; then
-                                #  sk              Slovakia
-                                alias mmmv_ls_keyboard_layout_variants_Slovakia_X11_keyboard_name_sk="S_KEYBOARD_LAYOUT='sk' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"es\" `" != "" ]; then
-                                #  es              Spain
-                                alias mmmv_ls_keyboard_layout_variants_Spain_X11_keyboard_name_es="S_KEYBOARD_LAYOUT='es' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"se\" `" != "" ]; then
-                                #  se              Sweden
-                                alias mmmv_ls_keyboard_layout_variants_Sweden_X11_keyboard_name_se="S_KEYBOARD_LAYOUT='se' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ch\" `" != "" ]; then
-                                #  ch              Switzerland
-                                alias mmmv_ls_keyboard_layout_variants_Switzerland_X11_keyboard_name_ch="S_KEYBOARD_LAYOUT='ch' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"sy\" `" != "" ]; then
-                                #  sy              Syria
-                                alias mmmv_ls_keyboard_layout_variants_Syria_X11_keyboard_name_sy="S_KEYBOARD_LAYOUT='sy' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"tj\" `" != "" ]; then
-                                #  tj              Tajikistan
-                                alias mmmv_ls_keyboard_layout_variants_Tajikistan_X11_keyboard_name_tj="S_KEYBOARD_LAYOUT='tj' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"lk\" `" != "" ]; then
-                                #  lk              Sri_Lanka
-                                alias mmmv_ls_keyboard_layout_variants_Sri_Lanka_X11_keyboard_name_lk="S_KEYBOARD_LAYOUT='lk' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"th\" `" != "" ]; then
-                                #  th              Thailand
-                                alias mmmv_ls_keyboard_layout_variants_Thailand_X11_keyboard_name_th="S_KEYBOARD_LAYOUT='th' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"tr\" `" != "" ]; then
-                                #  tr              Turkey
-                                alias mmmv_ls_keyboard_layout_variants_Turkey_X11_keyboard_name_tr="S_KEYBOARD_LAYOUT='tr' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"tw\" `" != "" ]; then
-                                #  tw              Taiwan
-                                alias mmmv_ls_keyboard_layout_variants_Taiwan_X11_keyboard_name_tw="S_KEYBOARD_LAYOUT='tw' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ua\" `" != "" ]; then
-                                #  ua              Ukraine
-                                alias mmmv_ls_keyboard_layout_variants_Ukraine_X11_keyboard_name_ua="S_KEYBOARD_LAYOUT='ua' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"gb\" `" != "" ]; then
-                                #  gb              English_United_Kingdom
-                                alias mmmv_ls_keyboard_layout_variants_English_United_Kingdom_X11_keyboard_name_gb="S_KEYBOARD_LAYOUT='gb' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"uz\" `" != "" ]; then
-                                #  uz              Uzbekistan
-                                alias mmmv_ls_keyboard_layout_variants_Uzbekistan_X11_keyboard_name_uz="S_KEYBOARD_LAYOUT='uz' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"vn\" `" != "" ]; then
-                                #  vn              Vietnam
-                                alias mmmv_ls_keyboard_layout_variants_Vietnam_X11_keyboard_name_vn="S_KEYBOARD_LAYOUT='vn' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"kr\" `" != "" ]; then
-                                #  kr              Korea
-                                alias mmmv_ls_keyboard_layout_variants_Korea_X11_keyboard_name_kr="S_KEYBOARD_LAYOUT='kr' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"vndr\" `" != "" ]; then
-                                #  nec_vndr        Japan_PC_98xx_Series
-                                alias mmmv_ls_keyboard_layout_variants_nec_Japan_PC_98xx_Series_X11_keyboard_name_vndr="S_KEYBOARD_LAYOUT='vndr' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ie\" `" != "" ]; then
-                                #  ie              Ireland
-                                alias mmmv_ls_keyboard_layout_variants_Ireland_X11_keyboard_name_ie="S_KEYBOARD_LAYOUT='ie' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"pk\" `" != "" ]; then
-                                #  pk              Pakistan
-                                alias mmmv_ls_keyboard_layout_variants_Pakistan_X11_keyboard_name_pk="S_KEYBOARD_LAYOUT='pk' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"mv\" `" != "" ]; then
-                                #  mv              Maldives
-                                alias mmmv_ls_keyboard_layout_variants_Maldives_X11_keyboard_name_mv="S_KEYBOARD_LAYOUT='mv' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"za\" `" != "" ]; then
-                                #  za              South_Africa
-                                alias mmmv_ls_keyboard_layout_variants_South_Africa_X11_keyboard_name_za="S_KEYBOARD_LAYOUT='za' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"epo\" `" != "" ]; then
-                                #  epo             Esperanto
-                                alias mmmv_ls_keyboard_layout_variants_Esperanto_X11_keyboard_name_epo="S_KEYBOARD_LAYOUT='epo' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"np\" `" != "" ]; then
-                                #  np              Nepal
-                                alias mmmv_ls_keyboard_layout_variants_Nepal_X11_keyboard_name_np="S_KEYBOARD_LAYOUT='np' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ng\" `" != "" ]; then
-                                #  ng              Nigeria
-                                alias mmmv_ls_keyboard_layout_variants_Nigeria_X11_keyboard_name_ng="S_KEYBOARD_LAYOUT='ng' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"et\" `" != "" ]; then
-                                #  et              Ethiopia
-                                alias mmmv_ls_keyboard_layout_variants_Ethiopia_X11_keyboard_name_et="S_KEYBOARD_LAYOUT='et' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"sn\" `" != "" ]; then
-                                #  sn              Senegal
-                                alias mmmv_ls_keyboard_layout_variants_Senegal_X11_keyboard_name_sn="S_KEYBOARD_LAYOUT='sn' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"brai\" `" != "" ]; then
-                                #  brai            Braille
-                                alias mmmv_ls_keyboard_layout_variants_Braille_X11_keyboard_name_brai="S_KEYBOARD_LAYOUT='brai' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"tm\" `" != "" ]; then
-                                #  tm              Turkmenistan
-                                alias mmmv_ls_keyboard_layout_variants_Turkmenistan_X11_keyboard_name_tm="S_KEYBOARD_LAYOUT='tm' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"ml\" `" != "" ]; then
-                                #  ml              Mali
-                                alias mmmv_ls_keyboard_layout_variants_Mali_X11_keyboard_name_ml="S_KEYBOARD_LAYOUT='ml' ; $S_TMP_2 "
-                            fi
-                            if [ "`printf \"$S_TMP_1\" | grep \"tz\" `" != "" ]; then
-                                #  tz              Tanzania
-                                alias mmmv_ls_keyboard_layout_variants_Tanzania_X11_keyboard_name_tz="S_KEYBOARD_LAYOUT='tz' ; $S_TMP_2 "
-                            fi
-                            #------------------------------------------------------
-                        fi
-                    fi
-                else # $SB_TR_EXISTS_ON_PATH" != "t"
-                    #------------------------------------------------------
-                    if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
-                        alias mmmv_ls_keyboard_layout_names_t3="localectl list-x11-keymap-layouts | sort "
-                    else
-                        alias mmmv_ls_keyboard_layout_names_t4="localectl list-x11-keymap-layouts "
-                    fi
-                    #------------------------------------------------------
-                fi
-            fi
-            #--------------------------------------------------------------
-            if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
-                # A related configuration file is the
-                #
-                #     /etc/security/limits.conf
-                #
-                # which gets reloaded by restarting a session, id est
-                # its new values take effect at initial login. Testline:
-                #
-                #      mmmv_polish_ABC_2_ACB_exec_t1 " SI_RAM_BYTES=\"" "\" ; ulimit -v \$SI_RAM_BYTES ; ulimit -m \$SI_RAM_BYTES ; wait ; ulimit -a | grep --color memory " 50000000000
-                #
-                alias mmmv_ui_set_session_RAM_limit_in_bytes_t1="mmmv_polish_ABC_2_ACB_exec_t1 \" SI_RAM_BYTES=\\\"\" \"\\\" ; ulimit -v \\\$SI_RAM_BYTES ; ulimit -m \\\$SI_RAM_BYTES ; wait ; ulimit -a | grep --color memory \" " # 50000000000
-            fi
-            #--------------------------------------------------------------
-        fi
-    else
-        #--------------------------------------------------------------
-        func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_0" "c177921c-771b-4b87-9282-a14011c039e7" \
-            "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
-        #--------------------------------------------------------------
-    fi
-fi
 #--------------------------------------------------------------------------
 if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
     SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH="f"
@@ -1893,7 +1416,7 @@ if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
                 # for Linux (WSL) and Android Linux.
                 #--------------------------------------------------------------
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "mmmv_cre_temporary_file_t1" "61a3234a-0bde-4d97-a582-a14011c039e7"
+                    "mmmv_cre_temporary_file_t1" "a688af24-d6dc-48d8-a370-8153202139e7"
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin/mmmv_cre_temporary_file_t1_host_independent"
                     if [ -e "$S_TMP_0" ]; then
@@ -1929,7 +1452,7 @@ if [ "$SB_MMMV_CRE_TEMPORARY_FILE_T1_EXISTS_ON_PATH" == "" ]; then
                             echo "2023 mainstream Linux distributions the sync command is"
                             echo "needed in Bash scripts to make sure that a newly created"
                             echo "file is fully present at the file system for reading."
-                            echo "GUID=='d5dd1a23-cb98-43ce-8d82-a14011c039e7'"
+                            echo "GUID=='6526cb56-691c-4b8d-b570-8153202139e7'"
                             echo ""
                         fi
                     fi
