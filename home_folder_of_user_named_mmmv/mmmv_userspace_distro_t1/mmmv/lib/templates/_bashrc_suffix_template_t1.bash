@@ -1,5 +1,14 @@
 
 #----mmmv--machine--instance--specific--section--start---------------------
+alias ls="ls --color "
+#--------------------------------------------------------------------------
+S_FP_0="$HOME/.cargo/env"
+if [ -e "$S_FP_0" ]; then
+    if [ -d "$S_FP_0" ]; then
+        . "$S_FP_0"
+    fi
+fi
+#--------------------------------------------------------------------------
 S_TMP_0="$HOME/m_local/bin"
 if [ -e "$S_TMP_0" ]; then
     if [ -d "$S_TMP_0" ]; then
@@ -15,9 +24,9 @@ MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashr
 # https://stackoverflow.com/questions/55673886/what-is-the-difference-between-c-utf-8-and-en-us-utf-8-locales/
 # archival copy: https://archive.vn/ivNHa
 # Summary: 
-#     The "C" in the "C.UTF-8" stands for "computer" and supposedly the 
-#     "C.UTF-8" switches in a more computer-readable text output mode than 
-#     the "en_US.UTF-8".
+#     The "C" in the "C.UTF-8" stands for "computer" and supposedly the
+#     "C.UTF-8" switches in a more computer-readable text output mode
+#     than the "en_US.UTF-8".
 export LC_TIME="C.UTF-8"
 export LC_ALL="C.UTF-8" # useful on FreeBSD for making the tar work
 export LANG="C.UTF-8"
@@ -45,25 +54,23 @@ export MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"}
 #
 #     source "$MMMV_FP_COMMON_BASHRC_MAIN"
 #
-# can take about 15s, depending on the machine that executes it. 
-# Console output that is necessary for feedback may interfere with 
-# the operation of the scp/sftp
+# can take about 15s, depending on the machine that executes it. Console
+# output that is necessary for feedback may interfere with the operation
+# of the scp/sftp
 #
 #     https://serverfault.com/questions/485487/use-bashrc-without-breaking-sftp
 #     archival copy: https://archive.vn/pxmm1
 #     https://web.archive.org/web/20201029162511/https://serverfault.com/questions/485487/use-bashrc-without-breaking-sftp
 #
-# A workaround to both of those problems is to not output any 
-# text to console during the execution of the ~/.bashrc if 
-# the session is an SSH session and to switch on 
-# the mmmv environment manually by executing 
-alias mmmv_environment="SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT='t' nice -n 2 bash --rcfile \"$MMMV_FP_COMMON_BASHRC_MAIN\" "
+# A workaround to both of those problems is to not output any text to    
+# console during the execution of the ~/.bashrc if the session is an SSH 
+# session and to switch on the mmmv environment manually by executing    
+alias mmmv_environment="SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT='t' ; source \"$MMMV_FP_COMMON_BASHRC_MAIN\" ; "
 #
-# For some reason in some cases ssh login is possible
-# even if the ~/.bashrc outputs text to console.
-# At the time of writing this comment/sentence here, that reason
-# is not known to me(Martin.Vahi@softf1.com) and I only have 
-# experimental confirmation.
+# For some reason in some cases ssh login is possible even
+# if the ~/.bashrc outputs text to console.  At the time of
+# writing this comment/sentence here, that reason is not known to
+# me(Martin.Vahi@softf1.com) and I only have experimental confirmation.
 #
 #--------------------------------------------------------------------------
 # Reformatted citation from the ssh man page and the following page:
@@ -80,9 +87,9 @@ if [ "$SSH_TTY" == "" ]; then
     # tested to work on both, Linux and FreeBSD.
     SB_CONSOLE_IS_ACCESSED_OVER_SSH="f"
 fi
-# If one logs in over SSH and then starts a new Bash session by 
-# executing the /bin/bash then the non-empty-string value 
-# of the SSH_TTY remains, unless it is manually set to an empty string.
+# If one logs in over SSH and then starts a new Bash session by executing
+# the /bin/bash then the non-empty-string value of the SSH_TTY remains,
+# unless it is manually set to an empty string.
 if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "" ]; then
     SB_CONSOLE_OUTPUT_IS_ALLOWED="f" # the ssh issue as described 
                                      # earlier in this file
@@ -117,7 +124,7 @@ if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -
                     echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
                     echo ""
                     echo "but its domain is: {\"\", \"t\", \"f\"}."
-                    echo "GUID=='2e395971-cdb8-4561-a5da-61e2d031a8e7'"
+                    echo "GUID=='d16de650-03a9-4498-9416-e0a2f09139e7'"
                     echo ""
                 fi
             fi
