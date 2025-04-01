@@ -19,7 +19,7 @@ S_FP_ORIG="`pwd`"
 
 MMMV_BASH_BOILERPLATE_VERSION="subject_to_initialisation"
 func_mmmv_bash_boilerplate_version(){
-    local S_GUID="47fa0c19-e294-45a0-a3f6-72f150f078e7"
+    local S_GUID="397deae1-01ce-479c-8c12-6301c01049e7"
     local S_TIMESTAMP="_subject_to_initialisation_"
 # RENESSAATOR_BLOCK_START
 # RENESSAATOR_BLOCK_ID=block_566c89e2-c6f0-12ed-9d8a-1c6f6552f9e6_city
@@ -74,7 +74,7 @@ func_mmmv_init_s_timestamp_if_not_inited_t1(){
             echo ""
             echo "    S_TIMESTAMP=\"$S_TIMESTAMP\""
             echo ""
-            echo "GUID=='f17c7820-34b2-49bf-94f6-72f150f078e7'"
+            echo "GUID=='34b9c9e3-86b2-4ab6-a553-6301c01049e7'"
             echo ""
         fi
     fi
@@ -89,7 +89,7 @@ func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t1(){
         echo ""
         echo -e "\e[31mThe code of this script has the flaw\e[39m that"
         echo "the variable S_FP_ORIG has not been set."
-        echo "GUID=='634b681a-c198-4973-92f6-72f150f078e7'"
+        echo "GUID=='1bcfa592-8f5d-4dde-b552-6301c01049e7'"
         echo ""
     else
         if [ ! -e "$S_FP_ORIG" ]; then 
@@ -102,7 +102,7 @@ func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t1(){
             echo ""
             echo "    S_FP_ORIG==\"$S_FP_ORIG\""
             echo ""
-            echo "GUID=='ea09571e-b866-4f95-81f6-72f150f078e7'"
+            echo "GUID=='3dab26b1-8574-4dca-8f32-6301c01049e7'"
             echo ""
         else
             if [ ! -d "$S_FP_ORIG" ]; then 
@@ -114,7 +114,7 @@ func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t1(){
                 echo ""
                 echo "    S_FP_ORIG==$S_FP_ORIG"
                 echo ""
-                echo "GUID=='50432543-7750-42e9-81e6-72f150f078e7'"
+                echo "GUID=='111d9821-31d1-4676-8831-6301c01049e7'"
                 echo ""
             fi
         fi
@@ -130,7 +130,7 @@ func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t1(){
     #    else 
     #        echo ""
     #        echo "The code of this script is flawed."
-    #        echo "GUID=='dbc9bb5c-deb9-4ba5-a2e6-72f150f078e7'"
+    #        echo "GUID=='1d82ff92-7426-4d8f-8a31-6301c01049e7'"
     #        echo ""
     #    fi
 } # func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t1
@@ -147,7 +147,7 @@ func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t2(){
             echo "    SB_FUNC_MMMV_VERIFY_S_FP_ORIG_BUT_DO_NOT_EXIT_T2_S_FB_ORIG_ALREADY_VERIFIED==\"$SB_FUNC_MMMV_VERIFY_S_FP_ORIG_BUT_DO_NOT_EXIT_T2_S_FB_ORIG_ALREADY_VERIFIED\""
             echo ""
             echo "has a domain of {\"f\", \"t\"}."
-            echo "GUID=='a6c56f21-713c-4c00-b2e6-72f150f078e7'"
+            echo "GUID=='11da401d-db9c-43e9-bd20-6301c01049e7'"
             echo ""
         else
             func_mmmv_verify_S_FP_ORIG_but_do_not_exit_t1
@@ -171,7 +171,7 @@ func_mmmv_assert_nonempty_string_but_do_not_exit_t1(){
         echo "    S_GUID_CANDIDATE==\"\""
         echo ""
         echo "but it is expected to be a GUID."
-        echo "GUID=='44648338-5935-4662-b3e6-72f150f078e7'"
+        echo "GUID=='51de0755-c397-42f9-b450-6301c01049e7'"
         echo ""
         SB_NO_ERRORS_YET_1="f"
     fi
@@ -185,11 +185,11 @@ func_mmmv_assert_nonempty_string_but_do_not_exit_t1(){
         echo ""
         if [ "$SB_NO_ERRORS_YET" == "f" ]; then 
             echo "is expected to be initialized to \"t\" before calling this function."
-            echo "GUID=='440df82a-d929-430a-b1d6-72f150f078e7'"
+            echo "GUID=='625ce6ab-e044-475f-af4f-6301c01049e7'"
         else
             echo "is expected to be initialized to \"t\" before calling this function"
             echo "and its domain is {\"f\", \"t\"}."
-            echo "GUID=='3626bee1-85dc-46be-93d6-72f150f078e7'"
+            echo "GUID=='5ffc6561-3506-41c3-b04f-6301c01049e7'"
         fi
         if [ "$SB_NO_ERRORS_YET_1" == "t" ]; then 
             echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
@@ -209,7 +209,7 @@ func_mmmv_assert_nonempty_string_but_do_not_exit_t1(){
             echo ""
             echo "    S_VARIABLE_NAME_IN_CALLING_CODE==\"\""
             echo ""
-            echo "GUID=='996f892f-c771-44fd-b2d6-72f150f078e7'"
+            echo "GUID=='1ebe8092-f1c5-4bed-9c4f-6301c01049e7'"
             if [ "$SB_NO_ERRORS_YET_1" == "t" ]; then  # should be always true at this line
                 echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
@@ -227,7 +227,7 @@ func_mmmv_assert_nonempty_string_but_do_not_exit_t1(){
             echo "    $S_VARIABLE_NAME_IN_CALLING_CODE==\"$S_IN\""
             echo ""
             echo "but it is expected to be something other than an empty string."
-            echo "GUID=='1e87af33-7cd7-4f4c-b5d6-72f150f078e7'"
+            echo "GUID=='2f121c53-eec4-46a1-aa2e-6301c01049e7'"
             if [ "$SB_NO_ERRORS_YET_1" == "t" ]; then  # should be always true at this line
                 echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
@@ -253,7 +253,7 @@ func_mmmv_assert_sbvar_domain_t_f_but_do_not_exit_t1(){
         echo "    S_GUID_CANDIDATE==\"\""
         echo ""
         echo "but it is expected to be a GUID."
-        echo "GUID=='91916197-bff9-45f4-bfd6-72f150f078e7'"
+        echo "GUID=='018263d1-df3c-47c2-895e-6301c01049e7'"
         echo ""
         SB_NO_ERRORS_YET_1="f"
     fi
@@ -267,11 +267,11 @@ func_mmmv_assert_sbvar_domain_t_f_but_do_not_exit_t1(){
         echo ""
         if [ "$SB_NO_ERRORS_YET" == "f" ]; then 
             echo "is expected to be initialized to \"t\" before calling this function."
-            echo "GUID=='f5cb1334-1c48-46a1-95c6-72f150f078e7'"
+            echo "GUID=='44b26fbb-88c8-41da-bb3e-6301c01049e7'"
         else
             echo "is expected to be initialized to \"t\" before calling this function"
             echo "and its domain is {\"f\", \"t\"}."
-            echo "GUID=='bff45e1b-f420-4338-82c6-72f150f078e7'"
+            echo "GUID=='bb286223-5172-411d-8a2d-6301c01049e7'"
         fi
         if [ "$SB_NO_ERRORS_YET_1" == "t" ]; then 
             echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
@@ -291,7 +291,7 @@ func_mmmv_assert_sbvar_domain_t_f_but_do_not_exit_t1(){
             echo ""
             echo "    S_VARIABLE_NAME_IN_CALLING_CODE==\"\""
             echo ""
-            echo "GUID=='339c3b57-e311-4f19-85c6-72f150f078e7'"
+            echo "GUID=='27776374-415b-4820-9a3c-6301c01049e7'"
             if [ "$SB_NO_ERRORS_YET_1" == "t" ]; then  # should be always true at this line
                 echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
@@ -310,7 +310,7 @@ func_mmmv_assert_sbvar_domain_t_f_but_do_not_exit_t1(){
                 echo "    $S_VARIABLE_NAME_IN_CALLING_CODE==\"$SB_VARIABLE_VALUE\""
                 echo ""
                 echo "but it is expected to be either \"t\" or \"f\"."
-                echo "GUID=='cfd54529-5ac4-49ad-95c6-72f150f078e7'"
+                echo "GUID=='395d6f24-d99c-4649-b41c-6301c01049e7'"
                 if [ "$SB_NO_ERRORS_YET_1" == "t" ]; then  # should be always true at this line
                     echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi
@@ -334,7 +334,7 @@ func_mmmv_report_an_error_but_do_not_exit_t1(){
         if [ "$S_ERR_MSG" != "" ]; then 
             echo "$S_ERR_MSG"
         fi
-        echo "GUID=='5c34d0e9-1f0c-4204-85c6-72f150f078e7'"
+        echo "GUID=='04886405-f412-41f4-b43c-6301c01049e7'"
         echo ""
     else
         echo ""
@@ -343,7 +343,7 @@ func_mmmv_report_an_error_but_do_not_exit_t1(){
             echo "$S_ERR_MSG"
         fi
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-        echo "GUID=='d2130f69-6f6d-427d-97b6-72f150f078e7'"
+        echo "GUID=='27907d95-6ab9-44dc-a55b-6301c01049e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
@@ -365,7 +365,7 @@ func_mmmv_report_missing_from_path_and_do_NOT_exit_t1() {
         echo "This bash script wished to use the "
         echo "\"$S_NAME_OF_THE_EXECUTABLE\" from the PATH, but "
         echo "it was missing from the PATH."
-        echo "GUID=='200f6b42-c0bd-40b0-a1b6-72f150f078e7'"
+        echo "GUID=='3ee3c763-0ebf-4340-893b-6301c01049e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
@@ -395,7 +395,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         echo -e "\e[31mThe code that calls this function is flawed.\e[39m"
         echo "This function requires 2 parameters: S_FP, S_GUID_CANDIDATE"
         echo "and has an optional 3. parameter: SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        echo "GUID=='2d13d73e-dfc5-4e62-b5b6-72f150f078e7'"
+        echo "GUID=='17da6193-fb91-4c09-831b-6301c01049e7'"
         echo ""
         #--------
         SB_VERIFICATION_FAILED="t"
@@ -415,7 +415,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo "Valid values are: \"t\", \"f\", \"\" ."
                     echo "\"\" defaults to \"t\"."
-                    echo "GUID=='42748dc5-4afb-47e3-91b6-72f150f078e7'"
+                    echo "GUID=='5c56ab05-21b8-480e-985a-6301c01049e7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -436,7 +436,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo -e "points to a\e[31m broken symlink\e[39m, but a file or"
                     echo "a symlink to a file is expected."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='d2cbfd57-e9a6-44aa-a1b6-72f150f078e7'"
+                    echo "GUID=='959d5a24-8807-429a-9a2a-6301c01049e7'"
                     echo ""
                 fi
                 #--------
@@ -450,7 +450,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "\e[31mdoes not exist\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='2a00aab2-3c4c-49ef-81a6-72f150f078e7'"
+                    echo "GUID=='620b4d83-cd1a-479f-a259-6301c01049e7'"
                     echo ""
                 fi
                 #--------
@@ -470,7 +470,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "exists, but a\e[31m file or a symlink to a file is expected\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='65cab389-ff74-493f-afa6-72f150f078e7'"
+                    echo "GUID=='1957ceb2-17ce-4789-ad19-6301c01049e7'"
                     echo ""
                 fi
                 #--------
@@ -483,7 +483,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='de4c028c-9aeb-4e9f-a2a6-72f150f078e7'"
+            echo "GUID=='39c05405-8370-4faf-8c49-6301c01049e7'"
             echo ""
         fi
     fi
@@ -506,7 +506,7 @@ func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_C
         echo -e "\e[31mThe code that calls this function is flawed.\e[39m"
         echo "This function requires 2 parameters: S_FP, S_GUID_CANDIDATE"
         echo "and has an optional 3. parameter: SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        echo "GUID=='d857cc5e-fd3c-41e2-a1a6-72f150f078e7'"
+        echo "GUID=='38d14f73-7287-4b7d-ba78-6301c01049e7'"
         echo ""
         #--------
         SB_VERIFICATION_FAILED="t"
@@ -526,7 +526,7 @@ func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_C
                     echo ""
                     echo "Valid values are: \"t\", \"f\", \"\" ."
                     echo "\"\" defaults to \"t\"."
-                    echo "GUID=='137d0bc7-6db5-45ed-81a6-72f150f078e7'"
+                    echo "GUID=='315d3062-8b70-44ba-a038-6301c01049e7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -547,7 +547,7 @@ func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_C
                     echo -e "points to a\e[31m broken symlink\e[39m, but a folder "
                     echo "or a symlink to a folder is expected."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='1993d22e-8d91-4e9b-b296-72f150f078e7'"
+                    echo "GUID=='1b905611-6b3f-4748-aa18-6301c01049e7'"
                     echo ""
                 fi
                 #--------
@@ -561,7 +561,7 @@ func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_C
                     echo ""
                     echo -e "\e[31mdoes not exist\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='e6e89910-49b1-4c99-9396-72f150f078e7'"
+                    echo "GUID=='5fd68625-a681-494e-a017-6301c01049e7'"
                     echo ""
                 fi
                 #--------
@@ -581,7 +581,7 @@ func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_C
                     echo ""
                     echo -e "exists, but a\e[31m folder is expected\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='7a605a2e-258c-4ed7-b396-72f150f078e7'"
+                    echo "GUID=='8c821a50-bcb5-4c9b-8237-6301c01049e7'"
                     echo ""
                 fi
                 #--------
@@ -594,7 +594,7 @@ func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_C
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='562a2141-b538-4253-9886-72f150f078e7'"
+            echo "GUID=='2f7420d3-8030-4399-9e26-6301c01049e7'"
             echo ""
         fi
     fi
@@ -620,7 +620,7 @@ func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1(){
             echo ""
             echo "    S_GUID_CANDIDATE==\"\""
             echo ""
-            echo "GUID=='78826c3f-7a9e-407b-9286-72f150f078e7'"
+            echo "GUID=='558d1a82-f969-4eac-9346-6301c01049e7'"
             echo ""
             #--------
             SB_VERIFICATION_FAILED="t"
@@ -635,7 +635,7 @@ func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1(){
             echo "    S_FP_INSTALLATION_FOLDER==\"\""
             echo ""
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-            echo "GUID=='17cbbba5-ac84-43db-8186-72f150f078e7'"
+            echo "GUID=='07563e95-1624-4f59-8556-6301c01049e7'"
             echo ""
             #--------
             SB_VERIFICATION_FAILED="t"
@@ -657,7 +657,7 @@ func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1(){
                     echo "\"\", which is automatically converted to the "
                     echo "default value of \"f\"."
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                    echo "GUID=='817aa901-8272-4dd7-a276-72f150f078e7'"
+                    echo "GUID=='c3257f77-6700-45db-ad35-6301c01049e7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -669,11 +669,11 @@ func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1(){
     local SB_MAN_FOLDER_OR_NONBROKEN_SYMLINK_TO_IT_EXISTS="f"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$S_FP_INSTALLATION_FOLDER" "c47d0c4a-e269-459e-98f6-72f150f078e7"
+            "$S_FP_INSTALLATION_FOLDER" "d16294e9-aa2d-454e-9922-6301c01049e7"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             #--------------
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_INSTALLATION_FOLDER/bin" "3be46a43-01b6-492e-b4f6-72f150f078e7"
+                "$S_FP_INSTALLATION_FOLDER/bin" "3fe30fe5-a061-444b-ac11-6301c01049e7"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 Z_PATH="$S_FP_INSTALLATION_FOLDER/bin:$Z_PATH"
             fi
@@ -687,7 +687,7 @@ func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1(){
                 if [ "$SB_MAN_FOLDER_EXISTENCE_IS_MANDATORY" == "t" ]; then
                     # The next 2 lines are for displaying an error message.
                     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                        "$S_FP_INSTALLATION_FOLDER/share/man" "4287c865-6732-4e10-a1e6-72f150f078e7"
+                        "$S_FP_INSTALLATION_FOLDER/share/man" "5481c0a3-dea0-431f-a091-6301c01049e7"
                 fi
             else
                 MANPATH="$S_FP_INSTALLATION_FOLDER/share/man:$MANPATH"
@@ -700,7 +700,7 @@ func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1(){
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='e242625b-5b97-40dc-b376-72f150f078e7'"
+            echo "GUID=='1b7e3e24-b9e9-4590-a925-6301c01049e7'"
             echo ""
         fi
     fi
@@ -725,7 +725,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='53dd6d13-cdbd-4527-9476-72f150f078e7'"
+        echo "GUID=='5321a3b4-0b3a-4857-b645-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -740,7 +740,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='c12306f7-dcc0-4589-bd66-72f150f078e7'"
+        echo "GUID=='4b88dd72-e469-42e3-9b44-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -770,7 +770,7 @@ func_mmmv_assert_error_code_zero_t2(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='2bf5d2e1-aba5-4fbe-a966-72f150f078e7'"
+        echo "GUID=='376e1975-125d-4c65-8723-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -784,7 +784,7 @@ func_mmmv_assert_error_code_zero_t2(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='6696be50-5e1f-48ff-a166-72f150f078e7'"
+        echo "GUID=='94643734-7c80-48a7-a043-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -825,7 +825,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "    S_FP_ORIG=\"\`pwd\`\""
         echo ""
         echo "Aborting script."
-        echo "GUID=='418de1cc-3ac7-48a8-8556-72f150f078e7'"
+        echo "GUID=='83585371-a67b-4562-bd43-6301c01049e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -852,7 +852,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         fi
         echo "contains the script that prints this error message."
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='42c92944-833c-4daa-a456-72f150f078e7'"
+        echo "GUID=='659c8ef4-9376-4578-b952-6301c01049e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -865,7 +865,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo -e "is\e[31m not a folder\e[39m. It is expected to be a folder that "
         echo "contains the script that prints this error message."
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='1404421b-be80-4a6d-8256-72f150f078e7'"
+        echo "GUID=='1d5da8a1-664c-411f-ab12-6301c01049e7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -884,7 +884,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t2(){
             echo "    FUNC_MMMV_EXC_VERIFY_S_FP_ORIG_T2_S_FB_ORIG_ALREADY_VERIFIED==\"$FUNC_MMMV_EXC_VERIFY_S_FP_ORIG_T2_S_FB_ORIG_ALREADY_VERIFIED\""
             echo ""
             echo "has a domain of {\"f\", \"t\"}."
-            echo "GUID=='aeb21e1d-b5e7-4bff-a446-72f150f078e7'"
+            echo "GUID=='2111f751-6948-45a1-9542-6301c01049e7'"
             echo ""
         else
             func_mmmv_exc_verify_S_FP_ORIG_t1
@@ -899,7 +899,7 @@ func_mmmv_cd_S_FP_ORIG_and_exit_t1(){
     func_mmmv_exc_verify_S_FP_ORIG_t1
     cd "$S_FP_ORIG"
     func_mmmv_assert_error_code_zero_t2 "$?" \
-        "d0f88914-1fbb-4580-a4e6-72f150f078e7"
+        "027d99dd-c493-455f-9d71-6301c01049e7"
     exit 0
 } # func_mmmv_cd_S_FP_ORIG_and_exit_t1
 
@@ -918,7 +918,7 @@ func_mmmv_assert_nonempty_string_t1(){
         echo "    S_GUID_CANDIDATE==\"\""
         echo ""
         echo "but it is expected to be a GUID."
-        echo "GUID=='d1210d10-0974-4d64-a446-72f150f078e7'"
+        echo "GUID=='4bec7433-413d-4405-b351-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -931,7 +931,7 @@ func_mmmv_assert_nonempty_string_t1(){
         echo ""
         echo "    S_VARIABLE_NAME_IN_CALLING_CODE==\"\""
         echo ""
-        echo "GUID=='27ac0c11-023f-4b55-9446-72f150f078e7'"
+        echo "GUID=='25a7cf01-2304-4463-8421-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -947,7 +947,7 @@ func_mmmv_assert_nonempty_string_t1(){
         echo "    $S_VARIABLE_NAME_IN_CALLING_CODE==\"$S_IN\""
         echo ""
         echo "but it is expected to be something other than an empty string."
-        echo "GUID=='32d2fe21-6f9e-4948-a136-72f150f078e7'"
+        echo "GUID=='5b276da2-0ba6-4a12-b550-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -972,7 +972,7 @@ func_mmmv_assert_sbvar_domain_t_f_t1(){
         echo "    S_GUID_CANDIDATE==\"\""
         echo ""
         echo "but it is expected to be a GUID."
-        echo "GUID=='40151013-b6c6-47b3-b336-72f150f078e7'"
+        echo "GUID=='5b18e742-90cf-496a-be10-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -985,7 +985,7 @@ func_mmmv_assert_sbvar_domain_t_f_t1(){
         echo ""
         echo "    S_VARIABLE_NAME_IN_CALLING_CODE==\"\""
         echo ""
-        echo "GUID=='2039a9b1-5f0b-49cd-9436-72f150f078e7'"
+        echo "GUID=='d5190c5d-5290-454a-b4f0-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -1002,7 +1002,7 @@ func_mmmv_assert_sbvar_domain_t_f_t1(){
             echo "    $S_VARIABLE_NAME_IN_CALLING_CODE==\"$SB_VARIABLE_VALUE\""
             echo ""
             echo "but it is expected to be either \"t\" or \"f\"."
-            echo "GUID=='8096ef4d-08d8-46e0-b226-72f150f078e7'"
+            echo "GUID=='26cc2ed3-fce4-4244-963f-6301c01049e7'"
             echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             echo ""
             #--------
@@ -1043,7 +1043,7 @@ func_mmmv_assert_file_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='a4d91529-c95e-4866-b526-72f150f078e7'"
+        echo "GUID=='5769a9d2-8964-4e85-823f-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -1051,7 +1051,7 @@ func_mmmv_assert_file_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo -e "\e[31mThis code is flawed. \e[39m"
-            echo "GUID=='4269e613-3647-426e-9516-72f150f078e7'"
+            echo "GUID=='0192342b-c002-4401-a13f-6301c01049e7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
@@ -1075,7 +1075,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='26843ac7-e21c-4fc6-a116-72f150f078e7'"
+                echo "GUID=='327ec7c1-f637-4433-871e-6301c01049e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -1098,7 +1098,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "a file or a symlink to a file is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='36b6d720-e423-45f3-9416-72f150f078e7'"
+            echo "GUID=='315ca666-482f-4d7c-a92e-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1115,7 +1115,7 @@ func_mmmv_assert_file_exists_t1() {
             echo ""
             echo -e "\e[31mdoes not exist\e[39m."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='236f614b-6c83-4eb1-b416-72f150f078e7'"
+            echo "GUID=='37d76b15-9546-4a57-a83d-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1139,7 +1139,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo -e "a\e[31m file or a symlink to a file is expected\e[39m."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='17f60430-71ac-4f7b-8216-72f150f078e7'"
+            echo "GUID=='5384b5b4-3dac-4cd4-973d-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1154,7 +1154,7 @@ func_mmmv_assert_file_exists_t1() {
                     echo ""
                     echo -e "is a symlink to a file, but a\e[31m file is expected\e[39m."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='be8d44b5-d9ad-4cf0-b116-72f150f078e7'"
+                    echo "GUID=='2c544536-9ee8-4a64-bb4d-6301c01049e7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -1195,7 +1195,7 @@ func_mmmv_assert_folder_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='5dbbd62b-eb49-4520-8206-72f150f078e7'"
+        echo "GUID=='4609ed93-8077-4049-803d-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -1203,7 +1203,7 @@ func_mmmv_assert_folder_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo -e "\e[31mThis code is flawed. \e[39m"
-            echo "GUID=='e5898422-dbdb-4dec-b206-72f150f078e7'"
+            echo "GUID=='227db5e1-acf0-4ac4-973c-6301c01049e7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
@@ -1227,7 +1227,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='4111a244-fce6-4a59-9106-72f150f078e7'"
+                echo "GUID=='573f9df0-3ff8-43ff-9bac-6301c01049e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -1250,7 +1250,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo -e "a\e[31m folder or a symlink to a folder is expected\e[39m."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='203c344d-43e7-418f-8206-72f150f078e7'"
+            echo "GUID=='9f21f066-57c9-4cb2-a65c-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1267,7 +1267,7 @@ func_mmmv_assert_folder_exists_t1() {
             echo ""
             echo -e "\e[31mdoes not exist\e[39m."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='d186135b-208f-49b0-8406-72f150f078e7'"
+            echo "GUID=='e1dde59a-00cc-44ac-a5dc-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1291,7 +1291,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo -e "a\e[31m folder or a symlink to a folder is expected\e[39m."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='11167d3d-4d63-49c8-b306-72f150f078e7'"
+            echo "GUID=='36e226d6-fe30-4d1d-b9ab-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1306,7 +1306,7 @@ func_mmmv_assert_folder_exists_t1() {
                     echo ""
                     echo -e "is a symlink to a folder, but a\e[31m folder is expected\e[39m."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='82216c1b-7369-43ad-a306-72f150f078e7'"
+                    echo "GUID=='25f918e5-91a1-4347-811b-6301c01049e7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -1328,7 +1328,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='3d882a57-ce88-419c-8506-72f150f078e7'"
+        echo "GUID=='1fd01a63-b33d-4724-a43b-6301c01049e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -1367,7 +1367,7 @@ func_mmmv_exc_exit_with_an_error_t1(){
     if [ "$S_GUID_CANDIDATE" != "" ]; then 
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
     fi
-    echo "GUID=='510970a3-a3e1-4fa4-8106-72f150f078e7'"
+    echo "GUID=='57ecaf24-84b9-4040-8a1b-6301c01049e7'"
     echo ""
     cd "$S_FP_ORIG"
     exit 1 # exit with an error
@@ -1387,7 +1387,7 @@ func_mmmv_exc_exit_with_an_error_t2(){
             echo -e "$S_OPTIONAL_ERR_MSG"
         fi
         echo "Aborting script."
-        echo "GUID=='18c4a114-1431-4500-b4f5-72f150f078e7'"
+        echo "GUID=='2fbc2ed4-fb69-4b0b-b75b-6301c01049e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -1399,7 +1399,7 @@ func_mmmv_exc_exit_with_an_error_t2(){
         fi
         echo "Aborting script."
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-        echo "GUID=='17fe8ad5-8199-44db-9df5-72f150f078e7'"
+        echo "GUID=='33359273-cdc9-4e0c-842b-6301c01049e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -1426,7 +1426,7 @@ func_mmmv_exc_determine_Awk_command_t1() {
         echo ""
         echo -e "\e[31mNeither 'gawk', nor 'awk' was available on PATH. \e[39m"
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='d357b22b-7f8f-4ccd-82f5-72f150f078e7'"
+        echo "GUID=='982e5341-f435-46ab-885b-6301c01049e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -1445,7 +1445,7 @@ func_mmmv_exc_is_file_t1() {
         echo "    $S_FP_CANDIDATE "
         echo ""
         echo -e "\e[31mdoes not exist\e[39m."
-        echo "GUID=='021fe0ed-8cd4-4ff1-8af5-72f150f078e7'"
+        echo "GUID=='4e321505-5cbd-456c-9e4b-6301c01049e7'"
         echo "Aborting without doing anything."
         echo ""
         exit 1 # exit with an error
@@ -1462,7 +1462,7 @@ func_mmmv_exc_is_file_t1() {
             echo "references a folder, "
         fi
         echo -e "but it is\e[31m required to reference a file\e[39m."
-        echo "GUID=='78bb263b-b85d-468b-95f5-72f150f078e7'"
+        echo "GUID=='375e4b53-8323-4bc2-be1b-6301c01049e7'"
         echo "Aborting without doing anything."
         echo ""
         exit 1 # exit with an error
@@ -1481,7 +1481,7 @@ func_mmmv_exc_is_folder_t1() {
         echo "    $S_FP_CANDIDATE "
         echo ""
         echo -e "\e[31mdoes not exist\e[39m."
-        echo "GUID=='36888aca-6d73-4ce2-b3f5-72f150f078e7'"
+        echo "GUID=='4e3e8a15-a806-4ba9-b35a-6301c01049e7'"
         echo "Aborting without doing anything."
         echo ""
         exit 1 # exit with an error
@@ -1498,7 +1498,7 @@ func_mmmv_exc_is_folder_t1() {
             echo "references a file, "
         fi
         echo -e "but it is\e[31m required to reference a folder\e[39m."
-        echo "GUID=='3409d2d7-cc7e-40d3-87f5-72f150f078e7'"
+        echo "GUID=='c3d6a7b2-395d-40b3-ba4a-6301c01049e7'"
         echo "Aborting without doing anything."
         echo ""
         exit 1 # exit with an error
@@ -1552,7 +1552,7 @@ func_mmmv_create_folder_t1(){
         echo "is expected to be a full path to a folder that "
         echo "either already exists or that has to be created."
         echo "Aborting script."
-        echo "GUID=='5ee93835-991b-4722-b4f5-72f150f078e7'"
+        echo "GUID=='e3934c79-2f79-44d1-9bfa-6301c01049e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -1570,7 +1570,7 @@ func_mmmv_create_folder_t1(){
             echo "a symlink to a folder or it should not "
             echo "reference anything that already exists."
             echo "Aborting script."
-            echo "GUID=='3a43c742-9ce3-47cf-85e5-72f150f078e7'"
+            echo "GUID=='a5b2c3fa-7b01-412c-9cfa-6301c01049e7'"
             echo ""
             cd "$S_FP_ORIG"
             exit 1 # exit with an error
@@ -1582,11 +1582,11 @@ func_mmmv_create_folder_t1(){
         sync # for network drives and USB-sticks
         wait # just in case
         if [ "$S_TMP_0" != "0" ]; then 
-            func_mmmv_exc_exit_with_an_error_t2 "324584b4-1d53-4962-85e6-72f150f078e7" \
+            func_mmmv_exc_exit_with_an_error_t2 "96bf1d53-a322-43fd-9d20-6301c01049e7" \
                 "S_FP_FOLDER==$S_FP_FOLDER"
         fi
         if [ ! -e "$S_FP_FOLDER" ]; then 
-            func_mmmv_exc_exit_with_an_error_t2 "45097218-ae38-48df-81d6-72f150f078e7" \
+            func_mmmv_exc_exit_with_an_error_t2 "21e7e123-c0ac-4a3b-9330-6301c01049e7" \
                 "Folder creation failed. S_FP_FOLDER==$S_FP_FOLDER"
         fi
     fi
@@ -1604,7 +1604,7 @@ func_mmmv_exc_assure_tmp_folder_existence_t1() {  # S_FP_TMP, S_GUID
         echo ""
         echo -e "\e[31mThe code that calls this function is flawed. \e[39m"
         echo "This function requires 2 parameters: S_FP_TMP, S_GUID"
-        echo "GUID=='1d6c198f-4685-43a5-92e5-72f150f078e7'"
+        echo "GUID=='1f7e6a42-8daa-4121-b55a-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -1615,7 +1615,7 @@ func_mmmv_exc_assure_tmp_folder_existence_t1() {  # S_FP_TMP, S_GUID
         if [ -h "$S_FP_TMP" ]; then
             rm -f "$S_FP_TMP" # deletes a broken symlink
             func_mmmv_assert_error_code_zero_t1 \
-                "$?" "4f3f6ed1-c5ee-4f5f-a7d6-72f150f078e7"
+                "$?" "4ef99e21-1878-4a33-8f5f-6301c01049e7"
             func_mmmv_wait_and_sync_t1
             if [ -h "$S_FP_TMP" ]; then
                 echo ""
@@ -1627,7 +1627,7 @@ func_mmmv_exc_assure_tmp_folder_existence_t1() {  # S_FP_TMP, S_GUID
                 echo "or a symlink to a folder is expected."
                 echo "An attempt to delete the broken symlink failed."
                 echo "GUID==\"$S_GUID\""
-                echo "GUID=='1d77cc34-2d9b-47d9-b3e5-72f150f078e7'"
+                echo "GUID=='e13426e9-ae1b-45f3-a92a-6301c01049e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -1636,10 +1636,10 @@ func_mmmv_exc_assure_tmp_folder_existence_t1() {  # S_FP_TMP, S_GUID
         fi
         mkdir -p "$S_FP_TMP"
         func_mmmv_assert_error_code_zero_t1 \
-            "$?" "3c25bfbb-8ca7-480e-92d6-72f150f078e7"
+            "$?" "1f7f87f2-e60d-4739-ac4f-6301c01049e7"
         func_mmmv_wait_and_sync_t1
         func_mmmv_assert_folder_exists_t1 "$S_FP_TMP" \
-            '53f66962-9cb0-4385-b5e5-72f150f078e7'
+            '270ea7a5-2398-4195-af3a-6301c01049e7'
     else
         if [ ! -d "$S_FP_TMP" ]; then
             echo ""
@@ -1653,7 +1653,7 @@ func_mmmv_exc_assure_tmp_folder_existence_t1() {  # S_FP_TMP, S_GUID
             echo ""
             echo -e "exists, but a\e[31m folder or a symlink to a folder is expected\e[39m."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='ca81cb18-9c11-4491-b1e5-72f150f078e7'"
+            echo "GUID=='2c0348e3-6761-4453-9d5a-6301c01049e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -1688,7 +1688,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 echo "    SB_THROW_ON_INVALID_DATA==\"$SB_THROW_ON_INVALID_DATA\""
                 echo ""
                 echo "Aborting script."
-                echo "GUID=='77cbd55f-793c-46fa-a2d5-72f150f078e7'"
+                echo "GUID=='a5600c14-b403-4a41-a73a-6301c01049e7'"
                 echo ""
                 exit 1 # because of a code defect, not just invalid data.
             fi
@@ -1749,7 +1749,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 echo ""
                 echo "    $S_FP_TARGET"
                 echo ""
-                echo "GUID=='78de4756-8417-4cfb-91d5-72f150f078e7'"
+                echo "GUID=='34302b1e-69dc-43a0-a259-6301c01049e7'"
                 echo ""
                 if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                     exit 1
@@ -1768,7 +1768,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
             echo "    $S_FP_LINK"
             echo ""
             echo "must not exist before the call to this function."
-            echo "GUID=='4a347822-6850-4464-83d5-72f150f078e7'"
+            echo "GUID=='b5179b63-4e91-4028-bf89-6301c01049e7'"
             echo ""
             if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                 exit 1
@@ -1786,7 +1786,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 echo "already exists and it is a broken symlink. According to "
                 echo "the specification of this function the hardlink "
                 echo "must not exist before the call to this function."
-                echo "GUID=='a45805e7-ddcf-404d-9cd5-72f150f078e7'"
+                echo "GUID=='1c52ad03-8ac6-407c-8a19-6301c01049e7'"
                 echo ""
                 if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                     exit 1
@@ -1812,7 +1812,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                     echo ""
                     echo "    $S_FP_LINK"
                     echo ""
-                    echo "GUID=='26c14923-1c63-48be-b2d5-72f150f078e7'"
+                    echo "GUID=='4d376494-32b0-45fc-8d29-6301c01049e7'"
                     echo ""
                     if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                         exit 1
@@ -1834,7 +1834,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 echo ""
                 echo "    $S_FP_LINK"
                 echo ""
-                echo "GUID=='d8271133-485a-4354-b4c5-72f150f078e7'"
+                echo "GUID=='3f553f07-ec13-4a7e-ab59-6301c01049e7'"
                 echo ""
                 if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                     exit 1
@@ -1846,7 +1846,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
         fi
     fi
     #----------------------------------------------------------------------
-    local S_TMP_0="not_set_yet GUID=='b76ed34f-bbe3-4a2e-b1c5-72f150f078e7'"
+    local S_TMP_0="not_set_yet GUID=='333730c2-d153-4474-9e29-6301c01049e7'"
     if [ "$SB_DO_NOT_CREATE_THE_HARDLINK" == "f" ]; then
         ln  "$S_FP_TARGET" "$S_FP_LINK" 
         S_TMP_0="$?"
@@ -1861,7 +1861,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
             echo "    $S_FP_TARGET"
             echo ""
             echo -e "\e[31mfailed\e[39m. The ln exited with the error code of $S_TMP_0 ."
-            echo "GUID=='333f0991-8d2c-4e83-b2c5-72f150f078e7'"
+            echo "GUID=='43742eb5-8b53-44d6-ae29-6301c01049e7'"
             echo ""
             if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                 exit 1
@@ -1885,7 +1885,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 if [ ! -h "$S_FP_LINK" ]; then
                     echo ""
                     echo "Problem detection branch marker "
-                    echo "GUID=='e8fbe54b-dde6-49ef-85c5-72f150f078e7'"
+                    echo "GUID=='3dfb1801-58d3-4b98-8b39-6301c01049e7'"
                     echo ""
                     S_TMP_0="t"
                 else
@@ -1893,7 +1893,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                         if [ ! -e "$S_FP_LINK" ]; then
                             echo ""
                             echo "Problem detection branch marker "
-                            echo "GUID=='c0b6d459-3ca0-41d7-b3c5-72f150f078e7'"
+                            echo "GUID=='5c0bcf53-7710-4395-a629-6301c01049e7'"
                             echo ""
                             S_TMP_0="t"
                         else
@@ -1901,7 +1901,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                                 if [ ! -d "$S_FP_LINK" ]; then
                                     echo ""
                                     echo "Problem detection branch marker "
-                                    echo "GUID=='33e97252-e2e5-4238-adc5-72f150f078e7'"
+                                    echo "GUID=='5d5383d0-4d22-4053-8049-6301c01049e7'"
                                     echo ""
                                     S_TMP_0="t"
                                 fi
@@ -1909,7 +1909,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                                 if [ -d "$S_FP_LINK" ]; then
                                     echo ""
                                     echo "Problem detection branch marker "
-                                    echo "GUID=='3bfd912e-f83e-49d4-92c5-72f150f078e7'"
+                                    echo "GUID=='54f8011d-99dd-4983-b738-6301c01049e7'"
                                     echo ""
                                     S_TMP_0="t"
                                 fi
@@ -1919,7 +1919,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                         if [ -e "$S_FP_LINK" ]; then
                             echo ""
                             echo "Problem detection branch marker "
-                            echo "GUID=='2b315b05-d1d6-4121-84c5-72f150f078e7'"
+                            echo "GUID=='b2d07d65-49e8-45ff-8438-6301c01049e7'"
                             echo ""
                             S_TMP_0="t"
                         fi
@@ -1932,35 +1932,35 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 if [ ! -e "$S_FP_TARGET" ]; then # just an extra test
                     echo ""
                     echo "Problem detection branch marker "
-                    echo "GUID=='372dc0a2-898e-4983-85c5-72f150f078e7'"
+                    echo "GUID=='52a37c81-aa7f-493d-9428-6301c01049e7'"
                     echo ""
                     S_TMP_0="t"
                 else
                     if [ -d "$S_FP_TARGET" ]; then # just an extra test
                         echo ""
                         echo "Problem detection branch marker "
-                        echo "GUID=='7d2ce317-4a97-46c5-82b5-72f150f078e7'"
+                        echo "GUID=='548428e1-b5b9-46d1-b918-6301c01049e7'"
                         echo ""
                         S_TMP_0="t"
                     else
                         if [ -h "$S_FP_LINK" ]; then
                             echo ""
                             echo "Problem detection branch marker "
-                            echo "GUID=='07e8f825-08f9-494e-94b5-72f150f078e7'"
+                            echo "GUID=='605d7345-0e5c-4987-a828-6301c01049e7'"
                             echo ""
                             S_TMP_0="t"
                         else
                             if [ ! -e "$S_FP_LINK" ]; then
                                 echo ""
                                 echo "Problem detection branch marker "
-                                echo "GUID=='56c80f5f-3741-4b1b-92b5-72f150f078e7'"
+                                echo "GUID=='2c299311-16a1-45b9-9758-6301c01049e7'"
                                 echo ""
                                 S_TMP_0="t"
                             else
                                 if [ -d "$S_FP_LINK" ]; then
                                     echo ""
                                     echo "Problem detection branch marker "
-                                    echo "GUID=='0e52a43f-4584-445e-91b5-72f150f078e7'"
+                                    echo "GUID=='d67f491f-c5b0-4337-98d8-6301c01049e7'"
                                     echo ""
                                     S_TMP_0="t"
                                 fi
@@ -1994,7 +1994,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                 echo "and the operating system processes might have "
                 echo "altered any of the symlinks in the chain, including "
                 echo "the file or folder at the very end of the symlink chain."
-                echo "GUID=='1d317ee3-c117-4dea-94b5-72f150f078e7'"
+                echo "GUID=='276c0ae1-fda9-44f4-9238-6301c01049e7'"
                 echo ""
                 if [ "$SB_THROW_ON_INVALID_DATA" == "t" ]; then
                     exit 1
@@ -2004,7 +2004,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
                     echo ""
                     echo -e "\e[31mThe implementation of this function is flawed. \e[39m"
                     echo "Aborting script."
-                    echo "GUID=='d4654bd4-140e-4766-b5b5-72f150f078e7'"
+                    echo "GUID=='34278610-5bf3-43a6-8557-6301c01049e7'"
                     echo ""
                     exit 1
                 fi
@@ -2017,7 +2017,7 @@ func_mmmv_ln_create_hardlink_t1() { # S_FP_TARGET  S_FP_LINK
             echo ""
             echo -e "\e[31mThe implementation of this function is flawed. \e[39m"
             echo "Aborting script."
-            echo "GUID=='a67c754b-5b57-47c9-b1b5-72f150f078e7'"
+            echo "GUID=='1a7e6cc5-528e-401b-9217-6301c01049e7'"
             echo ""
             exit 1
         fi
@@ -2044,7 +2044,7 @@ func_mmmv_assert_environment_variable_set_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi 
-        echo "GUID=='71cf6147-5e0b-4514-91b5-72f150f078e7'"
+        echo "GUID=='278e607b-baf1-4565-8de7-6301c01049e7'"
         echo ""
         exit 1 # exit with an error
     #else 
@@ -2177,7 +2177,7 @@ func_mmmv_iterate_over_array_02n_t1() {
     if [ "$S_ARRAY_VARIABLE_NAME" == "" ]; then
         echo ""
         echo -e "\e[31mS_ARRAY_VARIABLE_NAME\e[39m is not allowed to be an empty string."
-        echo "GUID=='99ec8bb5-05b0-40e5-95b5-72f150f078e7'"
+        echo "GUID=='343d0c44-c851-4fed-b727-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -2187,7 +2187,7 @@ func_mmmv_iterate_over_array_02n_t1() {
     if [ "$S_ITERATION_FUNCTION_NAME" == "" ]; then
         echo ""
         echo -e "\e[31mS_ITERATION_FUNCTION_NAME\e[39m is not allowed to be an empty string."
-        echo "GUID=='b8d81942-4b82-448a-a2a5-72f150f078e7'"
+        echo "GUID=='15d247a5-6383-4d4e-9637-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -2265,7 +2265,7 @@ func_mmmv_include_bashfile_if_possible_t1(){ # S_FP_BASHFILE S_GUID_CANDIDATE SB
                 if [ "$S_GUID_CANDIDATE" != "" ]; then
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 fi 
-                echo "GUID=='247ba5a5-d7b6-4a0c-a5a5-72f150f078e7'"
+                echo "GUID=='1948a2b2-7f4a-4bc3-9317-6301c01049e7'"
                 echo ""
             fi
         fi
@@ -2279,7 +2279,7 @@ func_mmmv_include_bashfile_if_possible_t1(){ # S_FP_BASHFILE S_GUID_CANDIDATE SB
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi 
-        echo "GUID=='1b96c25e-d2d8-4b17-a2a5-72f150f078e7'"
+        echo "GUID=='344b05a1-2dbf-4026-9a27-6301c01049e7'"
         echo ""
         if [ "$SB_THROW_ON_ERROR" == "t" ]; then
             exit 1
@@ -2298,7 +2298,7 @@ func_mmmv_include_bashfile_if_possible_t1(){ # S_FP_BASHFILE S_GUID_CANDIDATE SB
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='f9097e3d-686b-4f90-91a5-72f150f078e7'"
+            echo "GUID=='3159fac5-a780-4e28-8817-6301c01049e7'"
             echo ""
             if [ "$SB_THROW_ON_ERROR" == "t" ]; then
                 exit 1
@@ -2318,7 +2318,7 @@ func_mmmv_include_bashfile_if_possible_t1(){ # S_FP_BASHFILE S_GUID_CANDIDATE SB
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='32c0d21e-ecca-4c05-83a5-72f150f078e7'"
+            echo "GUID=='3e32c107-cad4-42ee-9b57-6301c01049e7'"
             echo ""
             if [ "$SB_THROW_ON_ERROR" == "t" ]; then
                 exit 1
@@ -2336,7 +2336,7 @@ func_mmmv_include_bashfile_if_possible_t1(){ # S_FP_BASHFILE S_GUID_CANDIDATE SB
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='dd51be12-5d2d-47f4-a5a5-72f150f078e7'"
+            echo "GUID=='52fbbf74-3c1c-4c96-9946-6301c01049e7'"
             echo ""
             if [ "$SB_THROW_ON_ERROR" == "t" ]; then
                 exit 1 
@@ -2361,7 +2361,7 @@ func_mmmv_include_bashfile_if_possible_t2(){ # S_FP_BASHFILE S_GUID_CANDIDATE
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi 
-        echo "GUID=='5b64623d-9366-478b-82a5-72f150f078e7'"
+        echo "GUID=='23c4a454-8c66-4534-b726-6301c01049e7'"
         echo ""
     fi
     #-----------------------------------------
@@ -2377,7 +2377,7 @@ func_mmmv_include_bashfile_if_possible_t2(){ # S_FP_BASHFILE S_GUID_CANDIDATE
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='4a89f601-1cca-4daf-a3a5-72f150f078e7'"
+            echo "GUID=='1c493d01-e79c-44eb-9d36-6301c01049e7'"
             echo ""
         fi
     fi
@@ -2394,7 +2394,7 @@ func_mmmv_include_bashfile_if_possible_t2(){ # S_FP_BASHFILE S_GUID_CANDIDATE
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='23ca7119-6865-412e-b2a5-72f150f078e7'"
+            echo "GUID=='d4804dff-2593-4633-a916-6301c01049e7'"
             echo ""
         fi
     fi
@@ -2411,7 +2411,7 @@ func_mmmv_include_bashfile_if_possible_t2(){ # S_FP_BASHFILE S_GUID_CANDIDATE
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi 
-            echo "GUID=='58778360-fc21-4b47-a1a5-72f150f078e7'"
+            echo "GUID=='39f85322-47b1-4fbf-b426-6301c01049e7'"
             echo ""
         fi
     fi
@@ -2433,7 +2433,7 @@ func_mmmv_assert_exists_on_path_t1() {
         #--------
         echo ""
         echo -e "$S_TMP_0\e[31m$S_NAME_OF_THE_EXECUTABLE\e[39m$S_TMP_1"
-        echo "GUID=='39fc8e94-e0f4-4e92-b595-72f150f078e7'"
+        echo "GUID=='5201bf01-437c-4df6-8226-6301c01049e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -2467,7 +2467,7 @@ func_mmmv_ln_create_or_overwrite_symlink_t1() { # S_FP_TARGET  S_FP_LINK
         echo "$S_CMD_LN"
         echo ""
         echo "PWD==`pwd`"
-        echo "GUID=='13acf901-0ce4-423d-8395-72f150f078e7'"
+        echo "GUID=='783f4805-976f-4cd6-ba46-6301c01049e7'"
         echo ""
         echo ""
         exit 1 # exit with an error
@@ -2559,7 +2559,7 @@ func_mmmv_assert_Linux_or_BSD_t1(){
     if [ "$S_GUID_CANDIDATE" == "" ]; then
         echo ""
         echo -e "\e[31mS_GUID_CANDIDATE==\"\", but it is expected to be a GUID. \e[39m"
-        echo "GUID=='c9ab815f-9095-4f11-8295-72f150f078e7'"
+        echo "GUID=='28c8c7b5-9b48-4462-8036-6301c01049e7'"
         echo ""
         # if [ "$S_FP_ORIG" != "" ]; then
         #     func_mmmv_exc_verify_S_FP_ORIG_t1
@@ -2592,7 +2592,7 @@ func_mmmv_assert_Linux_or_BSD_t1(){
         echo ""
         echo "Aborting script without doing anything."
         echo ""
-        echo "GUID=='3f4e571b-cf65-451b-b495-72f150f078e7'"
+        echo "GUID=='5aca2125-23db-4e53-8d36-6301c01049e7'"
         echo ""
         # if [ "$S_FP_ORIG" != "" ]; then
         #     func_mmmv_exc_verify_S_FP_ORIG_t1
@@ -2619,7 +2619,7 @@ func_mmmv_verify_that_internet_connection_exists_but_do_not_exit_t1(){
         echo "    S_GUID_CANDIDATE==\"\""
         echo ""
         echo "but it is expected to be a GUID."
-        echo "GUID=='a9f84d4f-c585-4587-a395-72f150f078e7'"
+        echo "GUID=='f13cc685-3f14-431a-81a6-6301c01049e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
@@ -2639,7 +2639,7 @@ func_mmmv_verify_that_internet_connection_exists_but_do_not_exit_t1(){
                     func_mmmv_assert_sbvar_domain_t_f_but_do_not_exit_t1 \
                         "$SB_DISPLAY_NONERROR_FEEDBACK" \
                         "SB_DISPLAY_NONERROR_FEEDBACK" \
-                        "07c7dd58-a197-46ff-83d6-72f150f078e7"
+                        "d5b99240-cba8-4935-bb3f-6301c01049e7"
                 fi
                 SB_DISPLAY_NONERROR_FEEDBACK="f"
                 #----------------------------------------
@@ -2807,7 +2807,7 @@ func_mmmv_verify_that_internet_connection_exists_but_do_not_exit_t1(){
         SB_VERIFICATION_FAILED="t"
         if [ "$SB_DISPLAY_NONERROR_FEEDBACK" == "t" ]; then
             echo -e "\e[33mTest failed\e[39m. Replies to pings were NOT received."
-            echo "GUID=='75a85116-3d7b-4aee-b295-72f150f078e7'"
+            echo "GUID=='c30e9397-6c31-41df-bf45-6301c01049e7'"
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
@@ -2843,7 +2843,7 @@ func_mmmv_assert_internet_connection_exists_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='9a14959a-988e-4b03-8595-72f150f078e7'"
+        echo "GUID=='53983531-77a2-48aa-a315-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -2855,7 +2855,7 @@ func_mmmv_assert_internet_connection_exists_t1(){
     else
         func_mmmv_assert_sbvar_domain_t_f_t1 \
             "$SB_OK_TO_CACHE" "SB_OK_TO_CACHE" \
-            "39948a53-7d5c-4702-94d6-72f150f078e7"
+            "914edc14-2bae-44f3-b82e-6301c01049e7"
     fi
     #----------------------------------------------------------------------
     if [ "$SB_DISPLAY_NONERROR_FEEDBACK" == "" ]; then
@@ -2863,17 +2863,17 @@ func_mmmv_assert_internet_connection_exists_t1(){
     else
         func_mmmv_assert_sbvar_domain_t_f_t1 \
             "$SB_DISPLAY_NONERROR_FEEDBACK" "SB_DISPLAY_NONERROR_FEEDBACK" \
-            "b27c7a4a-a706-490e-93d6-72f150f078e7" 
+            "6e4e3c34-4ff7-4b7e-992e-6301c01049e7" 
     fi
     #----------------------------------------------------------------------
     func_mmmv_assert_sbvar_domain_t_f_t1 \
         "$SB_FUNC_MMMV_ASSERT_INTERNET_CONNECTION_EXISTS_T1_RESULT_CACHED" \
         "SB_FUNC_MMMV_ASSERT_INTERNET_CONNECTION_EXISTS_T1_RESULT_CACHED" \
-        "da36bd4d-cfc2-47d7-b2c6-72f150f078e7"
+        "7f6a2435-1c81-421e-b0ae-6301c01049e7"
     func_mmmv_assert_sbvar_domain_t_f_t1 \
         "$SB_FUNC_MMMV_ASSERT_INTERNET_CONNECTION_EXISTS_T1_INTERNET_CONNECTION_EXISTS" \
         "SB_FUNC_MMMV_ASSERT_INTERNET_CONNECTION_EXISTS_T1_INTERNET_CONNECTION_EXISTS" \
-        "254a0dd1-139d-45a0-82c6-72f150f078e7"
+        "3727acd1-3bb6-4121-814d-6301c01049e7"
     #----------------------------------------------------------------------
     local SB_INTERNET_AVAILABLE="f"
     local SB_STUDY_INTERNET_AVAILABILITY="f"
@@ -2893,7 +2893,7 @@ func_mmmv_assert_internet_connection_exists_t1(){
         #----------------------------------------
         # The 
         func_mmmv_verify_that_internet_connection_exists_but_do_not_exit_t1 \
-            "93414e46-ee1e-4d83-82c6-72f150f078e7" \
+            "825e0050-cacd-44db-9a8c-6301c01049e7" \
             "$SB_DISPLAY_NONERROR_FEEDBACK"
         # retunrs its result in a global variable named 
         # SB_VERIFICATION_FAILED="t" # domain: "t", "f" .
@@ -2906,7 +2906,7 @@ func_mmmv_assert_internet_connection_exists_t1(){
                 func_mmmv_assert_sbvar_domain_t_f_t1 \
                     "$SB_VERIFICATION_FAILED" \
                     "SB_VERIFICATION_FAILED" \
-                    "0aa2ed22-d0b6-4ea3-84c6-72f150f078e7"
+                    "9b23e095-c966-458a-b93c-6301c01049e7"
             fi
         fi
         #----------------------------------------
@@ -2919,7 +2919,7 @@ func_mmmv_assert_internet_connection_exists_t1(){
         echo ""
         echo -e "\e[31mInternet could not be reached\e[39m."
         echo -e "Aborting script."
-        echo "GUID=='31fd1d78-3976-4f1b-8f95-72f150f078e7'"
+        echo "GUID=='1fe4e4f2-7656-480c-9e55-6301c01049e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -2949,7 +2949,7 @@ func_mmmv_assert_GUI_applications_can_be_launched_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='ddb5cfdb-8b67-459e-b495-72f150f078e7'"
+        echo "GUID=='3e79a974-96a6-42fc-ab25-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -2961,7 +2961,7 @@ func_mmmv_assert_GUI_applications_can_be_launched_t1(){
     else
         func_mmmv_assert_sbvar_domain_t_f_t1 \
             "$SB_OK_TO_CACHE" "SB_OK_TO_CACHE" \
-            "80755892-cb12-4f1c-a1b6-72f150f078e7"
+            "d138ce41-f519-45bc-901c-6301c01049e7"
     fi
     #----------------------------------------------------------------------
     if [ "$SB_DISPLAY_NONERROR_FEEDBACK" == "" ]; then
@@ -2969,17 +2969,17 @@ func_mmmv_assert_GUI_applications_can_be_launched_t1(){
     else
         func_mmmv_assert_sbvar_domain_t_f_t1 \
             "$SB_DISPLAY_NONERROR_FEEDBACK" "SB_DISPLAY_NONERROR_FEEDBACK" \
-            "310a42d1-97ff-47b1-bbb6-72f150f078e7" 
+            "4503b323-87af-4d59-953b-6301c01049e7" 
     fi
     #----------------------------------------------------------------------
     func_mmmv_assert_sbvar_domain_t_f_t1 \
         "$SB_FUNC_MMMV_ASSERT_GUI_APPLICATIONS_CAN_BE_LAUNCHED_T1_RESULT_CACHED" \
         "SB_FUNC_MMMV_ASSERT_GUI_APPLICATIONS_CAN_BE_LAUNCHED_T1_RESULT_CACHED" \
-        "7ddcc45d-e402-47ae-a5b6-72f150f078e7"
+        "1185f078-aef5-498f-b32b-6301c01049e7"
     func_mmmv_assert_sbvar_domain_t_f_t1 \
         "$SB_FUNC_MMMV_ASSERT_GUI_APPLICATIONS_CAN_BE_LAUNCHED_T1_GUI_IS_LAUNCHABLE" \
         "SB_FUNC_MMMV_ASSERT_GUI_APPLICATIONS_CAN_BE_LAUNCHED_T1_GUI_IS_LAUNCHABLE" \
-        "e4642b64-60cc-426c-83b6-72f150f078e7"
+        "c3d05cfb-6517-4a55-9b2b-6301c01049e7"
     #----------------------------------------------------------------------
     local SB_RUN_TEST="t"
     if [ "$SB_OK_TO_CACHE" == "t" ]; then
@@ -2993,7 +2993,7 @@ func_mmmv_assert_GUI_applications_can_be_launched_t1(){
                 echo "previous run of this function, when it was discovered that "
                 echo "GUI applications can not be launched."
                 echo "Aborting script."
-                echo "GUID=='8e917322-4583-4347-a485-72f150f078e7'"
+                echo "GUID=='61802d45-c4ba-4406-a444-6301c01049e7'"
                 echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
                 echo ""
                 #--------
@@ -3022,7 +3022,7 @@ func_mmmv_assert_GUI_applications_can_be_launched_t1(){
             echo ""
             echo -e "It seems that it is\e[31m NOT possible to launch GUI applications\e[39m."
             echo "Aborting script."
-            echo "GUID=='263f2732-3de4-4cea-bf85-72f150f078e7'"
+            echo "GUID=='c2897c88-b7a2-4918-ab54-6301c01049e7'"
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
             echo ""
             #--------
@@ -3053,7 +3053,7 @@ func_mmmv_exc_initialize_wine_C_drive_if_needed_t1(){
     else
         func_mmmv_assert_sbvar_domain_t_f_t1 \
             "$SB_DISPLAY_NONERROR_FEEDBACK" "SB_DISPLAY_NONERROR_FEEDBACK" \
-            "6334c215-7e56-4b60-aeb6-72f150f078e7" 
+            "a6d11094-c286-4526-8a4a-6301c01049e7" 
     fi
     #----------------------------------------------------------------------
     local S_FP_WINE_HOME="$HOME/.wine"
@@ -3068,13 +3068,13 @@ func_mmmv_exc_initialize_wine_C_drive_if_needed_t1(){
                 # The if-clause at the next line is to improve error messages.
                 if [ -h "$S_FP_WINE_HOME" ]; then # a broken symlink
                     func_mmmv_assert_folder_exists_t1 "$S_FP_WINE_HOME" \
-                        "2ac2122b-9988-48c9-81a6-72f150f078e7" \
+                        "3529590d-fd4a-40be-9d1a-6301c01049e7" \
                         "$SB_OPTIONAL_BAN_SYMLINKS"
                 fi
             fi
             if [ -h "$S_FP_C" ]; then # a broken symlink
                 func_mmmv_assert_folder_exists_t1 "$S_FP_C" \
-                    "3bf1763e-38ce-4238-83a6-72f150f078e7" \
+                    "d24f9c09-c951-4348-9259-6301c01049e7" \
                     "$SB_OPTIONAL_BAN_SYMLINKS"
             fi
             #--------------------------------------------------------------
@@ -3087,7 +3087,7 @@ func_mmmv_exc_initialize_wine_C_drive_if_needed_t1(){
             fi
             SB_OK_TO_CACHE="t" # domain: {"t","f",""}; default: "" -> "f"
             func_mmmv_assert_GUI_applications_can_be_launched_t1 \
-                "2d95184f-ff1c-4caf-93a6-72f150f078e7" \
+                "10e1e743-bbe3-402c-9e39-6301c01049e7" \
                 "$SB_OK_TO_CACHE" "$SB_DISPLAY_NONERROR_FEEDBACK"
             if [ "$SB_DISPLAY_NONERROR_FEEDBACK" == "t" ]; then
                 echo -e "Creating the \"\e[33m$S_FP_C\e[39m\" and executing the "
@@ -3102,10 +3102,10 @@ func_mmmv_exc_initialize_wine_C_drive_if_needed_t1(){
                 # has been tested to work on both, Linux and FreeBSD. 
             fi
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "1c30545c-0737-496d-93a6-72f150f078e7"
+                "e4a1ab57-6638-44eb-b538-6301c01049e7"
             func_mmmv_wait_and_sync_t1
             func_mmmv_assert_folder_exists_t1 "$S_FP_C" \
-                "288ef25c-26bb-4662-a1a6-72f150f078e7" \
+                "517b5034-9f1b-4796-8858-6301c01049e7" \
                 "$SB_OPTIONAL_BAN_SYMLINKS"
             if [ "$SB_DISPLAY_NONERROR_FEEDBACK" == "t" ]; then
                 echo -e "Creation of \"$S_FP_C\"\e[32m complete\e[39m." ; wait;
@@ -3114,7 +3114,7 @@ func_mmmv_exc_initialize_wine_C_drive_if_needed_t1(){
         else
             #--------------------------------------------------------------
             func_mmmv_assert_folder_exists_t1 "$S_FP_C" \
-                "459a04f1-0cf8-4728-a596-72f150f078e7" \
+                "5ae4e722-263b-46a4-ba58-6301c01049e7" \
                 "$SB_OPTIONAL_BAN_SYMLINKS"
             #--------------------------------------------------------------
         fi
@@ -3129,7 +3129,7 @@ if [ "$S_FP_DIR" == "" ]; then
     echo ""
     echo "The environment variable S_FP_DIR has not been defined."
     echo -e "\e[31mExiting with an error. \e[39m"
-    echo "GUID=='388165c2-7946-4e51-b185-72f150f078e7'"
+    echo "GUID=='f173f398-2e57-4a52-b734-6301c01049e7'"
     echo ""
     if [ "$S_FP_ORIG" != "" ]; then
         func_mmmv_exc_verify_S_FP_ORIG_t1
@@ -3142,53 +3142,73 @@ if [ "$S_FP_ORIG" == "" ]; then
     echo ""
     echo "The environment variable S_FP_ORIG has not been defined."
     echo -e "\e[31mExiting with an error. \e[39m"
-    echo "GUID=='1eacdc4b-dfd1-4a6b-9285-72f150f078e7'"
+    echo "GUID=='17e23922-b557-4c3e-ad34-6301c01049e7'"
     echo ""
     exit 1
 else
     func_mmmv_exc_verify_S_FP_ORIG_t2
 fi
 
-
 #--------------------------------------------------------------------------
 
 S_FP_PARENT_FOLDER="$S_FP_DIR"  # will be overwritten by the 
-func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
+func_mmmv_uncompress_tar_dot_foo_and_enter_t2(){
+    # differs from the func_mmmv_uncompress_tar_dot_foo_and_enter_t1
+    # by supporting Foo.zip files in stead of Foo.tar.zip files.
     #----------------------------------------
     local S_FN_FOLDER_NAME="$1"
-    local S_FILE_EXTENTION_OF_A_COMPRESSED_FILE="$2"
+    local S_FILE_EXTENSION_OF_A_COMPRESSED_FILE="$2"
+    local SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE="$3" # Optional.
+                                                         # Domain: {"t","f","",<unassigned>}.
+                                                         # default=="t" id est         "" -> "t"
+                                                         #              and  <unassigned> -> "t"
+    #----------------------------------------
+    local SB_TAR_WRAPPED="t" # the default
+    if [ "$SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE" != "" ]; then
+        func_mmmv_assert_sbvar_domain_t_f_t1 \
+            "$SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE" \
+            "SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE" \
+            "1272acc2-cf75-4bd2-bd37-6301c01049e7"
+        SB_TAR_WRAPPED="$SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE"
+    fi
     #----------------------------------------
     local SB_COMPRESSION_TYPE_RECOGNIZED="f"
     local S_CMD_NICE_PREFIX="nice -n 5 "
     local S_CMD_UNCOMPRESS="not_set"
+    local S_CMD_UNCOMPRESS_CANDIDATE="not_set"
     local SB_COMPRESSIONLESS_TAR="f"
     #----------------------------------------
     #if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "tar" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "tar" ]; then
             SB_COMPRESSIONLESS_TAR="t"
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
-        else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TAR" ]; then
-                SB_COMPRESSIONLESS_TAR="t"
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
         fi
     #fi
     #----------------------------------------
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "7z" ]; then
+        #------------------------------
+        S_CMD_UNCOMPRESS_CANDIDATE="$S_CMD_NICE_PREFIX plzip --decompress "
+        if [ "$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1" != "" ]; then
+            S_CMD_UNCOMPRESS_CANDIDATE="$S_CMD_UNCOMPRESS_CANDIDATE --threads=$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1 "
+        fi
+        #------------------------------
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "lz" ]; then
+            S_CMD_UNCOMPRESS="$S_CMD_UNCOMPRESS_CANDIDATE "
+            SB_COMPRESSION_TYPE_RECOGNIZED="t"
+        else
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "tlz" ]; then
+                S_CMD_UNCOMPRESS="$S_CMD_UNCOMPRESS_CANDIDATE  "
+                SB_COMPRESSION_TYPE_RECOGNIZED="t"
+            fi
+        fi
+    fi
+    #----------------------------------------
+    if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "7z" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX 7z x " # The "x" is not a typo.
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
         else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "7Z" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX 7z x " # The "x" is not a typo.
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "t7z" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX 7z x " # The "x" is not a typo.
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "T7Z" ]; then
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "t7z" ]; then
                 S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX 7z x " # The "x" is not a typo.
                 SB_COMPRESSION_TYPE_RECOGNIZED="t"
             fi
@@ -3196,19 +3216,11 @@ func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
     fi
     #----------------------------------------
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "xz" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "xz" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unxz "
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
         else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "XZ" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unxz "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "txz" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unxz "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TXZ" ]; then
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "txz" ]; then
                 S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unxz "
                 SB_COMPRESSION_TYPE_RECOGNIZED="t"
             fi
@@ -3216,19 +3228,11 @@ func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
     fi
     #----------------------------------------
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "gz" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "gz" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX gunzip "
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
         else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "GZ" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX gunzip "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "tgz" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX gunzip "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TGZ" ]; then
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "tgz" ]; then
                 S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX gunzip "
                 SB_COMPRESSION_TYPE_RECOGNIZED="t"
             fi
@@ -3236,59 +3240,32 @@ func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
     fi
     #----------------------------------------
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "bz2" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "bz2" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX bunzip2 "
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
         else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "BZ2" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX bunzip2 "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "tbz2" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX bunzip2 "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TBZ2" ]; then
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "tbz2" ]; then
                 S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX bunzip2 "
                 SB_COMPRESSION_TYPE_RECOGNIZED="t"
             fi
         fi
     fi
     #----------------------------------------
+    local SB_MODE_ZIP="f"
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "zip" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "zip" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unzip "
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
-        else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "ZIP" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unzip "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "tzip" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unzip "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TZIP" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unzip "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
+            SB_MODE_ZIP="t"
         fi
     fi
     #----------------------------------------
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "rar" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "rar" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unrar x " # The "x" is not a typo
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
         else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "RAR" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unrar x " # The "x" is not a typo
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "trar" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unrar x " # The "x" is not a typo
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TRAR" ]; then
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "trar" ]; then
                 S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX unrar x " # The "x" is not a typo
                 SB_COMPRESSION_TYPE_RECOGNIZED="t"
             fi
@@ -3296,19 +3273,11 @@ func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
     fi
     #----------------------------------------
     if [ "$SB_COMPRESSION_TYPE_RECOGNIZED" == "f" ]; then
-        if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "xar" ]; then
+        if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "xar" ]; then
             S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX xar -xf "
             SB_COMPRESSION_TYPE_RECOGNIZED="t"
         else
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "XAR" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX xar -xf "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "txar" ]; then
-                S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX xar -xf "
-                SB_COMPRESSION_TYPE_RECOGNIZED="t"
-            fi
-            if [ "$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE" == "TXAR" ]; then
+            if [ "`printf \"$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE\" | tr '[:upper:]' '[:lower:]' `" == "txar" ]; then
                 S_CMD_UNCOMPRESS="$S_CMD_NICE_PREFIX xar -xf "
                 SB_COMPRESSION_TYPE_RECOGNIZED="t"
             fi
@@ -3319,7 +3288,7 @@ func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
         echo ""
         echo "Failed to recognize compression type."
         echo "Aborting script."
-        echo "GUID=='22be3434-6273-405e-8f85-72f150f078e7'"
+        echo "GUID=='1694f2e5-53e9-4e46-9534-6301c01049e7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -3327,38 +3296,70 @@ func_mmmv_uncompress_tar_dot_foo_and_enter_t1(){
     fi
     #----------------------------------------
     func_mmmv_assert_folder_exists_t1 "$S_FP_PARENT_FOLDER" \
-        "c3924814-bca0-49bc-9496-72f150f078e7"
+        "21eeea64-94db-4c7c-b737-6301c01049e7"
     cd $S_FP_PARENT_FOLDER
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "6ad7b122-818f-4cc3-a296-72f150f078e7"
+        "1acf7011-7656-442a-a946-6301c01049e7"
     #----------------------------------------
     local S_FP_NEXT_PARENT_FOLDER="$S_FP_PARENT_FOLDER/$S_FN_FOLDER_NAME"
     local S_TMP_0=".tar"
     local S_FP_TAR="$S_FP_NEXT_PARENT_FOLDER$S_TMP_0"
-    S_TMP_0=".$S_FILE_EXTENTION_OF_A_COMPRESSED_FILE"
+    S_TMP_0=".$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE"
     local S_FP_COMPRESSED="$S_FP_TAR$S_TMP_0"
     #----------------------------------------
-    if [ "$SB_COMPRESSIONLESS_TAR" == "f" ]; then
+    if [ "$SB_TAR_WRAPPED" == "t" ]; then
+        #----------------------------------------
+        if [ "$SB_COMPRESSIONLESS_TAR" == "f" ]; then
+            func_mmmv_assert_file_exists_t1 "$S_FP_COMPRESSED" \
+                "38686093-6ffc-4b40-af26-6301c01049e7"
+            #--------
+            if [ "$SB_MODE_ZIP" == "t" ]; then
+                $S_CMD_NICE_PREFIX  zip --test $S_FP_COMPRESSED 
+                func_mmmv_assert_error_code_zero_t1 "$?" \
+                    "94daf4e4-1137-462d-b256-6301c01049e7"
+            fi
+            #--------
+            $S_CMD_UNCOMPRESS $S_FP_COMPRESSED
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "b01f1a0c-150f-4755-bb45-6301c01049e7"
+            func_mmmv_wait_and_sync_t1
+        fi
+        #----------------------------------------
+        func_mmmv_assert_file_exists_t1 "$S_FP_TAR" \
+            "314ec051-a424-4fed-ad55-6301c01049e7"
+        $S_CMD_NICE_PREFIX tar -xf $S_FP_TAR
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "2a753825-96d0-4e0d-9a25-6301c01049e7"
+        func_mmmv_wait_and_sync_t1
+        #----------------------------------------
+    else
+        #----------------------------------------
+        # The next line
+        S_FP_COMPRESSED="$S_FP_NEXT_PARENT_FOLDER.$S_FILE_EXTENSION_OF_A_COMPRESSED_FILE"
+        # takes to account the different 
+        # cases, like ".zip",".ZIP" and ".tGz", ".TGZ", etc.
+        #----------------------------------------
         func_mmmv_assert_file_exists_t1 "$S_FP_COMPRESSED" \
-            "59d32659-cd0c-49c5-8596-72f150f078e7"
+            "848e33f6-14b3-4839-8634-6301c01049e7"
+        #--------
+        if [ "$SB_MODE_ZIP" == "t" ]; then
+            $S_CMD_NICE_PREFIX  zip --test $S_FP_COMPRESSED 
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "4648d8e5-90e2-4374-ac34-6301c01049e7"
+        fi
+        #--------
         $S_CMD_UNCOMPRESS $S_FP_COMPRESSED
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "ca0ce572-81cb-4987-b386-72f150f078e7"
+            "a3a1a881-a95e-4580-b213-6301c01049e7"
         func_mmmv_wait_and_sync_t1
+        #----------------------------------------
     fi
     #----------------------------------------
-    func_mmmv_assert_file_exists_t1 "$S_FP_TAR" \
-        "cfc90542-4a8c-4f05-8386-72f150f078e7"
-    $S_CMD_NICE_PREFIX tar -xf $S_FP_TAR
-    func_mmmv_assert_error_code_zero_t1 "$?" \
-        "15a04d15-1525-4b4e-ac86-72f150f078e7"
-    func_mmmv_wait_and_sync_t1
-    #----------------------------------------
     func_mmmv_assert_folder_exists_t1 "$S_FP_NEXT_PARENT_FOLDER" \
-        "2031b0d7-6a80-446a-8e76-72f150f078e7"
+        "84fe19fe-a7de-430a-97b3-6301c01049e7"
     S_FP_PARENT_FOLDER="$S_FP_NEXT_PARENT_FOLDER"
     #----------------------------------------
-} # func_mmmv_uncompress_tar_dot_foo_and_enter_t1
+} # func_mmmv_uncompress_tar_dot_foo_and_enter_t2
 
 #--------------------------------------------------------------------------
 
@@ -3366,7 +3367,7 @@ func_delete_folder_of_build_folders(){
     #----------------------------------------------------------------------
     local SB_OPTIONAL_BAN_SYMLINKS="t"
     func_mmmv_assert_folder_exists_t1 "$S_FP_FOLDER_OF_BUILD_FOLDERS" \
-        "19a0bc29-480e-4acc-8276-72f150f078e7" \
+        "4b1b4b71-d767-4528-a223-6301c01049e7" \
         "$SB_OPTIONAL_BAN_SYMLINKS"
     #------------------------------
     local S_FP_DELETABLE="$S_FP_DIR/subject_to_deletion_0_$S_TIMESTAMP"
@@ -3376,7 +3377,7 @@ func_delete_folder_of_build_folders(){
         echo ""
         echo "    S_FP_DELETABLE==\"$S_FP_DELETABLE\""
         echo ""
-        echo "GUID=='8c490822-0167-4d11-b385-72f150f078e7'"
+        echo "GUID=='14a35332-1356-4bf3-9d33-6301c01049e7'"
         echo ""
         #------------------------------
         cd "$S_FP_ORIG"
@@ -3388,7 +3389,7 @@ func_delete_folder_of_build_folders(){
             echo ""
             echo "    S_FP_DELETABLE==\"$S_FP_DELETABLE\""
             echo ""
-            echo "GUID=='1d90c9d9-f404-4a64-a385-72f150f078e7'"
+            echo "GUID=='56ff2b54-870a-4730-a513-6301c01049e7'"
             echo ""
             #------------------------------
             cd "$S_FP_ORIG"
@@ -3400,7 +3401,7 @@ func_delete_folder_of_build_folders(){
     if [ "$S_TMP_0" != "" ]; then # for safety
         mv $S_FP_FOLDER_OF_BUILD_FOLDERS $S_FP_DELETABLE
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "3eedb828-49d5-41b9-b476-72f150f078e7"
+            "54fa7a71-eb4e-4c61-8752-6301c01049e7"
         func_mmmv_wait_and_sync_t1
         rm -fr "$S_FP_DELETABLE" &
     else
@@ -3409,7 +3410,7 @@ func_delete_folder_of_build_folders(){
         echo ""
         echo "    S_FP_FOLDER_OF_BUILD_FOLDERS==\"$S_FP_FOLDER_OF_BUILD_FOLDERS\""
         echo ""
-        echo "GUID=='893f754b-04bf-425f-9185-72f150f078e7'"
+        echo "GUID=='54655a13-40a9-4dd0-8813-6301c01049e7'"
         echo ""
         #------------------------------
         cd "$S_FP_ORIG"
@@ -3423,7 +3424,7 @@ func_delete_folder_of_build_folders(){
 func_first_use_message(){
     echo ""
     echo -e "\e[33mPlease customise this script to Your needs.\e[39m"
-    echo "GUID=='232b98d1-2c2d-4bec-8185-72f150f078e7'"
+    echo "GUID=='2990d361-6e38-4254-b553-6301c01049e7'"
     echo ""
     #------------------------------
     cd "$S_FP_ORIG"
@@ -3502,7 +3503,7 @@ func_display_help_message_and_exit_if_needed(){
         if [ "`echo \"$S_ARGV_0\" | grep -E '^((([-][-]?)?[hH][eE][lL][pP])|([-]?[hH?]))$' `" == "" ]; then
             echo ""
             echo -e "\e[31mUnsupported \e[39mcommand line argument: \"\e[31m$S_ARGV_0\e[39m\""
-            echo "GUID=='3571c746-aa3f-4346-9175-72f150f078e7'"
+            echo "GUID=='5ce97784-b5e1-458e-9523-6301c01049e7'"
             echo "The only command line argument that is supported is \"help\", which"
             echo "does nothing other than display the following message:"
             func_display_help_message
@@ -3531,8 +3532,13 @@ func_initialize_configuration_by_initializing_global_variables(){
     #----------------------------------------------------------------------
     S_FP_FOLDER_OF_BUILD_FOLDERS="$S_FP_DIR/temporary_build_folder"
     S_FP_BUILD_FOLDER="$S_FP_FOLDER_OF_BUILD_FOLDERS/tmp_$S_TIMESTAMP"
-    S_FP_INSTALLATION_FOLDER="`cd $S_FP_DIR/../ ; pwd`/v_1_53_0/bin"
-    S_FP_SRC="$S_FP_DIR/2023_05_19_mmmv_clipboard_text_formatter_t1.tar"
+    S_FP_INSTALLATION_FOLDER="`cd $S_FP_DIR/../ ; pwd`/v_1_53_0"
+    S_FP_INSTALLATION_FOLDER_BIN="$S_FP_INSTALLATION_FOLDER/bin"
+    #----------------------------------------------------------------------
+    S_FN_BASENAME="2023_05_19_mmmv_clipboard_text_formatter_t1"
+    S_COMPRESSION_FILE_EXTENSION="zip"
+    S_FP_SRC="$S_FP_DIR/$S_FN_BASENAME.tar.$S_COMPRESSION_FILE_EXTENSION"
+    #----------------------------------------------------------------------
     S_CMD_PREFIX_NICE="nice -n 4 "
     #----------------------------------------------------------------------
 } # func_initialize_configuration_by_initializing_global_variables
@@ -3546,46 +3552,61 @@ func_main(){
     func_check_for_some_dependencies
     #------------------------------
     func_mmmv_assert_folder_exists_t1 "$S_FP_DIR" \
-        "41c21d55-faa5-44c8-9266-72f150f078e7"
+        "92976c5d-9fc1-4d0a-8b52-6301c01049e7"
     cd $S_FP_DIR
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "d2f83b3b-3b67-4297-8266-72f150f078e7"
+        "54309c53-7cbb-4642-9e42-6301c01049e7"
     #------------------------------
     mkdir -p $S_FP_BUILD_FOLDER
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "6ea7d45e-5a5d-461e-a166-72f150f078e7"
+        "28b2d112-9d44-4e5a-aa31-6301c01049e7"
     func_mmmv_wait_and_sync_t1
     func_mmmv_assert_folder_exists_t1 "$S_FP_BUILD_FOLDER" \
-        "7cc5f847-4b1c-4fcc-a456-72f150f078e7"
+        "3404db15-bf1f-4a09-9141-6301c01049e7"
     cd $S_FP_BUILD_FOLDER
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "2c74f214-bb13-4299-a556-72f150f078e7"
+        "37bd3f11-7759-4581-9130-6301c01049e7"
     #------------------------------
     func_mmmv_assert_file_exists_t1 "$S_FP_SRC" \
-        "6a18145a-2fbf-4088-9446-72f150f078e7"
+        "a6dfafa3-5edc-40b1-8a30-6301c01049e7"
     $S_CMD_PREFIX_NICE cp -f $S_FP_SRC $S_FP_BUILD_FOLDER/
     func_mmmv_wait_and_sync_t1
     #------------------------------
+    local SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE="t"
     S_FP_PARENT_FOLDER="$S_FP_BUILD_FOLDER"
-    func_mmmv_uncompress_tar_dot_foo_and_enter_t1 \
-        "2023_05_19_mmmv_clipboard_text_formatter_t1" "tar"
-    func_mmmv_uncompress_tar_dot_foo_and_enter_t1 \
-        "2023_05_19_newest_source_code_of_par_text_formatter_by_Adam_M_Costello" "xz"
-    func_mmmv_uncompress_tar_dot_foo_and_enter_t1 \
-        "Par-1.53.0" "gz"
+    func_mmmv_uncompress_tar_dot_foo_and_enter_t2 \
+        "$S_FN_BASENAME" "$S_COMPRESSION_FILE_EXTENSION" \
+        "$SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE"
+    #------------------------------
+    func_mmmv_uncompress_tar_dot_foo_and_enter_t2 \
+        "2023_05_19_newest_source_code_of_par_text_formatter_by_Adam_M_Costello" "xz" \
+        "$SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE"
+    func_mmmv_uncompress_tar_dot_foo_and_enter_t2 \
+        "Par-1.53.0" "gz" \
+        "$SB_COMPRESSED_FILE_WRAPS_A_SINGLE_TARFILE"
     #------------------------------
     cd $S_FP_PARENT_FOLDER
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "aa84fa3e-51d5-4cb8-9546-72f150f078e7"
+        "4a5152b1-db05-408a-943f-6301c01049e7"
     cat ./protoMakefile | \
         $S_CMD_GNU_SED -e \
         "s/CFLAGS\ =/CFLAGS = `printf "$CFLAGS"` /g" > ./protoMakefile_custom
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "02f6e870-4bc6-4498-a146-72f150f078e7"
+        "423fbecc-032e-4fc8-852f-6301c01049e7"
     func_mmmv_wait_and_sync_t1
-    $S_CMD_PREFIX_NICE $S_CMD_GNU_MAKE -f ./protoMakefile_custom
-    func_mmmv_assert_error_code_zero_t1 "$?" \
-        "3a9ae92b-8512-41aa-8536-72f150f078e7"
+    #------------------------------
+    if [ "$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1" != "" ]; then
+        $S_CMD_PREFIX_NICE $S_CMD_GNU_MAKE \
+            -j $MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1 \
+            -f ./protoMakefile_custom
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "13b49023-0bb9-4cac-931f-6301c01049e7"
+    else
+        $S_CMD_PREFIX_NICE $S_CMD_GNU_MAKE \
+            -f ./protoMakefile_custom
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "23e330f5-41b7-4450-9d5e-6301c01049e7"
+    fi
     func_mmmv_wait_and_sync_t1
     #------------------------------
     S_FP_PAR_ORIGIN="$S_FP_PARENT_FOLDER/par" 
@@ -3593,27 +3614,55 @@ func_main(){
     #------------------------------
     $S_CMD_PREFIX_NICE $S_FP_TESTPAR_ORIGIN $S_FP_PAR_ORIGIN
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "474b2772-e0fa-45de-8336-72f150f078e7"
+        "50b4b5a2-a6a2-46d1-924e-6301c01049e7"
     #------------------------------
-    mkdir -p $S_FP_INSTALLATION_FOLDER
-    func_mmmv_assert_error_code_zero_t1 "$?" \
-        "eaf25136-54ae-4992-b336-72f150f078e7"
-    func_mmmv_assert_folder_exists_t1 "$S_FP_INSTALLATION_FOLDER" \
-        "86f7a233-fca0-41a3-8526-72f150f078e7"
-    S_FP_PAR_DESTINATION="$S_FP_INSTALLATION_FOLDER/par_text_formatter" 
-    S_FP_TESTPAR_DESTINATION="$S_FP_INSTALLATION_FOLDER/test-par" 
+    local S_TMP_0=""
+    local SB_OPTIONAL_BAN_SYMLINKS="t"
+    if [ -e "$S_FP_INSTALLATION_FOLDER" ]; then
+        S_TMP_0="`echo \"$S_FP_INSTALLATION_FOLDER\" | grep -E '/v_1_53_0$' `"
+        if [ "$S_TMP_0" != "" ]; then # for safety
+            func_mmmv_assert_folder_exists_t1 "$S_FP_INSTALLATION_FOLDER" \
+                "41e51955-4cb0-4fc2-b05d-6301c01049e7" \
+                "$SB_OPTIONAL_BAN_SYMLINKS"
+            rm -fr "$S_FP_INSTALLATION_FOLDER"
+        else
+            echo ""
+            echo -e "\e[31mThis Bash script is flawed \e[39m."
+            echo ""
+            echo "    S_FP_INSTALLATION_FOLDER==\"$S_FP_INSTALLATION_FOLDER\""
+            echo ""
+            echo "GUID=='5c4c3c55-025f-4bd7-9142-6301c01049e7'"
+            echo ""
+            #------------------------------
+            cd "$S_FP_ORIG"
+            exit 1
+        fi
+    fi
+    func_mmmv_create_folder_t1 "$S_FP_INSTALLATION_FOLDER_BIN"
+    #------------------------------
+    local S_FP_PAR_DESTINATION="$S_FP_INSTALLATION_FOLDER_BIN/par_text_formatter" 
+    local S_FP_TESTPAR_DESTINATION="$S_FP_INSTALLATION_FOLDER_BIN/test-par" 
     #------------------------------
     cp -f $S_FP_PAR_ORIGIN $S_FP_PAR_DESTINATION
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "4d9b8852-6f36-44c3-8126-72f150f078e7"
+        "264c2f58-71b4-4430-8aad-6301c01049e7"
     cp -f $S_FP_TESTPAR_ORIGIN $S_FP_TESTPAR_DESTINATION
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "bea395a4-cf46-433f-a326-72f150f078e7"
+        "9527e9b4-2909-4963-a12d-6301c01049e7"
     #------------------------------
     $S_CMD_PREFIX_NICE $S_FP_TESTPAR_DESTINATION $S_FP_PAR_DESTINATION
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "24da1228-ea0d-43a6-a116-72f150f078e7"
+        "1a9b8132-06c6-41e8-b51d-6301c01049e7"
     func_mmmv_wait_and_sync_t1
+    #------------------------------
+    func_mmmv_assert_folder_exists_t1 "$S_FP_INSTALLATION_FOLDER_BIN" \
+        "26ea10e4-93e8-4209-9b5c-6301c01049e7"
+    cd "$S_FP_INSTALLATION_FOLDER_BIN"
+    func_mmmv_assert_error_code_zero_t1 "$?" \
+        "22956424-859f-4db7-af4c-6301c01049e7"
+    ln -s ./par_text_formatter ./par # the upstream name of the binary is "par"
+    func_mmmv_assert_error_code_zero_t1 "$?" \
+        "11ef06bf-fff9-4c98-842c-6301c01049e7"
     #------------------------------
     func_delete_folder_of_build_folders
     #------------------------------
@@ -3635,5 +3684,5 @@ func_main
 cd "$S_FP_ORIG"
 exit 0
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="5e525d31-1df8-4831-8116-72f150f078e7"
+# S_VERSION_OF_THIS_FILE="5cc11214-17e9-4738-b53c-6301c01049e7"
 #==========================================================================
