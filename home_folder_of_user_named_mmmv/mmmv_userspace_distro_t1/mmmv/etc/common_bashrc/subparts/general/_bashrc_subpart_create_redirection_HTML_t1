@@ -57,7 +57,7 @@ export MMMV_CRE_HTML_REDIRECT_T1_ALIAS_CMD="\
         echo \"\" ;\
         echo \"Retaining the old version of the ./index.html by\" ;\
         echo \"not overwriting it.\" ;\
-        echo \"GUID=='10c05b65-8800-40d8-aeb4-c2a2805096e7'\" ;\
+        echo \"GUID=='7e1a9b22-214e-4667-91dd-717141b139e7'\" ;\
         echo \"\" ;\
     fi "
 alias mmmv_cre_HTML_redirect_t1="$MMMV_CRE_HTML_REDIRECT_T1_ALIAS_CMD"
@@ -76,7 +76,7 @@ export MMMV_CRE_HTML_REDIRECT_WITH_COMMENTS_TXT_ALIAS_SUBPART_01="\
             echo \"\"                >> ./COMMENTS.txt ;\
             echo \"Some wget parameters:\"  >> ./COMMENTS.txt ;\
             echo \"\"                >> ./COMMENTS.txt ;\
-            echo \"    --wait=1 --reject-regex 'http(s)?:[/]+.+(((lwn|osdn|sourceforge|sf)[.]net)|((bittube)[.]tv)|((lwn|osdn|sourceforge|sf)[.]net)|((nicovideo)[.]jp)|((gitgud)[.]io)|((npmjs|1fichier|cygwin|gitlab|facebook|youtube|twitter|tiktok|instagram|sciencedirect|elsevier|springer|google|googletagmanager|gmail|lijit|bing|yahoo|duckduckgo|awesomeopensource|odysee|bitchute|dailymotion|schooltube|utreon|semanticscholar|merriam-webster|thefreedictionary|urbandictionary|oed|stackexchange|microsoft|fosshub|github|gitee|chiselapp|githuman)[.]com)|((openhab|openhub|archive|arxiv|wikipedia|ieee|acm|gnu|fsf|sepiasearch|joinpeertube|creativecommons|bitbucket|apache|eclipse|opencores|librecores|debian|framagit|dotsrc|icculus|coin-or|sourceware|rubygems)[.]org)|(gap-system[.]org)|(uwaterloo[.]ca))([/].*)?' --accept-regex 'http(s)?:[/]+((((www|fonts)[.]gstatic[.]com)|(fonts[.]googleapis[.]com)|(cdn[.]jsdelivr[.]net)|(code[.]jquery[.]com))|(ajax[.]googleapis.com[/]ajax[/]libs)|(((www|cdn)[.])?openpowerfoundation[.]org))([/].*)?' \" >> ./COMMENTS.txt ;\
+            echo \"    --wait=1 --reject-regex 'http(s)?:[/]+.+(((lwn|osdn|sourceforge|sf)[.]net)|((bittube)[.]tv)|((lwn|osdn|sourceforge|sf)[.]net)|((nicovideo)[.]jp)|((gitgud)[.]io)|((npmjs|1fichier|cygwin|gitlab|facebook|youtube|twitter|tiktok|instagram|sciencedirect|elsevier|springer|google|googletagmanager|gmail|lijit|bing|yahoo|duckduckgo|awesomeopensource|odysee|bitchute|dailymotion|schooltube|utreon|semanticscholar|merriam-webster|thefreedictionary|urbandictionary|oed|stackexchange|microsoft|fosshub|github|gitee|chiselapp|githuman)[.]com)|((openhab|openhub|archive|arxiv|wikipedia|ieee|acm|gnu|fsf|sepiasearch|joinpeertube|creativecommons|bitbucket|apache|eclipse|opencores|librecores|debian|framagit|dotsrc|icculus|coin-or|sourceware|rubygems)[.]org)|(gap-system[.]org)|(uwaterloo[.]ca))([/].*)?' --accept-regex 'http(s)?:[/]+((((www|fonts)[.]gstatic[.]com)|(fonts[.]googleapis[.]com)|(cdn[.]jsdelivr[.]net)|(code[.]jquery[.]com))|(ajax[.]googleapis.com[/]ajax[/]libs)|(cdnjs[.]cloudflare[.]com[/]ajax[/]libs)|(((www|cdn)[.])?openpowerfoundation[.]org))([/].*)?' \" >> ./COMMENTS.txt ;\
         fi; \
         echo \"\"                    >> ./COMMENTS.txt ;\
         sync ; vim ./COMMENTS.txt ;\
@@ -87,7 +87,7 @@ export MMMV_CRE_HTML_REDIRECT_WITH_COMMENTS_TXT_ALIAS_SUBPART_01="\
         echo \"    \`pwd\`\"; \
         echo \"\"; \
         echo \"Retaining the old version of the ./COMMENTS.txt . \"; \
-        echo \"GUID=='2edeac72-2c9f-489d-b7b4-c2a2805096e7'\"; \
+        echo \"GUID=='3d46525d-c87b-43cb-95dd-717141b139e7'\"; \
         echo \"\"; \
     fi "
 
@@ -101,7 +101,7 @@ else
     echo "wget could not be found from PATH."
     echo "Skipping the declaraton of the alias "
     echo "\"mmmv_cre_HTML_redirect_COMMENTS_txt_wget_t1\"."
-    echo "GUID=='1626c15b-cff0-4769-95b4-c2a2805096e7'"
+    echo "GUID=='2ae0601a-72ec-4dec-a5dd-717141b139e7'"
     echo ""
 fi
 
@@ -115,11 +115,10 @@ else
     echo "httrack could not be found from PATH. "
     echo "Skipping the declaraton of the alias "
     echo "\"mmmv_cre_HTML_redirect_COMMENTS_txt_httrack_t1\"."
-    echo "GUID=='55382f5e-a45e-473a-91b4-c2a2805096e7'"
+    echo "GUID=='342eae5c-33e3-43b3-a1dd-717141b139e7'"
     echo ""
 fi
 
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="f6f52939-a36a-4f59-a4b4-c2a2805096e7"
 #==========================================================================
-
+# S_VERSION_OF_THIS_FILE="5faa0f9b-6f14-4759-93dd-717141b139e7"
+#==========================================================================

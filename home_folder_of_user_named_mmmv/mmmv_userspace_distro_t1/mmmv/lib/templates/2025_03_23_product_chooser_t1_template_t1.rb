@@ -92,7 +92,7 @@ rescue Exception => e
       end # if
    end # if
    puts("Exiting without doing anything.")
-   puts("GUID=='15b03229-be4d-437c-9052-80f2707139e7'")
+   puts("GUID=='90fab414-1274-4f77-81fa-7331213049e7'")
    puts("")
    exit 1
 end # rescue
@@ -127,7 +127,7 @@ class Product_selector_implementation
          if s_0.size != s_gem_name.size
             kibuvits_krl171bt4_throw("\nThe s_gem_name(==\""+s_gem_name+"\") contained \n"+
             "spaces or tabulation characters or linebreaks.\n"+
-            "GUID='856111eb-fa1b-46d7-8242-80f2707139e7'")
+            "GUID='ecbc5042-da23-4e10-83fa-7331213049e7'")
          end # if
       end # if
       begin
@@ -168,7 +168,7 @@ class Product_selector_implementation
          end # if
          puts("")
          puts("Exiting without doing anything.")
-         puts("GUID=='5d230cf1-69f7-4bf0-8e42-80f2707139e7'")
+         puts("GUID=='2fd6ddb6-ada6-4cfd-94fa-7331213049e7'")
          puts s_optional_error_message_suffix if s_optional_error_message_suffix!= nil
          puts("")
          exit 1
@@ -226,13 +226,13 @@ class Product_selector_implementation
          bn=binding()
          kibuvits_krl171bt4_typecheck(bn,Array,ar_products)
          kibuvits_krl171bt4_typecheck_ar_content(bn,Hash,ar_products,
-         "GUID=='40a4c593-6a39-4de9-8622-80f2707139e7'")
+         "GUID=='e2064aee-f5c5-488c-a3fa-7331213049e7'")
       end # if
       #---------------
       if !defined? Gnuplot
          s_gem_name="gnuplot"
          assert_require_t1(s_gem_name,
-         "GUID=='33f2a2d2-786f-47dd-a552-80f2707139e7'")
+         "GUID=='12acae41-4e25-4159-82fa-7331213049e7'")
       end # if
       #---------------
       ar_products.sort!{|a,b| a["fd_package_price"]<=>b["fd_package_price"]}
@@ -260,7 +260,7 @@ class Product_selector_implementation
       #if !defined? StringIO
       #   s_gem_name="stringio"
       #   assert_require_t1(s_gem_name,
-      #   "GUID=='17026d74-744d-4c90-ac52-80f2707139e7'")
+      #   "GUID=='5234dd54-4cb4-42c1-b7fa-7331213049e7'")
       #end # if
       # With Ruby version 3.4.1 on AMD64 Linux the idea
       #
@@ -325,10 +325,10 @@ class Product_selector_implementation
          kibuvits_krl171bt4_typecheck(bn,String,s_product_id)
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, fd_package_price,
-         "GUID=='3cd474c4-ffc6-4a61-8f32-80f2707139e7'")
+         "GUID=='2f9659f4-4a93-4703-adfa-7331213049e7'")
          kibuvits_krl171bt4_assert_is_smaller_than_or_equal_to(bn,
          0, fd_quantity_in_package,
-         "GUID=='d4a2536f-ad13-4b6d-9942-80f2707139e7'")
+         "GUID=='8ae69b58-bdb5-4247-94fa-7331213049e7'")
       end # if
       ht_product=Hash.new
       fd_p=fd_package_price.to_r
@@ -439,7 +439,7 @@ class Product_selector_implementation
             rescue Exception => e
                puts("")
                puts("\e[31mFailed to display plot\e[39m.")
-               puts("GUID=='4c1e785a-a8d2-45f7-92e2-80f2707139e7'")
+               puts("GUID=='3e5397b4-5592-4dca-b5fa-7331213049e7'")
                puts("")
                exit 1
             end # rescue
@@ -454,5 +454,5 @@ end # class Product_selector_implementation
 Product_selector_implementation.new.run()
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="2b22c8a6-fbf8-428b-9452-80f2707139e7"
+# S_VERSION_OF_THIS_FILE="44994373-55d0-4f2f-91fa-7331213049e7"
 #==========================================================================

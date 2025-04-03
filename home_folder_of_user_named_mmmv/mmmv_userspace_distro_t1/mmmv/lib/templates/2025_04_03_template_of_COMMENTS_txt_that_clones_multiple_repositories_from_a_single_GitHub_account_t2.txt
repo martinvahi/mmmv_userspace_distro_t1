@@ -1,0 +1,266 @@
+#!/usr/bin/env bash 
+#==========================================================================
+# Initial author of this file: INCOMPLETE
+# This file is in public domain.
+#
+# Initial author of the template of this file: Martin.Vahi@softf1.com
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+#==========================================================================
+# The 
+#
+#     ./the_clones/vhdl2doc.zip
+#     ./the_clones/usb3_pipe.zip
+#     ./the_clones/tapcfg.zip
+#     ./the_clones/thunderscope.zip
+# 
+# have been created by executing 
+#
+    #----------------------------------------------------------------------
+    S_GITHUB_USERNAME="enjoy-digital"
+    #----------------------------------------------------------------------
+    S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    S_FP_BASH="$S_FP_DIR/`basename ${BASH_SOURCE[0]}`"
+    S_FN_CLONES="the_clones"
+    S_FP_CLONES="$S_FP_DIR/$S_FN_CLONES"
+    #----------------------------------------------------------------------
+    func_mmmv_wait_and_sync_t1(){
+        wait # for background processes started by this Bash script to exit/finish
+        sync # network drives, USB-sticks, etc.
+        wait # for sync
+    } # func_mmmv_wait_and_sync_t1
+    #----------------------------------------------------------------------
+    func_mmmv_assert_error_code_zero_t1(){
+        local S_ERR_CODE="$1" # the "$?"
+        local S_GUID_CANDIDATE="$2"
+        #----------------------------------------------------------------------
+        if [ "$S_GUID_CANDIDATE" == "" ]; then
+            echo ""
+            echo -e "\e[31mThe Bash code that calls this function is flawed. \e[39m"
+            echo ""
+            echo "    S_GUID_CANDIDATE==\"\""
+            echo ""
+            echo "but it is expected to be a GUID."
+            echo "Aborting script."
+            echo "GUID=='f1961d72-7f8e-48bf-b266-d281303049e7'"
+            echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+            echo ""
+            #--------
+            cd "$S_FP_ORIG"
+            exit 1
+        fi
+        #------------------------------
+        # If the "$?" were evaluated in this function, 
+        # then it would be "0" even, if it is
+        # something else at the calling code.
+        if [ "$S_ERR_CODE" != "0" ];then
+            echo ""
+            echo "Something went wrong. Error code: $S_ERR_CODE"
+            echo -e "\e[31mAborting script. \e[39m"
+            echo "GUID=='41dfc976-af4d-466b-8266-d281303049e7'"
+            echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+            echo ""
+            #--------
+            cd "$S_FP_ORIG"
+            exit 1
+        fi
+        #------------------------------
+    } # func_mmmv_assert_error_code_zero_t1
+    #----------------------------------------------------------------------
+    func_mmmv_exit_if_not_on_path_t2b() { # S_COMMAND_NAME
+        local S_COMMAND_NAME="$1"
+        #----------------------------------------------------------------------
+        local S_LOCAL_VARIABLE="`which $S_COMMAND_NAME 2> /dev/null`"
+        if [ "$S_LOCAL_VARIABLE" == "" ]; then
+            echo ""
+            echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
+            echo "The execution of this Bash script is aborted."
+            echo "GUID=='170283d6-9784-4809-b466-d281303049e7'"
+            echo ""
+            cd "$S_FP_ORIG"
+            exit 1;
+        fi
+    } # func_mmmv_exit_if_not_on_path_t2b
+    #----------------------------------------------------------------------
+    func_clone_a_single_repository_from_GitHub(){
+        local S_GITHUB_USERNAME="$1"
+        local S_PROJECTNAME="$2"
+        #------------------------------------------------------------------
+        local S_LC_DOTZIP=".zip"
+        local S_LC_WHOAMI="`whoami`"
+        local S_FP_HOME="/home/$S_LC_WHOAMI" # safer than $HOME
+        local S_TMP_0="42"
+        local S_CMD_NICE_FAST="nice -n 4 "
+        local S_CMD_NICE_SLOW="nice -n 18 "
+        local S_FP_ZIPFILE="$S_FP_CLONES/$S_PROJECTNAME$S_LC_DOTZIP"
+        #-----------------------------------------
+        if [ ! -e "$S_FP_ZIPFILE" ]; then
+            cd $S_FP_CLONES
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "2130b331-018d-4bec-a366-d281303049e7"
+            $S_CMD_NICE_FAST git clone --recursive https://github.com/$S_GITHUB_USERNAME/$S_PROJECTNAME.git
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "3135e848-5910-4d56-8266-d281303049e7"
+            func_mmmv_wait_and_sync_t1
+            cd $S_FP_CLONES/$S_PROJECTNAME
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "36a4dd53-cf94-45be-8d66-d281303049e7"
+            # The next line 
+            $S_CMD_NICE_SLOW find . -name '*.git' | grep -E '[.]git$' | xargs rm -fr  
+            # handles also the .git folders of 
+            # git repository submodules. The grep is 
+            # just for some extra safety.
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "dc9e8b1f-ee3d-4e89-b466-d281303049e7"
+            func_mmmv_wait_and_sync_t1
+            cd ../ 
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "4cf0ecf3-c3e4-4ecb-a566-d281303049e7"
+            #---------------------------------
+            $S_CMD_NICE_SLOW zip -r ./$S_PROJECTNAME$S_LC_DOTZIP ./$S_PROJECTNAME
+            func_mmmv_assert_error_code_zero_t1 "$?" \
+                "3258e277-980d-4e5f-a366-d281303049e7"
+            func_mmmv_wait_and_sync_t1
+            S_TMP_0="$S_FP_CLONES/$S_PROJECTNAME"
+            if [ "$S_TMP_0" != "$S_FP_HOME" ]; then
+                $S_CMD_NICE_SLOW rm -fr $S_TMP_0
+                func_mmmv_assert_error_code_zero_t1 "$?" \
+                    "91fb2714-982c-4489-9566-d281303049e7"
+                func_mmmv_wait_and_sync_t1
+            else
+                echo ""
+                echo -e "\e[31mThis Bash code is flawed\e[39m."
+                echo ""
+                echo "    S_TMP_0==$S_TMP_0"
+                echo ""
+                echo "Aborting script."
+                echo "GUID=='e5d0cf43-a436-4c8c-b566-d281303049e7'"
+                echo ""
+                exit 1
+            fi
+        else
+            echo ""
+            if [ -d "$S_FP_ZIPFILE" ]; then
+                if [ -h "$S_FP_ZIPFILE" ]; then
+                    echo -e "Symlink to a folder"
+                else
+                    echo -e "Folder"
+                fi
+            else
+                if [ -h "$S_FP_ZIPFILE" ]; then
+                    echo -e "Symlink to a file"
+                else
+                    echo -e "File"
+                fi
+            fi
+            echo -e "    \e[33m$S_FP_ZIPFILE\e[39m"
+            echo -e "\e[31malready exists\e[39m."
+            echo "GUID=='1ab4965f-1975-4dd1-a366-d281303049e7'"
+            echo ""
+            exit 1
+        fi
+        #------------------------------------------------------------------
+    } # func_clone_a_single_repository_from_GitHub
+    #----------------------------------------------------------------------
+    func_update_script_running_timestamp(){
+        #------------------------------------------------------------------
+        cd $S_FP_DIR
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "4af30689-5316-4bf1-9366-d281303049e7"
+        local S_TMP_0="_"
+        local S_TMP_1="_old_$RANDOM$S_TMP_0$RANDOM$S_TMP_0$RANDOM$S_TMP_0$RANDOM"
+        local S_FP_THISSCRIPT_OLD="$S_FP_BASH$S_TMP_1"
+        S_TMP_1="_new_$RANDOM$S_TMP_0$RANDOM$S_TMP_0$RANDOM$S_TMP_0$RANDOM"
+        local S_FP_THISSCRIPT_NEW="$S_FP_BASH$S_TMP_1"
+        #------------------------------------------------------------------
+        local S_0="on `date | tr -d '\n' `" 
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "a582b945-a7f7-4a74-a566-d281303049e7"
+        cat $S_FP_BASH | \
+            $S_CMD_GNU_SED -e "s/[#][[:blank:]]on.*\$/# $S_0/g" > $S_FP_THISSCRIPT_NEW
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "d3954f32-7e03-4341-8366-d281303049e7"
+        func_mmmv_wait_and_sync_t1
+        rm $S_FP_BASH 
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "5f68b24d-9802-49c1-b166-d281303049e7"
+        func_mmmv_wait_and_sync_t1
+        mv $S_FP_THISSCRIPT_NEW  $S_FP_BASH
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "14eaf1e3-eda0-42c4-8466-d281303049e7"
+        func_mmmv_wait_and_sync_t1
+        chmod 0700 $S_FP_BASH
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "2bfc4787-886f-42c8-b366-d281303049e7"
+        func_mmmv_wait_and_sync_t1
+        #------------------------------------------------------------------
+    } # func_update_script_running_timestamp
+    #----------------------------------------------------------------------
+    func_extract_list_and_clone_them(){
+        #------------------------------------------------------------------
+        mkdir -p $S_FP_CLONES
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "8ea8ede4-dc4d-4a53-9466-d281303049e7"
+        #-----------------------------------------
+        local S_0="42"
+        #-----------------------------------------
+        S_0="`cat "$S_FP_BASH" |  \
+            grep -E '^[#] {5}[.][/]' |  \
+            $S_CMD_GNU_SED -e 's/[.][zZ][iI][pP][[:blank:]]*$//g' | \
+            $S_CMD_GNU_SED -e 's/^[^\/]\+[\/]'$S_FN_CLONES'[\/]\+/func_clone_a_single_repository_from_GitHub \"'$S_GITHUB_USERNAME'\" \"/g' | \
+            $S_CMD_GNU_SED -e 's/\$/\" ; /g' | \
+            tr -d '\n' `"
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "46a22dd2-9e70-4282-9466-d281303049e7"
+        eval "$S_0"
+        #------------------------------------------------------------------
+        func_update_script_running_timestamp
+        chmod -f -R 0700 $S_FP_CLONES
+        func_mmmv_assert_error_code_zero_t1 "$?" \
+            "b17a3962-bf07-4bfe-a466-d281303049e7"
+        func_mmmv_wait_and_sync_t1
+        #------------------------------------------------------------------
+        echo -e ""
+        echo -e "\e[32mCloning and ZIPing complete\e[39m."
+        echo -e "Thank You for using this script."
+        echo "GUID=='136354e3-0fa7-426a-ba66-d281303049e7'"
+        echo ""
+        #------------------------------------------------------------------
+    } # func_extract_list_and_clone_them 
+    #----------------------------------------------------------------------
+    func_global_constructor(){
+        func_mmmv_exit_if_not_on_path_t2b "cat"
+        func_mmmv_exit_if_not_on_path_t2b "date"
+        func_mmmv_exit_if_not_on_path_t2b "find"
+        func_mmmv_exit_if_not_on_path_t2b "git"
+        func_mmmv_exit_if_not_on_path_t2b "grep"
+        func_mmmv_exit_if_not_on_path_t2b "sed"
+        func_mmmv_exit_if_not_on_path_t2b "tr"
+        func_mmmv_exit_if_not_on_path_t2b "xargs"
+        func_mmmv_exit_if_not_on_path_t2b "zip"
+        if [ "`uname -a | grep -i 'Linux' `" != '' ]; then 
+                S_CMD_GNU_SED="sed" 
+        else
+            if [ "`uname -a | grep -i 'BSD' `" != '' ]; then 
+                S_CMD_GNU_SED="gsed" 
+            else
+                echo -e ""
+                echo -e "This Bash script"
+                echo -e "\e[31mhas not been designed for this operating system\e[39m."
+                echo "Aborting script."
+                echo "GUID=='49ccc342-190e-40a1-9566-d281303049e7'"
+                echo ""
+                exit 1
+            fi 
+        fi 
+        func_mmmv_exit_if_not_on_path_t2b "$S_CMD_GNU_SED"
+    } # func_global_constructor
+    #----------------------------------------------------------------------
+    func_global_constructor
+    func_extract_list_and_clone_them 
+
+# on Thu Apr  3 03:13:26 EEST 2025
+
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="6d147949-877b-4f3e-a166-d281303049e7"
+#==========================================================================
