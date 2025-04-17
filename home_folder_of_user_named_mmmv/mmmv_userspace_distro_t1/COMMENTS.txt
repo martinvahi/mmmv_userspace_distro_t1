@@ -77,17 +77,22 @@ by adding a modified/updated version of
     export MMMV_USERSPACE_DISTRO_T1_HOME="<a path to the folder where this COMMENTS.txt resides that You are cuurently reading>
     # Usually the 
     #     MMMV_USERSPACE_DISTRO_T1_HOME="/home/mmmv/mmmv_userspace_distro_t1"
-    source "$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
 
+    MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
+
+    if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then 
+        if [ ! -d "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then 
+            alias mmmv_environment="SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT='t' ; source \"$MMMV_FP_COMMON_BASHRC_MAIN\" ; "
+        fi
+    fi
     #------machine--instance--specific--section--end-------
-
 
 to their 
 
     ~/.bashrc
 
-The inclusion ("source") line can be added to the end of the ~/.bashrc
-automatically by executing 
+The Bash alias with the inclusion ("source") line can be added to the
+end of the ~/.bashrc automatically by executing
 
     ./mmmv/bin/mmmv_admin_init_bashrc_mmmv_t1.bash
 
@@ -126,6 +131,15 @@ and then executing
 
    $MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/lib/mmmv_devel_tools/2015_01_22_mmmv_devel_tools_without_JumpGUID_and_IDE_integration_v_02_with_UpGUID_bugfix/src/mmmv_devel_tools/GUID_trace/src/UpGUID/src/upguid  -f ./_bashrc_optional_extra_00.bash
    chmod 0700 ./_bashrc_optional_extra_00.bash
+
+The optionally present files 
+
+    $HOME/m_local/etc/_bashrc_optional_extra_01
+    $HOME/m_local/etc/_bashrc_optional_extra_01.bash
+
+are included/"sourced" as subparts of the 
+
+    $MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash
 
 
 ---------------------------------------------------------------------------
@@ -301,7 +315,7 @@ probabilistically close to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "46200081-426e-411c-a826-c110509039e7"
+All quoted GUIDs like "11b7481f-f653-47d1-a122-600231c049e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -642,5 +656,5 @@ shoddy compromise, this list here is better than nothing.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="95b07365-015b-4396-8636-c110509039e7"
+# S_VERSION_OF_THIS_FILE="15603830-c00c-407c-8522-600231c049e7"
 ===========================================================================

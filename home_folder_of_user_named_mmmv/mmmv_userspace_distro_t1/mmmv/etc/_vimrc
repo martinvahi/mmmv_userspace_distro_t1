@@ -608,7 +608,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='43317818-f10f-4360-a85b-00b341e039e7'"
+:                throw "The vimscript needs to be improved. GUID=='1199391d-d6db-45f7-9eae-a0f1a0f049e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -2046,7 +2046,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='15e5f659-b526-407d-811b-00b341e039e7'"
+:        throw "The vimscript is flawed. GUID=='4410b26c-5476-4ec8-8a1e-a0f1a0f049e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2259,6 +2259,20 @@
 :    'a,'b s/`/\\`/ge
 :    'a,'b s/\$/\\$/ge
 :    'a,'b s/"/\\"/ge
+:"
+:"   If a file has about 3k-lines and there is an effort to process
+:"   the whole file, then Vim MIGHT segfault with this function. Bash
+:"   testlines for GNU sed based version:
+:"
+:"       printf '\na \\ b \n' | sed -e 's/[\\]/\\\\/g'
+:"       printf '\na `  b \n' | sed -e 's/[`]/\\`/g'
+:"       printf '\na $  b \n' | sed -e 's/[$]/\\$/g'
+:"       printf '\na "  b \n' | sed -e 's/["]/\\"/g'
+:"
+:"   All in one, where the order of the GNU sed calls is important:
+:"
+:"       sed -e 's/[\\]/\\\\/g' | sed -e 's/[`]/\\`/g' | sed -e 's/[$]/\\$/g' | sed -e 's/["]/\\"/g'
+:"
 :endfun "MV_escape_a_to_b_doublequoted_Bash_string_t1
 :"-------------------------------------------------------------------------
 :fun! MV_unescape_a_to_b_doublequoted_Bash_string_t1()
@@ -2267,6 +2281,20 @@
 :    'a,'b s/\\\$/$/ge
 :    'a,'b s/\\`/`/ge
 :    'a,'b s/\\\\/\\/ge 
+:"
+:"   If a file has about 3k-lines and there is an effort to process
+:"   the whole file, then Vim MIGHT segfault with this function. Bash
+:"   testlines for GNU sed based version:
+:"
+:"       printf '\na \\"  b \n' | sed -e 's/[\\]["]/"/g'
+:"       printf '\na \\$  b \n' | sed -e 's/[\\][$]/$/g'
+:"       printf '\na \\`  b \n' | sed -e 's/[\\][`]/`/g'
+:"       printf '\na \\\\ b \n' | sed -e 's/[\\][\\]/\\/g'
+:"
+:"   All in one, where the order of sed calls is important:
+:"
+:"       sed -e 's/[\\]["]/"/g' | sed -e 's/[\\][$]/$/g' | sed -e 's/[\\][`]/`/g' | sed -e 's/[\\][\\]/\\/g'
+:"
 :endfun "MV_unescape_a_to_b_doublequoted_Bash_string_t1
 :"-------------------------------------------------------------------------
 :fun! MV_escape_a_to_b_singlequoted_Ruby_string_t1()
@@ -2303,11 +2331,25 @@
 :"   
 :"   ----------------------------------------
 :    'a,'b s/'/'"'"'/g
+:"   
+:"   If a file has about 3k-lines and there is an effort to process
+:"   the whole file, then Vim MIGHT segfault with this function. Bash
+:"   testlines for GNU sed based version:
+:"   
+:"       echo "a ' b " | sed -e 's/['"'"']/"'"'"'"/g'   
+:"   
 :endfun "MV_escape_a_to_b_singlequoted_Bash_string_t1
 :"-------------------------------------------------------------------------
 :fun! MV_unescape_a_to_b_singlequoted_Bash_string_t1()
 :"   is a reverse of the MV_escape_a_to_b_singlequoted_Bash_string_t1
 :    'a,'b s/'"'"'/'/g
+:"   
+:"   If a file has about 3k-lines and there is an effort to process
+:"   the whole file, then Vim MIGHT segfault with this function. Bash
+:"   testlines for GNU sed based version:
+:"   
+:"       echo 'a "'"'"'" b ' | sed -e 's/["]'"[']"'["]/'"'"'/g'
+:"   
 :endfun "MV_unescape_a_to_b_singlequoted_Bash_string_t1
 :"-------------------------------------------------------------------------
 :fun! MV_sort_a_to_b_alphabetically_t1()
@@ -2418,10 +2460,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='13decd06-43a7-43ca-8f1b-00b341e039e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='2c7e3a91-4336-4e26-9a3e-a0f1a0f049e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='1929b404-c6f2-43b7-803b-00b341e039e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='8d591b51-09c4-453b-bf6e-a0f1a0f049e7'"
 :                en
 :            en
 :           "---------------
@@ -2829,5 +2871,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="d2d3b754-7d09-40fd-ba2b-00b341e039e7"
+:" S_VERSION_OF_THIS_FILE="4fdac693-9f3c-4ed8-a94e-a0f1a0f049e7"
 :"=========================================================================
