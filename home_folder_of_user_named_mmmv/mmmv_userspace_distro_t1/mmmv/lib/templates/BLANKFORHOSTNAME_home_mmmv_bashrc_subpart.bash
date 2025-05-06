@@ -26,7 +26,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE . \e[39m"
-    echo "GUID=='b040511e-254c-41cf-8eb4-f081301039e7'"
+    echo "GUID=='f80b3045-c595-4e04-a556-8240901059e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -39,13 +39,46 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
     # S_FP_BASHFILE="/some/custom/foo.bash"
     # SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # domain: {"","t","f"}
     # func_mmmv_include_bashfile_if_possible_t2 "$S_FP_BASHFILE" \
-    #     "3aab41d1-4231-400b-8534-f081301039e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
+    #     "c5501f46-10bb-42a9-8156-8240901059e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
     #----------------------------------------------------------------------
 #    S_TMP_PRINTERNAME="Martini_OKI_ML5520_maatriksprinter"
 #    alias mmmv_print_OKI_ML5520_maatriksprinter="lp -d $S_TMP_PRINTERNAME " # name of the file comes here
     #----------------------------------------------------------------------
+    S_FP_0="/opt/custom_mount_points/RAM_30MiB" # not stored to general environment
+                                                # variable to avoid a series of
+                                                # possible security issues.
+    if [ -e "$S_FP_0" ]; then
+        if [ -d "$S_FP_0" ]; then
+            if [ ! -h "$S_FP_0" ]; then
+                alias mmmv_go_folder_RAM_partition_t1="cd $S_FP_0 "
+                alias mmmv_go_RAM_partition_t1="cd $S_FP_0 "
+            else
+                if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                    echo ""
+                    echo -e "Please fix the\e[31m issue\e[39m near GUID "
+                    echo "    '30d51264-a480-44fe-9b56-8240901059e7' "
+                    echo ""
+                fi
+            fi
+        else
+            if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+                echo ""
+                echo -e "Please fix the\e[31m issue\e[39m near GUID "
+                echo "    '1d16285b-59fa-4866-a156-8240901059e7' "
+                echo ""
+            fi
+        fi
+    else
+        if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
+            echo ""
+            echo -e "Please fix the\e[31m issue\e[39m near GUID "
+            echo "    '70f4ae21-018a-4e51-9356-8240901059e7' "
+            echo ""
+        fi
+    fi
+    #----------------------------------------------------------------------
     MMMV_USERSPACE_DISTRO_T1_HOSTNAME_SPECIFIC_INITIALISATIONS_TIMESTAMP="$S_TIMESTAMP"
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="0204121e-c30e-4323-8334-f081301039e7"
+# S_VERSION_OF_THIS_FILE="227ecb34-a9dc-449b-b456-8240901059e7"
 #==========================================================================

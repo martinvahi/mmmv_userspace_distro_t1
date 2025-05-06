@@ -608,7 +608,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='1199391d-d6db-45f7-9eae-a0f1a0f049e7'"
+:                throw "The vimscript needs to be improved. GUID=='a082ff85-b193-4361-9af4-e050504059e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -1206,9 +1206,23 @@
 :"-------------------------------------------------------------------------
 :fun! MV_dbeautify_cmd()
 :    mark P
-:        %!  /usr/bin/uncrustify -q -c /home/zornilemma/m_local/bin_p/uncrustify/paigaldatult/konfifailid/d.cfg -l d 
+:        %!  uncrustify -q -c /home/mmmv/m_local/etc/uncrustify.cfg -l d 
+:"       The uncrustify is a C, C++, ObjectiveC, C#, D, Java,
+:"       Pawn and VALA source code formatter.
 :    'P
 :endfun "MV_dbeautify_cmd
+:"-------------------------------------------------------------------------
+:fun! MV_remove_spacestabs_from_line_ends_t1()
+:    mark P
+:    let copypaste_tmp1=@@
+:"       Adds a space to the end of the 1. line 
+:"       to avoid 'pattern not found' message.
+:        let @@=" "
+:        normal gg$p
+:        %  s/\s\+$//g
+:    let @@=copypaste_tmp1
+:    'P
+:endfun "MV_remove_spacestabs_from_line_ends_t1
 :"-------------------------------------------------------------------------
 :fun! MV_exec_commandline_application_that_edits_the_currently_open_file(s_shell_cmd_and_args)
 :    let s_shell_cmd_and_args=a:s_shell_cmd_and_args
@@ -1219,8 +1233,14 @@
 :       let @p=x
 :       set autoread
 :       w
-:"       let command_string=s_shell_cmd_and_args." ".@%
-:       let command_string=s_shell_cmd_and_args." ".@%." ; chmod 0755 ".@%
+:"      'chmdo 0755' at next line
+:       let command_string=s_shell_cmd_and_args." ".@%." ; chmod 0700 ".@%
+:"      would create a security flaw, but an effort to find out, what the
+:"      existing file premissions are, would either turn this code here
+:"      really hacky or this code would get additional dependencies
+:"      in the form of other command line utilities like sed, gawk, tr, ...
+:"      TODO: sudy, if it is possible to retain the file premissions
+:"            without adding dependencies.
 :    call MV_execute_bashscript_t1(command_string)
 :       bufdo :e
 :"      One just couldn't get rid of the line break in the @p
@@ -2046,7 +2066,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='4410b26c-5476-4ec8-8a1e-a0f1a0f049e7'"
+:        throw "The vimscript is flawed. GUID=='995e6a48-14ee-4c12-83f4-e050504059e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2460,10 +2480,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='2c7e3a91-4336-4e26-9a3e-a0f1a0f049e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='26d67214-49a9-496d-84f4-e050504059e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='8d591b51-09c4-453b-bf6e-a0f1a0f049e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='4c002051-95b8-4f5c-a3f4-e050504059e7'"
 :                en
 :            en
 :           "---------------
@@ -2509,6 +2529,7 @@
 :command -nargs=0 CGUIDt1 call MV_cg_GUID_t1()
 :"command -nargs=0 CRc call MV_count_cursorselected_in_range_t1()
 :"command -nargs=0 CRy call MV_count_yanked_in_range_t1()
+:command -nargs=0 Cll call MV_remove_spacestabs_from_line_ends_t1()
 :command -nargs=1 D call MV_two_dots_t1(<f-args>)
 :command -nargs=0 El call MV_execute_bashscript_from_line_t2()
 :command -nargs=0 Ey call MV_execute_yanked_bashscriptline_t1()
@@ -2871,5 +2892,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="4fdac693-9f3c-4ed8-a94e-a0f1a0f049e7"
+:" S_VERSION_OF_THIS_FILE="14260141-944e-41c4-95f4-e050504059e7"
 :"=========================================================================

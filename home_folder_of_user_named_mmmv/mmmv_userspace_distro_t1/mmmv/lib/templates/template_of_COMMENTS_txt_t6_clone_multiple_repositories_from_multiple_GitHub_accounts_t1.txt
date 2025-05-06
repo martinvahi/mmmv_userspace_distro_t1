@@ -1,0 +1,720 @@
+#!/usr/bin/env bash
+#==========================================================================
+# Initial author of this file: INCOMPLETE
+# This file is in public domain.
+#
+# Initial author of the template of this file: Martin.Vahi@softf1.com
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+#==========================================================================
+# The
+#
+#
+# have been created
+# on Fri May  2 18:27:02 EEST 2025
+# by executing the func_main() that resides at the end of this file.
+
+func_declare_clonable_repositories(){
+    delcare_repository "https://github.com/Jason3S/xxhash"  # MIT
+    delcare_repository "https://github.com/Cyan4973/xxHash" # BSD
+    delcare_repository "https://github.com/Cyan4973/Writing_Safer_C_code"
+    delcare_repository "https://github.com/pierrec/js-xxhash" # MIT
+} # func_declare_clonable_repositories
+
+#--------------------------------------------------------------------------
+# Everything below this line is implementation and does not need to be changed.
+#--------------------------------------------------------------------------
+
+    func_mmmv_exit_if_not_on_path_t2b() { # S_COMMAND_NAME
+        local S_COMMAND_NAME="$1"
+        #----------------------------------------------------------------------
+        local S_LOCAL_VARIABLE="`which $S_COMMAND_NAME 2> /dev/null`"
+        if [ "$S_LOCAL_VARIABLE" == "" ]; then
+            echo ""
+            echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
+            echo "The execution of this Bash script is aborted."
+            echo "GUID=='bf91e221-3455-4093-b3b3-3251506059e7'"
+            echo ""
+            exit 1;
+        fi
+    } # func_mmmv_exit_if_not_on_path_t2b
+
+    func_mmmv_exit_if_not_on_path_t2b "basename"
+    func_mmmv_exit_if_not_on_path_t2b "cat"
+    func_mmmv_exit_if_not_on_path_t2b "dirname"
+    func_mmmv_exit_if_not_on_path_t2b "git"
+    func_mmmv_exit_if_not_on_path_t2b "grep"
+    func_mmmv_exit_if_not_on_path_t2b "gsed" # on Linux "sed", but a symlink to sed will do
+    func_mmmv_exit_if_not_on_path_t2b "replace" # is part of MariaDB Debian package
+    func_mmmv_exit_if_not_on_path_t2b "xargs"
+    func_mmmv_exit_if_not_on_path_t2b "zip"
+
+    #----------------------------------------------------------------------
+
+    func_mmmv_wait_and_sync_t1(){
+        wait # for background processes started by this Bash script to exit/finish
+        sync # network drives, USB-sticks, etc.
+        wait # for sync
+    } # func_mmmv_wait_and_sync_t1
+
+    #----------------------------------------------------------------------
+
+    func_mmmv_assert_file_exists_t1b() {
+        local S_FP="$1"
+        local S_GUID_CANDIDATE="$2"
+        local SB_OPTIONAL_BAN_SYMLINKS="$3" # domain: {"t", "f", ""} default: "f"
+                                            # is the last formal parameter
+                                            # in stead of the S_GUID_CANDIDATE,
+                                            # because that way this function is
+                                            # backwards compatible with
+                                            # an earlier version of this
+                                            # function.
+        #----------------------------------------------------------------------
+        local SB_LACK_OF_PARAMETERS="f"
+        if [ "$S_FP" == "" ]; then
+            SB_LACK_OF_PARAMETERS="t"
+        fi
+        if [ "$S_GUID_CANDIDATE" == "" ]; then
+            SB_LACK_OF_PARAMETERS="t"
+        fi
+        if [ "$SB_LACK_OF_PARAMETERS" == "t" ]; then
+            echo ""
+            echo -e "\e[31mThe code that calls this function is flawed. \e[39m"
+            echo "This function requires 2 parameters, which are "
+            echo "S_FP, S_GUID_CANDIDATE, and it has an optional 3. parameter, "
+            echo "which is SB_OPTIONAL_BAN_SYMLINKS."
+            if [ "$S_GUID_CANDIDATE" != "" ]; then
+                echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+            fi
+            echo "GUID=='efe7dd5d-e23e-4a61-b3b3-3251506059e7'"
+            echo ""
+            #--------
+            cd "$S_FP_ORIG"
+            exit 1 # exiting with an error
+        else
+            if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
+                echo -e "\e[31mThis code is flawed. \e[39m"
+                echo "GUID=='7d5cbf41-3dd0-4cb4-95a3-3251506059e7'"
+                #--------
+                cd "$S_FP_ORIG"
+                exit 1 # exiting with an error
+            fi
+        fi
+        #------------------------------
+        if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "" ]; then
+            # The default value of the
+            SB_OPTIONAL_BAN_SYMLINKS="f"
+            # must be backwards compatible with the
+            # version of this function, where
+            # symlinks to files were treated as actual files.
+        else
+            if [ "$SB_OPTIONAL_BAN_SYMLINKS" != "t" ]; then
+                if [ "$SB_OPTIONAL_BAN_SYMLINKS" != "f" ]; then
+                    echo ""
+                    echo "The "
+                    echo ""
+                    echo "    SB_OPTIONAL_BAN_SYMLINKS==\"$SB_OPTIONAL_BAN_SYMLINKS\""
+                    echo ""
+                    echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
+                    echo "are: \"t\", \"f\", \"\"."
+                    echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+                    echo "GUID=='43170ff0-211f-4184-82a3-3251506059e7'"
+                    echo ""
+                    #--------
+                    cd "$S_FP_ORIG"
+                    exit 1 # exiting with an error
+                fi
+            fi
+        fi
+        #------------------------------
+        if [ ! -e "$S_FP" ]; then
+            if [ -h "$S_FP" ]; then
+                echo ""
+                echo "The path "
+                echo ""
+                echo "    $S_FP "
+                echo ""
+                echo -e "points to a\e[31m broken symlink\e[39m, but "
+                if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "t" ]; then
+                    echo "a file is expected."
+                else
+                    echo "a file or a symlink to a file is expected."
+                fi
+                echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
+                echo "GUID=='58effb53-3def-4e73-9ba3-3251506059e7'"
+                echo ""
+                #--------
+                cd "$S_FP_ORIG"
+                exit 1 # exiting with an error
+            else
+                echo ""
+                if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "t" ]; then
+                    echo "The file "
+                else
+                    echo "The file or a symlink to a file "
+                fi
+                echo ""
+                echo "    $S_FP "
+                echo ""
+                echo -e "\e[31mdoes not exist\e[39m."
+                echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
+                echo "GUID=='93e07178-a2e0-45c2-81a3-3251506059e7'"
+                echo ""
+                #--------
+                cd "$S_FP_ORIG"
+                exit 1 # exiting with an error
+            fi
+        else
+            if [ -d "$S_FP" ]; then
+                echo ""
+                if [ -h "$S_FP" ]; then
+                    echo "The symlink to an existing folder "
+                else
+                    echo "The folder "
+                fi
+                echo ""
+                echo "    $S_FP "
+                echo ""
+                printf "exists, but "
+                if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "t" ]; then
+                    echo -e "a\e[31m file is expected\e[39m."
+                else
+                    echo -e "a\e[31m file or a symlink to a file is expected\e[39m."
+                fi
+                echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
+                echo "GUID=='3692e455-98cb-44de-8aa3-3251506059e7'"
+                echo ""
+                #--------
+                cd "$S_FP_ORIG"
+                exit 1 # exiting with an error
+            else
+                if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "t" ]; then
+                    if [ -h "$S_FP" ]; then
+                        echo ""
+                        echo "The "
+                        echo ""
+                        echo "    $S_FP"
+                        echo ""
+                        echo -e "is a symlink to a file, but a\e[31m file is expected\e[39m."
+                        echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
+                        echo "GUID=='d1fec636-b730-4d99-85a3-3251506059e7'"
+                        echo ""
+                        #--------
+                        cd "$S_FP_ORIG"
+                        exit 1 # exiting with an error
+                    fi
+                fi
+            fi
+        fi
+    } # func_mmmv_assert_file_exists_t1b
+
+    #----------------------------------------------------------------------
+
+    func_attempt_to_clone(){
+        local S_GITHUBREPOSITORY_URL="$1" # like "https://github.com/Cyan4973/xxHash", but
+                                          # without the quotation marks.
+        #----------------------------------------
+        local S_TMP_0=""
+        local S_GITHUB_USER=""
+        local S_REPOSITORY=""
+        local S_FN_ARCHIVE=""
+        local S_FN_ARCHIVE_ZIP=""
+        local S_FP_REPOSITORY=""
+        local S_FP_REPOSITORY_DOT_GIT=""
+        #----------------------------------------
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            #----------------------------------------
+            # "https://github.com/Jason3S/xxhash" -> "Jason3S/xxhash"
+            S_TMP_0="`echo \"$S_GITHUBREPOSITORY_URL\" | gsed -e 's/^http[s]\?[:][\/]\+github[.]com[\/]\+//g' | gsed -e 's/[\/]\+/\//g' `"
+            #----------------------------------------
+            # "Jason3S/xxhash" -> "Jason3S"
+            S_GITHUB_USER="`echo "$S_TMP_0" | xargs dirname  `"
+            #----------------------------------------
+            # "Jason3S/xxhash" -> "xxhash"
+            S_REPOSITORY="`echo "$S_TMP_0" | xargs basename `"
+            #----------------------------------------
+            S_TMP_0="_repository_named_"
+            S_FN_ARCHIVE="$S_GITHUB_USER$S_TMP_0$S_REPOSITORY"
+            S_FP_ARCHIVE="$S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT/$S_FN_ARCHIVE"
+            S_FP_REPOSITORY="$S_FP_ARCHIVE/$S_REPOSITORY"
+            S_FP_REPOSITORY_DOT_GIT="$S_FP_REPOSITORY/.git"
+            S_TMP_0=".zip"
+            S_FN_ARCHIVE_ZIP="$S_FN_ARCHIVE$S_TMP_0"
+            S_FP_ARCHIVE_ZIP="$S_FP_ARCHIVE$S_TMP_0"
+            S_FP_THE_CLONES="$S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT/the_clones"
+            if [ -e "$S_FP_ARCHIVE_ZIP" ]; then
+                SB_ERR="t" # overkill here, but for consistency and probabilistic flaw/bug mitigation
+                echo -e ""
+                if [ -d "$S_FP_ARCHIVE_ZIP" ]; then
+                    if [ -h "$S_FP_ARCHIVE_ZIP" ]; then
+                        echo -e "Symlink to a folder"
+                    else
+                        echo -e "Folder"
+                    fi
+                else
+                    if [ -h "$S_FP_ARCHIVE_ZIP" ]; then
+                        echo -e "Symlink to a file "
+                    else
+                        echo -e "File "
+                    fi
+                fi
+                echo -e ""
+                echo -e "    $S_FP_ARCHIVE_ZIP"
+                echo -e ""
+                if [ -d "$S_FP_ARCHIVE_ZIP" ]; then
+                    if [ -h "$S_FP_ARCHIVE_ZIP" ]; then
+                        echo -e "\e[31mexists\e[39m. It should be a file, not a symlink to a folder."
+                    else
+                        echo -e "\e[31mexists\e[39m. It should be a file, not a folder."
+                    fi
+                    echo -e "Aborting script."
+                else
+                    if [ -h "$S_FP_ARCHIVE_ZIP" ]; then
+                        echo -e "\e[31mexists\e[39m. It should be a file, not a symlink to a file."
+                        echo -e "Aborting script."
+                    else
+                        echo -e "\e[31malready exists\e[39m. Aborting script."
+                    fi
+                fi
+                echo -e "GUID=='a01fc21e-6ff7-4699-85a3-3251506059e7'"
+                echo -e ""
+                exit 1
+            else
+                if [ -h "$S_FP_ARCHIVE_ZIP" ]; then # a broken symlink
+                    SB_ERR="t" # overkill here, but for consistency and probabilistic flaw/bug mitigation
+                    echo -e ""
+                    echo -e "Broken symlink"
+                    echo -e ""
+                    echo -e "    $S_FP_ARCHIVE_ZIP"
+                    echo -e ""
+                    echo -e "\e[31mexists\e[39m. It should be a file, not a broken symlink. "
+                    echo -e "Aborting script."
+                    echo -e "GUID=='ac54e457-a288-4d8f-b3a3-3251506059e7'"
+                    echo -e ""
+                    exit 1
+                else
+                    SB_ERR="f"
+                fi
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            git clone --recursive "$S_GITHUBREPOSITORY_URL"
+            if [ "$?" == "0" ]; then
+                SB_ERR="f"
+                func_mmmv_wait_and_sync_t1
+            else
+                echo "GUID=='e8986a23-651e-47eb-b2a3-3251506059e7'"
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            mkdir "./$S_FN_ARCHIVE"
+            if [ "$?" == "0" ]; then
+                func_mmmv_wait_and_sync_t1
+                if [ -e "$S_FP_ARCHIVE" ]; then
+                    if [ -d "$S_FP_ARCHIVE" ]; then
+                        SB_ERR="f"
+                    fi
+                fi
+            else
+                echo "GUID=='b8856417-479a-48e4-82a3-3251506059e7'"
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            mv "./$S_REPOSITORY" "./$S_FN_ARCHIVE/"
+            if [ "$?" == "0" ]; then
+                func_mmmv_wait_and_sync_t1
+                if [ -e "$S_FP_REPOSITORY" ]; then
+                    if [ -d "$S_FP_REPOSITORY" ]; then
+                        SB_ERR="f"
+                    fi
+                fi
+            else
+                echo "GUID=='9d045a3c-902f-4cb7-b3a3-3251506059e7'"
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            if [ "`echo \"$S_FP_REPOSITORY_DOT_GIT\" | grep -E '[.]git$'`" != "" ]; then
+                $S_CMD_NICE rm -fr "$S_FP_REPOSITORY_DOT_GIT"
+                if [ "$?" == "0" ]; then
+                    func_mmmv_wait_and_sync_t1
+                    if [ ! -e "$S_FP_REPOSITORY_DOT_GIT" ]; then
+                        if [ ! -h "$S_FP_REPOSITORY_DOT_GIT" ]; then # broken symlink test
+                            SB_ERR="f"
+                        fi
+                    fi
+                else
+                    echo "GUID=='550aed11-507f-4fee-a2a3-3251506059e7'"
+                fi
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            $S_CMD_NICE zip -r "./$S_FN_ARCHIVE_ZIP"  "./$S_FN_ARCHIVE"
+            if [ "$?" == "0" ]; then
+                func_mmmv_wait_and_sync_t1
+                if [ -e "./$S_FN_ARCHIVE_ZIP" ]; then
+                    SB_ERR="f"
+                fi
+            else
+                echo "GUID=='79a40277-8c78-474c-94a3-3251506059e7'"
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            if [ "`echo \"$S_FN_ARCHIVE\" | grep -E '[/]'`" == "" ]; then
+                S_TMP_0="`whoami`"
+                if [ "`echo \"$S_FN_ARCHIVE\" | grep  \"$S_TMP_0\"`" == "" ]; then
+                    rm -fr "./$S_FN_ARCHIVE"
+                    if [ "$?" == "0" ]; then
+                        func_mmmv_wait_and_sync_t1
+                        if [ ! -e "$S_FN_ARCHIVE" ]; then
+                            if [ ! -h "$S_FN_ARCHIVE" ]; then # broken symlink test
+                                SB_ERR="f"
+                            fi
+                        fi
+                    else
+                        echo "GUID=='151f70c4-ce9e-4899-b1a3-3251506059e7'"
+                    fi
+                fi
+            fi
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            mkdir -p $S_FP_THE_CLONES
+            if [ "$?" == "0" ]; then
+                SB_ERR="f"
+                func_mmmv_wait_and_sync_t1
+            else
+                echo "GUID=='2294d74c-fe8f-4821-b4a3-3251506059e7'"
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            mv $S_FP_ARCHIVE_ZIP $S_FP_THE_CLONES/
+            if [ "$?" == "0" ]; then
+                func_mmmv_wait_and_sync_t1
+                if [ -e "$S_FP_THE_CLONES/$S_FN_ARCHIVE_ZIP"  ]; then
+                    if [ ! -d "$S_FP_THE_CLONES/$S_FN_ARCHIVE_ZIP"  ]; then
+                        SB_ERR="f"
+                    else
+                        echo "GUID=='4976ecba-748f-4852-b5a3-3251506059e7'"
+                    fi
+                else
+                    echo "GUID=='149d9b2e-a068-4df2-b2a3-3251506059e7'"
+                fi
+            else
+                echo "GUID=='502a8ad1-0513-493a-94a3-3251506059e7'"
+            fi
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" != "f" ]; then
+            echo -e "\e[31m"
+            echo -e "Something went wrong. Aborting script."
+            echo -e "\e[39mGUID=='32653d4b-12be-4f19-aba3-3251506059e7'"
+            echo -e ""
+            exit 1
+        fi
+        #----------------------------------------
+    } # func_attempt_to_clone
+
+    #----------------------------------------------------------------------
+
+    func_update_timestamp(){
+        #----------------------------------------
+        local S_0=""
+        local S_1=""
+        if [ "$SB_ERR" == "f" ]; then
+            S_0="on `date | tr -d '\n' `"
+            cat ./COMMENTS.txt | \
+                gsed -e "s/[#][[:blank:]]on.*\$/# $S_0/g" > ./COMMENTS_new.txt
+            if [ "$?" == "0" ]; then
+                func_mmmv_wait_and_sync_t1
+                rm ./COMMENTS.txt
+                func_mmmv_wait_and_sync_t1
+                mv ./COMMENTS_new.txt ./COMMENTS.txt
+                func_mmmv_wait_and_sync_t1
+            fi
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" != "f" ]; then
+            echo -e "\e[31m"
+            echo -e "Something went wrong. Aborting script."
+            echo -e "\e[39mGUID=='88d8af4b-be32-4fd7-b593-3251506059e7'"
+            echo -e ""
+            exit 1
+        fi
+        #----------------------------------------
+    } # func_update_timestamp
+
+    #----------------------------------------------------------------------
+
+    FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT=""
+    # It does not create the file or folder, it just
+    # generates a full file path. It does not check, whether
+    # the parent folder of the new file or folder is
+    # writable.
+    func_mmmv_generate_temporary_file_or_folder_path_t1() {
+        #----------------------------------------
+        local S_FP_TMP_FOLDER_CANDIDATE="$PWD/_tmp"
+        if [ ! -e "$S_FP_TMP_FOLDER_CANDIDATE" ]; then
+            S_FP_TMP_FOLDER_CANDIDATE="$PWD/tmp"
+            if [ ! -e "$S_FP_TMP_FOLDER_CANDIDATE" ]; then
+                S_FP_TMP_FOLDER_CANDIDATE="$HOME/_tmp"
+                if [ ! -e "$S_FP_TMP_FOLDER_CANDIDATE" ]; then
+                    S_FP_TMP_FOLDER_CANDIDATE="$HOME/tmp"
+                    if [ ! -e "$S_FP_TMP_FOLDER_CANDIDATE" ]; then
+                        S_FP_TMP_FOLDER_CANDIDATE="/tmp"
+                        if [ ! -e "$S_FP_TMP_FOLDER_CANDIDATE" ]; then
+                            echo ""
+                            echo "The path of the temporary folder"
+                            echo "could not be determined. Even the "
+                            echo ""
+                            echo "    /tmp"
+                            echo ""
+                            echo "does not exist. Aborting script."
+                            echo "GUID=='6ab4e520-dcb9-4d7f-b493-3251506059e7'"
+                            echo ""
+                            cd "$S_FP_ORIG"
+                            exit 1 # exit with an error
+                        fi
+                    fi
+                fi
+            fi
+        fi
+        #----------------------------------------
+        local S_FN="$S_TIMESTAMP"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        S_FN+="_"
+        S_FN+="$RANDOM"
+        #----------------------------------------
+        local S_FP_OUT="$S_FP_TMP_FOLDER_CANDIDATE/$S_FN"
+        FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT="$S_FP_OUT"
+        #----------------------------------------
+    } # func_mmmv_generate_temporary_file_or_folder_path_t1
+
+    #----------------------------------------------------------------------
+
+    func_mmmv_assert_file_path_is_not_in_use_t1(){
+        #----------------------------------------
+        local S_FP_CANDIDATE=$1   # first function argument
+        local S_GUID_CANDIDATE=$2 # second function argument
+        #----------------------------------------
+        if [ "$S_GUID_CANDIDATE" == "" ]; then
+            echo ""
+            echo -e "\e[31mThe code of this script is flawed\e[39m."
+            echo "Aborting script."
+            echo "GUID=='e7f40a2c-8f7d-4bd2-a193-3251506059e7'"
+            echo ""
+            cd "$S_FP_ORIG"
+            exit 1 # exit with an error
+        fi
+        if [ "$S_FP_CANDIDATE" == "" ]; then
+            echo ""
+            echo -e "\e[31mThe code of this script is flawed\e[39m."
+            echo "Aborting script."
+            echo "GUID=='548faa1d-dd2f-426d-a593-3251506059e7'"
+            echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+            echo ""
+            cd "$S_FP_ORIG"
+            exit 1 # exit with an error
+        fi
+        #----------------------------------------
+        if [ -e "$S_FP_CANDIDATE" ]; then
+            echo ""
+            echo "The path "
+            echo ""
+            echo "    $S_FP_CANDIDATE"
+            echo ""
+            echo -e "is\e[31m already in use\e[39m."
+            echo "Aborting script."
+            echo "GUID=='8c10f622-0817-40c5-9293-3251506059e7'"
+            echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+            echo ""
+            cd "$S_FP_ORIG"
+            exit 1 # exit with an error
+        else
+            if [ -h "$S_FP_CANDIDATE" ]; then  # references a broken symlink
+                echo ""
+                echo "The path "
+                echo ""
+                echo "    $S_FP_CANDIDATE"
+                echo ""
+                echo -e "is\e[31m already in use\e[39m. It references a broken symlink."
+                echo "Aborting script."
+                echo "GUID=='53f4045b-4581-4527-9393-3251506059e7'"
+                echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
+                echo ""
+                cd "$S_FP_ORIG"
+                exit 1 # exit with an error
+            fi
+        fi
+        #----------------------------------------
+    } # func_mmmv_assert_file_path_is_not_in_use_t1
+
+    #----------------------------------------------------------------------
+
+    FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T2_ANSWER=""
+    # Returns the full path of the file.
+    func_mmmv_create_empty_temporary_file_t2() {
+        #----------------------------------------
+        local S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME="$1" # file extension, like ".txt"
+        #----------------------------------------
+        local S_FP_CANDIDATE="/tmp/this_file_name_may_have_collisions"
+        if [ "`which mmmv_cre_temporary_file_t1 2> /dev/null `" != "" ]; then
+            # The "mmmv_cre_temporary_file_t1" at the
+            S_FP_CANDIDATE="`mmmv_cre_temporary_file_t1 --max_file_size_64KiB `"
+            # has host specific configuration so that it probabilistically
+            # creates the temporary file to a RAM partition.
+        else
+            func_mmmv_generate_temporary_file_or_folder_path_t1
+            S_FP_CANDIDATE="$FUNC_MMMV_GENERATE_TEMPORARY_FILE_OR_FOLDER_PATH_T1_OUTPUT"
+            if [ "$S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME" != "" ]; then
+                S_FP_CANDIDATE+="$S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME"
+            fi
+            func_mmmv_assert_file_path_is_not_in_use_t1 "$S_FP_CANDIDATE" \
+                "dfd02f3d-dd92-45d0-84b3-3251506059e7"
+            printf "%b" "" > $S_FP_CANDIDATE # the echo "" would add a linebreak
+            func_mmmv_wait_and_sync_t1
+        fi
+        func_mmmv_assert_file_exists_t1b \
+            "$S_FP_CANDIDATE" \
+            "b1672dbc-fe5a-49ba-85a3-3251506059e7" "t"
+        FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T2_ANSWER="$S_FP_CANDIDATE"
+        #----------------------------------------
+    } # func_mmmv_create_empty_temporary_file_t2
+
+    #----------------------------------------------------------------------
+
+    func_update_list_of_zipfiles_at_the_start_of_this_COMMENTS_txt(){
+        #----------------------------------------
+        if [ "$SB_ERR" == "f" ]; then
+            func_mmmv_create_empty_temporary_file_t2
+            local S_FP_0="$FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T2_ANSWER"
+            func_mmmv_create_empty_temporary_file_t2
+            local S_FP_1="$FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T2_ANSWER"
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" == "f" ]; then
+            SB_ERR="t"
+            cd $S_FP_THE_CLONES
+            if [ "$?" == "0" ]; then
+                SB_ERR="f"
+            else
+                echo "GUID=='11d21a27-8328-4c12-a393-3251506059e7'"
+            fi
+        fi
+        if [ "$SB_ERR" == "f" ]; then
+            ls -1 | grep -E '[.]zip$' | \
+                gsed -s 's/^/#     .\/the_clones\//g' | \
+                gsed -s 's/$/☂/g'  | \
+                tr -d '\n' | \
+                gsed -e 's/☂$//g' > $S_FP_0
+            if [ "$?" != "0" ]; then
+                cd $S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT
+                if [ "$?" != "0" ]; then
+                    SB_ERR="t"
+                fi
+            fi
+            func_mmmv_wait_and_sync_t1
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" == "f" ]; then
+            # The regex with the umbrella character must not edit itself.
+            cat $S_FP_THIS_COMMENTS_TXT | \
+                gsed -e '/^[#][ ]\{5\}[.][\/].\+zip$/d' | \
+                gsed -e "11 a `cat $S_FP_0`" | \
+                gsed -e 's/☂[#]/\n#/g' > $S_FP_1
+            if [ "$?" != "0" ]; then
+                SB_ERR="t"
+            fi
+            func_mmmv_wait_and_sync_t1
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" == "f" ]; then
+            if [ -e "$S_FP_1" ]; then
+                if [ ! -d "$S_FP_1" ]; then
+                    cp -f "$S_FP_1" "$S_FP_THIS_COMMENTS_TXT"
+                    if [ "$?" != "0" ]; then
+                        SB_ERR="t"
+                    fi
+                    func_mmmv_wait_and_sync_t1
+                else
+                    SB_ERR="t"
+                fi
+            else
+                SB_ERR="t"
+            fi
+        fi
+        #----------------------------------------
+        if [ "$SB_ERR" != "f" ]; then
+            echo -e "\e[31m"
+            echo -e "Something went wrong. Aborting script."
+            echo -e "\e[39mGUID=='8559b56d-46ad-4828-b293-3251506059e7'"
+            echo -e ""
+            rm -f "$S_FP_0"
+            rm -f "$S_FP_1"
+            exit 1
+        fi
+        #----------------------------------------
+        rm -f "$S_FP_0"
+        rm -f "$S_FP_1" 
+        func_mmmv_wait_and_sync_t1
+        #----------------------------------------
+    } # func_update_list_of_zipfiles_at_the_start_of_this_COMMENTS_txt
+
+    #----------------------------------------------------------------------
+
+    delcare_repository(){ # syntactic sugar
+        func_attempt_to_clone "$1"
+    } # delcare_repository
+
+    #----------------------------------------------------------------------
+    S_FP_ORIG="`pwd`" # used in some copy-pasted functions
+    S_CMD_NICE=" nice -n 10 "
+
+    func_main(){
+        #----------------------------------------
+        SB_ERR="t"
+        S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+        S_FP_THIS_COMMENTS_TXT="$S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT/$(basename "${BASH_SOURCE[0]}")"
+        cd "$S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT"
+        if [ "$?" == "0" ]; then
+            SB_ERR="f"
+            func_declare_clonable_repositories
+        fi
+        #----------------------------------------
+        func_update_timestamp
+        func_update_list_of_zipfiles_at_the_start_of_this_COMMENTS_txt
+        chmod -f -R 0700 "$S_FP_THE_PARENT_FOLDER_OF_THIS_COMMENTS_TXT/*"
+        func_mmmv_wait_and_sync_t1
+        #----------------------------------------
+        #
+        #
+    } # func_main
+
+    func_main
+
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="1147f133-0cdf-433e-b4a3-3251506059e7"
+#==========================================================================

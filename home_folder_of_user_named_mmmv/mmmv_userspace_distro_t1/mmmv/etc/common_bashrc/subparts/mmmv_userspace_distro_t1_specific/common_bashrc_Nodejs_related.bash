@@ -18,7 +18,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='2862f971-03ab-45ee-a5ac-a220119039e7'"
+    echo "GUID=='69550b25-d02a-4d43-9b11-c051502059e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -38,7 +38,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder(){
                         echo ""
                         echo -e "\e[31mFailed to delete\e[39m a broken symlink "
                         echo "    $S_FP_FOLDER"
-                        echo "GUID=='dcb0cd32-7266-4ade-a3ac-a220119039e7'"
+                        echo "GUID=='97f92120-0055-4ca1-8211-c051502059e7'"
                         echo ""
                     fi
                     SB_OK2ATTEMPT="f"
@@ -56,7 +56,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder(){
                     echo ""
                     echo -e "\e[31mFailed to create \e[39m"
                     echo "    $S_FP_FOLDER"
-                    echo "GUID=='4ff90374-1982-4074-93ac-a220119039e7'"
+                    echo "GUID=='1cd0b624-6ca1-41a2-ae11-c051502059e7'"
                     echo ""
                 fi
                 SB_OK2ATTEMPT="f"
@@ -67,7 +67,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder(){
                     echo ""
                     echo -e "\e[31mFailed to create \e[39m"
                     echo "    $S_FP_FOLDER"
-                    echo "GUID=='f904f232-84f1-4a82-85ac-a220119039e7'"
+                    echo "GUID=='52fa9941-3127-4485-9311-c051502059e7'"
                     echo ""
                 fi
                 SB_OK2ATTEMPT="f"
@@ -85,7 +85,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_declare_npm_relat
         if [ "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" != "" ]; then
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" \
-                "5ac80545-0613-4414-82ac-a220119039e7" \
+                "55474881-83ea-456a-9311-c051502059e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             #if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 # The next 4 lines are for testing during development:
@@ -99,7 +99,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_declare_npm_relat
         fi
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "npm" "365623aa-8380-4dfe-a5ac-a220119039e7"
+            "npm" "f8b80833-be96-45e8-9211-c051502059e7"
     fi
     #----------------------------------------------------------------------
 } # func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_declare_npm_related_aliases
@@ -118,7 +118,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm(){
         else
             SB_OK2ATTEMPT="f"
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "npm" "5699ef64-c382-4635-b3ac-a220119039e7"
+                "npm" "c6c0e713-6c09-4063-a311-c051502059e7"
         fi
     else
         if [ "$SB_NPM_EXISTS_ON_PATH" != "t" ]; then
@@ -127,18 +127,16 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm(){
     fi
     #----------------------------------------------------------------------
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
-        if [ "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" == "" ]; then
-            export MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES="$HOME/.mmmv/mmmv_npm_packages"
-        fi
+        export MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES="$HOME/.mmmv/mmmv_npm_packages"
+        func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
+            "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES"
     fi
-    func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
-        "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES"
     #----------------------------------------------------------------------
     local S_FP_0="$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES/bin"
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" \
-            "40f67aa5-bc70-43d4-81ac-a220119039e7" \
+            "4af6f602-8caa-4f39-8511-c051502059e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             export MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES="" # to let other programs know of the setup failure
@@ -148,7 +146,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm(){
                 "$S_FP_0"
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$S_FP_0" \
-                "dcec7343-2690-4ce1-85ac-a220119039e7" \
+                "f333344d-980f-4234-8311-c051502059e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 export Z_PATH="$S_FP_0:$Z_PATH"
@@ -186,7 +184,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
         else
             SB_OK2ATTEMPT="f"
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "yarn" "fa7975a1-c6ec-4ee3-afac-a220119039e7"
+                "yarn" "8966e116-1dff-4836-8211-c051502059e7"
         fi
     else
         if [ "$SB_YARN_EXISTS_ON_PATH" != "t" ]; then
@@ -198,38 +196,28 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
         "$S_FP_YARN"
     #----------------------------------------------------------------------
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
-        if [ "$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES" == "" ]; then
-            export MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES="$S_FP_YARN/packages"
-        fi
+        export MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES="$S_FP_YARN/packages"
+        func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
+            "$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES"
     fi
-    func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
-        "$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES"
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
-        if [ "$YARN_GLOBAL_FOLDER" == "" ]; then
-            export YARN_GLOBAL_FOLDER="$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES"
-        fi
+        export YARN_GLOBAL_FOLDER="$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES"
+        func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
+            "$S_FP_YARN_CONFIG_FOLDER"
     fi
-    #----------------------------------------------------------------------
-    func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
-        "$S_FP_YARN_CONFIG_FOLDER"
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
-        if [ "$YARN_CONFIG_FOLDER" == "" ]; then
-            export YARN_CONFIG_FOLDER="$S_FP_YARN_CONFIG_FOLDER"
-        fi
+        export YARN_CONFIG_FOLDER="$S_FP_YARN_CONFIG_FOLDER"
+        func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
+            "$S_FP_YARN_CACHE_FOLDER"
     fi
-    #----------------------------------------------------------------------
-    func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder \
-        "$S_FP_YARN_CACHE_FOLDER"
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
-        if [ "$YARN_CACHE_FOLDER" == "" ]; then
-            export YARN_CACHE_FOLDER="$S_FP_YARN_CACHE_FOLDER"
-        fi
+        export YARN_CACHE_FOLDER="$S_FP_YARN_CACHE_FOLDER"
     fi
     #----------------------------------------------------------------------
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES" \
-            "37fb4b75-3600-4bf2-83ac-a220119039e7" \
+            "aa559057-7f5b-4c6c-9311-c051502059e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_OK2ATTEMPT="f"
@@ -238,7 +226,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$S_FP_YARN_CONFIG_FOLDER" \
-            "2f7b965e-e768-46d3-84ac-a220119039e7" \
+            "64c25e37-a557-4629-aa11-c051502059e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_OK2ATTEMPT="f"
@@ -247,7 +235,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$S_FP_YARN_CACHE_FOLDER" \
-            "1de1fa52-2763-4d86-b5ac-a220119039e7" \
+            "45e75142-0c13-429c-8311-c051502059e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_OK2ATTEMPT="f"
@@ -267,5 +255,5 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations(){
 func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="06749426-006a-4360-92ac-a220119039e7"
+# S_VERSION_OF_THIS_FILE="4a980682-c564-4655-9311-c051502059e7"
 #==========================================================================
