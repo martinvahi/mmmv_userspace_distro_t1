@@ -1,0 +1,8 @@
+
+File origins:
+
+    ./xxHash_v_0_8_3.zip
+    is an unpacked and repacked version of the
+    https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.zip
+    Download date: 2025_04_30
+
