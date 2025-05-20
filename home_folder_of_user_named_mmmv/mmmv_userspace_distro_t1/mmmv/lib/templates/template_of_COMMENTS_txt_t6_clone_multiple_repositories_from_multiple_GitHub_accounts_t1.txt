@@ -33,7 +33,7 @@ func_declare_clonable_repositories(){
             echo ""
             echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
             echo "The execution of this Bash script is aborted."
-            echo "GUID=='5bf38714-da5e-44c9-ba4a-a363702159e7'"
+            echo "GUID=='e47ffa3b-2c33-49ff-af52-b143702159e7'"
             echo ""
             exit 1;
         fi
@@ -86,7 +86,7 @@ func_declare_clonable_repositories(){
             if [ "$S_GUID_CANDIDATE" != "" ]; then
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             fi
-            echo "GUID=='59406e71-3b69-40a8-b919-a363702159e7'"
+            echo "GUID=='2e459e02-b110-4f62-b352-b143702159e7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -94,7 +94,7 @@ func_declare_clonable_repositories(){
         else
             if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
                 echo -e "\e[31mThis code is flawed. \e[39m"
-                echo "GUID=='1350626e-2f51-44c2-9e59-a363702159e7'"
+                echo "GUID=='bf77c0a3-34c5-4e16-a452-b143702159e7'"
                 #--------
                 cd "$S_FP_ORIG"
                 exit 1 # exiting with an error
@@ -118,7 +118,7 @@ func_declare_clonable_repositories(){
                     echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                     echo "are: \"t\", \"f\", \"\"."
                     echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                    echo "GUID=='d21a3c59-593e-4b1b-9cd9-a363702159e7'"
+                    echo "GUID=='e797d743-7a2c-4cb1-a252-b143702159e7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -141,7 +141,7 @@ func_declare_clonable_repositories(){
                     echo "a file or a symlink to a file is expected."
                 fi
                 echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                echo "GUID=='b16b9055-d768-45df-b649-a363702159e7'"
+                echo "GUID=='bf597f11-9347-43b8-a352-b143702159e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -158,7 +158,7 @@ func_declare_clonable_repositories(){
                 echo ""
                 echo -e "\e[31mdoes not exist\e[39m."
                 echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                echo "GUID=='c7c8d512-187b-4e2a-8c19-a363702159e7'"
+                echo "GUID=='ff0fe849-5e63-4d47-a252-b143702159e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -182,7 +182,7 @@ func_declare_clonable_repositories(){
                     echo -e "a\e[31m file or a symlink to a file is expected\e[39m."
                 fi
                 echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                echo "GUID=='15710b64-85e6-4785-b959-a363702159e7'"
+                echo "GUID=='44fe83f1-5272-4932-8152-b143702159e7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -197,7 +197,7 @@ func_declare_clonable_repositories(){
                         echo ""
                         echo -e "is a symlink to a file, but a\e[31m file is expected\e[39m."
                         echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                        echo "GUID=='c34a816d-06ad-49d0-bc19-a363702159e7'"
+                        echo "GUID=='de3f4352-c594-4a44-9152-b143702159e7'"
                         echo ""
                         #--------
                         cd "$S_FP_ORIG"
@@ -279,7 +279,7 @@ func_declare_clonable_repositories(){
                         echo -e "\e[31malready exists\e[39m. Aborting script."
                     fi
                 fi
-                echo -e "GUID=='205fc7d5-447e-4b07-b359-a363702159e7'"
+                echo -e "GUID=='33544927-aa34-41ce-b452-b143702159e7'"
                 echo -e ""
                 exit 1
             else
@@ -292,7 +292,7 @@ func_declare_clonable_repositories(){
                     echo -e ""
                     echo -e "\e[31mexists\e[39m. It should be a file, not a broken symlink. "
                     echo -e "Aborting script."
-                    echo -e "GUID=='4246322c-b138-4574-bfc9-a363702159e7'"
+                    echo -e "GUID=='1e6a124d-d459-49a3-9352-b143702159e7'"
                     echo -e ""
                     exit 1
                 else
@@ -307,7 +307,7 @@ func_declare_clonable_repositories(){
                 SB_ERR="f"
                 func_mmmv_wait_and_sync_t1
             else
-                echo "GUID=='9e11b9d9-5620-4a23-b8d9-a363702159e7'"
+                echo "GUID=='543f91c3-2e81-4413-9652-b143702159e7'"
             fi
         fi
         if [ "$SB_ERR" == "f" ]; then
@@ -321,7 +321,7 @@ func_declare_clonable_repositories(){
                     fi
                 fi
             else
-                echo "GUID=='428a83b2-8be1-4b01-8949-a363702159e7'"
+                echo "GUID=='1529b754-c76c-42ba-9652-b143702159e7'"
             fi
         fi
         if [ "$SB_ERR" == "f" ]; then
@@ -335,7 +335,7 @@ func_declare_clonable_repositories(){
                     fi
                 fi
             else
-                echo "GUID=='75baca9d-8af6-454a-b5a9-a363702159e7'"
+                echo "GUID=='31a0203c-2b08-42c9-9552-b143702159e7'"
             fi
         fi
         if [ "$SB_ERR" == "f" ]; then
@@ -350,7 +350,7 @@ func_declare_clonable_repositories(){
                         fi
                     fi
                 else
-                    echo "GUID=='23349ed1-6a47-40de-8519-a363702159e7'"
+                    echo "GUID=='8584ce94-0410-46e4-8952-b143702159e7'"
                 fi
             fi
         fi
@@ -364,7 +364,7 @@ func_declare_clonable_repositories(){
                     SB_ERR="f"
                 fi
             else
-                echo "GUID=='3f33248d-93d9-49d4-be29-a363702159e7'"
+                echo "GUID=='3d8c95ce-e0fd-4f24-a442-b143702159e7'"
             fi
         fi
         if [ "$SB_ERR" == "f" ]; then
@@ -381,7 +381,7 @@ func_declare_clonable_repositories(){
                             fi
                         fi
                     else
-                        echo "GUID=='29f23014-fbfd-4e9d-a029-a363702159e7'"
+                        echo "GUID=='5ca99a5d-ddf9-4c49-b442-b143702159e7'"
                     fi
                 fi
             fi
@@ -394,7 +394,7 @@ func_declare_clonable_repositories(){
                 SB_ERR="f"
                 func_mmmv_wait_and_sync_t1
             else
-                echo "GUID=='56c4f301-f8b4-4ea0-9049-a363702159e7'"
+                echo "GUID=='7f785b15-7375-4297-a342-b143702159e7'"
             fi
         fi
         if [ "$SB_ERR" == "f" ]; then
@@ -406,20 +406,20 @@ func_declare_clonable_repositories(){
                     if [ ! -d "$S_FP_THE_CLONES/$S_FN_ARCHIVE_ZIP"  ]; then
                         SB_ERR="f"
                     else
-                        echo "GUID=='ad681e04-7f97-4153-9729-a363702159e7'"
+                        echo "GUID=='988f1817-53f3-4431-b242-b143702159e7'"
                     fi
                 else
-                    echo "GUID=='c1151641-4356-4666-a999-a363702159e7'"
+                    echo "GUID=='4ae90a5f-53c9-4ce7-b142-b143702159e7'"
                 fi
             else
-                echo "GUID=='5190d673-48ba-44c4-9d49-a363702159e7'"
+                echo "GUID=='a1361f36-f9f4-4145-a442-b143702159e7'"
             fi
         fi
         #----------------------------------------
         if [ "$SB_ERR" != "f" ]; then
             echo -e "\e[31m"
             echo -e "Something went wrong. Aborting script."
-            echo -e "\e[39mGUID=='13fc5f02-4bf4-4557-b049-a363702159e7'"
+            echo -e "\e[39mGUID=='4a6b1e18-7c8d-4d84-9542-b143702159e7'"
             echo -e ""
             exit 1
         fi
@@ -448,7 +448,7 @@ func_declare_clonable_repositories(){
         if [ "$SB_ERR" != "f" ]; then
             echo -e "\e[31m"
             echo -e "Something went wrong. Aborting script."
-            echo -e "\e[39mGUID=='86645113-b920-4c56-b859-a363702159e7'"
+            echo -e "\e[39mGUID=='daa6b528-7a03-4b4c-b442-b143702159e7'"
             echo -e ""
             exit 1
         fi
@@ -481,7 +481,7 @@ func_declare_clonable_repositories(){
                             echo "    /tmp"
                             echo ""
                             echo "does not exist. Aborting script."
-                            echo "GUID=='3c7effb3-f587-4c77-b619-a363702159e7'"
+                            echo "GUID=='a84fd13e-5fcc-4f49-a142-b143702159e7'"
                             echo ""
                             cd "$S_FP_ORIG"
                             exit 1 # exit with an error
@@ -527,7 +527,7 @@ func_declare_clonable_repositories(){
             echo ""
             echo -e "\e[31mThe code of this script is flawed\e[39m."
             echo "Aborting script."
-            echo "GUID=='92f7769e-ca12-4573-8089-a363702159e7'"
+            echo "GUID=='a489c92f-25f3-49e7-8342-b143702159e7'"
             echo ""
             cd "$S_FP_ORIG"
             exit 1 # exit with an error
@@ -536,7 +536,7 @@ func_declare_clonable_repositories(){
             echo ""
             echo -e "\e[31mThe code of this script is flawed\e[39m."
             echo "Aborting script."
-            echo "GUID=='54819ea5-a32f-4ba8-8819-a363702159e7'"
+            echo "GUID=='1703f110-8ab5-4a76-9342-b143702159e7'"
             echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             echo ""
             cd "$S_FP_ORIG"
@@ -551,7 +551,7 @@ func_declare_clonable_repositories(){
             echo ""
             echo -e "is\e[31m already in use\e[39m."
             echo "Aborting script."
-            echo "GUID=='136545d9-de32-4ada-ae29-a363702159e7'"
+            echo "GUID=='17e04594-6873-4b44-9442-b143702159e7'"
             echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             echo ""
             cd "$S_FP_ORIG"
@@ -565,7 +565,7 @@ func_declare_clonable_repositories(){
                 echo ""
                 echo -e "is\e[31m already in use\e[39m. It references a broken symlink."
                 echo "Aborting script."
-                echo "GUID=='2126332a-44aa-4a2b-b649-a363702159e7'"
+                echo "GUID=='76705884-c765-4def-8542-b143702159e7'"
                 echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
                 echo ""
                 cd "$S_FP_ORIG"
@@ -596,13 +596,13 @@ func_declare_clonable_repositories(){
                 S_FP_CANDIDATE+="$S_OPTIONAL_SUFFIX_OF_THE_FILE_NAME"
             fi
             func_mmmv_assert_file_path_is_not_in_use_t1 "$S_FP_CANDIDATE" \
-                "b23873ae-1bc4-4e65-bc5a-a363702159e7"
+                "f265e928-c0c5-45b4-b452-b143702159e7"
             printf "%b" "" > $S_FP_CANDIDATE # the echo "" would add a linebreak
             func_mmmv_wait_and_sync_t1
         fi
         func_mmmv_assert_file_exists_t1b \
             "$S_FP_CANDIDATE" \
-            "48f76455-a6d6-43ff-ac29-a363702159e7" "t"
+            "f212875c-c90c-4721-9352-b143702159e7" "t"
         FUNC_MMMV_CREATE_EMPTY_TEMPORARY_FILE_T2_ANSWER="$S_FP_CANDIDATE"
         #----------------------------------------
     } # func_mmmv_create_empty_temporary_file_t2
@@ -624,7 +624,7 @@ func_declare_clonable_repositories(){
             if [ "$?" == "0" ]; then
                 SB_ERR="f"
             else
-                echo "GUID=='4c31b242-9d36-45fe-9839-a363702159e7'"
+                echo "GUID=='43f2bbfa-9093-428b-b242-b143702159e7'"
             fi
         fi
         if [ "$SB_ERR" == "f" ]; then
@@ -673,7 +673,7 @@ func_declare_clonable_repositories(){
         if [ "$SB_ERR" != "f" ]; then
             echo -e "\e[31m"
             echo -e "Something went wrong. Aborting script."
-            echo -e "\e[39mGUID=='1566f4d2-dc3a-4af4-8149-a363702159e7'"
+            echo -e "\e[39mGUID=='f1a4ce06-3cd3-4ee8-a542-b143702159e7'"
             echo -e ""
             rm -f "$S_FP_0"
             rm -f "$S_FP_1"
@@ -719,5 +719,5 @@ func_declare_clonable_repositories(){
     func_main
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="157b2c74-8806-444c-a139-a363702159e7"
+# S_VERSION_OF_THIS_FILE="406d3825-f943-4420-a552-b143702159e7"
 #==========================================================================

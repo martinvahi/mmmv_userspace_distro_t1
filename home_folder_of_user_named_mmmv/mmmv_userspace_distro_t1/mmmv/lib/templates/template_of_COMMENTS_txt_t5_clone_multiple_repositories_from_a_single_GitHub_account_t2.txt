@@ -42,7 +42,7 @@
             echo ""
             echo "but it is expected to be a GUID."
             echo "Aborting script."
-            echo "GUID=='37533cbd-7fec-4a9f-947f-d163702159e7'"
+            echo "GUID=='54c6d652-b044-4754-b863-1213702159e7'"
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             echo ""
             #--------
@@ -57,7 +57,7 @@
             echo ""
             echo "Something went wrong. Error code: $S_ERR_CODE"
             echo -e "\e[31mAborting script. \e[39m"
-            echo "GUID=='308a5b53-8897-4334-b37f-d163702159e7'"
+            echo "GUID=='05057b9f-cb52-4dc3-8d43-1213702159e7'"
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
             echo ""
             #--------
@@ -75,7 +75,7 @@
             echo ""
             echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
             echo "The execution of this Bash script is aborted."
-            echo "GUID=='a130c865-da5e-4b8b-817f-d163702159e7'"
+            echo "GUID=='590e86a5-6de0-4970-a743-1213702159e7'"
             echo ""
             cd "$S_FP_ORIG"
             exit 1;
@@ -98,36 +98,36 @@
         if [ ! -e "$S_FP_ZIPFILE" ]; then
             cd $S_FP_CLONES
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "256c13b3-d8c9-4462-b37f-d163702159e7"
+                "2910ce92-7588-4692-b643-1213702159e7"
             $S_CMD_NICE_FAST git clone --recursive https://github.com/$S_GITHUB_USERNAME/$S_PROJECTNAME.git
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "2e6c88ad-89fb-4c75-817f-d163702159e7"
+                "20448d1e-ec00-403b-8623-1213702159e7"
             func_mmmv_wait_and_sync_t1
             cd $S_FP_CLONES/$S_PROJECTNAME
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "18b736e3-ffdc-4314-b47f-d163702159e7"
+                "44a361a5-b9af-4e06-b923-1213702159e7"
             # The next line 
             $S_CMD_NICE_SLOW find . -name '*.git' | grep -E '[.]git$' | xargs rm -fr  
             # handles also the .git folders of 
             # git repository submodules. The grep is 
             # just for some extra safety.
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "bea4b52f-3c1f-4822-b27f-d163702159e7"
+                "d1e09994-9750-4394-9332-1213702159e7"
             func_mmmv_wait_and_sync_t1
             cd ../ 
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "36d97713-39f4-43c5-bb7f-d163702159e7"
+                "33ed2d43-9ece-40d8-9352-1213702159e7"
             #---------------------------------
             $S_CMD_NICE_SLOW zip -r -n $S_LC_ZIP_LIST_OF_FILES_THAT_ARE_NOT_COMPRESSED \
                 ./$S_PROJECTNAME$S_LC_DOTZIP ./$S_PROJECTNAME
             func_mmmv_assert_error_code_zero_t1 "$?" \
-                "bdaf593f-f7c3-41c4-a57f-d163702159e7"
+                "12e1b753-88ae-40ea-ba12-1213702159e7"
             func_mmmv_wait_and_sync_t1
             S_TMP_0="$S_FP_CLONES/$S_PROJECTNAME"
             if [ "$S_TMP_0" != "$S_FP_HOME" ]; then
                 $S_CMD_NICE_SLOW rm -fr $S_TMP_0
                 func_mmmv_assert_error_code_zero_t1 "$?" \
-                    "648be755-507a-4391-867f-d163702159e7"
+                    "13909e24-5e39-4f9d-a552-1213702159e7"
                 func_mmmv_wait_and_sync_t1
             else
                 echo ""
@@ -136,7 +136,7 @@
                 echo "    S_TMP_0==$S_TMP_0"
                 echo ""
                 echo "Aborting script."
-                echo "GUID=='d42feb5b-432f-4d2e-897f-d163702159e7'"
+                echo "GUID=='674897ab-f270-4199-a7d3-1213702159e7'"
                 echo ""
                 exit 1
             fi
@@ -157,7 +157,7 @@
             fi
             echo -e "    \e[33m$S_FP_ZIPFILE\e[39m"
             echo -e "\e[31malready exists\e[39m."
-            echo "GUID=='01263c48-5f2e-4a6e-947f-d163702159e7'"
+            echo "GUID=='1dec78a3-87f4-40ab-b352-1213702159e7'"
             echo ""
             exit 1
         fi
@@ -168,7 +168,7 @@
         #------------------------------------------------------------------
         cd $S_FP_DIR
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "4c19eb21-1e7c-4081-a47f-d163702159e7"
+            "65d2642e-6002-4223-b682-1213702159e7"
         local S_TMP_0="_"
         local S_TMP_1="_old_$RANDOM$S_TMP_0$RANDOM$S_TMP_0$RANDOM$S_TMP_0$RANDOM"
         local S_FP_THISSCRIPT_OLD="$S_FP_BASH$S_TMP_1"
@@ -177,23 +177,23 @@
         #------------------------------------------------------------------
         local S_0="on `date | tr -d '\n' `" 
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "5131cc84-e3c9-4afb-a27f-d163702159e7"
+            "14c785f3-8368-4c24-9242-1213702159e7"
         cat $S_FP_BASH | \
             $S_CMD_GNU_SED -e "s/[#][[:blank:]]on.*\$/# $S_0/g" > $S_FP_THISSCRIPT_NEW
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "174c066d-65bd-44de-917f-d163702159e7"
+            "366627d1-13de-43a3-aa52-1213702159e7"
         func_mmmv_wait_and_sync_t1
         rm $S_FP_BASH 
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "9ed83523-1fa7-4e84-b17f-d163702159e7"
+            "3d7c0b31-9732-4070-a232-1213702159e7"
         func_mmmv_wait_and_sync_t1
         mv $S_FP_THISSCRIPT_NEW  $S_FP_BASH
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "eee1a354-1b66-4332-b17f-d163702159e7"
+            "45540918-80a3-43cf-b322-1213702159e7"
         func_mmmv_wait_and_sync_t1
         chmod 0700 $S_FP_BASH
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "61ca973d-a0f1-42ef-927f-d163702159e7"
+            "127e9102-319c-47c5-9842-1213702159e7"
         func_mmmv_wait_and_sync_t1
         #------------------------------------------------------------------
     } # func_update_script_running_timestamp
@@ -202,7 +202,7 @@
         #------------------------------------------------------------------
         mkdir -p $S_FP_CLONES
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "3a6d9540-18bb-4e86-827f-d163702159e7"
+            "a493bc6d-ecf1-4c20-8042-1213702159e7"
         #-----------------------------------------
         local S_0="42"
         #-----------------------------------------
@@ -213,19 +213,19 @@
             $S_CMD_GNU_SED -e 's/\$/\" ; /g' | \
             tr -d '\n' `"
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "11f955d4-ab67-493e-827f-d163702159e7"
+            "50268f25-6ba4-43ce-8422-1213702159e7"
         eval "$S_0"
         #------------------------------------------------------------------
         func_update_script_running_timestamp
         chmod -f -R 0700 $S_FP_CLONES
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "3335d82f-c76c-4707-b17f-d163702159e7"
+            "da441a64-a36f-4b08-9332-1213702159e7"
         func_mmmv_wait_and_sync_t1
         #------------------------------------------------------------------
         echo -e ""
         echo -e "\e[32mCloning and ZIPing complete\e[39m."
         echo -e "Thank You for using this script."
-        echo "GUID=='bbcae032-3f07-4b02-a47f-d163702159e7'"
+        echo "GUID=='02b63a47-b0c0-4711-a142-1213702159e7'"
         echo ""
         #------------------------------------------------------------------
     } # func_extract_list_and_clone_them 
@@ -250,7 +250,7 @@
                 echo -e "This Bash script"
                 echo -e "\e[31mhas not been designed for this operating system\e[39m."
                 echo "Aborting script."
-                echo "GUID=='63c1e952-177f-4c49-a57f-d163702159e7'"
+                echo "GUID=='a02c8c6d-bfbd-476f-9a32-1213702159e7'"
                 echo ""
                 exit 1
             fi 
@@ -264,5 +264,5 @@
 # on Thu Apr  3 03:13:26 EEST 2025
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="465d5740-899b-41ff-947f-d163702159e7"
+# S_VERSION_OF_THIS_FILE="3b1627c2-cc93-4d19-9552-1213702159e7"
 #==========================================================================
