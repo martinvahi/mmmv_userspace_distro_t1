@@ -1,0 +1,9 @@
+
+Some GCC versions can compile
+
+    ./GNU_M4_v_1_4_19
+
+and some other GCC versions can compile the 
+
+    ./GNU_M4_v_1_4_20
+
