@@ -608,7 +608,7 @@
 :                en
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='a082ff85-b193-4361-9af4-e050504059e7'"
+:                throw "The vimscript needs to be improved. GUID=='e518433c-04b3-4abb-822c-2152a03069e7'"
 :                en
 :        endwhile
 :       "---------------
@@ -2066,7 +2066,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but 
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='995e6a48-14ee-4c12-83f4-e050504059e7'"
+:        throw "The vimscript is flawed. GUID=='2cf8db47-91a2-4e78-b42c-2152a03069e7'"
 :        en
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2174,6 +2174,25 @@
 :"       echo "  # ### ahaa " | sed -e 's/^\([[:blank:]]*\)[\#]/\1/g' | sed -e 's/^\([[:blank:]]*\)/\1\#/g' | sed -e 's/^\([[:blank:]]*\)\([[:blank:]][\#]\)/\1x\#y /g'
 :    exec s_vimscript_command
 :endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ruby
+:"-------------------------------------------------------------------------
+:fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1(i_max_line_width)
+:"   The sed commands at the next line
+:    let s_vimscript_command="'a,'b! sed -e 's/^\\([[:blank:]]*\\)ar_s[[:blank:]]*[<]\\{2\\}[[:blank:]]*[\"]/\\1/g' | sed -e 's/\\([[:blank:]]*\\)[\\\\]n[\"]\$/\\1/g' | gsed -e 's/^\\([[:blank:]]*\\)ar_s[[:blank:]]*[<]\\{2\\}[[:blank:]]*[\\\$]kibuvits_[^_]\\+_lc_linebreak[[:blank:]]*\$/\\1/g' | par_text_formatter ".a:i_max_line_width." | sed -e 's/^\\([[:blank:]]*\\)/\\1ar_s<<\"/g' | sed -e 's/\\([[:blank:]]*\\)\$/\\1\\\\n\"/g' | gsed -e 's/^\\([[:blank:]]*\\)ar_s[[:blank:]]*[<]\\{2\\}[[:blank:]]*[\"'\"'\"'][[:blank:]]*[\\\\]n[[:blank:]]*[\"'\"'\"'][[:blank:]]*\$/\\1ar_s<<\$kibuvits_X_lc_linebreak/g' "
+:"   have been tested to work with the GNU sed and the BSD sed. If the
+:"   par_text_formatter or the sed is not on PATH, then Vim displays
+:"   the error message from the failing Bash command, which includes
+:"   a statement that the command could not be found from PATH.  
+:"   Bash testlines:
+:"       echo "  ar_s << \"Foo\\n\"" | sed -e 's/^\([[:blank:]]*\)ar_s[[:blank:]]*[<]\{2\}[[:blank:]]*["]/\1/g' | sed -e 's/\([[:blank:]]*\)[\\]n["]$/\1/g'
+:"       echo "  Bar " | sed -e 's/^\([[:blank:]]*\)/\1ar_s<<"/g' | sed -e 's/\([[:blank:]]*\)$/\1\\n"/g'
+:"       echo "  ar_s<<\$kibuvits_krl171bt4_lc_linebreak " | gsed -e 's/^\([[:blank:]]*\)ar_s[[:blank:]]*[<]\{2\}[[:blank:]]*[\$]kibuvits_[^_]\+_lc_linebreak[[:blank:]]*$/\1ar_s<<""/g'
+:"       echo "  ar_s<<\$kibuvits_krl171bt4_lc_linebreak " | gsed -e 's/^\([[:blank:]]*\)ar_s[[:blank:]]*[<]\{2\}[[:blank:]]*[\$]kibuvits_[^_]\+_lc_linebreak[[:blank:]]*$/\1X/g'
+:"       echo '  ar_s<<"" ' | gsed -e 's/^\([[:blank:]]*\)ar_s[[:blank:]]*[<]\{2\}[[:blank:]]*["'"'"'][[:blank:]]*["'"'"'][[:blank:]]*$/\1ar_s<<$kibuvits_X_lc_linebreak/g'
+:"       echo "  ar_s<<'' " | gsed -e 's/^\([[:blank:]]*\)ar_s[[:blank:]]*[<]\{2\}[[:blank:]]*["'"'"'][[:blank:]]*["'"'"'][[:blank:]]*$/\1ar_s<<$kibuvits_X_lc_linebreak/g'
+:"       echo '  ar_s<<" \n " ' | gsed -e 's/^\([[:blank:]]*\)ar_s[[:blank:]]*[<]\{2\}[[:blank:]]*["'"'"'][[:blank:]]*[\\]n[[:blank:]]*["'"'"'][[:blank:]]*$/\1ar_s<<$kibuvits_X_lc_linebreak/g'
+:"       echo "  " | gsed -e 's/^\([[:blank:]]*\)*$/\1ar_s<<$kibuvits_X_lc_linebreak/g'
+:    exec s_vimscript_command
+:endfun "MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1
 :"-------------------------------------------------------------------------
 :fun! MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Windows_and_DOS_BAT(i_max_line_width)
 :"   The sed command at the next line
@@ -2480,10 +2499,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='26d67214-49a9-496d-84f4-e050504059e7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='1dbae221-9755-4c88-892c-2152a03069e7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='4c002051-95b8-4f5c-a3f4-e050504059e7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='865ffb37-c824-4140-822c-2152a03069e7'"
 :                en
 :            en
 :           "---------------
@@ -2641,6 +2660,31 @@
 :command -nargs=0 RFCRuby180 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ruby("180")
 :command -nargs=0 RFCRuby190 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ruby("190")
 :command -nargs=0 RFCRuby200 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Ruby("200")
+:"-------------------------------------------------------------------------
+:" The prefix 'RFKRLt1ars' has been derived from the phrase: 'ReFormat Kibuvits Ruby Library ar_s type 1'.
+:command -nargs=0 RFKRLt1ars32  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("32")
+:command -nargs=0 RFKRLt1ars42  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("42")
+:command -nargs=0 RFKRLt1ars52  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("52")
+:command -nargs=0 RFKRLt1ars62  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("62")
+:command -nargs=0 RFKRLt1ars72  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("72")
+:command -nargs=0 RFKRLt1ars34  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("34")
+:command -nargs=0 RFKRLt1ars44  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("44")
+:command -nargs=0 RFKRLt1ars54  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("54")
+:command -nargs=0 RFKRLt1ars64  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("64")
+:command -nargs=0 RFKRLt1ars74  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("74")
+:command -nargs=0 RFKRLt1ars80  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("80")
+:command -nargs=0 RFKRLt1ars90  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("90")
+:command -nargs=0 RFKRLt1ars100 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("100")
+:command -nargs=0 RFKRLt1ars110 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("110")
+:command -nargs=0 RFKRLt1ars120 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("120")
+:command -nargs=0 RFKRLt1ars130 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("130")
+:command -nargs=0 RFKRLt1ars140 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("140")
+:command -nargs=0 RFKRLt1ars150 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("150")
+:command -nargs=0 RFKRLt1ars160 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("160")
+:command -nargs=0 RFKRLt1ars170 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("170")
+:command -nargs=0 RFKRLt1ars180 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("180")
+:command -nargs=0 RFKRLt1ars190 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("190")
+:command -nargs=0 RFKRLt1ars200 call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_KRL_ar_s_t1("200")
 :"-------------------------------------------------------------------------
 :" The prefix 'RFC' has been derived from the phrase: 'ReFormat Comment'.
 :command -nargs=0 RFCBAT32  call MV_reformat_a_to_b_with_par_text_formatter_and_filter_through_sed_Windows_and_DOS_BAT("32")
@@ -2892,5 +2936,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="14260141-944e-41c4-95f4-e050504059e7"
+:" S_VERSION_OF_THIS_FILE="a6466014-84a4-40a1-942c-2152a03069e7"
 :"=========================================================================

@@ -18,34 +18,33 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='226920b4-c8c1-493f-85aa-42f1600178e7'"
+    echo "GUID=='5d94ccb2-e8d0-43f9-9134-6200405069e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
-
 #--------------------------------------------------------------------------
 # With the exception of placing the viewnior first, 
 # the image viewing programs are approximately ordered so
 # that the lightweight programs are preferred to the heavyweight programs.
 SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="t"
 if [ "$SB_VIEWNIOR_EXISTS_ON_PATH" == "t" ]; then
-    alias mmmv_image_viewer="nice -n 5 viewnior --fullscreen "
+    alias mmmv_image_viewer="$S_FP_NICE -n 5 viewnior --fullscreen "
     SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
 else
     if [ "$SB_XLOADIMAGE_EXISTS_ON_PATH" == "t" ]; then
-        alias mmmv_image_viewer="nice -n 5 xloadimage "
+        alias mmmv_image_viewer="$S_FP_NICE -n 5 xloadimage "
         SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
     else
         if [ "$SB_XVIEW_EXISTS_ON_PATH" == "t" ]; then
-            alias mmmv_image_viewer="nice -n 5 xview "
+            alias mmmv_image_viewer="$S_FP_NICE -n 5 xview "
             SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
         else
             if [ "$SB_FEH_EXISTS_ON_PATH" == "t" ]; then
-                alias mmmv_image_viewer="nice -n 5 feh "
+                alias mmmv_image_viewer="$S_FP_NICE -n 5 feh "
                 SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
             else
                 if [ "$SB_MIRAGE_EXISTS_ON_PATH" == "t" ]; then
-                    alias mmmv_image_viewer="nice -n 5 mirage "
+                    alias mmmv_image_viewer="$S_FP_NICE -n 5 mirage "
                     SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
                 fi
             fi
@@ -55,15 +54,15 @@ fi
 #---------------
 if [ "$SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER" == "t" ]; then
     if [ "$SB_GEEQIE_EXISTS_ON_PATH" == "t" ]; then
-        alias mmmv_image_viewer="nice -n 5 geeqie "
+        alias mmmv_image_viewer="$S_FP_NICE -n 5 geeqie "
         SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
     else
         if [ "$SB_SXIV_EXISTS_ON_PATH" == "t" ]; then
-            alias mmmv_image_viewer="nice -n 5 sxiv "
+            alias mmmv_image_viewer="$S_FP_NICE -n 5 sxiv "
             SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
         else
             if [ "$SB_GPICVIEW_EXISTS_ON_PATH" == "t" ]; then
-                alias mmmv_image_viewer="nice -n 5 gpicview "
+                alias mmmv_image_viewer="$S_FP_NICE -n 5 gpicview "
                 SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
             fi
         fi
@@ -72,19 +71,19 @@ fi
 #---------------
 if [ "$SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER" == "t" ]; then
     if [ "$SB_NOMACS_EXISTS_ON_PATH" == "t" ]; then
-        alias mmmv_image_viewer="nice -n 5 nomacs "
+        alias mmmv_image_viewer="$S_FP_NICE -n 5 nomacs "
         SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
     else
         if [ "$SB_EOM_EXISTS_ON_PATH" == "t" ]; then
-            alias mmmv_image_viewer="nice -n 5 eom "
+            alias mmmv_image_viewer="$S_FP_NICE -n 5 eom "
             SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
         else
             if [ "$SB_MCOMIX_EXISTS_ON_PATH" == "t" ]; then
-                alias mmmv_image_viewer="nice -n 5 mcomix "
+                alias mmmv_image_viewer="$S_FP_NICE -n 5 mcomix "
                 SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
             else
                 if [ "$SB_EOG_EXISTS_ON_PATH" == "t" ]; then
-                    alias mmmv_image_viewer="nice -n 5 eog "
+                    alias mmmv_image_viewer="$S_FP_NICE -n 5 eog "
                     SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
                 fi
             fi
@@ -94,11 +93,11 @@ fi
 #---------------
 if [ "$SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER" == "t" ]; then
     if [ "$SB_RISTRETTO_EXISTS_ON_PATH" == "t" ]; then
-        alias mmmv_image_viewer="nice -n 5 ristretto "
+        alias mmmv_image_viewer="$S_FP_NICE -n 5 ristretto "
         SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
     else
         if [ "$SB_GWENVIEW_EXISTS_ON_PATH" == "t" ]; then
-            alias mmmv_image_viewer="nice -n 5 gwenview "
+            alias mmmv_image_viewer="$S_FP_NICE -n 5 gwenview "
             SB_FAILED_TO_INIT_ALIAS_MMMV_IMAGE_VIEWER="f"
         fi
     fi
@@ -115,7 +114,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
                 echo "    viewnior, xloadimage, xview, feh, mirage, geeqie, sxiv, "
                 echo "    gpicview, nomacs, eom, mcomix, eog, ristretto, gwenview "
                 echo ""
-                echo "GUID=='9ff8ee4c-b520-4ebc-95aa-42f1600178e7'"
+                echo "GUID=='12e55f2e-2980-486e-b634-6200405069e7'"
                 echo ""
                 # TODO: add some Java image viewer as the very last fallback option.
             fi
@@ -123,7 +122,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" != "f" ]; then
                 echo ""
                 echo "The code of this Bash script is flawed."
-                echo "GUID=='45e94913-1537-4ccd-92aa-42f1600178e7'"
+                echo "GUID=='db874331-712e-4d2d-9134-6200405069e7'"
                 echo ""
             fi
         fi
@@ -132,5 +131,5 @@ fi
 #--------------------------------------------------------------------------
 func_mmmv_wait_and_sync_t1 # Just to be sure.
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="5a6494d5-e7e6-4592-94aa-42f1600178e7"
+# S_VERSION_OF_THIS_FILE="ffdfa354-5016-469e-b534-6200405069e7"
 #==========================================================================
