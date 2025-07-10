@@ -1,0 +1,28 @@
+
+#--------------------------------------------------------------------------
+# https://stackoverflow.com/questions/36724209/disable-beep-in-wsl-terminal-on-windows-10
+# archival copy: https://archive.ph/Kiaot
+# https://ss64.com/bash/syntax-inputrc.html
+    #set bell-style none
+    set bell-style audible
+    #set bell-style visible
+#--------------------------------------------------------------------------
+# On Windows Subsystem for Linux the bell sound is the
+# standard Windows "critical stop" sound, which can be
+# configured from Windows settings,
+# local search engine search phrase "Change System Sounds",
+# to use a custom sound file.
+#
+# From Bash the way to call the bell sound is:
+#
+#     # https://unix.stackexchange.com/questions/1974/how-do-i-make-my-pc-speaker-beep
+#     # archival copy: https://archive.ph/NFlyI
+#     echo -ne '\007'
+#
+#==========================================================================
+# Author of the initial template of this file: Martin.Vahi@softf1.com
+# This file is in public domain.
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+# S_VERSION_OF_THIS_FILE="c594499b-b674-428f-833e-a323907079e7"
+#==========================================================================

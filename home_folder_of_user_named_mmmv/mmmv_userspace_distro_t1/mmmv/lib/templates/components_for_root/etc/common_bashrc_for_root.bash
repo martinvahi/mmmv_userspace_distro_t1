@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-#========================================================================== 
+#==========================================================================
 # Initial author of this file: Martin.Vahi@softf1.com
 # This file is in public domain.
 #
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
 #
-# This script is meant to be part of the 
+# This script is meant to be part of the
 #
 #     /root/.bashrc
 #
-# by 
+# by
 #
 # #--------------------------------------------------------------------------
 # S_FP_0="/root/mmmv_userspace_distro_t1_components_for_root/etc/common_bashrc_for_root.bash"
@@ -22,7 +22,7 @@
 #         echo "    $S_FP_0"
 #         echo ""
 #         echo "is a symlink, but for safety reasons a file is expected."
-#         echo "GUID=='43fab735-3b34-4d76-a938-531321c129e7'"
+#         echo "GUID=='8c65fab5-8e8b-476c-ae4a-e2c061b169e7'"
 #         echo ""
 #     else
 #         if [ -d "$S_FP_0" ]; then
@@ -32,7 +32,7 @@
 #                 echo "    $S_FP_0"
 #                 echo ""
 #                 echo "is a folder, but a file is expected."
-#                 echo "GUID=='f3583cf6-e673-450f-8128-531321c129e7'"
+#                 echo "GUID=='17507981-07a1-4dda-a92a-e2c061b169e7'"
 #                 echo ""
 #         else
 #             source "$S_FP_0"
@@ -49,26 +49,26 @@
 #     else
 #         echo "is missing."
 #     fi
-#     echo "GUID=='3b837033-7d0b-41a1-a117-531321c129e7'"
+#     echo "GUID=='13ddc21f-84ed-460e-823a-e2c061b169e7'"
 #     echo ""
 # fi
 # #--------------------------------------------------------------------------
 #
 # TODO: A lot of the code in this file is currently Linux specific.
 #       Split this file into multiple files and add/copy
-#       operating system detection code from 
+#       operating system detection code from
 #       the userspace side.
 #
-#========================================================================== 
+#==========================================================================
 S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #--------------------------------------------------------------------------
 # Configuration:
 #--------------------------------------------------------------------------
 
-# For some reason the "-mtune=native" fails on 
-# Raspberry Pi 3, Raspbian. 
+# For some reason the "-mtune=native" fails on
+# Raspberry Pi 3, Raspbian.
 #     https://bugs.ruby-lang.org/issues/13509
-#     (archival copy: https://archive.is/llUWb ) 
+#     (archival copy: https://archive.is/llUWb )
 
 MMMV_CFLAGS_COMMON=" -ftree-vectorize -O3 "
 
@@ -113,7 +113,7 @@ if [ "$CXXFLAGS" == "" ]; then
     export CXXFLAGS=" $MMMV_CFLAGS_TEMPLATE "
 fi
 
-# The clang and clang++ seem to introduce 
+# The clang and clang++ seem to introduce
 # linking problems on Raspberry Pi 3, Raspbian.
 # A general rule is that binaries produced by
 # different C/C++ compilers can not be linked together.
@@ -132,7 +132,7 @@ fi
 if [ "`whoami`" != "root" ]; then
     echo ""
     echo "This script is meant to be executed only by the root user."
-    echo "GUID=='dd5f110f-9351-4b23-ac27-531321c129e7'"
+    echo "GUID=='384438d2-d677-4528-913a-e2c061b169e7'"
     echo ""
 fi
 #--------------------------------------------------------------------------
@@ -185,23 +185,23 @@ else
         echo -e "\e[31mThe operating system is neither Linux, nor BSD. \e[39m"
         echo "The mmmv aliases are probably not tested "
         echo "with the current operating system."
-        echo "GUID=='5d1ed3f2-731c-4d87-a027-531321c129e7'"
+        echo "GUID=='3edc8634-bdba-487a-875a-e2c061b169e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
 fi
 #--------------------------------------------------------------------------
 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
-    local S_CONSOLE_PROGRAM_NAME="$1" 
-    local S_GUID_CANDIDATE="$2" 
+    local S_CONSOLE_PROGRAM_NAME="$1"
+    local S_GUID_CANDIDATE="$2"
     #--------------------
     if [ "$S_GUID_CANDIDATE" == "" ]; then
         echo ""
         echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
         echo "but it is expected to be a GUID."
-        echo "GUID=='596e2c62-cd2c-4fd1-9557-531321c129e7'"
+        echo "GUID=='15371125-6ca8-4e58-973a-e2c061b169e7'"
         echo ""
-    fi 
+    fi
     #--------------------
     echo ""
     if [ "$S_CONSOLE_PROGRAM_NAME" != "" ]; then
@@ -209,7 +209,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='402fef25-c437-439d-8757-531321c129e7'"
+        echo "GUID=='af1903e8-5e03-4eea-8e2a-e2c061b169e7'"
     else
         echo -e "\e[31mThe value of the S_CONSOLE_PROGRAM_NAME is an empty string\e[39m,"
         echo "but it is expected to be a console program name, which "
@@ -217,49 +217,49 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='43ec6de2-6ae7-46b7-9537-531321c129e7'"
-    fi 
+        echo "GUID=='232ef430-362a-4117-9c9a-e2c061b169e7'"
+    fi
     echo ""
     #--------------------
 } # func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1
 #--------------------------------------------------------------------------
 if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
     if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
-       alias mmmv_cp_f_R_preserve_file_attributes_t1="nice -n 14 cp -f -R --preserve=all --no-dereference " 
+       alias mmmv_cp_f_R_preserve_file_attributes_t1="nice -n 14 cp -f -R --preserve=all --no-dereference "
     fi
 fi
 #--------------------------------------------------------------------------
 SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED="f"
 S_FP_0="/root/mmmv_userspace_distro_t1_components_for_root/lib/_bashrc_subpart_func_core_t1_for_root"
-if [ -e "$S_FP_0" ]; then 
-    if [ -d "$S_FP_0" ]; then 
+if [ -e "$S_FP_0" ]; then
+    if [ -d "$S_FP_0" ]; then
         echo ""
         echo "/root/.bashrc subpart, the "
         echo ""
         echo "    $S_FP_0"
         echo ""
-        if [ -h "$S_FP_0" ]; then 
+        if [ -h "$S_FP_0" ]; then
             echo "is a symlink to a folder, but a file is expected."
         else
             echo "is a folder, but a file is expected."
         fi
-        echo "GUID=='20e65cc4-60a2-4957-b237-531321c129e7'"
+        echo "GUID=='3c3422e3-331e-4e12-b83a-e2c061b169e7'"
         echo ""
     else
-        if [ -h "$S_FP_0" ]; then 
+        if [ -h "$S_FP_0" ]; then
             echo ""
             echo "/root/.bashrc subpart, the "
             echo ""
             echo "    $S_FP_0"
             echo ""
             echo "is a symlink to a file, but for safety reasons a file is expected."
-            echo "GUID=='480180a4-5ef7-4459-b616-531321c129e7'"
+            echo "GUID=='56715b24-a60b-459e-b31a-e2c061b169e7'"
             echo ""
         else
-            # The value of the SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED is 
-            # meant to be upgraded at the 
+            # The value of the SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED is
+            # meant to be upgraded at the
             source "$S_FP_0"
-            if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" != "t" ]; then 
+            if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" != "t" ]; then
                 echo ""
                 echo "There's a flaw in the "
                 echo ""
@@ -268,7 +268,7 @@ if [ -e "$S_FP_0" ]; then
                 echo "    SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED==\"$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED\""
                 echo ""
                 echo "but it is expected to be \"t\"."
-                echo "GUID=='9e4c71ee-0c14-4885-9a26-531321c129e7'"
+                echo "GUID=='4138b772-4b7a-4444-934a-e2c061b169e7'"
                 echo ""
             fi
         fi
@@ -279,29 +279,29 @@ else
     echo ""
     echo "    $S_FP_0"
     echo ""
-    if [ -h "$S_FP_0" ]; then 
+    if [ -h "$S_FP_0" ]; then
         echo "is a broken symlink."
     else
         echo "is missing."
     fi
-    echo "GUID=='1d7bd851-56c5-432f-bc26-531321c129e7'"
+    echo "GUID=='4cbf4d53-a94b-488b-ac4a-e2c061b169e7'"
     echo ""
 fi
 
 #--------------------------------------------------------------------------
 export MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG="/home/mmmv/mmmv_userspace_distro_t1/mmmv/lib/templates/components_for_root"
 export MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_DEST="/root/mmmv_userspace_distro_t1_components_for_root"
-if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then 
+if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
     SB_VERIFICATION_FAILED="t"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG" \
-        "43a6b5ec-0001-4487-9e28-531321c129e7"
+        "3d21e4d5-e88a-4508-8c4a-e2c061b169e7"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_admin_root_overwrite_root_bashrc_subcomponents_t1="\
         if [ \"/root/mmmv_userspace_distro_t1_components_for_root\" != \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_DEST\" ]; then \
             echo '' ; \
             echo 'This script is flawed.' ; \
-            echo \"GUID=='c335e7bb-3d60-4719-bb26-531321c129e7'\" ; \
+            echo \"GUID=='36931b32-3bac-4276-983a-e2c061b169e7'\" ; \
             echo '' ; \
         fi ; \
         if [ -e \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG\" ]; then \
@@ -324,16 +324,16 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
             echo '    $MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG ' ; \
             echo '' ; \
             echo 'does not exist.' ; \
-            echo \"GUID=='21a3c5f2-54fe-409e-8856-531321c129e7'\" ; \
+            echo \"GUID=='3694bf23-7efd-4542-b21a-e2c061b169e7'\" ; \
             echo '' ; \
         fi "
     fi
 fi
 #--------------------------------------------------------------------------
 # A citation from
-# 
+#
 #     https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall/
-# 
+#
 #     ---citation--start-----
 #     Even though pinging an external host seems like
 #     something that would only need to traverse the
@@ -346,16 +346,16 @@ fi
 #     SSH is a common protocol that people forget
 #     to allow on both chains.
 #     ---citation--end-------
-# 
+#
 # Some iptables related links:
-# 
+#
 #     https://www.cyberciti.biz/tips/block-outgoing-network-access-for-a-single-user-from-my-server-using-iptables.html
-#     (archival copy: https://archive.is/l8EYe ) 
-# 
+#     (archival copy: https://archive.is/l8EYe )
+#
 #     ---citation--start-----
 #     #Create a new chain
 #     iptables --new-chain chk_apache_user
-#      
+#
 #     # use new chain to process packets generated by apache
 #     iptables -A OUTPUT -m owner --uid-owner apache -j chk_apache_user
 #     ---citation--end-------
@@ -369,7 +369,7 @@ if [ "$SB_IPTABLES_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_admin_firewall_iptables_create_chain_of_filters="iptables --new-chain " # <chain name>
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "iptables" "eaf4ba11-16ba-474f-8938-531321c129e7"
+            "iptables" "181dc4b4-0225-4e2d-ad2a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -379,7 +379,7 @@ if [ "$SB_FIND_EXISTS_ON_PATH" == "" ]; then
         SB_FIND_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "find" "03ee126b-8446-43e2-b237-531321c129e7"
+            "find" "f1a0bde8-10ff-4845-955a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -418,13 +418,13 @@ if [ "$SB_UFW_EXISTS_ON_PATH" == "" ]; then
                     SB_UFW_EXISTS_ON_PATH="t"
                 else
                     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                        "gufw" "046614a9-2cd6-413e-9417-531321c129e7"
+                        "gufw" "1e054d05-b038-42f3-a71a-e2c061b169e7"
                 fi
             fi
             #--------
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "ufv" "55d4ebca-a305-45f7-beb7-531321c129e7"
+                "ufv" "13d3c7b1-149a-4c53-942a-e2c061b169e7"
         fi
         #------------------------------------------------------------------
     fi
@@ -436,7 +436,7 @@ if [ "$SB_APT_EXISTS_ON_PATH" == "" ]; then
         SB_APT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "apt" "20666485-f56a-45d5-a727-531321c129e7"
+            "apt" "3dc3fd55-1f6c-4cf8-b82a-e2c061b169e7"
     fi
 fi
 #----------------
@@ -447,7 +447,7 @@ if [ "$SB_GREP_EXISTS_ON_PATH" == "" ]; then
         alias grep='grep --color=auto '
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "grep" "852aa275-1ed6-4433-8427-531321c129e7"
+            "grep" "3c3502d2-766a-46ae-a51a-e2c061b169e7"
     fi
 fi
 #--------------------
@@ -457,7 +457,7 @@ if [ "$SB_SED_EXISTS_ON_PATH" == "" ]; then
         SB_SED_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "sed" "91e48b45-0e0b-4b0b-8e37-531321c129e7"
+            "sed" "14515573-4d25-4134-b52a-e2c061b169e7"
     fi
 fi
 #--------------------
@@ -467,7 +467,7 @@ if [ "$SB_GAWK_EXISTS_ON_PATH" == "" ]; then
         SB_GAWK_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gawk" "55271113-16f5-431e-98c7-531321c129e7"
+            "gawk" "15158542-032a-48c6-b53a-e2c061b169e7"
     fi
 fi
 #--------------------
@@ -477,7 +477,7 @@ if [ "$SB_XARGS_EXISTS_ON_PATH" == "" ]; then
         SB_XARGS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xargs" "3e3309c2-9b07-40df-b336-531321c129e7"
+            "xargs" "0338cb98-8b98-4445-883a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -496,8 +496,8 @@ if [ "$SB_APTGET_EXISTS_ON_PATH" == "" ]; then
                     #--------
                     alias mmmv_admin_uninstall_profiling_packages="apt-get remove \`apt installed 2>/dev/null | grep -E \"[-]prof[/]\" | sed -e 's/\\/.\\+//g' | xargs echo \` ; sync; wait; sync; "
                     #--------
-                    alias mmmv_ls_packages_installed_t1="nice -n 10 apt installed 2>/dev/null ; sync ;" 
-                    # sync is to stay consistent with the other 
+                    alias mmmv_ls_packages_installed_t1="nice -n 10 apt installed 2>/dev/null ; sync ;"
+                    # sync is to stay consistent with the other
                     #--------
                     if [ "$SB_GAWK_EXISTS_ON_PATH" == "t" ]; then
                         #--------------------
@@ -523,7 +523,7 @@ if [ "$SB_APTGET_EXISTS_ON_PATH" == "" ]; then
         #------------------------------------------------------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "apt-get" "921e86b7-c565-438d-a756-531321c129e7"
+            "apt-get" "56a42ae3-39da-40f6-812a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -534,7 +534,7 @@ if [ "$SB_APTITUDE_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_aptitude_search="nice -n 2 aptitude search "
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "aptitude" "44260b34-287b-43f7-b756-531321c129e7"
+            "aptitude" "15022404-7285-4a1e-904a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -545,7 +545,7 @@ if [ "$SB_SERVICE_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_ls_daemons_Linux_service_t1="nice -n 4 service --status-all  "
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "service" "4e54c9d3-6bb6-48da-9d36-531321c129e7"
+            "service" "4cac9b21-7f5a-44bd-a25a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -562,7 +562,7 @@ if [ "$SB_SYSTEMCTL_EXISTS_ON_PATH" == "" ]; then
         #----------------
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "systemctl" "c2c502ea-08a8-4532-afd6-531321c129e7"
+        #         "systemctl" "83fcd23a-b36a-4658-952a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -572,7 +572,7 @@ if [ "$SB_DU_EXISTS_ON_PATH" == "" ]; then
         SB_DU_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "du" "3a330d33-9938-40c9-a946-531321c129e7"
+            "du" "5d58de17-3b12-4cb2-845a-e2c061b169e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -602,7 +602,7 @@ fi
 #
 # are
 #
-#     noop deadline [cfq] 
+#     noop deadline [cfq]
 #
 # and
 #
@@ -613,128 +613,164 @@ fi
 #     echo "thatdoesnotpossiblyexist" > /sys/block/sda/queue/scheduler
 #
 # will keep the existing scheduling mode and it will give an error messge.
-# To keep the root ~/.bashrc as fast and robust as possible, the use of 
-# console programs during the execution of the ~/.bashrc 
+# To keep the root ~/.bashrc as fast and robust as possible, the use of
+# console programs during the execution of the ~/.bashrc
 # tends to be avoided here.
 #----------------
 S_TMP_0="/sys/block/sda/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sda="nice -n 5 cat $S_TMP_0 " 
-    alias mmmv_admin_set_sda_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sda="nice -n 5 cat $S_TMP_0 "
+    alias mmmv_admin_set_sda_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sda_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sda_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sda_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sda_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sda_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sda_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sda_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdb/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdb="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdb_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdb="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdb_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdb_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdb_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdb_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdb_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdb_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdb_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdb_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdc/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdc="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdc_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdc="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdc_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdc_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdc_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdc_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdc_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdc_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdc_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdc_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdd/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdd="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdd_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdd="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdd_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdd_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdd_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdd_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdd_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdd_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdd_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdd_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sde/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sde="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sde_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sde="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_noop_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_noop_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
+    alias mmmv_admin_set_noop_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sde_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sde_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sde_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sde_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sde_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdf/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdf="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdf_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdf="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdf_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdf_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdf_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdf_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdf_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdf_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdf_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdf_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdg/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdg="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdg_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdg="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdg_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdg_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdg_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdg_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdg_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdg_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdg_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdg_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdh/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdh="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdh_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdh="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdh_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdh_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdh_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdh_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdh_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdh_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdh_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdh_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdi/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdi="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdi_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdi="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdi_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdi_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdi_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdi_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdi_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdi_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdi_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdi_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/sdj/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_sdj="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_sdj_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_sdj="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_sdj_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdj_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_sdj_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_sdj_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdj_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_sdj_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_sdj_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_sdj_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/mmcblk0/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_mmcblk0="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_mmcblk0_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_mmcblk0="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_mmcblk0_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_mmcblk0_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk0_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk0_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_mmcblk0_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk0_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk0_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_mmcblk0_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #----------------
 S_TMP_0="/sys/block/mmcblk1/queue/scheduler"
 if [ -e "$S_TMP_0" ]; then
-    alias mmmv_ls_scheduler_mmcblk1="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq] 
-    alias mmmv_admin_set_mmcblk1_scheduler_noop="echo \"noop\" > $S_TMP_0 "
+    alias mmmv_ls_scheduler_mmcblk1="nice -n 5 cat $S_TMP_0 " # noop deadline [cfq]
+    alias mmmv_admin_set_mmcblk1_scheduler_adios="echo \"adios\" > $S_TMP_0 "
+    alias mmmv_admin_set_mmcblk1_scheduler_bfq="echo \"bfq\" > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk1_scheduler_cfq="echo  \"cfq\"  > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk1_scheduler_deadline="echo \"deadline\" > $S_TMP_0 "
+    alias mmmv_admin_set_mmcblk1_scheduler_kyber="echo \"kyber\" > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk1_scheduler_mqdeadline="echo \"mq-deadline\" > $S_TMP_0 "
     alias mmmv_admin_set_mmcblk1_scheduler_none="echo \"none\" > $S_TMP_0 "
+    alias mmmv_admin_set_mmcblk1_scheduler_noop="echo \"noop\" > $S_TMP_0 "
 fi
 #--------------------------------------------------------------------------
 alias mmmv_admin_mount_noatime_nodiratime_t1="mount -o noatime,nodiratime "
@@ -751,12 +787,12 @@ alias mmmv_admin_mount_exFAT_case_insensitive_t1="mount -t exfat -o rw,noatime,i
 # export MMMV_CMD_MAGNET_01_UNMOUNTING="umount $MMMV_SP_MAGNET_01_MOUNTFOLDER ; "
 # alias mmmv_admin_mount_magnet_01_readonly="$MMMV_CMD_MAGNET_01_UNMOUNTING \
 #     mount -o ro,noatime --uuid ec7405f6-92a9-47a1-9b28-8e8d72bd8b91 $MMMV_SP_MAGNET_01_MOUNTFOLDER ; "
-# 
+#
 # alias mmmv_admin_mount_magnet_01="$MMMV_CMD_MAGNET_01_UNMOUNTING \
 #     mount -o noatime    --uuid ec7405f6-92a9-47a1-9b28-8e8d72bd8b91 $MMMV_SP_MAGNET_01_MOUNTFOLDER ; "
-# 
+#
 # alias mmmv_admin_unmount_magnet_01="$MMMV_CMD_MAGNET_01_UNMOUNTING "
-# 
-#========================================================================== 
-# S_VERSION_OF_THIS_FILE="50adb2d5-cfca-4c77-9b16-531321c129e7"
-#========================================================================== 
+#
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="1d5bd223-702f-476c-981a-e2c061b169e7"
+#==========================================================================
