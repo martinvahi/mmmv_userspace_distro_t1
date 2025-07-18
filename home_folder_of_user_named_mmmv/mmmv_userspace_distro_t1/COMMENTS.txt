@@ -40,7 +40,8 @@ Section_10: Project Templates
 Section_11: Bundled Development Tools
 Section_12: The BSD License
 Section_13: A BSD License Related note
-Section_14: Inspiring or Similar Projects Hall of Fame
+Section_14: Open Source Cooperation Protocol
+Section_15: Inspiring or Similar Projects Hall of Fame
 
 
 ---------------------------------------------------------------------------
@@ -140,6 +141,25 @@ The optionally present files
 are included/"sourced" as subparts of the
 
     $MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash
+
+If the "flatpak" is on PATH and the optional environment variable
+S_FP_FLATPAK_JAILBREAK_FOLDER is defined, then on Linux the Bash alias
+"mmmv_run_flatpak" is defined approximately like
+
+    alias mmmv_run_flatpak="flatpak --user --filesystem=$S_FP_FLATPAK_JAILBREAK_FOLDER run "
+
+Nonvolatile storage device wear can be reduced by creating a RAM
+partition and defining an environment variable named
+
+    MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K
+
+for holding the value of the RAM partition mounting point. The size
+of that RAM partition should be at least 64KiB, but in some extreme
+cases about 10KiB might also do. The warning that tells that the
+MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K has not been defined can
+be disabled by outcommenting the Bash code that gives that warning.  The
+code region, where the waring originates, can be found by recursively
+searching for the GUID that is in the warning text.
 
 
 ---------------------------------------------------------------------------
@@ -308,12 +328,12 @@ by using the
     <leader key> ws
 
 and place another vim inter-file bookmark to some relevant vimwiki page
-or some vimwiki page that is vimwiki linki wise probabilistically close
+or some vimwiki page that is vimwiki link wise probabilistically close
 to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "f675a584-9736-40ec-b4e4-80a0509069e7"
+All quoted GUIDs like "153fe051-a6b5-4470-b84c-b0a2012179e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -620,7 +640,62 @@ me, the Martin.Vahi@softf1.com, as an author is satisfied.
 
 
 ---------------------------------------------------------------------------
-Section_14: Inspiring or Similar Projects Hall of Fame
+            Section_14: Open Source Cooperation Protocol
+---------------------------------------------------------------------------
+
+As of 2025_07 I(Martin.Vahi@softf1.com) do use libraries without
+auditing them, specially popular mainstream libraries, where I have
+a hope that if they contain any malware or serious flaws, then other
+people will notice them without me having to do anything for fixing
+the situation, but other than that I do not copy-paste other people's
+code to my projects without thoroughly auditing them by using other
+people's code as a template that gets thoroughly rewritten during the
+auditing.
+
+What regards to coding style rules, then I(Martin.Vahi@softf1.com) am
+deeply convinced that I am not the best software developer on planet
+Earth, which means that if I want to learn from people, who are better
+than me, then I must humbly hope that they at least bother to submit
+their code to me in their own style. That way I can learn from their
+code style and may be change my own code style according to what I am
+capable of learning from their code style. If I rewrite the submitted
+code during the auditing anyway, then I manually or semi-manually
+reformat it to my own style anyway, so it does not matter, if the
+submitted code is in a style that I do not prefer to use myself.
+
+My main communication channel is email(Martin.Vahi@softf1.com),
+but as of 2025_07 the suggested main space for project specific
+feedback and code submissions is GitHub bugtrack. In the case of the
+mmmv_userspace_distro_t1 it is
+
+    https://github.com/martinvahi/mmmv_userspace_distro_t1/issues
+
+although I also look at
+
+    https://codeberg.org/martinvahi/mmmv_userspace_distro_t1/issues
+    https://sourceforge.net/p/mmmv-userspace-distro-t1/discussion/
+
+As of 2025_07 I(Martin.Vahi@softf1.com) generally do NOT answer phone
+calls that originate from phone numbers that I have not stored to my
+phone. My phone number is public mainly to make it easier to find
+for people, who have arranged the phone call over email or they have
+arranged the phone call by sending me a relevant SMS in Estonian or
+in Finnish. Not many people globally speak Estonian and as of 2025_07
+the various spammers haven't bothered to use machine translation for
+Estonian either, because due to the small population size Estonia is so
+small market that it is almost irrelevant to spammers. Local spammers
+are not an issue in Estonia, because as of 2025_07 it is illegal in
+Estonia to spam private phone numbers and private email addresses.  I
+use the email address Martin.Vahi@softf1.com as both, a private email
+address and a business email address, which makes it perfectly legal to
+spam that, but as of 2025_07 I have over 200 email filters to sort the
+mail, so I can handle some spam without "too much" effort and all of
+that without loosing more useful letters than may be about 1 or 2 per
+year, if even that many.
+
+
+---------------------------------------------------------------------------
+      Section_15: Inspiring or Similar Projects Hall of Fame
 ---------------------------------------------------------------------------
 
 The list of projects that are a source of inspiration for the
@@ -640,5 +715,5 @@ shoddy compromise, this list here is better than nothing.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="40ef6983-00ee-41ef-91e4-80a0509069e7"
+# S_VERSION_OF_THIS_FILE="757c0da6-01e8-4822-832c-b0a2012179e7"
 ===========================================================================
