@@ -24,7 +24,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE . \e[39m"
-    echo "GUID=='3fe21555-4517-4441-8426-80e241d079e7'"
+    echo "GUID=='cf93d419-11df-44d2-93a9-1012112179e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -36,7 +36,7 @@ if [ "$SB_AHA_EXISTS_ON_PATH" == "" ]; then
         # "aha" converts textfiles to HTML.
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "aha" "6b35f54d-9ed2-4b49-9326-80e241d079e7"
+            "aha" "5e2c2815-3b10-4176-b1a9-1012112179e7"
     fi
 fi
 #--------------------
@@ -46,7 +46,7 @@ if [ "$SB_FIND_EXISTS_ON_PATH" == "" ]; then
         SB_FIND_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "find" "d8b70825-594a-44d3-8326-80e241d079e7"
+            "find" "44bca032-7f6c-49eb-aea9-1012112179e7"
     fi
 fi
 #--------------------
@@ -70,7 +70,7 @@ if [ "$SB_GREP_EXISTS_ON_PATH" == "" ]; then
         SB_GREP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "grep" "5ef06857-3e7a-47d9-9426-80e241d079e7"
+            "grep" "b6fda527-e76b-48f4-b299-1012112179e7"
     fi
 fi
 if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
@@ -92,7 +92,7 @@ if [ "$SB_MAN_EXISTS_ON_PATH" == "" ]; then
         SB_MAN_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "man" "5224ea53-90a4-49ea-9126-80e241d079e7"
+            "man" "353b559d-117a-43ec-8399-1012112179e7"
     fi
 fi
 if [ "$SB_MAN_EXISTS_ON_PATH" == "t" ]; then
@@ -106,7 +106,7 @@ if [ "$SB_INFO_EXISTS_ON_PATH" == "" ]; then
         SB_INFO_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "info" "9bd62f4b-3f9b-4a92-9416-80e241d079e7"
+            "info" "4684f1c4-5e46-4600-8199-1012112179e7"
     fi
 fi
 if [ "$SB_INFO_EXISTS_ON_PATH" == "t" ]; then
@@ -120,7 +120,7 @@ if [ "$SB_TLDR_EXISTS_ON_PATH" == "" ]; then
         SB_TLDR_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tldr" "104be6e4-9899-4a33-9616-80e241d079e7"
+            "tldr" "fe676c5f-dff8-4812-8599-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo ""
             echo "The man analogue, \"tldr\", is a Python program that "
@@ -133,7 +133,7 @@ if [ "$SB_TLDR_EXISTS_ON_PATH" == "" ]; then
             echo "    $HOME/.cache/tldr"
             echo "and as of 2025_01 it originates from "
             echo "    https://github.com/tldr-pages/tldr "
-            echo "GUID=='6a96522d-c27e-4b73-9526-80e241d079e7'"
+            echo "GUID=='1782ce02-f779-45f1-83a9-1012112179e7'"
             echo ""
         fi
     fi
@@ -152,7 +152,7 @@ if [ "$SB_FZF_EXISTS_ON_PATH" == "" ]; then
         SB_FZF_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "fzf" "323105b1-9e4c-4dcf-9716-80e241d079e7"
+            "fzf" "f6511b2b-1a13-4043-8599-1012112179e7"
     fi
 fi
 #--------------------
@@ -162,7 +162,7 @@ if [ "$SB_HTOP_EXISTS_ON_PATH" == "" ]; then
         SB_HTOP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "htop" "67435840-0aa1-4050-a116-80e241d079e7"
+            "htop" "4dd3b955-3ea1-4145-b299-1012112179e7"
     fi
 fi
 #----------------------------------------
@@ -172,7 +172,7 @@ if [ "$SB_NCDU_EXISTS_ON_PATH" == "" ]; then
         SB_NCDU_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "ncdu" "60301a16-eabd-4bdf-8316-80e241d079e7"
+            "ncdu" "68c4b32c-05f8-458c-8399-1012112179e7"
     fi
 fi
 if [ "$SB_NCDU_EXISTS_ON_PATH" == "t" ]; then
@@ -236,7 +236,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "" ]; then
         SB_WGET_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "wget" "6ebfec27-483d-4e2e-a516-80e241d079e7"
+            "wget" "c0501840-264e-4f1c-b589-1012112179e7"
     fi
 fi
 #--------------------
@@ -247,7 +247,7 @@ if [ "$SB_CURL_EXISTS_ON_PATH" == "" ]; then
         SB_CURL_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "curl" "fd419512-ef4a-475d-9216-80e241d079e7"
+            "curl" "886b4946-71fd-42af-9189-1012112179e7"
     fi
 fi
 #--------------------
@@ -259,7 +259,7 @@ if [ "$SB_ARIA2C_EXISTS_ON_PATH" == "" ]; then
         SB_ARIA2C_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "aria2c" "4f666ac3-85eb-42c9-8116-80e241d079e7"
+            "aria2c" "92502255-4fdc-4a2b-8189-1012112179e7"
     fi
 fi
 #--------------------
@@ -269,7 +269,7 @@ if [ "$SB_READLINK_EXISTS_ON_PATH" == "" ]; then
         SB_READLINK_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "readlink" "6e59b54d-d807-47e5-8116-80e241d079e7"
+            "readlink" "00233d41-6907-4dd8-8189-1012112179e7"
     fi
 fi
 #--------------------
@@ -280,7 +280,7 @@ if [ "$SB_XARGS_EXISTS_ON_PATH" == "" ]; then
         SB_XARGS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xargs" "8b179751-a6c9-453d-9316-80e241d079e7"
+            "xargs" "a5d4e71c-806e-432d-9189-1012112179e7"
     fi
 fi
 #--------------------
@@ -294,7 +294,7 @@ if [ "$SB_DIFF_EXISTS_ON_PATH" == "" ]; then
         # but on BSD the program "diff" is BSD specific.
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "diff" "41e8ff16-19eb-4f98-b206-80e241d079e7"
+            "diff" "64944b16-ae05-48f9-b189-1012112179e7"
     fi
 fi
 #--------------------
@@ -309,11 +309,11 @@ if [ "$SB_GDIFF_EXISTS_ON_PATH" == "" ]; then
             # diff.  As of 2024 the macOS tends to use
             # BSD versions of command line utilities.
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "gdiff" "1036f347-379a-4318-b106-80e241d079e7"
+                "gdiff" "1fe9694d-a9b7-499b-8389-1012112179e7"
         else
             if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "t" ]; then
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "gdiff" "2f3f2013-9a6e-49d3-9206-80e241d079e7"
+                    "gdiff" "2b4f5d1d-c348-4acd-a589-1012112179e7"
             fi
         fi
     fi
@@ -383,7 +383,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 SB_LSBLK_EXISTS_ON_PATH="t"
             else
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "lsblk" "2df43f55-5006-41e9-9206-80e241d079e7"
+                    "lsblk" "3cbc5823-e95e-4d30-8289-1012112179e7"
             fi
         fi
         #--------------------
@@ -393,7 +393,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 SB_HDPARM_EXISTS_ON_PATH="t"
             else
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "hdparm" "adf20420-c983-4d0e-8106-80e241d079e7"
+                    "hdparm" "447e76a2-d011-4200-a589-1012112179e7"
             fi
         fi
         #--------------------
@@ -403,7 +403,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 SB_HDDTEMP_EXISTS_ON_PATH="t"
             # else
             #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            #         "hddtemp" "55b7f8b2-ddd3-45b6-b306-80e241d079e7"
+            #         "hddtemp" "244bd026-65f9-4929-b289-1012112179e7"
             #
             #     is commented out due to
             #
@@ -432,7 +432,7 @@ if [ "$SB_DF_EXISTS_ON_PATH" == "" ]; then
         SB_DF_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "df" "41465bf9-d425-4b7a-a506-80e241d079e7"
+            "df" "7664b32c-75a9-48ef-a289-1012112179e7"
     fi
 fi
 #--------------------
@@ -446,7 +446,7 @@ if [ "$SB_XDELTA3_EXISTS_ON_PATH" == "" ]; then
         #     x1 + delta = x2 // patch:  xdelta3 -d -c -s ./x1.blob < ./delta.blob > ./x2.blob
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xdelta3" "2b44a858-4318-4f31-b506-80e241d079e7"
+            "xdelta3" "a6af0e1f-04fd-4e65-b189-1012112179e7"
     fi
 fi
 #--------------------
@@ -456,7 +456,7 @@ if [ "$SB_RHASH_EXISTS_ON_PATH" == "" ]; then
         SB_RHASH_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rhash" "59b36a35-0fa1-4972-b306-80e241d079e7"
+            "rhash" "2c1e6835-83d8-4bd9-b389-1012112179e7"
     fi
 fi
 #--------------------
@@ -467,7 +467,7 @@ if [ "$SB_SHA256_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_OPERATINGSYSTEM_BSD" == "t" ]; then
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "sha256" "b312c6f2-3de3-47bc-9106-80e241d079e7"
+                "sha256" "501ebd74-3719-4588-bf89-1012112179e7"
         fi
     fi
 fi
@@ -482,7 +482,7 @@ if [ "$SB_SHA256SUM_EXISTS_ON_PATH" == "" ]; then
         if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
             # FreeBSD has "sha256", NOT "sha256sum".
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "sha256sum" "4249cc80-87b4-44d5-a306-80e241d079e7"
+                "sha256sum" "d10fd717-c752-48cf-a279-1012112179e7"
         fi
     fi
 fi
@@ -493,7 +493,7 @@ if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "" ]; then
         SB_XXHSUM_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xxhsum" "4f8f4f35-5e89-496f-a106-80e241d079e7"
+            "xxhsum" "6e363e4c-992d-4322-b379-1012112179e7"
         if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
             if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                 echo ""
@@ -504,7 +504,7 @@ if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "" ]; then
                 echo -e "\e[36m"
                 echo "    apt-get install xxhash "
                 echo -e "\e[39m"
-                echo "GUID=='49221b11-0a63-4fdd-a326-80e241d079e7'"
+                echo "GUID=='bb31615a-57f7-49e6-83a9-1012112179e7'"
                 echo ""
             fi
         fi
@@ -521,7 +521,7 @@ if [ "$SB_XXH128SUM_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "t" ]; then # they are at the same Debian Linux package
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "xxh128sum" "d40c2c1f-3a98-448d-8206-80e241d079e7"
+                "xxh128sum" "41606833-e714-439c-9a79-1012112179e7"
         fi
     fi
 fi
@@ -533,7 +533,7 @@ if [ "$SB_XXH64SUM_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "t" ]; then # they are at the same Debian Linux package
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "xxh64sum" "9b8b0456-216e-4191-a306-80e241d079e7"
+                "xxh64sum" "da803f28-e041-43ad-b579-1012112179e7"
         fi
     fi
 fi
@@ -545,7 +545,7 @@ if [ "$SB_XXH32SUM_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "t" ]; then # they are at the same Debian Linux package
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "xxh32sum" "6e9be112-4446-4efc-9506-80e241d079e7"
+                "xxh32sum" "708d1550-d61f-445d-b579-1012112179e7"
         fi
     fi
 fi
@@ -557,7 +557,7 @@ if [ "$SB_XDGMIME_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "xdg-mime" "6bb4b525-e338-40f6-83f5-80e241d079e7"
+                "xdg-mime" "53107212-5baa-476a-9579-1012112179e7"
         fi
     fi
 fi
@@ -592,7 +592,7 @@ if [ "$SB_XDGOPEN_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "xdg-open" "4e9a4165-e4de-4f70-87f5-80e241d079e7"
+                "xdg-open" "4e0b1c1a-2793-4e90-8379-1012112179e7"
         fi
     fi
 fi
@@ -659,7 +659,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_XVIEW_EXISTS_ON_PATH="t"
         #else
         #    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #        "xview" "a5273531-b15f-4cd3-b6f5-80e241d079e7"
+        #        "xview" "49cb2e1e-0a17-4d82-8579-1012112179e7"
         fi
     fi
     #--------------------
@@ -669,7 +669,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_XVIEWER_EXISTS_ON_PATH="t"
         #else
         #    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #        "xviewer" "61941d2a-519d-4788-b2f5-80e241d079e7"
+        #        "xviewer" "e7354a1c-d04b-4f63-9579-1012112179e7"
         fi
     fi
     #--------------------
@@ -694,7 +694,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         else
             if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "viewnior" "3c509839-3057-436d-b1f5-80e241d079e7"
+                    "viewnior" "3ae86f27-16ee-4d51-b579-1012112179e7"
             fi
         fi
     fi
@@ -776,7 +776,7 @@ if [ "$SB_CHAFA_EXISTS_ON_PATH" == "" ]; then
         SB_CHAFA_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "chafa" "4b9c0f34-5894-49b1-85f5-80e241d079e7"
+            "chafa" "e20bd2a4-0acf-47db-9479-1012112179e7"
     fi
 fi
 if [ "$SB_CHAFA_EXISTS_ON_PATH" == "t" ]; then
@@ -789,7 +789,7 @@ if [ "$SB_CATIMG_EXISTS_ON_PATH" == "" ]; then
         SB_CATIMG_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "catimg" "705ec439-f9ce-4fdd-95f5-80e241d079e7"
+            "catimg" "4ed93e23-1b28-4770-8579-1012112179e7"
     fi
 fi
 if [ "$SB_CATIMG_EXISTS_ON_PATH" == "t" ]; then
@@ -806,7 +806,7 @@ if [ "$SB_IMG2SIXEL_EXISTS_ON_PATH" == "" ]; then
         SB_IMG2SIXEL_EXISTS_ON_PATH="t"
     # else
     #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-    #         "img2sixel" "4665cc41-a45b-49b5-b4f5-80e241d079e7"
+    #         "img2sixel" "3583c0da-105c-456c-b279-1012112179e7"
     fi
 fi
 if [ "$SB_IMG2SIXEL_EXISTS_ON_PATH" == "t" ]; then
@@ -819,7 +819,7 @@ if [ "$SB_MPV_EXISTS_ON_PATH" == "" ]; then
         SB_MPV_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mpv" "2c7c0c27-06ac-45ad-81f5-80e241d079e7"
+            "mpv" "35f56ae2-f2d6-47b3-a269-1012112179e7"
     fi
 fi
 if [ "$SB_MPV_EXISTS_ON_PATH" == "t" ]; then
@@ -832,7 +832,7 @@ if [ "$SB_IMG2TXT_EXISTS_ON_PATH" == "" ]; then
         SB_IMG2TXT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "img2txt" "47df81a5-757e-4011-abf5-80e241d079e7"
+            "img2txt" "271c14f4-2c16-4193-a669-1012112179e7"
     fi
 fi
 #--------------------
@@ -842,7 +842,7 @@ if [ "$SB_IMG2PDF_EXISTS_ON_PATH" == "" ]; then
         SB_IMG2PDF_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "img2pdf" "40420f32-6e58-4a82-aef5-80e241d079e7"
+            "img2pdf" "15a33ec3-a741-4ef2-8669-1012112179e7"
     fi
 fi
 #--------------------
@@ -852,7 +852,7 @@ if [ "$SB_CONVERT_EXISTS_ON_PATH" == "" ]; then
         SB_CONVERT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "convert" "1843177d-c5e3-4253-93f5-80e241d079e7"
+            "convert" "54c2c5cf-eca3-4a64-b369-1012112179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -865,7 +865,7 @@ if [ "$SB_EVINCE_EXISTS_ON_PATH" == "" ]; then
         SB_EVINCE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "evince" "5dee51c1-d86b-4d71-bee5-80e241d079e7"
+            "evince" "b1a06024-cec3-4bde-8569-1012112179e7"
     fi
 fi
 #--------------------
@@ -876,7 +876,7 @@ if [ "$SB_ZATHURA_EXISTS_ON_PATH" == "" ]; then
         SB_ZATHURA_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "zathura" "5ac0573b-8c39-45b8-b4e5-80e241d079e7"
+            "zathura" "95416a3e-66e4-44af-b169-1012112179e7"
     fi
 fi
 #--------------------
@@ -886,7 +886,7 @@ if [ "$SB_TEXDOCTK_EXISTS_ON_PATH" == "" ]; then
         SB_TEXDOCTK_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "texdoctk" "233c040d-5596-4f41-a3e5-80e241d079e7"
+            "texdoctk" "3ac61272-2a0c-4ca1-bb69-1012112179e7"
     fi
 fi
 if [ "$SB_TEXDOCTK_EXISTS_ON_PATH" == "t" ]; then
@@ -899,7 +899,7 @@ if [ "$SB_XDVI_EXISTS_ON_PATH" == "" ]; then
         SB_XDVI_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xdvi" "f836aa3e-7783-4616-84e5-80e241d079e7"
+            "xdvi" "2e6d74a5-dc02-4057-9c69-1012112179e7"
     fi
 fi
 #--------------------
@@ -909,7 +909,7 @@ if [ "$SB_XPDF_EXISTS_ON_PATH" == "" ]; then
         SB_XPDF_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xpdf" "6a3de44b-5ab6-4e3d-b3e5-80e241d079e7"
+            "xpdf" "726fad8e-a910-4085-a169-1012112179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -927,7 +927,7 @@ if [ "$SB_DOXYGEN_EXISTS_ON_PATH" == "" ]; then
         #     https://doxygen.nl/
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "doxygen" "ccec6a15-2245-4d34-a5e5-80e241d079e7"
+            "doxygen" "3d000b23-92dd-4159-a269-1012112179e7"
     fi
 fi
 #--------------------
@@ -940,7 +940,7 @@ if [ "$SB_MKDOCS_EXISTS_ON_PATH" == "" ]; then
         # Usage example: https://github.com/lyz-code/blue-book
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mkdocs" "5a1a5b30-d7e7-49db-82e5-80e241d079e7"
+            "mkdocs" "e02c954f-9e16-4858-8269-1012112179e7"
         if [ "$SB_OPERATINGSYSTEM_BSD" == "f" ]; then
             if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                 echo ""
@@ -957,7 +957,7 @@ if [ "$SB_MKDOCS_EXISTS_ON_PATH" == "" ]; then
                 echo "    wait ; sync ; wait "
                 echo "    pipx install --include-deps --force mkdocs-material "
                 echo -e "\e[39m"
-                echo "GUID=='3d5f9914-58ca-4eae-b726-80e241d079e7'"
+                echo "GUID=='70e47d55-9de2-4182-b399-1012112179e7'"
                 echo ""
             fi
         fi
@@ -982,7 +982,7 @@ if [ "$SB_COL_EXISTS_ON_PATH" == "" ]; then
         SB_COL_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "col" "71626e44-b393-462e-81e5-80e241d079e7"
+            "col" "fc292c11-92e0-407c-a569-1012112179e7"
     fi
 fi
 #--------------------
@@ -992,7 +992,7 @@ if [ "$SB_DMESG_EXISTS_ON_PATH" == "" ]; then
         SB_DMESG_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "dmesg" "72c5e73d-460a-4444-85e5-80e241d079e7"
+            "dmesg" "16660811-e856-4f33-a169-1012112179e7"
     fi
 fi
 #--------------------
@@ -1025,7 +1025,7 @@ if [ "$SB_MOUNT_EXISTS_ON_PATH" == "" ]; then
         SB_MOUNT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mount" "e8a2f64d-70d1-40c0-85e5-80e241d079e7"
+            "mount" "6be35229-3955-44eb-9569-1012112179e7"
     fi
 fi
 #--------------------
@@ -1042,7 +1042,7 @@ if [ "$SB_SH_EXISTS_ON_PATH" == "" ]; then
         SB_SH_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "sh" "3d748343-3e29-4919-85e5-80e241d079e7"
+            "sh" "e1a5412d-154a-4287-8269-1012112179e7"
     fi
 fi
 #--------------------
@@ -1059,7 +1059,7 @@ if [ "$SB_TCSH_EXISTS_ON_PATH" == "" ]; then
         SB_TCSH_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tcsh" "3419bad2-966e-4490-81e5-80e241d079e7"
+            "tcsh" "7306ed9f-9d72-46a8-9c59-1012112179e7"
     fi
 fi
 #--------------------
@@ -1081,7 +1081,7 @@ if [ "$SB_MOSH_EXISTS_ON_PATH" == "" ]; then
         # ------------citation----end-----------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mosh" "3bbf801f-a1a4-4285-92e5-80e241d079e7"
+            "mosh" "26bd2718-603c-4466-9559-1012112179e7"
     fi
 fi
 #--------------------
@@ -1141,7 +1141,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             fi
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "gcc" "3eb56735-6e36-462c-83e5-80e241d079e7"
+                "gcc" "296b8f72-f39b-42ea-9559-1012112179e7"
         fi
     fi
     #--------------------
@@ -1154,7 +1154,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             fi
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "g++" "69b5b02e-8e8e-4adb-82e5-80e241d079e7"
+                "g++" "b29e6d70-6f76-4dc3-b559-1012112179e7"
         fi
     fi
     #--------------------
@@ -1167,7 +1167,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             fi
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "clang" "577d8c9e-f3a7-4b76-b3e5-80e241d079e7"
+                "clang" "3d26b3e0-d23f-40c3-9559-1012112179e7"
         fi
     fi
     #--------------------
@@ -1180,7 +1180,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             fi
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "clang++" "85517c31-bbe6-4965-b3e5-80e241d079e7"
+                "clang++" "6880da11-0176-45ba-8559-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -1199,7 +1199,7 @@ if [ "$SB_AWK_EXISTS_ON_PATH" == "" ]; then
         # that has similar functionality to the GNU awk.
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "awk" "1e967d24-e2d5-4a4e-a1e5-80e241d079e7"
+            "awk" "1806e15b-9b14-4d29-9159-1012112179e7"
     fi
 fi
 #--------------------
@@ -1210,7 +1210,7 @@ if [ "$SB_GAWK_EXISTS_ON_PATH" == "" ]; then
     else
         # The "gawk" can be present on both, Linux and BSD.
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gawk" "044295e8-625e-450e-81e5-80e241d079e7"
+            "gawk" "6cae574a-03cf-401f-a459-1012112179e7"
     fi
 fi
 #--------------------
@@ -1242,7 +1242,7 @@ if [ "$SB_EMACS_EXISTS_ON_PATH" == "" ]; then
         SB_EMACS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "emacs" "178575e2-3712-436b-91d5-80e241d079e7"
+            "emacs" "27b6613c-8468-457f-a259-1012112179e7"
     fi
 fi
 if [ "$SB_EMACS_EXISTS_ON_PATH" == "t" ]; then
@@ -1257,7 +1257,7 @@ if [ "$SB_HEAD_EXISTS_ON_PATH" == "" ]; then
         SB_HEAD_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "head" "b45e859e-a5d5-41e6-94d5-80e241d079e7"
+            "head" "8617c45f-c773-41dd-b559-1012112179e7"
     fi
 fi
 #--------------------
@@ -1268,7 +1268,7 @@ if [ "$SB_JED_EXISTS_ON_PATH" == "" ]; then
         SB_JED_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "jed" "b7ad3421-6226-48a9-b5d5-80e241d079e7"
+            "jed" "39bf98f2-6825-4678-a459-1012112179e7"
     fi
 fi
 if [ "$SB_JED_EXISTS_ON_PATH" == "t" ]; then
@@ -1284,7 +1284,7 @@ if [ "$SB_JOE_EXISTS_ON_PATH" == "" ]; then
         SB_JOE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "joe" "28ed3161-3ca4-43ff-84d5-80e241d079e7"
+            "joe" "31457472-6382-4de6-8559-1012112179e7"
     fi
 fi
 if [ "$SB_JOE_EXISTS_ON_PATH" == "t" ]; then
@@ -1302,7 +1302,7 @@ if [ "$SB_JQ_EXISTS_ON_PATH" == "" ]; then
         # by Raivo Laanemets (infdot.com, "inf" like "infinity")
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "jq" "14dfd11c-372a-4feb-a2d5-80e241d079e7"
+            "jq" "20341a44-fdc5-4efe-9459-1012112179e7"
     fi
 fi
 #--------------------
@@ -1313,7 +1313,7 @@ if [ "$SB_PUP_EXISTS_ON_PATH" == "" ]; then
         SB_PUP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "pup" "21edaed3-952a-4097-b9d5-80e241d079e7"
+            "pup" "321cb553-eb7f-4b16-8459-1012112179e7"
     fi
 fi
 if [ "$SB_PUP_EXISTS_ON_PATH" == "t" ]; then
@@ -1332,7 +1332,7 @@ if [ "$SB_MCEDIT_EXISTS_ON_PATH" == "" ]; then
         # Midnight Commander File manager, the mc .
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mcedit" "2557462e-f0fa-41ef-a4d5-80e241d079e7"
+            "mcedit" "d39c2e58-2bb9-4141-9459-1012112179e7"
     fi
 fi
 if [ "$SB_MCEDIT_EXISTS_ON_PATH" == "t" ]; then
@@ -1347,7 +1347,7 @@ if [ "$SB_PRINTF_EXISTS_ON_PATH" == "" ]; then
         SB_PRINTF_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "printf" "c6c3882c-b1e6-4233-a3d5-80e241d079e7"
+            "printf" "02676320-650a-43bd-a359-1012112179e7"
     fi
 fi
 #--------------------
@@ -1380,7 +1380,7 @@ if [ "$SB_RLWRAP_EXISTS_ON_PATH" == "" ]; then
         #----------------------------------------------------------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rlwrap" "7ceaee4d-6be1-4b09-81d5-80e241d079e7"
+            "rlwrap" "8b2887b4-fc28-4452-8859-1012112179e7"
     fi
 fi
 #--------------------
@@ -1391,7 +1391,7 @@ if [ "$SB_SED_EXISTS_ON_PATH" == "" ]; then
         SB_SED_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "sed" "70d63238-6611-4830-82d5-80e241d079e7"
+            "sed" "04ec623a-a1a9-4e8d-9259-1012112179e7"
     fi
 fi
 if [ "$SB_SED_EXISTS_ON_PATH" == "t" ]; then
@@ -1412,12 +1412,12 @@ if [ "$SB_GSED_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_OPERATINGSYSTEM_LINUX" == "f" ]; then
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "gsed" "3cf552a5-6dfd-4e70-bfd5-80e241d079e7"
+                "gsed" "3c12d013-4c70-4760-a259-1012112179e7"
         else
             if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "t" ]; then
                 # The Termux Linux uses the BSD flavor of the common command line tools.
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "gsed" "39aeda61-3b66-4836-85d5-80e241d079e7"
+                    "gsed" "36aede56-9171-4b19-9159-1012112179e7"
             fi
         fi
     fi
@@ -1467,11 +1467,11 @@ if [ "$SB_REPLACE_EXISTS_ON_PATH" == "" ]; then
         # replace  "/usr/local" "/Foo/Bar" < ./template.txt > ./output_with_text_replacements.txt
     else
        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-           "replace" "3249f2f1-f9e0-4823-b7d5-80e241d079e7"
+           "replace" "f13a46d3-5bb4-40e2-ae59-1012112179e7"
         #if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                 echo "The command \"replace\" is part of the MariaDB project."
-                echo "GUID=='4459cb5a-c1be-4834-a216-80e241d079e7'"
+                echo "GUID=='d8068a59-2530-4222-9199-1012112179e7'"
                 echo ""
             fi
         #fi
@@ -1484,7 +1484,7 @@ if [ "$SB_TIME_EXISTS_ON_PATH" == "" ]; then
         SB_TIME_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "time" "3505d5e1-9421-4202-84d5-80e241d079e7"
+            "time" "7da95c4d-3116-4fae-9159-1012112179e7"
     fi
 fi
 #--------------------
@@ -1498,7 +1498,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             # the recompilation of C/C++ code.
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "ccache" "1176e614-5432-40b7-83d5-80e241d079e7"
+                "ccache" "72193045-8bb3-4c07-b559-1012112179e7"
         fi
     fi
     #--------------------
@@ -1508,7 +1508,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_CSCOPE_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "cscope" "74eaaca7-e888-4242-b5d5-80e241d079e7"
+                "cscope" "6dea21f3-25f9-4305-a659-1012112179e7"
         fi
     fi
     #--------------------
@@ -1518,7 +1518,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_CTAGS_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "ctags" "e81a6c4b-d67b-4ec4-92d5-80e241d079e7"
+                "ctags" "ae5aa936-2e21-49c6-9359-1012112179e7"
         fi
     fi
     #--------------------
@@ -1528,7 +1528,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_FLEX_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "flex" "29e32fc0-e1e1-4224-92d5-80e241d079e7"
+                "flex" "8331d93a-fc14-42d5-b359-1012112179e7"
         fi
     fi
     #--------------------
@@ -1538,7 +1538,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_JFLEX_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "jflex" "193b3352-aa5a-4fa5-93d5-80e241d079e7"
+                "jflex" "acb9fe43-94c0-4127-9259-1012112179e7"
         fi
     fi
     #--------------------
@@ -1548,7 +1548,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_FLEXPP_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "flex++" "a7478b40-5282-48c7-83d5-80e241d079e7"
+                "flex++" "451d47d1-61bf-499c-bf59-1012112179e7"
         fi
     fi
     #--------------------
@@ -1558,7 +1558,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_JAM_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "jam" "ddc5b41b-2f3a-4e79-b5d5-80e241d079e7"
+                "jam" "9be1295a-c42b-45cb-9549-1012112179e7"
         fi
     fi
     #--------------------
@@ -1568,7 +1568,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_MAKE_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "make" "18371054-c936-482b-87d5-80e241d079e7"
+                "make" "100db538-29ba-425a-9449-1012112179e7"
         fi
     fi
     #--------------------
@@ -1582,12 +1582,12 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
         else
             if [ "$SB_OPERATINGSYSTEM_LINUX" == "f" ]; then
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "gmake" "c94e0718-5f0e-4753-a5d5-80e241d079e7"
+                    "gmake" "2e7582c1-a029-4b95-9c49-1012112179e7"
             else
                 if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "t" ]; then
                     # The Termux Linux uses the BSD flavor of the common command line tools.
                     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                        "gmake" "af4cd942-a424-47cd-82d5-80e241d079e7"
+                        "gmake" "5f448583-b792-43b8-b449-1012112179e7"
                 fi
             fi
         fi
@@ -1624,7 +1624,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_PMAKE_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "pmake" "91fd6c39-d149-4f01-82d5-80e241d079e7"
+                "pmake" "dd77b113-f31b-4ff3-9149-1012112179e7"
         fi
     fi
     #--------------------
@@ -1635,7 +1635,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_BAZEL_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "bazel" "188c3c2b-635b-4bae-a3d5-80e241d079e7"
+                "bazel" "23684d41-b62a-4541-a549-1012112179e7"
         fi
     fi
     # if [ "$SB_BAZEL_EXISTS_ON_PATH" == "t" ]; then
@@ -1657,7 +1657,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
                     # when the code changes."
                 else
                     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                        "reflex" "78368541-e4ac-4c3a-b2d5-80e241d079e7"
+                        "reflex" "612da117-237b-4b07-9549-1012112179e7"
                 fi
             fi
         fi
@@ -1671,7 +1671,7 @@ if [ "$SB_SORT_EXISTS_ON_PATH" == "" ]; then
         SB_SORT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "sort" "0ac2025e-e4cb-42ca-a4d5-80e241d079e7"
+            "sort" "6e104641-f09b-459e-b149-1012112179e7"
     fi
 fi
 #--------------------
@@ -1694,7 +1694,7 @@ if [ "$SB_TSORT_EXISTS_ON_PATH" == "" ]; then
         SB_TSORT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tsort" "fe01091a-63c5-4275-a3d5-80e241d079e7"
+            "tsort" "4932acfc-6377-4048-9449-1012112179e7"
     fi
 fi
 #--------------------
@@ -1704,7 +1704,7 @@ if [ "$SB_UNIQ_EXISTS_ON_PATH" == "" ]; then
         SB_UNIQ_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "uniq" "957143fb-b696-40f3-a4c5-80e241d079e7"
+            "uniq" "37ed83b3-2f0a-4ae3-9a49-1012112179e7"
     fi
 fi
 #--------------------
@@ -1714,7 +1714,7 @@ if [ "$SB_STRINGS_EXISTS_ON_PATH" == "" ]; then
         SB_STRINGS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "strings" "2852fe24-d571-41f2-a5c5-80e241d079e7"
+            "strings" "808e0854-952f-4575-9349-1012112179e7"
     fi
 fi
 #--------------------
@@ -1724,7 +1724,7 @@ if [ "$SB_TR_EXISTS_ON_PATH" == "" ]; then
         SB_TR_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tr" "329ef59d-13e8-4d49-95c5-80e241d079e7"
+            "tr" "1462ec3b-d3e0-4a86-9549-1012112179e7"
     fi
 fi
 #--------------------
@@ -1734,7 +1734,7 @@ if [ "$SB_REV_EXISTS_ON_PATH" == "" ]; then
         SB_REV_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rev" "325d9f48-9e28-45a0-b5c5-80e241d079e7"
+            "rev" "28fdc115-f55a-4359-b549-1012112179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -1745,7 +1745,7 @@ if [ "$SB_VIM_EXISTS_ON_PATH" == "" ]; then
         SB_VIM_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "vim" "d01cf444-5a14-461f-95c5-80e241d079e7"
+            "vim" "37abf532-b2b5-4491-9449-1012112179e7"
     fi
 fi
 #--------------------
@@ -1798,7 +1798,7 @@ MMMV_USERSPACE_DISTRO_T1_FP_VIMWIKI_INSTALLATION_SCRIPT="$MMMV_USERSPACE_DISTRO_
 if [ "$SB_VIM_EXISTS_ON_PATH" == "t" ]; then
     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
         "$MMMV_USERSPACE_DISTRO_T1_FP_VIMWIKI_INSTALLATION_SCRIPT" \
-        "4ed16b75-3be9-4dc3-b2c5-80e241d079e7" \
+        "ff292b4a-f82d-4924-b249-1012112179e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_admin_install_vimwiki="$MMMV_USERSPACE_DISTRO_T1_FP_VIMWIKI_INSTALLATION_SCRIPT"
@@ -1808,7 +1808,7 @@ if [ "$SB_VIM_EXISTS_ON_PATH" == "t" ]; then
             echo "Vim exists, but the file "
             echo "$MMMV_USERSPACE_DISTRO_T1_FP_VIMWIKI_INSTALLATION_SCRIPT"
             echo -e "\e[31mis missing\e[39m. Leaving at least one alias undefined."
-            echo "GUID=='5eb27abb-8f9e-465b-8516-80e241d079e7'"
+            echo "GUID=='3b75c983-e9f6-4d49-a499-1012112179e7'"
             echo ""
         fi
     fi
@@ -1834,7 +1834,7 @@ if [ "$SB_VIM_EXISTS_ON_PATH" == "t" ]; then
     fi
     SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE="$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-        "$S_TMP_1" "2629abe4-18de-45a4-83c5-80e241d079e7" \
+        "$S_TMP_1" "b586a948-9fcd-48c4-9349-1012112179e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_vim_open_overwriteable_txt="$S_FP_NICE -n 2 vim $S_TMP_1"
@@ -1853,7 +1853,7 @@ if [ "$SB_ANJUTA_EXISTS_ON_PATH" == "" ]; then
         # https://sourceforge.net/projects/anjuta/
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "anjuta" "cdcfde17-2676-4d3a-83c5-80e241d079e7"
+            "anjuta" "08e0fb14-801e-445a-b549-1012112179e7"
     fi
 fi
 if [ "$SB_ANJUTA_EXISTS_ON_PATH" == "t" ]; then
@@ -1870,7 +1870,7 @@ if [ "$SB_GEANY_EXISTS_ON_PATH" == "" ]; then
         SB_GEANY_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "geany" "6dc3501d-ad68-410c-81c5-80e241d079e7"
+            "geany" "2c448a4a-d4d3-45a7-9249-1012112179e7"
     fi
 fi
 if [ "$SB_GEANY_EXISTS_ON_PATH" == "t" ]; then
@@ -1887,7 +1887,7 @@ if [ "$SB_KATE_EXISTS_ON_PATH" == "" ]; then
         SB_KATE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "kate" "223e9051-d131-4c62-a3c5-80e241d079e7"
+            "kate" "12e8c9e3-cdb1-416a-8c39-1012112179e7"
     fi
 fi
 if [ "$SB_KATE_EXISTS_ON_PATH" == "t" ]; then
@@ -1906,7 +1906,7 @@ if [ "$SB_TEA_EXISTS_ON_PATH" == "" ]; then
         # https://psemiletov.github.io/
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tea" "1493d443-acef-407f-99c5-80e241d079e7"
+            "tea" "88c2f354-161a-4940-8439-1012112179e7"
     fi
 fi
 if [ "$SB_TEA_EXISTS_ON_PATH" == "t" ]; then
@@ -1923,7 +1923,7 @@ if [ "$SB_TEXMAKER_EXISTS_ON_PATH" == "" ]; then
         # https://www.xm1math.net/texmaker/
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "texmaker" "17e0c4b4-3f63-46f9-96c5-80e241d079e7"
+            "texmaker" "65ef4b5e-55c4-4b35-a439-1012112179e7"
     fi
 fi
 if [ "$SB_TEXMAKER_EXISTS_ON_PATH" == "t" ]; then
@@ -1962,8 +1962,8 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #--------------------
         S_FP_DILLORC_TEMPLATE="/home/mmmv/mmmv_userspace_distro_t1/mmmv/lib/templates/2023_06_02_archive_org_copy_of_dillo_org_dillorc.txt"
         # The alias singleliner has been divided between the
-        S_TMP_1="S_FP_TEMPLATE=\"$S_FP_DILLORC_TEMPLATE\" ; if [ -e \"\$S_FP_TEMPLATE\" ]; then if [ -d \"\$S_FP_TEMPLATE\" ]; then echo \"\" ; echo \"The template \" ; echo \"\" ; echo \" \$S_FP_TEMPLATE\" ; echo \"\" ; if [ -h \"\$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder\\e[39m.\" ; else echo -e \"\\e[31mis a folder\\e[39m.\" ; fi ; echo \"but a file is expected.\" ; echo \"GUID=='c0f2e71e-5458-4a45-a216-80e241d079e7'\" ; echo \"\" ; else S_FP_DILLO_HOME=\"\$HOME/.dillo\" ; S_FP_DILLORC=\"\$S_FP_DILLO_HOME/dillorc\" ; if [ ! -e \"\$S_FP_DILLO_HOME\" ]; then if [ -h \"\$S_FP_DILLO_HOME\" ]; then echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLO_HOME \" ; echo \"\" ; echo -e \"\\e[31mis a broken symlink\\e[39m.\" ; echo \"Failed to create Dillo configuration file.\" ; echo \"GUID=='e6b4b059-1708-4515-b416-80e241d079e7'\" ; echo \"\" ; else mkdir \"\$S_FP_DILLO_HOME\" ; wait ; sync ; wait ; fi ; fi ; "
-        S_TMP_2="if [ -e \"\$S_FP_DILLO_HOME\" ]; then if [ -d \"\$S_FP_DILLO_HOME\" ]; then if [ -e \"\$S_FP_DILLORC\" ]; then echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLORC\" ; echo \"\" ; if [ -d \"\$S_FP_DILLORC\" ]; then echo -e \"\\e[31malready exists\\e[39m and\" ; if [ -h \"\$S_FP_DILLORC\" ]; then echo -e \"\\e[31mit is a symlink to a folder\\e[39m despite \" ; else echo -e \"\\e[31mit is a folder\\e[39m despite \" ; fi ; echo \"the fact that a file is expected.\" ; else echo -e \"\\e[31malready exists\\e[39m.\" ; fi ; echo \"Not overwriting it.\" ; echo \"GUID=='4f198b41-9ff9-4896-b416-80e241d079e7'\" ; echo \"\" ; else if [ -h \"\$S_FP_DILLORC\" ]; then echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLORC\" ; echo \"\" ; echo -e \"\\e[31mis a broken symlink\\e[39m.\" ; echo \"Not overwriting it.\" ; echo \"GUID=='b3211341-d628-45d9-9316-80e241d079e7'\" ; echo \"\" ; else cp \"\$S_FP_TEMPLATE\" \"\$S_FP_DILLORC\" ; wait ; sync ; wait ; if [ ! -e \"\$S_FP_DILLORC\" ]; then echo \"\" ; echo -e \"\\e[31mFailed to create\\e[39m the \" ; echo \"\" ; echo \" \$S_FP_DILLORC\" ; echo \"\" ; echo \"GUID=='689fb220-9f82-4054-8416-80e241d079e7'\" ; echo \"\" ; else chmod -f -R 0700 \"\$S_FP_DILLO_HOME\" ; wait ; sync ; wait ; echo \"\" ; echo -e \"\\e[32mCreated\\e[39m \$S_FP_DILLORC\" ; echo \"\" ; fi ; fi ; fi ; else echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLO_HOME \" ; echo \"\" ; echo \"exists, but it is neither a folder \" ; echo \"nor a symlink to a folder.\" ; echo \"GUID=='438c1215-4e5d-4e2e-bb16-80e241d079e7'\" ; echo \"\" ; fi ; else echo \"\" ; echo -e \"\\e[31mFailed to create folder \\e[39m\" ; echo \"\" ; echo \" \$S_FP_DILLO_HOME \" ; echo \"\" ; echo \"GUID=='1a07e680-80e2-4576-8416-80e241d079e7'\" ; echo \"\" ; fi ; fi ; else echo \"\" ; echo \"The template \" ; echo \"\" ; echo \" \$S_FP_TEMPLATE\" ; echo \"\" ; echo -e \"\\e[31mdoes not exist\\e[39m.\" ; echo \"GUID=='323ad483-27fe-4614-b316-80e241d079e7'\" ; echo \"\" ; fi ; "
+        S_TMP_1="S_FP_TEMPLATE=\"$S_FP_DILLORC_TEMPLATE\" ; if [ -e \"\$S_FP_TEMPLATE\" ]; then if [ -d \"\$S_FP_TEMPLATE\" ]; then echo \"\" ; echo \"The template \" ; echo \"\" ; echo \" \$S_FP_TEMPLATE\" ; echo \"\" ; if [ -h \"\$S_FP_TEMPLATE\" ]; then echo -e \"\\e[31mis a symlink to a folder\\e[39m.\" ; else echo -e \"\\e[31mis a folder\\e[39m.\" ; fi ; echo \"but a file is expected.\" ; echo \"GUID=='475d8fa3-a924-4759-8499-1012112179e7'\" ; echo \"\" ; else S_FP_DILLO_HOME=\"\$HOME/.dillo\" ; S_FP_DILLORC=\"\$S_FP_DILLO_HOME/dillorc\" ; if [ ! -e \"\$S_FP_DILLO_HOME\" ]; then if [ -h \"\$S_FP_DILLO_HOME\" ]; then echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLO_HOME \" ; echo \"\" ; echo -e \"\\e[31mis a broken symlink\\e[39m.\" ; echo \"Failed to create Dillo configuration file.\" ; echo \"GUID=='42566d11-e409-4f61-b999-1012112179e7'\" ; echo \"\" ; else mkdir \"\$S_FP_DILLO_HOME\" ; wait ; sync ; wait ; fi ; fi ; "
+        S_TMP_2="if [ -e \"\$S_FP_DILLO_HOME\" ]; then if [ -d \"\$S_FP_DILLO_HOME\" ]; then if [ -e \"\$S_FP_DILLORC\" ]; then echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLORC\" ; echo \"\" ; if [ -d \"\$S_FP_DILLORC\" ]; then echo -e \"\\e[31malready exists\\e[39m and\" ; if [ -h \"\$S_FP_DILLORC\" ]; then echo -e \"\\e[31mit is a symlink to a folder\\e[39m despite \" ; else echo -e \"\\e[31mit is a folder\\e[39m despite \" ; fi ; echo \"the fact that a file is expected.\" ; else echo -e \"\\e[31malready exists\\e[39m.\" ; fi ; echo \"Not overwriting it.\" ; echo \"GUID=='c8a9794d-8db5-451b-9599-1012112179e7'\" ; echo \"\" ; else if [ -h \"\$S_FP_DILLORC\" ]; then echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLORC\" ; echo \"\" ; echo -e \"\\e[31mis a broken symlink\\e[39m.\" ; echo \"Not overwriting it.\" ; echo \"GUID=='3e3e47f1-0e21-448a-8b89-1012112179e7'\" ; echo \"\" ; else cp \"\$S_FP_TEMPLATE\" \"\$S_FP_DILLORC\" ; wait ; sync ; wait ; if [ ! -e \"\$S_FP_DILLORC\" ]; then echo \"\" ; echo -e \"\\e[31mFailed to create\\e[39m the \" ; echo \"\" ; echo \" \$S_FP_DILLORC\" ; echo \"\" ; echo \"GUID=='30dc8d11-0a65-46ca-a489-1012112179e7'\" ; echo \"\" ; else chmod -f -R 0700 \"\$S_FP_DILLO_HOME\" ; wait ; sync ; wait ; echo \"\" ; echo -e \"\\e[32mCreated\\e[39m \$S_FP_DILLORC\" ; echo \"\" ; fi ; fi ; fi ; else echo \"\" ; echo \"The \" ; echo \"\" ; echo \" \$S_FP_DILLO_HOME \" ; echo \"\" ; echo \"exists, but it is neither a folder \" ; echo \"nor a symlink to a folder.\" ; echo \"GUID=='2e0d2656-6a9d-41e8-9189-1012112179e7'\" ; echo \"\" ; fi ; else echo \"\" ; echo -e \"\\e[31mFailed to create folder \\e[39m\" ; echo \"\" ; echo \" \$S_FP_DILLO_HOME \" ; echo \"\" ; echo \"GUID=='d50adc3f-0d7a-40a1-8289-1012112179e7'\" ; echo \"\" ; fi ; fi ; else echo \"\" ; echo \"The template \" ; echo \"\" ; echo \" \$S_FP_TEMPLATE\" ; echo \"\" ; echo -e \"\\e[31mdoes not exist\\e[39m.\" ; echo \"GUID=='00acdc3a-0a41-40e2-8289-1012112179e7'\" ; echo \"\" ; fi ; "
         # cope with a Vim flaw/bug that crashes the Vim. The
         #
         #     $HOME/.dillo/dillorc
@@ -1973,7 +1973,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #     https://web.archive.org/web/20220515221251/https://dillo.org/dillorc
         #
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-            "$S_FP_DILLORC_TEMPLATE" "9c30b047-6329-4559-93c5-80e241d079e7" \
+            "$S_FP_DILLORC_TEMPLATE" "9bbc4912-6316-4193-a339-1012112179e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             alias mmmv_admin_create_dillorc_t1="$S_TMP_1$S_TMP_2"
@@ -1997,7 +1997,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #             echo -e "\e[31mis a folder\e[39m." ;
         #         fi ;
         #         echo "but a file is expected." ;
-        #         echo "GUID=='4283a4a6-45dd-40a1-a216-80e241d079e7'" ;
+        #         echo "GUID=='261aca1f-7a29-4a3b-9189-1012112179e7'" ;
         #         echo "" ;
         #     else
         #         S_FP_DILLO_HOME="$HOME/.dillo" ;
@@ -2011,7 +2011,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #                 echo "" ;
         #                 echo -e "\e[31mis a broken symlink\e[39m." ;
         #                 echo "Failed to create Dillo configuration file." ;
-        #                 echo "GUID=='3a0b8530-8174-4bf3-b106-80e241d079e7'" ;
+        #                 echo "GUID=='9f461d40-1940-4d5c-8489-1012112179e7'" ;
         #                 echo "" ;
         #             else
         #                 mkdir "$S_FP_DILLO_HOME" ; wait ; sync ; wait ;
@@ -2037,7 +2037,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #                         echo -e "\e[31malready exists\e[39m." ;
         #                     fi ;
         #                     echo "Not overwriting it." ;
-        #                     echo "GUID=='52cd2185-cba8-4d7b-b506-80e241d079e7'" ;
+        #                     echo "GUID=='be6337c1-836a-46d3-8889-1012112179e7'" ;
         #                     echo "" ;
         #                 else
         #                     if [ -h "$S_FP_DILLORC" ]; then
@@ -2048,7 +2048,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #                         echo "" ;
         #                         echo -e "\e[31mis a broken symlink\e[39m." ;
         #                         echo "Not overwriting it." ;
-        #                         echo "GUID=='32a9c3f5-4a6d-4699-a306-80e241d079e7'" ;
+        #                         echo "GUID=='215a0adb-5bb4-4ce8-b389-1012112179e7'" ;
         #                         echo "" ;
         #                     else
         #                         cp "$S_FP_TEMPLATE"  "$S_FP_DILLORC" ; wait ; sync ; wait ;
@@ -2058,7 +2058,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #                             echo "" ;
         #                             echo "    $S_FP_DILLORC" ;
         #                             echo "" ;
-        #                             echo "GUID=='b06a9d11-7a19-4c19-b206-80e241d079e7'" ;
+        #                             echo "GUID=='562c835c-04a1-4e2e-8289-1012112179e7'" ;
         #                             echo "" ;
         #                         else
         #                             chmod -f -R 0700 "$S_FP_DILLO_HOME" ; wait ; sync ; wait ;
@@ -2076,7 +2076,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #                 echo "" ;
         #                 echo "exists, but it is neither a folder " ;
         #                 echo "nor a symlink to a folder." ;
-        #                 echo "GUID=='5aff2d22-41d9-44a8-8106-80e241d079e7'" ;
+        #                 echo "GUID=='9a9ba83d-87ee-4fa0-a489-1012112179e7'" ;
         #                 echo "" ;
         #             fi ;
         #         else
@@ -2085,7 +2085,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #             echo "" ;
         #             echo "    $S_FP_DILLO_HOME " ;
         #             echo "" ;
-        #             echo "GUID=='3e2cc31b-a981-4862-b306-80e241d079e7'" ;
+        #             echo "GUID=='1862903e-c0ec-48b3-8489-1012112179e7'" ;
         #             echo "" ;
         #         fi ;
         #     fi ;
@@ -2096,7 +2096,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         #     echo "    $S_FP_TEMPLATE" ;
         #     echo "" ;
         #     echo -e "\e[31mdoes not exist\e[39m." ;
-        #     echo "GUID=='0f26ae34-d454-46e8-b306-80e241d079e7'" ;
+        #     echo "GUID=='5f6f7f2f-3f6e-47f3-a189-1012112179e7'" ;
         #     echo "" ;
         # fi ;
         #
@@ -2120,7 +2120,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         SB_CHROMIUM_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "chromium" "24e67c49-e882-4d9f-84c5-80e241d079e7"
+            "chromium" "54b980e1-46ca-4b7c-a339-1012112179e7"
     fi
     if [ "$SB_CHROMIUM_EXISTS_ON_PATH" == "t" ]; then
         alias mmmv_webbrowser_Chromium="$S_CMD_NICE_WEBBROWSER $S_FP_CHROMIUM "
@@ -2133,7 +2133,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         SB_LINKS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "links" "32962535-2eb7-4dab-a4b5-80e241d079e7"
+            "links" "43de1a34-5e7d-4d79-b539-1012112179e7"
     fi
     if [ "$SB_LINKS_EXISTS_ON_PATH" == "t" ]; then
         alias mmmv_webbrowser_links="$S_CMD_NICE_WEBBROWSER $S_FP_LINKS "
@@ -2157,7 +2157,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         SB_LYNX_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "lynx" "79193959-3716-4cb8-b1b5-80e241d079e7"
+            "lynx" "b4e1952d-f22d-4446-b439-1012112179e7"
     fi
     if [ "$SB_LYNX_EXISTS_ON_PATH" == "t" ]; then
         alias mmmv_webbrowser_lynx="$S_CMD_NICE_WEBBROWSER $S_FP_LYNX "
@@ -2290,7 +2290,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
         # is a wrapper script to the qutebrowser.
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
             "$S_FP_0" \
-            "8fec971d-0f43-45e3-b1b5-80e241d079e7" \
+            "16f47b53-7d72-4e39-a539-1012112179e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             S_FP_QUTEBROWSER="$S_FP_0"
@@ -2312,7 +2312,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_MPLAYER_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "mplayer" "4c07cd2a-2ddf-4790-91b5-80e241d079e7"
+                "mplayer" "3ba84029-1933-4701-a139-1012112179e7"
         fi
     fi
     if [ "$SB_MPLAYER_EXISTS_ON_PATH" == "t" ]; then
@@ -2338,7 +2338,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_MPV_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "mpv" "204f6d40-cbb2-4ca2-b3b5-80e241d079e7"
+                "mpv" "f57b452f-064c-4731-b239-1012112179e7"
         fi
     fi
     if [ "$SB_MPV_EXISTS_ON_PATH" == "t" ]; then
@@ -2395,7 +2395,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_VLC_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "vlc" "240c0614-7404-40a7-84b5-80e241d079e7"
+                "vlc" "2687824f-ac17-4f20-a239-1012112179e7"
         fi
     fi
     if [ "$SB_VLC_EXISTS_ON_PATH" == "t" ]; then
@@ -2412,7 +2412,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_CVLC_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "cvlc" "97374657-f81b-4225-83b5-80e241d079e7"
+                "cvlc" "f031a15d-b150-4f5b-b239-1012112179e7"
         fi
     fi
     if [ "$SB_CVLC_EXISTS_ON_PATH" == "t" ]; then
@@ -2756,7 +2756,7 @@ if [ "$SB_LFTP_EXISTS_ON_PATH" == "" ]; then
         SB_LFTP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "lftp" "c7986352-b4f5-4bb9-b4b5-80e241d079e7"
+            "lftp" "a7862775-ddb9-4c43-b239-1012112179e7"
     fi
 fi
 if [ "$SB_LFTP_EXISTS_ON_PATH" == "t" ]; then
@@ -2787,7 +2787,7 @@ if [ "$SB_RCLONE_EXISTS_ON_PATH" == "" ]; then
         SB_RCLONE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rclone" "d036eb2c-a909-45a8-a4b5-80e241d079e7"
+            "rclone" "4a444b48-ffaf-43e9-9239-1012112179e7"
     fi
 fi
 #--------------------
@@ -2797,7 +2797,7 @@ if [ "$SB_RSYNC_EXISTS_ON_PATH" == "" ]; then
         SB_RSYNC_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rsync" "95df0236-a3cf-485b-82b5-80e241d079e7"
+            "rsync" "1c0f8e31-206d-469e-8239-1012112179e7"
     fi
 fi
 #--------------------
@@ -2807,7 +2807,7 @@ if [ "$SB_SSH_EXISTS_ON_PATH" == "" ]; then
         SB_SSH_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "ssh" "0f75fc4b-8868-45c5-85b5-80e241d079e7"
+            "ssh" "7baee831-5bf6-4a2a-b439-1012112179e7"
     fi
 fi
 #--------------------
@@ -2817,7 +2817,7 @@ if [ "$SB_SCP_EXISTS_ON_PATH" == "" ]; then
         SB_SCP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "scp" "f3375f48-d1c7-41de-a2b5-80e241d079e7"
+            "scp" "40d7dc22-d61d-49e2-8539-1012112179e7"
     fi
 fi
 #--------------------
@@ -2827,7 +2827,7 @@ if [ "$SB_TELNET_EXISTS_ON_PATH" == "" ]; then
         SB_TELNET_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "telnet" "0244f418-58be-4f0e-94b5-80e241d079e7"
+            "telnet" "a505ab2d-f199-4642-8339-1012112179e7"
     fi
 fi
 #--------------------
@@ -2837,7 +2837,7 @@ if [ "$SB_UNISON_EXISTS_ON_PATH" == "" ]; then
         SB_UNISON_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "unison" "eb47ec21-7148-4511-b5b5-80e241d079e7"
+            "unison" "5d8a1825-524b-47f5-9439-1012112179e7"
     fi
 fi
 #--------------------
@@ -2847,7 +2847,7 @@ if [ "$SB_NOTMUCH_EXISTS_ON_PATH" == "" ]; then
         SB_NOTMUCH_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "notmuch" "2f2aeb10-b70b-46dc-91b5-80e241d079e7"
+            "notmuch" "4221ee1c-20d1-4f40-b339-1012112179e7"
     fi
 fi
 #--------------------
@@ -2857,7 +2857,7 @@ if [ "$SB_OFFLINEIMAP_EXISTS_ON_PATH" == "" ]; then
         SB_OFFLINEIMAP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "offlineimap" "35598022-db7b-45e2-95b5-80e241d079e7"
+            "offlineimap" "da9a4b35-36b7-4ec1-b539-1012112179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -2928,7 +2928,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo ""
                     echo -e "\e[31mgitg exists on PATH while the git is missing.\e[39m"
-                    echo "GUID=='2b1d0d94-5833-48a5-9406-80e241d079e7'"
+                    echo "GUID=='d873104f-d733-479e-9389-1012112179e7'"
                     echo ""
                 fi
             fi
@@ -2952,7 +2952,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo ""
                     echo -e "\e[31mgitk exists on PATH while the git is missing.\e[39m"
-                    echo "GUID=='5a3c46e7-3f63-44e2-9406-80e241d079e7'"
+                    echo "GUID=='17262ef2-7a76-4994-a389-1012112179e7'"
                     echo ""
                 fi
             fi
@@ -2962,7 +2962,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
                     echo -e "\e[31mgitk exists on PATH while the gitg is missing.\e[39m"
                     # As of 2021 the gitk has an optionally available
                     # menu option that depends on the gitg.
-                    echo "GUID=='0013814e-a0d7-4636-9206-80e241d079e7'"
+                    echo "GUID=='4511c9d1-8bed-4f1a-8f79-1012112179e7'"
                     echo ""
                 fi
             fi
@@ -3027,7 +3027,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 SB_FLATPAK_EXISTS_ON_PATH="t"
             else
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "flatpak" "158f6499-de56-4fcf-b3b5-80e241d079e7"
+                    "flatpak" "32094f24-2493-49b3-9439-1012112179e7"
                 if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                     echo "You MIGHT want to run "
                     echo -e "\e[36m"
@@ -3039,7 +3039,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                     echo "by one of its developers, Alexander Larsson:"
                     echo "    https://web.archive.org/web/20250320153113/https://blogs.gnome.org/alexl/2018/06/20/flatpak-a-history/"
                     echo "    https://archive.ph/9PNG8"
-                    echo "GUID=='bfaaea3a-6fa6-471f-a406-80e241d079e7'"
+                    echo "GUID=='e74f075a-58e8-41a4-9179-1012112179e7'"
                     echo ""
                 fi
             fi
@@ -3057,7 +3057,13 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
             #     flatpak --user --help
             # gives an error.
             #--------------------
-            alias mmmv_ls_flatpak="$S_CMD_FLATPAK_USER list "
+            alias mmmv_flatpak_aptitude="$S_CMD_FLATPAK_USER search "
+            alias mmmv_flatpak_search_remote="$S_CMD_FLATPAK_USER search "
+            alias mmmv_flatpak_install="$S_CMD_FLATPAK_USER install "
+            alias mmmv_flatpak_uninstall="$S_CMD_FLATPAK_USER uninstall "
+            #--------------------
+            alias mmmv_ls_flatpak_installed="$S_CMD_FLATPAK_USER list "
+            alias mmmv_ls_flatpak_remote="$S_CMD_FLATPAK_USER remote-ls "
             #--------------------
         fi
         #--------------------
@@ -3068,7 +3074,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 SB_PIPX_EXISTS_ON_PATH="t"
             else
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "pipx" "d350945c-197e-4ed4-82b5-80e241d079e7"
+                    "pipx" "7a5cba3e-ba6c-43f2-a539-1012112179e7"
             fi
         fi
         if [ "$S_FP_PIPX" == "" ]; then
@@ -3088,7 +3094,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 SB_NPM_EXISTS_ON_PATH="t"
             else
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "npm" "588f503f-f33d-46db-84b5-80e241d079e7"
+                    "npm" "5f31ee13-e683-4005-a439-1012112179e7"
             fi
         fi
         if [ "$S_FP_NPM" == "" ]; then
@@ -3142,7 +3148,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_ASTYLE_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "astyle" "620ab986-2448-49ed-abb5-80e241d079e7"
+                "astyle" "729db111-eb5c-4b2b-b439-1012112179e7"
         fi
     fi
     if [ "$S_FP_ASTYLE" == "" ]; then
@@ -3161,7 +3167,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             # Java, Pawn and VALA source code formatter.
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "uncrustify" "b752eb62-9d7f-4ebe-8db5-80e241d079e7"
+                "uncrustify" "4adeee24-6772-4183-b529-1012112179e7"
         fi
     fi
     if [ "$S_FP_UNCRUSTIFY" == "" ]; then
@@ -3183,7 +3189,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_BISON_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "bison" "8077925d-69da-4f87-b4b5-80e241d079e7"
+                "bison" "22bc511f-2274-4f0a-a429-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -3205,7 +3211,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             #-----------------------------------------
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "re2c" "47031af9-0f0d-4ffe-b4b5-80e241d079e7"
+                "re2c" "3d2d8573-fc0f-4724-b129-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -3215,7 +3221,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_YACC_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "yacc" "09fc7756-a83a-4022-b4b5-80e241d079e7"
+                "yacc" "b842b261-16c1-4af6-8629-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -3229,7 +3235,7 @@ if [ "$SB_ATOOL_EXISTS_ON_PATH" == "" ]; then
         SB_ATOOL_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "atool" "eb271214-502c-4ff9-95b5-80e241d079e7"
+            "atool" "e1d32716-b33a-4cf1-9129-1012112179e7"
     fi
 fi
 #--------------------
@@ -3239,7 +3245,7 @@ if [ "$SB_ARCHIVEMOUNT_EXISTS_ON_PATH" == "" ]; then
         SB_ARCHIVEMOUNT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "archivemount" "78bb3e36-1201-4564-b2b5-80e241d079e7"
+            "archivemount" "2e310931-39b6-4932-b129-1012112179e7"
     fi
 fi
 #--------------------
@@ -3249,7 +3255,7 @@ if [ "$SB_TAR_EXISTS_ON_PATH" == "" ]; then
         SB_TAR_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tar" "511c494a-f55d-4f4c-84b5-80e241d079e7"
+            "tar" "3f8a0d1b-ce84-426f-b129-1012112179e7"
     fi
 fi
 #--------------------
@@ -3259,7 +3265,7 @@ if [ "$SB_ZIP_EXISTS_ON_PATH" == "" ]; then
         SB_ZIP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "zip" "66339982-f1f9-423c-a3a5-80e241d079e7"
+            "zip" "f509fe4d-e84b-440d-a329-1012112179e7"
     fi
 fi
 if [ "$SB_ZIP_EXISTS_ON_PATH" == "t" ]; then
@@ -3278,7 +3284,7 @@ if [ "$SB_UNZIP_EXISTS_ON_PATH" == "" ]; then
         SB_UNZIP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "unzip" "bcc21a36-1ae1-466d-b5a5-80e241d079e7"
+            "unzip" "d66c901f-77a7-40d1-9529-1012112179e7"
     fi
 fi
 #--------------------
@@ -3288,7 +3294,7 @@ if [ "$SB_GZIP_EXISTS_ON_PATH" == "" ]; then
         SB_GZIP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gzip" "ba93ce48-e8a2-44df-b3a5-80e241d079e7"
+            "gzip" "c3564f43-ca1a-4826-9429-1012112179e7"
     fi
 fi
 #--------------------
@@ -3298,7 +3304,7 @@ if [ "$SB_GUNZIP_EXISTS_ON_PATH" == "" ]; then
         SB_GUNZIP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gunzip" "14465c82-113d-4d38-a1a5-80e241d079e7"
+            "gunzip" "31082d3c-bd0d-4959-8229-1012112179e7"
     fi
 fi
 #--------------------
@@ -3313,7 +3319,7 @@ if [ "$SB_PIGZ_EXISTS_ON_PATH" == "" ]; then
         #
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "pigz" "5cf39353-a88b-4353-b2a5-80e241d079e7"
+            "pigz" "f801ee32-2a0e-4f0f-9e29-1012112179e7"
     fi
 fi
 #--------------------
@@ -3324,7 +3330,7 @@ if [ "$SB_PLZIP_EXISTS_ON_PATH" == "" ]; then
         SB_PLZIP_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "plzip" "f835e241-770d-4150-83a5-80e241d079e7"
+            "plzip" "11b199c6-489e-4c27-9129-1012112179e7"
     fi
 fi
 if [ "$S_FP_PLZIP" == "" ]; then
@@ -3394,7 +3400,7 @@ if [ "$SB_TARLZ_EXISTS_ON_PATH" == "" ]; then
         #-------------------------------------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "tarlz" "2117d12e-d895-4454-95a5-80e241d079e7"
+            "tarlz" "9e8c7e5b-8b3e-455f-a329-1012112179e7"
     fi
 fi
 #--------------------
@@ -3409,7 +3415,7 @@ if [ "$SB_XZ_EXISTS_ON_PATH" == "" ]; then
         export XZ_DEFAULTS="--memlimit=$S_TMP_0"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xz" "b8072a43-9bea-4189-81a5-80e241d079e7"
+            "xz" "4633f226-30fe-4141-9f29-1012112179e7"
     fi
 fi
 #--------------------
@@ -3419,7 +3425,7 @@ if [ "$SB_UNXZ_EXISTS_ON_PATH" == "" ]; then
         SB_UNXZ_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "unxz" "86735843-06a7-44c2-91a5-80e241d079e7"
+            "unxz" "4151cb45-b03a-4928-b529-1012112179e7"
     fi
 fi
 #--------------------
@@ -3430,7 +3436,7 @@ if [ "$SB_RAR_EXISTS_ON_PATH" == "" ]; then
     else
         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "rar" "514a2b18-16d5-43ce-82a5-80e241d079e7"
+                "rar" "63555702-eb40-4a49-ae29-1012112179e7"
         fi
     fi
 fi
@@ -3441,7 +3447,7 @@ if [ "$SB_UNRAR_EXISTS_ON_PATH" == "" ]; then
         SB_UNRAR_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "unrar" "43a60c5c-a4ef-4384-b3a5-80e241d079e7"
+            "unrar" "21539cc5-cff2-4a79-9229-1012112179e7"
     fi
 fi
 #--------------------
@@ -3451,7 +3457,7 @@ if [ "$SB_ARJ_EXISTS_ON_PATH" == "" ]; then
         SB_ARJ_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "arj" "0fd77230-8214-442b-a4a5-80e241d079e7"
+            "arj" "f41e2e11-0cd9-46d3-a129-1012112179e7"
     fi
 fi
 #--------------------
@@ -3461,7 +3467,7 @@ if [ "$SB_XAR_EXISTS_ON_PATH" == "" ]; then
         SB_XAR_EXISTS_ON_PATH="t"
     #else
     #    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-    #        "xar" "7053a335-29a5-48bc-84a5-80e241d079e7"
+    #        "xar" "64f2d9e4-b828-4b35-a529-1012112179e7"
     fi
 fi
 #--------------------
@@ -3478,7 +3484,7 @@ if [ "$SB_XZ_EXISTS_ON_PATH" != "" ]; then
                     echo ""
                     echo "     XZ_DEFAULTS==\"$XZ_DEFAULTS\" "
                     echo ""
-                    echo "GUID=='ca8072f2-98f3-461c-b106-80e241d079e7'"
+                    echo "GUID=='28075734-6cf2-4063-b579-1012112179e7'"
                     echo ""
                 fi
             fi
@@ -3491,7 +3497,7 @@ if [ "$SB_XZ_EXISTS_ON_PATH" != "" ]; then
                 echo ""
                 echo "     SB_XZ_EXISTS_ON_PATH==\"$SB_XZ_EXISTS_ON_PATH\" "
                 echo ""
-                echo "GUID=='f12764bc-c189-436f-a506-80e241d079e7'"
+                echo "GUID=='2e854154-24e5-4e7c-9379-1012112179e7'"
                 echo ""
             fi
         fi
@@ -3504,7 +3510,7 @@ else
         echo ""
         echo "     SB_XZ_EXISTS_ON_PATH==\"$SB_XZ_EXISTS_ON_PATH\" "
         echo ""
-        echo "GUID=='fb1ff779-7982-48d1-8206-80e241d079e7'"
+        echo "GUID=='429eebab-7162-47cd-b379-1012112179e7'"
         echo ""
     fi
 fi
@@ -3543,7 +3549,7 @@ if [ "$SB_PDFTOCAIRO_EXISTS_ON_PATH" == "" ]; then
         SB_PDFTOCAIRO_EXISTS_ON_PATH="t"
     #else
         #func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #    "pdftocairo" "4e3ed450-a8fc-4cb5-b2a5-80e241d079e7"
+        #    "pdftocairo" "755d434b-1ff3-49c8-8229-1012112179e7"
     fi
 fi
 if [ "$S_FP_PDFTOCAIRO" == "" ]; then
@@ -3560,7 +3566,7 @@ if [ "$SB_PDFTOHTMl_EXISTS_ON_PATH" == "" ]; then
         SB_PDFTOHTMl_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "pdftohtml" "16acd7b5-dca0-40a1-94a5-80e241d079e7"
+            "pdftohtml" "eb30d247-94a2-49d0-8429-1012112179e7"
     fi
 fi
 if [ "$S_FP_PDFTOHTMl" == "" ]; then
@@ -3577,7 +3583,7 @@ if [ "$SB_PDFTOPPM_EXISTS_ON_PATH" == "" ]; then
         SB_PDFTOPPM_EXISTS_ON_PATH="t"
     #else
         #func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #    "pdftoppm" "e49c0929-5dd9-4fa9-a3a5-80e241d079e7"
+        #    "pdftoppm" "034e1418-2996-4c4f-b329-1012112179e7"
     fi
 fi
 if [ "$S_FP_PDFTOPPM" == "" ]; then
@@ -3594,7 +3600,7 @@ if [ "$SB_PDFTOPS_EXISTS_ON_PATH" == "" ]; then
         SB_PDFTOPS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "pdftops" "d7f6e84c-11f3-4155-a4a5-80e241d079e7"
+            "pdftops" "13a6db4d-f838-45c4-8219-1012112179e7"
     fi
 fi
 if [ "$S_FP_PDFTOPS" == "" ]; then
@@ -3611,7 +3617,7 @@ if [ "$SB_PDFTOSRC_EXISTS_ON_PATH" == "" ]; then
         SB_PDFTOSRC_EXISTS_ON_PATH="t"
     #else
         #func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #    "pdftosrc" "8c5c0238-0823-487b-a3a5-80e241d079e7"
+        #    "pdftosrc" "208c2d28-6ff4-4217-b419-1012112179e7"
     fi
 fi
 if [ "$S_FP_PDFTOSRC" == "" ]; then
@@ -3628,7 +3634,7 @@ if [ "$SB_PDFTOTEXT_EXISTS_ON_PATH" == "" ]; then
         SB_PDFTOTEXT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "pdftotext" "5b0faea1-e474-45f7-85a5-80e241d079e7"
+            "pdftotext" "da407f4b-3883-403b-9119-1012112179e7"
     fi
 fi
 if [ "$S_FP_PDFTOTEXT" == "" ]; then
@@ -3651,7 +3657,7 @@ if [ "$SB_GNOMETYPINGMONITOR_EXISTS_ON_PATH" == "" ]; then
                 echo -e "You may want to\e[33m run the alias mmmv_ui_kill_gnometypingmonitor_t1\e[39m"
                 echo "or switch the gnome-typing-monitor off some other way,"
                 echo "because that bully-ware is running right now."
-                echo "GUID=='2c05f8d4-56ed-4c69-a3f5-80e241d079e7'"
+                echo "GUID=='3a441c3d-b8a6-41ea-b379-1012112179e7'"
                 echo ""
             fi
         fi
@@ -3672,7 +3678,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_XDOTOOL_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "xdotool" "28e88042-9d20-4015-95a5-80e241d079e7"
+                "xdotool" "1f46be1d-faa3-42ff-9219-1012112179e7"
         fi
     fi
     if [ "$SB_XDOTOOL_EXISTS_ON_PATH" == "t" ]; then
@@ -3687,7 +3693,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_WMCTRL_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "wmctrl" "31cd8874-bf84-4111-91a5-80e241d079e7"
+                "wmctrl" "13d17913-cbf3-4645-8519-1012112179e7"
         fi
     fi
     if [ "$SB_WMCTRL_EXISTS_ON_PATH" == "t" ]; then
@@ -3704,7 +3710,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
     if [ "$SB_GSETTINGS_WORKS_T1" != "" ]; then
         func_mmmv_verify_sb_t_f_but_do_not_exit_t2 \
             "$SB_GSETTINGS_WORKS_T1" "SB_GSETTINGS_WORKS_T1" \
-            "568c4c93-fde0-4105-b3a5-80e241d079e7"
+            "224d35c5-98b2-406c-9719-1012112179e7"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_GSETTINGS_WORKS_T1="f" # to allow code at future locations
                                       # of the control flow to work
@@ -3727,12 +3733,12 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
                     echo "    SB_GSETTINGS_WORKS_T1==\"$SB_GSETTINGS_WORKS_T1\""
                     echo "    SB_GSETTINGS_EXISTS_ON_PATH==\"$SB_GSETTINGS_EXISTS_ON_PATH\""
                     echo "are in conflict with each other."
-                    echo "GUID=='f0132d1d-4aae-4fb4-b3f5-80e241d079e7'"
+                    echo "GUID=='653de452-59ad-4ff7-b479-1012112179e7'"
                     echo ""
                 fi
             fi
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "gsettings" "401fc103-eb6c-4ea4-aba5-80e241d079e7"
+        #         "gsettings" "fede3d27-7ed4-4a2b-8119-1012112179e7"
         fi
     fi
     if [ "$SB_GSETTINGS_EXISTS_ON_PATH" == "t" ]; then
@@ -3767,7 +3773,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_IMPORT_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "import" "128523c8-26aa-409d-8395-80e241d079e7"
+                "import" "b15c1622-c63a-44cc-9219-1012112179e7"
         fi
     fi
     if [ "$SB_IMPORT_EXISTS_ON_PATH" == "t" ]; then
@@ -3789,7 +3795,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_GNOMECHARACTERS_EXISTS_ON_PATH="t"
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "gnome-characters" "08e17920-2124-4ec9-8295-80e241d079e7"
+        #         "gnome-characters" "01c9a636-8869-4a6f-9819-1012112179e7"
         fi
     fi
     if [ "$SB_GNOMECHARACTERS_EXISTS_ON_PATH" == "t" ]; then
@@ -3802,7 +3808,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_GNOMETWEAKS_EXISTS_ON_PATH="t"
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "gnome-tweaks" "1b85ae24-53ac-4574-a295-80e241d079e7"
+        #         "gnome-tweaks" "b741241a-5537-46cf-a419-1012112179e7"
         fi
     fi
     if [ "$SB_GNOMETWEAKS_EXISTS_ON_PATH" == "t" ]; then
@@ -3815,7 +3821,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_GNOMESHELLEXTENSIONPREFS_EXISTS_ON_PATH="t"
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "gnome-shell-extension-prefs" "a6dd0956-0414-4e0b-a495-80e241d079e7"
+        #         "gnome-shell-extension-prefs" "43fa38c5-a4dc-4b1a-9119-1012112179e7"
         fi
     fi
     if [ "$SB_GNOMESHELLEXTENSIONPREFS_EXISTS_ON_PATH" == "t" ]; then
@@ -3836,7 +3842,7 @@ if [ "$MMMV_SB_LOOK_FOR_OFFICE_SOFTWARE" == "t" ]; then
             # to and from LibreOffice document formats.
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "unoconv" "221a9a21-81a6-4104-b795-80e241d079e7"
+                "unoconv" "c229e64d-d64e-487a-9119-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -3850,13 +3856,13 @@ if [ "$SB_BAT_EXISTS_ON_PATH" == "" ]; then
         SB_BAT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "bat" "547d5841-1720-4abf-b495-80e241d079e7"
+            "bat" "5036fcc3-32d8-4ab4-a519-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo "\"bat\" MIGHT be installed by executing "
             echo -e "\e[36m"
             echo "    cargo install bat "
             echo -e "\e[39m"
-            echo "GUID=='48867ad2-5435-47e9-b2f5-80e241d079e7'"
+            echo "GUID=='82470c6d-2f7a-4558-8c79-1012112179e7'"
             echo ""
         fi
     fi
@@ -3873,7 +3879,7 @@ if [ "$SB_EXA_EXISTS_ON_PATH" == "" ]; then
         # are declared at a lower part of this file.
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "exa" "93dcf97d-6795-454a-b295-80e241d079e7"
+            "exa" "f4d74d3b-8c42-4da2-8219-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo "\"exa\" MIGHT be installed by executing "
             echo -e "\e[36m"
@@ -3882,7 +3888,7 @@ if [ "$SB_EXA_EXISTS_ON_PATH" == "" ]; then
             echo "In the case of Debian based operating systems "
             echo "the \"exa\" MIGHT be available form the "
             echo "operating system standard package collection."
-            echo "GUID=='1c909da3-0a1d-4a85-a7f5-80e241d079e7'"
+            echo "GUID=='55982913-46aa-42b9-b179-1012112179e7'"
             echo ""
         fi
     fi
@@ -3901,7 +3907,7 @@ func_mmmv_userspace_distro_t1_lambda_01_declare_alias_sorted_ls1X(){
             echo -e "\e[31mThe ~/.bashrc or some subpart of it is flawed. \e[39m"
             echo "The function that outputs this message "
             echo "is in a role of a lambda-function."
-            echo "GUID=='2f3022fa-587a-4a85-a2f5-80e241d079e7'"
+            echo "GUID=='2a347fc7-df06-4b19-ba79-1012112179e7'"
             echo ""
         fi
     fi
@@ -3966,13 +3972,13 @@ if [ "$SB_MCFLY_EXISTS_ON_PATH" == "" ]; then
         SB_MCFLY_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "mcfly" "58b114f5-cafa-4f30-b295-80e241d079e7"
+            "mcfly" "322da0a3-9587-4da7-a619-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo "\"mcfly\" MIGHT be installed by executing "
             echo -e "\e[36m"
             echo "    cargo install mcfly "
             echo -e "\e[39m"
-            echo "GUID=='42fbc835-f79d-4bb4-82f5-80e241d079e7'"
+            echo "GUID=='0e5f6e5a-3dc4-413c-b379-1012112179e7'"
             echo ""
         fi
     fi
@@ -3999,7 +4005,7 @@ if [ "$SB_GITUI_EXISTS_ON_PATH" == "" ]; then
         SB_GITUI_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gitui" "4913af94-12d3-452b-a295-80e241d079e7"
+            "gitui" "fd67ab26-f9fd-4c91-8319-1012112179e7"
     fi
 fi
 #----------------------------------------
@@ -4009,7 +4015,7 @@ if [ "$SB_RG_EXISTS_ON_PATH" == "" ]; then
         SB_RG_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "rg/ripgrep" "649a7a2d-7a5f-4a4a-9595-80e241d079e7"
+            "rg/ripgrep" "4adfec41-e0d0-4bbd-8319-1012112179e7"
     fi
 fi
 if [ "$SB_RG_EXISTS_ON_PATH" == "t" ]; then
@@ -4048,7 +4054,7 @@ if [ "$SB_WIKITUI_EXISTS_ON_PATH" == "" ]; then
         SB_WIKITUI_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "wiki-tui" "f59446aa-45f7-425b-a695-80e241d079e7"
+            "wiki-tui" "60a91e1d-1d9c-4832-a319-1012112179e7"
     fi
 fi
 #----------------------------------------
@@ -4083,13 +4089,13 @@ if [ "$SB_YTDLP_EXISTS_ON_PATH" == "" ]; then
         #---------------------------------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "yt-dlp" "22760347-5341-491e-a395-80e241d079e7"
+            "yt-dlp" "1d6ea268-b2af-4cf9-9519-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo "\"yt-dlp\" MIGHT be installed by executing "
             echo -e "\e[36m"
             echo "    pipx install yt-dlp "
             echo -e "\e[39m"
-            echo "GUID=='3427bb26-c529-43dc-a3f5-80e241d079e7'"
+            echo "GUID=='2b263244-982b-411f-9279-1012112179e7'"
             echo ""
         fi
     fi
@@ -4110,13 +4116,13 @@ if [ "$SB_TRAFILATURA_EXISTS_ON_PATH" == "" ]; then
         #
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "trafilatura" "134cc0a1-97c5-4494-bb95-80e241d079e7"
+            "trafilatura" "480c55a9-5863-400a-a119-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo "\"trafilatura\" MIGHT be installed by executing "
             echo -e "\e[36m"
             echo "    pipx install trafilatura "
             echo -e "\e[39m"
-            echo "GUID=='31974f32-3342-4c4c-92f5-80e241d079e7'"
+            echo "GUID=='2031dc26-adf8-4165-9179-1012112179e7'"
             echo ""
         fi
     fi
@@ -4130,13 +4136,13 @@ if [ "$SB_PDM_EXISTS_ON_PATH" == "" ]; then
         #     https://github.com/pdm-project/pdm
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "pdm" "21b9ab12-1a25-4172-a295-80e241d079e7"
+            "pdm" "1075084e-b795-4f17-8419-1012112179e7"
         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
             echo "\"pdm\" MIGHT be installed by executing "
             echo -e "\e[36m"
             echo "    pipx install --include-deps --force pdm "
             echo -e "\e[39m"
-            echo "GUID=='228c0356-433f-41cc-a3f5-80e241d079e7'"
+            echo "GUID=='4c083ff1-bc31-43bf-a269-1012112179e7'"
             echo ""
         fi
     fi
@@ -4152,7 +4158,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             SB_AUTOCONF_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "autoconf" "fc7dbc35-6524-4f54-b495-80e241d079e7"
+                "autoconf" "5fa95919-45b1-4470-a519-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -4183,7 +4189,7 @@ if [ "$SB_YOUTUBEDLGUI_EXISTS_ON_PATH" == "" ]; then
                 # gets uninstalled during the installation
                 # of of the "youtubedl-gui".
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "youtubedl-gui" "c4283a52-3807-47ae-b395-80e241d079e7"
+                    "youtubedl-gui" "3aceccb1-f429-43fc-9d19-1012112179e7"
             fi
         fi
     fi
@@ -4195,7 +4201,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
                 if [ "$SB_YOUTUBEDLGUI_EXISTS_ON_PATH" == "f" ]; then
                     if [ "$SB_Q4OSYOUTUBEDOWNLOADER_EXISTS_ON_PATH" == "f" ]; then
                         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                            "q4os-youtube-downloader" "de9a443d-3e81-4ac3-9295-80e241d079e7"
+                            "q4os-youtube-downloader" "2115b348-d31f-4b8a-8519-1012112179e7"
                     fi
                 fi
             fi
@@ -4216,7 +4222,7 @@ if [ "$SB_YTFZF_EXISTS_ON_PATH" == "" ]; then
     # else
     #     if [ "$SB_YTDLP_EXISTS_ON_PATH" == "t" ]; then
     #         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-    #             "ytfzf" "72d00d9e-d5bf-4719-8795-80e241d079e7"
+    #             "ytfzf" "a58b0932-e265-43fd-8509-1012112179e7"
     #         if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
     #             echo ""
     #             echo "\"ytfzf\" MIGHT be available form the "
@@ -4226,7 +4232,7 @@ if [ "$SB_YTFZF_EXISTS_ON_PATH" == "" ]; then
     #             echo -e "\e[36m"
     #             echo "    apt-get install ytfzf"
     #             echo -e "\e[39m"
-    #             echo "GUID=='38eab773-5bcc-46b2-a2f5-80e241d079e7'"
+    #             echo "GUID=='91e67032-856a-4f29-b169-1012112179e7'"
     #             echo ""
     #         fi
     #     fi
@@ -4239,7 +4245,7 @@ if [ "$SB_UNCOMPFACE_EXISTS_ON_PATH" == "" ]; then
         SB_UNCOMPFACE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "uncompface" "c9b3d3ca-8236-4523-9495-80e241d079e7"
+            "uncompface" "a9794a56-6575-48b7-a309-1012112179e7"
     fi
 fi
 #--------------------
@@ -4249,7 +4255,7 @@ if [ "$SB_COMPFACE_EXISTS_ON_PATH" == "" ]; then
         SB_COMPFACE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "compface" "6158d844-f541-4ebf-9f95-80e241d079e7"
+            "compface" "43fae785-7fb0-4da6-bc09-1012112179e7"
     fi
 fi
 #--------------------
@@ -4275,7 +4281,7 @@ if [ "$SB_BC_EXISTS_ON_PATH" == "" ]; then
         SB_BC_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "bc" "539bf8a1-f981-45f6-a995-80e241d079e7"
+            "bc" "2680b73c-de5a-4142-a109-1012112179e7"
     fi
 fi
 #--------------------
@@ -4302,7 +4308,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "f" ]; then
             SB_XCLIP_EXISTS_ON_PATH="t"
         else
            func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-               "xclip" "50ca7e25-747f-4590-b295-80e241d079e7"
+               "xclip" "de394c16-5c61-46db-b209-1012112179e7"
         fi
     fi
     if [ "$SB_XCLIP_EXISTS_ON_PATH" == "t" ]; then
@@ -4352,7 +4358,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             else
                 # Please comment out the next 2 lines on distributions that are not based on Debian.
                 func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                    "debtree" "b288c05f-3a36-4a43-8495-80e241d079e7"
+                    "debtree" "584828d2-bdc0-4cad-9a09-1012112179e7"
                 # Thank You.
             fi
         fi
@@ -4369,7 +4375,7 @@ if [ "$MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS" == "t" ]; then
             fi
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "m4" "ea92e61a-0f0d-4005-a585-80e241d079e7"
+                "m4" "9067f75f-894c-42b2-a509-1012112179e7"
         fi
     fi
     #----------------------------------------------------------------------
@@ -4459,7 +4465,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_RESIZE_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "resize" "40c8a684-9b30-48c7-9f85-80e241d079e7"
+                "resize" "c788c042-c945-4248-b309-1012112179e7"
         fi
     fi
     if [ "$SB_RESIZE_EXISTS_ON_PATH" == "t" ]; then
@@ -4473,7 +4479,7 @@ if [ "$SB_SHRED_EXISTS_ON_PATH" == "" ]; then
         SB_SHRED_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "shred" "8c33bbcc-bbe2-43c0-b785-80e241d079e7"
+            "shred" "12a24435-263a-4373-9509-1012112179e7"
     fi
 fi
 if [ "$SB_SHRED_EXISTS_ON_PATH" == "t" ]; then
@@ -4490,7 +4496,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_SNAP_EXISTS_ON_PATH="t"
         # else
         #     # func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #     #     "snap" "25151e74-d118-4bb5-b585-80e241d079e7"
+        #     #     "snap" "27aeb11d-d02a-48d6-8109-1012112179e7"
         #     if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
         #         echo "As of 2023 the snap is a Ubuntu parent company censored package collection tool."
         #         echo -e "\e[33mOn Debian the snap might be installed by \e[39m"
@@ -4516,12 +4522,12 @@ if [ "$SB_UUENCODE_EXISTS_ON_PATH" == "" ]; then
         SB_UUENCODE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "uuencode" "867b1981-feb1-4fd3-b385-80e241d079e7"
+            "uuencode" "250ff493-dcc2-4232-9209-1012112179e7"
         #if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                 echo -e "The \"\e[33muuencode\e[39m\""
                 echo -e "MIGHT be part of the package \"\e[33msharutils\e[39m\". "
-                echo "GUID=='26f12a44-63e6-4b25-81f5-80e241d079e7'"
+                echo "GUID=='2b0287a5-cea8-47d9-9669-1012112179e7'"
                 echo ""
             fi
         #fi
@@ -4534,12 +4540,12 @@ if [ "$SB_UUDECODE_EXISTS_ON_PATH" == "" ]; then
         SB_UUDECODE_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "uudecode" "8ec54251-ab26-4d3c-a285-80e241d079e7"
+            "uudecode" "18b01983-dff2-4704-af09-1012112179e7"
         #if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                 echo -e "The \"\e[33muudecode\e[39m\""
                 echo -e "MIGHT be part of the package \"\e[33msharutils\e[39m\". "
-                echo "GUID=='243a501e-ad88-476a-a4f5-80e241d079e7'"
+                echo "GUID=='b5a21036-dc0c-4db7-a169-1012112179e7'"
                 echo ""
             fi
         #fi
@@ -4552,14 +4558,14 @@ if [ "$SB_UUID_EXISTS_ON_PATH" == "" ]; then
         SB_UUID_EXISTS_ON_PATH="t"
     else
        func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-           "uuid" "7cf89d55-f447-45d0-b185-80e241d079e7"
+           "uuid" "6ca36c4e-8e74-419b-9509-1012112179e7"
         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                 # https://superuser.com/questions/621297/how-do-i-install-uuidgen
                 # archival copy: https://archive.ph/S56pQ
                 echo "On Debian based systems the \"uuid\" MIGHT be installed "
                 echo -e "by installing a package named \"\e[33muuid-runtime\e[39m\"."
-                echo "GUID=='dc2d533b-c75e-41be-92f5-80e241d079e7'"
+                echo "GUID=='208ab03f-0b60-4c78-b469-1012112179e7'"
                 echo ""
             fi
         fi
@@ -4583,7 +4589,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_FCCACHE_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "fc-cache" "a2464e58-be37-4341-9185-80e241d079e7"
+                "fc-cache" "805b645c-14ee-4c25-b509-1012112179e7"
         fi
     fi
     if [ "$SB_FCCACHE_EXISTS_ON_PATH" == "t" ]; then
@@ -4616,7 +4622,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_IPTABLES_EXISTS_ON_PATH="t"
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "iptables" "a733d81d-43c6-42fe-8185-80e241d079e7"
+        #         "iptables" "669beb1f-c80e-4863-9209-1012112179e7"
         fi
     fi
 fi
@@ -4633,7 +4639,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_UFW_EXISTS_ON_PATH="t"
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "ufw" "2b0b46c1-23f0-4186-a385-80e241d079e7"
+        #         "ufw" "b6a24b50-a788-4e0c-9409-1012112179e7"
         fi
     fi
 fi
@@ -4646,7 +4652,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_GUFW_EXISTS_ON_PATH="t"
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "gufw" "fbb6e543-da98-4e87-a285-80e241d079e7"
+                "gufw" "147cc03e-3a8b-4f4c-b409-1012112179e7"
         fi
     fi
 fi
@@ -4670,7 +4676,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
             SB_AUTHBIND_EXISTS_ON_PATH="t"
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "iptables" "1d97c643-453d-440e-9385-80e241d079e7"
+        #         "iptables" "55fa6350-d4bd-4d7e-8309-1012112179e7"
         fi
     fi
 fi
@@ -4684,7 +4690,7 @@ if [ ! -e "$FP_DOT_VIM_MANUALLY_INSTALLED_PLUGINS" ]; then
             echo "    $FP_DOT_VIM_MANUALLY_INSTALLED_PLUGINS"
             echo ""
             echo "is a broken symlink."
-            echo "GUID=='fa089e40-e408-46d9-84e5-80e241d079e7'"
+            echo "GUID=='720a1d54-d7a3-49ce-9469-1012112179e7'"
             echo ""
         fi
     else
@@ -4692,14 +4698,14 @@ if [ ! -e "$FP_DOT_VIM_MANUALLY_INSTALLED_PLUGINS" ]; then
         func_mmmv_wait_and_sync_t1
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$FP_DOT_VIM_MANUALLY_INSTALLED_PLUGINS" \
-            "d56fab80-9870-415e-b785-80e241d079e7" \
+            "8e65a128-7bc6-424e-b409-1012112179e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
 else
     # The next line gives an error message, if it is a file.
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$FP_DOT_VIM_MANUALLY_INSTALLED_PLUGINS" \
-        "c2d8384d-8413-480c-9185-80e241d079e7" \
+        "1d817a5f-ed8c-4ab9-9409-1012112179e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
 fi
 
@@ -4898,15 +4904,15 @@ fi
 #--------------------------------------------------------------------------
 if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/_bashrc_subpart_wget_t1_modified"
-    func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "d3847b76-eb3f-4edf-b285-80e241d079e7"
+    func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "7baa6312-fa26-4b57-a209-1012112179e7"
 fi
 
 S_FP_0="$S_FP_DIR/subparts/general/_bashrc_subpart_create_redirection_HTML_t1"
-func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "91c9f65f-e751-418d-a485-80e241d079e7"
+func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "dad884d4-9f40-4ea4-a109-1012112179e7"
 
 if [ "$SB_FIND_EXISTS_ON_PATH" == "t" ]; then
     S_FP_0="$S_FP_DIR/subparts/mmmv_userspace_distro_t1_specific/_bashrc_subpart_find_t1_modified"
-    func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "41f19164-b794-4742-b685-80e241d079e7"
+    func_mmmv_include_bashfile_if_possible_t2 "$S_FP_0" "53363627-3894-4f9c-95f8-1012112179e7"
 fi
 #--------------------------------------------------------------------------
 S_TMP_0="`echo $LANG | grep UTF-8 `"
@@ -4920,7 +4926,7 @@ if [ "$S_TMP_0" == "" ]; then
         echo "does not have a value with the required suffix of \"UTF-8\"."
         echo "Some of the possible accepted values are:"
         echo "\"en_GB.UTF-8\", \"en_US.UTF-8\", \"C.UTF-8\"."
-        echo "GUID=='f2360214-7e72-4c0e-a2e5-80e241d079e7'"
+        echo "GUID=='8a60331a-0212-4656-8369-1012112179e7'"
         echo ""
         # The UTF-8 locale is required by the Mosh .
         # https://mosh.org/
@@ -4956,7 +4962,7 @@ Some references:
 else
     S_TMP_0="The sshfs was not at PATH "
     S_TMP_1="at the start of this console session. "
-    S_TMP_2="GUID=='2c8d4d51-ba93-43ba-b2e5-80e241d079e7'"
+    S_TMP_2="GUID=='2dd62321-8e1c-4f33-a369-1012112179e7'"
     export S_MMMV_HINT_SSHFS_T1="$S_TMP_0$S_NEWLINE$S_TMP_1$S_NEWLINE$S_TMP_2"
 fi
 if [ "`which fusermount 2> /dev/null`" == "" ]; then
@@ -4964,7 +4970,7 @@ if [ "`which fusermount 2> /dev/null`" == "" ]; then
     # that are mounted with the sshfs.
     S_TMP_0="The fusermount was not at PATH "
     S_TMP_1="at the start of this console session. "
-    S_TMP_2="GUID=='ee559250-bdf2-43ba-b1e5-80e241d079e7'"
+    S_TMP_2="GUID=='3abb9f4e-0323-490e-b469-1012112179e7'"
     export S_MMMV_HINT_SSHFS_T1="$S_TMP_0$S_NEWLINE$S_TMP_1$S_NEWLINE$S_TMP_2"
 fi
 alias mmmv_ls_doc_SSHFS_hint_t1="echo \"\"; \\
@@ -5146,7 +5152,7 @@ func_general_Linux_userspace_specific_declarations(){
         else
             func_mmmv_verify_sb_t_f_but_do_not_exit_t1 \
                 "$SB_USERNAME_IS_root" \
-                "59acba44-c953-47eb-9385-80e241d079e7"
+                "ccb0ea58-43f1-4598-82f8-1012112179e7"
         fi # whoami === root
     fi
     #----------------------------------------------------------------------
@@ -5154,7 +5160,7 @@ func_general_Linux_userspace_specific_declarations(){
     if [ -e $S_TMP_2 ]; then
         if [ -d $S_TMP_2 ]; then
             func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
-                "$S_TMP_2" "5eb8021c-758b-4525-b285-80e241d079e7"
+                "$S_TMP_2" "2bc86745-5647-4026-95f8-1012112179e7"
             # The "snaps" are Ubuntu/Canonical version of
             # "universal" Linux packages
             #
@@ -5166,7 +5172,7 @@ func_general_Linux_userspace_specific_declarations(){
             #
         else
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_TMP_2" "a36fd349-f9e0-4c1f-9585-80e241d079e7" \
+                "$S_TMP_2" "a33d5204-1593-4b3a-85f8-1012112179e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         fi
     fi
@@ -5214,7 +5220,7 @@ func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations(){
             SB_POWERSHELL_EXE_EXISTS_ON_PATH="t"
         else
            func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-               "powershell.exe" "400257c1-d617-4716-b585-80e241d079e7"
+               "powershell.exe" "a59a2116-e3b5-4326-92f8-1012112179e7"
         fi
     fi
     if [ "$SB_POWERSHELL_EXE_EXISTS_ON_PATH" == "t" ]; then
@@ -5227,7 +5233,7 @@ func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations(){
             SB_CLIP_EXE_EXISTS_ON_PATH="t"
         # else
         #    func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #        "clip.exe" "a5dad63f-3693-4ba5-b185-80e241d079e7"
+        #        "clip.exe" "6a104f43-0b3b-4433-a4f8-1012112179e7"
         fi
     fi
     if [ "$SB_CLIP_EXE_EXISTS_ON_PATH" == "t" ]; then
@@ -5236,7 +5242,7 @@ func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations(){
     #----------------------------------------------------------------------
     S_FP_TASKLIST_EXE="/mnt/c/Windows/System32/tasklist.exe"
     func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-        "$S_FP_TASKLIST_EXE" "b9e5cd2a-307a-4265-8175-80e241d079e7" \
+        "$S_FP_TASKLIST_EXE" "64f0e7fe-51d6-4894-88f8-1012112179e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         S_TMP_0="vcxsrv.exe"
@@ -5256,12 +5262,12 @@ func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations(){
                     echo ""
                     echo "    https://sourceforge.net/projects/vcxsrv/"
                     echo ""
-                    echo "GUID=='51f32445-dcec-4a2e-b5e5-80e241d079e7'"
+                    echo "GUID=='030c204c-09d1-457c-b269-1012112179e7'"
                 else
                     echo ""
                     echo "X11 not available." # as probabilistically expected, so
                     # no long distracting texts needed.
-                    echo "GUID=='2a8842d2-ed05-47b3-a2e5-80e241d079e7'"
+                    echo "GUID=='4c8bc923-e80c-48b4-8269-1012112179e7'"
                 fi
                 echo ""
             fi
@@ -5295,7 +5301,7 @@ func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations(){
     local S_FP_BASHFILE="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/subparts/mmmv_userspace_distro_t1_specific/appliance_instance_specific_Bash_code/autogenerated_by_adduser_cmd/Windows_10_WSL_Debian_v_4_4_0_autogenerated_bashrc.bash"
     local SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # domain: {"","t","f"}
     func_mmmv_include_bashfile_if_possible_t2 "$S_FP_BASHFILE" \
-        "584a1a11-e729-4e24-a175-80e241d079e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
+        "590d9761-57d6-4177-a2f8-1012112179e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
     alias dmesg="sudo /bin/dmesg "
     #alias hddtemp="sudo /usr/sbin/hddtemp "
     #----------------------------------------------------------------------
@@ -5305,7 +5311,7 @@ func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations(){
     else
         func_mmmv_verify_sb_t_f_but_do_not_exit_t1 \
             "$SB_USERNAME_IS_root" \
-            "e9500524-6eae-40a4-8475-80e241d079e7"
+            "d8203319-7d4f-433d-b4f8-1012112179e7"
     fi
     #----------------------------------------------------------------------
 } # func_Windows_Subsystem_for_Linux_WSL_userspace_specific_declarations
@@ -5324,7 +5330,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "t" ]; then
     #     else
     #         # The
     #         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
-    #             "$S_FP_0" "218a0b2b-18a3-4e0f-b475-80e241d079e7" \
+    #             "$S_FP_0" "e9a53b38-38f0-484e-b3f8-1012112179e7" \
     #             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     #         # is here for outputting an error message.
     #     fi
@@ -5337,7 +5343,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "t" ]; then
     #         %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX" \
-        "e9080d1f-91cd-410f-8575-80e241d079e7" \
+        "51d547e7-8478-4612-81f8-1012112179e7" \
         "f"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         PATH="$S_FP_0:$PATH"
@@ -5349,14 +5355,14 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "t" ]; then
             SB_POWERSHELL_EXE_EXISTS_ON_PATH="t"
         else
            func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-               "powershell.exe" "01a92f5d-1768-45bd-9175-80e241d079e7"
+               "powershell.exe" "4a5abc12-dbf0-401f-a9f8-1012112179e7"
            if [ "$SB_OK_TO_DISPLAY_COMMENT" == "t" ]; then
                echo ""
                echo "Some further information about that MIGHT be available at "
                echo -e "\e[33m"
                echo "https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#winget "
                echo -e "\e[39m"
-               echo "GUID=='37b799d4-daba-4449-a4e5-80e241d079e7'"
+               echo "GUID=='5fa519f4-1d8c-430d-a569-1012112179e7'"
                echo ""
            fi
         fi
@@ -5423,14 +5429,14 @@ func_FreeBSD_userspace_specific_declarations(){
         local S_FP_LSBLK_V2021_07_11_HOME="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/operating_system_specific/FreeBSD/lsblk_for_FreeBSD/lsblk_for_FreeBSD_by_Slawomir_Wojciech_Wojtczak_and_minor_contributors/2021_07_11_downloaded"
         func_mmmv_add_bin_2_Z_PATH_and_optionally_share_man_2_MANPATH_t1 \
             "$S_FP_LSBLK_V2021_07_11_HOME" \
-            "60b8303f-9fd7-41dc-8475-80e241d079e7"
+            "369d35d4-4ac6-4fd3-95f8-1012112179e7"
     else
         if [ "$SB_ABSENCE_DETECTED" != "t" ]; then
             if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                 echo ""
                 echo -e "\e[31mThe code in this function is flawed.\e[39m"
                 echo "SB_ABSENCE_DETECTED==\"$SB_ABSENCE_DETECTED\"."
-                echo "GUID=='4b35b035-25ac-4de2-85e5-80e241d079e7'"
+                echo "GUID=='01656b17-4325-4155-a469-1012112179e7'"
                 echo ""
             fi
         fi
@@ -5444,7 +5450,7 @@ if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "t" ]; then
         export MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX_BIN="$MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX/bin"
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX_BIN" \
-            "8dc1d129-3054-4761-a575-80e241d079e7" \
+            "166e0d3b-3e69-4dc2-91f8-1012112179e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
             Z_PATH="$MMMV_USERSPACE_DISTRO_T1_LINUX_ANDROID_TERMUX_BIN:$Z_PATH"
@@ -5479,7 +5485,7 @@ if [ "$SB_LIBTOOL_EXISTS_ON_PATH" == "" ]; then
         SB_LIBTOOL_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "libtool" "c574005d-57ec-45af-8275-80e241d079e7"
+            "libtool" "3e7dd849-323c-4852-b4f8-1012112179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -5509,7 +5515,7 @@ if [ "$SB_FOSSIL_EXISTS_ON_PATH" == "" ]; then
         SB_FOSSIL_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "fossil" "25d4e7a1-3a7b-40a6-8575-80e241d079e7"
+            "fossil" "64aeac41-d56c-4c4d-b5f8-1012112179e7"
     fi
 fi
 if [ "$SB_FOSSIL_EXISTS_ON_PATH" == "t" ]; then
@@ -5525,7 +5531,7 @@ if [ "$SB_GEOMYIDAE_EXISTS_ON_PATH" == "" ]; then
         SB_GEOMYIDAE_EXISTS_ON_PATH="t"
     # else
     #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-    #         "geomyidae " "2babd315-d5af-4644-9175-80e241d079e7"
+    #         "geomyidae " "135f393b-fcc1-498d-a3f8-1012112179e7"
     fi
 fi
 # if [ "$SB_GEOMYIDAE_EXISTS_ON_PATH" == "t" ]; then
@@ -5553,5 +5559,5 @@ if [ "$SB_AGREP_EXISTS_ON_PATH" == "" ]; then
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="57194f18-267f-46fb-8135-80e241d079e7"
+# S_VERSION_OF_THIS_FILE="27a0b43c-800e-4613-a2f8-1012112179e7"
 #==========================================================================
