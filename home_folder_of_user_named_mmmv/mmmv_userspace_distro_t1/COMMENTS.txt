@@ -333,7 +333,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "153fe051-a6b5-4470-b84c-b0a2012179e7"
+All quoted GUIDs like "3e7c2d81-a125-41f4-8279-42b2112179e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -659,9 +659,9 @@ than me, then I must humbly hope that they at least bother to submit
 their code to me in their own style. That way I can learn from their
 code style and may be change my own code style according to what I am
 capable of learning from their code style. If I rewrite the submitted
-code during the auditing anyway, then I manually or semi-manually
-reformat it to my own style anyway, so it does not matter, if the
-submitted code is in a style that I do not prefer to use myself.
+code during the auditing, then I manually or semi-manually reformat it
+to my own style anyway, so it does not matter, if the submitted code is
+in a style that I do not prefer to use myself.
 
 My main communication channel is email(Martin.Vahi@softf1.com),
 but as of 2025_07 the suggested main space for project specific
@@ -715,5 +715,5 @@ shoddy compromise, this list here is better than nothing.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="757c0da6-01e8-4822-832c-b0a2012179e7"
+# S_VERSION_OF_THIS_FILE="a7fd282a-2af9-4913-8579-42b2112179e7"
 ===========================================================================

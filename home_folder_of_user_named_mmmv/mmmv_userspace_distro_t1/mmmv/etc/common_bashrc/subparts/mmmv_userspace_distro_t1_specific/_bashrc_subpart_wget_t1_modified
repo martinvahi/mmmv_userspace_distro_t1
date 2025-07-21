@@ -21,7 +21,7 @@
 #             echo "    S_FP_0==$S_FP_0"
 #             echo ""
 #             echo "exists, but a file is expected."
-#             echo "GUID=='217c8173-2d40-40ff-925d-e2a3405069e7'"
+#             echo "GUID=='5f8eb9d5-c71c-45de-9753-b2d2405179e7'"
 #             echo ""
 #         else
 #             source "$S_FP_0"
@@ -33,7 +33,7 @@
 #         echo "    S_FP_0==$S_FP_0"
 #         echo ""
 #         echo "could not be found."
-#         echo "GUID=='485c5f71-3c07-41b6-845d-e2a3405069e7'"
+#         echo "GUID=='5433acb3-705c-4ab8-b813-b2d2405179e7'"
 #         echo ""
 #     fi
 #
@@ -58,10 +58,10 @@ func_mmmv_bashrc_subpart_wget_t1_error_message_t1(){
         echo ""
         echo "    SB_WGET_EXISTS_ON_PATH==\"$SB_WGET_EXISTS_ON_PATH\""
         echo ""
-        if [ "$S_GUID_CANDIDATE" != "" ]; then 
+        if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='9f322533-21c6-4acd-815d-e2a3405069e7'"
+        echo "GUID=='56dbc771-2277-4a0b-b323-b2d2405179e7'"
         echo ""
     else
         echo ""
@@ -70,14 +70,14 @@ func_mmmv_bashrc_subpart_wget_t1_error_message_t1(){
         else
             echo -e "\e[31mThis function is flawed.\e[39m"
         fi
-        if [ "$S_GUID_CANDIDATE" != "" ]; then 
+        if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='53e131c1-87ba-486a-b45d-e2a3405069e7'"
+        echo "GUID=='a467698d-8366-4279-8cb3-b2d2405179e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
-    # exit 1 # must NOT be called in ~/.bashrc, because 
+    # exit 1 # must NOT be called in ~/.bashrc, because
              # exiting from the ~/.bashrc exits the session.
     #----------------------------------------------------------------------
 } # func_mmmv_bashrc_subpart_wget_t1_error_message_t1
@@ -89,20 +89,24 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "" ]; then
     if [ "$S_FP_WGET" != "" ]; then
         SB_WGET_EXISTS_ON_PATH="t"
     # else
-    # # Outcommented here, buecause the test resides elsewhere 
+    # # Outcommented here, buecause the test resides elsewhere
     # # and the test here would duplicate error messages.
     #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-    #         "curl" "40d53850-aaa2-4c03-b25d-e2a3405069e7"
+    #         "curl" "e4e55cdb-6ede-49fb-9813-b2d2405179e7"
     fi
 else
     if [ "$SB_WGET_EXISTS_ON_PATH" != "t" ]; then
         if [ "$SB_WGET_EXISTS_ON_PATH" != "f" ]; then
             func_mmmv_bashrc_subpart_wget_t1_error_message_t1 \
-                "5c76a591-faa2-4d42-a55d-e2a3405069e7"
+                "52bcadc1-75de-414a-b623-b2d2405179e7"
         fi
     fi
 fi
-
+if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$S_FP_WGET" == "" ]; then
+        S_FP_WGET="`which wget 2> /dev/null`"
+    fi
+fi
 #--------------------------------------------------------------------------
 if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     MMMV_WGET_RECURSIVE_PART_NICE="$S_FP_NICE -n 15 "
@@ -110,7 +114,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
 else
     if [ "$SB_WGET_EXISTS_ON_PATH" != "f" ]; then
         func_mmmv_bashrc_subpart_wget_t1_error_message_t1 \
-            "8b5b1148-3ae9-4e3b-a35d-e2a3405069e7"
+            "a26281f3-b8a3-414e-ae53-b2d2405179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -122,7 +126,7 @@ fi
 #     # -e robots=off --no-check-certificate "
 #     #----------------------------------------------------------------------
 #     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD=" \
-#     $MMMV_WGET_RECURSIVE_PART_NICE\
+#     $MMMV_WGET_RECURSIVE_PART_NICE \
 #     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET "
 #     #--------
 #     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS=" \
@@ -131,7 +135,7 @@ fi
 #     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET "
 #     #--------
 #     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_IGNORE_ROBOTS_TXT=" \
-#     $MMMV_WGET_RECURSIVE_PART_NICE\
+#     $MMMV_WGET_RECURSIVE_PART_NICE \
 #     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET -e robots=off "
 #     #--------
 #     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_IGNORE_ROBOTS_TXT=" \
@@ -195,7 +199,7 @@ fi
 #     alias mmmv_wget_recursive_across_domains_10="\
 #         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET --level=10 "
 #     #----------------------------------------------------------------------
-#     # Start of robots.txt ignorance. 
+#     # Start of robots.txt ignorance.
 #     alias mmmv_wget_recursive_single_domain_1_ignore_robots_txt="\
 #         $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_IGNORE_ROBOTS_TXT --level=1 "
 #     alias mmmv_wget_recursive_single_domain_2_ignore_robots_txt="\
@@ -237,7 +241,7 @@ fi
 #         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_IGNORE_ROBOTS_TXT --level=9 "
 #     alias mmmv_wget_recursive_across_domains_10_ignore_robots_txt="\
 #         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_IGNORE_ROBOTS_TXT --level=10 "
-#     # End of robots.txt ignorance. 
+#     # End of robots.txt ignorance.
 #     #----------------------------------------------------------------------
 #     #if [ "`which torsocks`" != "" ]; then # a lot of command line output if torsocks missing from PATH
 #     if [ "$SB_TORSOCKS_EXISTS_ON_PATH" == "t" ]; then
@@ -283,7 +287,7 @@ fi
 #         alias mmmv_wget_recursive_across_domains_10_torsocks="\
 #             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS --level=10 "
 #         #------------------------------------------------------------------
-#         # Start of robots.txt ignorance. 
+#         # Start of robots.txt ignorance.
 #         alias mmmv_wget_recursive_single_domain_1_torsocks_ignore_robots_txt="\
 #             $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_IGNORE_ROBOTS_TXT --level=1 "
 #         alias mmmv_wget_recursive_single_domain_2_torsocks_ignore_robots_txt="\
@@ -325,14 +329,14 @@ fi
 #             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_IGNORE_ROBOTS_TXT --level=9 "
 #         alias mmmv_wget_recursive_across_domains_10_torsocks_ignore_robots_txt="\
 #             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_IGNORE_ROBOTS_TXT --level=10 "
-#         # End of robots.txt ignorance. 
+#         # End of robots.txt ignorance.
 #         #------------------------------------------------------------------
 #     fi
 #     #----------------------------------------------------------------------
 # else
 #     if [ "$SB_WGET_EXISTS_ON_PATH" != "f" ]; then
 #         func_mmmv_bashrc_subpart_wget_t1_error_message_t1 \
-#             "053dcf9b-7ea8-4fdd-a85d-e2a3405069e7"
+#             "43513712-039f-4a15-a712-b2d2405179e7"
 #     fi
 # fi
 #
@@ -345,7 +349,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     # -e robots=off --no-check-certificate "
     #----------------------------------------------------------------------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_3_2_10=" \
-    $MMMV_WGET_RECURSIVE_PART_NICE\
+    $MMMV_WGET_RECURSIVE_PART_NICE \
     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET_3_2_10 "
     #--------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_3_2_10=" \
@@ -354,7 +358,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET_3_2_10 "
     #--------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_IGNORE_ROBOTS_TXT_3_2_10=" \
-    $MMMV_WGET_RECURSIVE_PART_NICE\
+    $MMMV_WGET_RECURSIVE_PART_NICE \
     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET_3_2_10 -e robots=off "
     #--------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_2_10=" \
@@ -418,7 +422,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     alias mmmv_wget_recursive_across_domains_10_t_3_2_10="\
         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_3_2_10 --level=10 "
     #----------------------------------------------------------------------
-    # Start of robots.txt ignorance. 
+    # Start of robots.txt ignorance.
     alias mmmv_wget_recursive_single_domain_1_ignore_robots_txt_t_3_2_10="\
         $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_IGNORE_ROBOTS_TXT_3_2_10 --level=1 "
     alias mmmv_wget_recursive_single_domain_2_ignore_robots_txt_t_3_2_10="\
@@ -460,7 +464,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_IGNORE_ROBOTS_TXT_3_2_10 --level=9 "
     alias mmmv_wget_recursive_across_domains_10_ignore_robots_txt_t_3_2_10="\
         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_IGNORE_ROBOTS_TXT_3_2_10 --level=10 "
-    # End of robots.txt ignorance. 
+    # End of robots.txt ignorance.
     #----------------------------------------------------------------------
     #if [ "`which torsocks`" != "" ]; then # a lot of command line output if torsocks missing from PATH
     if [ "$SB_TORSOCKS_EXISTS_ON_PATH" == "t" ]; then
@@ -506,7 +510,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
         alias mmmv_wget_recursive_across_domains_10_torsocks_t_3_2_10="\
             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_3_2_10 --level=10 "
         #------------------------------------------------------------------
-        # Start of robots.txt ignorance. 
+        # Start of robots.txt ignorance.
         alias mmmv_wget_recursive_single_domain_1_torsocks_ignore_robots_txt_t_3_2_10="\
             $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_2_10 --level=1 "
         alias mmmv_wget_recursive_single_domain_2_torsocks_ignore_robots_txt_t_3_2_10="\
@@ -548,14 +552,14 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_2_10 --level=9 "
         alias mmmv_wget_recursive_across_domains_10_torsocks_ignore_robots_txt_t_3_2_10="\
             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_2_10 --level=10 "
-        # End of robots.txt ignorance. 
+        # End of robots.txt ignorance.
         #------------------------------------------------------------------
     fi
     #----------------------------------------------------------------------
 else
     if [ "$SB_WGET_EXISTS_ON_PATH" != "f" ]; then
         func_mmmv_bashrc_subpart_wget_t1_error_message_t1 \
-            "b76bc51a-31fc-4c4b-815d-e2a3405069e7"
+            "1d0ed2b4-acd4-42c3-9252-b2d2405179e7"
     fi
 fi
 
@@ -568,7 +572,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     # -e robots=off --no-check-certificate "
     #----------------------------------------------------------------------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_3_4_60=" \
-    $MMMV_WGET_RECURSIVE_PART_NICE\
+    $MMMV_WGET_RECURSIVE_PART_NICE \
     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET_3_4_60 "
     #--------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_3_4_60=" \
@@ -577,7 +581,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET_3_4_60 "
     #--------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_IGNORE_ROBOTS_TXT_3_4_60=" \
-    $MMMV_WGET_RECURSIVE_PART_NICE\
+    $MMMV_WGET_RECURSIVE_PART_NICE \
     $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_PART_WGET_3_4_60 -e robots=off "
     #--------
     MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_4_60=" \
@@ -641,7 +645,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     alias mmmv_wget_recursive_across_domains_10_t_3_4_60="\
         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_3_4_60 --level=10 "
     #----------------------------------------------------------------------
-    # Start of robots.txt ignorance. 
+    # Start of robots.txt ignorance.
     alias mmmv_wget_recursive_single_domain_1_ignore_robots_txt_t_3_4_60="\
         $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_IGNORE_ROBOTS_TXT_3_4_60 --level=1 "
     alias mmmv_wget_recursive_single_domain_2_ignore_robots_txt_t_3_4_60="\
@@ -683,7 +687,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_IGNORE_ROBOTS_TXT_3_4_60 --level=9 "
     alias mmmv_wget_recursive_across_domains_10_ignore_robots_txt_t_3_4_60="\
         $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_WGET_IGNORE_ROBOTS_TXT_3_4_60 --level=10 "
-    # End of robots.txt ignorance. 
+    # End of robots.txt ignorance.
     #----------------------------------------------------------------------
     #if [ "`which torsocks`" != "" ]; then # a lot of command line output if torsocks missing from PATH
     if [ "$SB_TORSOCKS_EXISTS_ON_PATH" == "t" ]; then
@@ -729,7 +733,7 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
         alias mmmv_wget_recursive_across_domains_10_torsocks_t_3_4_60="\
             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_3_4_60 --level=10 "
         #------------------------------------------------------------------
-        # Start of robots.txt ignorance. 
+        # Start of robots.txt ignorance.
         alias mmmv_wget_recursive_single_domain_1_torsocks_ignore_robots_txt_t_3_4_60="\
             $MMMV_WGET_RECURSIVE_SINGLE_DOMAIN_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_4_60 --level=1 "
         alias mmmv_wget_recursive_single_domain_2_torsocks_ignore_robots_txt_t_3_4_60="\
@@ -771,16 +775,16 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_4_60 --level=9 "
         alias mmmv_wget_recursive_across_domains_10_torsocks_ignore_robots_txt_t_3_4_60="\
             $MMMV_WGET_RECURSIVE_ACROSS_DOMAINS_CMD_TORSOCKS_IGNORE_ROBOTS_TXT_3_4_60 --level=10 "
-        # End of robots.txt ignorance. 
+        # End of robots.txt ignorance.
         #------------------------------------------------------------------
     fi
     #----------------------------------------------------------------------
 else
     if [ "$SB_WGET_EXISTS_ON_PATH" != "f" ]; then
         func_mmmv_bashrc_subpart_wget_t1_error_message_t1 \
-            "1c015d42-2f37-4cf8-a15d-e2a3405069e7"
+            "11b5fcb1-c2f4-46b5-a252-b2d2405179e7"
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="534ac596-7a43-4c6a-a15d-e2a3405069e7"
+# S_VERSION_OF_THIS_FILE="14994a24-5856-4902-b332-b2d2405179e7"
 #==========================================================================
