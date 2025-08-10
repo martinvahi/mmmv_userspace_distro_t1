@@ -22,7 +22,7 @@
 #         echo "    $S_FP_0"
 #         echo ""
 #         echo "is a symlink, but for safety reasons a file is expected."
-#         echo "GUID=='51b2c121-5cf6-4b3c-b3a0-12a1904179e7'"
+#         echo "GUID=='2be78501-64e4-46f2-8014-e072107179e7'"
 #         echo ""
 #     else
 #         if [ -d "$S_FP_0" ]; then
@@ -32,7 +32,7 @@
 #                 echo "    $S_FP_0"
 #                 echo ""
 #                 echo "is a folder, but a file is expected."
-#                 echo "GUID=='39a06944-97de-4b4c-b3a0-12a1904179e7'"
+#                 echo "GUID=='e7769d62-9439-4984-9c54-e072107179e7'"
 #                 echo ""
 #         else
 #             source "$S_FP_0"
@@ -49,7 +49,7 @@
 #     else
 #         echo "is missing."
 #     fi
-#     echo "GUID=='eb5dbc1a-6869-42e6-a5a0-12a1904179e7'"
+#     echo "GUID=='52deed23-8375-49f3-a454-e072107179e7'"
 #     echo ""
 # fi
 # #--------------------------------------------------------------------------
@@ -132,7 +132,7 @@ fi
 if [ "`whoami`" != "root" ]; then
     echo ""
     echo "This script is meant to be executed only by the root user."
-    echo "GUID=='ea32582c-e706-485b-91a0-12a1904179e7'"
+    echo "GUID=='b3510012-204c-4786-8914-e072107179e7'"
     echo ""
 fi
 #--------------------------------------------------------------------------
@@ -185,7 +185,7 @@ else
         echo -e "\e[31mThe operating system is neither Linux, nor BSD. \e[39m"
         echo "The mmmv aliases are probably not tested "
         echo "with the current operating system."
-        echo "GUID=='584e7557-553c-4dc5-a5a0-12a1904179e7'"
+        echo "GUID=='5e533764-7ce0-4b66-b644-e072107179e7'"
         echo ""
     fi
     #----------------------------------------------------------------------
@@ -199,7 +199,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         echo ""
         echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
         echo "but it is expected to be a GUID."
-        echo "GUID=='5483cb85-1e75-456a-9ea0-12a1904179e7'"
+        echo "GUID=='3df3d651-a1ff-41bc-b514-e072107179e7'"
         echo ""
     fi
     #--------------------
@@ -209,7 +209,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='11fd2248-04f3-4698-94a0-12a1904179e7'"
+        echo "GUID=='109bba52-61f5-496d-9914-e072107179e7'"
     else
         echo -e "\e[31mThe value of the S_CONSOLE_PROGRAM_NAME is an empty string\e[39m,"
         echo "but it is expected to be a console program name, which "
@@ -217,7 +217,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='8b27d28b-a7b6-4efb-81a0-12a1904179e7'"
+        echo "GUID=='19bdc5b5-cb29-45ba-a523-e072107179e7'"
     fi
     echo ""
     #--------------------
@@ -243,7 +243,7 @@ if [ -e "$S_FP_0" ]; then
         else
             echo "is a folder, but a file is expected."
         fi
-        echo "GUID=='038f9517-a574-43a0-9490-12a1904179e7'"
+        echo "GUID=='4b51f6a2-3f34-4206-ad13-e072107179e7'"
         echo ""
     else
         if [ -h "$S_FP_0" ]; then
@@ -253,7 +253,7 @@ if [ -e "$S_FP_0" ]; then
             echo "    $S_FP_0"
             echo ""
             echo "is a symlink to a file, but for safety reasons a file is expected."
-            echo "GUID=='f36fcf1b-bf63-4ba4-a590-12a1904179e7'"
+            echo "GUID=='36d16934-2ec0-4a8d-aa33-e072107179e7'"
             echo ""
         else
             # The value of the SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED is
@@ -268,7 +268,7 @@ if [ -e "$S_FP_0" ]; then
                 echo "    SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED==\"$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED\""
                 echo ""
                 echo "but it is expected to be \"t\"."
-                echo "GUID=='2ad3063f-0fcc-4171-b190-12a1904179e7'"
+                echo "GUID=='26e189a4-ec28-4791-9853-e072107179e7'"
                 echo ""
             fi
         fi
@@ -284,7 +284,7 @@ else
     else
         echo "is missing."
     fi
-    echo "GUID=='381b96df-a347-43d0-8590-12a1904179e7'"
+    echo "GUID=='242863c5-2a93-4521-ad33-e072107179e7'"
     echo ""
 fi
 
@@ -295,13 +295,13 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
     SB_VERIFICATION_FAILED="t"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG" \
-        "8e93cb2c-daae-45de-93a0-12a1904179e7"
+        "1a3f3a84-aef4-4eed-9254-e072107179e7"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_admin_root_overwrite_root_bashrc_subcomponents_t1="\
         if [ \"/root/mmmv_userspace_distro_t1_components_for_root\" != \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_DEST\" ]; then \
             echo '' ; \
             echo 'This script is flawed.' ; \
-            echo \"GUID=='221b6e17-ec6e-49e5-9490-12a1904179e7'\" ; \
+            echo \"GUID=='ac953771-a827-44b5-bd23-e072107179e7'\" ; \
             echo '' ; \
         fi ; \
         if [ -e \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG\" ]; then \
@@ -324,7 +324,7 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
             echo '    $MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG ' ; \
             echo '' ; \
             echo 'does not exist.' ; \
-            echo \"GUID=='e8c2c28e-894d-402a-9490-12a1904179e7'\" ; \
+            echo \"GUID=='3dc56d94-a5ac-4081-8e53-e072107179e7'\" ; \
             echo '' ; \
         fi "
     fi
@@ -369,7 +369,7 @@ if [ "$SB_IPTABLES_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_admin_firewall_iptables_create_chain_of_filters="iptables --new-chain " # <chain name>
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "iptables" "80d2b03f-331b-4780-95a0-12a1904179e7"
+            "iptables" "839b53ff-759d-4922-ab24-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -379,7 +379,7 @@ if [ "$SB_FIND_EXISTS_ON_PATH" == "" ]; then
         SB_FIND_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "find" "5aa16405-c13b-488a-a3a0-12a1904179e7"
+            "find" "69123753-03f4-4e2c-b844-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -418,13 +418,13 @@ if [ "$SB_UFW_EXISTS_ON_PATH" == "" ]; then
                     SB_UFW_EXISTS_ON_PATH="t"
                 else
                     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                        "gufw" "d0f84ff3-1412-4df0-85a0-12a1904179e7"
+                        "gufw" "4cceef52-ccd0-42b4-a154-e072107179e7"
                 fi
             fi
             #--------
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "ufv" "7d11833e-be18-4f9e-b3a0-12a1904179e7"
+                "ufv" "1305247b-0764-4b38-b824-e072107179e7"
         fi
         #------------------------------------------------------------------
     fi
@@ -436,7 +436,7 @@ if [ "$SB_APT_EXISTS_ON_PATH" == "" ]; then
         SB_APT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "apt" "c9cb9237-836e-4049-82a0-12a1904179e7"
+            "apt" "26f2a2b5-937a-4ba6-bb34-e072107179e7"
     fi
 fi
 #----------------
@@ -447,7 +447,7 @@ if [ "$SB_GREP_EXISTS_ON_PATH" == "" ]; then
         alias grep='grep --color=auto '
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "grep" "928249d8-cc0b-4751-82a0-12a1904179e7"
+            "grep" "b568e900-8082-49ab-b253-e072107179e7"
     fi
 fi
 #--------------------
@@ -457,7 +457,7 @@ if [ "$SB_SED_EXISTS_ON_PATH" == "" ]; then
         SB_SED_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "sed" "b1253431-ed43-4426-b5a0-12a1904179e7"
+            "sed" "42edcbb1-225f-4e67-8333-e072107179e7"
     fi
 fi
 #--------------------
@@ -467,7 +467,7 @@ if [ "$SB_GAWK_EXISTS_ON_PATH" == "" ]; then
         SB_GAWK_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gawk" "3d58a2e4-65cd-425c-8290-12a1904179e7"
+            "gawk" "258a4335-0c0c-4f6c-b353-e072107179e7"
     fi
 fi
 #--------------------
@@ -477,7 +477,7 @@ if [ "$SB_XARGS_EXISTS_ON_PATH" == "" ]; then
         SB_XARGS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xargs" "9244c022-10a4-4007-9590-12a1904179e7"
+            "xargs" "2a9c7781-0edd-449a-9033-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -523,7 +523,7 @@ if [ "$SB_APTGET_EXISTS_ON_PATH" == "" ]; then
         #------------------------------------------------------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "apt-get" "f41b9118-aeb7-4edc-9390-12a1904179e7"
+            "apt-get" "dc2793e0-c606-439a-af13-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -534,7 +534,7 @@ if [ "$SB_APTITUDE_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_aptitude_search="nice -n 2 aptitude search "
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "aptitude" "98fbf02d-a521-4426-9590-12a1904179e7"
+            "aptitude" "04a1cb24-b4f7-4f9e-8413-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -545,7 +545,7 @@ if [ "$SB_SERVICE_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_ls_daemons_Linux_service_t1="nice -n 4 service --status-all  "
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "service" "548e115a-a596-4685-ab90-12a1904179e7"
+            "service" "5642d583-ff05-443c-9233-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -562,7 +562,7 @@ if [ "$SB_SYSTEMCTL_EXISTS_ON_PATH" == "" ]; then
         #----------------
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "systemctl" "b4f61cbd-8c80-4e5d-a390-12a1904179e7"
+        #         "systemctl" "58e7d224-814f-4cf3-8f13-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -572,13 +572,16 @@ if [ "$SB_DU_EXISTS_ON_PATH" == "" ]; then
         SB_DU_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "du" "2964d13d-e004-44e9-9490-12a1904179e7"
+            "du" "251fedb2-22b4-4e21-9923-e072107179e7"
     fi
 fi
 #--------------------------------------------------------------------------
 if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
     if [ "$SB_DU_EXISTS_ON_PATH" == "t" ]; then
         alias mmmv_lssize_recursive_t1_Linux="nice -n 5 du  --human-readable --summarize ./ "
+    fi
+    if [ "`which restart 2> /dev/null`" == "" ]; then
+        alias restart="reboot " # in Windows world the rebooting is called "restarting the computer"
     fi
 fi
 if [ "$SB_OPERATINGSYSTEM_BSD" == "t" ]; then
@@ -796,5 +799,5 @@ alias ls="ls --color " # works on both, Linux and FreeBSD
 # alias mmmv_admin_unmount_magnet_01="$MMMV_CMD_MAGNET_01_UNMOUNTING "
 #
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="ca78e032-e21f-4bf3-8490-12a1904179e7"
+# S_VERSION_OF_THIS_FILE="32bddd34-8c9f-48be-a033-e072107179e7"
 #==========================================================================

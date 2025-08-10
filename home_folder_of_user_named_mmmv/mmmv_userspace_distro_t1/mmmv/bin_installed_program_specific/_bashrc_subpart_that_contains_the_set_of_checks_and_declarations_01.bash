@@ -6,7 +6,7 @@
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
 #==========================================================================
-S_FP_DIR_TMP_0="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
+S_FP_DIR_TMP_0="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 S_FN_SCRIPTFILE_TMP_0="`basename ${BASH_SOURCE[0]}`"
 if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" == "" ]; then
     MMMV_USERSPACE_DISTRO_T1_HOME="`cd $S_FP_DIR_TMP_0/../; pwd`/mmmv_userspace_distro_t1"
@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='a1645614-52ab-4b9d-8410-2291b03088e7'"
+    echo "GUID=='5aec5224-8ac7-4ee6-9473-714270a089e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -59,21 +59,21 @@ if [ "$SB_OK_TO_INLCUDE" == "t" ]; then
     #------------------------------------
 fi
 #--------------------------------------------------------------------------
-# On PATH the binary of the par text formatter by Adam M. Costello, the  
-# 
+# On PATH the binary of the par text formatter by Adam M. Costello, the
+#
 #     http://www.nicemice.net/par/
-# 
+#
 # can have a name collision with "Perl Archive Toolkit"
-# 
+#
 #     https://metacpan.org/pod/PAR
 #     https://metacpan.org/dist/PAR/view/lib/PAR/Tutorial.pod
-# 
+#
 # One way to overcome this issue is to rename the binary of the par text
 # formatter to something else. In this case the relatively arbitrary
 # choice has been:
-# 
+#
 #     par -> par_text_formatter
-# 
+#
 # If the par text formatter comes from a Debian package collection, then
 # one option is to put a symlink to par on PATH and name that symlink to
 # par_text_formatter.
@@ -85,7 +85,7 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "" ]; then
         export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "par_text_formatter" "37a4e36a-ee4e-493b-8110-2291b03088e7"
+            "par_text_formatter" "c6247101-d21e-4632-8173-714270a089e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ if [ "$SB_QUTEBROWSER_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/qutebrowser_specific/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$S_TMP_0" \
-        "e280168b-ed56-4bd4-a310-2291b03088e7" \
+        "57ce3d25-c502-44a2-8173-714270a089e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_0:$Z_PATH"
@@ -139,6 +139,122 @@ if [ "$SB_PAR2_EXISTS_ON_PATH" == "t" ]; then
         fi
     fi
 fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/SHA256_dependent_bashrc_subparts"
+SB_SHA256_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_SHA256SUM_EXISTS_ON_PATH" == "t" ]; then
+    SB_SHA256_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_SHA256_CALCULATION_PROGRAM_EXISTS="t"
+    else
+        if [ "$SB_SHA256_EXISTS_ON_PATH" == "t" ]; then
+            SB_SHA256_CALCULATION_PROGRAM_EXISTS="t"
+        fi
+    fi
+fi
+if [ "$SB_SHA256_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/SHA512_dependent_bashrc_subparts"
+SB_SHA512_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_SHA512SUM_EXISTS_ON_PATH" == "t" ]; then
+    SB_SHA512_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_SHA512_CALCULATION_PROGRAM_EXISTS="t"
+    else
+        if [ "$SB_SHA512_EXISTS_ON_PATH" == "t" ]; then
+            SB_SHA512_CALCULATION_PROGRAM_EXISTS="t"
+        fi
+    fi
+fi
+if [ "$SB_SHA512_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/SHA384_dependent_bashrc_subparts"
+SB_SHA384_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_SHA384SUM_EXISTS_ON_PATH" == "t" ]; then
+    SB_SHA384_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_SHA384_CALCULATION_PROGRAM_EXISTS="t"
+    else
+        if [ "$SB_SHA384_EXISTS_ON_PATH" == "t" ]; then
+            SB_SHA384_CALCULATION_PROGRAM_EXISTS="t"
+        fi
+    fi
+fi
+if [ "$SB_SHA384_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/SHA1_dependent_bashrc_subparts"
+SB_SHA1_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_SHA1SUM_EXISTS_ON_PATH" == "t" ]; then
+    SB_SHA1_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_SHA1_CALCULATION_PROGRAM_EXISTS="t"
+    else
+        if [ "$SB_SHA1_EXISTS_ON_PATH" == "t" ]; then
+            SB_SHA1_CALCULATION_PROGRAM_EXISTS="t"
+        fi
+    fi
+fi
+if [ "$SB_SHA1_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/MD5_dependent_bashrc_subparts"
+SB_MD5_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_MD5SUM_EXISTS_ON_PATH" == "t" ]; then
+    SB_MD5_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_MD5_CALCULATION_PROGRAM_EXISTS="t"
+    else
+        if [ "$SB_MD5_EXISTS_ON_PATH" == "t" ]; then
+            SB_MD5_CALCULATION_PROGRAM_EXISTS="t"
+        fi
+    fi
+fi
+if [ "$SB_MD5_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/TigerHash_dependent_bashrc_subparts"
+SB_TIGERHASH_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+    SB_TIGERHASH_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_TIGERHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_TIGERHASH_CALCULATION_PROGRAM_EXISTS="t"
+    fi
+fi
+if [ "$SB_TIGERHASH_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/WhirlpoolHash_dependent_bashrc_subparts"
+SB_WHIRLPOOLHASH_CALCULATION_PROGRAM_EXISTS="f"
+if [ "$SB_RHASH_EXISTS_ON_PATH" == "t" ]; then
+    SB_WHIRLPOOLHASH_CALCULATION_PROGRAM_EXISTS="t"
+else
+    if [ "$SB_WHIRLPOOLHASH_EXISTS_ON_PATH" == "t" ]; then
+        SB_WHIRLPOOLHASH_CALCULATION_PROGRAM_EXISTS="t"
+    fi
+fi
+if [ "$SB_WHIRLPOOLHASH_CALCULATION_PROGRAM_EXISTS" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/xxHash_dependent_bashrc_subparts"
+if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "t" ]; then
+    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="74605d3e-909f-4412-9410-2291b03088e7"
+# S_VERSION_OF_THIS_FILE="7ad17b54-4ebc-4909-a173-714270a089e7"
 #==========================================================================
