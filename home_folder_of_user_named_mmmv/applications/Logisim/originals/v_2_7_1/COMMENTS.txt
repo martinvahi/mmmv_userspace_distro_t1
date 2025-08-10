@@ -1,0 +1,17 @@
+
+Home page:
+
+    https://sourceforge.net/projects/circuit/
+
+As of 2025 the Logisim program is de facto usable only on x86/AMD64
+computers and on virtual appliances, because its souce requires Java5
+for compilation and as of 2025 nobody bothers to maintain a Java5
+compiler. The
+
+    ./upstream_binary/logisim-generic-2.7.1.jar
+
+does run with Java8 by executing
+
+    java -jar ./upstream_binary/logisim-generic-2.7.1.jar
+
+
