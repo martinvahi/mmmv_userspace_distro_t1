@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='5aec5224-8ac7-4ee6-9473-714270a089e7'"
+    echo "GUID=='70f2155b-50bf-43ff-a4b5-f072f06189e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -85,7 +85,7 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "" ]; then
         export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "par_text_formatter" "c6247101-d21e-4632-8173-714270a089e7"
+            "par_text_formatter" "15911715-472d-4313-b1b5-f072f06189e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ if [ "$SB_QUTEBROWSER_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/qutebrowser_specific/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$S_TMP_0" \
-        "57ce3d25-c502-44a2-8173-714270a089e7" \
+        "2b936993-577d-4acd-a7b5-f072f06189e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_0:$Z_PATH"
@@ -255,6 +255,17 @@ S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/xxHash_depende
 if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "t" ]; then
     export Z_PATH="$S_TMP_0/bin:$Z_PATH"
 fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/wget_grep_sed_replace"
+if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_GSED_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_REPLACE_EXISTS_ON_PATH" == "t" ]; then
+                export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+            fi
+        fi
+    fi
+fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="7ad17b54-4ebc-4909-a173-714270a089e7"
+# S_VERSION_OF_THIS_FILE="62b8f94e-9f2a-4970-95b5-f072f06189e7"
 #==========================================================================
