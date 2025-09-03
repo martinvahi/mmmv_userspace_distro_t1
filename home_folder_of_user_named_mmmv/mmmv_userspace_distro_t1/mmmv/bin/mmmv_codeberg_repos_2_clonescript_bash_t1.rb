@@ -18,7 +18,7 @@
 
 ---------------------------------------------------------------------------
 
- Copyright 2019, Martin.Vahi@softf1.com that has an
+ Copyright 2025, Martin.Vahi@softf1.com that has an
  Estonian personal identification code of 38108050020.
  All rights reserved.
 
@@ -51,21 +51,18 @@
 #==========================================================================
 # Ruby language version related normalization:
 #--------------------------------------------------------------------------
-# Most Ruby versions prior to Ruby version 3.2.0
-# had that method. This code makes old code that
-# worked with those older Ruby versions
-# work with the Ruby version 3.2.0 .
+# Most Ruby versions prior to Ruby version 3.2.0 had that method. This
+# code makes old code that worked with those older Ruby versions work
+# with the Ruby version 3.2.0 .
 if !defined? File.exists?
    def File.exists? x
       b=File.exist? x
       return b
    end # File.exists?
 end # if
-# Ruby 2.4.0 introduced a change, where
-# classes Fixnum and Bignum were deprecated
-# their use triggered a warning text to stderr
-# and their common parent class, Integer,
-# was expected to be used instead of them.
+# Ruby 2.4.0 introduced a change, where classes Fixnum and Bignum were
+# deprecated their use triggered a warning text to stderr and their
+# common parent class, Integer, was expected to be used instead of them.
 # Ruby version 2.7.2 removed the warning from the stderr.
 # Ruby version 3.2.0 missed the classes, Fixnum and Bignum.
 # The following 2 if-clauses keep the old code working.
@@ -76,31 +73,35 @@ if !defined? Bignum
    Bignum=Integer
 end # if
 #--------------------------------------------------------------------------
-$s_doc_github_repos_2_clonescript_bash_t1_s=<<DESCRIPTION
+$s_doc_codeberg_repos_2_clonescript_bash_t1_s=<<DESCRIPTION
 #
-# A video introduction to this script MIGHT be available from
+# A video introduction to a GitHub analogue of script MIGHT be available from
 #
 #     https://softf1.com/technology/demo/video/2018_12_18_GitHub_Clonescript_Generator_demo_01.webm
 #     or
 #     https://web.archive.org/web/20200310170413/https://longterm.softf1.com/documentation_fragments/2018/2018_12_18_GitHub_Clonescript_Generator_demo_01.webm
-#
 # It is an extra simplistic script that reads in the file named "repos"
 # from the working directory and creates a file "clonescript.bash" to
-# the working directory.  The file "repos" is expected to contain lines like
+# the working directory.  The file "repos" is expected to contain text
+# fragments similar to
 #
-#     "clone_url": "https://github.com/martinvahi/mmmv_devel_tools.git",
+#     "clone_url": "https://codeberg.org/martinvahi/mmmv_userspace_distro_t1.git,
 #
-# and it is expected to be created by using the wget at the GitHub API like
+# and it is expected to be created by using the wget at the Codeberg API like
 #
-#     wget https://api.github.com/users/martinvahi/repos
+# \e[36m    wget https://codeberg.org/api/v1/users/martinvahi/repos \e[39m
 #
-# but this Ruby script can do the wget part automatically, if given the
-# GitHub user account URL as the 1. console argument. An example:
+# which MIGHT be reformatted manually by end user by executing
 #
-#     <file path to this script> https://github.com/martinvahi
+# \e[36m    cat ./repos | python -m json.tool > ./repos_reformatted \e[39m
+#
+# This Ruby script can do the wget part automatically, if given the
+# Codeberg user account URL as the 1. console argument. An example:
+#
+#     <file path to this script> https://codeberg.org/martinvahi
 #
 # Optionally the espeak speech synthesis program is used for some
-# messages, provided that it is available on the PATH.  The use of the
+# messages, provided that it is available on the PATH. The use of the
 # speech synthesis can be turned off by setting the
 #
 #      @b_config_use_speech_synthesis=false
@@ -108,19 +109,17 @@ $s_doc_github_repos_2_clonescript_bash_t1_s=<<DESCRIPTION
 # at the constructor of the only class that has been
 # declared at this Ruby script.
 #
-#
-# COMMAND_LINE_ARGS :== <GitHub user account URL> | HELP | TESTS | CLEAR_CMDS
-#              HELP :== "help" | "-?" | "-h"
-#             TESTS :== "test_0" | "test_1" | TEST_2 | "test_3"
-#            TEST_2 :== "test"   | "test_2"
+# COMMAND_LINE_ARGS :== <Codeberg user account URL> | HELP | TESTS | CLEAR_CMDS
+#              HELP :== "help" | "-?" | "-h" | "\e[33mh\e[39m"
+#             TESTS :== "test_0" | "\e[33mt\e[39m"
 #        CLEAR_CMDS :== CLEAR | DELETE_CLONINGSCRIPT | DELETE_REPOS
 #
-#             CLEAR :== "clear" | "cl" | "clean"  # deletes files "repos"
-#                                                 # and "cloningscript.bash"
+#             CLEAR :== "clear" | "cl" | "clean" | "\e[33mc\e[39m" # deletes files "repos"
+#                                                      # and "repos_reformatted"
+#                                                      # and "cloningscript.bash"
 #
 #  DELETE_CLONINGSCRIPT :== "delete_cloningscript" | "clc"
 #          DELETE_REPOS :== "delete_repos" | "clr"
-#
 #
 # A similar, but much more advanced, project has been done by Jay Gabriels
 #     http://www.jaygabriels.com/
@@ -128,10 +127,11 @@ $s_doc_github_repos_2_clonescript_bash_t1_s=<<DESCRIPTION
 #     https://github.com/gabrie30/ghorg
 #
 DESCRIPTION
-#$s_doc_github_repos_2_clonescript_bash_t1_s.gsub!(/^[#]/," ") # because
+#$s_doc_codeberg_repos_2_clonescript_bash_t1_s.gsub!(/^[#]/," ") # because
 # src formatter can't handle heredoc properly
 #--------------------------------------------------------------------------
 require "thread"
+#require "json"
 
 #------the--start--of--boilerplate-----------------------------------------
 $kibuvits_lc_emptystring="".freeze
@@ -139,8 +139,8 @@ $kibuvits_lc_linebreak="\n".freeze
 $kibuvits_lc_doublelinebreak="\n\n".freeze
 $kibuvits_lc_rbrace_linebreak=");\n".freeze
 $kibuvits_lc_mx_streamaccess=Monitor.new
-#KIBUVITS_b_DEBUG=true
-KIBUVITS_b_DEBUG=false
+KIBUVITS_b_DEBUG=true
+#KIBUVITS_b_DEBUG=false
 
 #--------------------------------------------------------------------------
 $kibuvits_var_b_running_selftests=false
@@ -207,11 +207,11 @@ def kibuvits_throw(s_or_ob_exception,a_binding=nil)
    # Typecheck of the s_or_ob_exception
    b_input_verification_failed=false
    s_msg=nil
-   # The classes String and Exception both have the to_s method.  The input
-   # verification should throw within the scope that contains the call to the
-   # kibuvits_throw(...), regardless of the value of the a_binding, because the
-   # flaw that caused verification failure resides in the scope, where the call
-   # to the kibuvits_throw(...) was made.
+   # The classes String and Exception both have the to_s method.  The
+   # input verification should throw within the scope that contains
+   # the call to the kibuvits_throw(...), regardless of the value of
+   # the a_binding, because the flaw that caused verification failure
+   # resides in the scope, where the call to the kibuvits_throw(...) was made.
    if !(x_in.respond_to? "to_s")
       b_input_verification_failed=true
       s_msg=" (s_or_ob_exception.respond_to? \"to_s\")==false\n"
@@ -261,7 +261,8 @@ def kibuvits_throw(s_or_ob_exception,a_binding=nil)
                   # created, for example, after all caches have been
                   # erased, but this if-branch here is such a hack that
                   # one does not risk creating the file.  The next is a
-                  # crippled, checkless copy-paste from kibuvits_os.rb
+                  # crippled, checkless copy-paste from
+                  # kibuvits_os.rb
                   s_fp=s_1
                   file=File.open(s_fp, "w")
                   file.write(s_msg)
@@ -379,10 +380,9 @@ def kibuvits_s_varvalue2varname_t1(a_binding, ob_varvalue,
    if ar.size==0
       # It's actually legitimate for the instance to miss a variable,
       # designating symbol, within the scope that the a_binding
-      # references, because the instance might have been referenced
-      # by an object id or by some other way by using reflection
-      # or fed in like kibuvits_s_varvalue2varname_t1(binding(),
-      # an_awesome_function())
+      # references, because the instance might have been referenced by
+      # an object id or by some other way by using reflection or fed in like
+      # kibuvits_s_varvalue2varname_t1(binding(), an_awesome_function())
       s_varname=$kibuvits_lc_emptystring
    else
       s_varname=ar[0]
@@ -523,10 +523,9 @@ end # kibuvits_typecheck
 
 #--------------------------------------------------------------------------
 
-# A boilerplate related comment:
-# An explanation, why the watershed concatenation
-# gives any speedup at all, MIGHT be avaliable from
-# https://github.com/martinvahi/mmmv_notes/tree/master/mmmv_notes/phenomenon_scrutinization/string_concatenation
+# A boilerplate related comment:  An explanation, why the watershed
+# concatenation gives any speedup at all, MIGHT be avaliable from
+# https://codeberg.org/martinvahi/mmmv_notes/src/branch/main/mmmv_notes/phenomenon_scrutinization/string_concatenation
 def kibuvits_s_concat_array_of_strings_watershed(ar_in)
    s_lc_emptystring=""
    if defined? KIBUVITS_b_DEBUG
@@ -685,7 +684,7 @@ def str2file(s_a_string, s_fp)
          raise(Exception.new(
          "No comments. \n"+
          "s_a_string=="+s_a_string+"\n"+err.to_s+"\n\n"+
-         "GUID='34b0de47-ba52-46b2-b56e-00c2b01099e7' \n"))
+         "GUID='917e5020-bcdd-4904-a2ec-4030803099e7' \n"))
       end #
    end # synchronize
 end # str2file
@@ -713,7 +712,7 @@ def file2str(s_file_path)
       rescue Exception =>err
          raise(Exception.new("\n"+err.to_s+"\n\ns_file_path=="+
          s_file_path+
-         "\n GUID='d5640535-4ed8-4848-826e-00c2b01099e7'\n\n"))
+         "\n GUID='ac1253c4-64c9-4869-aaec-4030803099e7'\n\n"))
       end #
    end # synchronize
    return s_out
@@ -721,7 +720,7 @@ end # file2str
 
 #------the--end--of--boilerplate-------------------------------------------
 
-class GitHub_repos_2_clonescript_bash_t1
+class Codeberg_repos_2_clonescript_bash_t1
 
    # According to tests with Ruby version 2.5.1p57
    # a Mutex-protected region can NOT be re-entered by the same thread and
@@ -732,7 +731,7 @@ class GitHub_repos_2_clonescript_bash_t1
    def s_help_doc()
       if !defined? @b_s_help_doc_inited
          # Because src formatter can't handle heredoc properly.
-         @s_help_doc_cache=$s_doc_github_repos_2_clonescript_bash_t1_s.gsub!(/^[#]/," ")
+         @s_help_doc_cache=$s_doc_codeberg_repos_2_clonescript_bash_t1_s.gsub!(/^[#]/," ")
          @b_s_help_doc_inited=true
          @s_help_doc_cache.freeze
       end # if
@@ -780,7 +779,7 @@ class GitHub_repos_2_clonescript_bash_t1
       if cl_0!=String
          @b_use_speechless_throw_mode=true # to break infinite recursion
          angervaks_throw("s_text.class=="+cl_0.to_s+"\n"+
-         "GUID=='01451852-ddce-43a3-946e-00c2b01099e7'")
+         "GUID=='7dbb6223-4640-499d-a2dc-4030803099e7'")
       end # if
       #--------
       cl_1=s_suffix_2_print_without_pronounciation.class
@@ -788,7 +787,7 @@ class GitHub_repos_2_clonescript_bash_t1
          @b_use_speechless_throw_mode=true # to break infinite recursion
          angervaks_throw("s_suffix_2_print_without_pronounciation.class=="+
          cl_1.to_s+"\n"+
-         "GUID=='90b59f42-8d39-43a8-a16e-00c2b01099e7'")
+         "GUID=='3d956dc5-d295-4b19-93dc-4030803099e7'")
       end # if
       #--------
       @@mx_speech_synthesis.synchronize{
@@ -819,7 +818,7 @@ class GitHub_repos_2_clonescript_bash_t1
       if s_optional_guid_candidate.class==String # !=NilClass
          s_err<<("GUID=='"+s_optional_guid_candidate+"'\n")
       end # if
-      s_err<<"GUID=='3f1123d4-f4c7-40d6-826e-00c2b01099e7'\n\n"
+      s_err<<"GUID=='e3d59d5e-d69a-4073-84dc-4030803099e7'\n\n"
       #--------
       #raise(Exception.new(s_err))
       kibuvits_throw(s_err)
@@ -837,12 +836,12 @@ class GitHub_repos_2_clonescript_bash_t1
          if x_success!=true
             angervaks_throw("Shell execution failed. \n"+
             "The command line was:\n"+s_cmd,
-            "46ead22d-e964-4570-846e-00c2b01099e7")
+            "a741ac43-fcd6-4e39-a3ec-4030803099e7")
          end # if
       rescue Exception=>e
          angervaks_throw("Shell execution failed.\n"+
          "The command line was:\n"+s_cmd+"\n"+"e.to_s=="+e.to_s,
-         "18d789f3-56b4-4af2-996e-00c2b01099e7")
+         "533d1837-9f24-4981-a3dc-4030803099e7")
       end # try-catch
    end # exc_angervaks_sh
 
@@ -857,7 +856,7 @@ class GitHub_repos_2_clonescript_bash_t1
       if s_0.size!=s_console_application_name.size
          angervaks_throw("This function implementation does not allow \n"+
          "spaces or tabs at the console application name.\n"+
-         "GUID=='3ae74296-fd8c-4989-b26e-00c2b01099e7'")
+         "GUID=='48a73c5e-2169-42ca-b1dc-4030803099e7'")
       end # if
       #------------------------
       b_missing_from_path=false
@@ -873,7 +872,7 @@ class GitHub_repos_2_clonescript_bash_t1
 
    # A nice test repository:
    #
-   #     https://github.com/gnustep
+   #     https://codeberg.org/gnustep
    #
    def exc_s_wget_repos_if_needed(ht_opmem)
       s_out=nil
@@ -883,17 +882,17 @@ class GitHub_repos_2_clonescript_bash_t1
             angervaks_throw("The \n\n"+s_fp_repos+"\n\n"+
             "exists, but it is a folder. \n"+
             "It is expected to be a file.\n"+
-            "GUID=='41523b13-f6f3-4238-b36e-00c2b01099e7'")
+            "GUID=='d5e00fe6-7d58-42dd-a3dc-4030803099e7'")
          end # if
          if File.symlink? s_fp_repos
             angervaks_throw("The \n\n"+s_fp_repos+"\n\n"+
             "exists, but it is a symlink. \n"+
             "It is expected to be a file.\n"+
-            "GUID=='66600043-baa3-446a-a26e-00c2b01099e7'")
+            "GUID=='6968ac18-0661-407a-94dc-4030803099e7'")
          end # if
          if 1<@ar_argv.size
             angervaks_throw("The code of this script is flawed.\n"+
-            "GUID=='d2832053-90ba-410c-b56e-00c2b01099e7'")
+            "GUID=='69b51326-590b-48af-b4dc-4030803099e7'")
          end # if
          if @ar_argv.size==1
             #--------------------
@@ -913,10 +912,10 @@ class GitHub_repos_2_clonescript_bash_t1
                s_err<<"there is also something nonconformant\n"
                s_err<<"given as the 1. command line argument.\n"
                s_err<<"May be the 1. command line argument.\n"
-               s_err<<"should be a GitHub user account URL?\n"
+               s_err<<"should be a Codeberg user account URL?\n"
             end # if
             angervaks_throw(s_err+
-            "GUID=='66556017-ee9c-49ea-b46e-00c2b01099e7'")
+            "GUID=='153c9cb4-d50e-4d05-97dc-4030803099e7'")
          end # if
          s_out=file2str(s_fp_repos)
          return s_out
@@ -925,31 +924,31 @@ class GitHub_repos_2_clonescript_bash_t1
       if @ar_argv.size==0
          angervaks_throw("The file \n\n"+s_fp_repos+"\n\n"+
          "is missing. It MIGHT be auto-created by \n"+
-         "giving this Ruby script the GitHub user account URL \n"+
+         "giving this Ruby script the Codeberg user account URL \n"+
          "as its 1. command line argument. An example of a valid URL:\n"+
          "\n"+
-         "    https://github.com/martinvahi \n"+
+         "    https://codeberg.org/martinvahi \n"+
          "\n"+
-         "GUID=='48e9b3a5-363b-4e68-826e-00c2b01099e7'")
+         "GUID=='eb076818-42bc-4f51-82dc-4030803099e7'")
       end  # if
       #----------------------------------------------------------
-      #     https://github.com/martinvahi
+      #     https://codeberg.org/martinvahi
       #     -->
-      #     wget https://api.github.com/users/martinvahi/repos
+      #     wget https://codeberg.org/api/v1/users/martinvahi/repos
       s_account_url_candidate=@ar_argv[0].to_s
-      rgx_0=/^http[s]?:[\/][\/]?github[.]com[\/]+[^\s\/]+[\/]*$/
+      rgx_0=/^http[s]?:[\/][\/]?codeberg[.]org[\/]+[^\s\/]+[\/]*$/
       md=s_account_url_candidate.match(rgx_0)
       if md==nil
          angervaks_throw("The optional 1. console argument \n"+
          "is expected to be either missing or it is \n"+
-         "expected to be a GitHub user account URL, but it was \n\n"+
+         "expected to be a Codeberg user account URL, but it was \n\n"+
          s_account_url_candidate+"\n"+
          "\n"+
-         "A GitHub user account URL format example:\n"+
+         "A Codeberg user account URL format example:\n"+
          "\n"+
-         "    https://github.com/martinvahi\n"+
+         "    https://codeberg.org/martinvahi\n"+
          "\n"+
-         "GUID=='d8d4872d-9ef7-4c0d-816e-00c2b01099e7'")
+         "GUID=='9c61104f-3351-4b64-a5dc-4030803099e7'")
       end # if
       s_account_url=s_account_url_candidate.sub(/[\/]+$/,"")
       s_0=s_account_url.reverse
@@ -974,11 +973,11 @@ class GitHub_repos_2_clonescript_bash_t1
             angervaks_throw("It seems that both of the programs, \n"+
             "the wget and the curl, are missing from the PATH.\n"+
             "Failed to auto-create the \n\n"+s_fp_repos+"\n\n"+
-            "GUID=='9789d558-7a0f-4003-b46e-00c2b01099e7'")
+            "GUID=='39cf1d17-9085-483c-94dc-4030803099e7'")
          end # if
       end # if
       #----------------------
-      s_api_url_prefix="https://api.github.com/users/"+s_username+
+      s_api_url_prefix="https://codeberg.org/api/v1/users/"+s_username+
       "/repos?per_page=40&page="
       func_s_download_cmd=lambda do |i_page_number|
          if KIBUVITS_b_DEBUG
@@ -987,7 +986,7 @@ class GitHub_repos_2_clonescript_bash_t1
             if (cl!=Integer) # A hack to remove Ruby warning about the old Fixnum class.
                if (cl!=Fixnum)
                   kibuvits_typecheck(bn,[Integer],i_page_number,
-                  "GUID=='8bd5751c-cc63-43d8-b36e-00c2b01099e7'")
+                  "GUID=='d3f8e930-3720-4ce8-a4dc-4030803099e7'")
                end # if
             end # if
          end # if
@@ -996,13 +995,13 @@ class GitHub_repos_2_clonescript_bash_t1
             # archival copy: https://archive.is/WFRyR
             angervaks_throw("The code of this script is flawed.\n"+
             "Minimum valid page number ==1."+
-            "GUID=='a4967070-c95e-41f2-b26e-00c2b01099e7'")
+            "GUID=='ee0c5c32-26e7-4dd3-92dc-4030803099e7'")
          end # if
          cl=s_download_application.class
          if cl!=String
             angervaks_throw("The code of this script is flawed.\n"+
             "cl=="+cl.to_s+"\n"+
-            "GUID=='50461357-28ad-4f41-a46e-00c2b01099e7'")
+            "GUID=='471719d1-1ec8-4561-b7cc-4030803099e7'")
          end # if
          #--------
          s_cmd_out=""
@@ -1017,7 +1016,7 @@ class GitHub_repos_2_clonescript_bash_t1
          else
             angervaks_throw("The code of this script is flawed.\n"+
             "s_download_application=="+s_download_application+"\n"+
-            "GUID=='58ea3751-19bd-4809-ae5e-00c2b01099e7'")
+            "GUID=='d880994e-c8c6-4114-81cc-4030803099e7'")
          end # case s_download_application
          return s_cmd_out
       end # func_s_download_cmd
@@ -1050,7 +1049,7 @@ class GitHub_repos_2_clonescript_bash_t1
          while b_download_more_pages do
             s_download_cmd=func_s_download_cmd.call(i_api_url_suffix_page_number)
             begin
-               # GitHub user account URL can be incorrect,
+               # Codeberg user account URL can be incorrect,
                # among other reasons, why the download can fail.
                exc_angervaks_sh(s_download_cmd)
             rescue Exception=>e
@@ -1059,7 +1058,7 @@ class GitHub_repos_2_clonescript_bash_t1
             if ob_exception!=nil
                ob_thread_0.join(i_max_n_of_seconds_to_wait_4_the_thread)
                angervaks_throw(ob_exception.to_s+
-               "GUID=='1db7a816-9c32-4ae7-b25e-00c2b01099e7'")
+               "GUID=='97115353-ed9e-4c74-94cc-4030803099e7'")
             end # if
             #--------
             if File.exists? s_fp_repos
@@ -1072,7 +1071,7 @@ class GitHub_repos_2_clonescript_bash_t1
                   angervaks_throw("Something went wrong. The downloaded \n"+
                   "text fails to meet the expectations of this script.\n"+
                   "May be this script should be updated?\n"+
-                  "GUID=='a15f792d-9574-42b6-945e-00c2b01099e7'")
+                  "GUID=='2a8207bd-51a8-4c14-84cc-4030803099e7'")
                end # if
                b_download_more_pages=false if s_2==s_lc_0
                #--------
@@ -1092,14 +1091,14 @@ class GitHub_repos_2_clonescript_bash_t1
                   angervaks_throw(
                   "Deletion of a temporary version of the file \n"+
                   s_fp_repos+"\n"+"failed.\n"+
-                  "GUID=='c232fc38-5884-4009-915e-00c2b01099e7'")
+                  "GUID=='6230e736-055b-4a87-b3cc-4030803099e7'")
                end # if
             else
                ob_thread_0.join(i_max_n_of_seconds_to_wait_4_the_thread)
                angervaks_throw("The code of this script is flawed.\n"+
                "The temporary version of the file \n"+s_fp_repos+"\n"+
                "is missing.\n"+
-               "GUID=='e42312c3-7f72-4d74-bb5e-00c2b01099e7'")
+               "GUID=='1da03ed5-99f9-485f-92cc-4030803099e7'")
             end # if
             #-------------------
             if b_first_iteration
@@ -1134,12 +1133,12 @@ class GitHub_repos_2_clonescript_bash_t1
       if !File.exists? s_fp_repos
          angervaks_throw("The file \n\n"+s_fp_repos+"\n\n"+
          "is missing.\n"+
-         "GUID=='54a66918-909e-4b4a-b15e-00c2b01099e7'")
+         "GUID=='0c82171f-8414-4e3f-83cc-4030803099e7'")
       end # if
       if File.exists? s_fp_clonescript
          angervaks_throw("The file \n"+s_fp_clonescript+
          "\n already exists.\n"+
-         "GUID=='364739e4-18ef-4793-b55e-00c2b01099e7'")
+         "GUID=='ccc38c14-64cc-4e4c-93cc-4030803099e7'")
       end # if
    end # exc_verify_file_existence_01
 
@@ -1147,52 +1146,46 @@ class GitHub_repos_2_clonescript_bash_t1
    def run_exc_parse_s_repos_01(ht_opmem)
       #-----------------------------------------------------------------------
       # TODO: swap the dumb regex based parsing to some proper JSON
-      # parsing The JSON parsing will not be much more reliable than the
+      # parsing. The JSON parsing will not be much more reliable than the
       # current dumb regex version, because if the location of the field
       # at the JSON tree changes, then as long as the JSON is formatted
       # the way it currently(2018_12_18) is, the dumb regex version will
       # likely be able to handle the changed version, but the proper
       # JSON version would need to be updated to reflect the location
-      # change of the field.  If there's no added reliability benefit to
+      # change of the field. If there's no added reliability benefit to
       # the proper JSON version, then the current implementation might
       # as well just stay a while.
       #-----------------------------------------------------------------------
-      s_repos=ht_opmem["s_repos"]
-      s_fp_repos=ht_opmem["s_fp_repos"]
+      rgx_0=/[\s\r\n\t]+/
+      rgx_1=/["]clone_url["][\s\t]*[:][\s\t]*["]https:[\/]{2}codeberg[.]org[\/][^"]+[.]git["]/
+      rgx_2=/[\s\t]*["]clone_url["][\s\t]*[:][\s\t]*/
+      rgx_3=/[\s\t]*["][\s\t]*/
       #--------------------------------------------
-      # "clone_url": "https://github.com/martinvahi/mmmv_devel_tools.git",
-      rgx_0=/^[\s]+["]clone_url["][:].+$/
-      rgx_1=/^[\s]+["]clone_url["][:] "/
-      rgx_2=/["][,][\s]*$/
-      ar_matches=s_repos.scan(rgx_0)
-      ar_s_giturl=Array.new
-      s_0=nil
-      s_1=nil
-      s_lc_0=""
+      s_repos=ht_opmem["s_repos"]
+      # "clone_url": "https://codeberg.org/martinvahi/mmmv_userspace_distro_t1.git",
+      s_0=s_repos.gsub(rgx_0,$kibuvits_lc_emptystring)
+      s_1=s_0.gsub(rgx_0,$kibuvits_lc_emptystring)
+      ar_matches=s_1.scan(rgx_1)
+      #s_fp_repos=ht_opmem["s_fp_repos"] # here only for error message text
+      #--------------------------------------------
+      ar_s_giturls=Array.new
       ar_matches.each do |s_match|
-         s_0=s_match.sub(rgx_1,s_lc_0)
-         if s_0==s_match
-            angervaks_throw("repos file format mismatch.\n"+
-            "File path:\n\n"+s_fp_repos+"\n\n"+
-            "s_0=="+s_0+"\n"+
-            "GUID=='ce475935-3bfe-49bc-845e-00c2b01099e7'")
+         s_0=s_match.gsub(rgx_2,$kibuvits_lc_emptystring)
+         if KIBUVITS_b_DEBUG
+            if s_0==$kibuvits_lc_emptystring
+               angervaks_throw("This script is flawed.\n"+
+               "GUID=='ee1c1719-c27f-42ab-83cc-4030803099e7'")
+            end # if
          end # if
-         #--------
-         s_1=s_0.sub(rgx_2,s_lc_0)
-         if s_1==s_0
-            angervaks_throw("repos file format mismatch.\n"+
-            "File path:\n\n"+s_fp_repos+"\n\n"+
-            "s_1=="+s_1+"\n"+
-            "GUID=='152a5dbb-c61c-4799-855e-00c2b01099e7'")
-         end # if
-         ar_s_giturl<<s_1
+         s_1=s_0.gsub(rgx_3,$kibuvits_lc_emptystring)
+         ar_s_giturls<<s_1
       end # loop
       #--------
-      ht_opmem["ar_s_giturl"]=ar_s_giturl
+      ht_opmem["ar_s_giturls"]=ar_s_giturls
    end # run_exc_parse_s_repos_01
 
    def run_s_generate_clonescript(ht_opmem)
-      ar_s_giturl=ht_opmem["ar_s_giturl"]
+      ar_s_giturls=ht_opmem["ar_s_giturls"]
       s_0="#/usr/bin/env bash \n#"
       s_0<<("="*74+"\n")
       #--------
@@ -1200,11 +1193,11 @@ class GitHub_repos_2_clonescript_bash_t1
          cl=i.class
          if (cl!=Integer)
             if (cl!=Fixnum) # to cope with some versions prior to Ruby 2.4.0
-               angervaks_throw("GUID=='78ede658-a48b-45e1-b55e-00c2b01099e7'")
+               angervaks_throw("GUID=='a6f25648-4a57-4267-b4cc-4030803099e7'")
             end # if
          end # if
          if i<0
-            angervaks_throw("GUID=='38977c18-cc83-43a5-b25e-00c2b01099e7'")
+            angervaks_throw("GUID=='24155df3-95ee-469b-99cc-4030803099e7'")
          end # if
          s_out=i.to_s
          s_out=("0"+i.to_s) if i<10
@@ -1232,12 +1225,12 @@ class GitHub_repos_2_clonescript_bash_t1
       #--------
       s_lc_0="\n"
       s_prefix="nice -n15 git clone --recursive "
-      ar_s_giturl.each do |s_giturl|
+      ar_s_giturls.each do |s_giturl|
          s_0<<(s_prefix+s_giturl+s_lc_0)
       end # loop
       s_0<<"\n"
       s_0<<"sync; wait; sync; \n#"
-      s_0<<("="*74)
+      s_0<<("="*74+"\n\n")
       #--------
       s_clonescript=s_0
       ht_opmem["s_clonescript"]=s_clonescript
@@ -1260,9 +1253,9 @@ class GitHub_repos_2_clonescript_bash_t1
       if i_n_of_console_arguments!=1
          angervaks_throw("At most 1 command line argument is accepted.\n"+
          "The optional 1. command line argument \n"+
-         "should be either a GitHub user account URL or \n"+
+         "should be either a Codeberg user account URL or \n"+
          "\"help\" without the quotation marks.\n"+
-         "GUID=='389bb2d1-84a7-4832-a45e-00c2b01099e7'")
+         "GUID=='a29bf717-c23c-4a4e-b3cc-4030803099e7'")
       end # if
       s_argv_0=@ar_argv[0].to_s
       if @ht_argv_help_options.has_key? s_argv_0
@@ -1279,14 +1272,14 @@ class GitHub_repos_2_clonescript_bash_t1
                angervaks_throw("Directory found, but a file expected.\n"+
                "s_fp==\n"+
                s_fp+"\n"+
-               "GUID=='390fdba2-cc03-47df-945e-00c2b01099e7'")
+               "GUID=='555fa327-5960-4b8d-93cc-4030803099e7'")
             end # if
             File.delete s_fp
             if File.exists? s_fp
                angervaks_throw("File deletion failed.\n"+
                "s_fp==\n"+
                s_fp+"\n"+
-               "GUID=='44d10931-94e2-4352-825e-00c2b01099e7'")
+               "GUID=='db5cf442-31b7-4682-93cc-4030803099e7'")
             end # if
          end # if
       end # func_del_file_if_exists
@@ -1295,44 +1288,28 @@ class GitHub_repos_2_clonescript_bash_t1
       end # func_del_clonescript_if_exists
       func_del_repos_if_exists=lambda do
          func_del_file_if_exists.call(s_fp_repos)
+         func_del_file_if_exists.call(s_fp_repos+"_reformatted") # comfort hack
       end # func_del_repos_if_exists
       #-----------------------------------------
-      if (s_argv_0=="t0") || (s_argv_0=="test_0")
-         # A test case, where there is, probably, 0 repositories.
-         # As of 2019_03_08 it does not have any repositories.
-         @ar_argv[0]="https://github.com/augustdeez"
+      if (s_argv_0=="t0") || (s_argv_0=="test_0") || (s_argv_0=="test") || (s_argv_0=="t") || (s_argv_0=="--test_0") || (s_argv_0=="--test") || (s_argv_0=="-t")
+         #@ar_argv[0]="https://codeberg.org/martinvahi"
+         # The
+         @ar_argv[0]="https://codeberg.org/OrbitalMartian"
+         # has more repositories than my account, so it suits
+         # better for testing the multiple stage download.
          func_del_repos_if_exists.call
          func_del_clonescript_if_exists.call
       end # if
-      if (s_argv_0=="t1") || (s_argv_0=="test_1")
-         # A test case, where there is, probably, 1 repository.
-         # As of 2019_03_08 it has only one repositories.
-         @ar_argv[0]="https://github.com/siddarth9"
-         func_del_repos_if_exists.call
-         func_del_clonescript_if_exists.call
-      end # if
-      if (s_argv_0=="t2") || (s_argv_0=="test_2") || (s_argv_0=="test") || (s_argv_0=="t")
-         @ar_argv[0]="https://github.com/martinvahi"
-         func_del_repos_if_exists.call
-         func_del_clonescript_if_exists.call
-      end # if
-      if (s_argv_0=="t3") || (s_argv_0=="test_3")
-         # A test case, where there is, probably, 82 repositories.
-         # As of 2019_03_08 it has 82 repositories.
-         @ar_argv[0]="https://github.com/gnustep"
-         func_del_repos_if_exists.call
-         func_del_clonescript_if_exists.call
-      end # if
-      if (s_argv_0=="clear") || (s_argv_0=="cl") || (s_argv_0=="clean") || (s_argv_0=="c")
+      if (s_argv_0=="clear") || (s_argv_0=="cl") || (s_argv_0=="clean") || (s_argv_0=="c") || (s_argv_0=="--clear") || (s_argv_0=="--clean") || (s_argv_0=="-c")
          func_del_repos_if_exists.call
          func_del_clonescript_if_exists.call
          exit(0)
       end # if
-      if (s_argv_0=="delete_cloningscript") || (s_argv_0=="clc")
+      if (s_argv_0=="delete_cloningscript") || (s_argv_0=="clc") || (s_argv_0=="--delete_cloningscript")
          func_del_clonescript_if_exists.call
          exit(0)
       end # if
-      if (s_argv_0=="delete_repos") || (s_argv_0=="clr")
+      if (s_argv_0=="delete_repos") || (s_argv_0=="clr") || (s_argv_0=="--delete_repos")
          func_del_repos_if_exists.call
          exit(0)
       end # if
@@ -1365,7 +1342,7 @@ class GitHub_repos_2_clonescript_bash_t1
       if !File.exists? s_fp_clonescript
          angervaks_throw("The file \n"+s_fp_clonescript+
          "\n does not exists.\n"+
-         "GUID=='7c609f48-395b-412e-a45e-00c2b01099e7'")
+         "GUID=='b182073e-0623-481b-83cc-4030803099e7'")
       end # if
       File.chmod(0700,s_fp_clonescript)
       if b_old_repos_missing
@@ -1375,16 +1352,16 @@ class GitHub_repos_2_clonescript_bash_t1
       if !File.exists? s_fp_clonescript
          angervaks_throw("The file \n"+s_fp_clonescript+
          "\n does not exists.\n"+
-         "GUID=='9784c821-de8d-48cf-925e-00c2b01099e7'")
+         "GUID=='c465e456-bffe-4d23-95cc-4030803099e7'")
       end # if
       speak_if_possible("Cloning script generated.")
       #------------------------------------
       puts "\n"
    end # run
 
-end # class GitHub_repos_2_clonescript_bash_t1
+end # class Codeberg_repos_2_clonescript_bash_t1
 
-GitHub_repos_2_clonescript_bash_t1.new.run
+Codeberg_repos_2_clonescript_bash_t1.new.run
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="fe25e413-b1e5-4ac1-936e-00c2b01099e7"
+# S_VERSION_OF_THIS_FILE="158be734-4177-402e-b1dc-4030803099e7"
 #==========================================================================
