@@ -1,0 +1,28 @@
+
+Original author's (Geoff Greer) "The Silver Searcher" home pages:
+
+    https://github.com/ggreer/the_silver_searcher
+    https://geoff.greer.fm/ag/
+
+File origin:
+
+    The ./2025_09_28_clone_of_Debian_branch_of_the_silversearcher-ag.zip
+    has been obtained by downloading/cloning
+    https://salsa.debian.org/debian/silversearcher-ag.git
+    https://salsa.debian.org/debian/silversearcher-ag
+    and then repacking it.
+    Download date: 2025_09_28
+
+The motivation for recompiling it on Debian and debian derived systems
+is to create a CPU specific binary by using the 
+
+    export   CFLAGS=" -march=native -mtune=native -ftree-vectorize -O3 "
+    export CXXFLAGS=" -march=native -mtune=native -ftree-vectorize -O3 "
+
+The motivation for using the Debian branch in stead of using the
+original author's 2025_09_28 newest release, the version 2.2.0, is that
+the version 2.2.0 failed to build on Debian.
+
+    https://github.com/ggreer/the_silver_searcher/issues/1552
+    archival copy: https://archive.ph/ZBq0k 
+
