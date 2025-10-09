@@ -26,7 +26,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='ec6a6420-0ee2-44a0-8242-63431061b6e7'"
+        echo "GUID=='93cdd52c-09f4-47b2-a472-22424030a9e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -34,14 +34,14 @@ func_mmmv_assert_error_code_zero_t1(){
         exit 1
     fi
     #------------------------------
-    # If the "$?" were evaluated in this function, 
+    # If the "$?" were evaluated in this function,
     # then it would be "0" even, if it is
     # something else at the calling code.
     if [ "$S_ERR_CODE" != "0" ];then
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='623f9436-24b9-4dbd-8442-63431061b6e7'"
+        echo "GUID=='2117b650-7a0c-4456-b462-22424030a9e7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -59,7 +59,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='49cd3a3f-5f5d-4d09-9442-63431061b6e7'"
+        echo "GUID=='b1f0d375-28ab-4e0b-8762-22424030a9e7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -70,19 +70,19 @@ func_mmmv_exit_if_not_on_path_t2 "wget"
 S_FP_THE_FILES="$S_FP_DIR/the_files"
 mkdir -p "$S_FP_THE_FILES"
 func_mmmv_assert_error_code_zero_t1 "$?" \
-    "30c40544-18ff-402b-9942-63431061b6e7"
+    "434a7663-a6a4-4c41-a362-22424030a9e7"
 func_mmmv_wait_and_sync_t1
 func_download(){
     local S_FILE_NAME="$1"
     #------------------------------
     cd "$S_FP_THE_FILES"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "811bec43-a538-4e70-b242-63431061b6e7"
+        "52da835e-f473-42ca-b462-22424030a9e7"
     #------------------------------
     local S_URL="https://github.com/hlibc/arbitraire/archive/$S_FILE_NAME"
     wget "$S_URL"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "113c7674-224d-4fac-8242-63431061b6e7"
+        "4217d5c8-3a71-445b-8562-22424030a9e7"
     #------------------------------
     func_mmmv_wait_and_sync_t1
     #------------------------------
@@ -91,7 +91,7 @@ func_download(){
 func_first_use_message(){
     echo ""
     echo -e "\e[33mPlease customise this script to Your needs.\e[39m"
-    echo "GUID=='0aec825b-05b8-464d-a532-63431061b6e7'"
+    echo "GUID=='33114518-93f7-40f5-8662-22424030a9e7'"
     echo ""
     #------------------------------
     cd "$S_FP_ORIG"
@@ -110,6 +110,6 @@ func_download "v0.7.tar.gz"
 #--------------------------------------------------------------------------
 cd "$S_FP_ORIG"
 exit 0
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="ea2317a3-e987-4943-b432-63431061b6e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="2d366534-40c4-4fc4-a262-22424030a9e7"
 #==========================================================================

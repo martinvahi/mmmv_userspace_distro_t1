@@ -40,7 +40,7 @@ Section_10: Project Templates
 Section_11: Bundled Development Tools
 Section_12: The BSD License
 Section_13: A BSD License Related note
-Section_14: Open Source Cooperation Protocol
+Section_14: Open Source Cooperation Protocol/Policy
 Section_15: Inspiring or Similar Projects Hall of Fame
 
 
@@ -333,7 +333,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "3e7c2d81-a125-41f4-8279-42b2112179e7"
+All quoted GUIDs like "4587009c-f00a-4298-b2bb-c1502030a9e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -640,7 +640,7 @@ me, the Martin.Vahi@softf1.com, as an author is satisfied.
 
 
 ---------------------------------------------------------------------------
-            Section_14: Open Source Cooperation Protocol
+          Section_14: Open Source Cooperation Protocol/Policy
 ---------------------------------------------------------------------------
 
 As of 2025_07 I(Martin.Vahi@softf1.com) do use libraries without
@@ -710,10 +710,11 @@ shoddy compromise, this list here is better than nothing.
     by SourceForge user mrplastik
         https://sourceforge.net/projects/virtualappliances/files/
 
-#--------------------------------------------------------------------------
+
+===========================================================================
 # Initial author of this file: Martin.Vahi@softf1.com
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="a7fd282a-2af9-4913-8579-42b2112179e7"
+# S_VERSION_OF_THIS_FILE="f1ba6dd1-7bdf-4277-a4bb-c1502030a9e7"
 ===========================================================================

@@ -12,19 +12,6 @@ search indices.
 
 
 ---------------------------------------------------------------------------
-                       Usage Instructions
----------------------------------------------------------------------------
-
-Usage instructions of individual command line programs in 
-
-    ./bin
-
-can be displayed by executing
-
-    ./bin/<name of the program> help
-
-
----------------------------------------------------------------------------
             Current EXPERIMENTAL STATE of the project
 ---------------------------------------------------------------------------
 
@@ -37,6 +24,110 @@ subject to studying and experimentation. Not all command line tools in
 this experiment will be part of the final version of the search engine.
 
 
+---------------------------------------------------------------------------
+                       Usage Instructions
+---------------------------------------------------------------------------
+
+Usage instructions of individual command line programs in
+
+    ./bin
+
+can be displayed by executing
+
+    ./bin/<name of the program> help
+
+
+---------------------------------------------------------------------------
+                             License
+---------------------------------------------------------------------------
+
+The Kibuvits Ruby Library code is under the BSD license and all C/C++
+and V-language code that I have written specifically for this project
+here are under the MIT license. Some parts are in public domain,
+provided that they are marked to be in public domain. 3rd party
+components have their own licenses that allow them to be used in closed
+source software with an occasional requirement that modifications to the
+3rd party code must be published as open source software under the 3rd
+party original license.
+
+The MIT license from the
+http://www.opensource.org/licenses/mit-license.php
+
+Copyright (c) 2025, Martin.Vahi@softf1.com that has an
+Estonian personal identification code of 38108050020.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+---------------------------------------------------------------------------
+                           Inspiration
+---------------------------------------------------------------------------
+
+Classical text indexing systems:
+
+    * https://sandroid.org/RIP/index.html  (Details are at the
+          ./attic/help_and_good_will/help_and_good_will_by_Ron_Burkey )
+
+    * glimpse search engine (at /home/mmmv/applications/glimpse_search_engine)
+    * https://web.archive.org/web/20220522164243/http://www.seg.rmit.edu.au/zettair/download.html
+
+    * https://lucene.apache.org/  and alike
+          CLucene at /home/mmmv/applications/lib_CLucene
+          https://github.com/dbalmain/ferret
+          https://dbmx.net/hyperestraier/
+
+    * Lemur Project
+          https://www.lemurproject.org/
+          https://sourceforge.net/projects/lemur/
+
+    * DocFetcher
+          https://sourceforge.net/projects/docfetcher/
+          https://docfetcher.sourceforge.net/
+          https://docfetcher.sourceforge.io/en/index.html
+          https://docfetcherpro.com/
+
+    * Fess
+          https://fess.codelibs.org/index.html
+          is based on
+          https://opensearch.org/
+          https://github.com/opensearch-project
+
+
+Inspiration for computationally efficient, fast
+and effective text search algorithms:
+
+    * https://www.voidtools.com/downloads/
+
+
+Web crawling search engines:
+    * https://yacy.net/
+    * Gigablast  by Matt Wells (is abandoned long time ago)
+
+
+Legally downloadable written works:
+
+    * "Introduction to Information Retrieval" by
+      Christopher D. Manning,
+      Prabhakar Raghavan and Hinrich Schütze,
+      https://nlp.stanford.edu/IR-book/
+
 ===========================================================================
-S_VERSION_OF_THIS_FILE="5b471a54-d47d-4dcd-b81e-43f2718198e7"
+S_VERSION_OF_THIS_FILE="74d03de2-059a-4e5e-b45c-1261018199e7"
 ===========================================================================

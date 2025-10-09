@@ -1,0 +1,63 @@
+
+Date: Tue, 23 Sep 2025 07:39:43 -0500
+From: Ron Burkey <Original email address removed from here by Martin Vahi
+                  due to a suspicion that the original email address
+                  is not meant to be public, but I(Martin Vahi)
+                  initially contacted Ron Burkey by using a public email
+                  address info@sandroid.org, which I found on 2025_09_xx
+                  at the end of the RIP home page at
+                  https://sandroid.org/RIP/index.html
+                  archival copy: https://archive.ph/sl3gk  >
+To: Martin Vahi <martin.vahi@softf1.com>
+Subject: Re: Request for RIP License change: GPL -> LGPL
+User-Agent: Mozilla Thunderbird
+
+Thanks, Martin I have a better idea now of why you could be interested, and am
+certainly sympathetic to your aims. Given that it has been 25 years since I've
+looked at RIP or the companion library TurboC needed to compile it, I've gone
+back and reread my web pages associated with them, as well as examined at the
+code.
+
+Regarding TurboC:  Unfortunately, RIP was originally written for the Borland C
+compiler on Windows 95, and isn't compatible with gcc or clang or other modern
+C compilers without the TurboC library.  And since TurboC isn't being
+maintained, there's no guarantee it still works.  Indeed, trying it just now,
+compilation of TurboC fails due to wrong assumptions about integer datatypes. 
+TurboC can be reworked, I'm sure, though how long it would be before
+additional rework, I can't say.  In other words, keeping TurboC operational
+into the future may be a losing battle.  On the good side, I think (hope?)
+that TurboC is needed primarily for displaying retrieved text, so perhaps it
+could be eliminated entirely by deleting any of the code in RIP that displays
+retrieved text.
+
+But the problem I perceive with changing the license for RIP to LPGL is that
+RIP is not actually a library. Creating RIP as a library would have made
+sense, but 30 years ago when I wrote it for my own personal use, it's not
+something I thought of.  Rather, RIP a stand-alone executable program that can
+be used as-is or modified.  There's not actually any way to link a separate
+program to it.  So GPL vs LGPL would seem to be a moot point.
+
+I would suggest this:  There is good documentation at the top of the file
+ripUnix/rip.c about everything having to do with formation of the indexes and
+retrieval of information from them.   That documentation is all you really
+need, because the actual code for implementing those ideas (as opposed to
+displaying the browsing retrieved text) is pretty simple to reimplement
+yourself to get past the limitations of my 1996 implementation.  And the
+unlikely event there's any of my actual RIP code you'd like to reuse, *you can
+regard this note as giving you absolute permission to freely use, modify, or
+distribute RIP source code, without any restriction whatever, including
+removal or change of the GPL licensing notice, with or without attributing any
+credit to me*.
+
+If that's not a good enough compromise for you, we can continue to discuss it.
+
+Ron
+
+On 9/23/25 02:57, Martin Vahi wrote:
+> On 2025_09_21 14:33, info wrote:
+> > Hi Martin,I don't believe anyone has so much as inquired
+> > about RIP in the >25 years it has been out there.  Whatever
+> > the cause for that lack of interest, I doubt that it's the
+> > license.
+> ...
+
