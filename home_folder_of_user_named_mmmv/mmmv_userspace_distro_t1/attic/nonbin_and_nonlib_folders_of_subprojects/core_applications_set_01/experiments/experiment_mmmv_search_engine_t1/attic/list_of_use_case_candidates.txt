@@ -1,0 +1,8 @@
+
+Automatic search index change detection use cases:
+
+    (LOCKSS[Lots Of Copies Keep Stuff Safe])
+    https://www.lockss.org/
+    https://github.com/lockss
+
+

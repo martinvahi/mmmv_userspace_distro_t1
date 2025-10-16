@@ -333,7 +333,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "4587009c-f00a-4298-b2bb-c1502030a9e7"
+All quoted GUIDs like "4761fa33-5f4f-44b0-82ba-e12120e0a9e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -710,11 +710,13 @@ shoddy compromise, this list here is better than nothing.
     by SourceForge user mrplastik
         https://sourceforge.net/projects/virtualappliances/files/
 
+    https://github.com/ChristianLempa/boilerplates
+
 
 ===========================================================================
 # Initial author of this file: Martin.Vahi@softf1.com
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="f1ba6dd1-7bdf-4277-a4bb-c1502030a9e7"
+# S_VERSION_OF_THIS_FILE="9601ab4e-b2cd-4b4a-b1ba-e12120e0a9e7"
 ===========================================================================

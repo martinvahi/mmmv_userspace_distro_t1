@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='9cc2af9d-aa5c-4f24-855d-51b170f189e7'"
+    echo "GUID=='1bd73ac4-acde-43df-929b-d150d001a9e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -85,7 +85,7 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "" ]; then
         export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "par_text_formatter" "9386f643-29e0-4be3-ac1d-51b170f189e7"
+            "par_text_formatter" "2732be03-44d1-4971-859b-d150d001a9e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ if [ "$SB_QUTEBROWSER_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/qutebrowser_specific/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$S_TMP_0" \
-        "f4cb4213-bfd9-4cb7-a15d-51b170f189e7" \
+        "207d69a3-24a6-47ef-8f9b-d150d001a9e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_0:$Z_PATH"
@@ -256,7 +256,7 @@ if [ "$SB_XXHSUM_EXISTS_ON_PATH" == "t" ]; then
     export Z_PATH="$S_TMP_0/bin:$Z_PATH"
 fi
 #--------------------------------------------------------------------------
-S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/wget_grep_sed_replace_tr"
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/grep_replace_sed_tr_wget"
 if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
     if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
         if [ "$SB_GSED_EXISTS_ON_PATH" == "t" ]; then
@@ -268,6 +268,42 @@ if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
         fi
     fi
 fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/cat_curl_grep_jq_nice_printf_sleep_tr_wget"
+if [ "$SB_WGET_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$SB_CURL_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_JQ_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+                if [ "$SB_GSED_EXISTS_ON_PATH" == "t" ]; then
+                    if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
+                        if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
+                            if [ "$SB_SLEEP_EXISTS_ON_PATH" == "t" ]; then
+                                if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
+                                    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+                                fi
+                            fi
+                        fi
+                    fi
+                fi
+            fi
+        fi
+    fi
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/cat_ffprobe_grep_gsed_printf_tr"
+if [ "$SB_FFPROBE_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_GSED_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
+                if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
+                    if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
+                        export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+                    fi
+                fi
+            fi
+        fi
+    fi
+fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="a5417463-631a-45f5-a61d-51b170f189e7"
+# S_VERSION_OF_THIS_FILE="48379a25-0fc5-4c15-a19b-d150d001a9e7"
 #==========================================================================
