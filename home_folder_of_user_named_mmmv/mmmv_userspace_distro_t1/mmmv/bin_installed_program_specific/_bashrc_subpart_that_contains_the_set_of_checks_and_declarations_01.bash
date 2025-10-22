@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='1bd73ac4-acde-43df-929b-d150d001a9e7'"
+    echo "GUID=='a4f350d2-f7c8-43aa-a136-b0322141a9e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -85,7 +85,7 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "" ]; then
         export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "par_text_formatter" "2732be03-44d1-4971-859b-d150d001a9e7"
+            "par_text_formatter" "5bdba3b2-38bd-4a24-bd36-b0322141a9e7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ if [ "$SB_QUTEBROWSER_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/qutebrowser_specific/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$S_TMP_0" \
-        "207d69a3-24a6-47ef-8f9b-d150d001a9e7" \
+        "4f151eca-3ec2-4ab3-8e56-b0322141a9e7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_0:$Z_PATH"
@@ -304,6 +304,27 @@ if [ "$SB_FFPROBE_EXISTS_ON_PATH" == "t" ]; then
         fi
     fi
 fi
+#--------------------------------------------------------------------------
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/cat_find_grep_gsed_printf_ruby_sort_tr_uniq"
+if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
+    if [ "$SB_UNIQ_EXISTS_ON_PATH" == "t" ]; then
+        if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_FIND_EXISTS_ON_PATH" == "t" ]; then
+                if [ "$SB_GREP_EXISTS_ON_PATH" == "t" ]; then
+                    if [ "$SB_GSED_EXISTS_ON_PATH" == "t" ]; then
+                        if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
+                            if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
+                                if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
+                                    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+                                fi
+                            fi
+                        fi
+                    fi
+                fi
+            fi
+        fi
+    fi
+fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="48379a25-0fc5-4c15-a19b-d150d001a9e7"
+# S_VERSION_OF_THIS_FILE="612aadb2-1afd-43a3-bd26-b0322141a9e7"
 #==========================================================================

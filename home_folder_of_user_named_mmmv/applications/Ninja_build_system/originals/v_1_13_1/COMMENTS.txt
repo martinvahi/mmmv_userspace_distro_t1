@@ -1,0 +1,11 @@
+
+The 
+
+    ./Ninja_v_1_13_1.zip
+
+has been obtained by downloading 
+
+    https://github.com/ninja-build/ninja/archive/refs/tags/v1.13.1.tar.gz
+
+on 2025_10_22 and repacking.
+

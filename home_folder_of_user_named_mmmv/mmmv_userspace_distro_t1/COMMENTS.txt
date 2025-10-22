@@ -333,7 +333,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "4761fa33-5f4f-44b0-82ba-e12120e0a9e7"
+All quoted GUIDs like "42b9b34f-1f0c-42c1-916d-c1912131a9e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -646,22 +646,21 @@ me, the Martin.Vahi@softf1.com, as an author is satisfied.
 As of 2025_07 I(Martin.Vahi@softf1.com) do use libraries without
 auditing them, specially popular mainstream libraries, where I have
 a hope that if they contain any malware or serious flaws, then other
-people will notice them without me having to do anything for fixing
-the situation, but other than that I do not copy-paste other people's
-code to my projects without thoroughly auditing them by using other
-people's code as a template that gets thoroughly rewritten during the
-auditing.
+people will notice them without me having to do anything for fixing the
+situation, but other than that I do NOT copy-paste other people's code
+to my projects without thoroughly auditing them by using other people's
+code as a template that gets thoroughly rewritten during the audit.
 
 What regards to coding style rules, then I(Martin.Vahi@softf1.com) am
-deeply convinced that I am not the best software developer on planet
+deeply convinced that I am NOT the best software developer on planet
 Earth, which means that if I want to learn from people, who are better
 than me, then I must humbly hope that they at least bother to submit
 their code to me in their own style. That way I can learn from their
 code style and may be change my own code style according to what I am
 capable of learning from their code style. If I rewrite the submitted
-code during the auditing, then I manually or semi-manually reformat it
-to my own style anyway, so it does not matter, if the submitted code is
-in a style that I do not prefer to use myself.
+code during the audit, then I manually or semi-manually reformat it to
+my own style anyway, so it does not matter, if the submitted code is in
+a style that I do not prefer to use myself.
 
 My main communication channel is email(Martin.Vahi@softf1.com),
 but as of 2025_07 the suggested main space for project specific
@@ -712,11 +711,19 @@ shoddy compromise, this list here is better than nothing.
 
     https://github.com/ChristianLempa/boilerplates
 
+    (Under the MIT license.)
+    https://github.com/Bash-it/bash-it
+    https://bash-it.readthedocs.io/en/latest/development/
+
+    (BATS: Bash Automated Testing System, MIT license)
+    https://github.com/bats-core
+
+    https://github.com/ztombol/bats-support
 
 ===========================================================================
 # Initial author of this file: Martin.Vahi@softf1.com
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="9601ab4e-b2cd-4b4a-b1ba-e12120e0a9e7"
+# S_VERSION_OF_THIS_FILE="814b8a41-e35f-47cf-b26d-c1912131a9e7"
 ===========================================================================
