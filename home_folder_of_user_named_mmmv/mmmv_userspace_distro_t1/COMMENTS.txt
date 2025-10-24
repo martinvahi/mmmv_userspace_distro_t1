@@ -27,39 +27,80 @@ without the quotation marks.
 The "Section_..." at the start of the section name is meant to be
 used for navigating this file with the Vim word search function.
 
-Section_01: References to Linux Tutorials
-Section_02: Basic Setup
-Section_03: Basic Usage
-Section_04: Temporary Environments
-Section_05: Vim Related Setup
-Section_06: Vim and vimwiki Related Workflow Ideas
-Section_07: The Setup of Optional Components: Cache Server
-Section_08: The Setup of Optional Components: User Specific Network Interface
-Section_09: Some Networking Related Commands and Ideas
-Section_10: Project Templates
-Section_11: Bundled Development Tools
-Section_12: The BSD License
-Section_13: A BSD License Related note
-Section_14: Open Source Cooperation Protocol/Policy
-Section_15: Inspiring or Similar Projects Hall of Fame
+Section_01: Folder Layout
+Section_02: References to Linux Tutorials
+Section_03: Basic Setup
+Section_04: Basic Usage
+Section_05: Temporary Environments
+Section_06: Vim Related Setup
+Section_07: Vim and vimwiki Related Workflow Ideas
+Section_08: The Setup of Optional Components: Cache Server
+Section_09: The Setup of Optional Components: User Specific Network Interface
+Section_10: Some Networking Related Commands and Ideas
+Section_11: Project Templates
+Section_12: Bundled Development Tools
+Section_13: The BSD License
+Section_14: A BSD License Related note
+Section_15: Open Source Cooperation Protocol/Policy
+Section_16: Inspiring or Similar Projects Hall of Fame
 
 
 ---------------------------------------------------------------------------
-                Section_01: References to Linux Tutorials
+                     Section_01: Folder Layout
+---------------------------------------------------------------------------
+
+The
+
+     ./attic
+
+is only for documentation and related references and it can be deleted
+without breaking any of the scripts. The actual code resides at
+
+     ./mmmv
+
+
+---------------------------------------------------------------------------
+               Section_02: References to Linux Tutorials
 ---------------------------------------------------------------------------
 
 The rest of the chapters in this file assume basic knowledge of Bash
-console and Unix like systems like Linux and BSD. A list of some
-beginner level Linux tutorials:
+console and Unix like systems like Linux and BSD. A thing to keep in
+mind is that the same program name, for example, "awk", "sed", "make",
+"ps", can designate one program on Linux and a totally different program
+with different behaviour and different command line parameters on
+BSD. For example the Linux "sed" (GNU sed) might be called "gsed" on
+BSD. Linux version of "make" (GNU Make) might be called "gmake" on BSD.
+A list of some beginner level Linux tutorials:
+
+    ("The Linux Command Line", 2019, William Shotts)
+    https://www.cl72.org/130gnuOS/TLCL-19.01.pdf
+    optionally present local copy:
+        ./attic/documentation/third_party_documentation/Linux_and_BSD_administration/Bash/2019_xx_xx_The_Linux_Command_Line/2019_xx_xx_The_Linux_Command_Line_by_William_Shotts.pdf
 
     https://bash.cyberciti.biz/guide/Main_Page
+
     https://www.shell-tips.com/bash/
     optionally present local copy:
-        /home/mmmv/mmmv_userspace_distro_t1/attic/documentation/third_party_documentation/Linux_and_Bash/2021_09_18_shell-tips_com_bash_comments_t1.pdf
+        ./attic/documentation/third_party_documentation/Linux_and_BSD_administration/Bash/2021_09_18_shell-tips_com_bash_comments_t1/2021_09_18_shell-tips_com_bash_comments_t1.pdf
+
+    ("UNIX Text Processing", 1988, Dale Dougherty and Tim O'Reilly O'Reilly)
+    https://www.oreilly.com/openbook/utp/UnixTextProcessing.pdf
+    archival copy: https://web.archive.org/web/20240315014834/https://www.oreilly.com/openbook/utp/UnixTextProcessing.pdf
+    optionally present local copy:
+        ./attic/documentation/third_party_documentation/Linux_and_BSD_administration/standard_utilities/text_and_image_processing/1988_xx_xx_UNIX_Text_Processing/1988_xx_xx_UNIX_Text_Processing_by_Dale_Dougherty_and_Tim_OReilly.pdf
+
+People, who write their own Bash scripts, may want to include a copy of
+the following Bash library
+
+    ./mmmv/lib/templates/2023_12_24_mmmv_bash_boilerplate_t5.zip
+
+to their Bash script project folder and copy-paste code fragments from
+there. It is NOT the world's best code example, but it is better than
+nothing and relatively helpful for many tasks.
 
 
 ---------------------------------------------------------------------------
-                           Section_02: Basic Setup
+                          Section_03: Basic Setup
 ---------------------------------------------------------------------------
 
 Operating system users that use the mmmv_userspace_distro_t1
@@ -163,7 +204,7 @@ searching for the GUID that is in the warning text.
 
 
 ---------------------------------------------------------------------------
-                         Section_03: Basic Usage
+                         Section_04: Basic Usage
 ---------------------------------------------------------------------------
 
 mmmv_userspace_distro_t1 specific aliases and executables, usually
@@ -200,7 +241,7 @@ MIGHT be available from the path of
 
 
 ---------------------------------------------------------------------------
-                  Section_04: Temporary Environments
+                  Section_05: Temporary Environments
 ---------------------------------------------------------------------------
 
 In the context of this chapter an environment is determined by
@@ -225,7 +266,7 @@ add to the values of those environment variables.
 
 
 ---------------------------------------------------------------------------
-                       Section_05: Vim Related Setup
+                       Section_06: Vim Related Setup
 ---------------------------------------------------------------------------
 
 The classical ~/.vimrc has been split to 2 parts.
@@ -316,7 +357,7 @@ MIGHT be displayed on console by executing
 
 
 ---------------------------------------------------------------------------
-          Section_06: Vim and vimwiki Related Workflow Ideas
+          Section_07: Vim and vimwiki Related Workflow Ideas
 ---------------------------------------------------------------------------
 
 Vim inter-file bookmarks can be used between vimwiki pages and the code
@@ -333,7 +374,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "42b9b34f-1f0c-42c1-916d-c1912131a9e7"
+All quoted GUIDs like "47325f11-465f-4e2a-9179-71532071a9e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -357,7 +398,7 @@ classical IDEs.
 
 
 ---------------------------------------------------------------------------
-        Section_07: The Setup of Optional Components: Cache Server
+        Section_08: The Setup of Optional Components: Cache Server
 ---------------------------------------------------------------------------
 
 The
@@ -387,7 +428,7 @@ ordinary, user. A copy of the Squid server MIGHT be available from
 
 
 ---------------------------------------------------------------------------
-  Section_08: The Setup of Optional Components: User Specific Network Interface
+  Section_09: The Setup of Optional Components: User Specific Network Interface
 ---------------------------------------------------------------------------
 
 As the localhost and public network interfaces are accessible to all
@@ -435,7 +476,7 @@ The 127.0.0.2 is also visible from the output of the
 
 
 ---------------------------------------------------------------------------
-       Section_09: Some Networking Related Commands and Ideas
+       Section_10: Some Networking Related Commands and Ideas
 ---------------------------------------------------------------------------
 
 A command for connecting a network interface to a Linux named pipe, if
@@ -482,7 +523,7 @@ and to figure out something with the following 2 lines:
 
 
 ---------------------------------------------------------------------------
-                   Section_10: Project Templates
+                   Section_11: Project Templates
 ---------------------------------------------------------------------------
 
 A Bash project template, a single Bash file that is meant to be
@@ -527,7 +568,7 @@ by using the aliases
 
 
 ---------------------------------------------------------------------------
-                Section_11: Bundled Development Tools
+                Section_12: Bundled Development Tools
 ---------------------------------------------------------------------------
 
 Some of the tools depend on Ruby, because they have been implemented in
@@ -582,7 +623,7 @@ might need to be customised to match the Astyle command line interface
 and feature set.
 
 ---------------------------------------------------------------------------
-                     Section_12: The BSD License
+                     Section_13: The BSD License
 ---------------------------------------------------------------------------
 
 All of the components of the mmmv_userspace_distro_t1 have some
@@ -626,7 +667,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
 
 
 ---------------------------------------------------------------------------
-              Section_13: A BSD License Related note
+              Section_14: A BSD License Related note
 ---------------------------------------------------------------------------
 
 If You set up the mmmv_userspace_distro_t1 the way it is
@@ -634,13 +675,13 @@ intended to be set up, then the path of the current file is
 
     $MMMV_USERSPACE_DISTRO_T1_HOME/COMMENTS.txt
 
-which in turn contains the BSD license text at its Section_09
+which in turn contains the BSD license text at its Section_10
 and with that the BSD license requirement about listing
 me, the Martin.Vahi@softf1.com, as an author is satisfied.
 
 
 ---------------------------------------------------------------------------
-          Section_14: Open Source Cooperation Protocol/Policy
+          Section_15: Open Source Cooperation Protocol/Policy
 ---------------------------------------------------------------------------
 
 As of 2025_07 I(Martin.Vahi@softf1.com) do use libraries without
@@ -694,7 +735,7 @@ year, if even that many.
 
 
 ---------------------------------------------------------------------------
-      Section_15: Inspiring or Similar Projects Hall of Fame
+      Section_16: Inspiring or Similar Projects Hall of Fame
 ---------------------------------------------------------------------------
 
 The list of projects that are a source of inspiration for the
@@ -725,5 +766,5 @@ shoddy compromise, this list here is better than nothing.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="814b8a41-e35f-47cf-b26d-c1912131a9e7"
+# S_VERSION_OF_THIS_FILE="ef533726-a967-4313-a479-71532071a9e7"
 ===========================================================================
