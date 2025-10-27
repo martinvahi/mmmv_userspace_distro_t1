@@ -1,0 +1,14 @@
+
+File orign:
+
+    ./brscan-0.2.4-4.zip
+    https://github.com/dmikushin/brscan/archive/refs/tags/0.2.4-4.tar.gz
+    https://github.com/dmikushin/brscan
+    Download date: 2025_10_27
+
+On year 2017 era Debian Linux the dependencies MIGHT be installed by 
+a root user by running:
+
+    apt install libsane-dev libusb-dev libncurses5-dev pkg-config
+
+
