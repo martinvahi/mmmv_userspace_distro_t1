@@ -14,4 +14,17 @@ does run with Java8 by executing
 
     java -jar ./upstream_binary/logisim-generic-2.7.1.jar
 
+As of 2025_11_01 the Microsoft Bing chatbot claims that for some
+Java_5 projects something in the style of 
+
+    javac -source 1.5 -target 1.5 MyClass.java
+
+MIGHT work with at least some Java_8 compilers and in the case
+of the Maven build system the following MIGHT be helpful
+
+    <properties>
+      <maven.compiler.source>1.5</maven.compiler.source>
+      <maven.compiler.target>1.5</maven.compiler.target>
+    </properties>
+
 
