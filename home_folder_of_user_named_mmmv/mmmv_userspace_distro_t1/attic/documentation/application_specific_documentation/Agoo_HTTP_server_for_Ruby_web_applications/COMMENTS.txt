@@ -1,0 +1,6 @@
+
+Agoo is under the MIT license.
+Agoo related URLs:
+
+    https://github.com/ohler55/agoo
+
