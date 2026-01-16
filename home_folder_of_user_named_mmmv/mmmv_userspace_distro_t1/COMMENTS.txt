@@ -225,14 +225,21 @@ prefixes are:
 
     mmmv_cre_          // "cre" comes from the word "create"
     mmmv_devel_        // "devel" comes from the word "development"
+
+    mmmv_ffmpeg_       // various ways to call the ffmpeg
+                       // video and audio conversion software
+
     mmmv_filemanager_  // like the Midnight Commander, etc.
     mmmv_findgrep_t1_  // find <some parameters Foo> | grep <some parameters Bar>
     mmmv_fs_           // "fs" comes from the phrase "file system"
+    mmmv_image_viewer_ // includes terminal based image viewers like the catimg
     mmmv_ls_           // "ls" comes from the Linux/BSD/Unix "ls" command
     mmmv_ls_doc_
+    mmmv_run_          // executes with some predefined command line arguments
     mmmv_se_           // "se" comes from the phrase "search engine"
     mmmv_ui_           // "ui" comes from the phrase "user interface"(UI)
     mmmv_webbrowser_   // includes Gemini and Gopher readers like the DilloPlus
+    mmmv_wget_         // various ways to call the wget website copier
 
 The prefixes use the tree encoding, which is explained at a file that
 MIGHT be available from the path of
@@ -374,7 +381,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "47325f11-465f-4e2a-9179-71532071a9e7"
+All quoted GUIDs like "56e0ae65-6722-4649-8162-e1b13170b9e7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -766,5 +773,5 @@ shoddy compromise, this list here is better than nothing.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="ef533726-a967-4313-a479-71532071a9e7"
+# S_VERSION_OF_THIS_FILE="3199701b-95bf-4fe0-a362-e1b13170b9e7"
 ===========================================================================

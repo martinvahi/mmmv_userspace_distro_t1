@@ -11,14 +11,14 @@ if [ "$PYTHONUSERBASE" == "" ]; then
     echo ""
     echo "The Python related environment varioable PYTHONUSERBASE "
     echo "has not been set."
-    echo "GUID='43dc3022-1187-46ec-821d-a0e1619038e7'"
+    echo "GUID='d511b4ad-f978-4376-9054-13c29080b9e7'"
     echo ""
     exit 1
 else
-    #nice -n 5 pip3 --proxy $MMMV_PROXY_URL install --no-cache-dir  $1  --target=$PYTHONUSERBASE 
+    #nice -n 5 pip3 --proxy $MMMV_PROXY_URL install --no-cache-dir  $1  --target=$PYTHONUSERBASE
     nice -n 5 pip3 install --no-cache-dir  $1  --target=$PYTHONUSERBASE --upgrade
-fi 
+fi
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="5f06a1d5-b83d-4dd5-811d-a0e1619038e7"
+# S_VERSION_OF_THIS_FILE="2e9bb135-e017-4214-b2d3-13c29080b9e7"
 #==========================================================================

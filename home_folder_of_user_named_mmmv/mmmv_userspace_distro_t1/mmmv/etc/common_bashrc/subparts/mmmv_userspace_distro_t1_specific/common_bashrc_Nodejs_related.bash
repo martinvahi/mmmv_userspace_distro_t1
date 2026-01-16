@@ -18,7 +18,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='69550b25-d02a-4d43-9b11-c051502059e7'"
+    echo "GUID=='49f1955c-9848-4de7-b368-03738080b9e7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -38,7 +38,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder(){
                         echo ""
                         echo -e "\e[31mFailed to delete\e[39m a broken symlink "
                         echo "    $S_FP_FOLDER"
-                        echo "GUID=='97f92120-0055-4ca1-8211-c051502059e7'"
+                        echo "GUID=='84657ffc-2341-4ab3-b368-03738080b9e7'"
                         echo ""
                     fi
                     SB_OK2ATTEMPT="f"
@@ -56,7 +56,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder(){
                     echo ""
                     echo -e "\e[31mFailed to create \e[39m"
                     echo "    $S_FP_FOLDER"
-                    echo "GUID=='1cd0b624-6ca1-41a2-ae11-c051502059e7'"
+                    echo "GUID=='145248b2-1b6d-4c8c-b368-03738080b9e7'"
                     echo ""
                 fi
                 SB_OK2ATTEMPT="f"
@@ -67,7 +67,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_create_folder(){
                     echo ""
                     echo -e "\e[31mFailed to create \e[39m"
                     echo "    $S_FP_FOLDER"
-                    echo "GUID=='52fa9941-3127-4485-9311-c051502059e7'"
+                    echo "GUID=='25219824-a337-4b64-9268-03738080b9e7'"
                     echo ""
                 fi
                 SB_OK2ATTEMPT="f"
@@ -85,21 +85,21 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_declare_npm_relat
         if [ "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" != "" ]; then
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" \
-                "55474881-83ea-456a-9311-c051502059e7" \
+                "84544e10-b0e0-40cd-a368-03738080b9e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             #if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 # The next 4 lines are for testing during development:
                 #alias mmmv_npm="S_FP_0=\"\`pwd\`\" ; cd \"$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES\" ; nice -n 5 npm  version ; cd \"\$S_FP_0\" "
                 #alias mmmv_npm='S_FP_0="`pwd`" ; cd "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" ; nice -n 5 npm  version ; cd "$S_FP_0" '
-                #mmmv_polish_ABC_2_A_C_B_exec_t1 'S_FP_0="`pwd`" ; cd "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" ; nice -n 5 npm  ' ' ; cd "$S_FP_0" '  'version ' 
-                # As of 2025_03_09 The 
-                #alias mmmv_npm_global="PREFIX=\"$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES\" ; nice -n 5 npm  " 
+                #mmmv_polish_ABC_2_A_C_B_exec_t1 'S_FP_0="`pwd`" ; cd "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" ; nice -n 5 npm  ' ' ; cd "$S_FP_0" '  'version '
+                # As of 2025_03_09 The
+                #alias mmmv_npm_global="PREFIX=\"$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES\" ; nice -n 5 npm  "
                 # does not work for some reason. TODO: figure out, why
             #fi
         fi
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "npm" "f8b80833-be96-45e8-9211-c051502059e7"
+            "npm" "06cfc24a-4dbb-4660-b268-03738080b9e7"
     fi
     #----------------------------------------------------------------------
 } # func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_declare_npm_related_aliases
@@ -118,7 +118,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm(){
         else
             SB_OK2ATTEMPT="f"
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "npm" "c6c0e713-6c09-4063-a311-c051502059e7"
+                "npm" "c6e31f51-1fd8-4dd4-9468-03738080b9e7"
         fi
     else
         if [ "$SB_NPM_EXISTS_ON_PATH" != "t" ]; then
@@ -136,7 +136,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm(){
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES" \
-            "4af6f602-8caa-4f39-8511-c051502059e7" \
+            "107d81b5-be81-4732-9268-03738080b9e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             export MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES="" # to let other programs know of the setup failure
@@ -146,7 +146,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm(){
                 "$S_FP_0"
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
                 "$S_FP_0" \
-                "f333344d-980f-4234-8311-c051502059e7" \
+                "c93eb3a5-8ea9-48e3-9268-03738080b9e7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 export Z_PATH="$S_FP_0:$Z_PATH"
@@ -184,7 +184,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
         else
             SB_OK2ATTEMPT="f"
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "yarn" "8966e116-1dff-4836-8211-c051502059e7"
+                "yarn" "f9bbf140-bd17-4d99-9368-03738080b9e7"
         fi
     else
         if [ "$SB_YARN_EXISTS_ON_PATH" != "t" ]; then
@@ -217,7 +217,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$MMMV_USERSPACE_DISTRO_T1_YARN_PACKAGES" \
-            "aa559057-7f5b-4c6c-9311-c051502059e7" \
+            "df2c183e-be2e-4ef4-b268-03738080b9e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_OK2ATTEMPT="f"
@@ -226,7 +226,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$S_FP_YARN_CONFIG_FOLDER" \
-            "64c25e37-a557-4629-aa11-c051502059e7" \
+            "302a6589-7d56-4924-8268-03738080b9e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_OK2ATTEMPT="f"
@@ -235,7 +235,7 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
     if [ "$SB_OK2ATTEMPT" == "t" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
             "$S_FP_YARN_CACHE_FOLDER" \
-            "45e75142-0c13-429c-8311-c051502059e7" \
+            "5019d3a4-b99a-4855-8368-03738080b9e7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         if [ "$SB_VERIFICATION_FAILED" == "t" ]; then
             SB_OK2ATTEMPT="f"
@@ -249,11 +249,41 @@ func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn(){
 # This function should be executed only once durign the
 # execution of the $HOME/.bashrc
 func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations(){
+    #----------------------------------------------------------------------
     func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_npm
     func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations_yarn
+    local S_FP_BIN="$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES/node_modules/.bin"
+    if [ -e "$S_FP_BIN" ]; then
+        if [ -d "$S_FP_BIN" ]; then
+            #--------------------------------------------------------------
+            Z_PATH="$S_FP_BIN:$Z_PATH"
+            alias mmmv_npm_install="nice -n 3 npm install --prefix $MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES "
+            #--------------------------------------------------------------
+            if [ -e "$S_FP_BIN/lwc" ]; then
+                if [ ! -d "$S_FP_BIN/lwc" ]; then
+                    # https://github.com/limedocs/limedocs-wiki-converter
+                    # Usage example:
+                    #
+                    #     git clone https://github.com/limedocs/limedocs-wiki-converter.wiki.git
+                    #     lwc ./imedocs-wiki-converter.wiki
+                    #
+                    alias mmmv_cre_HTML_from_GitHub_wiki_t1_lwc="nice -n 6 lwc "
+                fi
+            fi
+            #--------------------------------------------------------------
+            S_FP_BIN="$MMMV_USERSPACE_DISTRO_T1_NPM_PACKAGES/bin"
+            if [ -e "$S_FP_BIN" ]; then
+                if [ -d "$S_FP_BIN" ]; then
+                    Z_PATH="$S_FP_BIN:$Z_PATH"
+                fi
+            fi
+            #--------------------------------------------------------------
+        fi
+    fi
+    #----------------------------------------------------------------------
 } # func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations
 func_mmmv_userspace_distro_t1_core_Nodejs_related_preparations
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="4a980682-c564-4655-9311-c051502059e7"
+# S_VERSION_OF_THIS_FILE="5b2effb2-1ec7-4a30-a268-03738080b9e7"
 #==========================================================================

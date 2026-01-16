@@ -27,7 +27,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE\e[39m ."
-    echo "GUID=='5374c0c1-eb70-48c0-ba2f-90f0e060b9e7'"
+    echo "GUID=='2412d1a2-c698-4fe3-a121-531351f01ae7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -85,7 +85,7 @@ if [ "$SB_PAR_TEXT_FORMATTER_EXISTS_ON_PATH" == "" ]; then
         export PARINIT="rTbgqR B=.,?_A_a Q=_s>|" # from the par man page
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "par_text_formatter" "33bc8d44-9478-46ae-ba3f-90f0e060b9e7"
+            "par_text_formatter" "c0d5ff54-dfdf-4fc4-b421-531351f01ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ if [ "$SB_QUTEBROWSER_EXISTS_ON_PATH" == "t" ]; then
     S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/bin_installed_program_specific/qutebrowser_specific/bin"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$S_TMP_0" \
-        "35411a31-c58d-44fc-aa5f-90f0e060b9e7" \
+        "a1035085-93dc-41d7-a561-531351f01ae7" \
         "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         Z_PATH="$S_TMP_0:$Z_PATH"
@@ -305,7 +305,7 @@ if [ "$SB_FFPROBE_EXISTS_ON_PATH" == "t" ]; then
     fi
 fi
 #--------------------------------------------------------------------------
-S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/cat_find_grep_gsed_printf_ruby_sort_tr_uniq"
+S_TMP_0="$MMMV_USERSPACE_DISTRO_T1_BIN_INSTALLED_PROGRAM_SPECIFIC/scripts_by_dependency_sets/cat_find_grep_gsed_head_printf_ruby_sort_tr_uniq"
 if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
     if [ "$SB_UNIQ_EXISTS_ON_PATH" == "t" ]; then
         if [ "$SB_RUBY_EXISTS_ON_PATH" == "t" ]; then
@@ -315,7 +315,9 @@ if [ "$SB_SORT_EXISTS_ON_PATH" == "t" ]; then
                         if [ "$SB_PRINTF_EXISTS_ON_PATH" == "t" ]; then
                             if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
                                 if [ "$SB_CAT_EXISTS_ON_PATH" == "t" ]; then
-                                    export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+                                    if [ "$SB_HEAD_EXISTS_ON_PATH" == "t" ]; then
+                                        export Z_PATH="$S_TMP_0/bin:$Z_PATH"
+                                    fi
                                 fi
                             fi
                         fi
@@ -345,5 +347,5 @@ if [ "$SB_QEMUIMG_EXISTS_ON_PATH" == "t" ]; then
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="4531f6f1-f611-462a-a03f-90f0e060b9e7"
+# S_VERSION_OF_THIS_FILE="b28bd549-0c28-45a8-b6b1-531351f01ae7"
 #==========================================================================

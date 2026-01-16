@@ -22,7 +22,7 @@
 #         echo "    $S_FP_0"
 #         echo ""
 #         echo "is a symlink, but for safety reasons a file is expected."
-#         echo "GUID=='4388e775-6905-48a7-9216-e1a180a1a9e7'"
+#         echo "GUID=='42eebc3c-578a-45df-b1fe-f09331011ae7'"
 #         echo ""
 #     else
 #         if [ -d "$S_FP_0" ]; then
@@ -32,7 +32,7 @@
 #                 echo "    $S_FP_0"
 #                 echo ""
 #                 echo "is a folder, but a file is expected."
-#                 echo "GUID=='735c67bc-a4c8-4ac0-bd46-e1a180a1a9e7'"
+#                 echo "GUID=='d4182258-57d1-47ed-92fe-f09331011ae7'"
 #                 echo ""
 #         else
 #             source "$S_FP_0"
@@ -49,7 +49,7 @@
 #     else
 #         echo "is missing."
 #     fi
-#     echo "GUID=='2a55e4c4-7aa4-4903-9e16-e1a180a1a9e7'"
+#     echo "GUID=='a4712a30-fb7e-42ef-a1fe-f09331011ae7'"
 #     echo ""
 # fi
 # #--------------------------------------------------------------------------
@@ -132,7 +132,7 @@ fi
 if [ "`whoami`" != "root" ]; then
     echo ""
     echo "This script is meant to be executed only by the root user."
-    echo "GUID=='c54d88ae-6356-42ea-a386-e1a180a1a9e7'"
+    echo "GUID=='f7bf0553-78ed-4255-a3fe-f09331011ae7'"
     echo ""
 fi
 #--------------------------------------------------------------------------
@@ -185,7 +185,7 @@ else
         echo -e "\e[31mThe operating system is neither Linux, nor BSD. \e[39m"
         echo "The mmmv aliases are probably not tested "
         echo "with the current operating system."
-        echo "GUID=='5361cd2c-b97b-4e12-9146-e1a180a1a9e7'"
+        echo "GUID=='8f622053-2685-4c61-95fe-f09331011ae7'"
         echo ""
     fi
     #----------------------------------------------------------------------
@@ -199,7 +199,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         echo ""
         echo -e "\e[31mThe value of the S_GUID_CANDIDATE is an empty string\e[39m,"
         echo "but it is expected to be a GUID."
-        echo "GUID=='3cc38d83-bf98-41ae-ab16-e1a180a1a9e7'"
+        echo "GUID=='d311be23-a754-4571-93fe-f09331011ae7'"
         echo ""
     fi
     #--------------------
@@ -209,7 +209,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='c2149f4d-0555-4720-ae56-e1a180a1a9e7'"
+        echo "GUID=='da688b85-3274-40c1-a4fe-f09331011ae7'"
     else
         echo -e "\e[31mThe value of the S_CONSOLE_PROGRAM_NAME is an empty string\e[39m,"
         echo "but it is expected to be a console program name, which "
@@ -217,7 +217,7 @@ func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1(){
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='59bbb3f1-7ad5-4db7-9056-e1a180a1a9e7'"
+        echo "GUID=='3438e7c1-7836-4f6b-93fe-f09331011ae7'"
     fi
     echo ""
     #--------------------
@@ -243,7 +243,7 @@ if [ -e "$S_FP_0" ]; then
         else
             echo "is a folder, but a file is expected."
         fi
-        echo "GUID=='44182ce1-82c7-4a30-be46-e1a180a1a9e7'"
+        echo "GUID=='4236ade9-8e26-496a-aefe-f09331011ae7'"
         echo ""
     else
         if [ -h "$S_FP_0" ]; then
@@ -253,7 +253,7 @@ if [ -e "$S_FP_0" ]; then
             echo "    $S_FP_0"
             echo ""
             echo "is a symlink to a file, but for safety reasons a file is expected."
-            echo "GUID=='8501ae1c-010c-478d-8916-e1a180a1a9e7'"
+            echo "GUID=='71e42c23-6184-4a04-a4fe-f09331011ae7'"
             echo ""
         else
             # The value of the SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED is
@@ -268,7 +268,7 @@ if [ -e "$S_FP_0" ]; then
                 echo "    SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED==\"$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED\""
                 echo ""
                 echo "but it is expected to be \"t\"."
-                echo "GUID=='27f63235-443a-4d57-9316-e1a180a1a9e7'"
+                echo "GUID=='2169c1b1-bfcc-47e8-82fe-f09331011ae7'"
                 echo ""
             fi
         fi
@@ -284,7 +284,7 @@ else
     else
         echo "is missing."
     fi
-    echo "GUID=='73969611-213b-4945-9936-e1a180a1a9e7'"
+    echo "GUID=='e7cf645f-de42-4015-94fe-f09331011ae7'"
     echo ""
 fi
 
@@ -295,13 +295,13 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
     SB_VERIFICATION_FAILED="t"
     func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
         "$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG" \
-        "9c5c1ba4-d199-48c2-a426-e1a180a1a9e7"
+        "2b15bda0-da7c-4f3f-aefe-f09331011ae7"
     if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
         alias mmmv_admin_root_overwrite_root_bashrc_subcomponents_t1="\
         if [ \"/root/mmmv_userspace_distro_t1_components_for_root\" != \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_DEST\" ]; then \
             echo '' ; \
             echo 'This script is flawed.' ; \
-            echo \"GUID=='4c94c191-7a50-4b90-8756-e1a180a1a9e7'\" ; \
+            echo \"GUID=='3205de3e-e209-437a-82fe-f09331011ae7'\" ; \
             echo '' ; \
         fi ; \
         if [ -e \"$MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG\" ]; then \
@@ -324,7 +324,7 @@ if [ "$SB_BASHRC_SUBPART_FUNC_CORE_T1_FOR_ROOT_LOADED" == "t" ]; then
             echo '    $MMMV_USERSPACE_DISTRO_T1_ADMIN_ROOT_COMPONENTS_T1_ORIG ' ; \
             echo '' ; \
             echo 'does not exist.' ; \
-            echo \"GUID=='45a15227-271d-4b52-8946-e1a180a1a9e7'\" ; \
+            echo \"GUID=='fcc1d72a-3547-4e8c-95ee-f09331011ae7'\" ; \
             echo '' ; \
         fi "
     fi
@@ -369,7 +369,7 @@ if [ "$SB_IPTABLES_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_admin_firewall_iptables_create_chain_of_filters="iptables --new-chain " # <chain name>
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "iptables" "848ec39e-cd1d-4309-9256-e1a180a1a9e7"
+            "iptables" "26ac0426-d33d-449a-b5fe-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -379,7 +379,7 @@ if [ "$SB_FIND_EXISTS_ON_PATH" == "" ]; then
         SB_FIND_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "find" "b23229aa-0a46-4e58-a836-e1a180a1a9e7"
+            "find" "4567b229-6cf2-4770-b1fe-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -418,13 +418,13 @@ if [ "$SB_UFW_EXISTS_ON_PATH" == "" ]; then
                     SB_UFW_EXISTS_ON_PATH="t"
                 else
                     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                        "gufw" "446c3dc1-c5b8-4392-b956-e1a180a1a9e7"
+                        "gufw" "a0d21120-2ca2-417e-92fe-f09331011ae7"
                 fi
             fi
             #--------
         else
             func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-                "ufv" "3e06a3b2-8717-4a65-9616-e1a180a1a9e7"
+                "ufv" "47712478-4754-4db1-91fe-f09331011ae7"
         fi
         #------------------------------------------------------------------
     fi
@@ -436,7 +436,7 @@ if [ "$SB_APT_EXISTS_ON_PATH" == "" ]; then
         SB_APT_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "apt" "03fad4d8-5f14-42e5-a836-e1a180a1a9e7"
+            "apt" "9e9a5458-c815-4b93-84fe-f09331011ae7"
     fi
 fi
 #----------------
@@ -447,7 +447,7 @@ if [ "$SB_GREP_EXISTS_ON_PATH" == "" ]; then
         alias grep='grep --color=auto '
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "grep" "244f7eb8-f48a-4b08-a856-e1a180a1a9e7"
+            "grep" "a4f1302c-cc91-492b-94fe-f09331011ae7"
     fi
 fi
 #--------------------
@@ -457,7 +457,7 @@ if [ "$SB_SED_EXISTS_ON_PATH" == "" ]; then
         SB_SED_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "sed" "1bf3c954-bde2-4e8c-bb36-e1a180a1a9e7"
+            "sed" "8327e75b-76b6-4236-a2fe-f09331011ae7"
     fi
 fi
 #--------------------
@@ -467,7 +467,7 @@ if [ "$SB_GAWK_EXISTS_ON_PATH" == "" ]; then
         SB_GAWK_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "gawk" "1c682312-dc4a-4c3a-9e16-e1a180a1a9e7"
+            "gawk" "31cf4338-4137-4601-a5fe-f09331011ae7"
     fi
 fi
 #--------------------
@@ -477,7 +477,7 @@ if [ "$SB_XARGS_EXISTS_ON_PATH" == "" ]; then
         SB_XARGS_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "xargs" "49f37493-b8e9-442e-ad46-e1a180a1a9e7"
+            "xargs" "1f68cc77-314d-4760-b4fe-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -523,7 +523,7 @@ if [ "$SB_APTGET_EXISTS_ON_PATH" == "" ]; then
         #------------------------------------------------------------------
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "apt-get" "2586fe92-84fc-4d14-9546-e1a180a1a9e7"
+            "apt-get" "fa6cba45-5e08-4dea-92fe-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -534,7 +534,7 @@ if [ "$SB_APTITUDE_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_aptitude_search="nice -n 2 aptitude search "
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "aptitude" "21e7dfed-68dd-4447-8dc6-e1a180a1a9e7"
+            "aptitude" "9b008722-3272-414f-a5fe-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -545,7 +545,7 @@ if [ "$SB_SERVICE_EXISTS_ON_PATH" == "" ]; then
         alias mmmv_ls_daemons_Linux_service_t1="nice -n 4 service --status-all  "
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "service" "42753684-7031-4064-9326-e1a180a1a9e7"
+            "service" "bf83c74a-e2a9-4539-82fe-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -562,7 +562,7 @@ if [ "$SB_SYSTEMCTL_EXISTS_ON_PATH" == "" ]; then
         #----------------
         # else
         #     func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-        #         "systemctl" "e13b03ba-30a3-4c46-9255-e1a180a1a9e7"
+        #         "systemctl" "23c295a1-262b-4bf3-83ee-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -572,7 +572,7 @@ if [ "$SB_DU_EXISTS_ON_PATH" == "" ]; then
         SB_DU_EXISTS_ON_PATH="t"
     else
         func_mmmv_userspace_distro_t1_err_msg_console_program_missing_t1 \
-            "du" "7252f6bb-beb2-4234-8875-e1a180a1a9e7"
+            "du" "1b1fdc04-b434-494e-b2ee-f09331011ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -804,6 +804,35 @@ if [ "$SB_OPERATINGSYSTEM_LINUX" == "t" ]; then
     fi
 fi
 #--------------------------------------------------------------------------
+if [ ! -e /var/run/dbus/system_bus_socket ]; then
+    # This Windows Subsystem for Linux (WSL) specific if-clause
+    # is for facilitating dbus startup.
+    #
+    #    # As a non-root WSL Linux distribution user:
+    #    apt install dbus-x11
+    #    sudo service dbus start
+    #
+    # Some test lines:
+    #
+    #         systemctl enable --now dbus
+    #
+    #         dbus-send --system --type=method_call --dest=org.freedesktop.DBus \
+    #             /org/freedesktop/DBus org.freedesktop.DBus.ListNames
+    #         echo $DBUS_SESSION_BUS_ADDRESS
+    #
+    if [ "`uname -a | grep -i 'Microsoft' `" != "" ]; then
+        if [ "`which dbus-uuidgen 2>/dev/null `" != "" ]; then
+            if [ "`which dbus-daemon 2>/dev/null `" != "" ]; then
+                mkdir -p /run/dbus
+                wait ; sync; wait
+                dbus-uuidgen --ensure
+                wait
+                dbus-daemon --system --fork
+            fi
+        fi
+    fi
+fi
+#--------------------------------------------------------------------------
 # export MMMV_SP_MAGNET_01_MOUNTFOLDER="/home/librarian_01/salvestusseadmed/magnet_01_indeksid"
 # export MMMV_CMD_MAGNET_01_UNMOUNTING="umount $MMMV_SP_MAGNET_01_MOUNTFOLDER ; "
 # alias mmmv_admin_mount_magnet_01_readonly="$MMMV_CMD_MAGNET_01_UNMOUNTING \
@@ -815,5 +844,5 @@ fi
 # alias mmmv_admin_unmount_magnet_01="$MMMV_CMD_MAGNET_01_UNMOUNTING "
 #
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="4132d3f4-e0b0-4949-9d45-e1a180a1a9e7"
+# S_VERSION_OF_THIS_FILE="50458205-447d-45b1-84ee-f09331011ae7"
 #==========================================================================
