@@ -26,7 +26,7 @@ func_mmmv_exit_if_not_on_path_t2b() { # S_COMMAND_NAME
         echo ""
         echo -e "\e[31mCommand \"$S_COMMAND_NAME\" could not be found from the PATH. \e[39m"
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='0fc6984f-930c-46dc-b4eb-5292703196e7'"
+        echo "GUID=='1394d9eb-0e04-4bf6-a5bc-31d190704ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -45,7 +45,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='3cbf5c48-a2ac-439d-a1eb-5292703196e7'"
+        echo "GUID=='2e9266f9-d442-4843-83bc-31d190704ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -53,14 +53,14 @@ func_mmmv_assert_error_code_zero_t1(){
         exit 1
     fi
     #------------------------------
-    # If the "$?" were evaluated in this function, 
+    # If the "$?" were evaluated in this function,
     # then it would be "0" even, if it is
     # something else at the calling code.
     if [ "$S_ERR_CODE" != "0" ];then
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='7b246a32-da7c-4ff5-b1eb-5292703196e7'"
+        echo "GUID=='58fc1b47-8f6a-444c-a2bc-31d190704ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -103,7 +103,7 @@ func_init_build_folder(){
     #--------------------
     mkdir -p $S_FP_BUILD_FOLDER
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "4b710342-7f57-4f5e-b4eb-5292703196e7"
+        "38809b2e-3c68-4aea-93bc-31d190704ae7"
     func_mmmv_wait_and_sync_t1
     #--------------------
     local S_FN_SRC_TAR="rhash-1.4.2-src.tar"
@@ -112,25 +112,25 @@ func_init_build_folder(){
     #--------------------
     cp $S_FP_DIR/$S_FN_SRC_TAR_GZ $S_FP_BUILD_FOLDER/
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "2d7a9233-b28f-47dd-94eb-5292703196e7"
+        "35e8ccb5-cd45-4c4b-91bc-31d190704ae7"
     func_mmmv_wait_and_sync_t1
     #--------------------
     cd "$S_FP_BUILD_FOLDER"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "70e9361b-112e-4d0b-85eb-5292703196e7"
+        "44aa0dd2-6193-4075-92bc-31d190704ae7"
     #--------------------
         $S_CMD_NICE gunzip ./$S_FN_SRC_TAR_GZ
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "25baa92a-b8c5-4719-a4eb-5292703196e7"
+            "4b4ff011-9b90-41d1-a5bc-31d190704ae7"
         func_mmmv_wait_and_sync_t1
         $S_CMD_NICE tar -xf $S_FN_SRC_TAR
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "0530c043-ddcb-4507-beeb-5292703196e7"
+            "33a33b34-0452-49c5-84bc-31d190704ae7"
         func_mmmv_wait_and_sync_t1
     #--------------------
     cd "$S_FP_ORIG_TMP"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "1577e830-556e-4b85-a2eb-5292703196e7"
+        "0f647c34-051f-44ba-95bc-31d190704ae7"
     #--------------------
 } # func_init_build_folder
 #--------------------------------------------------------------------------
@@ -138,19 +138,19 @@ func_init_build_folder_stage_2(){
     func_init_build_folder
     cd "$S_FP_BUILD_FOLDER/RHash-1.4.2"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "861fd625-17fd-4c1d-83eb-5292703196e7"
+        "a039f743-d137-43db-94bc-31d190704ae7"
 } # func_init_build_folder_stage_2
 #--------------------------------------------------------------------------
 func_make_test_and_make_install(){
     #--------------------
-    $S_CMD_NICE make test 
+    $S_CMD_NICE make test
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "390c8995-6d15-4405-84eb-5292703196e7"
+        "32a3d09e-87fb-44ef-a2bc-31d190704ae7"
     func_mmmv_wait_and_sync_t1
     #--------------------
     $S_CMD_NICE make install
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "17425a64-965c-48c1-a1eb-5292703196e7"
+        "c57b07ea-0782-4ab6-a1bc-31d190704ae7"
     func_mmmv_wait_and_sync_t1
     #--------------------
 } # func_make_test_and_make_install
@@ -172,12 +172,12 @@ if [ "$S_ARGV_0" == "c" ]; then
         --enable-static \
         --extra-cflags="$CFLAGS"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "f97eed21-10f6-4459-9eeb-5292703196e7"
+        "3dc28d1d-1926-4550-94bc-31d190704ae7"
     func_mmmv_wait_and_sync_t1
     #--------------------
     CC="clang" CXX="clang++" $S_CMD_NICE make -j $SI_NUMBER_OF_THREADS
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "8a3eed4c-034e-49e6-82eb-5292703196e7"
+        "072c3626-7d89-42e1-95bc-31d190704ae7"
     func_mmmv_wait_and_sync_t1
     #--------------------
     func_make_test_and_make_install
@@ -192,12 +192,12 @@ else
             --enable-static \
             --extra-cflags="$CFLAGS"
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "504c375f-0db5-4b85-a5eb-5292703196e7"
+            "77a4c929-ac40-4977-93bc-31d190704ae7"
         func_mmmv_wait_and_sync_t1
         #--------------------
         CC="gcc" CXX="g++" $S_CMD_NICE make -j $SI_NUMBER_OF_THREADS
         func_mmmv_assert_error_code_zero_t1 "$?" \
-            "c4d1c54c-e6c9-44f6-94eb-5292703196e7"
+            "67c43e35-a1d7-446c-81bc-31d190704ae7"
         func_mmmv_wait_and_sync_t1
         #--------------------
         func_make_test_and_make_install
@@ -207,10 +207,10 @@ else
         echo "COMMAND_LINE_ARGUMENTS :== BUILD_WITH_GCC | BUILD_WITH_CLANG "
         echo -e "   BUILD_WITH_CLANG :== '\e[33mc\e[39m'"
         echo -e "     BUILD_WITH_GCC :== '\e[33mg\e[39m'"
-        echo "GUID=='2103c759-694c-429d-b4eb-5292703196e7'"
+        echo "GUID=='3e04b139-17a5-4892-a2bc-31d190704ae7'"
         echo ""
     fi
 fi
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="a709187c-2d0f-4664-84eb-5292703196e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="b5ca3026-15a7-46b6-84bc-31d190704ae7"
 #==========================================================================
