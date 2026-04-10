@@ -356,15 +356,6 @@ bindsym $Win+t exec /usr/bin/nice -n 2 /usr/bin/lxterminal
 #         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
 #             if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
 #                 #----------------------------------------------------------
-#                 if [ "$SB_SETXKBMAP_EXISTS_ON_PATH" == "t" ]; then
-#                     #------------------------------------------------------
-#                     # At least on some Linux distributions the
-#                     setxkbmap -layout us,ee -option "grp:ctrl_shift_toggle"
-#                     # makes Ctrl-Shift to toggle between 2 keybard layouts.
-#                     # The version for AltGr is:
-#                     #     setxkbmap -layout us,ee -option "grp:toggle"
-#                     #------------------------------------------------------
-#                 fi
 #                 if [ "$SB_XSET_EXISTS_ON_PATH" == "t" ]; then
 #                     #------------------------------------------------------
 #                     # Sets the X11 built in screensaver
@@ -395,6 +386,16 @@ bindsym $Win+t exec /usr/bin/nice -n 2 /usr/bin/lxterminal
 #     echo "" >> $S_FP_FLAGFILE_SB_XSETUP_COMPLETE
 # fi
 # #--------------------------------------------------------------------------
+# if [ "$SB_SETXKBMAP_EXISTS_ON_PATH" == "t" ]; then
+#     #------------------------------------------------------
+#     # At least on some Linux distributions the
+#     setxkbmap -layout us,ee -option "grp:ctrl_shift_toggle"
+#     # makes Ctrl-Shift to toggle between 2 keybard layouts.
+#     # The version for AltGr is:
+#     #     setxkbmap -layout us,ee -option "grp:toggle"
+#     #------------------------------------------------------
+# fi
+# #--------------------------------------------------------------------------
 # S_FP_PREFIX="/home/ts3b/m_local/share/seadistusfaile/taustapildid/konverteeritud/konverteeritud_1280x1280/transport/monorail/"
 # S_FN="monorail_01_linnavaade_1280x1024.jpeg"
 # S_FP="$S_FP_PREFIX$S_FN"
@@ -405,7 +406,7 @@ bindsym $Win+t exec /usr/bin/nice -n 2 /usr/bin/lxterminal
 #         fi
 #     else
 #         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 "$S_FP" \
-#             "4aa40b82-4768-4673-9e01-52d271904ae7"
+#             "26119626-b21c-466f-b56d-e28280a04ae7"
 #     fi
 # fi
 # #--------------------------------------------------------------------------
@@ -420,5 +421,5 @@ bindsym $Win+t exec /usr/bin/nice -n 2 /usr/bin/lxterminal
 #     fi
 # fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="620a3579-566b-4a2c-8e01-52d271904ae7"
+# S_VERSION_OF_THIS_FILE="4f186615-895e-45a7-926d-e28280a04ae7"
 #==========================================================================

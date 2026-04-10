@@ -27,15 +27,6 @@ if [ ! -e "$S_FP_FLAGFILE_SB_XSETUP_COMPLETE" ]; then
         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
             if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
                 #----------------------------------------------------------
-                if [ "$SB_SETXKBMAP_EXISTS_ON_PATH" == "t" ]; then
-                    #------------------------------------------------------
-                    # At least on some Linux distributions the
-                    setxkbmap -layout us,ee -option "grp:ctrl_shift_toggle"
-                    # makes Ctrl-Shift to toggle between 2 keybard layouts.
-                    # The version for AltGr is:
-                    #     setxkbmap -layout us,ee -option "grp:toggle"
-                    #------------------------------------------------------
-                fi
                 if [ "$SB_XSET_EXISTS_ON_PATH" == "t" ]; then
                     #------------------------------------------------------
                     # Sets the X11 built in screensaver
@@ -66,6 +57,16 @@ if [ ! -e "$S_FP_FLAGFILE_SB_XSETUP_COMPLETE" ]; then
     echo "" >> $S_FP_FLAGFILE_SB_XSETUP_COMPLETE
 fi
 #--------------------------------------------------------------------------
+if [ "$SB_SETXKBMAP_EXISTS_ON_PATH" == "t" ]; then
+    #------------------------------------------------------
+    # At least on some Linux distributions the
+    setxkbmap -layout us,ee -option "grp:ctrl_shift_toggle"
+    # makes Ctrl-Shift to toggle between 2 keybard layouts.
+    # The version for AltGr is:
+    #     setxkbmap -layout us,ee -option "grp:toggle"
+    #------------------------------------------------------
+fi
+#--------------------------------------------------------------------------
 S_FP_PREFIX="/home/ts3b/m_local/share/seadistusfaile/taustapildid/konverteeritud/konverteeritud_1280x1280/transport/monorail/"
 S_FN="monorail_01_linnavaade_1280x1024.jpeg"
 S_FP="$S_FP_PREFIX$S_FN"
@@ -76,7 +77,7 @@ if [ "$SB_XWALLPAPER_EXISTS_ON_PATH" == "t" ]; then
         fi
     else
         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 "$S_FP" \
-            "5d911365-12ab-4f80-8516-a04271904ae7"
+            "da005a83-10e4-473d-af26-135280a04ae7"
     fi
 fi
 #--------------------------------------------------------------------------
@@ -91,5 +92,5 @@ if [ "$SB_CONVERT_EXISTS_ON_PATH" == "t" ]; then
     fi
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="5367eb43-a949-4fb4-9a16-a04271904ae7"
+# S_VERSION_OF_THIS_FILE="d5e456cd-66f3-4074-b546-135280a04ae7"
 #==========================================================================
