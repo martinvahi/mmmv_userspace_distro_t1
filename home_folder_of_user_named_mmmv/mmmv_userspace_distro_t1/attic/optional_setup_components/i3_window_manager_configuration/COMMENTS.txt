@@ -1,0 +1,15 @@
+
+i3 window manager home page:
+
+    https://i3wm.org/
+
+If the configuration file
+
+    $HOME/.config/i3/config
+
+exists, then it MIGHT be edited by using the Bash aliases
+
+    mmmv_vim_edit_i3_config
+    # or 
+    mmmv_vim_edit_i3_config_and_reload_it
+

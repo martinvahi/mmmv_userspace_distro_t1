@@ -24,7 +24,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         echo -e "\e[31mThe code that calls this function is flawed.\e[39m"
         echo "This function requires 2 parameters: S_FP, S_GUID_CANDIDATE"
         echo "and has an optional 3. parameter: SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        echo "GUID=='fd5f9023-90c5-4054-9265-704321f099e7'"
+        echo "GUID=='2cc80aa3-80fa-492d-af4c-018161104ae7'"
         echo ""
         #--------
         SB_VERIFICATION_FAILED="t"
@@ -44,7 +44,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo "Valid values are: \"t\", \"f\", \"\" ."
                     echo "\"\" defaults to \"t\"."
-                    echo "GUID=='ed34d45b-d846-4845-9165-704321f099e7'"
+                    echo "GUID=='4ce05f26-1e4c-48d6-b24c-018161104ae7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -65,7 +65,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo -e "points to a\e[31m broken symlink\e[39m, but a file or"
                     echo "a symlink to a file is expected."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='886dce3f-633c-4399-b265-704321f099e7'"
+                    echo "GUID=='8d46764a-5c5d-4cc8-a44c-018161104ae7'"
                     echo ""
                 fi
                 #--------
@@ -79,7 +79,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "\e[31mdoes not exist\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='928dff4a-ab7f-452c-a565-704321f099e7'"
+                    echo "GUID=='3102025a-eb67-4b0c-a14c-018161104ae7'"
                     echo ""
                 fi
                 #--------
@@ -99,7 +99,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "exists, but a\e[31m file or a symlink to a file is expected\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='16f7f11e-8e02-4f22-8165-704321f099e7'"
+                    echo "GUID=='417d3407-4c71-471c-ad4c-018161104ae7'"
                     echo ""
                 fi
                 #--------
@@ -112,7 +112,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='16348234-aa89-440a-b565-704321f099e7'"
+            echo "GUID=='52fa1fa4-7303-4b03-8b4c-018161104ae7'"
             echo ""
         fi
     fi
@@ -133,7 +133,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='dd875457-f2cd-4ddc-9165-704321f099e7'"
+        echo "GUID=='4eb6a161-b7d1-41d5-924c-018161104ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -148,7 +148,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='3acac41c-ccff-4f0d-9265-704321f099e7'"
+        echo "GUID=='aa5fab3e-3e84-4e08-954c-018161104ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -168,7 +168,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='31ecd27b-c16c-4ba0-a365-704321f099e7'"
+        echo "GUID=='1f65f310-0568-4e7d-a54c-018161104ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -187,12 +187,12 @@ func_install(){
     # local S_FP_PIP3_BASH="$S_FP_DIR/mmmv_pip3_install"
     # func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
     #     "$S_FP_PIP3_BASH" \
-    #     "36b70673-9dd5-4d1f-8765-704321f099e7"
+    #     "340fe854-4274-437e-a24c-018161104ae7"
     #----------------------------------------------------------------------
     local S_CMD_NICE="nice -n 15 "
     $S_CMD_NICE pipx install --include-deps --force "$S_PACKETNAME"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "ca781612-fbb6-4037-a265-704321f099e7"
+        "c9a6b352-966b-44d9-b34c-018161104ae7"
     #----------------------------------------------------------------------
 } # func_install
 
@@ -204,7 +204,7 @@ func_install(){
 # Python Style Guide "PEP 8"
 # https://peps.python.org/pep-0008/
 func_install autopep8
-
+#--------------------------------------------------------------------------
 # The trafilatura
 #     https://github.com/adbar/trafilatura
 # is a Python3 program that parses HTML and outputs
@@ -221,16 +221,27 @@ func_install autopep8
 # is a C program that can probably be obtained from
 # a standard package collection.
 func_install trafilatura
-
+#--------------------------------------------------------------------------
+# https://github.com/tldr-pages/tldr
+# The "tldr" is a set of man page like documentation for
+# various command line tools.
+func_install tldr
+#--------------------------------------------------------------------------
+# https://pdm-project.org/en/latest/
+#     ------------------citation----start-------------------------
+#     PDM, as described, is a modern Python package and dependency
+#     manager supporting the latest PEP standards. But it is more
+#     than a package manager. It boosts your development workflow
+#     in various aspects.
+#     ------------------citation----end---------------------------
+func_install pdm
 #--------------------------------------------------------------------------
 # https://www.antlr.org/
 # https://github.com/antlr/
 func_install antlr4-tools
-
 #--------------------------------------------------------------------------
 # https://www.jefftk.com/icdiff
 func_install icdiff
-
 #--------------------------------------------------------------------------
 # uv is a Python package manager that is implemented in Rust.
 # https://github.com/astral-sh/uv
@@ -249,6 +260,17 @@ func_install meson
 func_install sphinx
 func_install sphinx_rtd_theme
 func_install myst_parser
+#--------------------------------------------------------------------------
+# https://www.docutils.org/
+# As of 2026_04 the
+func_install docutils
+# installs the following programs:
+#     docutils, rst2html, rst2html4, rst2html5, rst2latex,
+#     rst2man, rst2odt, rst2pseudoxml, rst2s5, rst2xetex, rst2xml.
+#--------------------------------------------------------------------------
+# The rst2pdf generates PDF-files.
+# https://rst2pdf.org/
+func_install rst2pdf
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="2fab6630-e962-4acb-b265-704321f099e7"
+# S_VERSION_OF_THIS_FILE="da65db55-87dc-4f0f-934c-018161104ae7"
 #==========================================================================

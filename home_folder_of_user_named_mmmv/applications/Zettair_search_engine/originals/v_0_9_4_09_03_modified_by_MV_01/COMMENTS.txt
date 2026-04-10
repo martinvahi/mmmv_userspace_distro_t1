@@ -1,0 +1,49 @@
+
+Home page:
+    https://web.archive.org/web/20110225070300/http://www.seg.rmit.edu.au/zettair/download.html
+
+License: former GPL, switched to BSD License.
+
+Usage details with demodata are at the
+
+    ./Zettair_usage_demo.zip
+
+but the overall idea is that HTML-files are first
+converted to .txt files with
+
+    /usr/bin/html2text
+
+and then the .txt files are indexed and then at Bash console
+
+    zet myawesomequerystring
+
+prints an ordered list of full paths to the indexed textfiles. The
+order is based on Zettair Text Search Engine ranking.
+
+This is a 2026_04 microfork by Martin.Vahi@softf1.com and it differs
+from upstream original by a modification, where the original values of a
+C macros named BUFSIZE and LOOKAHEAD are somewhat increased.
+
+It's a dumb change with no analysis. The effects are superficially
+studied by testing the indexing and querying by using a recursive wget
+copy of the "NIST Dictionary of Algorithms and Data Structures"
+
+    https://web.archive.org/web/20260303200036/https://xlinux.nist.gov/dads/
+
+which is relatively text-heavy web site. The hope is that MAYBE that
+change makes the Zettair text search engine to cope with slightly bigger
+files and larger Unicode characters than it was originally intended
+to handle. According to 2026_04_09 version of ChatGPT.com chatbot the
+median of upper 10% percentile of HTML pages in number of bytes is about
+200KiB. So about 400KiB should do. As of 2026 each CPU core tends to
+have about 1MiB of CPU cache. MAYBE with some great luck there won't be
+"too many" CPU cache misses. The changes by Martin.Vahi@softf1.com are
+surrounded with lines:
+
+// start of 2026_04 dirty-hack-preventive-probabilistic-upgrade-attempt named andromediAlien
+//   end of 2026_04 dirty-hack-preventive-probabilistic-upgrade-attempt named andromediAlien
+
+TODO: analyze the code and upgrade the software properly.
+
+Thank You for reading this text.
+

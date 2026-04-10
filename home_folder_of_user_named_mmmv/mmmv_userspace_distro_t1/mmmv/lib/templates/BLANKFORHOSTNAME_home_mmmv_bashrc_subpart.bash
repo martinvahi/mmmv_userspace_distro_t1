@@ -6,7 +6,7 @@
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
 #==========================================================================
-#S_FP_DIR_TMP_0="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
+#S_FP_DIR_TMP_0="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" == "" ]; then
 #    MMMV_USERSPACE_DISTRO_T1_HOME="`cd $S_FP_DIR_TMP_0/../../../../../../; pwd`"
 #fi
@@ -26,7 +26,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE . \e[39m"
-    echo "GUID=='f80b3045-c595-4e04-a556-8240901059e7'"
+    echo "GUID=='b62df234-aa6f-482e-92f4-41b360904ae7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -39,7 +39,7 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
     # S_FP_BASHFILE="/some/custom/foo.bash"
     # SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # domain: {"","t","f"}
     # func_mmmv_include_bashfile_if_possible_t2 "$S_FP_BASHFILE" \
-    #     "c5501f46-10bb-42a9-8156-8240901059e7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
+    #     "2c9aa631-49d1-4a94-94f4-41b360904ae7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
     #----------------------------------------------------------------------
 #    S_TMP_PRINTERNAME="Martini_OKI_ML5520_maatriksprinter"
 #    alias mmmv_print_OKI_ML5520_maatriksprinter="lp -d $S_TMP_PRINTERNAME " # name of the file comes here
@@ -56,7 +56,7 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo ""
                     echo -e "Please fix the\e[31m issue\e[39m near GUID "
-                    echo "    '30d51264-a480-44fe-9b56-8240901059e7' "
+                    echo "    '1492aa8b-cd93-41fd-b6f4-41b360904ae7' "
                     echo ""
                 fi
             fi
@@ -64,7 +64,7 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
             if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                 echo ""
                 echo -e "Please fix the\e[31m issue\e[39m near GUID "
-                echo "    '1d16285b-59fa-4866-a156-8240901059e7' "
+                echo "    '23cf6c54-46e5-4923-b5f4-41b360904ae7' "
                 echo ""
             fi
         fi
@@ -72,13 +72,68 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "Please fix the\e[31m issue\e[39m near GUID "
-            echo "    '70f4ae21-018a-4e51-9356-8240901059e7' "
+            echo "    '2e972a41-3403-45ce-82f4-41b360904ae7' "
             echo ""
         fi
     fi
     #----------------------------------------------------------------------
+    S_FP_TMP_FOLDER="/tmp"
+    if [ "$MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K" != "" ]; then
+        S_FP_TMP_FOLDER="$MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K"
+    fi
+    S_FP_FLAGFILES_FOR_ALL_USERS="$S_FP_TMP_FOLDER/flagfiles"
+    if [ ! -e "$S_FP_FLAGFILES_FOR_ALL_USERS" ]; then
+        mkdir -p $S_FP_FLAGFILES_FOR_ALL_USERS
+        sync ; wait
+        chmod 1777 $S_FP_FLAGFILES_FOR_ALL_USERS
+        sync ; wait
+    fi
+    S_FP_FLAGFILE_SB_XSETUP_COMPLETE="$S_FP_FLAGFILES_FOR_ALL_USERS/`whoami`_flagfile_mmmv_userspace_distro_t1_xsetup_complete_t1.txt"
+    if [ ! -e "$S_FP_FLAGFILE_SB_XSETUP_COMPLETE" ]; then
+        if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "f" ]; then
+            if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
+                if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
+                    if [ "$SB_SETXKBMAP_EXISTS_ON_PATH" == "t" ]; then
+                        #------------------------------------------------------
+                        # At least on some Linux distributions the
+                        setxkbmap -layout us,ee -option "grp:ctrl_shift_toggle"
+                        # makes Ctrl-Shift to toggle between 2 keybard layouts.
+                        # The version for AltGr is:
+                        #     setxkbmap -layout us,ee -option "grp:toggle"
+                        #------------------------------------------------------
+                    fi
+                    if [ "$SB_XSET_EXISTS_ON_PATH" == "t" ]; then
+                        #------------------------------------------------------
+                        # Sets the X11 built in screensaver
+                        SI_NUMBER_OF_IDLING_SECONDS_TILL_SCREENSAVER_ACTIVATES="3600"
+                        SI_SCREENSAVER_CYCLE_COUNT_BEFORE_LOCKING_SCREEN="0"
+                        xset s \
+                            $SI_NUMBER_OF_IDLING_SECONDS_TILL_SCREENSAVER_ACTIVATES \
+                            $SI_SCREENSAVER_CYCLE_COUNT_BEFORE_LOCKING_SCREEN
+                        # Existing values can be displayed by executing:
+                        #     xset q
+                        #------------------------------------------------------
+                    fi
+                    if [ "$SB_XSSLOCK_EXISTS_ON_PATH" == "t" ]; then
+                        #------------------------------------------------------
+                        # A comment from i3 window manager autogenerated config file:
+                        # "xss-lock grabs a logind suspend inhibit lock and
+                        # will use i3lock to lock the screen before suspend."
+                        xss-lock --transfer-sleep-lock -- i3lock --nofork
+                        # A command for locking the session:
+                        #     loginctl lock-session
+                        #------------------------------------------------------
+                    fi
+                fi
+            fi
+        fi
+        wait ;
+        echo "" >> $S_FP_FLAGFILE_SB_XSETUP_COMPLETE
+    fi
+    #----------------------------------------------------------------------
     MMMV_USERSPACE_DISTRO_T1_HOSTNAME_SPECIFIC_INITIALISATIONS_TIMESTAMP="$S_TIMESTAMP"
+    #----------------------------------------------------------------------
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="227ecb34-a9dc-449b-b456-8240901059e7"
+# S_VERSION_OF_THIS_FILE="73d54e4f-b0b4-4db1-b4f4-41b360904ae7"
 #==========================================================================
