@@ -1,0 +1,11 @@
+
+The 
+
+    ./Ruby_v_4_0_2.zip
+
+has been obtained by downloading 
+
+    https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.2.tar.gz
+
+on 2026_04_19 and then repacking it.
+
