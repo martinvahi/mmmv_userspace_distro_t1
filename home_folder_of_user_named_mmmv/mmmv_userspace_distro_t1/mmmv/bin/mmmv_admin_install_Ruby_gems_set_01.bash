@@ -53,7 +53,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "    S_FP_ORIG=\"\`pwd\`\""
         echo ""
         echo "Aborting script."
-        echo "GUID=='c1204732-0fb2-49b1-8307-f24110704ae7'"
+        echo "GUID=='cd646a1d-1af2-4a15-b565-2190f0314ae7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -80,7 +80,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         fi
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='8ac4f134-373a-4c33-8307-f24110704ae7'"
+        echo "GUID=='2b0376b0-b04f-44d4-bd55-2190f0314ae7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -93,7 +93,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "is not a folder. It is expected to be a folder that "
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='8319105d-bd1f-4cff-8207-f24110704ae7'"
+        echo "GUID=='4387bf39-5a1f-4e75-9255-2190f0314ae7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -111,7 +111,7 @@ func_mmmv_exc_exit_with_an_error_t1(){
     if [ "$S_GUID_CANDIDATE" != "" ]; then
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
     fi
-    echo "GUID=='af526b77-6abd-456e-b1f6-f24110704ae7'"
+    echo "GUID=='23ed6bc7-c88a-41fd-a255-2190f0314ae7'"
     echo ""
     cd "$S_FP_ORIG"
     exit 1 # exit with an error
@@ -131,7 +131,7 @@ func_mmmv_exc_exit_with_an_error_t2(){
             echo "$S_OPTIONAL_ERR_MSG"
         fi
         echo "Aborting script."
-        echo "GUID=='5e01f03b-35a4-482b-84f6-f24110704ae7'"
+        echo "GUID=='3cad3d60-a786-4ed9-a355-2190f0314ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -143,7 +143,7 @@ func_mmmv_exc_exit_with_an_error_t2(){
         fi
         echo "Aborting script."
         echo "GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-        echo "GUID=='163857cc-4ae4-454d-aef6-f24110704ae7'"
+        echo "GUID=='87ffee19-62a6-4ec2-a455-2190f0314ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
@@ -160,7 +160,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='3279e45b-ddcf-4b86-83f6-f24110704ae7'"
+        echo "GUID=='729e9524-e00e-46ae-8255-2190f0314ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -180,7 +180,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo "Aborting script."
-        echo "GUID=='c5160a97-7ff3-439d-85f6-f24110704ae7'"
+        echo "GUID=='50440b4d-0f4c-48fe-9355-2190f0314ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         cd "$S_FP_ORIG"
@@ -198,7 +198,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
         echo ""
         echo "The code that calls this function is flawed."
         echo "This function requires 2 parameters: S_FP, S_GUID"
-        echo "GUID=='5c5e4f1f-4e60-4f2a-84f6-f24110704ae7'"
+        echo "GUID=='39da3330-91bd-4fc8-8555-2190f0314ae7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -215,7 +215,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo "points to a broken symlink, but a file or "
             echo "a symlinkt to a file is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='dfccc274-6e2b-45a0-bdf6-f24110704ae7'"
+            echo "GUID=='1fd7ce46-a4ac-49d8-9355-2190f0314ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -228,7 +228,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "does not exist."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='454bdd3d-040f-4147-b1f6-f24110704ae7'"
+            echo "GUID=='0a589458-b5a8-488d-9155-2190f0314ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -247,7 +247,7 @@ func_mmmv_assert_file_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "exists, but a file or a symlink to a file is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='a3873738-6d2c-4639-94f6-f24110704ae7'"
+            echo "GUID=='26f5f891-48d3-43e3-b255-2190f0314ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -266,7 +266,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
         echo ""
         echo "The code that calls this function is flawed."
         echo "This function requires 2 parameters: S_FP, S_GUID"
-        echo "GUID=='15d13a53-c059-4d51-92f6-f24110704ae7'"
+        echo "GUID=='b33ce212-99c5-41c9-9155-2190f0314ae7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -283,7 +283,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
             echo "points to a broken symlink, but a folder "
             echo "or a symlink to a folder is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='2fe53975-7720-453f-b2f6-f24110704ae7'"
+            echo "GUID=='c662a9ac-6f40-48a7-b355-2190f0314ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -296,7 +296,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "does not exist."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='34d16c18-a2e6-43ae-81f6-f24110704ae7'"
+            echo "GUID=='b614f94c-695f-496e-b355-2190f0314ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -315,7 +315,7 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
             echo ""
             echo "exists, but a folder is expected."
             echo "GUID==\"$S_GUID\""
-            echo "GUID=='17e66af1-00a5-4b0d-95f6-f24110704ae7'"
+            echo "GUID=='c86ae23c-d5c4-463e-9245-2190f0314ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -324,6 +324,58 @@ func_mmmv_assert_folder_exists_t1() {  # S_FP, S_GUID
     fi
 } # func_mmmv_assert_folder_exists_t1
 
+#--------------------------------------------------------------------------
+
+func_initialise_if_needed_and_possible_MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1(){
+    if [ "$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1" == "" ]; then
+        if [ "$SB_BC_EXISTS_ON_PATH" == "" ]; then
+            SB_BC_EXISTS_ON_PATH="f"
+            if [ "`which bc 2> /dev/null`" != "" ]; then
+                SB_BC_EXISTS_ON_PATH="t"
+            fi
+        fi
+        if [ "$SB_TR_EXISTS_ON_PATH" == "" ]; then
+            SB_TR_EXISTS_ON_PATH="f"
+            if [ "`which tr 2> /dev/null`" != "" ]; then
+                SB_TR_EXISTS_ON_PATH="t"
+            fi
+        fi
+        if [ "$SB_BC_EXISTS_ON_PATH" == "t" ]; then
+            if [ "$SB_TR_EXISTS_ON_PATH" == "t" ]; then
+                if [ "`which mmmv_hardwarethreadcount_t1 2> /dev/null`" != "" ]; then
+                    S_TMP_0="`mmmv_hardwarethreadcount_t1 `"
+                    #------------------------------------------------------
+                    # The line:
+                    #     echo " 4-1 " | bc | tr -d '\n'
+                    # works on both, FreeBSD and Linux.
+                    #------------------------------------------------------
+                    S_TMP_1="`echo \" $S_TMP_0-1 \" | bc | tr -d '\\n' `"
+                    MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1="$S_TMP_1"
+                fi
+                #----------------------------------------------------------
+            fi
+        fi
+    fi
+} # func_initialise_if_needed_and_possible_MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1
+func_initialise_if_needed_and_possible_MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1
+
+#--------------------------------------------------------------------------
+
+func_initialize_CFLAGS_and_CXXFLAGS_if_not_inited(){
+    local S_DEFAULT_VALUE=" -march=native -mtune=native -ftree-vectorize -O3 "
+    if [ "$CFLAGS" == "" ]; then
+        export CFLAGS="$S_DEFAULT_VALUE"
+    fi
+    if [ "$CXXFLAGS" == "" ]; then
+        export CXXFLAGS="$S_DEFAULT_VALUE"
+    fi
+} # func_initialize_CFLAGS_and_CXXFLAGS_if_not_inited
+func_initialize_CFLAGS_and_CXXFLAGS_if_not_inited
+
+#--------------------------------------------------------------------------
+if [ "$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1" != "" ]; then
+    export MAKEFLAGS=" -j$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1"
+fi
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install(){
@@ -346,11 +398,11 @@ func_mmmv_exit_if_not_on_path_t2 "ruby"
 
 if [ "$GEM_HOME" == "" ]; then
     func_mmmv_exc_exit_with_an_error_t2 \
-        "f4671c2e-6c5c-4d4a-a307-f24110704ae7" \
+        "1102fb45-dc8c-4c14-9d55-2190f0314ae7" \
         "The environment variable GEM_HOME is not set."
 else
     func_mmmv_assert_folder_exists_t1 \
-        "$GEM_HOME" "9e4a51e5-944a-41ea-a507-f24110704ae7"
+        "$GEM_HOME" "9d2c605f-846c-44e6-a355-2190f0314ae7"
 fi
 
 #--------------------------------------------------------------------------
@@ -379,36 +431,36 @@ func_angervaks_print_help_msg_t1() {
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "ffi" \
-    "1ea84324-56f8-4f66-b907-f24110704ae7"
+    "05d53025-a2dd-4140-a355-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 func_angervaks_gem_install "hdf5 --version 0.3.5" \
-    "7eb07d3d-2d85-467d-a4f6-f24110704ae7"
+    "5718e719-bfeb-4068-b255-2190f0314ae7"
 
 func_angervaks_gem_install "hdf5" \
-    "19e41891-10ba-4f2f-bff6-f24110704ae7"
+    "125573b1-afcd-4d7a-b255-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 func_angervaks_gem_install "json --version 2.2.0" \
-    "6db49d2c-f766-43b2-b5f6-f24110704ae7"
+    "4c484ec2-bf92-4783-9155-2190f0314ae7"
 
 func_angervaks_gem_install "json" \
-    "36a1bf30-5c49-42b1-95f6-f24110704ae7"
+    "242c3da9-9c09-4d13-9255-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 func_angervaks_gem_install "narray --version 0.6.1.2" \
-    "7183a949-6933-486b-83f6-f24110704ae7"
+    "c4519a30-f181-46d5-b355-2190f0314ae7"
 
 func_angervaks_gem_install "narray" \
-    "61bb4d42-f7c6-45b1-a1f6-f24110704ae7"
+    "2fde933d-cfc1-4015-8255-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "rdf" \
-    "8ad4f900-6829-4339-bcf6-f24110704ae7"
+    "31246175-0ffc-4e74-b455-2190f0314ae7"
 
 func_angervaks_gem_install "test-unit" \
-    "10c94f44-9d43-4a78-a2f6-f24110704ae7"
+    "4ab04231-c609-4ca0-b455-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::::::::::filesystem::related::gems:::::::::::::::::::::::::::
@@ -419,7 +471,7 @@ func_angervaks_gem_install "test-unit" \
 # still usable after it is thrown out of the Ruby stdlib:
 #     https://github.com/ruby/stringio
 func_angervaks_gem_install "stringio" \
-    "423cba55-5aca-4538-84f6-f24110704ae7"
+    "f3e15a3a-a498-485a-8355-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::::::::File::format::related::gems:::::::::::::::::::::::::::
@@ -433,7 +485,7 @@ func_angervaks_gem_install "stringio" \
 # https://www.gfd-dennou.org/arch/ruby/products/ruby-netcdf/
 #
 func_angervaks_gem_install "ruby-netcdf" \
-    "4af671ef-8ba9-4a7e-83f6-f24110704ae7"
+    "5a8cc51f-bffe-49f1-a555-2190f0314ae7"
 # A Linux command line tool for viewing the structure of a NetCDF file:
 #
 #     ncdump -h the_data.nc
@@ -444,17 +496,17 @@ func_angervaks_gem_install "ruby-netcdf" \
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "kibuvits_ruby_library_krl171bt4_" \
-    "50141425-3dc0-4669-85f6-f24110704ae7"
+    "15863c29-2f37-4dd8-a255-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::::::::::Encoding::related::gems:::::::::::::::::::::::::::::
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "cgi" \
-    "0ca9182e-7107-45f5-b1f6-f24110704ae7"
+    "fd3020f0-213a-4ea2-9c45-2190f0314ae7"
 
 func_angervaks_gem_install "uri" \
-    "74928b4d-f885-4f91-95f6-f24110704ae7"
+    "cd0f0e4a-1464-4b75-9445-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::Plotting::and::Mathematics::related::gems:::::::::::::::::::
@@ -463,59 +515,59 @@ func_angervaks_gem_install "uri" \
 # http://sciruby.com/docs/
 # https://github.com/clbustos/distribution
 func_angervaks_gem_install "distribution" \
-    "f510fcc4-1994-4e65-84f6-f24110704ae7"
+    "672e6753-7f70-4434-9445-2190f0314ae7"
 
 func_angervaks_gem_install "graphviz" \
-    "122511d2-cf6c-4439-a4f6-f24110704ae7"
+    "8095e520-8563-42d4-a145-2190f0314ae7"
 
 # http://sciruby.com/docs/
 # https://github.com/clbustos/integration
 func_angervaks_gem_install "integration" \
-    "253e2be8-ab9d-4d3b-b2f6-f24110704ae7"
+    "3d853c13-e514-4b39-a445-2190f0314ae7"
 
 # miniKanren is a form of logic programming.
 # http://minikanren.org/
 func_angervaks_gem_install "micro_kanren" \
-    "7f840c55-f0c6-430b-95f6-f24110704ae7"
+    "1c712950-75d7-4b12-9245-2190f0314ae7"
 
 # http://sciruby.com/docs/
 # https://github.com/clbustos/minimization
 func_angervaks_gem_install "minimization" \
-    "29c9bb44-8848-4c24-83f6-f24110704ae7"
+    "1acf454b-fcdc-474a-b445-2190f0314ae7"
 
 #--------------------
 # http://sciruby.com/docs/
 # https://github.com/SciRuby/nmatrix/wiki/Installation
 # Unfortunately the
 #     func_angervaks_gem_install "nmatrix" \
-#         "a595499e-fdf6-48b7-86f6-f24110704ae7"
+#         "6f01ca92-9815-4c4b-8445-2190f0314ae7"
 # tends to fail to compile its native part.
 # The nmatrix-Foo gems fail to compile on old openSUSE Linux.
 #
 #     # http://sciruby.com/docs/
 #     # https://github.com/SciRuby/nmatrix/wiki/Installation
 #     func_angervaks_gem_install "nmatrix-atlas" \
-#         "a6b5ac29-68a3-436b-a2f6-f24110704ae7"
+#         "4697b5b4-f884-40cc-ba45-2190f0314ae7"
 #
 #     # http://sciruby.com/docs/
 #     # https://github.com/SciRuby/nmatrix/wiki/Installation
 #     func_angervaks_gem_install "nmatrix-lapacke" \
-#         "77c14c34-92e4-4e6c-a5f6-f24110704ae7"
+#         "42053821-4674-43ea-b545-2190f0314ae7"
 #--------------------
 
 # http://sciruby.com/docs/
 # https://github.com/zuhao/plotrb
 func_angervaks_gem_install "plotrb" \
-    "bdd69419-47b0-475d-a1e6-f24110704ae7"
+    "590f68d1-6d57-4e66-8245-2190f0314ae7"
 
 # http://sciruby.com/docs/
 # https://github.com/clbustos/statsample
 func_angervaks_gem_install "statsample" \
-    "6dd4941a-7718-4d91-a3e6-f24110704ae7"
+    "93c5021c-edfb-4239-9145-2190f0314ae7"
 
 # https://rubygems.org/gems/statistics2
 func_angervaks_gem_install "statistics2" \
-    "47061594-1732-4921-a2e6-f24110704ae7"
+    "2556d32c-b19f-45bf-8245-2190f0314ae7"
 
 # https://github.com/red-data-tools/YouPlot
 # Bash command line example:
@@ -524,44 +576,44 @@ func_angervaks_gem_install "statistics2" \
 #      uplot scatter -H -d, -t IRIS -w 70 -h 20 --xlim -10,20  --ylim -10,30  --title "This is a title"
 #
 func_angervaks_gem_install "youplot" \
-    "f9e8ef12-aacc-42f8-b5e6-f24110704ae7"
+    "16b92a62-82a6-454d-ac45-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::::::::::::Ruby::related::gems:::::::::::::::::::::::::::::::
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "bundler" \
-    "48e4f9d2-9b03-42ae-8ce6-f24110704ae7"
+    "fd37d64d-1a69-4b42-9345-2190f0314ae7"
 
 func_angervaks_gem_install "geminabox" \
-    "df74b826-92af-49f4-a5e6-f24110704ae7"
+    "a133be99-1aa9-4540-8345-2190f0314ae7"
 
 func_angervaks_gem_install "gemirro" \
-    "ccd2e214-77d8-4cf4-91e6-f24110704ae7"
+    "05f21d12-e4fe-4b77-a245-2190f0314ae7"
 
 func_angervaks_gem_install "gemstash" \
-    "3a41861f-ee7c-417d-b2e6-f24110704ae7"
+    "c379a746-9a2b-4316-b245-2190f0314ae7"
 
 func_angervaks_gem_install "iruby" \
-    "cd48373a-bef5-4000-a2e6-f24110704ae7"
+    "54a02f62-ab0f-4b34-af45-2190f0314ae7"
 
 func_angervaks_gem_install "rake"  \
-    "ba171fe7-2638-4fb0-b2e6-f24110704ae7"
+    "0cbcdc5b-4364-4827-a145-2190f0314ae7"
 
 func_angervaks_gem_install "rdoc" \
-    "97a1ce2a-cd10-4070-85e6-f24110704ae7"
+    "9e2cf129-53b7-48f7-a245-2190f0314ae7"
 
 func_angervaks_gem_install "rspec" \
-    "2135be68-3cd0-4d6a-8ae6-f24110704ae7"
+    "e307e837-34ba-44ac-9445-2190f0314ae7"
 
 # https://sorbet.org/
 # https://github.com/sorbet/
 # Dependencies on Debian like operating systems:
 #     apt-get install bazel autoconf coreutils parallel
 func_angervaks_gem_install "sorbet" \
-    "34c5b2d2-1184-4cef-93e6-f24110704ae7"
+    "23bdefa5-475d-41cb-9345-2190f0314ae7"
 func_angervaks_gem_install "sorbet-runtime" \
-    "630baa1b-bddf-4ca2-a3e6-f24110704ae7"
+    "3308fa16-ae02-4e67-b135-2190f0314ae7"
 
 # https://github.com/Shopify/tapioca
 #    ------------citation----start---------------------
@@ -573,18 +625,18 @@ func_angervaks_gem_install "sorbet-runtime" \
 #    gradual typing to your application.
 #    ------------citation----end-----------------------
 func_angervaks_gem_install "tapioca" \
-    "2fe57c23-a5b2-4eaf-a1e6-f24110704ae7"
+    "4f946f94-e6cc-4fab-b735-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::::::::::::GUI/UI::related::gems:::::::::::::::::::::::::::::
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "glimmer-dsl-libui" \
-    "1d31836c-bf44-4481-91e6-f24110704ae7"
+    "5d2b3443-030f-4ac0-9435-2190f0314ae7"
 
 # https://github.com/mcorino/wxRuby3
 func_angervaks_gem_install "wxruby3" \
-    "7a90d110-1723-4761-91e6-f24110704ae7"
+    "50aebb38-cf9e-40de-a435-2190f0314ae7"
 
 # The Ruby2D
 #     https://www.ruby2d.com/
@@ -595,9 +647,9 @@ func_angervaks_gem_install "wxruby3" \
 # package collection, because the SDL2 has a lot of
 # dependencies. On Debian-like operating systems the
 # installation command MIGHT be:
-#     apt-get install libsdl2-*
+#     apt-get install  build-essential  libsdl2-dev  libsdl2-image-dev   libsdl2-mixer-dev  libsdl2-ttf-dev
 func_angervaks_gem_install "ruby2d" \
-    "b10ad24b-436e-4d69-b4e6-f24110704ae7"
+    "6b4a0639-9a33-4dc8-9535-2190f0314ae7"
 
 
 #----------------------------------------------------------------
@@ -608,10 +660,10 @@ func_angervaks_gem_install "ruby2d" \
 #    graphical user interfaces for their Ruby scripts.
 #    ------------------citation----end---------------------------
 func_angervaks_gem_install "gtk4" \
-    "2107d2d1-c8bb-4604-b1e6-f24110704ae7"
+    "25900714-fece-45b1-9335-2190f0314ae7"
 
 func_angervaks_gem_install "gtk3" \
-    "586a8271-408f-4557-b1e6-f24110704ae7"
+    "07189833-78ce-4f5e-b535-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #:::::::::::::::::::::::gnuplot::related::gems:::::::::::::::::::::::::::::
@@ -619,7 +671,7 @@ func_angervaks_gem_install "gtk3" \
 
 # https://github.com/rdp/ruby_gnuplot
 func_angervaks_gem_install "gnuplot" \
-    "416d6964-3953-4338-99e6-f24110704ae7"
+    "4b986e62-fd16-45ab-a335-2190f0314ae7"
 #-----------------------------------------
 # 2025_03 era code examples:
 #
@@ -653,59 +705,59 @@ func_angervaks_gem_install "gnuplot" \
 
 # https://github.com/ruby-numo/numo-gnuplot
 func_angervaks_gem_install "numo-gnuplot" \
-    "ce7ffe19-c72c-41c7-b1e6-f24110704ae7"
+    "6edadb2b-e9a8-433f-b435-2190f0314ae7"
 
 func_angervaks_gem_install "awesome_print" \
-    "178bbc94-ceb7-4979-a5e6-f24110704ae7"
+    "71066536-d74a-40a8-a235-2190f0314ae7"
 
 func_angervaks_gem_install "cztop" \
-    "02cf82c1-8dbf-4750-94e6-f24110704ae7"
+    "a1daf0fe-b70d-4792-b735-2190f0314ae7"
 
 func_angervaks_gem_install "nyaplot" \
-    "e4898657-f9a6-4df8-95e6-f24110704ae7"
+    "76919918-da5b-448a-ab35-2190f0314ae7"
 
 func_angervaks_gem_install "pry" \
-    "59c3aa5d-1c45-46ad-a2e6-f24110704ae7"
+    "98024f5b-efeb-4d45-a435-2190f0314ae7"
 
 func_angervaks_gem_install "pry-doc" \
-    "d4f38011-184e-4580-a1e6-f24110704ae7"
+    "57c97011-d8e8-4d57-b535-2190f0314ae7"
 
 # http://sciruby.com/docs/
 # https://github.com/clbustos/rubyvis
 func_angervaks_gem_install "rubyvis" \
-    "3f7b4b44-6f16-4f0d-91e6-f24110704ae7"
+    "95489b55-c61f-4418-b435-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #:::::::::::::::network::and::other::type::of::connectivity::::::::::::::::
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "net" \
-    "4c940551-76dd-47fb-a1e6-f24110704ae7"
+    "7222bd58-2590-402c-a535-2190f0314ae7"
 
 func_angervaks_gem_install "net-ssh" \
-    "19cab911-5bed-4ea6-a5e6-f24110704ae7"
+    "55eb354b-b792-46c2-a235-2190f0314ae7"
 
 func_angervaks_gem_install "mail" \
-    "5e784235-9f11-410a-81d6-f24110704ae7"
+    "842c8e4a-c48c-40db-b435-2190f0314ae7"
 
 func_angervaks_gem_install "bitmessage" \
-    "56631415-44fd-4869-b3d6-f24110704ae7"
+    "8437e02c-473d-4318-a835-2190f0314ae7"
 
 # RPC(Remote Procedure Call) tools for multiple languages, including Ruby
 #     https://grpc.io/
 #     https://github.com/grpc/grpc
 func_angervaks_gem_install "grpc" \
-    "5d86ae2f-eccf-4835-95d6-f24110704ae7"
+    "42820613-0147-48b6-8535-2190f0314ae7"
 
 # Allows plain Ruby to load C DLLs.
 # https://github.com/ffi/ffi
 func_angervaks_gem_install "ffi" \
-    "b72f1635-36e6-4347-82d6-f24110704ae7"
+    "260cd081-9c22-495c-8135-2190f0314ae7"
 
 # The rbczmq gem installation script fails to build its extensions on
 # Linux nameofthemachine  4.19.0-6-amd64 #1 SMP Debian 4.19.67-2+deb10u2 (2019-11-11) x86_64 GNU/Linux
 #func_angervaks_gem_install "rbczmq" \
-#    "6d73e226-ae62-4caf-b2d6-f24110704ae7"
+#    "3cd5cdd3-c8ed-4d30-8e35-2190f0314ae7"
 #
 # The "zmq" gem from
 #     https://zeromq.org/languages/ruby/
@@ -716,7 +768,7 @@ func_angervaks_gem_install "ffi" \
 # for ("ruby -v")
 # ruby 3.4.1 (2025-05-18) +PRISM [x86_64-linux]
 #func_angervaks_gem_install "zmq" \
-#    "7da4e535-62cf-4692-81d6-f24110704ae7"
+#    "4ec45c51-3fd5-46f4-b335-2190f0314ae7"
 #
 # However, the
 #     https://github.com/chuckremes/ffi-rzmq
@@ -739,25 +791,34 @@ func_angervaks_gem_install "ffi" \
 #     #------untested--code--citation--end-----
 #
 func_angervaks_gem_install "ffi-rzmq" \
-    "0b89b928-2c3f-4241-a4d6-f24110704ae7"
+    "8cb5a02a-1b12-4c9a-9235-2190f0314ae7"
+
+if [ "`uname -a | grep -i linux`" != "" ]; then
+    # 2026_04_19 citation of ChatGPT chatbot:
+    #     "D-Bus (Desktop Bus) is an inter-process
+    #     communication (IPC) system used mainly on Linux
+    #     and Unix-like systems."
+    func_angervaks_gem_install "ruby-dbus" \
+        "a4c6542a-f694-457a-8225-2190f0314ae7"
+fi
 
 #--------------------------------------------------------------------------
 #:::::::::::::::::technical::documentation::geneneration:::::::::::::::::::
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "jekyll" \
-    "a4965491-72e0-4021-b2d6-f24110704ae7"
+    "2a9b6ce3-11e1-49c2-8625-2190f0314ae7"
 
 # Fails to compile/install on
 # Linux hoidla01 4.19.0-10-amd64 #1 SMP Debian 4.19.132-1 (2020-07-24) x86_64 GNU/Linux
 #func_angervaks_gem_install "gallium" \
-#    "fe2b10ed-8f58-4f66-a4d6-f24110704ae7"
+#    "ab0d263e-f707-4198-a125-2190f0314ae7"
 
 # https://asciidoctor.org/
 # https://github.com/asciidoctor
 # https://rubygems.org/gems/asciidoctor
 func_angervaks_gem_install "asciidoctor" \
-    "1ee07a28-d386-4c81-b1d6-f24110704ae7"
+    "2177c761-981a-4272-9425-2190f0314ae7"
 
 # https://github.com/asciidoctor/kramdown-asciidoc
 # Usage example:
@@ -765,14 +826,14 @@ func_angervaks_gem_install "asciidoctor" \
 #     kramdoc -o result.adoc sample2.md
 #     kramdoc -o - sample3.md  # supposedly outputs to the stdout
 func_angervaks_gem_install "kramdown-asciidoc" \
-    "57fe2255-fbf4-43ff-a8d6-f24110704ae7"
+    "2ea77d53-156e-4020-8325-2190f0314ae7"
 
 # https://github.com/gollum/gollum/
 # Supposedly the "gollum" is the GitHub official wiki rendering engine.
 # As of 2025_11_xx it has also been packaged as Java WAR file:
 # https://github.com/gollum/gollum/releases/download/v6.1.0/gollum.war
 # func_angervaks_gem_install "gollum" \
-#     "a5cd2f27-45c6-459f-b5d6-f24110704ae7"
+#     "87ebf244-9d69-4340-b125-2190f0314ae7"
 # # The abouve 2 lines have been commented out, because the
 # gem form of "gollum" is unstable, flimsy.
 
@@ -781,7 +842,7 @@ func_angervaks_gem_install "kramdown-asciidoc" \
 #--------------------------------------------------------------------------
 
 func_angervaks_gem_install "bond" \
-    "d3e5564e-f7da-4ccd-93d6-f24110704ae7"
+    "8c86a21f-e684-4134-8125-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #:::::::::::::::::::::::::::::::::::IDE::::::::::::::::::::::::::::::::::::
@@ -796,7 +857,7 @@ func_angervaks_gem_install "bond" \
 #
 
 func_angervaks_gem_install "solargraph" \
-    "64abd6ce-b17f-4e4b-bcd6-f24110704ae7"
+    "37eb49b2-2cd1-417d-9325-2190f0314ae7"
     # The solagraph.org is about a Ruby "lanuage server".
     # The idea is that some basic support for a programming
     # language can be added to multiple IDEs at once by
@@ -846,34 +907,34 @@ func_angervaks_gem_install "solargraph" \
 #--------------------------------------------------------------------------
 
 # func_angervaks_gem_install "couchdb" \
-#     "aa6d202f-78fd-41fb-83d6-f24110704ae7"
+#     "0d13815c-f734-4d21-a325-2190f0314ae7"
 
 # DBF gem is just file format support, but
 # it's closelyrelated to databases.
 func_angervaks_gem_install "dbf" \
-    "984e5ba7-6ea3-43f3-91d6-f24110704ae7"
+    "379764ee-e3e5-47b9-a225-2190f0314ae7"
 
 # The mysql2 gem fail to compile on old openSUSE Linux.
 # func_angervaks_gem_install "mysql2" \
-#     "671a8441-ab79-4057-92d6-f24110704ae7"
+#     "34453f68-249c-45c4-bb25-2190f0314ae7"
 
 # func_angervaks_gem_install "mongodb" \
-#     "332ac524-5393-4895-82d6-f24110704ae7"
+#     "cf299436-5d94-4a31-8125-2190f0314ae7"
 
 # func_angervaks_gem_install "neo4j" \
-#     "b015be3a-9053-4e21-a2d6-f24110704ae7"
+#     "d2d52b38-87f7-4585-8225-2190f0314ae7"
 
 # func_angervaks_gem_install "postgresql" \
-#     "c66e1036-9992-4ea2-83d6-f24110704ae7"
+#     "59d0fa15-49c0-4161-9425-2190f0314ae7"
 
 # func_angervaks_gem_install "rethinkdb" \
-#     "3365e002-d60b-4b64-a9d6-f24110704ae7"
+#     "5024de63-2c7c-47e1-8325-2190f0314ae7"
 
 # func_angervaks_gem_install "sqlite3 --version 1.4.1" \
-#     "28d57b5d-0609-4f25-a1d6-f24110704ae7"
+#     "2ca030b1-f4ea-43d2-a125-2190f0314ae7"
 
 func_angervaks_gem_install "sqlite3" \
-    "34ca2d8f-4ec7-4365-bad6-f24110704ae7"
+    "a1dc094a-03cb-4505-b125-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::Classifiers::and::Artificial::Intelligence::related::gems:::::::::::
@@ -881,15 +942,15 @@ func_angervaks_gem_install "sqlite3" \
 
 # https://github.com/jedld/tensor_stream
 func_angervaks_gem_install "tensor_stream" \
-    "ff38c91f-7c2d-47d4-b1d6-f24110704ae7"
+    "1d06ed54-07b6-42ae-8525-2190f0314ae7"
 
 # https://github.com/irfansharif/cerebrum
 func_angervaks_gem_install "cerebrum" \
-    "21f23ab2-ca78-48ca-b3d6-f24110704ae7"
+    "81a61b18-58d3-4e3c-8425-2190f0314ae7"
 
 # https://github.com/tangledpath/ruby-fann
 # func_angervaks_gem_install "ruby-fann" \
-#     "2ad118a3-ed79-47cf-b5d6-f24110704ae7"
+#     "d695aa2b-6937-4adb-b225-2190f0314ae7"
 # is a Ruby wrapper to the LGPL licensed
 # Fast Artificial Neural Network (FANN) Library
 # https://github.com/libfann/fann
@@ -910,24 +971,24 @@ func_angervaks_gem_install "cerebrum" \
 #     https://www.youtube.com/watch?v=W8zglFFFRMM
 #
 func_angervaks_gem_install "roda" \
-    "9c1e2a54-2851-4eee-b5d6-f24110704ae7"
+    "406f4fc4-fbde-411c-8225-2190f0314ae7"
 
 # Agoo is a HTTP server for Ruby web applications.
 #     https://github.com/ohler55/agoo
 func_angervaks_gem_install "agoo" \
-    "308f1212-1d95-44d6-b5d6-f24110704ae7"
+    "c411114e-3b2c-4e0e-b325-2190f0314ae7"
 
 # Thin is a HTTP server for Ruby web applications.
 #     https://github.com/macournoyer/thin
 # func_angervaks_gem_install "thin" \
-#     "5d44fe26-471f-496f-81c6-f24110704ae7"
+#     "18943705-2776-4f6c-9f25-2190f0314ae7"
 # # The above 2 lines are outcommented, because
 # there was some sort of collision between the "thin" and the "gollum".
 
 # Thin is a HTTP server for Ruby web applications.
 #     https://github.com/boazsegev/iodine
 func_angervaks_gem_install "iodine" \
-    "b2c50814-515f-4541-a5c6-f24110704ae7"
+    "b65e1d3a-824a-46f6-9325-2190f0314ae7"
 
 #--------------------------------------------------------------------------
 #::::::::::::::::::::::script_data_section:::end:::::::::::::::::::::::::::
@@ -935,5 +996,5 @@ func_angervaks_gem_install "iodine" \
 cd "$S_FP_ORIG"
 exit 0 # no errors occurred
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="2aa70c33-1810-431c-81c6-f24110704ae7"
+# S_VERSION_OF_THIS_FILE="644d1f58-9fa9-4386-8215-2190f0314ae7"
 #==========================================================================

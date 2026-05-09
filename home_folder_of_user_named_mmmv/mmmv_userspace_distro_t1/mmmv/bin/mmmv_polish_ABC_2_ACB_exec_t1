@@ -23,7 +23,7 @@ DESCRIPTION
 # that it takes to start the Ruby interpreter, but Ruby
 # handles strings properly and Ruby behaves the same way on both,
 # Linux and BSD. It takes less human work to implement the
-# functionality of this script in Ruby than it takes to create 
+# functionality of this script in Ruby than it takes to create
 # a proper console tool with proper UTF-8 support in C/C++.
 #--------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ if i_0!=3
    s_err<<"The "+s_2+"\e[31m requires exactly 3 arguments\e[39m.\n"
    s_err<<s_general_idea
    puts(s_err)
-   raise(Exception.new("GUID=='943b392e-eee1-4c02-b2ab-200300a188e7'\n"))
+   raise(Exception.new("GUID=='7243139c-b478-42a4-be14-822120905ae7'\n"))
    #---------------------------------------------------------
 end # if
 
@@ -66,7 +66,7 @@ s_cmd<<" "
 #     https://stackoverflow.com/questions/1250079/how-to-escape-single-quotes-within-single-quoted-strings
 #     archival copy: https://archive.ph/eJU1w
 #
-# The test Bash code line 
+# The test Bash code line
 #
 #    echo '[`whoami `'"'"'$HOME]'
 #
@@ -92,19 +92,19 @@ s_cmd.gsub(/[']/,"'\"'\"'")+
 #
 #----------------------------------------
 i_exit_code=1 # error occurred
-x=system(s_cmd_1) 
+x=system(s_cmd_1)
 #system(s_cmd) # executes sh, not bash
 if x!=nil
-    ob_process_status=$?
-    x1=ob_process_status.exitstatus
-    i_exit_code=x1 if x1!=nil
+   ob_process_status=$?
+   x1=ob_process_status.exitstatus
+   i_exit_code=x1 if x1!=nil
 end # if
 exit i_exit_code
 #--------------------------------------------------------------------------
 # A Bash testline:
 #
-#     ./mmmv_polish_ABC_2_ACB_exec_t1 " ls " " whoami ; echo '\"\n\"'; echo \"\$HOME\" "  " ./ ; " 
+#     ./mmmv_polish_ABC_2_ACB_exec_t1 " ls " " whoami ; echo '\"\n\"'; echo \"\$HOME\" "  " ./ ; "
 #
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="1d87c52d-0ab7-49ff-84ab-200300a188e7"
+# S_VERSION_OF_THIS_FILE="4202992a-3939-4e02-be34-822120905ae7"
 #==========================================================================

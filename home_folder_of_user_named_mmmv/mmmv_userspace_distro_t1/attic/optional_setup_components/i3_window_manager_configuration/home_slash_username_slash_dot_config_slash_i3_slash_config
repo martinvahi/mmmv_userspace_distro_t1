@@ -107,13 +107,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 #--------------------------------------------------------------------------
 # Window closing: Alt+F4
-    bindsym Mod1+F4 kill
+    bindsym $Alt+F4 kill
 
 # start dmenu (a program launcher)
 #bindsym $Win+d exec --no-startup-id dmenu_run
 #bindsym $Win+s exec --no-startup-id dmenu_run
 #bindsym $Win+s exec --no-startup-id j4-dmenu-desktop
 bindsym $Win+r exec --no-startup-id "rofi -show run "
+bindsym $Win+w exec --no-startup-id "rofi -show window "
 
 # A more modern dmenu replacement is rofi:
 # bindcode $Win+40 exec "rofi -modi drun,run -show drun"
@@ -163,8 +164,8 @@ bindsym $Win+Shift+Right move right
 
 #--------------------------------------------------------------------------
 # The Windows-like Alt-Tab behaviour.
-bindsym Mod1+Tab focus next
-bindsym Mod1+Shift+Tab focus prev
+bindsym $Alt+Tab focus next
+bindsym $Alt+Shift+Tab focus prev
 
 # toggle tiling / floating
 #bindsym $Win+Shift+space floating toggle
@@ -302,6 +303,7 @@ mode "resize_window" {
 assign [class="Chromium"] 8
 assign [class="Falkon"] 8
 assign [class="FileZilla"] 6
+assign [class="thunderbird"] 7
 assign [class="qutebrowser"] 8
 #--------------------------------------------------------------------------
 # Some very subjective, computer specific, choices that must be updated
@@ -310,20 +312,32 @@ assign [class="qutebrowser"] 8
 # <INCOMPLETE>,
 
 mode "run_application" {
-    bindsym $Win+a exec /usr/bin/nice -n 2 /home/mmmv/applications/FOX_Toolkit/v_1_7_84/bin/adie
+    bindsym $Win+a       exec /usr/bin/nice -n 2 /home/mmmv/applications/FOX_Toolkit/v_1_7_84/bin/adie
+    bindsym $Win+Shift+a exec /usr/bin/nice -n 2 /home/mmmv/applications/Geany/v_2_0/bin/geany
+
     bindsym $Win+f exec /usr/bin/filezilla
+
+    bindsym $Win+c exec /usr/bin/nice -n 2 /usr/bin/gnome-characters
 
     bindsym $Win+w exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=8192M -p CPUQuota=300%  /usr/bin/nice -n  7  /usr/bin/chromium
     bindsym $Win+Shift+w exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  7  /usr/bin/falkon
 
     bindsym $Win+d exec /usr/bin/nice -n 4 /usr/bin/dia
+    bindsym $Win+Shift+d exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  7  /usr/bin/flatpak  --user --filesystem=$HOME/tmp_ run  org.gaphor.Gaphor
+
     bindsym $Win+g exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=6144M -p CPUQuota=300%  /usr/bin/nice -n  7  /usr/bin/flatpak  --user --filesystem=$HOME/tmp_ run org.gimp.GIMP
-    bindsym $Win+Shift+g exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  7  /usr/bin/flatpak  --user --filesystem=$HOME/tmp_ run  org.gaphor.Gaphor
 
     bindsym $Win+j exec /usr/bin/systemd-run --user --scope -p MemoryLimit=4096M -p CPUQuota=400%  /usr/bin/nice -n  5  /home/ts3b/m_local/bin_p_originaalid/www_jetbrains_com/paigaldatult/PhpStorm/2016_01_05/PhpStorm-143.1184.87/bin/mmmv_phpstorm.sh
 
+    # Email, "m" like "mail".
+    bindsym $Win+m exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  7  /usr/bin/thunderbird
+    # "m" like "Markdown"
+    bindsym $Win+Shift+m exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  2  /usr/bin/flatpak  --user --filesystem=$HOME/tmp_ run com.zettlr.Zettlr
+
     # "r" like "radio" at the phrase "internet radio"
     bindsym $Win+r exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  2  /usr/bin/flatpak  --user --filesystem=$HOME/tmp_ run de.haeckerfelix.Shortwave
+
+    bindsym $Win+x exec "/usr/bin/xkill "
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -335,91 +349,5 @@ bindsym $Win+e exec /usr/bin/nice -n 2 /home/mmmv/applications/DoubleCommander_f
 bindsym $Win+t exec /usr/bin/nice -n 2 /usr/bin/lxterminal
 
 #==========================================================================
-# Some very subjective and mmmv_userspace_distro_t1 specific
-# Bash code to be copy-paste-edited to $HOME/.bashrc,
-# as of 2026_04 $HOME/m_local/etc/_bashrc_optional_extra_01.bash
-#==========================================================================
-# S_FP_TMP_FOLDER="/tmp"
-# if [ "$MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K" != "" ]; then
-#     S_FP_TMP_FOLDER="$MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K"
-# fi
-# S_FP_FLAGFILES_FOR_ALL_USERS="$S_FP_TMP_FOLDER/flagfiles"
-# if [ ! -e "$S_FP_FLAGFILES_FOR_ALL_USERS" ]; then
-#     mkdir -p $S_FP_FLAGFILES_FOR_ALL_USERS
-#     sync ; wait
-#     chmod 1777 $S_FP_FLAGFILES_FOR_ALL_USERS
-#     sync ; wait
-# fi
-# S_FP_FLAGFILE_SB_XSETUP_COMPLETE="$S_FP_FLAGFILES_FOR_ALL_USERS/`whoami`_flagfile_mmmv_userspace_distro_t1_xsetup_complete_t1.txt"
-# if [ ! -e "$S_FP_FLAGFILE_SB_XSETUP_COMPLETE" ]; then
-#     if [ "$SB_OPERATINGSYSTEM_LINUX_WSL" == "f" ]; then
-#         if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID" == "f" ]; then
-#             if [ "$SB_OPERATINGSYSTEM_LINUX_ANDROID_TERMUX" == "f" ]; then
-#                 #----------------------------------------------------------
-#                 if [ "$SB_XSET_EXISTS_ON_PATH" == "t" ]; then
-#                     #------------------------------------------------------
-#                     # Sets the X11 built in screensaver
-#                     SI_NUMBER_OF_IDLING_SECONDS_TILL_SCREENSAVER_ACTIVATES="3600"
-#                     SI_SCREENSAVER_CYCLE_COUNT_BEFORE_LOCKING_SCREEN="0"
-#                     xset s \
-#                         $SI_NUMBER_OF_IDLING_SECONDS_TILL_SCREENSAVER_ACTIVATES \
-#                         $SI_SCREENSAVER_CYCLE_COUNT_BEFORE_LOCKING_SCREEN
-#                     # Existing values can be displayed by executing:
-#                     #     xset q
-#                     #------------------------------------------------------
-#                 fi
-#                 if [ "$SB_XSSLOCK_EXISTS_ON_PATH" == "t" ]; then
-#                     #------------------------------------------------------
-#                     # A comment from i3 window manager autogenerated config file:
-#                     # "xss-lock grabs a logind suspend inhibit lock and
-#                     # will use i3lock to lock the screen before suspend."
-#                     xss-lock --transfer-sleep-lock -- i3lock --nofork
-#                     # A command for locking the session:
-#                     #     loginctl lock-session
-#                     #------------------------------------------------------
-#                 fi
-#                 #----------------------------------------------------------
-#             fi
-#         fi
-#     fi
-#     wait ;
-#     echo "" >> $S_FP_FLAGFILE_SB_XSETUP_COMPLETE
-# fi
-# #--------------------------------------------------------------------------
-# if [ "$SB_SETXKBMAP_EXISTS_ON_PATH" == "t" ]; then
-#     #------------------------------------------------------
-#     # At least on some Linux distributions the
-#     setxkbmap -layout us,ee -option "grp:ctrl_shift_toggle"
-#     # makes Ctrl-Shift to toggle between 2 keybard layouts.
-#     # The version for AltGr is:
-#     #     setxkbmap -layout us,ee -option "grp:toggle"
-#     #------------------------------------------------------
-# fi
-# #--------------------------------------------------------------------------
-# S_FP_PREFIX="/home/ts3b/m_local/share/seadistusfaile/taustapildid/konverteeritud/konverteeritud_1280x1280/transport/monorail/"
-# S_FN="monorail_01_linnavaade_1280x1024.jpeg"
-# S_FP="$S_FP_PREFIX$S_FN"
-# if [ "$SB_XWALLPAPER_EXISTS_ON_PATH" == "t" ]; then
-#     if [ -e "$S_FP" ]; then
-#         if [ ! -d "$S_FP" ]; then
-#             xwallpaper --center $S_FP
-#         fi
-#     else
-#         func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 "$S_FP" \
-#             "26119626-b21c-466f-b56d-e28280a04ae7"
-#     fi
-# fi
-# #--------------------------------------------------------------------------
-# if [ "$SB_CONVERT_EXISTS_ON_PATH" == "t" ]; then
-#     if [ "$SB_SED_EXISTS_ON_PATH" == "t" ]; then
-#         # It's not placed among generally usable Bash aliases, because it
-#         # is an end user monitor size specific dirty hack alias. If it
-#         # weren't a dirty hack, then it would be way more difficult for
-#         # other people to read it, because the extra code would clutter
-#         # it up.
-#         alias mmmv_convert_image_to_bacground_image_with_framecolour_000000_1280x1024_t1="mmmv_polish_ABC_2_ACB_exec_t1 \"S_FP_INPUT_FILE_PATH=\\\"\"     \"\\\" ; SI_SCREEN_WIDTH=\\\"1280\\\"; SI_SCREEN_HEIGHT=\\\"1024\\\"; S_WxH=\\\"\\\$SI_SCREEN_WIDTH\\\"'x'\\\"\\\$SI_SCREEN_HEIGHT\\\" ; S_FP_OUTPUT_FILE_PATH=\\\"\\\`echo \\\$S_FP_INPUT_FILE_PATH | sed -e 's/\\\\([.][^.]\\\\+\\\\)\\\$/_'\\\$S_WxH'\\\\1/g' \\\`\\\" ; sync ; wait ; convert \\\"\\\$S_FP_INPUT_FILE_PATH\\\"  -resize \\\$S_WxH -background \\\"#000000\\\" -gravity center -extent \\\$S_WxH  \\\"\\\$S_FP_OUTPUT_FILE_PATH\\\"\" "
-#     fi
-# fi
-#==========================================================================
-# S_VERSION_OF_THIS_FILE="4f186615-895e-45a7-926d-e28280a04ae7"
+# S_VERSION_OF_THIS_FILE="41ad2691-3baa-43ea-bb75-036060905ae7"
 #==========================================================================

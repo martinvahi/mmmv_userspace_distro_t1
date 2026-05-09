@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+#==========================================================================
+# Initial author of this file: Martin.Vahi@softf1.com
+# This file is in public domain.
+# The following line is a spdx.org license label line:
+# SPDX-License-Identifier: 0BSD
+#==========================================================================
+
+s_general_idea=<<DESCRIPTION
+The general idea: ABCD  -->  A C D B
+
+    mmmv_polish_ABCD_2_A_C_D_B_t1  "diff"  "| grep 'fortune'"  "./file1.txt"  "./file2.txt"
+    # gives
+    diff ./file1.txt ./file2.txt | grep 'fortune'
+
+DESCRIPTION
+
+#--------------------------------------------------------------------------
+
+i_0=ARGV.size # ARGV.class == Array by the stdlib definition, hence no test here
+#puts ARGV.class.to_s
+#exit 1
+
+if i_0!=4
+   #---------------------------------------------------------
+   s_fn=__FILE__
+   s_0=s_fn.reverse
+   if s_0.index("/")!=nil
+      s_1=s_0[0..(s_0.index("/")-1)]
+   else
+      s_1=s_0[0..(-1)]
+   end # if
+   s_2=s_1.reverse
+   #---------------------------------------------------------
+   s_err="\n"
+   s_err<<"The "+s_2+"\e[31m requires exactly 4 arguments\e[39m.\n"
+   s_err<<s_general_idea
+   puts(s_err)
+   raise(Exception.new("GUID=='e34c3785-ed50-4028-86e2-c21120905ae7'\n"))
+   #---------------------------------------------------------
+end # if
+
+#--------------------------------------------------------------------------
+# Some comments about the string concatenation:
+# https://github.com/martinvahi/mmmv_notes/blob/main/mmmv_notes/phenomenon_scrutinization/string_concatenation/COMMENTS.txt
+# https://sourceforge.net/p/mmmv-notes/code/ci/master/tree/mmmv_notes/phenomenon_scrutinization/string_concatenation/COMMENTS.txt
+#----------------------------------------
+s_0=""
+s_0<<(""+ARGV[0].to_s)
+s_0<<(" "+ARGV[2].to_s)
+s_0<<(" "+ARGV[3].to_s)
+s_0<<(" "+ARGV[1].to_s)
+printf(s_0)
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="f3045346-dd32-438b-b3e2-c21120905ae7"
+#==========================================================================
