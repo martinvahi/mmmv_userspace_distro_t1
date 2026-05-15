@@ -24,7 +24,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         echo -e "\e[31mThe code that calls this function is flawed.\e[39m"
         echo "This function requires 2 parameters: S_FP, S_GUID_CANDIDATE"
         echo "and has an optional 3. parameter: SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE"
-        echo "GUID=='2cc80aa3-80fa-492d-af4c-018161104ae7'"
+        echo "GUID=='d508d854-10d0-4f79-b198-e0a350f05ae7'"
         echo ""
         #--------
         SB_VERIFICATION_FAILED="t"
@@ -44,7 +44,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo "Valid values are: \"t\", \"f\", \"\" ."
                     echo "\"\" defaults to \"t\"."
-                    echo "GUID=='4ce05f26-1e4c-48d6-b24c-018161104ae7'"
+                    echo "GUID=='20b53782-85fb-435e-a398-e0a350f05ae7'"
                     echo ""
                     #--------
                     SB_VERIFICATION_FAILED="t"
@@ -65,7 +65,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo -e "points to a\e[31m broken symlink\e[39m, but a file or"
                     echo "a symlink to a file is expected."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='8d46764a-5c5d-4cc8-a44c-018161104ae7'"
+                    echo "GUID=='138aea15-5606-4327-9498-e0a350f05ae7'"
                     echo ""
                 fi
                 #--------
@@ -79,7 +79,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "\e[31mdoes not exist\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='3102025a-eb67-4b0c-a14c-018161104ae7'"
+                    echo "GUID=='3cb361c4-7e1d-4499-9398-e0a350f05ae7'"
                     echo ""
                 fi
                 #--------
@@ -99,7 +99,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
                     echo ""
                     echo -e "exists, but a\e[31m file or a symlink to a file is expected\e[39m."
                     echo "GUID==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='417d3407-4c71-471c-ad4c-018161104ae7'"
+                    echo "GUID=='1afb4874-a328-4610-aa98-e0a350f05ae7'"
                     echo ""
                 fi
                 #--------
@@ -112,7 +112,7 @@ func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1() {  # S_FP, S_GUID_CAN
         if [ "$SB_VERIFICATION_FAILED" != "f" ]; then
             echo ""
             echo -e "\e[31mThe code of this Bash function is flawed.\e[39m"
-            echo "GUID=='52fa1fa4-7303-4b03-8b4c-018161104ae7'"
+            echo "GUID=='a875b419-1cb3-4947-b198-e0a350f05ae7'"
             echo ""
         fi
     fi
@@ -133,7 +133,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "but it is expected to be a GUID."
         echo "Aborting script."
-        echo "GUID=='4eb6a161-b7d1-41d5-924c-018161104ae7'"
+        echo "GUID=='2b9106bf-e332-4651-a498-e0a350f05ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -148,7 +148,7 @@ func_mmmv_assert_error_code_zero_t1(){
         echo ""
         echo "Something went wrong. Error code: $S_ERR_CODE"
         echo -e "\e[31mAborting script. \e[39m"
-        echo "GUID=='aa5fab3e-3e84-4e08-954c-018161104ae7'"
+        echo "GUID=='6097fb1a-a074-4787-a498-e0a350f05ae7'"
         echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         echo ""
         #--------
@@ -168,7 +168,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='1f65f310-0568-4e7d-a54c-018161104ae7'"
+        echo "GUID=='2ada5dc5-2701-4a1b-9e98-e0a350f05ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -187,12 +187,12 @@ func_install(){
     # local S_FP_PIP3_BASH="$S_FP_DIR/mmmv_pip3_install"
     # func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
     #     "$S_FP_PIP3_BASH" \
-    #     "340fe854-4274-437e-a24c-018161104ae7"
+    #     "2328a230-2a79-47b7-8198-e0a350f05ae7"
     #----------------------------------------------------------------------
     local S_CMD_NICE="nice -n 15 "
     $S_CMD_NICE pipx install --include-deps --force "$S_PACKETNAME"
     func_mmmv_assert_error_code_zero_t1 "$?" \
-        "c9a6b352-966b-44d9-b34c-018161104ae7"
+        "5530863d-ba01-40da-b298-e0a350f05ae7"
     #----------------------------------------------------------------------
 } # func_install
 
@@ -255,6 +255,8 @@ func_install uv
 # https://mesonbuild.com/
 # https://github.com/mesonbuild/meson
 func_install meson
+
+func_install BobBuildTool
 #--------------------------------------------------------------------------
 # The sphinx is like Doxygen for C++.
 func_install sphinx
@@ -272,5 +274,5 @@ func_install docutils
 # https://rst2pdf.org/
 func_install rst2pdf
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="da65db55-87dc-4f0f-934c-018161104ae7"
+# S_VERSION_OF_THIS_FILE="4c532f5c-6687-4e93-b198-e0a350f05ae7"
 #==========================================================================

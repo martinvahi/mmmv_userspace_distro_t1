@@ -6,7 +6,6 @@
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
 #==========================================================================
-
 if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load" ]; then
     S_ERR_CODE="1"
     echo ""
@@ -18,11 +17,10 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo "Exiting with an error code $S_ERR_CODE ."
-    echo "GUID=='4fa548d1-9032-489c-8517-7002600178e7'"
+    echo "GUID=='63982938-58a6-4040-a37c-931390f05ae7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
-
 #--------------------------------------------------------------------------
 SB_MAVEN_EXISTS_ON_PATH="f"
 if [ "`which mvn 2> /dev/null`" != "" ]; then
@@ -31,7 +29,7 @@ else
     if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" != "f" ]; then
         echo ""
         echo "The Java build system called Maven is missing from the PATH."
-        echo "GUID=='9f9cb42d-893b-4313-8217-7002600178e7'"
+        echo "GUID=='44cbd8f2-0235-4710-9f7c-931390f05ae7'"
         echo ""
     fi
 fi
@@ -43,7 +41,7 @@ if [ "$SB_MAVEN_EXISTS_ON_PATH" == "t" ]; then
     #----------------------------------------------------------------------
     if [ "$M2" != "" ]; then
         func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-            "$M2" "9bcc9d30-cd05-4d85-b217-7002600178e7" \
+            "$M2" "3124f320-8239-4ce5-a47c-931390f05ae7" \
             "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
     fi
     #----------------------------------------------------------------------
@@ -51,11 +49,11 @@ if [ "$SB_MAVEN_EXISTS_ON_PATH" == "t" ]; then
         if [ -e "$S_FP_HOME_DOT_M2" ]; then
             # Just to check that it is a folder and not a file.
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_HOME_DOT_M2" "7b33c852-98ea-49dd-a417-7002600178e7" \
+                "$S_FP_HOME_DOT_M2" "36095a95-836a-487b-b27c-931390f05ae7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
         else # we try to copy it to create a seed version of it
             func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                "$S_FP_MMMV_DOT_M2" "253d5834-e4dd-45b4-8417-7002600178e7" \
+                "$S_FP_MMMV_DOT_M2" "7584b365-25ef-4fab-817c-931390f05ae7" \
                 "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             if [ "$SB_VERIFICATION_FAILED" == "f" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" != "f" ]; then
@@ -73,11 +71,11 @@ if [ "$SB_MAVEN_EXISTS_ON_PATH" == "t" ]; then
                     if [ "$S_TMP_0" != 0 ]; then
                         echo -e \e[31m"The cp exited with an error code of $S_TMP_0 \e[39m"
                     fi
-                    echo "GUID=='56e276b4-9514-482c-a517-7002600178e7'"
+                    echo "GUID=='45f3db21-65c1-4038-857c-931390f05ae7'"
                     echo ""
                 fi
                 func_mmmv_verify_that_the_folder_exists_but_do_not_exit_t1 \
-                    "$S_FP_HOME_DOT_M2" "ca755d1c-50e7-4924-8317-7002600178e7" \
+                    "$S_FP_HOME_DOT_M2" "2994131e-f0e6-4cb8-a17c-931390f05ae7" \
                     "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
             fi
         fi
@@ -98,7 +96,7 @@ else # Maven not on PATH
             echo "    M2 != \"\" ==$M2"
             echo ""
             echo "is defined, but the Maven itself is not available on the PATH."
-            echo "GUID=='a479f1ca-0dc4-47db-a117-7002600178e7'"
+            echo "GUID=='dcea7e2d-9513-4f48-a57c-931390f05ae7'"
             echo ""
         fi
     fi
@@ -106,16 +104,16 @@ fi
 
 #--------------------------------------------------------------------------
 # It seems that the Apache Maven lacks proper console parameters
-# for using the Apache Maven with proxy servers. According to the 
+# for using the Apache Maven with proxy servers. According to the
 #
-#     https://maven.apache.org/settings.html#Proxies 
+#     https://maven.apache.org/settings.html#Proxies
 #
-# the 
+# the
 #
-#     ~/.m2/settings.xml 
+#     ~/.m2/settings.xml
 #
 # is supposed to contain information about the use of proxy servers.
-# 
+#
 #     -----untested--citation--start---------------------------------------
 #     <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
 #       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -135,6 +133,59 @@ fi
 #       </proxies>
 #     </settings>
 #     -----untested--citation--end-----------------------------------------
+#--------------------------------------------------------------------------
+func_mmmv_userspace_distro_t1_generate_bobbuildtool_config_files(){
+    # The global setting code example:
+    #     https://bob-build-tool.readthedocs.io/en/latest/installation.html#recommended-configuration
+    S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE_PARENT_FOLDER="$HOME/.config/bob"
+    S_FP_BOBBUILDTOOL_CACHE_MIRROR_FOLDER="$HOME/.cache/bob/mirror"
+    S_FP_BOBBUILDTOOL_CACHE_PKGS_FOLDER="$HOME/.cache/bob/pkgs"
+    mkdir -p $S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE_PARENT_FOLDER
+    mkdir -p $S_FP_BOBBUILDTOOL_CACHE_MIRROR_FOLDER
+    mkdir -p $S_FP_BOBBUILDTOOL_CACHE_PKGS_FOLDER
+    func_mmmv_wait_and_sync_t1
+    S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE="$S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE_PARENT_FOLDER/default.yaml"
+    if [ ! -e $S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE ]; then
+        #--------------------
+        if [ -h $S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE ]; then # broken symlink
+            rm -f $S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE
+            func_mmmv_wait_and_sync_t1
+        fi
+        #--------------------
+        S_TMP_0="$S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE"
+        echo "preMirrorPrepend:" >> $S_TMP_0
+        echo "    scm: url" >> $S_TMP_0
+        echo "    url: \"https?://(.*)\"" >> $S_TMP_0
+        echo "    mirror: \"$S_FP_BOBBUILDTOOL_CACHE_MIRROR_FOLDER/\\\\1\"" >> $S_TMP_0
+        echo "    upload: True" >> $S_TMP_0
+        echo "share:" >> $S_TMP_0
+        echo "    path: $S_FP_BOBBUILDTOOL_CACHE_PKGS_FOLDER" >> $S_TMP_0
+        echo "    quota: \"5G\"" >> $S_TMP_0
+        echo "    autoClean: True" >> $S_TMP_0
+        echo "" >> $S_TMP_0
+        #--------------------
+        # https://muen.sk/?utm_source=chatgpt.com#building-muen
+        echo "command:" >> $S_TMP_0
+        echo "  dev:" >> $S_TMP_0
+        if [ "$MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1" != "" ]; then
+            echo "    jobs: $MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1" >> $S_TMP_0
+        else
+            echo "    jobs: 1" >> $S_TMP_0
+        fi
+        echo "    sandbox: dev" >> $S_TMP_0
+        echo "" >> $S_TMP_0
+        #--------------------
+        func_mmmv_wait_and_sync_t1
+        #--------------------
+    fi
+    func_mmmv_verify_that_the_file_exists_but_do_not_exit_t1 \
+        "$S_FP_BOBBUILDTOOL_GLOBAL_CONFIG_FILE" \
+        "7d440039-53c2-438f-b56c-931390f05ae7" \
+        "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT"
+} # func_mmmv_userspace_distro_t1_generate_bobbuildtool_config_files
+if [ "$SB_BOBBUILDTOOL_EXISTS_ON_PATH" == "t" ]; then
+    func_mmmv_userspace_distro_t1_generate_bobbuildtool_config_files
+fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="264f2b25-0c2a-4bcf-8317-7002600178e7"
+# S_VERSION_OF_THIS_FILE="3d61c161-77a9-492a-b16c-931390f05ae7"
 #==========================================================================
