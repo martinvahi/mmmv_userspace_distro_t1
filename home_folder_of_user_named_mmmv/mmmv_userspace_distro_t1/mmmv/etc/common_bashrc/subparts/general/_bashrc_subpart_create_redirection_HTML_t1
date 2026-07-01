@@ -10,7 +10,7 @@
 # the ~/.bashrc and its subparts must not call "exit".
 # This script and all of the functions defined in it are "exit" free.
 #
-# The main purpose of this file is to declare some aliases that are 
+# The main purpose of this file is to declare some aliases that are
 # related to creation of website copies with the wget and the httrack.
 #==========================================================================
 S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -31,7 +31,7 @@ S_FP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # </html>$S_NEWLINE\
 # "
 # #printf "%b" "$MMMV_S_REDIRECTION_HTML"
-# 
+#
 #--------------------------------------------------------------------------
 
 # Overwriting with the ">" is avoided for safety.
@@ -57,7 +57,7 @@ export MMMV_CRE_HTML_REDIRECT_T1_ALIAS_CMD="\
         echo \"\" ;\
         echo \"Retaining the old version of the ./index.html by\" ;\
         echo \"not overwriting it.\" ;\
-        echo \"GUID=='7e1a9b22-214e-4667-91dd-717141b139e7'\" ;\
+        echo \"GUID=='dd0aa902-0cec-4222-ba5b-21c160107ae7'\" ;\
         echo \"\" ;\
     fi "
 alias mmmv_cre_HTML_redirect_t1="$MMMV_CRE_HTML_REDIRECT_T1_ALIAS_CMD"
@@ -76,7 +76,7 @@ export MMMV_CRE_HTML_REDIRECT_WITH_COMMENTS_TXT_ALIAS_SUBPART_01="\
             echo \"\"                >> ./COMMENTS.txt ;\
             echo \"Some wget parameters:\"  >> ./COMMENTS.txt ;\
             echo \"\"                >> ./COMMENTS.txt ;\
-            echo \"    --wait=1 --reject-regex 'http(s)?:[/]+.+(((lwn|osdn|sourceforge|sf)[.]net)|((bittube)[.]tv)|((lwn|osdn|sourceforge|sf)[.]net)|((nicovideo)[.]jp)|((gitgud)[.]io)|((npmjs|1fichier|cygwin|gitlab|facebook|youtube|twitter|tiktok|instagram|sciencedirect|elsevier|springer|google|googletagmanager|gmail|lijit|bing|yahoo|duckduckgo|awesomeopensource|odysee|bitchute|dailymotion|schooltube|utreon|semanticscholar|merriam-webster|thefreedictionary|urbandictionary|oed|stackexchange|microsoft|fosshub|github|gitee|chiselapp|githuman)[.]com)|((openhab|openhub|archive|arxiv|wikipedia|ieee|acm|gnu|fsf|sepiasearch|joinpeertube|creativecommons|bitbucket|apache|eclipse|opencores|librecores|debian|framagit|dotsrc|icculus|coin-or|sourceware|rubygems)[.]org)|(gap-system[.]org)|(uwaterloo[.]ca))([/].*)?' --accept-regex 'http(s)?:[/]+((((www|fonts)[.]gstatic[.]com)|(fonts[.]googleapis[.]com)|(cdn[.]jsdelivr[.]net)|(code[.]jquery[.]com))|(ajax[.]googleapis.com[/]ajax[/]libs)|(cdnjs[.]cloudflare[.]com[/]ajax[/]libs)|(((www|cdn)[.])?openpowerfoundation[.]org))([/].*)?' \" >> ./COMMENTS.txt ;\
+            echo \"    --wait=1 --reject-regex 'http(s)?:[/]+.+(([.]sqlite.*)|((alibaba|aliexpress|amazon|banggood|dhgate|made-in-china|media-amazon|shein|temu)[.]com)|((arvutiait|arvutitark|autokaubad24|barbora|bauhaus|byroomaailm|hind|hinnavaatlus|(k[-]rauta)|kaubamaja|kaup24|klick|kuldnebors|lemona|lidl|maxima|oomipood|rimi|robolabor|selver|tootemaailm|yeint)[.]ee)|((bittube)[.]tv)|((lwn|osdn|sourceforge|sf)[.]net)|((nicovideo)[.]jp)|((gitgud)[.]io)|((npmjs|1fichier|cygwin|gitlab|facebook|youtube|twitter|tiktok|instagram|sciencedirect|elsevier|springer|google|googletagmanager|gmail|lijit|bing|yahoo|duckduckgo|awesomeopensource|odysee|bitchute|dailymotion|schooltube|utreon|semanticscholar|merriam-webster|thefreedictionary|urbandictionary|oed|stackexchange|microsoft|fosshub|github|gitee|chiselapp|githuman)[.]com)|((openhab|openhub|archive|arxiv|wikipedia|ieee|acm|gnu|fsf|sepiasearch|joinpeertube|creativecommons|bitbucket|apache|eclipse|opencores|librecores|debian|framagit|dotsrc|icculus|coin-or|sourceware|rubygems)[.]org)|(gap-system[.]org)|(uwaterloo[.]ca))([/].*)?' --accept-regex 'http(s)?:[/]+((((www|fonts)[.]gstatic[.]com)|(fonts[.]googleapis[.]com)|(cdn[.]jsdelivr[.]net)|(code[.]jquery[.]com))|(ajax[.]googleapis.com[/]ajax[/]libs)|(cdnjs[.]cloudflare[.]com[/]ajax[/]libs)|(((www|cdn)[.])?openpowerfoundation[.]org))([/].*)?' \" >> ./COMMENTS.txt ;\
         fi; \
         echo \"\"                    >> ./COMMENTS.txt ;\
         sync ; vim ./COMMENTS.txt ;\
@@ -87,7 +87,7 @@ export MMMV_CRE_HTML_REDIRECT_WITH_COMMENTS_TXT_ALIAS_SUBPART_01="\
         echo \"    \`pwd\`\"; \
         echo \"\"; \
         echo \"Retaining the old version of the ./COMMENTS.txt . \"; \
-        echo \"GUID=='3d46525d-c87b-43cb-95dd-717141b139e7'\"; \
+        echo \"GUID=='409262e4-bd69-4924-b34b-21c160107ae7'\"; \
         echo \"\"; \
     fi "
 
@@ -101,7 +101,7 @@ else
     echo "wget could not be found from PATH."
     echo "Skipping the declaraton of the alias "
     echo "\"mmmv_cre_HTML_redirect_COMMENTS_txt_wget_t1\"."
-    echo "GUID=='2ae0601a-72ec-4dec-a5dd-717141b139e7'"
+    echo "GUID=='1bcb56e5-8487-4d39-833b-21c160107ae7'"
     echo ""
 fi
 
@@ -115,10 +115,10 @@ else
     echo "httrack could not be found from PATH. "
     echo "Skipping the declaraton of the alias "
     echo "\"mmmv_cre_HTML_redirect_COMMENTS_txt_httrack_t1\"."
-    echo "GUID=='342eae5c-33e3-43b3-a1dd-717141b139e7'"
+    echo "GUID=='316049b1-6ea6-49a8-923b-21c160107ae7'"
     echo ""
 fi
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="5faa0f9b-6f14-4759-93dd-717141b139e7"
+# S_VERSION_OF_THIS_FILE="69e8e217-78e4-41a8-98eb-21c160107ae7"
 #==========================================================================
