@@ -7,33 +7,59 @@
  The following line is a spdx.org license label line:
  SPDX-License-Identifier: MIT
 
- The MIT license from the 
+ The MIT license from the
  http://www.opensource.org/licenses/mit-license.php
 
  Copyright (c) 2012, martin.vahi@softf1.com that has an
  Estonian personal identification code of 38108050020.
 
- Permission is hereby granted, free of charge, to 
- any person obtaining a copy of this software and 
- associated documentation files (the "Software"), 
- to deal in the Software without restriction, including 
- without limitation the rights to use, copy, modify, merge, publish, 
- distribute, sublicense, and/or sell copies of the Software, and 
- to permit persons to whom the Software is furnished to do so, 
- subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
 
- The above copyright notice and this permission notice shall be included 
+ The above copyright notice and this permission notice shall be included
  in all copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
- CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
- TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-=end 
+=end
+#--------------------------------------------------------------------------
+# Ruby language version related normalization:
+#--------------------------------------------------------------------------
+# Most Ruby versions prior to Ruby version 3.2.0
+# had that method. This code makes old code that
+# worked with those older Ruby versions
+# work with the Ruby version 3.2.0 .
+if !defined? File.exists?
+   def File.exists? x
+      b=File.exist? x
+      return b
+   end # File.exists?
+end # if
+# Ruby 2.4.0 introduced a change, where
+# classes Fixnum and Bignum were deprecated
+# their use triggered a warning text to stderr
+# and their common parent class, Integer,
+# was expected to be used instead of them.
+# Ruby version 2.7.2 removed the warning from the stderr.
+# Ruby version 3.2.0 missed the classes, Fixnum and Bignum.
+# The following 2 if-clauses keep the old code working.
+if !defined? Fixnum
+   Fixnum=Integer
+end # if
+if !defined? Bignum
+   Bignum=Integer
+end # if
 #--------------------------------------------------------------------------
 
 require "monitor"
@@ -61,10 +87,9 @@ def kibuvits_s_concat_array_of_strings(ar_in)
          return s_out
       else
          if i_n==1
-            # For the sake of consistency one
-            # wants to make sure that the returned
-            # string instance always differs from those
-            # that are within the ar_in.
+            # For the sake of consistency one wants to make
+            # sure that the returned string instance always
+            # differs from those that are within the ar_in.
             s_out=s_lc_emptystring+ar_in[0]
             return s_out
          else # i_n==0
@@ -90,19 +115,17 @@ def kibuvits_s_concat_array_of_strings(ar_in)
    # uses a much more CPU-cache friendly temporary string of length
    # 'short_string_1'.short_string_2'
    #
-   # Believe it or not, but as of January 2012 the speed difference
-   # in PHP can be at least about 20% and in Ruby about 50%.
-   # Please do not take my word on it. Try it out yourself by
-   # modifying this function and assembling strings of length
-   # 10000 from single characters.
+   # Believe it or not, but as of January 2012 the speed difference in
+   # PHP can be at least about 20% and in Ruby about 50%.  Please do not
+   # take my word on it. Try it out yourself by modifying this function
+   # and assembling strings of length 10000 from single characters.
    #
-   # This here is probably not the most optimal solution, because
-   # within the more optimal solution the the order of
-   # "concatenation glue placements" depends on the lengths
-   # of the tokens/strings, but as the analysis and "gluing queue"
-   # assembly also has a computational cost, the version
-   # here is almost always more optimal than the totally
-   # naive version.
+   # This here is probably not the most optimal solution, because within
+   # the more optimal solution the the order of "concatenation glue
+   # placements" depends on the lengths of the tokens/strings, but as
+   # the analysis and "gluing queue" assembly also has a computational
+   # cost, the version here is almost always more optimal than the
+   # totally naive version.
    ar_1=ar_in
    b_ar_1_equals_ar_in=true # to avoid modifying the received Array
    ar_2=Array.new
@@ -193,12 +216,11 @@ def str2file(s_a_string, s_fp)
          file.write(s_a_string)
          file.close
       rescue Exception =>err
-         raise "No comments. GUID='79508cba-09c6-45e4-a132-61c2217077e7' \n"+
+         raise "No comments. GUID='22aed81f-5132-4c12-855d-507260e07ae7' \n"+
          "s_a_string=="+s_a_string+"\n"+err.to_s+"\n\n"
       end #
    end # synchronize
 end # str2file
-
 
 def file2str(s_file_path)
    s_out=$kibuvits_lc_emptystring
@@ -215,14 +237,13 @@ def file2str(s_file_path)
       rescue Exception =>err
          raise(Exception.new("\n"+err.to_s+"\n\ns_file_path=="+
          s_file_path+
-         "\n GUID='3924d9d2-4e26-4135-9c12-61c2217077e7'\n\n"))
+         "\n GUID='e558eb3b-2b7b-4081-a55d-507260e07ae7'\n\n"))
       end #
    end # synchronize
    return s_out
 end # file2str
 
 #--------------------------------------------------------------------------
-
 
 class Mmmv_utilities_text_processing_lstop_t1
 
@@ -247,14 +268,14 @@ class Mmmv_utilities_text_processing_lstop_t1
          md=s_line_with_linebreak.match(rgx_prefix)
          if md==nil
             raise("\nSize list file format mismatch.\n"+
-            "GUID='f2b67f9a-58a5-432f-8ae2-61c2217077e7'\n\n")
+            "GUID='12b26bf4-08c1-4d6d-af5d-507260e07ae7'\n\n")
          end # if
          s_prefix=md[0]
          i_len_prefix=s_prefix.length
          i_len_line=s_line_with_linebreak.length
          if  i_len_line <= i_len_prefix
             raise("\nSize list file format mismatch or flawed code.\n"+
-            "GUID='3fac24d3-0414-493f-9532-61c2217077e7'\n\n")
+            "GUID='1674ea3c-a4df-4d4f-915d-507260e07ae7'\n\n")
          end # if
          s_0=s_line_with_linebreak[i_len_prefix..(-1)]
          s_0.sub!(rgx_ending_linebreak,$kibuvits_lc_emptystring)
@@ -282,14 +303,14 @@ class Mmmv_utilities_text_processing_lstop_t1
          if s_0.length<2
             raise("\nSize list file format mismatch.\n"+
             s_file_size+"\n"+
-            "GUID='2aca3502-54a8-4e4c-bd22-61c2217077e7'\n\n")
+            "GUID='cffa2322-ab3d-4149-a25d-507260e07ae7'\n\n")
          end # if
          s_1=s_0[(-1)..(-1)] # "1K" -> "K"
          s_2=s_0[0..(-2)]    # "1K" -> "1"
          if s_2.match(rgx_1)!=nil
             raise("\nSize list file format mismatch.\n"+
             s_file_size+"\n"+
-            "GUID='195c9fa1-59de-43e5-ac42-61c2217077e7'\n\n")
+            "GUID='98754c57-ea57-4547-925d-507260e07ae7'\n\n")
          end # if
          #--------
          i_file_size=s_2.to_i
@@ -305,7 +326,7 @@ class Mmmv_utilities_text_processing_lstop_t1
          else
             raise("\nSize list file format mismatch.\n"+
             s_file_size+"\n"+
-            "GUID='437fc905-0ce0-4d94-8532-61c2217077e7'\n\n")
+            "GUID='cea35319-1051-456b-825d-507260e07ae7'\n\n")
          end # case s_0
          return i_file_size
       end # func_i_file_size_len
@@ -322,20 +343,20 @@ class Mmmv_utilities_text_processing_lstop_t1
          md=s_record.match(rgx_2)
          if md==nil
             raise("\nSize list file format mismatch.\n"+
-            "GUID='4b1d8903-1e07-409d-a542-61c2217077e7'\n\n")
+            "GUID='193ac957-2aef-498d-a25d-507260e07ae7'\n\n")
          end # if
          s_file_size=md[0]
          i_s_file_size_len=s_file_size.length
          if s_record.length <= i_s_file_size_len
             raise("\nSize list file format mismatch.\n"+
             s_record+"\n"+
-            "GUID='35a4b39f-08c8-4484-b812-61c2217077e7'\n\n")
+            "GUID='43e9c4c1-786e-478c-945d-507260e07ae7'\n\n")
          end # if
          s_file_id=s_record[i_s_file_size_len..(-1)]
          if s_file_id.sub(rgx_3,$kibuvits_lc_emptystring).length == 0
             raise("\nSize list file format mismatch.\n"+
             s_record+"\n"+
-            "GUID='732f318d-0568-4c36-bb42-61c2217077e7'\n\n")
+            "GUID='58e2e345-fe2f-46fc-915d-507260e07ae7'\n\n")
          end # if
          i_file_size_in_bytes=func_i_file_size_len.call(s_file_size)
          ht_out[s_file_id]=i_file_size_in_bytes
@@ -347,7 +368,7 @@ class Mmmv_utilities_text_processing_lstop_t1
    def ht_biggest_files(ht_records,n)
       if n < 1
          raise("\nFlawed method call.\n"+
-         "GUID='95707e93-742f-42fa-90e2-61c2217077e7'\n\n")
+         "GUID='373a9af9-9581-4bef-935d-507260e07ae7'\n\n")
       end # if
       ht_out=Hash.new
       i_ht_records_len=ht_records.size
@@ -375,7 +396,7 @@ class Mmmv_utilities_text_processing_lstop_t1
          i_file_size_in_bytes_searchvalue=ar_top[ix_ar_top]
          if i_file_size_in_bytes_searchvalue==nil
             raise("\nThere's a flaw in the code of this method.\n"+
-            "GUID='18904bb5-84c0-4299-8722-61c2217077e7'\n\n")
+            "GUID='a83eaa5e-8912-431a-855d-507260e07ae7'\n\n")
          end # if
          ar_keys.each do |s_file_id|
             i_file_size_in_bytes=ht_records[s_file_id]
@@ -421,7 +442,7 @@ class Mmmv_utilities_text_processing_lstop_t1
       if !File.exists? s_fp
          raise("\nThe file with the path of \n\n"+s_fp+
          "\n\nis missing.\n"+
-         "GUID='417861c3-9028-42e0-8d52-61c2217077e7'\n\n")
+         "GUID='25576b6f-82f1-4d0b-a55d-507260e07ae7'\n\n")
       end # if
       s_file_in=file2str(s_fp)
       ar_records=ar_exc_file_records(s_file_in)
@@ -471,21 +492,21 @@ end # s_create_doc
 x_i_n_top_candidate=ARGV[0]
 if x_i_n_top_candidate==nil
    raise(s_create_doc()+
-   "GUID='2bf473a4-af6f-45b7-b212-61c2217077e7'\n\n")
+   "GUID='61363b2a-e592-493f-935d-507260e07ae7'\n\n")
 end # if
 #----
 x_i_n_top_candidate=x_i_n_top_candidate.to_i
 if x_i_n_top_candidate < 1
    raise("\n\nThe list length(=="+x_i_n_top_candidate.to_s+
    ") must be at least 1 ."+s_create_doc()+
-   "GUID='db9d17dc-0c9b-43b2-b812-61c2217077e7'\n\n")
+   "GUID='24758351-827a-473d-b35d-507260e07ae7'\n\n")
 end # if
 i_n_top=x_i_n_top_candidate
 #--------
 x_s_fp_candidate=ARGV[1]
 if x_s_fp_candidate==nil
    raise(s_create_doc()+
-   "GUID='528dc10b-bebe-44f5-8122-61c2217077e7'\n\n")
+   "GUID='351a33e5-3ea2-42d2-815d-507260e07ae7'\n\n")
 end # if
 #----
 s_fp_candidate=x_s_fp_candidate.to_s
@@ -496,20 +517,20 @@ if x_3_arg==nil
       raise("\nThe \n\n"+s_fp_candidate+
       "\n\nis required to be a file, but it does not exist."+
       s_create_doc()+
-      "GUID='8ca39ee4-253e-4969-a052-61c2217077e7'\n\n")
+      "GUID='1259f645-5898-4cc1-b35d-507260e07ae7'\n\n")
    end # if
    if !File.file? s_fp_candidate
       raise("\nThe \n\n"+s_fp_candidate+
       "\n\nexists, but it is not a file."+
       s_create_doc()+
-      "GUID='297b7b61-93ac-458d-a352-61c2217077e7'\n\n")
+      "GUID='34bb8e9a-839b-4e86-915d-507260e07ae7'\n\n")
    end # if
    s_fp=s_fp_candidate
 else # x_3_arg!=nil
    if x_3_arg.to_s.downcase!="demo"
       raise("\n\nThe only allowed value "+
       "for the 3. console argument is \"demo\" ."+s_create_doc()+
-      "GUID='0f55cfb5-e8d1-41e7-9c12-61c2217077e7'\n\n")
+      "GUID='3aba4034-5824-42a8-855d-507260e07ae7'\n\n")
    else
       require "pathname"
       s_0=Pathname.new(__FILE__).realpath.parent.to_s
@@ -522,5 +543,5 @@ s_top=ob_engine.s_exc_list_of_biggest_files(s_fp,i_n_top)
 puts s_top
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="b401d940-1df5-426d-a082-61c2217077e7"
+# S_VERSION_OF_THIS_FILE="f6ec1a5d-fec6-4ad1-935d-507260e07ae7"
 #==========================================================================

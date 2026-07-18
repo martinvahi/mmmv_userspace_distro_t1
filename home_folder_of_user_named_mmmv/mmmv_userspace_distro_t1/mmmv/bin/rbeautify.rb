@@ -3,14 +3,13 @@
 =begin
 
 This file has been slightly modified by the Martin.Vahi@softf1.com ,
-who downloaded this file from 
+who downloaded this file from
 
     http://arachnoid.com/ruby/rubyBeautifier.html
     http://arachnoid.com/ruby/rbeautify.rb.txt
 
-on 2013.01.29 
+on 2013.01.29
 ----------------------------------------------------------------------------
-
 
 /***************************************************************************
  *   Copyright (C) 2008, Paul Lutus                                        *
@@ -35,6 +34,36 @@ on 2013.01.29
  SPDX-License-Identifier: GPL-2.0-or-later
 
 =end
+
+#--------------------------------------------------------------------------
+# Ruby language version related normalization (by Martin.Vahi@softf1.com):
+#--------------------------------------------------------------------------
+# Most Ruby versions prior to Ruby version 3.2.0
+# had that method. This code makes old code that
+# worked with those older Ruby versions
+# work with the Ruby version 3.2.0 .
+if !defined? File.exists?
+   def File.exists? x
+      b=File.exist? x
+      return b
+   end # File.exists?
+end # if
+# Ruby 2.4.0 introduced a change, where
+# classes Fixnum and Bignum were deprecated
+# their use triggered a warning text to stderr
+# and their common parent class, Integer,
+# was expected to be used instead of them.
+# Ruby version 2.7.2 removed the warning from the stderr.
+# Ruby version 3.2.0 missed the classes, Fixnum and Bignum.
+# The following 2 if-clauses keep the old code working.
+if !defined? Fixnum
+   Fixnum=Integer
+end # if
+if !defined? Bignum
+   Bignum=Integer
+end # if
+#--------------------------------------------------------------------------
+
 
 PVERSION = "Version 2.9, 10/24/2008"
 
@@ -235,3 +264,6 @@ if __FILE__ == $0
    RBeautify.main
 end
 
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="9ee1b535-38e7-4a72-85b2-d20360e07ae7"
+#==========================================================================
