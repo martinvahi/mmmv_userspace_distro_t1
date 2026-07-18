@@ -12,7 +12,7 @@ details of the mmmv_userspace_distro_t1 are at
 
     ./home_folder_of_user_named_mmmv/COMMENTS.txt
 
-The set of software packages at the 
+The set of software packages at the
 
     ./home_folder_of_user_named_mmmv/applications
 
@@ -31,13 +31,13 @@ about 2 years. Thank You for studying this project.
 
 ## WARNING
 
-Backwards compatibility of this project with its earlier versions 
+Backwards compatibility of this project with its earlier versions
 
-    IS NOT EVEN A GOAL. 
+    IS NOT EVEN A GOAL.
 
 Versions of the mmmv_userspace_distro_t1 are meant to be compatible only
 with their own era mmmv_userspace_distro_t1_pkg01 versions. There is an
-aim to make this project usable on both, Linux and BSD, but as of 2025
+aim to make this project usable on both, Linux and BSD, but as of 2026
 proper testing in the form of daily use is done only on Linux.
 
 
