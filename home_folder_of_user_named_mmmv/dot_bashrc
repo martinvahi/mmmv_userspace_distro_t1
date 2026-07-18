@@ -1,31 +1,9 @@
 #!/usr/bin/env bash
 #==========================================================================
 
-# export MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1="2" # a host computer specific temporary hack
-
-export S_FP_FLATPAK_JAILBREAK_FOLDER=""
-
 #----mmmv--machine--instance--specific--section--start---------------------
-alias ls="ls --color "
-#--------------------------------------------------------------------------
-S_FP_0="$HOME/.cargo/env"
-if [ -e "$S_FP_0" ]; then
-    if [ -d "$S_FP_0" ]; then
-        . "$S_FP_0"
-    fi
-fi
-#--------------------------------------------------------------------------
-S_TMP_0="$HOME/m_local/bin"
-if [ -e "$S_TMP_0" ]; then
-    if [ -d "$S_TMP_0" ]; then
-        export PATH="$S_TMP_0:$PATH"
-    fi
-fi
-#--------------------------------------------------------------------------
-if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" == "" ]; then
-    export MMMV_USERSPACE_DISTRO_T1_HOME="/home/mmmv/mmmv_userspace_distro_t1"
-fi
-MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
+# export MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1="2" # a host computer specific temporary hack
+export S_FP_FLATPAK_JAILBREAK_FOLDER=""
 #--------------------------------------------------------------------------
 # https://stackoverflow.com/questions/55673886/what-is-the-difference-between-c-utf-8-and-en-us-utf-8-locales/
 # archival copy: https://archive.vn/ivNHa
@@ -51,11 +29,6 @@ export DISPLAY=":0"
 #     https://unix.stackexchange.com/questions/203844/how-to-find-out-the-current-active-xserver-display-number
 #     archival copy: https://archive.ph/0Bpdr
 #--------------------------------------------------------------------------
-export MMMV_SB_DEBUG="t"  #  domain: {"",  "t", "f"}
-                          # default: "" -> "t"
-export MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"}
-                                              # default: "" -> "t"
-#--------------------------------------------------------------------------
 # Reformatted citation from the ssh man page and the following page:
 # https://unix.stackexchange.com/questions/120080/what-are-ssh-tty-and-ssh-connection
 # archival copy: https://archive.vn/2y2EF
@@ -70,13 +43,49 @@ if [ "$SSH_TTY" == "" ]; then
     # tested to work on both, Linux and FreeBSD.
     SB_CONSOLE_IS_ACCESSED_OVER_SSH="f"
 fi
-# If one logs in over SSH and then starts a new Bash session by executing
-# the /bin/bash then the non-empty-string value of the SSH_TTY remains,
-# unless it is manually set to an empty string.
+# If one logs in over SSH and then starts a new Bash session by
+# executing the /bin/bash then the non-empty-string value of the SSH_TTY
+# remains, unless it is manually set to an empty string.
 if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "" ]; then
     SB_CONSOLE_OUTPUT_IS_ALLOWED="f" # the ssh issue as described
                                      # earlier in this file
 fi
+#--------------------------------------------------------------------------
+alias ls="ls --color "
+#--------------------------------------------------------------------------
+S_FP_0="$HOME/.cargo/env"
+if [ -e "$S_FP_0" ]; then
+    if [ -d "$S_FP_0" ]; then
+        . "$S_FP_0"
+    fi
+fi
+#--------------------------------------------------------------------------
+S_TMP_0="$HOME/m_local/bin"
+if [ -e "$S_TMP_0" ]; then
+    if [ -d "$S_TMP_0" ]; then
+        export PATH="$S_TMP_0:$PATH"
+    fi
+fi
+#--------------------------------------------------------------------------
+if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" == "" ]; then
+    S_TMP_0="/home/mmmv/mmmv_userspace_distro_t1"
+    if [ -e "$S_TMP_0" ]; then
+        if [ -d "$S_TMP_0" ]; then
+            export MMMV_USERSPACE_DISTRO_T1_HOME="/home/mmmv/mmmv_userspace_distro_t1"
+        fi
+    fi
+fi
+if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" != "" ]; then
+    # This if-clause can not be replaced with an else-clause of the
+    # previous if-clause, because the MMMV_USERSPACE_DISTRO_T1_HOME
+    # might have been defined manually.
+    MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
+fi
+#--------------------------------------------------------------------------
+export MMMV_SB_DEBUG="t"  #  domain: {"",  "t", "f"}
+                          # default: "" -> "t"
+export MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"}
+                                              # default: "" -> "t"
 #--------------------------------------------------------------------------
 if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -> "t"
     #----------------------------------------------------------------------
@@ -89,34 +98,22 @@ if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -
         # fi
     else
         SB_CONSOLE_OUTPUT_IS_ALLOWED="t"
-        # You may want to uncomment the following 5 lines:
-        # if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
-        #     if [ ! -d "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
-        #         source "$MMMV_FP_COMMON_BASHRC_MAIN"
-        #     fi
-        # fi
     fi
     #----------------------------------------------------------------------
-    if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "t" ]; then
-        #------------------------------------------------------------------
-        if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # this line is not duplicating
-                                                                         # if the
-                                                                         #     source "$MMMV_FP_COMMON_BASHRC_MAIN"
-                                                                         # above is executed.
-            if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "" ]; then
-                if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "t" ]; then
-                    echo ""
-                    echo "The environment variable "
-                    echo ""
-                    echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
-                    echo ""
-                    echo "but its domain is: {\"\", \"t\", \"f\"}."
-                    echo "GUID=='f37ee12d-4b42-4852-826f-03a1b0d03ae7'"
-                    echo ""
-                fi
-            fi
+fi
+if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then
+    #----------------------------------------------------------------------
+    if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "" ]; then
+        if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "t" ]; then
+            echo ""
+            echo "The environment variable "
+            echo ""
+            echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
+            echo ""
+            echo "but its domain is: {\"\", \"t\", \"f\"}."
+            echo "GUID=='6b0165e3-30e2-427d-8bb5-f1b3f0217ae7'"
+            echo ""
         fi
-        #------------------------------------------------------------------
     fi
     #----------------------------------------------------------------------
 fi
@@ -147,6 +144,8 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
             # of writing this comment/sentence here, that reason is
             # not known to me(Martin.Vahi@softf1.com) and I only have
             # experimental confirmation.
+            # You may want to uncomment the following line:
+            source "$MMMV_FP_COMMON_BASHRC_MAIN"
         else
             if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "t" ]; then
                 echo ""
@@ -156,8 +155,9 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
                 echo ""
                 echo "is a symlink to a file, but "
                 echo -e "\e[31ma file is expected\e[39m."
-                echo "GUID=='11086d34-de68-4b49-b26f-03a1b0d03ae7'"
+                echo "GUID=='bf773623-f653-43df-92b5-f1b3f0217ae7'"
                 echo ""
+                MMMV_FP_COMMON_BASHRC_MAIN=""
             fi
         fi
     else
@@ -173,8 +173,9 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
                 echo "is a folder, but "
             fi
             echo -e "\e[31ma file is expected\e[39m."
-            echo "GUID=='25c23b23-4cae-4e35-826f-03a1b0d03ae7'"
+            echo "GUID=='dc500954-2544-4668-95b5-f1b3f0217ae7'"
             echo ""
+            MMMV_FP_COMMON_BASHRC_MAIN=""
         fi
     fi
 else
@@ -185,8 +186,9 @@ else
         echo "    $MMMV_FP_COMMON_BASHRC_MAIN "
         echo ""
         echo -e "\e[31mis missing\e[39m."
-        echo "GUID=='47128a2a-635f-4f95-b26f-03a1b0d03ae7'"
+        echo "GUID=='3effcbd7-51a9-47c7-84b5-f1b3f0217ae7'"
         echo ""
+        MMMV_FP_COMMON_BASHRC_MAIN=""
     fi
 fi
 #----mmmv--machine--instance--specific--section--end-----------------------

@@ -24,7 +24,6 @@ Most up to date version of this project MIGHT be at:
     those 3 repositories are all mirrors of each other.)
     https://codeberg.org/martinvahi/mmmv_userspace_distro_t1
     https://github.com/martinvahi/mmmv_userspace_distro_t1
-    https://sourceforge.net/p/mmmv-userspace-distro-t1/code/ci/master/tree/
 
 The content of the
 
@@ -39,18 +38,20 @@ mmmv_userspace_distro_t1_pkg01 MIGHT be at
     those 3 repositories are all mirrors of each other.)
     https://codeberg.org/martinvahi/mmmv_userspace_distro_t1_pkg01
     https://github.com/martinvahi/mmmv_userspace_distro_t1_pkg01
-    https://sourceforge.net/projects/mmmv-userspace-distro-t1-pkg01/
 
 Milestone releases that contain the content of both, the
 mmmv_userspace_distro_t1 and the mmmv_userspace_distro_t1_pkg01 MIGHT be
 available at both of the following sites:
 
     (Main milestone releases publishing site.)
+    https://softf1.com/technology/mmmv_userspace_distro_t1/milestone_releases/
+
+    (Secondary milestone releases publishing site.)
     https://sourceforge.net/projects/mmmv-userspace-distro-t1/files/milestone_releases/
 
     (As of 2024_08 a backup option for publishing milestone
-    releases. The anti-bot password, "FooBar447", without the
-    quotation marks, must be typed in instead of copy-pasting it.)
+    releases. The anti-bot password, "FooBar447", without the quotation
+    marks, must be typed in instead of copy-pasting it.)
     https://1fichier.com/dir/tRK7cdnL
 
 
@@ -58,13 +59,12 @@ available at both of the following sites:
                          Setup Introduction
 ---------------------------------------------------------------------------
 
-Operating system user mmmv is for holding files that are common to      
-other operating system users. The user mmmv is the "standard user"      
-of the mmmv_distrocomponents_t1. Further information about the setup    
-resides at                                                              
+Operating system user mmmv is for holding files that are common to other
+operating system users. The user mmmv is the "standard user" of the
+mmmv_distrocomponents_t1. Further information about the setup resides at
 
     ./mmmv_userspace_distro_t1/COMMENTS.txt
 
 ===========================================================================
-S_VERSION_OF_THIS_FILE="87c00326-501a-4be2-9571-e0c050c188e7"
+S_VERSION_OF_THIS_FILE="48b67461-2adb-46a0-a32d-926001217ae7"
 ===========================================================================

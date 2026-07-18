@@ -199,7 +199,7 @@ of that RAM partition should be at least 64KiB, but in some extreme
 cases about 10KiB might also do. The warning that tells that the
 MMMV_USERSPACE_DISTRO_T1_FP_RAM_PARTITION_64K has not been defined can
 be disabled by outcommenting the Bash code that gives that warning.  The
-code region, where the waring originates, can be found by recursively
+code region, where the warning originates, can be found by recursively
 searching for the GUID that is in the warning text.
 
 
@@ -231,13 +231,21 @@ prefixes are:
 
     mmmv_filemanager_  // like the Midnight Commander, etc.
     mmmv_findgrep_t1_  // find <some parameters Foo> | grep <some parameters Bar>
+    mmmv_flatpak_      // is related to installing and running Flatpak packages
     mmmv_fs_           // "fs" comes from the phrase "file system"
+    mmmv_IDE_          // integrated development environments
     mmmv_image_viewer_ // includes terminal based image viewers like the catimg
     mmmv_ls_           // "ls" comes from the Linux/BSD/Unix "ls" command
     mmmv_ls_doc_
+    mmmv_measure_
+    mmmv_polish_       // Ruby scripts for constructing Bash scripts
     mmmv_run_          // executes with some predefined command line arguments
     mmmv_se_           // "se" comes from the phrase "search engine"
+    mmmv_soundplayer_
+    mmmv_texteditor_   // Kate, Vim, etc.
     mmmv_ui_           // "ui" comes from the phrase "user interface"(UI)
+    mmmv_videoplayer_
+    mmmv_vim_edit_     // vim /path/to/a/file
     mmmv_webbrowser_   // includes Gemini and Gopher readers like the DilloPlus
     mmmv_wget_         // various ways to call the wget website copier
 
@@ -245,6 +253,20 @@ The prefixes use the tree encoding, which is explained at a file that
 MIGHT be available from the path of
 
     ./attic/documentation/art_of_software_development/2018_xx_xx_bitrary_softf1_com_Tree_Encoding_and_Type_Based_Prefixes_id_est_Hungarian_Notation_t1.pdf
+
+Aliases with the prefix "mmmv_" tend to be declared only if all of the
+command line programs that the alias depends on, are available on PATH.
+Some aliases require "command line parameters". For example
+
+    ls0 2  # where the "2" is recursion length
+
+    mmmv_zip_r_n ./foo.zip  ./a_folder_that_will_be_zipped
+
+The "mmmv_zip_r_n" tells the zip to add those files that can not be
+significantly compressed, like MP3 files, MP4 files, WebM files,
+xz-files, JPEG-files, to the zip-file without any compression. That
+speeds up the browsing of those zip-files with ZIP-file mounting
+software like the AVFS.
 
 
 ---------------------------------------------------------------------------
@@ -381,7 +403,7 @@ to the relevant vimwiki page.
 
 ::::::::::next::idea:::::::::::::::
 
-All quoted GUIDs like "56e0ae65-6722-4649-8162-e1b13170b9e7"
+All quoted GUIDs like "a1e2f0c1-ddbb-43a3-95ce-d1a201217ae7"
 can be replaced with new ones by calling
 
     upguid -f editable_textfile.Foo
@@ -773,5 +795,5 @@ shoddy compromise, this list here is better than nothing.
 # This file is in public domain.
 # The following line is a spdx.org license label line:
 # SPDX-License-Identifier: 0BSD
-# S_VERSION_OF_THIS_FILE="3199701b-95bf-4fe0-a362-e1b13170b9e7"
+# S_VERSION_OF_THIS_FILE="53858356-8adc-40f1-8dce-d1a201217ae7"
 ===========================================================================

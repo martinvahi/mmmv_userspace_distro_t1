@@ -1,5 +1,54 @@
 
 #----mmmv--machine--instance--specific--section--start---------------------
+# export MMMV_USERSPACE_DISTRO_T1_SI_N_OF_COMPILATION_THREADS_T1="2" # a host computer specific temporary hack
+export S_FP_FLATPAK_JAILBREAK_FOLDER=""
+#--------------------------------------------------------------------------
+# https://stackoverflow.com/questions/55673886/what-is-the-difference-between-c-utf-8-and-en-us-utf-8-locales/
+# archival copy: https://archive.vn/ivNHa
+# Summary:
+#     The "C" in the "C.UTF-8" stands for "computer" and supposedly the
+#     "C.UTF-8" switches in a more computer-readable text output mode
+#     than the "en_US.UTF-8".
+export LC_TIME="C.UTF-8"
+export LC_ALL="C.UTF-8" # useful on FreeBSD for making the tar work
+export LANG="C.UTF-8"
+#--------------------------------------------------------------------------
+# The
+export DISPLAY=":0"
+# or supposedly in some cases
+#     xhost +local:
+# is needed to overcome the "Invalid MIT-MAGIC-COOKIE-1 keyError"
+# https://unix.stackexchange.com/questions/199891/invalid-mit-magic-cookie-1-key-when-trying-to-run-program-remotely
+# archival copy: https://archive.vn/mdVro
+# If the ":0" is a wrong value, then may be some modification of
+# the following Linux specific line that uses the GNU sed might work.
+#export DISPLAY="`loginctl show-session -p Display -p Active \`loginctl list-sessions | grep \\\`whoami\\\` | grep c3 | gawk '{print \$1}'\` | grep Display | sed -e 's/^[^:]\\+=//g'`"
+# Origin of the above idea:
+#     https://unix.stackexchange.com/questions/203844/how-to-find-out-the-current-active-xserver-display-number
+#     archival copy: https://archive.ph/0Bpdr
+#--------------------------------------------------------------------------
+# Reformatted citation from the ssh man page and the following page:
+# https://unix.stackexchange.com/questions/120080/what-are-ssh-tty-and-ssh-connection
+# archival copy: https://archive.vn/2y2EF
+#
+#     SSH_TTY    This is set to the name of the tty (path to the device)
+#                associated with the current shell or command.
+#                If the current session has no tty, this variable is not set.
+#
+SB_CONSOLE_IS_ACCESSED_OVER_SSH="t" # domain {"t","f"}
+if [ "$SSH_TTY" == "" ]; then
+    # As of 2021_07 that SSH connection detection has been
+    # tested to work on both, Linux and FreeBSD.
+    SB_CONSOLE_IS_ACCESSED_OVER_SSH="f"
+fi
+# If one logs in over SSH and then starts a new Bash session by
+# executing the /bin/bash then the non-empty-string value of the SSH_TTY
+# remains, unless it is manually set to an empty string.
+if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "" ]; then
+    SB_CONSOLE_OUTPUT_IS_ALLOWED="f" # the ssh issue as described
+                                     # earlier in this file
+fi
+#--------------------------------------------------------------------------
 alias ls="ls --color "
 #--------------------------------------------------------------------------
 S_FP_0="$HOME/.cargo/env"
@@ -17,100 +66,52 @@ if [ -e "$S_TMP_0" ]; then
 fi
 #--------------------------------------------------------------------------
 if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" == "" ]; then
-    export MMMV_USERSPACE_DISTRO_T1_HOME="/home/mmmv/mmmv_userspace_distro_t1"
+    S_TMP_0="/home/mmmv/mmmv_userspace_distro_t1"
+    if [ -e "$S_TMP_0" ]; then
+        if [ -d "$S_TMP_0" ]; then
+            export MMMV_USERSPACE_DISTRO_T1_HOME="/home/mmmv/mmmv_userspace_distro_t1"
+        fi
+    fi
 fi
-MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
+if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" != "" ]; then
+    # This if-clause can not be replaced with an else-clause of the
+    # previous if-clause, because the MMMV_USERSPACE_DISTRO_T1_HOME
+    # might have been defined manually.
+    MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
+fi
 #--------------------------------------------------------------------------
-# https://stackoverflow.com/questions/55673886/what-is-the-difference-between-c-utf-8-and-en-us-utf-8-locales/
-# archival copy: https://archive.vn/ivNHa
-# Summary: 
-#     The "C" in the "C.UTF-8" stands for "computer" and supposedly the
-#     "C.UTF-8" switches in a more computer-readable text output mode
-#     than the "en_US.UTF-8".
-export LC_TIME="C.UTF-8"
-export LC_ALL="C.UTF-8" # useful on FreeBSD for making the tar work
-export LANG="C.UTF-8"
-#--------------------------------------------------------------------------
-# The 
-export DISPLAY=":0"
-# or supposedly in some cases 
-#     xhost +local: 
-# is needed to overcome the "Invalid MIT-MAGIC-COOKIE-1 keyError"
-# https://unix.stackexchange.com/questions/199891/invalid-mit-magic-cookie-1-key-when-trying-to-run-program-remotely
-# archival copy: https://archive.vn/mdVro
-# If the ":0" is a wrong value, then may be some modification of 
-# the following Linux specific line that uses the GNU sed might work.
-#export DISPLAY="`loginctl show-session -p Display -p Active \`loginctl list-sessions | grep \\\`whoami\\\` | grep c3 | gawk '{print \$1}'\` | grep Display | sed -e 's/^[^:]\\+=//g'`"
-# Origin of the above idea:
-#     https://unix.stackexchange.com/questions/203844/how-to-find-out-the-current-active-xserver-display-number
-#     archival copy: https://archive.ph/0Bpdr
-#--------------------------------------------------------------------------
-export MMMV_SB_DEBUG="t"  #  domain: {"",  "t", "f"} 
+export MMMV_SB_DEBUG="t"  #  domain: {"",  "t", "f"}
                           # default: "" -> "t"
-export MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"} 
+export MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"}
                                               # default: "" -> "t"
-#--------------------------------------------------------------------------
-# Reformatted citation from the ssh man page and the following page:
-# https://unix.stackexchange.com/questions/120080/what-are-ssh-tty-and-ssh-connection
-# archival copy: https://archive.vn/2y2EF
-#
-#     SSH_TTY    This is set to the name of the tty (path to the device) 
-#                associated with the current shell or command.  
-#                If the current session has no tty, this variable is not set.
-#
-SB_CONSOLE_IS_ACCESSED_OVER_SSH="t" # domain {"t","f"}
-if [ "$SSH_TTY" == "" ]; then
-    # As of 2021_07 that SSH connection detection has been
-    # tested to work on both, Linux and FreeBSD.
-    SB_CONSOLE_IS_ACCESSED_OVER_SSH="f"
-fi
-# If one logs in over SSH and then starts a new Bash session by executing
-# the /bin/bash then the non-empty-string value of the SSH_TTY remains,
-# unless it is manually set to an empty string.
-if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "" ]; then
-    SB_CONSOLE_OUTPUT_IS_ALLOWED="f" # the ssh issue as described 
-                                     # earlier in this file
-fi
 #--------------------------------------------------------------------------
 if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -> "t"
     #----------------------------------------------------------------------
     if [ "$SB_CONSOLE_IS_ACCESSED_OVER_SSH" == "t" ]; then
         SB_CONSOLE_OUTPUT_IS_ALLOWED="f"
         # if [ "`uname -a | grep -i -E '(Microsoft|Windows)' `" ]; then
-        #     # The assumption is that one usually does not want 
+        #     # The assumption is that one usually does not want
         #     # to log into a Windows machine over SSH.
         #     SB_CONSOLE_OUTPUT_IS_ALLOWED="t"
         # fi
     else
         SB_CONSOLE_OUTPUT_IS_ALLOWED="t"
-        # You may want to uncomment the following 5 lines:
-        # if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
-        #     if [ ! -d "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
-        #         source "$MMMV_FP_COMMON_BASHRC_MAIN"
-        #     fi
-        # fi
     fi
     #----------------------------------------------------------------------
-    if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "t" ]; then
-        #------------------------------------------------------------------
-        if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # this line is not duplicating
-                                                                         # if the 
-                                                                         #     source "$MMMV_FP_COMMON_BASHRC_MAIN"
-                                                                         # above is executed.
-            if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "" ]; then
-                if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "t" ]; then
-                    echo ""
-                    echo "The environment variable "
-                    echo ""
-                    echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
-                    echo ""
-                    echo "but its domain is: {\"\", \"t\", \"f\"}."
-                    echo "GUID=='27020211-f001-48dd-8949-115310d049e7'"
-                    echo ""
-                fi
-            fi
+fi
+if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then
+    #----------------------------------------------------------------------
+    if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "" ]; then
+        if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "t" ]; then
+            echo ""
+            echo "The environment variable "
+            echo ""
+            echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
+            echo ""
+            echo "but its domain is: {\"\", \"t\", \"f\"}."
+            echo "GUID=='3daae2e1-01f2-4d06-9b53-4253f0217ae7'"
+            echo ""
         fi
-        #------------------------------------------------------------------
     fi
     #----------------------------------------------------------------------
 fi
@@ -118,7 +119,7 @@ fi
 if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
     if [ ! -d "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
         if [ ! -h "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
-            # The execution of the 
+            # The execution of the
             #
             #     source "$MMMV_FP_COMMON_BASHRC_MAIN"
             #
@@ -130,10 +131,10 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
             #     archival copy: https://archive.vn/pxmm1
             #     https://web.archive.org/web/20201029162511/https://serverfault.com/questions/485487/use-bashrc-without-breaking-sftp
             #
-            # A workaround to both of those problems is to not output    
-            # any text to console during the execution of the ~/.bashrc  
-            # if the session is an SSH session and to switch on the mmmv 
-            # environment manually by executing                          
+            # A workaround to both of those problems is to not output
+            # any text to console during the execution of the ~/.bashrc
+            # if the session is an SSH session and to switch on the mmmv
+            # environment manually by executing
             alias mmmv_environment="SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT='t' ; source \"$MMMV_FP_COMMON_BASHRC_MAIN\" ; "
             #
             # For some reason in some cases ssh login is possible even
@@ -141,6 +142,8 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
             # of writing this comment/sentence here, that reason is
             # not known to me(Martin.Vahi@softf1.com) and I only have
             # experimental confirmation.
+            # You may want to uncomment the following line:
+            # source "$MMMV_FP_COMMON_BASHRC_MAIN"
         else
             if [ "$SB_CONSOLE_OUTPUT_IS_ALLOWED" == "t" ]; then
                 echo ""
@@ -150,8 +153,9 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
                 echo ""
                 echo "is a symlink to a file, but "
                 echo -e "\e[31ma file is expected\e[39m."
-                echo "GUID=='7478b834-3e75-4e4c-a349-115310d049e7'"
+                echo "GUID=='360db1f4-8b3f-4f18-b733-4253f0217ae7'"
                 echo ""
+                MMMV_FP_COMMON_BASHRC_MAIN=""
             fi
         fi
     else
@@ -167,8 +171,9 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
                 echo "is a folder, but "
             fi
             echo -e "\e[31ma file is expected\e[39m."
-            echo "GUID=='3d8e929d-8d24-4104-b449-115310d049e7'"
+            echo "GUID=='99216298-29c0-4dd2-8033-4253f0217ae7'"
             echo ""
+            MMMV_FP_COMMON_BASHRC_MAIN=""
         fi
     fi
 else
@@ -179,8 +184,9 @@ else
         echo "    $MMMV_FP_COMMON_BASHRC_MAIN "
         echo ""
         echo -e "\e[31mis missing\e[39m."
-        echo "GUID=='1f3f1cb9-3621-43d9-8f49-115310d049e7'"
+        echo "GUID=='dfbd48d1-90a7-4856-8e13-4253f0217ae7'"
         echo ""
+        MMMV_FP_COMMON_BASHRC_MAIN=""
     fi
 fi
 #----mmmv--machine--instance--specific--section--end-----------------------
