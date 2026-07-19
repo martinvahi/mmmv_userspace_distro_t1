@@ -1,4 +1,9 @@
 
+jq home page as of 2026_07_19:
+
+    https://jqlang.org/
+    https://github.com/jqlang/
+
 The
 
     ./v2026_07_19_jq.zip
