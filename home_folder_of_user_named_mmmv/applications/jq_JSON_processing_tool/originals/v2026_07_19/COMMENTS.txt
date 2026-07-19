@@ -1,0 +1,12 @@
+
+The
+
+    ./v2026_07_19_jq.zip
+
+has been obtained on 2026_07_19 by executing
+
+    git clone --recursive https://github.com/jqlang/jq.git
+
+and repacking the cloned code.
+
+
