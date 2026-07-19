@@ -23,7 +23,16 @@ is hosted. Milestone releases that include all of the software
 packages from both, the mmmv_userspace_distro_t1 and the
 mmmv_userspace_distro_t1_pkg01, MIGHT be downloaded from
 
+    (Main milestone releases publishing site.)
+    https://softf1.com/technology/mmmv_userspace_distro_t1/milestone_releases/
+
+    (Secondary milestone releases publishing site.)
     https://sourceforge.net/projects/mmmv-userspace-distro-t1/files/milestone_releases/
+
+    (As of 2026_07 a backup option for publishing milestone
+    releases. The anti-bot password, "FooBar447", without the quotation
+    marks, must be typed in instead of copy-pasting it.)
+    https://1fichier.com/dir/tRK7cdnL
 
 The planned release cycle for milestone releases of this project is
 about 2 years. Thank You for studying this project.
