@@ -113,15 +113,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #bindsym $Win+d exec --no-startup-id dmenu_run
 #bindsym $Win+s exec --no-startup-id dmenu_run
 #bindsym $Win+s exec --no-startup-id j4-dmenu-desktop
+# A more modern dmenu replacement is rofi:
 bindsym $Win+r exec --no-startup-id "rofi -show run "
 bindsym $Win+w exec --no-startup-id "rofi -show window "
-
-# A more modern dmenu replacement is rofi:
 # bindcode $Win+40 exec "rofi -modi drun,run -show drun"
 
-# There also is i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need
-# that installed.
+# There is i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so
+# dmenu has to be also installed.
 # bindcode $Win+40 exec --no-startup-id i3-dmenu-desktop
 
 #--------------------------------------------------------------------------
@@ -264,7 +263,7 @@ mode "i3administration" {
     bindsym $Win+r restart
 
     # exit i3 (logs you out of your X session)
-    bindsym $Win+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+    bindsym $Win+q exec "i3-nagbar -t warning -m 'Exit shortcut got pressed. Do you really want to exit i3? This will end X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -272,6 +271,9 @@ mode "i3administration" {
 }
 
 bindsym $Win+c mode "i3administration"
+# The
+bindsym $Win+Home exec i3-msg 'move position center'
+# moves a floating Window.
 #--------------------------------------------------------------------------
 
 mode "resize_window" {
@@ -318,8 +320,9 @@ mode "run_application" {
     bindsym $Win+f exec /usr/bin/filezilla
 
     bindsym $Win+c exec /usr/bin/nice -n 2 /usr/bin/gnome-characters
+    bindsym $Win+Shift+c exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=100%  /usr/bin/nice -n  2  /usr/bin/flatpak  --user --filesystem=$HOME/tmp_ run  io.github.nokse22.asciidraw
 
-    bindsym $Win+w exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=8192M -p CPUQuota=300%  /usr/bin/nice -n  7  /usr/bin/chromium
+    bindsym $Win+w exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=10G -p MemoryHigh=6G -p CPUQuota=300%  /usr/bin/nice -n  7  /usr/bin/chromium  --renderer-process-limit=2
     bindsym $Win+Shift+w exec /usr/bin/systemd-run --user --scope  -p MemoryLimit=1024M -p CPUQuota=200%  /usr/bin/nice -n  7  /usr/bin/falkon
 
     bindsym $Win+d exec /usr/bin/nice -n 4 /usr/bin/dia
@@ -349,5 +352,5 @@ bindsym $Win+e exec /usr/bin/nice -n 2 /home/mmmv/applications/DoubleCommander_f
 bindsym $Win+t exec /usr/bin/nice -n 2 /usr/bin/lxterminal
 
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="41ad2691-3baa-43ea-bb75-036060905ae7"
+# S_VERSION_OF_THIS_FILE="c2cf5a2d-d77c-4941-b2fb-c09210317ae7"
 #==========================================================================
