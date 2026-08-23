@@ -609,7 +609,7 @@
 :                endif
 :               "-----------
 :            if i_max_number_of_tries <= i_n
-:                throw "The vimscript needs to be improved. GUID=='2b43d281-7786-4387-b510-e28150505ae7'"
+:                throw "The vimscript needs to be improved. GUID=='9280bd56-6960-451e-8473-126031908ae7'"
 :                endif
 :        endwhile
 :       "---------------
@@ -1780,6 +1780,33 @@
 :    call MV_restore_bookmark_state_t1(line_b, "b", sb_b_exists)
 :endfun "MV_swap_in_line_t1
 :"-------------------------------------------------------------------------
+:fun! MV_swap_the_right_side_of_equals_sign_betwee_2_lines_marked_as_a_and_b_t1()
+:    let copypaste_tmp1=@@
+:    let line_number=line(".")
+:    let c=MV_currentcolumn_t1()
+:    let line_a=MV_get_bookmark_line_t1("'a")
+:    let line_b=MV_get_bookmark_line_t1("'b")
+:    " In Vim the smallest line number is '1', so '0' can mark a nonexistent line.
+:    if line_a=="0"
+:        let message="Bookmark \"a\" not set?\n"
+:        let message=message."This function does not support bookmarks at line zero."
+:        echo message
+:    else
+:        if line_b=="0"
+:            let message="Bookmark \"b\" not set?\n"
+:            let message=message."This function does not support bookmarks at line zero."
+:            echo message
+:        else
+:            "The 'execute' command at the next 2 lines
+:            execute "normal 'ayy'bpkyy'ap0k0f=lC\<Esc>j0f=lC\<Esc>"
+:            execute "normal k0f=pjdd'b0f=lC\<Esc>j0f=lC\<Esc>k0f=p0jddk0"
+:            "is used to handle the Escape key presses.
+:            endif
+:        endif
+:    let @@=copypaste_tmp1
+:    call MV_cursor_t1(line_number, c)
+:endfun "MV_swap_the_right_side_of_equals_sign_betwee_2_lines_marked_as_a_and_b_t1
+:"-------------------------------------------------------------------------
 :fun! MV_substitute_yanked_in_line_t1(substitution_string)
 :    let line_number=line(".")
 :    let sb_a_exists=MV_bookmark_exists_t1("a")
@@ -2080,7 +2107,7 @@
 :               " The initial version of the $<s_orig> was supposed to be
 :               " swapped with a temporary string,<s_subst_1>, but
 :               " for some reason the $<s_orig> is still part of the text.
-:        throw "The vimscript is flawed. GUID=='34a3dc51-1e26-4123-a110-e28150505ae7'"
+:        throw "The vimscript is flawed. GUID=='3b3fdb12-845d-4e8c-8573-126031908ae7'"
 :        endif
 :       "---------------
 :    let @@=s_copypaste_tmp1
@@ -2513,10 +2540,10 @@
 :    else
 :           "---------------
 :        if (a:sbb_display_err_msg_if_file_missing=="true")
-:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='86055034-3fc5-4162-b310-e28150505ae7'"
+:            echo "The file '".a:s_fp_file_candidate."' is missing. GUID=='143b691a-11d4-4572-a473-126031908ae7'"
 :        else
 :            if (a:sbb_display_err_msg_if_file_missing!="false")
-:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='fe104f3e-4a40-4eef-a200-e28150505ae7'"
+:                echo "Part of the ~/.vimrc is FLAWED. a:sbb_display_err_msg_if_file_missing=='".a:sbb_display_err_msg_if_file_missing."' GUID=='19b18948-b58b-40ba-a173-126031908ae7'"
 :                endif
 :            endif
 :           "---------------
@@ -2935,6 +2962,7 @@
 :command -nargs=0 SRycf call MV_substitute_all_yanked_in_range_with_cursorselected_forced_t2()
 :command -nargs=0 SWL call MV_swap_in_line_t1()
 :command -nargs=0 SWR call MV_swap_in_range_t1()
+:command -nargs=0 SWE call MV_swap_the_right_side_of_equals_sign_betwee_2_lines_marked_as_a_and_b_t1()
 
 :command -nargs=1 CGRclass call MV_codegeneration_Ruby_class(<f-args>)
 :command -nargs=1 CGRfunc call MV_codegeneration_Ruby_function(<f-args>)
@@ -2949,5 +2977,5 @@
 :command -nargs=0 TRLRuby2PHPhthaskeyt1 call MV_TRLRuby2PHP_ht_has_key_t1()
 
 :"=========================================================================
-:" S_VERSION_OF_THIS_FILE="e823b82a-aa60-4d85-b510-e28150505ae7"
+:" S_VERSION_OF_THIS_FILE="145217c5-57c3-4838-8673-126031908ae7"
 :"=========================================================================
