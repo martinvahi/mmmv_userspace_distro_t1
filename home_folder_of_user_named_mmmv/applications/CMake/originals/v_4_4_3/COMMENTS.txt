@@ -1,0 +1,12 @@
+
+The
+
+    ./CMake_v_4_4_3.zip
+
+was obtained by downloading
+
+    https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3.tar.gz
+
+on 2026_09_05 and repacking it.
+
+

@@ -80,10 +80,10 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_HOME" != "" ]; then
     MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
 fi
 #--------------------------------------------------------------------------
-export MMMV_SB_DEBUG="t"  #  domain: {"",  "t", "f"}
-                          # default: "" -> "t"
-export MMMV_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"}
+export MMMV_USERSPACE_DISTRO_T1_SB_DEBUG="t"  #  domain: {"",  "t", "f"}
                                               # default: "" -> "t"
+export MMMV_USERSPACE_DISTRO_T1_SB_LOOK_FOR_DEVELOPMENT_TOOLS="t" #  domain: {"",  "t", "f"}
+                                                                  # default: "" -> "t"
 #--------------------------------------------------------------------------
 if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then # default: "" -> "t"
     #----------------------------------------------------------------------
@@ -109,7 +109,7 @@ if [ "$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION" != "f" ]; then
             echo "    SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION==$SB_MMMV_USERSPACE_DISTRO_T1_FIRST_SESSION"
             echo ""
             echo "but its domain is: {\"\", \"t\", \"f\"}."
-            echo "GUID=='3daae2e1-01f2-4d06-9b53-4253f0217ae7'"
+            echo "GUID=='a5088528-a403-4cad-94cb-d251b0309ae7'"
             echo ""
         fi
     fi
@@ -153,7 +153,7 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
                 echo ""
                 echo "is a symlink to a file, but "
                 echo -e "\e[31ma file is expected\e[39m."
-                echo "GUID=='360db1f4-8b3f-4f18-b733-4253f0217ae7'"
+                echo "GUID=='5f0048f3-d1ac-4e5b-bbcb-d251b0309ae7'"
                 echo ""
                 MMMV_FP_COMMON_BASHRC_MAIN=""
             fi
@@ -171,7 +171,7 @@ if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
                 echo "is a folder, but "
             fi
             echo -e "\e[31ma file is expected\e[39m."
-            echo "GUID=='99216298-29c0-4dd2-8033-4253f0217ae7'"
+            echo "GUID=='385c1115-4e97-4bb3-94cb-d251b0309ae7'"
             echo ""
             MMMV_FP_COMMON_BASHRC_MAIN=""
         fi
@@ -184,7 +184,7 @@ else
         echo "    $MMMV_FP_COMMON_BASHRC_MAIN "
         echo ""
         echo -e "\e[31mis missing\e[39m."
-        echo "GUID=='dfbd48d1-90a7-4856-8e13-4253f0217ae7'"
+        echo "GUID=='a7b41e5a-0789-48f0-b5cb-d251b0309ae7'"
         echo ""
         MMMV_FP_COMMON_BASHRC_MAIN=""
     fi

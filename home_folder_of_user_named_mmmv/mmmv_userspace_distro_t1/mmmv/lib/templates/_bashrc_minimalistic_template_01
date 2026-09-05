@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 #==========================================================================
 export LC_TIME="C.UTF-8"
 export LC_ALL="C.UTF-8" # useful on FreeBSD for making the tar work
@@ -25,13 +25,13 @@ if [ -e "$HOME/.cargo/env" ]; then
 fi
 #--------------------------------------------------------------------------
 #export DISPLAY=":0"
-export MMMV_SB_DEBUG="t"  # domain: {"t","f"} 
+export MMMV_USERSPACE_DISTRO_T1_SB_DEBUG="t"  # domain: {"t","f"}
 MMMV_FP_COMMON_BASHRC_MAIN="$MMMV_USERSPACE_DISTRO_T1_HOME/mmmv/etc/common_bashrc/common_bashrc_main.bash"
 if [ -e "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
     if [ ! -d "$MMMV_FP_COMMON_BASHRC_MAIN" ]; then
         alias mmmv_environment="SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT='t' nice -n 2 bash --rcfile \"$MMMV_FP_COMMON_BASHRC_MAIN\" "
     fi
 fi
-#--------------------------------------------------------------------------
-# S_VERSION_OF_THIS_FILE="21d06942-8c78-4e20-a3f5-5172c031a7e7"
+#==========================================================================
+# S_VERSION_OF_THIS_FILE="35dabde3-7e45-41c4-89c5-2103a0309ae7"
 #==========================================================================

@@ -1,0 +1,26 @@
+
+Code hosting portals like GitHub
+
+    https://github.com/
+
+may have, as of 2026 GitHub has, a maximum file size limit. As of 2026
+the GitHub maximum file size limit that triggers a warning is 50MiB. If
+https protocol is used for uploading files, then web servers may have a
+maximum uploadable file size limit, which as of 2026 tends to be about
+100MiB. In the case of code repository systems like the Fossil
+
+    https://fossil-scm.org
+
+a hash is/might_be calculated for every stored file. If there is some
+operating system process time limit or the Fossil is a sub-process of a
+web application software, where web server that runs the web application
+software has a time limit for serving a web request, then there is not
+enough time for calculating the hash for "too big" files.
+
+This folder is for templates that are greater than or equal to 20MiB.
+As of 2026 the 20MiB size limit is relatively easy to exceed if a
+template of a relatively self-contained software project includes some
+libraries.
+
+Thank You for reading this text :-)
+

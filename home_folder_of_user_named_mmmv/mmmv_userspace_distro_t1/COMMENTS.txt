@@ -143,9 +143,10 @@ which copies the
     ./mmmv/lib/templates/_bashrc_suffix_template_t1.bash
 
 to the end of the ~/.bashrc . Operating system userspace distribution
-creators may want to create an optional file
+creators may want to create two optional files
 
-    /home/mmmv/m_local/etc/`hostname`_home_mmmv_bashrc_subpart.bash
+    /home/mmmv/m_local/etc/`hostname`_home_mmmv_bashrc_subpart__pre_program_availability_checks.bash
+    /home/mmmv/m_local/etc/`hostname`_home_mmmv_bashrc_subpart_post_program_availability_checks.bash
 
 by executing
 
