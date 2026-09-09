@@ -1,7 +1,8 @@
 
-On Windows it is possible to use the Windows Linux layer,
-the "Windows Subsystem for Linux" (WSL), which 
-can/may/might (depending on, what Microsoft decides) 
-access the Windows side of the file system through "/mnt/drivename"
-
+On Windows10 it is possible to use the Windows Linux layer, the "Windows
+Subsystem for Linux" (WSL), which can/may/might (depending on, what
+Microsoft decides) access the Windows side of the file system through
+"/mnt/drivename". In another words, the Linux specific AMD64 binaries
+are usable on Windows10 by running them at the Windows Linux layer,
+the WSL.
 

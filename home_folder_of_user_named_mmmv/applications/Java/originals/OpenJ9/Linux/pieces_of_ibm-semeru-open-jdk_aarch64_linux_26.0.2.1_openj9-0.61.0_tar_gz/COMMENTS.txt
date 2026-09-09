@@ -1,0 +1,8 @@
+
+File origin:
+
+    https://github.com/ibmruntimes/semeru26-binaries/releases/download/jdk-26.0.2.10/ibm-semeru-open-jdk_aarch64_linux_26.0.2.10.tar.gz
+    SHA256: 0202d9a40b0959b19da517a83bf230588af5a2a3ac612785845375b41ae7c632
+    size: 248740830 Bytes
+    Download date: 2026_09_09
+

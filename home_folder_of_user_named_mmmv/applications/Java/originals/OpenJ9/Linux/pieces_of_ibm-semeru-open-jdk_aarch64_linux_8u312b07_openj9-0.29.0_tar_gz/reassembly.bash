@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
 #==========================================================================
-# Initial author of this file: Martin.Vahi@softf1.com
+# Author of this file: Martin.Vahi@softf1.com
 # This file is in the public domain.
 # SPDX-License-Identifier: 0BSD
 #
-# As of 2021 an alternative to using this script 
-# is to use a file manager named Krusader for
-# disassembling and reassembling large files, but
-# the disassembly and reassembly has to be done
-# by using the same tool(Krusader or this script) for
-# both activities. That is to say, disassembly with the Krusader
-# and reassembly with this script or vice versa, 
-# disassembly with this script and reassembly with the
-# Krusader does not guarantee that the reassembled file
-# matches bit by bit with the disassembled file.
+# As of 2021 an alternative to using this script is to use a file
+# manager named Krusader for disassembling and reassembling large files,
+# but the disassembly and reassembly has to be done by using the same
+# tool(Krusader or this script) for both activities. That is to say,
+# disassembly with the Krusader and reassembly with this script or vice
+# versa, disassembly with this script and reassembly with the Krusader
+# does not guarantee that the reassembled file matches bit by bit with
+# the disassembled file.
 #
-#     https://docs.kde.org/stable5/en/krusader/krusader/krusader.pdf 
+#     https://docs.kde.org/stable5/en/krusader/krusader/krusader.pdf
 #     https://web.archive.org/web/20210828055719/https://docs.kde.org/stable5/en/krusader/krusader/krusader.pdf
 #     optionally present local copy:
 #         $MMMV_USERSPACE_DISTRO_T1_HOMEhome/attic/documentation/
@@ -28,7 +26,7 @@ S_FP_ORIG="`pwd`"
 S_TIMESTAMP="`date +%Y`_`date +%m`_`date +%d`_T_`date +%H`h_`date +%M`min_`date +%S`s"
 #--------------------------------------------------------------------------
 func_main_and_all_settings(){
-    #func_err_msg_0 "3df0db56-0387-420d-a5f4-d270a08018e7"
+    #func_err_msg_0 "83591b3e-45b8-468a-9d4a-713190909ae7"
 
     S_FN="ibm-semeru-open-jdk_aarch64_linux_8u312b07_openj9-0.29.0.tar.gz"
     I_PIECE_SIZE_IN_MiB=20
@@ -67,7 +65,7 @@ func_mmmv_exit_if_not_on_path_t2() { # S_COMMAND_NAME
         echo ""
         echo "Command \"$S_COMMAND_NAME\" could not be found from the PATH. "
         echo "The execution of this Bash script is aborted."
-        echo "GUID=='1c0e6325-ccd6-4524-b8f4-d270a08018e7'"
+        echo "GUID=='492d1a93-3cb0-42bd-882a-713190909ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1;
@@ -78,11 +76,11 @@ func_mmmv_assert_file_exists_t1() {
     local S_FP="$1"
     local S_GUID_CANDIDATE="$2"
     local SB_OPTIONAL_BAN_SYMLINKS="$3" # domain: {"t", "f", ""} default: "f"
-                                        # is the last formal parameter 
-                                        # in stead of the S_GUID_CANDIDATE, 
-                                        # because that way this function is 
-                                        # backwards compatible with 
-                                        # an earlier version of this 
+                                        # is the last formal parameter
+                                        # in stead of the S_GUID_CANDIDATE,
+                                        # because that way this function is
+                                        # backwards compatible with
+                                        # an earlier version of this
                                         # function.
     #------------------------------
     local SB_LACK_OF_PARAMETERS="f"
@@ -101,7 +99,7 @@ func_mmmv_assert_file_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='91f49114-ff37-47fc-b3f4-d270a08018e7'"
+        echo "GUID=='9261853b-9f7c-4578-8a2a-713190909ae7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -109,7 +107,7 @@ func_mmmv_assert_file_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo "This code is flawed."
-            echo "GUID=='35b6e640-54d1-4c28-a5f4-d270a08018e7'"
+            echo "GUID=='17222d35-41dc-40d9-924a-713190909ae7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
@@ -117,10 +115,10 @@ func_mmmv_assert_file_exists_t1() {
     fi
     #------------------------------
     if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "" ]; then
-        # The default value of the 
+        # The default value of the
         SB_OPTIONAL_BAN_SYMLINKS="f"
         # must be backwards compatible with the
-        # version of this function, where 
+        # version of this function, where
         # symlinks to files were treated as actual files.
     else
         if [ "$SB_OPTIONAL_BAN_SYMLINKS" != "t" ]; then
@@ -133,7 +131,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='e19a0716-8187-4a4d-83f4-d270a08018e7'"
+                echo "GUID=='52240604-2fd8-485d-8e4a-713190909ae7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -156,7 +154,7 @@ func_mmmv_assert_file_exists_t1() {
                 echo "a file or a symlink to a file is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='8dbec41d-6d2c-45bd-81f4-d270a08018e7'"
+            echo "GUID=='3a70d555-b7a1-4384-981a-713190909ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -173,7 +171,7 @@ func_mmmv_assert_file_exists_t1() {
             echo ""
             echo "does not exist."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='344ee9fd-6f9f-4feb-8af4-d270a08018e7'"
+            echo "GUID=='5beea0e1-0c4d-4107-8b4a-713190909ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -197,14 +195,14 @@ func_mmmv_assert_file_exists_t1() {
                 echo "a file or a symlink to a file is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='153483bf-bad7-4911-81f4-d270a08018e7'"
+            echo "GUID=='2b27dc31-eb6d-401d-921a-713190909ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
         else
             if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "t" ]; then
-                if [ -h "$S_FP" ]; then 
+                if [ -h "$S_FP" ]; then
                     echo ""
                     echo "The "
                     echo ""
@@ -212,7 +210,7 @@ func_mmmv_assert_file_exists_t1() {
                     echo ""
                     echo "is a symlink to a file, but a file is expected."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='7d7fa113-e94c-47a5-91f4-d270a08018e7'"
+                    echo "GUID=='78ee76a1-5578-43e2-a75a-713190909ae7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -227,11 +225,11 @@ func_mmmv_assert_folder_exists_t1() {
     local S_FP="$1"
     local S_GUID_CANDIDATE="$2"
     local SB_OPTIONAL_BAN_SYMLINKS="$3" # domain: {"t", "f", ""} default: "f"
-                                        # is the last formal parameter 
-                                        # in stead of the S_GUID_CANDIDATE, 
-                                        # because that way this function is 
-                                        # backwards compatible with 
-                                        # an earlier version of this 
+                                        # is the last formal parameter
+                                        # in stead of the S_GUID_CANDIDATE,
+                                        # because that way this function is
+                                        # backwards compatible with
+                                        # an earlier version of this
                                         # function.
     #------------------------------
     local SB_LACK_OF_PARAMETERS="f"
@@ -250,7 +248,7 @@ func_mmmv_assert_folder_exists_t1() {
         if [ "$S_GUID_CANDIDATE" != "" ]; then
             echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
         fi
-        echo "GUID=='b39fd832-b8fc-4208-85f4-d270a08018e7'"
+        echo "GUID=='33cd35c2-2816-4585-9f4a-713190909ae7'"
         echo ""
         #--------
         cd "$S_FP_ORIG"
@@ -258,7 +256,7 @@ func_mmmv_assert_folder_exists_t1() {
     else
         if [ "$SB_LACK_OF_PARAMETERS" != "f" ]; then
             echo "This code is flawed."
-            echo "GUID=='858d523d-9f35-4a60-92f4-d270a08018e7'"
+            echo "GUID=='49c0a8b1-fe29-4138-9e5a-713190909ae7'"
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
@@ -266,10 +264,10 @@ func_mmmv_assert_folder_exists_t1() {
     fi
     #------------------------------
     if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "" ]; then
-        # The default value of the 
+        # The default value of the
         SB_OPTIONAL_BAN_SYMLINKS="f"
         # must be backwards compatible with the
-        # version of this function, where 
+        # version of this function, where
         # symlinks to folders were treated as actual folders.
     else
         if [ "$SB_OPTIONAL_BAN_SYMLINKS" != "t" ]; then
@@ -282,7 +280,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "but the valid values for the SB_OPTIONAL_BAN_SYMLINKS"
                 echo "are: \"t\", \"f\", \"\"."
                 echo "S_GUID_CANDIDATE=='$S_GUID_CANDIDATE'"
-                echo "GUID=='5ed59818-5877-44e3-a3f4-d270a08018e7'"
+                echo "GUID=='350196f4-1a5f-4c11-8f2a-713190909ae7'"
                 echo ""
                 #--------
                 cd "$S_FP_ORIG"
@@ -305,7 +303,7 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "a folder or a symlink to a folder is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='fe66f714-7848-4752-91e4-d270a08018e7'"
+            echo "GUID=='13579667-589e-4191-ac4a-713190909ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -322,7 +320,7 @@ func_mmmv_assert_folder_exists_t1() {
             echo ""
             echo "does not exist."
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='bcd74d29-6515-4a34-84e4-d270a08018e7'"
+            echo "GUID=='5119e435-cfbe-4fea-b92a-713190909ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
@@ -346,14 +344,14 @@ func_mmmv_assert_folder_exists_t1() {
                 echo "a folder or a symlink to a folder is expected."
             fi
             echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-            echo "GUID=='14dbddd1-b4b0-44ad-ade4-d270a08018e7'"
+            echo "GUID=='5fdcf163-1b6a-4aab-ab4a-713190909ae7'"
             echo ""
             #--------
             cd "$S_FP_ORIG"
             exit 1 # exiting with an error
         else
             if [ "$SB_OPTIONAL_BAN_SYMLINKS" == "t" ]; then
-                if [ -h "$S_FP" ]; then 
+                if [ -h "$S_FP" ]; then
                     echo ""
                     echo "The "
                     echo ""
@@ -361,7 +359,7 @@ func_mmmv_assert_folder_exists_t1() {
                     echo ""
                     echo "is a symlink to a folder, but a folder is expected."
                     echo "S_GUID_CANDIDATE==\"$S_GUID_CANDIDATE\""
-                    echo "GUID=='526da2da-7ee7-4794-92e4-d270a08018e7'"
+                    echo "GUID=='3ef9b3b4-cfda-4f3a-972a-713190909ae7'"
                     echo ""
                     #--------
                     cd "$S_FP_ORIG"
@@ -382,13 +380,13 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "    S_FP_ORIG=\"\`pwd\`\""
         echo ""
         echo "Aborting script."
-        echo "GUID=='7dac8049-a212-4c75-b1e4-d270a08018e7'"
+        echo "GUID=='e456040b-2b8f-4977-823a-713190909ae7'"
         echo ""
         exit 1 # exit with an error
     fi
     #------------------------
     local SB_IS_SYMLINK="f"      # possible values: "t", "f"
-    if [ -h "$S_FP_ORIG" ]; then # Returns "false" for paths that 
+    if [ -h "$S_FP_ORIG" ]; then # Returns "false" for paths that
                                  # do not refer to anything.
         SB_IS_SYMLINK="t"
     fi
@@ -409,7 +407,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         fi
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='67d41756-1199-41fb-a2e4-d270a08018e7'"
+        echo "GUID=='3d096a51-d3a6-4b82-b44a-713190909ae7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -422,7 +420,7 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
         echo "is not a folder. It is expected to be a folder that "
         echo "contains the script that prints this error message."
         echo "Aborting script."
-        echo "GUID=='20a14955-e414-4867-b4e4-d270a08018e7'"
+        echo "GUID=='39ad79c1-ec24-410c-ad2a-713190909ae7'"
         echo ""
         exit 1 # exit with an error
     fi
@@ -431,13 +429,13 @@ func_mmmv_exc_verify_S_FP_ORIG_t1() {
 func_mmmv_create_folder_t1(){
     local S_FP_FOLDER="$1" # first function argument
     #--------
-    # The reason, why this function is used instead of the 
+    # The reason, why this function is used instead of the
     #     mkdir -p $S_FP_FOLDER
-    # is that there is no guarantee that the 
+    # is that there is no guarantee that the
     #     mkdir -p $S_FP_FOLDER
     # succeeds and it would be a waste of
     # development time to write the file system related
-    # tests from scatch every time a folder 
+    # tests from scatch every time a folder
     # needs to be created.
     #--------
     func_mmmv_exc_verify_S_FP_ORIG_t1
@@ -447,14 +445,14 @@ func_mmmv_create_folder_t1(){
         echo "is expected to be a full path to a folder that "
         echo "either already exists or that has to be created."
         echo "Aborting script."
-        echo "GUID=='52e22415-5966-4b01-97e4-d270a08018e7'"
+        echo "GUID=='d210defb-0232-45b0-bf3a-713190909ae7'"
         echo ""
         cd "$S_FP_ORIG"
         exit 1 # exit with an error
     fi
     #--------
-    if [ -e "$S_FP_FOLDER" ]; then 
-        if [ ! -d "$S_FP_FOLDER" ]; then 
+    if [ -e "$S_FP_FOLDER" ]; then
+        if [ ! -d "$S_FP_FOLDER" ]; then
             echo ""
             echo "The "
             echo ""
@@ -465,7 +463,7 @@ func_mmmv_create_folder_t1(){
             echo "a symlink to a folder or it should not "
             echo "reference anything that already exists."
             echo "Aborting script."
-            echo "GUID=='d8e10010-406f-4a11-81e4-d270a08018e7'"
+            echo "GUID=='101dc891-08f7-4c3d-9a1a-713190909ae7'"
             echo ""
             cd "$S_FP_ORIG"
             exit 1 # exit with an error
@@ -476,12 +474,12 @@ func_mmmv_create_folder_t1(){
         wait # just in case
         sync # for network drives and USB-sticks
         wait # just in case
-        if [ "$S_TMP_0" != "0" ]; then 
-            func_mmmv_exc_exit_with_an_error_t2 "2b41a2df-31f4-49c6-82f4-d270a08018e7" \
+        if [ "$S_TMP_0" != "0" ]; then
+            func_mmmv_exc_exit_with_an_error_t2 "3fa30961-c21a-4ca7-942a-713190909ae7" \
                 "S_FP_FOLDER==$S_FP_FOLDER"
         fi
-        if [ ! -e "$S_FP_FOLDER" ]; then 
-            func_mmmv_exc_exit_with_an_error_t2 "a34e9741-0009-4331-92f4-d270a08018e7" \
+        if [ ! -e "$S_FP_FOLDER" ]; then
+            func_mmmv_exc_exit_with_an_error_t2 "cd47eaaf-a629-440b-a31a-713190909ae7" \
                 "Folder creation failed. S_FP_FOLDER==$S_FP_FOLDER"
         fi
     fi
@@ -501,7 +499,7 @@ func_file_disassembly(){
     local S_FP_ALL_IN_ONE="$S_FP_DIR/$S_FN"
     #------------------------------
     func_mmmv_assert_file_exists_t1  \
-        "$S_FP_ALL_IN_ONE" "773b7321-e4e3-4088-b1f4-d270a08018e7"
+        "$S_FP_ALL_IN_ONE" "2978d8a4-a54b-4c5d-bd5a-713190909ae7"
     #------------------------------
     local S_TMP_0="M"
     local S_TMP_1="$I_PIECE_SIZE_IN_MiB$S_TMP_0"
@@ -519,7 +517,7 @@ func_file_reassembly(){
     local S_TMP_2=".part_0000"
     local S_TMP_3="$S_FP_ALL_IN_ONE$S_TMP_2" # should always exist
     func_mmmv_assert_file_exists_t1  \
-        "$S_TMP_3" "bee0d22c-3b0b-444f-b2f4-d270a08018e7"
+        "$S_TMP_3" "c1b5f485-d2d3-4187-ba2a-713190909ae7"
     #------------------------------
     local S_FP_REASSEMBLY_RESULTS="$S_FP_DIR/reassembly_results"
     local S_FP_REASSEMBLY_RESULT_FOLDER="$S_FP_REASSEMBLY_RESULTS/v_$S_TIMESTAMP"
@@ -531,7 +529,7 @@ func_file_reassembly(){
     nice -n 20 cat $S_TMP_1 > $S_FP_REASSEMBLY_RESULT
     func_mmmv_wait_and_sync_t1 # for USB-sticks, network drives, etc.
     func_mmmv_assert_file_exists_t1  \
-        "$S_FP_REASSEMBLY_RESULT" "3b024e20-e321-4675-91f4-d270a08018e7"
+        "$S_FP_REASSEMBLY_RESULT" "fd32ab23-d39e-44fc-9d5a-713190909ae7"
     echo ""
     # Bash text color settings:
     #     https://misc.flogisoft.com/bash/tip_colors_and_formatting
@@ -540,7 +538,7 @@ func_file_reassembly(){
     echo ""
     echo "    $S_FP_REASSEMBLY_RESULT"
     echo ""
-    echo "GUID=='3c7eefe5-e80b-47e4-a2e4-d270a08018e7'"
+    echo "GUID=='b2e82f09-8358-4402-adca-713190909ae7'"
     echo ""
 } # func_file_reassembly
 #--------------------------------------------------------------------------
@@ -550,5 +548,5 @@ func_main_and_all_settings
 
 exit 0
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="0300ef1f-3cd8-46b7-a1f4-d270a08018e7"
+# S_VERSION_OF_THIS_FILE="d33dce1b-a3eb-46cc-a23a-713190909ae7"
 #==========================================================================
