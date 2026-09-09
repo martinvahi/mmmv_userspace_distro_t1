@@ -22,7 +22,7 @@ if [ "$MMMV_USERSPACE_DISTRO_T1_BASHRC_PREFIX_LOAD_MODE_T1" != "mode_ok_to_load"
         echo ""
     fi
     echo -e "\e[31mExiting with an error code $S_ERR_CODE . \e[39m"
-    echo "GUID=='7440512d-b472-4285-b501-51a1c0309ae7'"
+    echo "GUID=='1b547c36-57f4-452d-a4e4-6120b0609ae7'"
     echo ""
     exit $S_ERR_CODE # exit with an error
 fi
@@ -35,13 +35,18 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
     # S_FP_BASHFILE="/some/custom/foo.bash"
     # SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL="f" # domain: {"","t","f"}
     # func_mmmv_include_bashfile_if_possible_t2 "$S_FP_BASHFILE" \
-    #     "3850a461-8f24-4b99-8101-51a1c0309ae7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
+    #     "a7b34c4d-acc0-4e40-a3e4-6120b0609ae7" "$SB_OK_4_THE_BASHFILE_2_BE_MISSING_OPTIONAL"
     #----------------------------------------------------------------------
     if [ "$S_WHOAMI" == "" ]; then
         S_WHOAMI="`whoami`"
     fi
     #----------------------------------------------------------------------
+    # On 2026 era Linux the
     S_FP_FOLDER_WHERE_RAM_PARTITION_IS_EXPECTED_TO_BE_MOUNTED="/opt/custom_mount_points/RAM_30MiB"
+    # assumes that there is a line like
+    #     tmpfs   /opt/custom_mount_points/RAM_30MiB   tmpfs   nodev,size=30M   0 0
+    # at /etc/fstab
+    #----------------------------------------------------------------------
     S_FP_1="$S_FP_FOLDER_WHERE_RAM_PARTITION_IS_EXPECTED_TO_BE_MOUNTED/$S_WHOAMI"
     if [ -e "$S_FP_FOLDER_WHERE_RAM_PARTITION_IS_EXPECTED_TO_BE_MOUNTED" ]; then
         if [ -d "$S_FP_FOLDER_WHERE_RAM_PARTITION_IS_EXPECTED_TO_BE_MOUNTED" ]; then
@@ -53,7 +58,7 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
                 if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                     echo ""
                     echo -e "Please fix the\e[31m issue\e[39m near GUID "
-                    echo "    '09b40918-ae1d-4891-b301-51a1c0309ae7' "
+                    echo "    '459b6b50-b92a-48aa-94e4-6120b0609ae7' "
                     echo -e "It is related to an\e[31m optional subpart of the $HOME/.bashrc \e[39m."
                     echo ""
                 fi
@@ -62,7 +67,7 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
             if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
                 echo ""
                 echo -e "Please fix the\e[31m issue\e[39m near GUID "
-                echo "    '24ca4895-1f51-4890-a301-51a1c0309ae7' "
+                echo "    '1a84b1e3-1662-4109-97e4-6120b0609ae7' "
                 echo -e "It is related to an\e[31m optional subpart of the $HOME/.bashrc \e[39m."
                 echo ""
             fi
@@ -71,7 +76,7 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
         if [ "$SB_DISPLAY_VERIFICATION_FAILURE_MESSAGE_DEFAULT" == "t" ]; then
             echo ""
             echo -e "Please fix the\e[31m issue\e[39m near GUID "
-            echo "    '100fdf18-ca36-4581-9201-51a1c0309ae7' "
+            echo "    '81db5b51-164f-49f0-b3e4-6120b0609ae7' "
             echo -e "It is related to an\e[31m optional subpart of the $HOME/.bashrc \e[39m."
             echo ""
         fi
@@ -79,5 +84,5 @@ if [ "$HOSTNAME" == "BLANKFORHOSTNAME" ]; then
     #----------------------------------------------------------------------
 fi
 #==========================================================================
-# S_VERSION_OF_THIS_FILE="911b2d61-3f1e-4f30-ae01-51a1c0309ae7"
+# S_VERSION_OF_THIS_FILE="20e1a911-ad24-4d9f-a5e4-6120b0609ae7"
 #==========================================================================
